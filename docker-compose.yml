@@ -1,7 +1,7 @@
 services:
   # 构建服务 - 一次性任务
   mkdocs-build:
-    image: mkdocs-material-template
+    image: ghcr.io/prediction-platform/docs:main
     container_name: mkdocs-build
     volumes:
       - ./docs:/docs/docs
