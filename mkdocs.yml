@@ -1,0 +1,21 @@
+site_name: welcome to yc365.io
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - search.highlight
+    - content.code.copy
+nav:
+  - 首页: index.md
+  - Terms of Use: terms-of-use.md
+  - Get Started:
+      - Introduction: get-started.md
+      - What is YC365?: what-is-polymarket.md
+      - How to Sign-Up: how-to-sign-up.md
+      - How to Deposit: how-to-deposit.md
+      - Making Your First Trade: making-your-first-trade.md
+  - Deposits and Withdrawals: deposits-and-withdrawals.md
+  - Markets: markets.md
+  - Trading: trading.md
+  - FAQs: faqs.md

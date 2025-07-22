@@ -1,0 +1,29 @@
+services:
+  # 构建服务 - 一次性任务
+  mkdocs-build:
+    image: mkdocs-material-template
+    container_name: mkdocs-build
+    volumes:
+      - ./docs:/docs/docs
+      - ./mkdocs.yml:/docs/mkdocs.yml
+      - ./site:/docs/site
+    command: mkdocs build
+    profiles:
+      - build
+
+  # Nginx 服务 - 用于部署
+  nginx:
+    image: nginx:alpine
+    container_name: mkdocs-nginx
+    ports:
+      - "8000:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+    restart: unless-stopped
+    networks:
+      - mkdocs-network
+
+networks:
+  mkdocs-network:
+    driver: bridge
