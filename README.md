@@ -101,7 +101,7 @@ docker run --rm -p 8000:8000 -v $(pwd):/docs mkdocs-material-template mkdocs ser
      - 首页: index.md
      - 入门指南:
        - 概述: get-started/index.md
-       - 什么是 YC365: what-is-polymarket.md
+       - 什么是 YC365: what-is-yc365.md
        - 如何注册: how-to-sign-up.md
    ```
 

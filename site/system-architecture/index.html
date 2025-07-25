@@ -1,0 +1,3823 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../prerequisites/">
+      
+      
+        <link rel="next" href="../multi-language-support/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>System Architecture - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#system-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System Architecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-smart-contracts-bsc-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Smart Contracts (BSC Chain)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-provider-dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Data Provider (DP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-trading-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Order Trading Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dapp-backend-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. DApp Backend Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-dapp-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. DApp Frontend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-contract-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Contract Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Contract Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-lp-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. LP Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. LP Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dp-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. DP Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. DP Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission System:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vault-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Vault Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Vault Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-trading-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Trading Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Trading Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transaction-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Processing:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading Restrictions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-factory-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Factory Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Factory Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#management-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Roles:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-temporary-condition-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Temporary Condition Contracts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Temporary Condition Contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual Contracts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-provider-dp-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Provider (DP) System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Provider (DP) System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-event-type-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Event Type Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Event Type Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Event Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Event Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Operations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-chain-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Chain Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Chain Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dp-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      DP Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Services:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-permission-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Permission Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Permission Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role-based Access:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-trading-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Trading Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Trading Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-order-book-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Order Book Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Order Book Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-matching-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Matching Engine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Matching Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching Principles:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engine-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engine Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-market-price-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Market Price Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Market Price Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Determination:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculation-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Factors:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-settlement-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Settlement Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Settlement Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settlement-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settlement Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dapp-backend-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      DApp Backend Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DApp Backend Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. User Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. User Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activity-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Activity Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Activity Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-historical-order-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Historical Order Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Historical Order Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order History:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dashboard-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Dashboard Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Dashboard Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deposit-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deposit Analytics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revenue-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Analytics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity Analytics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-search-and-graph-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Search and Graph Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Search and Graph Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Functionality:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Services:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dapp-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      DApp Frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DApp Frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Experience:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-authentication-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Authentication System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Authentication System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Methods:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Asset Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Asset Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depositwithdrawal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deposit/Withdrawal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asset-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-personal-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Personal Center
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Personal Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Dashboard:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-limit-order-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Limit Order Trading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Limit Order Trading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading Interface:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Event Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Event Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Services:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition Management:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-data-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Data Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Data Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trend-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Analysis:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-multi-language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Multi-language Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Multi-language Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Options:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localization-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revenue-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revenue Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-transaction-fees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Transaction Fees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Transaction Fees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fee-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Structure:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fee-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Collection:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-limitations-and-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Limitations and Risks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Limitations and Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-technical-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Technical Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Technical Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Constraints:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Restrictions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Security Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Security:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-risk-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Risk Mitigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Risk Mitigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Measures:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Measures:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-language-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-sign-up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Sign-Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-created/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prices-calculated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prediction-markets-resolved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Components">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-smart-contracts-bsc-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Smart Contracts (BSC Chain)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-data-provider-dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Data Provider (DP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-order-trading-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Order Trading Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dapp-backend-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. DApp Backend Service
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-dapp-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. DApp Frontend
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-contract-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Contract Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Smart Contract Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-lp-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. LP Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. LP Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dp-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. DP Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. DP Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permission-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permission System:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-vault-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Vault Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Vault Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-trading-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Trading Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Trading Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transaction-processing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transaction Processing:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading Restrictions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-factory-contract-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Factory Contract Set
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Factory Contract Set">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#management-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Roles:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-temporary-condition-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Temporary Condition Contracts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Temporary Condition Contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#individual-contracts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Individual Contracts:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-provider-dp-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Provider (DP) System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Provider (DP) System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-event-type-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Event Type Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Event Type Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Event Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Event Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Operations:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publishing Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-chain-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Chain Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Chain Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dp-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      DP Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automated-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automated Services:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-permission-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Permission Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Permission Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#role-based-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role-based Access:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-trading-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Trading Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Trading Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-order-book-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Order Book Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Order Book Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-functions_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Functions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Considerations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-matching-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Matching Engine
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Matching Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#matching-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matching Principles:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#engine-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Engine Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-market-price-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Market Price Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Market Price Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Determination:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calculation-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Calculation Factors:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-settlement-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Settlement Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Settlement Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settlement-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settlement Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dapp-backend-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      DApp Backend Service
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DApp Backend Service">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. User Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. User Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-activity-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Activity Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Activity Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Admin Configuration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-historical-order-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Historical Order Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Historical Order Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order History:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dashboard-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Dashboard Module
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Dashboard Module">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deposit-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deposit Analytics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#revenue-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Analytics:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activity-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Activity Analytics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-search-and-graph-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Search and Graph Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Search and Graph Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#search-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Search Functionality:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Services:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dapp-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      DApp Frontend
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DApp Frontend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-user-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. User Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. User Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Experience:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-authentication-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Authentication System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Authentication System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#login-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Login Methods:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-features_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-asset-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Asset Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Asset Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depositwithdrawal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deposit/Withdrawal:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#asset-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Asset Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-personal-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Personal Center
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Personal Center">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Dashboard:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-limit-order-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Limit Order Trading
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Limit Order Trading">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading Interface:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Event Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Event Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#event-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Event Services:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#condition-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condition Management:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-data-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Data Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Data Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trend-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trend Analysis:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-multi-language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Multi-language Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Multi-language Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Language Options:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localization-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revenue-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Revenue Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Revenue Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-transaction-fees" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Transaction Fees
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Transaction Fees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fee-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Structure:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fee-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Collection:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-limitations-and-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Limitations and Risks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Limitations and Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-technical-limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Technical Limitations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Technical Limitations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Constraints:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#current-restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Restrictions:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Security Considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Security Considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contract-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contract Security:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Security:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-risk-mitigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Risk Mitigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Risk Mitigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Measures:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Measures:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="system-architecture">System Architecture</h1>
+<h2 id="overview">Overview</h2>
+<p>YC365 is built on a modular architecture with each component handling specific responsibilities while working together to provide a comprehensive prediction market platform. The system is designed for transparency, security, and scalability.</p>
+<h2 id="architecture-overview">Architecture Overview</h2>
+<h3 id="core-components">Core Components</h3>
+<h4 id="1-smart-contracts-bsc-chain">1. Smart Contracts (BSC Chain)</h4>
+<ul>
+<li><strong>LP Contract Set</strong>: Manages liquidity pools for each condition</li>
+<li><strong>DP Contract Set</strong>: Handles event/condition publishing and results</li>
+<li><strong>Vault Contract Set</strong>: Manages user deposits and withdrawals</li>
+<li><strong>Trading Contract Set</strong>: Executes buy/sell transactions</li>
+<li><strong>Factory Contract Set</strong>: Manages events, conditions, and permissions</li>
+<li><strong>Temporary Condition Contracts</strong>: Individual condition-specific contracts</li>
+</ul>
+<h4 id="2-data-provider-dp">2. Data Provider (DP)</h4>
+<ul>
+<li><strong>Event Management</strong>: Event types, creation, and publishing</li>
+<li><strong>Condition Management</strong>: Condition creation and chain operations</li>
+<li><strong>Permission Management</strong>: Role-based access control</li>
+<li><strong>API Services</strong>: External data query services</li>
+</ul>
+<h4 id="3-order-trading-model">3. Order Trading Model</h4>
+<ul>
+<li><strong>Order Book</strong>: Manages limit orders</li>
+<li><strong>Matching Engine</strong>: Price and time priority matching</li>
+<li><strong>Market Price</strong>: Real-time price calculation</li>
+<li><strong>Settlement Service</strong>: Off-chain calculation, on-chain execution</li>
+</ul>
+<h4 id="4-dapp-backend-service">4. DApp Backend Service</h4>
+<ul>
+<li><strong>User Management</strong>: Wallet-based login/registration</li>
+<li><strong>Analytics</strong>: Historical data and trend analysis</li>
+<li><strong>Dashboard</strong>: User statistics and performance metrics</li>
+<li><strong>Search &amp; Graph</strong>: Event search and price trend visualization</li>
+</ul>
+<h4 id="5-dapp-frontend">5. DApp Frontend</h4>
+<ul>
+<li><strong>User Interface</strong>: Intuitive trading and management interface</li>
+<li><strong>Multi-language Support</strong>: Traditional Chinese and English</li>
+<li><strong>Real-time Updates</strong>: Live price and order updates</li>
+</ul>
+<h2 id="smart-contract-architecture">Smart Contract Architecture</h2>
+<h3 id="1-lp-contract-set">1. LP Contract Set</h3>
+<h4 id="core-functions">Core Functions:</h4>
+<ul>
+<li><strong>Liquidity Pool Management</strong>: Independent pools for each condition's YES/NO tokens</li>
+<li><strong>TVL Management</strong>: Stablecoin deposits from DP and users</li>
+<li><strong>Order Processing</strong>: Buy/sell order execution</li>
+<li><strong>Settlement</strong>: Profit distribution and NO token liquidation</li>
+</ul>
+<h4 id="key-features">Key Features:</h4>
+<ul>
+<li><strong>Independent Pools</strong>: Each condition has its own liquidity pool</li>
+<li><strong>Automatic Settlement</strong>: Triggered settlement processing</li>
+<li><strong>Profit Distribution</strong>: YES token holders receive 1 USDT per token</li>
+<li><strong>NO Token Liquidation</strong>: NO tokens become worthless</li>
+</ul>
+<h3 id="2-dp-contract-set">2. DP Contract Set</h3>
+<h4 id="event-management">Event Management:</h4>
+<ul>
+<li><strong>Event Publishing</strong>: Deploy events and conditions to chain</li>
+<li><strong>Condition Initialization</strong>: Set initial odds and liquidity</li>
+<li><strong>Result Publishing</strong>: Publish event outcomes</li>
+<li><strong>Liquidity Management</strong>: Add or recover liquidity</li>
+</ul>
+<h4 id="permission-system">Permission System:</h4>
+<ul>
+<li><strong>Role-based Access</strong>: Different permissions for different roles</li>
+<li><strong>No Super Admin</strong>: Distributed authority model</li>
+<li><strong>Specific Permissions</strong>: Address-based permission management</li>
+</ul>
+<h3 id="3-vault-contract-set">3. Vault Contract Set</h3>
+<h4 id="asset-management">Asset Management:</h4>
+<ul>
+<li><strong>DP Deposits</strong>: Data provider deposit/withdrawal management</li>
+<li><strong>User Deposits</strong>: Regular user deposit/withdrawal management</li>
+<li><strong>Reward Distribution</strong>: User reward allocation</li>
+<li><strong>Token Management</strong>: YES/NO token custody (under consideration)</li>
+</ul>
+<h4 id="security-features">Security Features:</h4>
+<ul>
+<li><strong>Audited Contracts</strong>: All contracts undergo security audits</li>
+<li><strong>Open Source</strong>: Transparent and verifiable code</li>
+<li><strong>Risk Assessment</strong>: Users maintain full control of assets</li>
+</ul>
+<h3 id="4-trading-contract-set">4. Trading Contract Set</h3>
+<h4 id="transaction-processing">Transaction Processing:</h4>
+<ul>
+<li><strong>Transfer Function</strong>: Execute YES/NO token trades</li>
+<li><strong>Order Service Integration</strong>: Triggered by order service</li>
+<li><strong>Asset Freezing</strong>: Temporary asset locks for orders</li>
+<li><strong>Batch Processing</strong>: Efficient bulk transaction execution</li>
+</ul>
+<h4 id="trading-restrictions">Trading Restrictions:</h4>
+<ul>
+<li><strong>Pre-result Trading</strong>: Trading stops 1 hour before results</li>
+<li><strong>Identity Verification</strong>: Private key signature verification</li>
+<li><strong>Order Validation</strong>: Order service authentication</li>
+</ul>
+<h3 id="5-factory-contract-set">5. Factory Contract Set</h3>
+<h4 id="management-functions">Management Functions:</h4>
+<ul>
+<li><strong>Event/Condition Management</strong>: Publish or delete events and conditions</li>
+<li><strong>Permission Management</strong>: Set permission addresses</li>
+<li><strong>User Management</strong>: Define different user roles</li>
+<li><strong>Contract Deployment</strong>: Deploy temporary condition contracts</li>
+</ul>
+<h4 id="user-roles">User Roles:</h4>
+<ul>
+<li><strong>DP Chain Operators</strong>: Data provider chain operations</li>
+<li><strong>Order Operators</strong>: Order book transaction submission</li>
+<li><strong>Regular Users</strong>: Deposit, withdrawal, order placement</li>
+</ul>
+<h3 id="6-temporary-condition-contracts">6. Temporary Condition Contracts</h3>
+<h4 id="individual-contracts">Individual Contracts:</h4>
+<ul>
+<li><strong>Condition-specific Services</strong>: Each condition gets its own contract</li>
+<li><strong>YES/NO Token Management</strong>: Token creation and destruction</li>
+<li><strong>TVL Management</strong>: Condition-specific total value locked</li>
+<li><strong>Settlement Implementation</strong>: Specific liquidation logic</li>
+</ul>
+<h4 id="design-considerations">Design Considerations:</h4>
+<ul>
+<li><strong>Modular Design</strong>: Independent contract for each condition</li>
+<li><strong>Service Integration</strong>: Called by other contracts, not directly by users</li>
+<li><strong>Gas Optimization</strong>: Efficient contract design for BSC</li>
+</ul>
+<h2 id="data-provider-dp-system">Data Provider (DP) System</h2>
+<h3 id="1-event-type-management">1. Event Type Management</h3>
+<h4 id="core-functions_1">Core Functions:</h4>
+<ul>
+<li><strong>Type Creation</strong>: Add and manage event categories</li>
+<li><strong>Classification System</strong>: All events belong to specific types</li>
+<li><strong>Import/Export</strong>: Batch import and export capabilities</li>
+<li><strong>Data Maintenance</strong>: Type data management and updates</li>
+</ul>
+<h3 id="2-event-management">2. Event Management</h3>
+<h4 id="event-operations">Event Operations:</h4>
+<ul>
+<li><strong>Manual Entry</strong>: Admin user manual event creation</li>
+<li><strong>Batch Import</strong>: External file bulk import</li>
+<li><strong>Data Validation</strong>: Event data verification</li>
+<li><strong>Chain Publishing</strong>: Blockchain event deployment</li>
+</ul>
+<h4 id="publishing-process">Publishing Process:</h4>
+<ul>
+<li><strong>Event Creation</strong>: Define event parameters</li>
+<li><strong>Condition Setup</strong>: Create event conditions</li>
+<li><strong>Liquidity Initialization</strong>: Set initial odds and liquidity</li>
+<li><strong>Market Launch</strong>: Enable trading for the event</li>
+</ul>
+<h3 id="3-chain-operations">3. Chain Operations</h3>
+<h4 id="dp-functions">DP Functions:</h4>
+<ul>
+<li><strong>Event Publishing</strong>: Deploy events to blockchain</li>
+<li><strong>Condition Management</strong>: Create and manage conditions</li>
+<li><strong>Liquidity Operations</strong>: Add or recover liquidity</li>
+<li><strong>Result Publishing</strong>: Publish event outcomes</li>
+<li><strong>Settlement Execution</strong>: Trigger liquidation process</li>
+</ul>
+<h4 id="automated-services">Automated Services:</h4>
+<ul>
+<li><strong>Scheduled Operations</strong>: Automatic execution of specific tasks</li>
+<li><strong>Trading Halts</strong>: Automatic condition trading stops</li>
+<li><strong>Result Publishing</strong>: Automatic result publication</li>
+<li><strong>Settlement Processing</strong>: Automatic liquidation execution</li>
+</ul>
+<h3 id="4-permission-management">4. Permission Management</h3>
+<h4 id="role-based-access">Role-based Access:</h4>
+<ul>
+<li><strong>Administrators</strong>: Manage other account permissions and contract configuration</li>
+<li><strong>Data Entry Staff</strong>: Event/condition data entry and maintenance</li>
+<li><strong>Asset Managers</strong>: Chain operations and operations management</li>
+</ul>
+<h4 id="security-features_1">Security Features:</h4>
+<ul>
+<li><strong>Specific Permissions</strong>: Only authorized users can operate chain data</li>
+<li><strong>Transaction Confirmation</strong>: Wait for transaction confirmation before next step</li>
+<li><strong>Permission Auditing</strong>: Regular permission review and updates</li>
+</ul>
+<h2 id="order-trading-model">Order Trading Model</h2>
+<h3 id="1-order-book-management">1. Order Book Management</h3>
+<h4 id="core-functions_2">Core Functions:</h4>
+<ul>
+<li><strong>Limit Order Support</strong>: Only limit orders currently supported</li>
+<li><strong>Order Storage</strong>: Efficient order data management</li>
+<li><strong>Order Matching</strong>: Price and time priority matching</li>
+<li><strong>Order Validation</strong>: Order integrity verification</li>
+</ul>
+<h4 id="technical-considerations">Technical Considerations:</h4>
+<ul>
+<li><strong>Single Cluster</strong>: No distributed deployment requirements</li>
+<li><strong>Performance</strong>: TPS &lt; 100</li>
+<li><strong>Scalability</strong>: Future expansion considerations</li>
+</ul>
+<h3 id="2-matching-engine">2. Matching Engine</h3>
+<h4 id="matching-principles">Matching Principles:</h4>
+<ul>
+<li><strong>Price Priority</strong>: Better prices matched first</li>
+<li><strong>Time Priority</strong>: Earlier orders matched first</li>
+<li><strong>Order Types</strong>: Currently only limit orders</li>
+<li><strong>Real-time Processing</strong>: Immediate order processing</li>
+</ul>
+<h4 id="engine-features">Engine Features:</h4>
+<ul>
+<li><strong>Efficient Matching</strong>: Optimized matching algorithms</li>
+<li><strong>Order Validation</strong>: Pre-matching order verification</li>
+<li><strong>Settlement Integration</strong>: Seamless settlement processing</li>
+</ul>
+<h3 id="3-market-price-calculation">3. Market Price Calculation</h3>
+<h4 id="price-determination">Price Determination:</h4>
+<ul>
+<li><strong>Seller-based Pricing</strong>: Minimum seller price as market price</li>
+<li><strong>Future Enhancements</strong>: Comprehensive price calculation</li>
+<li><strong>Real-time Updates</strong>: Continuous price updates</li>
+<li><strong>Historical Data</strong>: Price history tracking</li>
+</ul>
+<h4 id="calculation-factors">Calculation Factors:</h4>
+<ul>
+<li><strong>Current Version</strong>: Minimum seller price</li>
+<li><strong>Future Version</strong>: Comprehensive calculation including:</li>
+<li>Transaction prices</li>
+<li>Trading volume</li>
+<li>Buyer prices</li>
+<li>Market depth</li>
+</ul>
+<h3 id="4-settlement-service">4. Settlement Service</h3>
+<h4 id="settlement-process">Settlement Process:</h4>
+<ul>
+<li><strong>Off-chain Calculation</strong>: Settlement calculations performed off-chain</li>
+<li><strong>On-chain Execution</strong>: Asset changes executed on blockchain</li>
+<li><strong>Batch Processing</strong>: Efficient bulk transaction processing</li>
+<li><strong>Verification</strong>: Settlement result verification</li>
+</ul>
+<h4 id="security-features_2">Security Features:</h4>
+<ul>
+<li><strong>Transaction Verification</strong>: All transactions verified on-chain</li>
+<li><strong>Asset Safety</strong>: User assets protected throughout process</li>
+<li><strong>Audit Trail</strong>: Complete transaction history</li>
+</ul>
+<h2 id="dapp-backend-service">DApp Backend Service</h2>
+<h3 id="1-user-management">1. User Management</h3>
+<h4 id="authentication">Authentication:</h4>
+<ul>
+<li><strong>Wallet Connection</strong>: Connect wallet for login/registration</li>
+<li><strong>SSO Support</strong>: Single sign-on integration</li>
+<li><strong>User Settings</strong>: User preference management</li>
+<li><strong>Overview Module</strong>: User dashboard and statistics</li>
+</ul>
+<h4 id="user-features">User Features:</h4>
+<ul>
+<li><strong>Profile Management</strong>: User profile and settings</li>
+<li><strong>Activity Tracking</strong>: User activity monitoring</li>
+<li><strong>Performance Analytics</strong>: User performance metrics</li>
+</ul>
+<h3 id="2-activity-module">2. Activity Module</h3>
+<h4 id="admin-configuration">Admin Configuration:</h4>
+<ul>
+<li><strong>Activity Management</strong>: Direct admin configuration</li>
+<li><strong>Image Management</strong>: Activity image address management</li>
+<li><strong>Link Management</strong>: Activity link address management</li>
+<li><strong>API Integration</strong>: Client-side activity data provision</li>
+</ul>
+<h4 id="features">Features:</h4>
+<ul>
+<li><strong>Dynamic Content</strong>: Configurable activity content</li>
+<li><strong>Image Display</strong>: Activity image presentation</li>
+<li><strong>Link Handling</strong>: External link management</li>
+<li><strong>API Services</strong>: Activity data API provision</li>
+</ul>
+<h3 id="3-historical-order-management">3. Historical Order Management</h3>
+<h4 id="order-history">Order History:</h4>
+<ul>
+<li><strong>Time Filtering</strong>: Filter orders by time period</li>
+<li><strong>Status Filtering</strong>: Filter orders by status</li>
+<li><strong>Event Filtering</strong>: Filter orders by event</li>
+<li><strong>Comprehensive Search</strong>: Multi-criteria order search</li>
+</ul>
+<h4 id="data-integration">Data Integration:</h4>
+<ul>
+<li><strong>Order Book API</strong>: Basic API from order book service</li>
+<li><strong>Data Aggregation</strong>: Comprehensive order data collection</li>
+<li><strong>User Interface</strong>: User-friendly order history display</li>
+</ul>
+<h3 id="4-dashboard-module">4. Dashboard Module</h3>
+<h4 id="deposit-analytics">Deposit Analytics:</h4>
+<ul>
+<li><strong>Deposit Trends</strong>: Deposit amount trend charts</li>
+<li><strong>Data Collection</strong>: 30-second contract reading intervals</li>
+<li><strong>Event Monitoring</strong>: Vault contract deposit/withdraw event monitoring</li>
+<li><strong>Profit Calculation</strong>: Comprehensive profit calculation</li>
+</ul>
+<h4 id="revenue-analytics">Revenue Analytics:</h4>
+<ul>
+<li><strong>Profit Trends</strong>: Profit amount trend charts</li>
+<li><strong>Real-time Updates</strong>: Live profit calculation</li>
+<li><strong>Historical Data</strong>: Complete profit history</li>
+<li><strong>Performance Metrics</strong>: User performance analysis</li>
+</ul>
+<h4 id="activity-analytics">Activity Analytics:</h4>
+<ul>
+<li><strong>Order Volume Trends</strong>: Daily order volume charts</li>
+<li><strong>Order Amount Trends</strong>: Daily order amount charts</li>
+<li><strong>Event Monitoring</strong>: SubmitOrderEvent monitoring</li>
+<li><strong>Data Analysis</strong>: Comprehensive order data analysis</li>
+</ul>
+<h3 id="5-search-and-graph-services">5. Search and Graph Services</h3>
+<h4 id="search-functionality">Search Functionality:</h4>
+<ul>
+<li><strong>Keyword Search</strong>: Search all related events</li>
+<li><strong>DP Service Integration</strong>: Basic API from DP service</li>
+<li><strong>Advanced Filtering</strong>: Multi-criteria search</li>
+<li><strong>Real-time Results</strong>: Instant search results</li>
+</ul>
+<h4 id="graph-services">Graph Services:</h4>
+<ul>
+<li><strong>Price Trend Charts</strong>: Market price trend visualization</li>
+<li><strong>Time Intervals</strong>: 30-minute, 1-hour, 1-day, 1-week statistics</li>
+<li><strong>Data Collection</strong>: 10-minute API data collection intervals</li>
+<li><strong>Price Analysis</strong>: Comprehensive price data analysis</li>
+</ul>
+<h2 id="dapp-frontend">DApp Frontend</h2>
+<h3 id="1-user-interface">1. User Interface</h3>
+<h4 id="core-features">Core Features:</h4>
+<ul>
+<li><strong>Simple Design</strong>: Intuitive and user-friendly interface</li>
+<li><strong>Trustworthy Experience</strong>: Transparent and reliable service</li>
+<li><strong>Real-time Updates</strong>: Live data updates</li>
+<li><strong>Responsive Design</strong>: Mobile and desktop compatibility</li>
+</ul>
+<h4 id="user-experience">User Experience:</h4>
+<ul>
+<li><strong>Easy Navigation</strong>: Simple and clear navigation</li>
+<li><strong>Visual Feedback</strong>: Clear visual indicators</li>
+<li><strong>Error Handling</strong>: Comprehensive error management</li>
+<li><strong>Loading States</strong>: Clear loading indicators</li>
+</ul>
+<h3 id="2-authentication-system">2. Authentication System</h3>
+<h4 id="login-methods">Login Methods:</h4>
+<ul>
+<li><strong>Wallet Connection</strong>: MetaMask and other EVM wallets</li>
+<li><strong>SSO Integration</strong>: Single sign-on support</li>
+<li><strong>Registration Process</strong>: Simple user registration</li>
+<li><strong>Session Management</strong>: Secure session handling</li>
+</ul>
+<h4 id="security-features_3">Security Features:</h4>
+<ul>
+<li><strong>Private Key Security</strong>: Secure private key handling</li>
+<li><strong>Transaction Signing</strong>: Secure transaction signing</li>
+<li><strong>Identity Verification</strong>: User identity verification</li>
+</ul>
+<h3 id="3-asset-management">3. Asset Management</h3>
+<h4 id="depositwithdrawal">Deposit/Withdrawal:</h4>
+<ul>
+<li><strong>Asset Viewing</strong>: View user assets by address</li>
+<li><strong>Deposit Function</strong>: Simple deposit process</li>
+<li><strong>Withdrawal Function</strong>: Secure withdrawal process</li>
+<li><strong>Balance Tracking</strong>: Real-time balance updates</li>
+</ul>
+<h4 id="asset-features">Asset Features:</h4>
+<ul>
+<li><strong>Multi-asset Support</strong>: Support for various assets</li>
+<li><strong>Transaction History</strong>: Complete transaction records</li>
+<li><strong>Asset Analytics</strong>: Asset performance analysis</li>
+</ul>
+<h3 id="4-personal-center">4. Personal Center</h3>
+<h4 id="user-dashboard">User Dashboard:</h4>
+<ul>
+<li><strong>Personal Overview</strong>: Comprehensive user overview</li>
+<li><strong>My Orders</strong>: User order management</li>
+<li><strong>Settings</strong>: User preference settings</li>
+<li><strong>Performance Tracking</strong>: User performance metrics</li>
+</ul>
+<h4 id="management-features">Management Features:</h4>
+<ul>
+<li><strong>Order History</strong>: Complete order history</li>
+<li><strong>Asset Management</strong>: Asset overview and management</li>
+<li><strong>Settings Configuration</strong>: User settings and preferences</li>
+</ul>
+<h3 id="5-limit-order-trading">5. Limit Order Trading</h3>
+<h4 id="order-features">Order Features:</h4>
+<ul>
+<li><strong>Buy/Sell Orders</strong>: Submit buy and sell orders</li>
+<li><strong>Market Price View</strong>: Real-time market price display</li>
+<li><strong>Price Trends</strong>: Price trend visualization</li>
+<li><strong>Order Book Details</strong>: Detailed order book information</li>
+</ul>
+<h4 id="trading-interface">Trading Interface:</h4>
+<ul>
+<li><strong>Order Placement</strong>: Simple order placement</li>
+<li><strong>Price Charts</strong>: Real-time price charts</li>
+<li><strong>Order Management</strong>: Order modification and cancellation</li>
+<li><strong>Trade History</strong>: Complete trade history</li>
+</ul>
+<h3 id="6-event-management">6. Event Management</h3>
+<h4 id="event-services">Event Services:</h4>
+<ul>
+<li><strong>Event Lists</strong>: Comprehensive event listings</li>
+<li><strong>Event Filtering</strong>: Advanced event filtering</li>
+<li><strong>Event Search</strong>: Event search functionality</li>
+<li><strong>Event Details</strong>: Detailed event information</li>
+</ul>
+<h4 id="condition-management">Condition Management:</h4>
+<ul>
+<li><strong>Condition Lists</strong>: Event condition listings</li>
+<li><strong>Price Information</strong>: Real-time price data</li>
+<li><strong>Order Book Details</strong>: Detailed order book information</li>
+<li><strong>Market Price Trends</strong>: Price trend visualization</li>
+</ul>
+<h3 id="7-data-analytics">7. Data Analytics</h3>
+<h4 id="trend-analysis">Trend Analysis:</h4>
+<ul>
+<li><strong>Deposit Trends</strong>: Deposit amount trend charts</li>
+<li><strong>Profit Trends</strong>: Profit amount trend charts</li>
+<li><strong>Activity Trends</strong>: Order volume and amount trends</li>
+<li><strong>Performance Metrics</strong>: User performance analysis</li>
+</ul>
+<h4 id="visualization">Visualization:</h4>
+<ul>
+<li><strong>Interactive Charts</strong>: Interactive data visualization</li>
+<li><strong>Real-time Updates</strong>: Live data updates</li>
+<li><strong>Historical Analysis</strong>: Historical data analysis</li>
+<li><strong>Custom Timeframes</strong>: Flexible time period selection</li>
+</ul>
+<h3 id="8-multi-language-support">8. Multi-language Support</h3>
+<h4 id="language-options">Language Options:</h4>
+<ul>
+<li><strong>English</strong>: English language support (default)</li>
+<li><strong>Simplified Chinese</strong>: Simplified Chinese language support</li>
+<li><strong>Traditional Chinese</strong>: Traditional Chinese language support</li>
+<li><strong>Thai</strong>: Thai language support</li>
+<li><strong>Indonesian</strong>: Indonesian language support</li>
+<li><strong>Vietnamese</strong>: Vietnamese language support</li>
+</ul>
+<h4 id="localization-features">Localization Features:</h4>
+<ul>
+<li><strong>Dynamic Translation</strong>: Real-time language switching</li>
+<li><strong>Cultural Adaptation</strong>: Localized content and design</li>
+<li><strong>User Preferences</strong>: User language preference settings</li>
+<li><strong>Regional Content</strong>: Region-specific content and features</li>
+</ul>
+<h2 id="revenue-model">Revenue Model</h2>
+<h3 id="1-transaction-fees">1. Transaction Fees</h3>
+<h4 id="fee-structure">Fee Structure:</h4>
+<ul>
+<li><strong>Trading Fee</strong>: 1.5/1000 (0.15%) of transaction amount</li>
+<li><strong>Buyer/Seller Split</strong>: Both parties charged the fee</li>
+<li><strong>Automatic Deduction</strong>: Fees automatically deducted from transactions</li>
+<li><strong>Revenue Distribution</strong>: Platform revenue distribution</li>
+</ul>
+<h4 id="fee-collection">Fee Collection:</h4>
+<ul>
+<li><strong>Automatic Processing</strong>: Automatic fee collection</li>
+<li><strong>Transparent Pricing</strong>: Clear fee structure</li>
+<li><strong>Revenue Tracking</strong>: Comprehensive revenue tracking</li>
+<li><strong>Platform Sustainability</strong>: Revenue for platform development</li>
+</ul>
+<h2 id="system-limitations-and-risks">System Limitations and Risks</h2>
+<h3 id="1-technical-limitations">1. Technical Limitations</h3>
+<h4 id="performance-constraints">Performance Constraints:</h4>
+<ul>
+<li><strong>Contract TPS</strong>: &lt; 500 transactions per second</li>
+<li><strong>Order System TPS</strong>: &lt; 100 transactions per second</li>
+<li><strong>Centralization Risk</strong>: Event results determined by DP</li>
+<li><strong>Liquidity Management</strong>: Operator-provided liquidity only</li>
+</ul>
+<h4 id="current-restrictions">Current Restrictions:</h4>
+<ul>
+<li><strong>Limit Orders Only</strong>: No market orders currently supported</li>
+<li><strong>No Internal Wallet</strong>: Direct use of market wallets (MetaMask)</li>
+<li><strong>No Risk Control</strong>: Risk control system not implemented</li>
+<li><strong>Single Cluster</strong>: No distributed deployment</li>
+</ul>
+<h3 id="2-security-considerations">2. Security Considerations</h3>
+<h4 id="contract-security">Contract Security:</h4>
+<ul>
+<li><strong>Vulnerability Risk</strong>: Smart contract vulnerability potential</li>
+<li><strong>Audit Requirements</strong>: Comprehensive security audits</li>
+<li><strong>Open Source</strong>: Transparent code for community review</li>
+<li><strong>Regular Updates</strong>: Continuous security improvements</li>
+</ul>
+<h4 id="operational-security">Operational Security:</h4>
+<ul>
+<li><strong>Permission Management</strong>: Strict permission controls</li>
+<li><strong>Transaction Verification</strong>: All transactions verified</li>
+<li><strong>Asset Protection</strong>: User asset security measures</li>
+<li><strong>Monitoring Systems</strong>: Continuous security monitoring</li>
+</ul>
+<h3 id="3-risk-mitigation">3. Risk Mitigation</h3>
+<h4 id="technical-measures">Technical Measures:</h4>
+<ul>
+<li><strong>Comprehensive Testing</strong>: Extensive testing procedures</li>
+<li><strong>Security Audits</strong>: Regular security audits</li>
+<li><strong>Code Reviews</strong>: Thorough code review processes</li>
+<li><strong>Backup Systems</strong>: Redundant system implementations</li>
+</ul>
+<h4 id="operational-measures">Operational Measures:</h4>
+<ul>
+<li><strong>Risk Assessment</strong>: Regular risk assessments</li>
+<li><strong>Incident Response</strong>: Comprehensive incident response plans</li>
+<li><strong>User Education</strong>: User security education</li>
+<li><strong>Community Oversight</strong>: Community monitoring and feedback</li>
+</ul>
+<hr />
+<p><em>For the latest information on system architecture and updates, please check our official announcements.</em> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

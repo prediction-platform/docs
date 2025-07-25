@@ -1,0 +1,2364 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../withdraw/">
+      
+      
+        <link rel="next" href="../how-are-prices-calculated/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>How Are Markets Created? - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-are-markets-created" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How Are Markets Created?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-language-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-sign-up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Sign-Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Creation Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Creation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-market-proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Market Proposal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Market Proposal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-can-propose-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who Can Propose Markets?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposal-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposal Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-market-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Market Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Market Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Review:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Criteria:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-market-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Market Approval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Market Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#community-voting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Voting:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approval Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-market-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Market Launch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Market Launch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Setup:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launch-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-official-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Official Markets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Official Markets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-created-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Created Markets:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-community-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Community Markets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Community Markets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-proposed-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      User-Proposed Markets:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-partner-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Partner Markets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Partner Markets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collaborator-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaborator Markets:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-politics-and-elections" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Politics and Elections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sports-and-entertainment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sports and Entertainment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-business-and-finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Business and Finance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-technology-and-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Technology and Science
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-creation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Creation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Creation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Questions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Examples:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bad Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Duration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Duration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-term-markets-1-30-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short-Term Markets (1-30 days):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-markets-1-6-months" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium-Term Markets (1-6 months):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-markets-6-months" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Term Markets (6+ months):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Review Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Review Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-launch-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Launch Review:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-launch-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Launch Monitoring:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispute-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dispute Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-disputes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Disputes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incentives-and-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incentives and Rewards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incentives and Rewards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-creators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Creators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Creators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creator-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creator Rewards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-incentives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Incentives:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-participation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Participation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Participation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voting-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voting Rewards:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-developments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Developments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Developments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planned Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-market-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Market Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-creation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Creation Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prices-calculated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prediction-markets-resolved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-creation-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Creation Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Creation Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-market-proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Market Proposal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Market Proposal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#who-can-propose-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Who Can Propose Markets?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proposal-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proposal Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-market-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Market Validation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Market Validation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initial-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Initial Review:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validation-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Validation Criteria:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-market-approval" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Market Approval
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Market Approval">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#community-voting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Voting:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#approval-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Approval Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-market-launch" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Market Launch
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Market Launch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Setup:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launch-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-official-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Official Markets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Official Markets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-created-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform-Created Markets:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-community-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Community Markets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Community Markets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-proposed-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      User-Proposed Markets:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-partner-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Partner Markets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Partner Markets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collaborator-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Collaborator Markets:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#characteristics_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Categories
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-politics-and-elections" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Politics and Elections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-sports-and-entertainment" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Sports and Entertainment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-business-and-finance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Business and Finance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-technology-and-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Technology and Science
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#market-creation-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Creation Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Creation Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clear-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clear Questions:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#good-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Good Examples:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bad-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bad Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-duration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Duration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Duration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#short-term-markets-1-30-days" class="md-nav__link">
+    <span class="md-ellipsis">
+      Short-Term Markets (1-30 days):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#medium-term-markets-1-6-months" class="md-nav__link">
+    <span class="md-ellipsis">
+      Medium-Term Markets (1-6 months):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#long-term-markets-6-months" class="md-nav__link">
+    <span class="md-ellipsis">
+      Long-Term Markets (6+ months):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-review-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Review Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Review Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pre-launch-review" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Launch Review:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-launch-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Post-Launch Monitoring:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispute-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dispute Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-disputes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Disputes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incentives-and-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incentives and Rewards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incentives and Rewards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-creators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Creators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Creators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creator-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creator Rewards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-incentives" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Incentives:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community-participation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community Participation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Community Participation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#voting-rewards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Voting Rewards:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-developments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Developments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Developments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planned Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-market-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Market Types:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-creation-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Creation Tools:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-are-markets-created">How Are Markets Created?</h1>
+<h2 id="overview">Overview</h2>
+<p>YC365's prediction markets are created through a decentralized and community-driven process that ensures transparency, fairness, and accuracy. This guide explains how markets come into existence on the YC365 platform.</p>
+<h2 id="market-creation-process">Market Creation Process</h2>
+<h3 id="1-market-proposal">1. Market Proposal</h3>
+<h4 id="who-can-propose-markets">Who Can Propose Markets?</h4>
+<ul>
+<li><strong>Community Members</strong>: Any user can propose new markets</li>
+<li><strong>YC365 Team</strong>: Official markets created by the platform</li>
+<li><strong>Partners</strong>: Verified partners and collaborators</li>
+</ul>
+<h4 id="proposal-requirements">Proposal Requirements:</h4>
+<ul>
+<li><strong>Clear Question</strong>: Must be a binary outcome (Yes/No)</li>
+<li><strong>Specific Resolution Criteria</strong>: Clear conditions for market resolution</li>
+<li><strong>Reasonable Timeline</strong>: Appropriate duration for the market</li>
+<li><strong>Public Interest</strong>: Should have community relevance</li>
+</ul>
+<h3 id="2-market-validation">2. Market Validation</h3>
+<h4 id="initial-review">Initial Review:</h4>
+<ul>
+<li><strong>Technical Feasibility</strong>: Can the outcome be objectively determined?</li>
+<li><strong>Legal Compliance</strong>: Does it comply with regulations?</li>
+<li><strong>Community Interest</strong>: Is there sufficient user interest?</li>
+</ul>
+<h4 id="validation-criteria">Validation Criteria:</h4>
+<ul>
+<li><strong>Objectivity</strong>: Outcome must be verifiable by external sources</li>
+<li><strong>Timeliness</strong>: Resolution should occur within reasonable timeframe</li>
+<li><strong>Uniqueness</strong>: Should not duplicate existing markets</li>
+<li><strong>Clarity</strong>: Question and resolution criteria must be clear</li>
+</ul>
+<h3 id="3-market-approval">3. Market Approval</h3>
+<h4 id="community-voting">Community Voting:</h4>
+<ul>
+<li><strong>Stakeholder Voting</strong>: Users with YC365 tokens can vote</li>
+<li><strong>Minimum Threshold</strong>: Requires minimum number of votes</li>
+<li><strong>Time Period</strong>: Voting period typically 3-7 days</li>
+</ul>
+<h4 id="approval-requirements">Approval Requirements:</h4>
+<ul>
+<li><strong>Majority Support</strong>: 51% or more positive votes</li>
+<li><strong>Minimum Participation</strong>: Sufficient voter turnout</li>
+<li><strong>No Conflicts</strong>: No significant conflicts of interest</li>
+</ul>
+<h3 id="4-market-launch">4. Market Launch</h3>
+<h4 id="technical-setup">Technical Setup:</h4>
+<ul>
+<li><strong>Smart Contract Deployment</strong>: Market contract deployed on BSC</li>
+<li><strong>Initial Liquidity</strong>: Platform provides initial liquidity</li>
+<li><strong>Trading Pairs</strong>: Yes/No tokens created and listed</li>
+</ul>
+<h4 id="launch-process">Launch Process:</h4>
+<ul>
+<li><strong>Market Listing</strong>: Added to YC365 marketplace</li>
+<li><strong>Liquidity Provision</strong>: Initial liquidity pool established</li>
+<li><strong>Trading Enabled</strong>: Users can start trading immediately</li>
+</ul>
+<h2 id="market-types">Market Types</h2>
+<h3 id="1-official-markets">1. Official Markets</h3>
+<h4 id="platform-created-markets">Platform-Created Markets:</h4>
+<ul>
+<li><strong>High-Profile Events</strong>: Major elections, sports events</li>
+<li><strong>Economic Indicators</strong>: GDP growth, inflation rates</li>
+<li><strong>Crypto Events</strong>: Bitcoin halving, major protocol updates</li>
+</ul>
+<h4 id="characteristics">Characteristics:</h4>
+<ul>
+<li><strong>High Liquidity</strong>: Significant initial liquidity provided</li>
+<li><strong>Verified Sources</strong>: Reliable resolution sources</li>
+<li><strong>Long Duration</strong>: Often weeks or months long</li>
+</ul>
+<h3 id="2-community-markets">2. Community Markets</h3>
+<h4 id="user-proposed-markets">User-Proposed Markets:</h4>
+<ul>
+<li><strong>Local Events</strong>: Regional elections, local sports</li>
+<li><strong>Industry Trends</strong>: Technology adoption, market movements</li>
+<li><strong>Social Events</strong>: Entertainment awards, cultural events</li>
+</ul>
+<h4 id="characteristics_1">Characteristics:</h4>
+<ul>
+<li><strong>Community Driven</strong>: Based on user interests</li>
+<li><strong>Variable Liquidity</strong>: Depends on community participation</li>
+<li><strong>Diverse Topics</strong>: Wide range of subjects</li>
+</ul>
+<h3 id="3-partner-markets">3. Partner Markets</h3>
+<h4 id="collaborator-markets">Collaborator Markets:</h4>
+<ul>
+<li><strong>Media Partners</strong>: News organizations, content creators</li>
+<li><strong>Industry Partners</strong>: Companies, organizations</li>
+<li><strong>Academic Partners</strong>: Research institutions, universities</li>
+</ul>
+<h4 id="characteristics_2">Characteristics:</h4>
+<ul>
+<li><strong>Expert Input</strong>: Domain expertise provided</li>
+<li><strong>Quality Assurance</strong>: Higher validation standards</li>
+<li><strong>Specialized Topics</strong>: Niche or technical subjects</li>
+</ul>
+<h2 id="market-categories">Market Categories</h2>
+<h3 id="1-politics-and-elections">1. Politics and Elections</h3>
+<ul>
+<li><strong>National Elections</strong>: Presidential, parliamentary elections</li>
+<li><strong>Policy Outcomes</strong>: Legislative votes, policy implementations</li>
+<li><strong>International Relations</strong>: Trade deals, diplomatic events</li>
+</ul>
+<h3 id="2-sports-and-entertainment">2. Sports and Entertainment</h3>
+<ul>
+<li><strong>Sports Championships</strong>: Major league finals, tournaments</li>
+<li><strong>Entertainment Awards</strong>: Oscars, Grammys, other awards</li>
+<li><strong>Reality Shows</strong>: Competition outcomes, show results</li>
+</ul>
+<h3 id="3-business-and-finance">3. Business and Finance</h3>
+<ul>
+<li><strong>Company Performance</strong>: Earnings reports, stock prices</li>
+<li><strong>Economic Indicators</strong>: GDP, inflation, employment data</li>
+<li><strong>Crypto Events</strong>: Protocol updates, major announcements</li>
+</ul>
+<h3 id="4-technology-and-science">4. Technology and Science</h3>
+<ul>
+<li><strong>Product Launches</strong>: Tech releases, feature rollouts</li>
+<li><strong>Scientific Discoveries</strong>: Research breakthroughs, clinical trials</li>
+<li><strong>Space Missions</strong>: Rocket launches, space exploration</li>
+</ul>
+<h2 id="market-creation-guidelines">Market Creation Guidelines</h2>
+<h3 id="best-practices">Best Practices</h3>
+<h4 id="clear-questions">Clear Questions:</h4>
+<ul>
+<li><strong>Specific Outcomes</strong>: Avoid ambiguous language</li>
+<li><strong>Measurable Results</strong>: Use quantifiable criteria</li>
+<li><strong>Timely Resolution</strong>: Set reasonable timeframes</li>
+</ul>
+<h4 id="good-examples">Good Examples:</h4>
+<ul>
+<li>"Will Bitcoin reach $100,000 by December 31, 2024?"</li>
+<li>"Will Tesla deliver more than 2 million vehicles in 2024?"</li>
+<li>"Will the US Federal Reserve raise interest rates in March 2024?"</li>
+</ul>
+<h4 id="bad-examples">Bad Examples:</h4>
+<ul>
+<li>"Will the stock market go up?" (too vague)</li>
+<li>"Will technology improve?" (unmeasurable)</li>
+<li>"Will something happen?" (unclear outcome)</li>
+</ul>
+<h3 id="market-duration">Market Duration</h3>
+<h4 id="short-term-markets-1-30-days">Short-Term Markets (1-30 days):</h4>
+<ul>
+<li><strong>Earnings Reports</strong>: Quarterly financial results</li>
+<li><strong>Event Outcomes</strong>: Sports games, award shows</li>
+<li><strong>Policy Decisions</strong>: Central bank meetings, votes</li>
+</ul>
+<h4 id="medium-term-markets-1-6-months">Medium-Term Markets (1-6 months):</h4>
+<ul>
+<li><strong>Elections</strong>: Political campaigns, voting results</li>
+<li><strong>Product Launches</strong>: Tech releases, major announcements</li>
+<li><strong>Economic Data</strong>: Quarterly GDP, employment reports</li>
+</ul>
+<h4 id="long-term-markets-6-months">Long-Term Markets (6+ months):</h4>
+<ul>
+<li><strong>Annual Performance</strong>: Year-end results, annual targets</li>
+<li><strong>Major Projects</strong>: Infrastructure, development timelines</li>
+<li><strong>Trend Analysis</strong>: Long-term market movements</li>
+</ul>
+<h2 id="quality-control">Quality Control</h2>
+<h3 id="market-review-process">Market Review Process</h3>
+<h4 id="pre-launch-review">Pre-Launch Review:</h4>
+<ul>
+<li><strong>Technical Assessment</strong>: Smart contract security</li>
+<li><strong>Legal Review</strong>: Compliance with regulations</li>
+<li><strong>Community Feedback</strong>: User input and suggestions</li>
+</ul>
+<h4 id="post-launch-monitoring">Post-Launch Monitoring:</h4>
+<ul>
+<li><strong>Trading Activity</strong>: Monitor liquidity and volume</li>
+<li><strong>Price Movements</strong>: Track market efficiency</li>
+<li><strong>User Feedback</strong>: Community reports and concerns</li>
+</ul>
+<h3 id="dispute-resolution">Dispute Resolution</h3>
+<h4 id="market-disputes">Market Disputes:</h4>
+<ul>
+<li><strong>Unclear Outcomes</strong>: Ambiguous resolution criteria</li>
+<li><strong>External Changes</strong>: Events affecting market validity</li>
+<li><strong>Technical Issues</strong>: Smart contract problems</li>
+</ul>
+<h4 id="resolution-process">Resolution Process:</h4>
+<ul>
+<li><strong>Community Discussion</strong>: Open forum for debate</li>
+<li><strong>Expert Review</strong>: Domain expert assessment</li>
+<li><strong>Final Decision</strong>: Platform or community vote</li>
+</ul>
+<h2 id="incentives-and-rewards">Incentives and Rewards</h2>
+<h3 id="market-creators">Market Creators</h3>
+<h4 id="creator-rewards">Creator Rewards:</h4>
+<ul>
+<li><strong>Trading Fees</strong>: Percentage of trading volume</li>
+<li><strong>Recognition</strong>: Credit for successful markets</li>
+<li><strong>Community Status</strong>: Enhanced reputation and privileges</li>
+</ul>
+<h4 id="quality-incentives">Quality Incentives:</h4>
+<ul>
+<li><strong>Accuracy Bonuses</strong>: Rewards for well-designed markets</li>
+<li><strong>Popularity Rewards</strong>: Bonuses for high-volume markets</li>
+<li><strong>Innovation Awards</strong>: Recognition for creative market types</li>
+</ul>
+<h3 id="community-participation">Community Participation</h3>
+<h4 id="voting-rewards">Voting Rewards:</h4>
+<ul>
+<li><strong>Participation Tokens</strong>: Rewards for voting on proposals</li>
+<li><strong>Influence Points</strong>: Weighted voting based on activity</li>
+<li><strong>Community Status</strong>: Enhanced privileges for active users</li>
+</ul>
+<h2 id="future-developments">Future Developments</h2>
+<h3 id="planned-features">Planned Features</h3>
+<h4 id="advanced-market-types">Advanced Market Types:</h4>
+<ul>
+<li><strong>Multi-Outcome Markets</strong>: More than Yes/No options</li>
+<li><strong>Conditional Markets</strong>: Dependent on other outcomes</li>
+<li><strong>Prediction Tournaments</strong>: Competitive forecasting</li>
+</ul>
+<h4 id="enhanced-creation-tools">Enhanced Creation Tools:</h4>
+<ul>
+<li><strong>Market Templates</strong>: Pre-designed market structures</li>
+<li><strong>AI Assistance</strong>: Automated market validation</li>
+<li><strong>Collaborative Creation</strong>: Multi-user market design</li>
+</ul>
+<hr />
+<p><em>For the latest information on market creation and updates, please check our official announcements.</em> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

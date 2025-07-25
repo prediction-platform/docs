@@ -28,7 +28,7 @@ YC365 adopts a hybrid on-chain and off-chain architecture, ensuring high efficie
 ## 🚀 Key Features
 
 - **Diverse Markets**  
-  YC365 supports a wide range of prediction markets, including sports, politics, crypto, finance, and more—similar to leading platforms like Polymarket and Augur. Users can create and participate in markets on any topic.
+  YC365 supports a wide range of prediction markets, including sports, politics, crypto, finance, and more—similar to leading platforms like YC365 and Augur. Users can create and participate in markets on any topic.
 
 - **User-Friendly Experience**  
   With an intuitive interface and seamless onboarding, YC365 makes it easy for both beginners and experienced traders to participate, inspired by the best practices of Omen and Gnosis.

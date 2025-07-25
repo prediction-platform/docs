@@ -9,16 +9,23 @@ theme:
 nav:
   - Index: index.md
   - Prerequisites: prerequisites.md
+  - System Architecture: system-architecture.md
+  - Multi-language Support: multi-language-support.md
   - Terms of Use: terms-of-use.md
   - Get Started:
       - Introduction: get-started.md
-      - What is YC365?: what-is-polymarket.md
+      - What is YC365?: what-is-yc365.md
       - How to Sign-Up: how-to-sign-up.md
       - How to Deposit: how-to-deposit.md
       - Making Your First Trade: making-your-first-trade.md
   - Deposits and Withdraw:
       - Deposits: deposits.md
       - Withdraw: withdraw.md
-  - Markets: markets.md
+  - Markets:
+      - How Are Markets Created?: how-are-markets-created.md
+      - How Are Prices Calculated?: how-are-prices-calculated.md
+      - How Are Prediction Markets Resolved?: how-are-prediction-markets-resolved.md
+      - How Are Markets Clarified?: how-are-markets-clarified.md
+      - How Are Markets Disputed?: how-are-markets-disputed.md
   - Trading: trading.md
   - FAQs: faqs.md

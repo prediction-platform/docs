@@ -1,0 +1,3030 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../how-are-prices-calculated/">
+      
+      
+        <link rel="next" href="../how-are-markets-clarified/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>How Are Prediction Markets Resolved? - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-are-prediction-markets-resolved" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How Are Prediction Markets Resolved?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-language-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-language Support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-sign-up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Sign-Up
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-created/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prices-calculated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-market-expiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Market Expiration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Market Expiration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expiration-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expiration Types:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-outcome-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Outcome Determination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Outcome Determination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Sources:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resolution-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Resolution Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Resolution Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Outcomes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Standards:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Sources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-official-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Official Sources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Official Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#government-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Government Data:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sports-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sports Results:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-news-and-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. News and Media
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. News and Media">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verified-news-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified News Sources:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Standards:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Providers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#financial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Data:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Data:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Timeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Timeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pre-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pre-Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pre-Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Monitoring:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Notifications:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-resolution-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Resolution Period
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Resolution Period">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Time:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispute-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Window:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-post-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Post-Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Post-Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settlement-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settlement Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dispute-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dispute Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dispute-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Dispute Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Dispute Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-disputes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Disputes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispute-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-resolution-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Resolution Standards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Resolution Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidence-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidence Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Criteria:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payout-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payout Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Payout Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-winning-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Winning Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Winning Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fee-deductions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fee Deductions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Fee Deductions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-fees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Fees:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-payout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Net Payout:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-token-redemption" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Token Redemption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Token Redemption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redemption-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redemption Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redemption-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redemption Timeline:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-resolution-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Resolution Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Resolution Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inconclusive-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inconclusive Outcomes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Inconclusive Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Ambiguity:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-technical-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Technical Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Technical Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart-contract-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Contract Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-external-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. External Factors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. External Factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Manipulation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory Changes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Transparency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Transparency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-public-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Public Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Public Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolution-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Reports:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidence-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidence Archive:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-user-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. User Communication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. User Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notifications:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Channels:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Assurance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Assurance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-resolution-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Resolution Accuracy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Resolution Accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-standards_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Standards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy Metrics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Continuous Improvement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Continuous Improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Optimization:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-advanced-resolution-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Advanced Resolution Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Advanced Resolution Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Improvements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Areas:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-enhanced-user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Enhanced User Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Enhanced User Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Tools:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Process
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Process">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-market-expiration" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Market Expiration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Market Expiration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expiration-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expiration Types:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-outcome-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Outcome Determination
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Outcome Determination">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Sources:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-resolution-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Resolution Criteria
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Resolution Criteria">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary Outcomes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Standards:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Sources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-official-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Official Sources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Official Sources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#government-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Government Data:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sports-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sports Results:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-news-and-media" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. News and Media
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. News and Media">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verified-news-sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verified News Sources:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verification-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Standards:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-data-providers" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Data Providers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Providers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#financial-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Financial Data:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Data:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Timeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Timeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-pre-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Pre-Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Pre-Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Monitoring:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Notifications:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-resolution-period" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Resolution Period
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Resolution Period">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Time:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispute-window" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Window:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-post-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Post-Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Post-Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#settlement-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settlement Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dispute-resolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Resolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dispute Resolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dispute-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Dispute Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Dispute Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-disputes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Disputes:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dispute-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dispute Process:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-resolution-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Resolution Standards
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Resolution Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidence-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidence Requirements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Criteria:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#payout-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Payout Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Payout Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-winning-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Winning Calculation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Winning Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-formula" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Formula:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Scenarios:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-fee-deductions" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Fee Deductions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Fee Deductions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform-fees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Fees:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#net-payout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Net Payout:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-token-redemption" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Token Redemption
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Token Redemption">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redemption-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redemption Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#redemption-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redemption Timeline:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-resolution-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Resolution Cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Special Resolution Cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-inconclusive-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Inconclusive Outcomes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Inconclusive Outcomes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#handling-ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Handling Ambiguity:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-technical-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Technical Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Technical Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart-contract-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Contract Problems:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Issues:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-external-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. External Factors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. External Factors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-manipulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Manipulation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory Changes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resolution-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Transparency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Resolution Transparency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-public-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Public Documentation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Public Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resolution-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Reports:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidence-archive" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidence Archive:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-user-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. User Communication
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. User Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notifications:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#communication-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Communication Channels:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Assurance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Assurance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-resolution-accuracy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Resolution Accuracy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Resolution Accuracy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verification-standards_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verification Standards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accuracy-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accuracy Metrics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-continuous-improvement" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Continuous Improvement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Continuous Improvement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#process-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Process Optimization:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feedback-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Feedback Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-advanced-resolution-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Advanced Resolution Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Advanced Resolution Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Improvements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#research-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research Areas:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-enhanced-user-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Enhanced User Experience
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Enhanced User Experience">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Tools:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#platform-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Platform Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-are-prediction-markets-resolved">How Are Prediction Markets Resolved?</h1>
+<h2 id="overview">Overview</h2>
+<p>YC365 prediction markets are resolved through a transparent and reliable process that ensures accurate outcomes and fair payouts. This guide explains how markets are settled and how winners are determined.</p>
+<h2 id="resolution-process">Resolution Process</h2>
+<h3 id="1-market-expiration">1. Market Expiration</h3>
+<h4 id="timeline">Timeline:</h4>
+<ul>
+<li><strong>End Date</strong>: Each market has a specific end date</li>
+<li><strong>Trading Halt</strong>: Trading stops at expiration</li>
+<li><strong>Resolution Period</strong>: Time for outcome verification</li>
+</ul>
+<h4 id="expiration-types">Expiration Types:</h4>
+<ul>
+<li><strong>Automatic</strong>: Based on predetermined end date</li>
+<li><strong>Event-Based</strong>: When specific event occurs</li>
+<li><strong>Manual</strong>: Admin-initiated closure</li>
+</ul>
+<h3 id="2-outcome-determination">2. Outcome Determination</h3>
+<h4 id="verification-sources">Verification Sources:</h4>
+<ul>
+<li><strong>Official Results</strong>: Government agencies, official bodies</li>
+<li><strong>News Sources</strong>: Verified news organizations</li>
+<li><strong>Data Providers</strong>: Reliable data feeds and APIs</li>
+<li><strong>Expert Consensus</strong>: Domain expert verification</li>
+</ul>
+<h4 id="verification-process">Verification Process:</h4>
+<ol>
+<li><strong>Data Collection</strong>: Gather information from multiple sources</li>
+<li><strong>Cross-Reference</strong>: Verify consistency across sources</li>
+<li><strong>Expert Review</strong>: Domain expert assessment</li>
+<li><strong>Final Decision</strong>: Official outcome determination</li>
+</ol>
+<h3 id="3-resolution-criteria">3. Resolution Criteria</h3>
+<h4 id="binary-outcomes">Binary Outcomes:</h4>
+<ul>
+<li><strong>Yes</strong>: Outcome occurred (price = 1.0)</li>
+<li><strong>No</strong>: Outcome did not occur (price = 0.0)</li>
+</ul>
+<h4 id="resolution-standards">Resolution Standards:</h4>
+<ul>
+<li><strong>Objectivity</strong>: Outcome must be verifiable</li>
+<li><strong>Timeliness</strong>: Resolution within reasonable timeframe</li>
+<li><strong>Accuracy</strong>: Correct outcome determination</li>
+<li><strong>Transparency</strong>: Process visible to all users</li>
+</ul>
+<h2 id="resolution-sources">Resolution Sources</h2>
+<h3 id="1-official-sources">1. Official Sources</h3>
+<h4 id="government-data">Government Data:</h4>
+<ul>
+<li><strong>Election Results</strong>: Official election commissions</li>
+<li><strong>Economic Data</strong>: Central banks, statistical agencies</li>
+<li><strong>Policy Decisions</strong>: Legislative bodies, regulatory agencies</li>
+</ul>
+<h4 id="sports-results">Sports Results:</h4>
+<ul>
+<li><strong>Official Scores</strong>: League websites, official results</li>
+<li><strong>Game Outcomes</strong>: Final scores and statistics</li>
+<li><strong>Tournament Results</strong>: Championship outcomes</li>
+</ul>
+<h3 id="2-news-and-media">2. News and Media</h3>
+<h4 id="verified-news-sources">Verified News Sources:</h4>
+<ul>
+<li><strong>Major News Outlets</strong>: Reuters, AP, Bloomberg</li>
+<li><strong>Industry Publications</strong>: Specialized media</li>
+<li><strong>Official Announcements</strong>: Company press releases</li>
+</ul>
+<h4 id="verification-standards">Verification Standards:</h4>
+<ul>
+<li><strong>Multiple Sources</strong>: Cross-reference multiple outlets</li>
+<li><strong>Official Statements</strong>: Prefer official announcements</li>
+<li><strong>Timing</strong>: Use earliest reliable report</li>
+</ul>
+<h3 id="3-data-providers">3. Data Providers</h3>
+<h4 id="financial-data">Financial Data:</h4>
+<ul>
+<li><strong>Stock Prices</strong>: Real-time market data</li>
+<li><strong>Economic Indicators</strong>: Government statistics</li>
+<li><strong>Crypto Prices</strong>: Exchange data feeds</li>
+</ul>
+<h4 id="technical-data">Technical Data:</h4>
+<ul>
+<li><strong>Product Launches</strong>: Official company announcements</li>
+<li><strong>Software Releases</strong>: Version release information</li>
+<li><strong>Technical Milestones</strong>: Development progress updates</li>
+</ul>
+<h2 id="resolution-timeline">Resolution Timeline</h2>
+<h3 id="1-pre-resolution">1. Pre-Resolution</h3>
+<h4 id="market-monitoring">Market Monitoring:</h4>
+<ul>
+<li><strong>Event Tracking</strong>: Monitor relevant events</li>
+<li><strong>Data Collection</strong>: Gather outcome information</li>
+<li><strong>Expert Preparation</strong>: Engage domain experts</li>
+</ul>
+<h4 id="user-notifications">User Notifications:</h4>
+<ul>
+<li><strong>Expiration Alerts</strong>: Notify users of approaching end</li>
+<li><strong>Trading Halt</strong>: Announce when trading stops</li>
+<li><strong>Resolution Updates</strong>: Keep users informed</li>
+</ul>
+<h3 id="2-resolution-period">2. Resolution Period</h3>
+<h4 id="verification-time">Verification Time:</h4>
+<ul>
+<li><strong>Immediate</strong>: Some outcomes resolve instantly</li>
+<li><strong>Hours</strong>: Most outcomes within 24 hours</li>
+<li><strong>Days</strong>: Complex outcomes may take longer</li>
+</ul>
+<h4 id="dispute-window">Dispute Window:</h4>
+<ul>
+<li><strong>Challenge Period</strong>: Time for outcome disputes</li>
+<li><strong>Evidence Review</strong>: Evaluate challenge evidence</li>
+<li><strong>Final Decision</strong>: Resolve any disputes</li>
+</ul>
+<h3 id="3-post-resolution">3. Post-Resolution</h3>
+<h4 id="settlement-process">Settlement Process:</h4>
+<ul>
+<li><strong>Price Finalization</strong>: Set final market price</li>
+<li><strong>Token Redemption</strong>: Users claim winnings</li>
+<li><strong>Fee Distribution</strong>: Distribute platform fees</li>
+</ul>
+<h4 id="documentation">Documentation:</h4>
+<ul>
+<li><strong>Resolution Report</strong>: Document outcome and process</li>
+<li><strong>Evidence Archive</strong>: Store verification evidence</li>
+<li><strong>User Communication</strong>: Notify users of results</li>
+</ul>
+<h2 id="dispute-resolution">Dispute Resolution</h2>
+<h3 id="1-dispute-types">1. Dispute Types</h3>
+<h4 id="common-disputes">Common Disputes:</h4>
+<ul>
+<li><strong>Unclear Outcomes</strong>: Ambiguous result interpretation</li>
+<li><strong>Data Conflicts</strong>: Contradictory information sources</li>
+<li><strong>Timing Issues</strong>: When outcome actually occurred</li>
+<li><strong>Technical Problems</strong>: Smart contract or platform issues</li>
+</ul>
+<h4 id="dispute-process">Dispute Process:</h4>
+<ol>
+<li><strong>Dispute Filing</strong>: User submits dispute with evidence</li>
+<li><strong>Evidence Review</strong>: Platform evaluates dispute</li>
+<li><strong>Expert Consultation</strong>: Domain expert assessment</li>
+<li><strong>Community Input</strong>: Community discussion and voting</li>
+<li><strong>Final Decision</strong>: Platform or community decision</li>
+</ol>
+<h3 id="2-resolution-standards">2. Resolution Standards</h3>
+<h4 id="evidence-requirements">Evidence Requirements:</h4>
+<ul>
+<li><strong>Reliable Sources</strong>: Credible information sources</li>
+<li><strong>Timely Information</strong>: Recent and relevant data</li>
+<li><strong>Clear Documentation</strong>: Well-documented evidence</li>
+<li><strong>Multiple Sources</strong>: Corroborating information</li>
+</ul>
+<h4 id="decision-criteria">Decision Criteria:</h4>
+<ul>
+<li><strong>Accuracy</strong>: Correct outcome determination</li>
+<li><strong>Fairness</strong>: Equitable treatment of all parties</li>
+<li><strong>Transparency</strong>: Open and visible process</li>
+<li><strong>Consistency</strong>: Aligned with platform standards</li>
+</ul>
+<h2 id="payout-calculation">Payout Calculation</h2>
+<h3 id="1-winning-calculation">1. Winning Calculation</h3>
+<h4 id="basic-formula">Basic Formula:</h4>
+<pre><code>Payout = (Your Tokens) × (Final Price)
+</code></pre>
+<h4 id="example-scenarios">Example Scenarios:</h4>
+<ul>
+<li><strong>Yes Outcome</strong>: You own 100 Yes tokens, final price = 1.0</li>
+<li>Payout = 100 × 1.0 = 100 USDT</li>
+<li><strong>No Outcome</strong>: You own 100 Yes tokens, final price = 0.0</li>
+<li>Payout = 100 × 0.0 = 0 USDT</li>
+</ul>
+<h3 id="2-fee-deductions">2. Fee Deductions</h3>
+<h4 id="platform-fees">Platform Fees:</h4>
+<ul>
+<li><strong>Trading Fees</strong>: Standard 0.3% trading fee</li>
+<li><strong>Resolution Fees</strong>: Small fee for market resolution</li>
+<li><strong>Network Fees</strong>: BSC gas fees for transactions</li>
+</ul>
+<h4 id="net-payout">Net Payout:</h4>
+<pre><code>Net Payout = Gross Payout - Platform Fees - Network Fees
+</code></pre>
+<h3 id="3-token-redemption">3. Token Redemption</h3>
+<h4 id="redemption-process">Redemption Process:</h4>
+<ol>
+<li><strong>Market Closure</strong>: Trading stops at expiration</li>
+<li><strong>Price Finalization</strong>: Final price set to 0 or 1</li>
+<li><strong>Redemption Window</strong>: Users claim their tokens</li>
+<li><strong>USDT Distribution</strong>: Winners receive USDT payouts</li>
+</ol>
+<h4 id="redemption-timeline">Redemption Timeline:</h4>
+<ul>
+<li><strong>Immediate</strong>: Some markets settle instantly</li>
+<li><strong>24 Hours</strong>: Standard redemption period</li>
+<li><strong>Extended</strong>: Complex markets may take longer</li>
+</ul>
+<h2 id="special-resolution-cases">Special Resolution Cases</h2>
+<h3 id="1-inconclusive-outcomes">1. Inconclusive Outcomes</h3>
+<h4 id="handling-ambiguity">Handling Ambiguity:</h4>
+<ul>
+<li><strong>Partial Resolution</strong>: Split outcomes when possible</li>
+<li><strong>Refund Option</strong>: Return tokens to users</li>
+<li><strong>Community Vote</strong>: Let community decide outcome</li>
+</ul>
+<h4 id="examples">Examples:</h4>
+<ul>
+<li><strong>Tie Games</strong>: Split between both outcomes</li>
+<li><strong>Cancelled Events</strong>: Refund all participants</li>
+<li><strong>Unclear Results</strong>: Community voting process</li>
+</ul>
+<h3 id="2-technical-issues">2. Technical Issues</h3>
+<h4 id="smart-contract-problems">Smart Contract Problems:</h4>
+<ul>
+<li><strong>Emergency Pause</strong>: Halt trading if needed</li>
+<li><strong>Manual Resolution</strong>: Admin intervention</li>
+<li><strong>Compensation</strong>: Reimburse affected users</li>
+</ul>
+<h4 id="platform-issues">Platform Issues:</h4>
+<ul>
+<li><strong>Backup Systems</strong>: Redundant resolution mechanisms</li>
+<li><strong>Manual Override</strong>: Admin resolution capabilities</li>
+<li><strong>User Protection</strong>: Safeguard user funds</li>
+</ul>
+<h3 id="3-external-factors">3. External Factors</h3>
+<h4 id="market-manipulation">Market Manipulation:</h4>
+<ul>
+<li><strong>Detection Systems</strong>: Identify manipulation attempts</li>
+<li><strong>Trading Halts</strong>: Suspend suspicious trading</li>
+<li><strong>Investigation</strong>: Thorough review of evidence</li>
+</ul>
+<h4 id="regulatory-changes">Regulatory Changes:</h4>
+<ul>
+<li><strong>Compliance Updates</strong>: Adapt to new regulations</li>
+<li><strong>Market Adjustments</strong>: Modify affected markets</li>
+<li><strong>User Communication</strong>: Keep users informed</li>
+</ul>
+<h2 id="resolution-transparency">Resolution Transparency</h2>
+<h3 id="1-public-documentation">1. Public Documentation</h3>
+<h4 id="resolution-reports">Resolution Reports:</h4>
+<ul>
+<li><strong>Outcome Summary</strong>: Clear explanation of result</li>
+<li><strong>Evidence Sources</strong>: List of verification sources</li>
+<li><strong>Process Timeline</strong>: Step-by-step resolution process</li>
+<li><strong>Dispute Handling</strong>: Any disputes and resolutions</li>
+</ul>
+<h4 id="evidence-archive">Evidence Archive:</h4>
+<ul>
+<li><strong>Source Links</strong>: Links to official sources</li>
+<li><strong>Screenshots</strong>: Visual evidence when needed</li>
+<li><strong>Expert Opinions</strong>: Domain expert assessments</li>
+<li><strong>Community Input</strong>: User feedback and discussions</li>
+</ul>
+<h3 id="2-user-communication">2. User Communication</h3>
+<h4 id="notifications">Notifications:</h4>
+<ul>
+<li><strong>Expiration Alerts</strong>: Market end notifications</li>
+<li><strong>Resolution Updates</strong>: Progress updates</li>
+<li><strong>Final Results</strong>: Outcome announcements</li>
+<li><strong>Payout Confirmations</strong>: Settlement confirmations</li>
+</ul>
+<h4 id="communication-channels">Communication Channels:</h4>
+<ul>
+<li><strong>Platform Notifications</strong>: In-app notifications</li>
+<li><strong>Email Updates</strong>: Email notifications</li>
+<li><strong>Social Media</strong>: Public announcements</li>
+<li><strong>Community Forums</strong>: Discussion platforms</li>
+</ul>
+<h2 id="quality-assurance">Quality Assurance</h2>
+<h3 id="1-resolution-accuracy">1. Resolution Accuracy</h3>
+<h4 id="verification-standards_1">Verification Standards:</h4>
+<ul>
+<li><strong>Multiple Sources</strong>: Cross-reference information</li>
+<li><strong>Expert Review</strong>: Domain expert assessment</li>
+<li><strong>Community Oversight</strong>: User monitoring</li>
+<li><strong>Transparency</strong>: Open resolution process</li>
+</ul>
+<h4 id="accuracy-metrics">Accuracy Metrics:</h4>
+<ul>
+<li><strong>Resolution Rate</strong>: Percentage of successful resolutions</li>
+<li><strong>Dispute Rate</strong>: Frequency of outcome disputes</li>
+<li><strong>User Satisfaction</strong>: User feedback on resolutions</li>
+<li><strong>Timeliness</strong>: Speed of resolution process</li>
+</ul>
+<h3 id="2-continuous-improvement">2. Continuous Improvement</h3>
+<h4 id="process-optimization">Process Optimization:</h4>
+<ul>
+<li><strong>Resolution Speed</strong>: Faster outcome determination</li>
+<li><strong>Accuracy Improvement</strong>: Better outcome verification</li>
+<li><strong>User Experience</strong>: Enhanced resolution interface</li>
+<li><strong>Transparency</strong>: More open resolution process</li>
+</ul>
+<h4 id="feedback-integration">Feedback Integration:</h4>
+<ul>
+<li><strong>User Suggestions</strong>: Incorporate user feedback</li>
+<li><strong>Process Reviews</strong>: Regular process evaluations</li>
+<li><strong>Technology Updates</strong>: Improved resolution tools</li>
+<li><strong>Community Input</strong>: Enhanced community participation</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="1-advanced-resolution-features">1. Advanced Resolution Features</h3>
+<h4 id="planned-improvements">Planned Improvements:</h4>
+<ul>
+<li><strong>AI-Powered Resolution</strong>: Automated outcome detection</li>
+<li><strong>Real-Time Verification</strong>: Instant outcome confirmation</li>
+<li><strong>Enhanced Dispute System</strong>: Better dispute resolution</li>
+<li><strong>Mobile Notifications</strong>: Push notifications for updates</li>
+</ul>
+<h4 id="research-areas">Research Areas:</h4>
+<ul>
+<li><strong>Machine Learning</strong>: AI for outcome prediction</li>
+<li><strong>Blockchain Integration</strong>: On-chain resolution data</li>
+<li><strong>Cross-Platform Verification</strong>: Multi-source validation</li>
+<li><strong>Automated Payouts</strong>: Instant settlement systems</li>
+</ul>
+<h3 id="2-enhanced-user-experience">2. Enhanced User Experience</h3>
+<h4 id="user-tools">User Tools:</h4>
+<ul>
+<li><strong>Resolution Tracking</strong>: Monitor resolution progress</li>
+<li><strong>Payout Calculator</strong>: Estimate potential winnings</li>
+<li><strong>History Viewer</strong>: Access past resolution data</li>
+<li><strong>Notification Preferences</strong>: Customize update settings</li>
+</ul>
+<h4 id="platform-features">Platform Features:</h4>
+<ul>
+<li><strong>Resolution Dashboard</strong>: Centralized resolution view</li>
+<li><strong>Evidence Browser</strong>: Easy access to resolution evidence</li>
+<li><strong>Dispute Interface</strong>: Streamlined dispute submission</li>
+<li><strong>Payout History</strong>: Complete payout record</li>
+</ul>
+<hr />
+<p><em>For the latest information on market resolution and updates, please check our official announcements.</em> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
