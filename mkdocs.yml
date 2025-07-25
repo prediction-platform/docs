@@ -8,6 +8,7 @@ theme:
     - content.code.copy
 nav:
   - Index: index.md
+  - Prerequisites: prerequisites.md
   - Terms of Use: terms-of-use.md
   - Get Started:
       - Introduction: get-started.md
@@ -15,9 +16,9 @@ nav:
       - How to Sign-Up: how-to-sign-up.md
       - How to Deposit: how-to-deposit.md
       - Making Your First Trade: making-your-first-trade.md
-  - Deposits and Withdrawals:
+  - Deposits and Withdraw:
       - Deposits: deposits.md
-      - Withdrawals: withdrawals.md
+      - Withdraw: withdraw.md
   - Markets: markets.md
   - Trading: trading.md
   - FAQs: faqs.md

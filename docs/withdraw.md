@@ -1,4 +1,4 @@
-t# Withdrawals
+# Withdrawals
 
 ## Overview
 
