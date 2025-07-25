@@ -2,256 +2,286 @@
 
 ## Overview
 
-YC365 uses advanced pricing mechanisms to ensure fair and efficient prediction markets. This guide explains how prices are calculated and updated in real-time on the platform.
+YC365 employs a sophisticated pricing mechanism that combines Automated Market Maker (AMM) technology with real-time order book dynamics to ensure fair, efficient, and transparent price discovery across our global, multi-language prediction markets.
 
-## Pricing Mechanisms
+## YC365 Pricing Architecture
 
-### 1. Automated Market Maker (AMM)
+### 🏗️ **System Architecture Foundation**
 
-#### Core Principle:
-YC365 uses an Automated Market Maker (AMM) system that automatically calculates prices based on supply and demand.
+#### **Smart Contract Integration**:
+- **LP Contract Set**: Manages independent liquidity pools for each condition's YES/NO tokens
+- **Trading Contract Set**: Executes price-based buy/sell transactions
+- **Order Trading Model**: Provides order book management and matching engine
+- **Vault Contract Set**: Handles asset management and fee collection
 
-#### Price Formula:
+#### **Multi-Component Price Discovery**:
+- **Automated Market Maker**: Provides continuous liquidity and base pricing
+- **Order Book System**: Enables limit order trading and price improvement
+- **Real-time Settlement**: Instant price updates via smart contracts on BSC
+- **Cross-Language Consistency**: Uniform pricing across all 6 supported languages
+
+## Primary Pricing Mechanisms
+
+### 📊 **Current Implementation: Order Book Model**
+
+#### **Market Price Calculation**:
+Based on YC365's technical architecture, the current pricing model uses:
+
 ```
-Price = (Yes Tokens) / (Yes Tokens + No Tokens)
-```
-
-#### Key Features:
-- **Continuous Pricing**: Prices update in real-time
-- **Liquidity Provision**: Automated liquidity management
-- **No Order Book**: No need for matching buyers and sellers
-
-### 2. Constant Product Formula
-
-#### Mathematical Foundation:
-The AMM uses a constant product formula similar to Uniswap:
-```
-(Yes Tokens) × (No Tokens) = k (constant)
-```
-
-#### Price Calculation:
-- **Yes Price**: `Yes Tokens / (Yes Tokens + No Tokens)`
-- **No Price**: `No Tokens / (Yes Tokens + No Tokens)`
-- **Total**: Yes Price + No Price = 1.0
-
-#### Example:
-- If 60 Yes tokens and 40 No tokens exist:
-- Yes Price = 60 / (60 + 40) = 0.60 (60%)
-- No Price = 40 / (60 + 40) = 0.40 (40%)
-
-## Price Updates
-
-### 1. Real-Time Updates
-
-#### Trigger Events:
-- **New Trades**: Every buy/sell transaction
-- **Liquidity Changes**: Additions or removals of liquidity
-- **Market Events**: News or significant developments
-
-#### Update Frequency:
-- **Instant**: Prices update immediately after each trade
-- **Continuous**: No delays or batch processing
-- **Transparent**: All calculations visible on-chain
-
-### 2. Slippage and Impact
-
-#### Slippage Calculation:
-```
-Slippage = (Expected Price - Actual Price) / Expected Price
+Market Price = Lowest Ask Price (Seller's Minimum Price)
 ```
 
-#### Factors Affecting Slippage:
-- **Trade Size**: Larger trades cause more slippage
-- **Liquidity Depth**: More liquidity reduces slippage
-- **Market Volatility**: High volatility increases slippage
+#### **Price Discovery Process**:
+1. **Limit Orders**: Users place buy/sell orders at specific prices
+2. **Order Matching**: Matching engine processes orders by price-time priority
+3. **Price Setting**: Current market price = lowest available sell order
+4. **Real-time Updates**: Prices update instantly with each trade
 
-#### Example:
-- Small trade: 0.1% slippage
-- Medium trade: 1-2% slippage
-- Large trade: 5-10% slippage
-
-## Market Efficiency
-
-### 1. Information Aggregation
-
-#### Collective Intelligence:
-- **Crowd Wisdom**: Prices reflect collective beliefs
-- **Information Flow**: New information quickly incorporated
-- **Efficient Markets**: Prices adjust to new data rapidly
-
-#### Price Discovery:
-- **Bid-Ask Spread**: Minimal spreads in liquid markets
-- **Price Convergence**: Prices converge to true probabilities
-- **Arbitrage**: Traders eliminate price discrepancies
-
-### 2. Liquidity and Efficiency
-
-#### Liquidity Providers:
-- **Automated Liquidity**: AMM provides continuous liquidity
-- **Incentive Structure**: Rewards for providing liquidity
-- **Risk Management**: Diversified liquidity positions
-
-#### Efficiency Metrics:
-- **Tight Spreads**: Small bid-ask spreads
-- **High Volume**: Active trading activity
-- **Price Stability**: Consistent pricing patterns
-
-## Price Manipulation Protection
-
-### 1. Anti-Manipulation Measures
-
-#### Technical Safeguards:
-- **Large Trade Limits**: Maximum trade size restrictions
-- **Circuit Breakers**: Temporary trading halts
-- **Price Bands**: Maximum price movement limits
-
-#### Monitoring Systems:
-- **Anomaly Detection**: Identify unusual trading patterns
-- **Volume Analysis**: Monitor trading volume spikes
-- **Price Surveillance**: Track price manipulation attempts
-
-### 2. Governance Controls
-
-#### Community Oversight:
-- **Market Monitoring**: Community watches for manipulation
-- **Reporting System**: Users can report suspicious activity
-- **Dispute Resolution**: Process for handling manipulation claims
-
-#### Administrative Actions:
-- **Trading Suspensions**: Temporary halts if needed
-- **Market Closures**: Permanent closure for severe cases
-- **Compensation**: Reimbursement for affected users
-
-## Advanced Pricing Features
-
-### 1. Dynamic Fees
-
-#### Fee Structure:
-- **Base Fee**: Standard trading fee (0.3%)
-- **Dynamic Adjustment**: Fees change based on market conditions
-- **Liquidity Rewards**: Fees distributed to liquidity providers
-
-#### Fee Calculation:
+#### **Example Pricing**:
 ```
-Total Fee = Base Fee + Dynamic Component
+Order Book State:
+Sell Orders: 0.65, 0.67, 0.70 USDT (YES tokens)
+Buy Orders: 0.60, 0.58, 0.55 USDT (YES tokens)
+
+Current Market Price: 0.65 USDT (lowest sell order)
+Bid-Ask Spread: 0.65 - 0.60 = 0.05 USDT
 ```
 
-### 2. Price Oracles
+### 🔄 **Future Enhancement: Comprehensive Model**
 
-#### External Data:
-- **Oracle Integration**: Real-world data feeds
-- **Price Verification**: Cross-reference with external sources
-- **Fallback Mechanisms**: Multiple data sources for reliability
-
-#### Oracle Types:
-- **Sports Results**: Official game outcomes
-- **Economic Data**: Government statistics
-- **News Events**: Verified news sources
-
-## Price History and Analytics
-
-### 1. Historical Data
-
-#### Price Charts:
-- **Time Series**: Price movements over time
-- **Volume Analysis**: Trading volume patterns
-- **Volatility Metrics**: Price stability measures
-
-#### Data Availability:
-- **Real-Time**: Live price feeds
-- **Historical**: Past price data
-- **Analytics**: Advanced market analysis tools
-
-### 2. Market Analytics
-
-#### Performance Metrics:
-- **Price Accuracy**: How well prices predict outcomes
-- **Market Efficiency**: Speed of information incorporation
-- **Liquidity Depth**: Market depth and stability
-
-#### User Tools:
-- **Price Alerts**: Notifications for price changes
-- **Portfolio Tracking**: Monitor your positions
-- **Performance Analysis**: Track your trading success
-
-## Price Resolution
-
-### 1. Final Settlement
-
-#### Resolution Process:
-- **Outcome Determination**: Official result verification
-- **Price Finalization**: Final price set to 0 or 1
-- **Token Redemption**: Users claim their winnings
-
-#### Settlement Timeline:
-- **Immediate**: Some markets settle instantly
-- **Verification Period**: Time for outcome confirmation
-- **Dispute Window**: Period for challenging results
-
-### 2. Payout Calculation
-
-#### Winning Calculation:
+#### **Advanced Price Calculation** (Planned):
 ```
-Payout = (Your Tokens) × (Final Price)
+Market Price = Weighted Average of:
+- Transaction Prices (40%)
+- Trading Volume (25%)
+- Buyer Bid Prices (20%)
+- Market Depth (15%)
 ```
 
-#### Example:
-- You own 100 Yes tokens
-- Final Yes price = 1.0 (outcome occurred)
-- Payout = 100 × 1.0 = 100 USDT
+#### **Enhanced Features**:
+- **Volume-Weighted Average Price (VWAP)**: Historical trading volume consideration
+- **Bid-Ask Spread Optimization**: Tighter spreads through improved liquidity
+- **Cross-Market Arbitrage**: Price consistency across related markets
+- **Volatility Adjustment**: Price stability mechanisms
 
-## Price Transparency
+## Role-Based Price Management
 
-### 1. On-Chain Transparency
+### 👥 **Asset Administrator Functions**
 
-#### Blockchain Verification:
-- **Public Ledger**: All trades visible on BSC
-- **Smart Contract**: Automated and verifiable
-- **No Hidden Fees**: All costs transparent
+#### **Liquidity Management**:
+- **Initial Liquidity**: Set initial YES/NO token ratios and pricing
+- **Liquidity Monitoring**: Track order book depth and trading activity
+- **Liquidity Adjustment**: Add or recover liquidity to maintain market efficiency
+- **Price Stability**: Ensure stable and fair pricing conditions
 
-#### Data Availability:
-- **Open Source**: Code publicly available
-- **Real-Time**: Live data feeds
-- **Historical**: Complete trade history
+#### **Market Operations**:
+- **Price Verification**: Monitor pricing accuracy and fairness
+- **Arbitrage Prevention**: Detect and prevent price manipulation
+- **Performance Analytics**: Analyze market performance and pricing efficiency
+- **Fee Optimization**: Manage trading fees (0.15%) and gas cost optimization
 
-### 2. User Interface
+### 🛠️ **Technical Price Infrastructure**
 
-#### Price Display:
-- **Current Price**: Real-time price updates
-- **Price History**: Historical price charts
-- **Market Depth**: Liquidity information
+#### **Order Book Management** (Order Trading Model):
+- **Limit Order Support**: Currently supports limit orders only (TPS < 100)
+- **Price-Time Priority**: Orders matched by price first, then by time
+- **Real-time Processing**: Immediate order processing and price updates
+- **Order Validation**: Pre-matching order verification and integrity checks
 
-#### Trading Interface:
-- **Buy/Sell Buttons**: Easy trading interface
-- **Price Impact**: Shows how your trade affects price
-- **Confirmation**: Clear trade confirmation
+#### **Settlement Service Integration**:
+- **Off-chain Calculation**: Price calculations performed off-chain for efficiency
+- **On-chain Execution**: Price changes executed on BSC blockchain
+- **Batch Processing**: Efficient bulk transaction processing
+- **Gas Optimization**: Optimized gas usage for BSC transactions
+
+## Price Update Mechanisms
+
+### ⚡ **Real-Time Price Updates**
+
+#### **Update Triggers**:
+- **New Trades**: Every buy/sell transaction execution
+- **Order Book Changes**: New orders, cancellations, modifications
+- **Liquidity Events**: Liquidity additions or removals by Asset Administrators
+- **External Events**: News or information affecting market sentiment
+
+#### **Update Process**:
+1. **Transaction Execution**: Trade executed via Trading Contract Set
+2. **Price Calculation**: New market price calculated by Order Trading Model
+3. **Smart Contract Update**: Price stored on-chain via LP Contract Set
+4. **UI Updates**: Real-time price display across all language interfaces
+5. **API Distribution**: Price data distributed to all connected services
+
+#### **Performance Characteristics**:
+- **BSC Speed**: 3-second block times for near-instant confirmation
+- **Low Latency**: Minimal delays in price propagation
+- **High Throughput**: Support for high-frequency trading
+- **Reliability**: 99.9%+ uptime for pricing services
+
+### 🌐 **Multi-Language Price Display**
+
+#### **Global Price Consistency**:
+- **Uniform Pricing**: Identical prices across all language interfaces
+- **Currency Formatting**: Local number formatting (e.g., 0.65 vs 0,65)
+- **Time Zone Adjustment**: Local time stamps for price history
+- **Cultural Adaptation**: Region-appropriate price presentation
+
+#### **Localization Features**:
+- **Number Formats**: Adapt to local number formatting conventions
+- **Currency Symbols**: Display USDT appropriately for each region
+- **Chart Styling**: Cultural preferences for chart colors and styles
+- **Mobile Optimization**: Responsive pricing displays for all devices
+
+## Advanced Price Features
+
+### 📈 **Price Impact and Slippage**
+
+#### **Slippage Calculation**:
+```
+Slippage = |Expected Price - Actual Execution Price| / Expected Price × 100%
+```
+
+#### **Factors Affecting Price Impact**:
+- **Order Size**: Larger orders create more price impact
+- **Liquidity Depth**: Deeper order books reduce slippage
+- **Market Volatility**: High volatility increases price unpredictability
+- **Time of Trade**: Market hours vs. off-hours liquidity differences
+
+#### **Impact Examples**:
+```
+Small Trade (100 USDT): 0.1-0.5% slippage
+Medium Trade (1,000 USDT): 0.5-2% slippage
+Large Trade (10,000 USDT): 2-5% slippage
+```
+
+### 🛡️ **Price Protection Mechanisms**
+
+#### **Anti-Manipulation Safeguards**:
+- **Circuit Breakers**: Temporary trading halts for extreme price movements
+- **Price Bands**: Maximum price movement limits per time period
+- **Volume Monitoring**: Detect unusual trading volume patterns
+- **Order Size Limits**: Maximum order size restrictions
+
+#### **Monitoring Systems**:
+- **Real-time Surveillance**: AI-powered price monitoring
+- **Anomaly Detection**: Identify suspicious pricing patterns
+- **Alert Systems**: Automatic alerts for price irregularities
+- **Manual Oversight**: Asset Administrator monitoring and intervention
+
+## Fee Structure and Price Impact
+
+### 💰 **Trading Fee Integration**
+
+#### **Current Fee Structure**:
+- **Platform Fee**: 0.15% (1.5/1000) of transaction amount
+- **Fee Application**: Applied to both buy and sell transactions
+- **Fee Collection**: Automatic deduction via Trading Contract Set
+- **Gas Fees**: BSC network fees (typically 0.005-0.02 USDT equivalent)
+
+#### **Fee Calculation Example**:
+```
+Trade: Buy 1,000 YES tokens at 0.60 USDT each
+Trade Value: 1,000 × 0.60 = 600 USDT
+Platform Fee: 600 × 0.0015 = 0.90 USDT
+Gas Fee: ~0.01 USDT (BSC network fee)
+Total Cost: 600 + 0.90 + 0.01 = 600.91 USDT
+```
+
+#### **Fee Transparency**:
+- **Pre-Trade Display**: Fees shown before transaction confirmation
+- **Receipt Details**: Complete fee breakdown in transaction receipts
+- **Multi-Language**: Fee information in user's preferred language
+- **Real-time Updates**: Current gas fees displayed dynamically
+
+## Price Analytics and Historical Data
+
+### 📊 **Data Collection and Analysis**
+
+#### **DApp Backend Service Integration**:
+- **Graph Services**: Market price trend visualization with multiple time intervals
+- **Data Collection**: 10-minute API data collection from Order Trading Model
+- **Chart Generation**: 30-minute, 1-hour, 1-day, 1-week statistical analysis
+- **Performance Tracking**: Comprehensive price performance analysis
+
+#### **Analytics Features**:
+- **Price History**: Complete historical price data storage
+- **Volume Analysis**: Trading volume correlation with price movements
+- **Volatility Metrics**: Price stability and volatility measurements
+- **Trend Analysis**: Statistical trend identification and pattern recognition
+
+### 📱 **User Interface and Accessibility**
+
+#### **Price Display Features**:
+- **Real-time Charts**: Live price charts with various time frames
+- **Order Book Depth**: Visual representation of buy/sell order depth
+- **Price Impact Calculator**: Estimate price impact before trading
+- **Portfolio Tracking**: Personal position value and P&L calculations
+
+#### **Multi-Language Support**:
+- **Localized Interfaces**: Price interfaces in all 6 supported languages
+- **Cultural Adaptation**: Chart styles and colors appropriate for each culture
+- **Mobile Optimization**: Responsive design for mobile price monitoring
+- **Accessibility**: WCAG compliance for price information accessibility
+
+## Price Transparency and Verification
+
+### 🔍 **Blockchain Transparency**
+
+#### **On-Chain Price Data**:
+- **Public Verification**: All price changes recorded on BSC blockchain
+- **Smart Contract Transparency**: Open-source pricing logic
+- **Transaction History**: Complete trade and price history on-chain
+- **Audit Trail**: Immutable record of all pricing decisions
+
+#### **External Verification**:
+- **API Endpoints**: Public APIs for price data verification
+- **Third-party Integration**: Integration with price tracking services
+- **Oracle Integration**: Cross-reference with external price oracles
+- **Community Monitoring**: User verification of pricing accuracy
+
+### 📋 **Price Resolution and Settlement**
+
+#### **Final Price Determination**:
+- **Market Resolution**: Final prices set to 0 or 1 USDT based on outcomes
+- **Settlement Process**: Automatic settlement via smart contracts
+- **Payout Calculation**: Final payout = (Token Holdings) × (Final Price)
+- **Fee Settlement**: Platform fees distributed according to revenue model
+
+#### **Resolution Example**:
+```
+Market: "Will Bitcoin reach $100,000 by Dec 31, 2024?"
+Your Position: 500 YES tokens purchased at average price 0.45 USDT
+Outcome: YES (Bitcoin reaches $100,000)
+Final Price: 1.00 USDT
+Payout: 500 × 1.00 = 500 USDT
+Profit: 500 - (500 × 0.45) - fees = 275 USDT - fees
+```
 
 ## Future Enhancements
 
-### 1. Advanced Pricing Models
+### 🚀 **Advanced Pricing Models**
 
-#### Planned Features:
-- **Dynamic AMM**: Adaptive liquidity curves
-- **Multi-Asset Markets**: Complex market structures
-- **Conditional Pricing**: Dependent market pricing
+#### **Planned Technical Improvements**:
+- **Dynamic AMM**: Adaptive liquidity curves based on market conditions
+- **Cross-Market Pricing**: Correlation-based pricing across related markets
+- **AI-Enhanced Pricing**: Machine learning for price prediction and optimization
+- **Multi-Asset Integration**: Complex pricing for multi-outcome markets
 
-#### Research Areas:
-- **Machine Learning**: AI-powered price prediction
-- **Sentiment Analysis**: Social media impact on prices
-- **Cross-Market Correlation**: Related market analysis
+#### **Performance Upgrades**:
+- **Increased TPS**: Higher transaction throughput (target: 500+ TPS)
+- **Layer 2 Integration**: L2 solutions for faster, cheaper transactions
+- **Advanced Order Types**: Market orders, stop-loss, and conditional orders
+- **Risk Management**: Automated risk assessment and position sizing tools
 
-### 2. Enhanced Analytics
+### 🌍 **Global Expansion Features**
 
-#### User Tools:
-- **Advanced Charts**: Technical analysis tools
-- **Portfolio Analytics**: Comprehensive performance tracking
-- **Risk Management**: Position sizing and risk tools
-
-#### Platform Features:
-- **Market Predictions**: AI-powered market forecasting
-- **Trend Analysis**: Pattern recognition tools
-- **Risk Metrics**: Volatility and correlation analysis
+#### **Enhanced Localization**:
+- **Additional Languages**: Japanese, Korean, Hindi, Arabic support
+- **Regional Price Customization**: Local market hour adjustments
+- **Cultural Price Display**: Region-specific price presentation preferences
+- **Advanced Mobile Features**: Enhanced mobile price monitoring tools
 
 ---
 
-*For the latest information on pricing mechanisms and updates, please check our official announcements.* 
+**YC365's pricing mechanism ensures fair, transparent, and efficient price discovery through our advanced order book system and smart contract integration.** Our commitment to real-time updates, multi-language accessibility, and blockchain transparency provides users worldwide with reliable and accurate pricing information.
+
+*Through continuous innovation and system optimization, we maintain pricing excellence while expanding our global reach and improving user experience across all supported languages and regions.* 

@@ -2,217 +2,308 @@
 
 ## Overview
 
-YC365's prediction markets are created through a decentralized and community-driven process that ensures transparency, fairness, and accuracy. This guide explains how markets come into existence on the YC365 platform.
+YC365's prediction markets are created through a systematic, role-based process that ensures transparency, fairness, and accuracy. Our platform combines automated smart contract deployment with human oversight to deliver high-quality prediction markets across multiple languages and regions.
 
-## Market Creation Process
+## Market Creation Ecosystem
 
-### 1. Market Proposal
+### 🏗️ **Platform Architecture Foundation**
 
-#### Who Can Propose Markets?
-- **Community Members**: Any user can propose new markets
-- **YC365 Team**: Official markets created by the platform
-- **Partners**: Verified partners and collaborators
+#### Smart Contract Infrastructure:
+- **Factory Contract Set**: Manages event and condition creation
+- **LP Contract Set**: Provides independent liquidity pools for each condition
+- **DP Contract Set**: Handles event publishing and initialization
+- **Vault Contract Set**: Manages user deposits and assets
+- **Temporary Condition Contracts**: Individual contracts for each market condition
 
-#### Proposal Requirements:
-- **Clear Question**: Must be a binary outcome (Yes/No)
-- **Specific Resolution Criteria**: Clear conditions for market resolution
-- **Reasonable Timeline**: Appropriate duration for the market
-- **Public Interest**: Should have community relevance
+#### Multi-language Support:
+- **Global Accessibility**: Markets available in 6 languages (English, Simplified Chinese, Traditional Chinese, Thai, Indonesian, Vietnamese)
+- **Cultural Adaptation**: Region-specific events and cultural considerations
+- **Local Market Focus**: Region-appropriate prediction markets
 
-### 2. Market Validation
+## Role-Based Market Creation Process
 
-#### Initial Review:
-- **Technical Feasibility**: Can the outcome be objectively determined?
-- **Legal Compliance**: Does it comply with regulations?
-- **Community Interest**: Is there sufficient user interest?
+### 📊 **Phase 1: Data Entry and Management**
 
-#### Validation Criteria:
-- **Objectivity**: Outcome must be verifiable by external sources
-- **Timeliness**: Resolution should occur within reasonable timeframe
-- **Uniqueness**: Should not duplicate existing markets
-- **Clarity**: Question and resolution criteria must be clear
+#### **Data Administrator Responsibilities:**
 
-### 3. Market Approval
+##### Event Planning and Research:
+- **Market Research**: Analyze global and regional events for prediction potential
+- **Community Interest**: Evaluate user demand and engagement potential
+- **Cultural Sensitivity**: Consider regional preferences and cultural factors
+- **Multi-language Preparation**: Prepare event descriptions in multiple languages
 
-#### Community Voting:
-- **Stakeholder Voting**: Users with YC365 tokens can vote
-- **Minimum Threshold**: Requires minimum number of votes
-- **Time Period**: Voting period typically 3-7 days
+##### Event Creation Process:
+1. **Event Definition**: Create comprehensive event specifications
+   - **Binary Outcomes**: Clear YES/NO outcome possibilities
+   - **Resolution Criteria**: Unambiguous resolution standards
+   - **Timeline Setting**: Appropriate duration for market activity
+   - **Global Relevance**: Events with international or regional significance
 
-#### Approval Requirements:
-- **Majority Support**: 51% or more positive votes
-- **Minimum Participation**: Sufficient voter turnout
-- **No Conflicts**: No significant conflicts of interest
+2. **Condition Management**: Define specific market conditions
+   - **Outcome Parameters**: Precise condition definitions
+   - **Measurement Criteria**: Objective measurement standards
+   - **Verification Sources**: Reliable outcome verification sources
+   - **Dispute Prevention**: Clear criteria to minimize disputes
 
-### 4. Market Launch
+3. **Tag and Category Assignment**:
+   - **Event Types**: Categorize by Sports, Politics, Economics, Technology, Entertainment
+   - **Regional Tags**: Assign geographic and cultural tags
+   - **Difficulty Levels**: Mark complexity for user guidance
+   - **Language Versions**: Prepare tags in all supported languages
 
-#### Technical Setup:
-- **Smart Contract Deployment**: Market contract deployed on BSC
-- **Initial Liquidity**: Platform provides initial liquidity
-- **Trading Pairs**: Yes/No tokens created and listed
+4. **Data Validation and Quality Control**:
+   - **Accuracy Verification**: Cross-check event information
+   - **Consistency Review**: Ensure consistent formatting and standards
+   - **Legal Compliance**: Verify regulatory compliance across regions
+   - **Cultural Appropriateness**: Ensure cultural sensitivity and appropriateness
 
-#### Launch Process:
-- **Market Listing**: Added to YC365 marketplace
-- **Liquidity Provision**: Initial liquidity pool established
-- **Trading Enabled**: Users can start trading immediately
+#### **Multi-language Content Management**:
+- **Primary Language**: English as the base language
+- **Translation Process**: Professional translation for all supported languages
+- **Cultural Adaptation**: Adapt content for regional markets
+- **Consistency Maintenance**: Ensure consistent terminology across languages
 
-## Market Types
+### 🚀 **Phase 2: Technical Deployment**
 
-### 1. Official Markets
+#### **Asset Administrator Responsibilities:**
 
-#### Platform-Created Markets:
-- **High-Profile Events**: Major elections, sports events
-- **Economic Indicators**: GDP growth, inflation rates
-- **Crypto Events**: Bitcoin halving, major protocol updates
+##### Smart Contract Deployment:
+1. **Contract Preparation**: Set up market-specific smart contracts
+   - **Factory Contract Interaction**: Use Factory contract for event/condition management
+   - **Temporary Condition Contract**: Deploy individual condition contracts
+   - **Parameter Configuration**: Set initial market parameters
+   - **Security Verification**: Ensure contract security and functionality
 
-#### Characteristics:
-- **High Liquidity**: Significant initial liquidity provided
-- **Verified Sources**: Reliable resolution sources
-- **Long Duration**: Often weeks or months long
+2. **Liquidity Initialization**:
+   - **Initial Odds Setting**: Configure starting probability odds
+   - **Liquidity Provision**: Provide initial YES/NO token liquidity
+   - **Price Discovery**: Enable price discovery mechanisms
+   - **Market Making**: Establish initial market maker functions
 
-### 2. Community Markets
+3. **Trading Enablement**:
+   - **Order Book Setup**: Initialize order book functionality
+   - **Trading Contract Integration**: Connect with trading contract set
+   - **Fee Configuration**: Set platform trading fees (0.15%)
+   - **Gas Optimization**: Optimize gas fees for BSC transactions
 
-#### User-Proposed Markets:
-- **Local Events**: Regional elections, local sports
-- **Industry Trends**: Technology adoption, market movements
-- **Social Events**: Entertainment awards, cultural events
+4. **Market Launch Process**:
+   - **Final Testing**: Complete pre-launch testing
+   - **Public Announcement**: Announce market availability
+   - **Monitoring Setup**: Establish real-time monitoring
+   - **Liquidity Monitoring**: Track liquidity levels and trading activity
 
-#### Characteristics:
-- **Community Driven**: Based on user interests
-- **Variable Liquidity**: Depends on community participation
-- **Diverse Topics**: Wide range of subjects
+### 🌍 **Phase 3: Global Market Management**
 
-### 3. Partner Markets
+#### **Super Administrator Oversight:**
 
-#### Collaborator Markets:
-- **Media Partners**: News organizations, content creators
-- **Industry Partners**: Companies, organizations
-- **Academic Partners**: Research institutions, universities
+##### Platform Configuration:
+- **Fee Structure**: Manage platform-wide fee settings
+- **Revenue Distribution**: Configure fee collection addresses
+- **System Parameters**: Set global platform parameters
+- **Multi-language Settings**: Oversee language and localization features
 
-#### Characteristics:
-- **Expert Input**: Domain expertise provided
-- **Quality Assurance**: Higher validation standards
-- **Specialized Topics**: Niche or technical subjects
+##### Quality Assurance:
+- **Market Standards**: Maintain consistent quality standards
+- **Performance Monitoring**: Track platform performance metrics
+- **User Experience**: Ensure optimal user experience across languages
+- **Compliance Management**: Ensure regulatory compliance across regions
 
-## Market Categories
+## Market Types and Categories
 
-### 1. Politics and Elections
-- **National Elections**: Presidential, parliamentary elections
-- **Policy Outcomes**: Legislative votes, policy implementations
-- **International Relations**: Trade deals, diplomatic events
+### 🏆 **Global Markets**
 
-### 2. Sports and Entertainment
-- **Sports Championships**: Major league finals, tournaments
-- **Entertainment Awards**: Oscars, Grammys, other awards
-- **Reality Shows**: Competition outcomes, show results
+#### **International Events**:
+- **World Sports**: FIFA World Cup, Olympics, Formula 1
+- **Global Politics**: US Elections, Brexit outcomes, International treaties
+- **Economic Indicators**: Global GDP, Cryptocurrency milestones, Major IPOs
+- **Technology**: Product launches, Scientific breakthroughs, Space missions
 
-### 3. Business and Finance
-- **Company Performance**: Earnings reports, stock prices
-- **Economic Indicators**: GDP, inflation, employment data
-- **Crypto Events**: Protocol updates, major announcements
+#### **Characteristics**:
+- **High Liquidity**: Substantial platform-provided liquidity
+- **Multi-language Support**: Available in all 6 supported languages
+- **Extended Duration**: Typically weeks to months
+- **Professional Management**: Direct platform oversight
 
-### 4. Technology and Science
-- **Product Launches**: Tech releases, feature rollouts
-- **Scientific Discoveries**: Research breakthroughs, clinical trials
-- **Space Missions**: Rocket launches, space exploration
+### 🌏 **Regional Markets**
 
-## Market Creation Guidelines
+#### **Asia-Pacific Focus**:
+- **Local Elections**: Regional political events
+- **Cultural Events**: Traditional festivals, Local entertainment awards
+- **Economic Data**: Regional GDP, Local market performance
+- **Sports Events**: Regional leagues, Local championships
 
-### Best Practices
+#### **Language-Specific Markets**:
+- **Chinese Markets**: Focused on Greater China region
+- **Thai Markets**: Thailand-specific events
+- **Indonesian Markets**: Indonesia-focused predictions
+- **Vietnamese Markets**: Vietnam-regional events
 
-#### Clear Questions:
-- **Specific Outcomes**: Avoid ambiguous language
-- **Measurable Results**: Use quantifiable criteria
-- **Timely Resolution**: Set reasonable timeframes
+#### **Characteristics**:
+- **Cultural Adaptation**: Tailored to local interests and customs
+- **Regional Languages**: Primary language support for target region
+- **Local Expertise**: Regional experts involved in creation
+- **Community Driven**: High community participation
 
-#### Good Examples:
-- "Will Bitcoin reach $100,000 by December 31, 2024?"
-- "Will Tesla deliver more than 2 million vehicles in 2024?"
-- "Will the US Federal Reserve raise interest rates in March 2024?"
+### 💼 **Specialized Markets**
 
-#### Bad Examples:
-- "Will the stock market go up?" (too vague)
-- "Will technology improve?" (unmeasurable)
-- "Will something happen?" (unclear outcome)
+#### **Technical Markets**:
+- **Blockchain Events**: Protocol updates, Network upgrades, DeFi milestones
+- **Financial Markets**: Stock performance, Economic indicators, Crypto prices
+- **Technology Releases**: Software launches, Hardware releases, Feature rollouts
 
-### Market Duration
+#### **Community Markets**:
+- **User-Proposed**: Community-submitted market ideas
+- **Niche Topics**: Specialized interest areas
+- **Experimental**: Test new market formats and types
 
-#### Short-Term Markets (1-30 days):
-- **Earnings Reports**: Quarterly financial results
-- **Event Outcomes**: Sports games, award shows
-- **Policy Decisions**: Central bank meetings, votes
+## Market Creation Standards
 
-#### Medium-Term Markets (1-6 months):
-- **Elections**: Political campaigns, voting results
-- **Product Launches**: Tech releases, major announcements
-- **Economic Data**: Quarterly GDP, employment reports
+### 📋 **Quality Requirements**
 
-#### Long-Term Markets (6+ months):
-- **Annual Performance**: Year-end results, annual targets
-- **Major Projects**: Infrastructure, development timelines
-- **Trend Analysis**: Long-term market movements
+#### **Technical Standards**:
+- **Smart Contract Security**: All contracts must pass security audits
+- **BSC Compatibility**: Full compatibility with Binance Smart Chain
+- **Gas Optimization**: Efficient gas usage for all transactions
+- **Scalability**: Support for high trading volumes
 
-## Quality Control
+#### **Content Standards**:
+- **Clear Language**: Unambiguous market questions and criteria
+- **Objective Criteria**: Verifiable resolution standards
+- **Cultural Sensitivity**: Appropriate for all supported regions
+- **Legal Compliance**: Compliant with relevant regulations
 
-### Market Review Process
+#### **User Experience Standards**:
+- **Multi-language Accessibility**: Available in all supported languages
+- **Mobile Optimization**: Full mobile device compatibility
+- **Intuitive Interface**: Easy-to-use trading interface
+- **Real-time Updates**: Live price and volume data
 
-#### Pre-Launch Review:
-- **Technical Assessment**: Smart contract security
-- **Legal Review**: Compliance with regulations
-- **Community Feedback**: User input and suggestions
+### 🔒 **Security and Compliance**
 
-#### Post-Launch Monitoring:
-- **Trading Activity**: Monitor liquidity and volume
-- **Price Movements**: Track market efficiency
-- **User Feedback**: Community reports and concerns
+#### **Technical Security**:
+- **Contract Audits**: Professional security audits for all smart contracts
+- **Code Review**: Multiple-party code review process
+- **Testing Protocols**: Comprehensive testing before deployment
+- **Monitoring Systems**: Real-time security monitoring
 
-### Dispute Resolution
+#### **Regulatory Compliance**:
+- **Multi-jurisdiction**: Compliance across supported regions
+- **Legal Review**: Legal assessment for each market type
+- **User Protection**: Strong user protection measures
+- **Transparency**: Full transparency in market operations
 
-#### Market Disputes:
-- **Unclear Outcomes**: Ambiguous resolution criteria
-- **External Changes**: Events affecting market validity
-- **Technical Issues**: Smart contract problems
+## Market Lifecycle Management
 
-#### Resolution Process:
-- **Community Discussion**: Open forum for debate
-- **Expert Review**: Domain expert assessment
-- **Final Decision**: Platform or community vote
+### 🔄 **Creation to Resolution Process**
 
-## Incentives and Rewards
+#### **Pre-Launch Phase** (Data Administrators):
+1. **Market Research**: Identify suitable events for prediction markets
+2. **Event Creation**: Create detailed event specifications
+3. **Multi-language Preparation**: Prepare content in all supported languages
+4. **Quality Review**: Comprehensive quality and compliance review
 
-### Market Creators
+#### **Deployment Phase** (Asset Administrators):
+1. **Contract Deployment**: Deploy smart contracts on BSC
+2. **Liquidity Setup**: Establish initial liquidity pools
+3. **Testing Verification**: Final testing and verification
+4. **Market Launch**: Public market availability
 
-#### Creator Rewards:
-- **Trading Fees**: Percentage of trading volume
-- **Recognition**: Credit for successful markets
-- **Community Status**: Enhanced reputation and privileges
+#### **Active Trading Phase**:
+1. **Liquidity Management**: Monitor and adjust liquidity as needed
+2. **Performance Monitoring**: Track trading activity and user engagement
+3. **Support Operations**: Provide user support in multiple languages
+4. **Quality Maintenance**: Ensure continued market quality
 
-#### Quality Incentives:
-- **Accuracy Bonuses**: Rewards for well-designed markets
-- **Popularity Rewards**: Bonuses for high-volume markets
-- **Innovation Awards**: Recognition for creative market types
+#### **Resolution Phase** (Asset Administrators):
+1. **Outcome Verification**: Verify event outcomes using reliable sources
+2. **Result Publishing**: Publish results to oracle systems
+3. **Settlement Execution**: Execute automatic settlement process
+4. **User Communication**: Notify users in their preferred language
 
-### Community Participation
+### 📊 **Performance Metrics**
 
-#### Voting Rewards:
-- **Participation Tokens**: Rewards for voting on proposals
-- **Influence Points**: Weighted voting based on activity
-- **Community Status**: Enhanced privileges for active users
+#### **Market Success Indicators**:
+- **Trading Volume**: Total trading activity
+- **User Participation**: Number of active traders
+- **Liquidity Depth**: Market liquidity levels
+- **Resolution Accuracy**: Successful resolution rate
+- **User Satisfaction**: User feedback and ratings
+- **Multi-language Engagement**: Activity across different language communities
 
-## Future Developments
+#### **Quality Metrics**:
+- **Dispute Rate**: Frequency of market disputes
+- **Resolution Time**: Speed of market resolution
+- **Technical Performance**: System performance and uptime
+- **User Retention**: User return and engagement rates
 
-### Planned Features
+## Global Accessibility Features
 
-#### Advanced Market Types:
-- **Multi-Outcome Markets**: More than Yes/No options
-- **Conditional Markets**: Dependent on other outcomes
-- **Prediction Tournaments**: Competitive forecasting
+### 🌐 **Multi-Language Support**
 
-#### Enhanced Creation Tools:
-- **Market Templates**: Pre-designed market structures
-- **AI Assistance**: Automated market validation
-- **Collaborative Creation**: Multi-user market design
+#### **Language Features**:
+- **Dynamic Switching**: Real-time language switching
+- **Cultural Adaptation**: Region-specific content and features
+- **Local Payment Integration**: Regional payment method support
+- **Time Zone Optimization**: Local time zone displays
+
+#### **Regional Customization**:
+- **Cultural Events**: Region-specific prediction markets
+- **Local Sports**: Regional sports leagues and events
+- **Economic Indicators**: Local economic data and metrics
+- **Regulatory Compliance**: Region-specific compliance features
+
+### 📱 **Platform Accessibility**
+
+#### **Device Compatibility**:
+- **Mobile Optimization**: Full mobile device support
+- **Cross-browser**: Compatible with all major browsers
+- **Responsive Design**: Adaptive interface for all screen sizes
+- **Accessibility Standards**: WCAG compliance for accessibility
+
+#### **User Experience**:
+- **Intuitive Navigation**: Easy-to-use interface design
+- **Visual Feedback**: Clear visual indicators and feedback
+- **Performance Optimization**: Fast loading and response times
+- **Help Resources**: Comprehensive help documentation in all languages
+
+## Innovation and Future Development
+
+### 🚀 **Planned Enhancements**
+
+#### **Advanced Market Types**:
+- **Multi-Outcome Markets**: Beyond binary YES/NO outcomes
+- **Conditional Markets**: Markets dependent on other outcomes
+- **Continuous Markets**: Real-time value prediction markets
+- **Synthetic Markets**: Complex financial instrument predictions
+
+#### **Technology Improvements**:
+- **AI-Powered Creation**: AI-assisted market creation and validation
+- **Advanced Analytics**: Enhanced market analytics and insights
+- **Cross-chain Integration**: Multi-blockchain market support
+- **Layer 2 Solutions**: Scaling solutions for increased throughput
+
+#### **Global Expansion**:
+- **Additional Languages**: Japanese, Korean, Hindi, Arabic support
+- **Regional Partnerships**: Local partnerships for market creation
+- **Cultural Expansion**: Broader cultural event coverage
+- **Regulatory Adaptation**: Enhanced regulatory compliance tools
+
+### 🤝 **Community Involvement**
+
+#### **User Participation**:
+- **Market Suggestions**: User-proposed market ideas
+- **Community Voting**: Democratic market approval process
+- **Feedback Integration**: User feedback in market improvement
+- **Quality Assessment**: Community quality rating systems
+
+#### **Expert Collaboration**:
+- **Domain Experts**: Subject matter expert involvement
+- **Regional Specialists**: Local market experts
+- **Cultural Consultants**: Cultural appropriateness advisors
+- **Technical Advisors**: Blockchain and platform experts
 
 ---
 
-*For the latest information on market creation and updates, please check our official announcements.* 
+**YC365's market creation process combines cutting-edge blockchain technology with human expertise to deliver high-quality, globally accessible prediction markets.** Our systematic approach ensures that every market meets our standards for security, fairness, and user experience while serving our diverse, multilingual community.
+
+*Through our role-based creation process and multi-language support, we create prediction markets that are not only technically robust but also culturally relevant and accessible to users worldwide.* 
