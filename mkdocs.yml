@@ -17,7 +17,6 @@ nav:
   - Get Started:
       - Introduction: get-started.md
       - What is YC365?: what-is-yc365.md
-      - How to Sign-Up: how-to-sign-up.md
       - How to Deposit: how-to-deposit.md
       - Making Your First Trade: making-your-first-trade.md
   - Deposits and Withdraw:
@@ -29,5 +28,16 @@ nav:
       - How Are Prediction Markets Resolved?: how-are-prediction-markets-resolved.md
       - How Are Markets Clarified?: how-are-markets-clarified.md
       - How Are Markets Disputed?: how-are-markets-disputed.md
-  - Trading: trading.md
-  - FAQs: faqs.md
+  - Trading:
+      - Overview: trading.md
+      - Limit Orders: limit-orders.md
+      - Trading Fees: trading-fees.md
+      - Using the Order Book: using-the-order-book.md
+      - How to Earn Profits: how-to-earn-profits.md
+  - FAQs:
+      - Overview: faqs.md
+      - Can I Sell Early?: can-i-sell-early.md
+      - How Do I Contact Support?: how-do-i-contact-support.md
+      - Is My Money Safe?: is-my-money-safe.md
+      - Why Crypto?: why-crypto.md
+      - What is a Prediction Market?: what-is-a-prediction-market.md
