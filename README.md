@@ -155,7 +155,7 @@ docker run --rm -p 8000:8000 -v $(pwd):/docs mkdocs-material-template mkdocs ser
 ## 🌐 访问地址
 
 部署完成后，文档将在以下地址可用：
-- **GitHub Pages**: `https://prediction-platform.github.io`
+- **GitHub Pages**: `[https://prediction-platform.github.io/docs](https://prediction-platform.github.io/docs/)`
 - **自定义域名**: 可在仓库设置中配置
 
 ## 📊 部署状态
