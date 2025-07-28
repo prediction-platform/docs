@@ -28,7 +28,11 @@ This Get Started section covers all the essential information you need to begin 
 Before you begin trading on YC365, make sure you have:
 
 ### ✅ **Prerequisites Completed**
-- [ ] **EVM-compatible wallet installed** (MetaMask recommended)
+- **EVM-compatible wallet installed** (MetaMask recommended)
+![img.png](../img/metamask/img.png)
+![img_1.png](../img/metamask/img_1.png)
+![img_2.png](../img/metamask/img_2.png)
+![img_3.png](../img/metamask/img_3.png)
 - [ ] **BSC Mainnet configured** in your wallet
 - [ ] **USDT (BEP-20) acquired** for trading
 - [ ] **BNB acquired** for gas fees
