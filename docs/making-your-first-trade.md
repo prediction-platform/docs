@@ -36,22 +36,22 @@ Every prediction market on YC365 creates two types of tokens:
 ## Pre-Trading Checklist
 
 ### ✅ **Account Readiness**
-- [ ] **Funds Deposited**: USDT balance visible in your account
-- [ ] **Wallet Connected**: MetaMask connected to dapp.yc365.io
-- [ ] **Network Verified**: Connected to BSC (Smart Chain) network
-- [ ] **BNB Available**: Sufficient BNB for gas fees (0.01+ BNB)
+- **Funds Deposited**: USDT balance visible in your account
+- **Wallet Connected**: MetaMask connected to dapp.yc365.io
+- **Network Verified**: Connected to BSC (Smart Chain) network
+- **BNB Available**: Sufficient BNB for gas fees (0.01+ BNB)
 
 ### ✅ **Knowledge Preparation**
-- [ ] **Platform Familiarization**: Explored the trading interface
-- [ ] **Fee Understanding**: Know the 0.15% trading fee structure
-- [ ] **Risk Awareness**: Understand potential for total loss
-- [ ] **Event Research**: Researched the event you want to trade
+- **Platform Familiarization**: Explored the trading interface
+- **Fee Understanding**: Know the 0.15% trading fee structure
+- **Risk Awareness**: Understand potential for total loss
+- **Event Research**: Researched the event you want to trade
 
 ### ✅ **Trading Strategy**
-- [ ] **Amount Decided**: Know how much you want to risk
-- [ ] **Market Choice**: Selected specific market to trade
-- [ ] **Position Type**: Decided on YES or NO position
-- [ ] **Exit Strategy**: Plan for taking profits or cutting losses
+- **Amount Decided**: Know how much you want to risk
+- **Market Choice**: Selected specific market to trade
+- **Position Type**: Decided on YES or NO position
+- **Exit Strategy**: Plan for taking profits or cutting losses
 
 ## Step-by-Step Trading Guide
 
@@ -60,8 +60,11 @@ Every prediction market on YC365 creates two types of tokens:
 #### Finding Markets
 1. **Browse Available Markets**
    - Navigate to the main markets page
+   ![img.png](../img/trade/img.png)
    - Browse by category (Sports, Politics, Economics, etc.)
+   ![img_1.png](../img/trade/img_1.png)
    - Use search function to find specific events
+   ![img_2.png](../img/trade/img_2.png)
    - Filter by time to resolution, volume, or other criteria
 
 2. **Market Categories**
@@ -124,13 +127,17 @@ Every prediction market on YC365 creates two types of tokens:
 #### Accessing the Trading Interface
 1. **Navigate to Market**
    - Click on your chosen market
+   ![img_3.png](../img/trade/img_3.png)
    - Review market details one final time
    - Confirm you understand the event terms
 
 2. **Choose Order Type**
    - **Limit Order**: Specify exact price you want to pay
+   ![img_5.png](../img/trade/img_5.png)
    - **Market Order**: Execute immediately at current market price
+   ![img_4.png](../img/trade/img_4.png)
    - **Recommendation**: Use limit orders for better control
+   ![img_3.png](../img/trade/img_3.png)
 
 #### Placing Your First Order
 
@@ -138,7 +145,9 @@ Every prediction market on YC365 creates two types of tokens:
 
 1. **Select Token Type**
    - Choose YES if you think event will happen
+   ![img_6.png](../img/trade/img_6.png)
    - Choose NO if you think event won't happen
+   ![img_7.png](../img/trade/img_7.png)
    - For our example: Select "YES" tokens
 
 2. **Enter Order Details**
@@ -160,8 +169,10 @@ Every prediction market on YC365 creates two types of tokens:
 4. **Submit Order**
    - Click "Place Order" or "Buy" button
    - MetaMask popup will appear for confirmation
+   ![img_8.png](../img/trade/img_8.png)
    - Review transaction details in MetaMask
    - Click "Confirm" to submit transaction
+   ![img_9.png](../img/trade/img_9.png)
 
 5. **Monitor Execution**
    - **Order Status**: Watch for "Pending" → "Confirmed"
@@ -174,6 +185,7 @@ Every prediction market on YC365 creates two types of tokens:
 #### Monitoring Your Position
 1. **Portfolio Dashboard**
    - **Current Holdings**: View all token positions
+   ![img_10.png](../img/trade/img_10.png)
    - **Market Value**: See current value of holdings
    - **Profit/Loss**: Track unrealized gains/losses
    - **Order Status**: Monitor active orders

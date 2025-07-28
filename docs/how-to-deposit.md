@@ -9,19 +9,19 @@ Making your first deposit on YC365 is a straightforward process that enables you
 Before you begin the deposit process, ensure you have:
 
 ### ✅ **Wallet Requirements**
-- [ ] **EVM-compatible wallet installed** (MetaMask recommended)
-- [ ] **BSC Mainnet configured** in your wallet
-- [ ] **Wallet properly secured** with strong password and backup phrase
+- **EVM-compatible wallet installed** (MetaMask recommended)
+- **BSC Mainnet configured** in your wallet
+- **Wallet properly secured** with strong password and backup phrase
 
 ### ✅ **Asset Requirements**
-- [ ] **USDT (BEP-20) tokens** for trading
-- [ ] **BNB tokens** for gas fees (minimum 0.01 BNB recommended)
-- [ ] **Assets in BSC wallet** (not on other networks)
+- **USDT (BEP-20) tokens** for trading
+- **BNB tokens** for gas fees (minimum 0.01 BNB recommended)
+- **Assets in BSC wallet** (not on other networks)
 
 ### ✅ **Technical Requirements**
-- [ ] **Stable internet connection**
-- [ ] **Updated browser** (Chrome, Firefox, Safari, or Edge)
-- [ ] **Access to dapp.yc365.io**
+- **Stable internet connection**
+- **Updated browser** (Chrome, Firefox, Safari, or Edge)
+- **Access to dapp.yc365.io**
 
 ## Step-by-Step Deposit Guide
 
@@ -32,22 +32,30 @@ If you don't have MetaMask installed:
 
 1. **Download MetaMask**
    - Visit [metamask.io](https://metamask.io)
+     ![img.png](../img/metamask/img.png)
    - Click "Download" and select your browser
    - Install the browser extension
+     ![img_1.png](../img/metamask/img_1.png)
    - Follow setup instructions to create a new wallet
+     ![img_2.png](../img/metamask/img_2.png)
 
 2. **Secure Your Wallet**
    - Write down your 12-word seed phrase securely
+     ![img_7.png](../img/metamask/img_7.png)
    - Store it in a safe place (never digital)
    - Set a strong password
+     ![img_6.png](../img/metamask/img_6.png)
    - Enable all security features
+     ![img_3.png](../img/metamask/img_3.png)
 
 #### Configuring BSC Network
 Add Binance Smart Chain to your MetaMask:
 
 1. **Open MetaMask**
    - Click the network dropdown (usually shows "Ethereum Mainnet")
+   ![img_8.png](../img/metamask/img_8.png)
    - Select "Add Network" or "Custom RPC"
+   ![img_9.png](../img/metamask/img_9.png)
 
 2. **Enter BSC Network Details**
    ```
@@ -57,7 +65,7 @@ Add Binance Smart Chain to your MetaMask:
    Currency Symbol: BNB
    Block Explorer URL: https://bscscan.com
    ```
-
+   ![img_10.png](../img/metamask/img_10.png)
 3. **Save and Switch**
    - Click "Save" to add the network
    - Switch to "Smart Chain" network
@@ -82,9 +90,9 @@ You need USDT on the Binance Smart Chain for trading:
 
 **Option 2: Swap from Other Tokens**
 1. **Use PancakeSwap**
-   - Visit [pancakeswap.finance](https://pancakeswap.finance)
-   - Connect your wallet
-   - Swap BNB or other tokens for USDT
+     - Visit [pancakeswap.finance](https://pancakeswap.finance)
+     - Connect your wallet
+     - Swap BNB or other tokens for USDT
 
 2. **Use 1inch or Other DEXs**
    - Compare rates across multiple DEXs
@@ -99,7 +107,7 @@ You need BNB to pay for transaction fees:
 
 2. **Acquisition Methods**
    - Buy directly on exchanges
-   - Receive from faucets (small amounts)
+   - Receive from faucets (small amounts(https://www.bnbchain.org/en/testnet-faucet))
    - Swap from other tokens on DEXs
 
 ### Step 3: Connecting to YC365
@@ -108,19 +116,25 @@ You need BNB to pay for transaction fees:
 1. **Visit YC365**
    - Navigate to [dapp.yc365.io](https://dapp.yc365.io)
    - Ensure URL is correct (check for https://)
+   ![img.png](../img/yc365/img.png)
    - Bookmark the official URL for future use
 
 2. **Connect Your Wallet**
    - Click "Connect Wallet" button
+   ![img_1.png](../img/yc365/img_1.png)
    - Select "MetaMask" from wallet options
+   ![img_2.png](../img/yc365/img_2.png)
    - Approve connection in MetaMask popup
+   ![img_4.png](../img/yc365/img_4.png)
    - Verify wallet address is displayed correctly
+   ![img_3.png](../img/yc365/img_3.png)
 
 #### Verifying Connection
 1. **Check Network**
    - Ensure you're on BSC network
    - Platform should show "BSC" or "Smart Chain"
    - Switch networks if necessary
+   ![img_5.png](../img/yc365/img_5.png)
 
 2. **Check Balance Display**
    - Platform should show your USDT balance
@@ -132,6 +146,7 @@ You need BNB to pay for transaction fees:
 #### Accessing Deposit Function
 1. **Navigate to Deposit**
    - Click on "Deposit" button or menu item
+   ![img_6.png](../img/yc365/img_6.png)
    - This may be in the main interface or under "Wallet"
    - You'll be taken to the deposit interface
 
@@ -143,8 +158,10 @@ You need BNB to pay for transaction fees:
 #### Completing the Deposit
 1. **Enter Deposit Amount**
    - Specify amount of USDT to deposit
+   ![img_7.png](../img/yc365/img_7.png)
    - Start with a small amount for your first deposit
    - Ensure you have enough BNB for gas fees
+   ![img_8.png](../img/yc365/img_8.png)
 
 2. **Review Transaction Details**
    ```
@@ -159,6 +176,7 @@ You need BNB to pay for transaction fees:
    - MetaMask popup will appear
    - Review all transaction details carefully
    - Click "Confirm" in MetaMask
+   ![img_9.png](../img/yc365/img_9.png)
 
 4. **Wait for Confirmation**
    - Transaction will be broadcast to BSC
