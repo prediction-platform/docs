@@ -14,7 +14,7 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -53,6 +53,7 @@ jobs:
           echo "Error: site directory not found"
           exit 1
         fi
+        cp -r img site/img
         echo "Build output found:"
         ls -la site/
         
