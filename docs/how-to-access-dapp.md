@@ -30,27 +30,27 @@ APIs related to the interaction between YC365 Dapp and the merchant platform. Co
 5. **Merchant Report**: Merchants can view daily, weekly, and monthly report data.
 6. **Daily Summary Data Push**: The Dapp backend will push the previous day's summary data to merchants at midnight UTC.
 
-   The data format is as follows:
-   ```json
-   {
-      "event_type": "merchant_overview", // Business event type: daily overview data push
-      "data": {
-         "app_id":"string",            // Merchant ID
-         "balance":0.000000,           // Merchant available USDT
-         "frozen":0.000000,            // Merchant frozen USDT
-         "period_date":"string",       // First day of the period, e.g., 2025-08-01
-         "users":0,                    // Total number of users of the merchant in the Dapp
-         "total_deposit":0.000000,     // Total deposit amount, 0 in v1 mode
-         "total_deposit_count":0,      // Total number of deposits, 0 in v1 mode
-         "total_withdraw":0.000000,    // Total withdrawal amount, 0 in v1 mode
-         "total_withdraw_count":0,     // Total withdrawal volume. 0 in v1 mode.
-         "total_buy_volume":0.000000,  // Total buy volume
-         "total_sell_volume":0.000000, // Total sell volume
-         "currency":"string"           // Currency: USDT
-      },
-      "signature": "xxxxxxxx"
-   }
-   ```
+The data format is as follows:
+```json
+{
+  "event_type": "merchant_overview", // Business event type: daily overview data push
+  "data": {
+     "app_id":"string",            // Merchant ID
+     "balance":0.000000,           // Merchant available USDT
+     "frozen":0.000000,            // Merchant frozen USDT
+     "period_date":"string",       // First day of the period, e.g., 2025-08-01
+     "users":0,                    // Total number of users of the merchant in the Dapp
+     "total_deposit":0.000000,     // Total deposit amount, 0 in v1 mode
+     "total_deposit_count":0,      // Total number of deposits, 0 in v1 mode
+     "total_withdraw":0.000000,    // Total withdrawal amount, 0 in v1 mode
+     "total_withdraw_count":0,     // Total withdrawal volume. 0 in v1 mode.
+     "total_buy_volume":0.000000,  // Total buy volume
+     "total_sell_volume":0.000000, // Total sell volume
+     "currency":"string"           // Currency: USDT
+  },
+  "signature": "xxxxxxxx"
+}
+```
 
 
 ## 🛡️ Status Code Description
@@ -178,14 +178,14 @@ The platform accesses the user's identity and returns the Dapp address, in the f
 Supports querying order details by specified time and user. Data includes deposits, withdrawals, order placements, settlements, and other events.
 
 Event Types:
-- App_Deposit: Merchant deposit
-- App_Withdraw: Merchant withdrawal
-- Deposit: User deposit
-- Withdraw: User withdrawal
-- Trade_Buy: Buy order
-- Trade_Sell: Sell order
-- Settlement: Settlement
-- Unknown: Unknown
+- **App_Deposit**: Merchant deposit
+- **App_Withdraw**: Merchant withdrawal
+- **Deposit**: User deposit
+- **Withdraw**: User withdrawal
+- **Trade_Buy**: Buy order
+- **Trade_Sell**: Sell order
+- **Settlement**: Settlement
+- **Unknown**: Unknown
 
 **Request Parameters**
 
