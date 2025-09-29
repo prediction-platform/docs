@@ -1,4 +1,4 @@
-# How to access the YC365 Dapp
+# How to integrate the YC365 Dapp
 
 ## Overview
 
@@ -68,6 +68,8 @@ The data format is as follows:
 
 ## 💡 **API Interface**
 
+YC365 Dapp provides API for merchant platforms to call
+
 ### 1. Merchants Obtain Invitation Codes
 
 **GET** `/account/v1/app/invitecode`
@@ -109,13 +111,13 @@ Before creating a merchant, contact your business representative to obtain an in
 **Response**
 ```json
 {
-"code": 0,
-"message": "string",
-"data": {
-"app_id": "string",        // Merchant ID
-"api_key": "string",       // API key
-"wallet_address": "string" // Wallet address
-}
+    "code": 0,
+    "message": "string",
+    "data": {
+        "app_id": "string",        // Merchant ID
+        "api_key": "string",       // API key
+        "wallet_address": "string" // Wallet address
+    }
 }
 ```
 
@@ -178,13 +180,21 @@ The platform accesses the user's identity and returns the Dapp address, in the f
 Supports querying order details by specified time and user. Data includes deposits, withdrawals, order placements, settlements, and other events.
 
 Event Types:
+
 - **App_Deposit**: Merchant deposit
+
 - **App_Withdraw**: Merchant withdrawal
+
 - **Deposit**: User deposit
+
 - **Withdraw**: User withdrawal
+
 - **Trade_Buy**: Buy order
+ 
 - **Trade_Sell**: Sell order
+
 - **Settlement**: Settlement
+
 - **Unknown**: Unknown
 
 **Request Parameters**
@@ -269,3 +279,190 @@ Supports viewing daily, weekly, and monthly report data. Data includes each user
    ]
 }
 ```
+
+## 🚀 **APIs that merchant platforms need to provide in V1 mode**
+
+APIs that need to be provided when the merchant platform selects V1 mode
+
+### 1. Get User Balance
+
+**API URL**: `POST /api/yc365/user/balance`
+
+**Description**: YC365 callback to get user balance
+
+**Request Parameters**:
+```json
+{
+    "app_id": "string",    // Application ID, required
+    "user_id": "string",   // User authorization code - user ID, required
+    "currency": "string",  // Currency type, required
+    "signature": "string"  // SHA256 signature of the JSON string composed of the above parameters
+}
+```
+
+**Response Parameters**:
+```json
+{
+    "code": 0,       // Acceptance status code, enumeration value: 0 - success, 1 - failure
+    "msg": "string", // Acceptance description
+    "data": {
+        "user_id": "string", // User ID
+        "balance": 1000.50,  // Balance, in U
+        "currency": "USDT"    // Currency Type
+    }
+}
+```
+
+### 2. Create a Trade Order
+
+**API URL**: `POST /api/yc365/trade/create`
+
+**Description**: YC365 Trade Order
+
+**Request Parameters**:
+```json
+{
+    "order_id": "string",      // Order ID, required
+    "amount": 0.000,           // Total amount, required
+    "app_id": "string",        // Application ID, required
+    "user_id": "string",       // User ID, required
+    "currency": "string",      // Currency Type, required
+    "timestamp": 1759119582148,// Timestamp, required
+    "side": 0,                 // Buy/Sell Direction, 0 - Sell, 1 - Buy
+    "signature": "string"      // SHA256 signature of the above parameters in JSON format
+}
+```
+
+**Response Parameters**:
+```json
+{
+    "code": 0,        // Acceptance status code, enumeration value: 0 - Success, 1 - Failure
+    "msg": "string",  // Acceptance description
+    "data": {
+        "order_id": "string", // Order ID
+        "balance": 1000.50    // Balance, in U
+    }
+}
+```
+
+### 3. Transaction Execution Notification
+
+**API URL**: `POST /api/yc365/trade/execute`
+
+**Description**: Transaction Execution Notification
+
+**Request Parameters**:
+```json
+{
+    "app_id": "string",         // Application ID, required
+    "order_id": "string",       // Order ID, required
+    "user_id": "string",        // User ID, required
+    "amount": 100.0,            // Transaction amount, required, in U
+    "currency": "string",       // Currency type, required
+    "timestamp": 1759119582148, // Timestamp, required
+    "side": 0,                  // Buy/Sell direction, 0 - Sell, 1 - Buy
+    "signature": "string"       // SHA256 signature of the above parameters in JSON format
+}
+```
+
+**Response Parameters**:
+```json
+{
+    "code": 0,        // Acceptance status code, enumeration value: 0 - Success, 1 - Failure
+    "msg": "string",  // Acceptance description
+    "data": {
+        "order_id": "string", // Order ID
+        "currency": "string", // Currency type
+        "balance": 1000.50    // Balance
+    }
+}
+```
+
+### 4. Cancel Order
+
+**API URL**: `POST /api/yc365/order/cancel`
+
+**Description**: Cancel Order
+
+**Request Parameters**:
+```json
+{
+    "app_id": "string",         // Application ID, required
+    "order_id": "string",       // Order ID, required
+    "user_id": "string",        // User ID, required
+    "amount": 100.0,            // Cancellation amount, required, in U
+    "currency": "string",       // Currency type, required
+    "timestamp": 1759119582148, // Timestamp, required
+    "side": 0,                  // Buy/Sell side, 0 - Sell, 1 - Buy
+    "signature": "string"       // SHA256 signature of the JSON string composed of the above parameters
+}
+```
+
+**Response Parameters**:
+```json
+{
+    "code": 0,        // Acceptance status code, enumeration value: 0 - Success, 1 - Failure
+    "msg": "string",  // Acceptance description
+    "data": {
+        "order_id": "string", // Order ID
+        "balance": 1000.50,   // Balance
+        "currency": "string"  // Currency type
+    }
+}
+```
+
+### 5. Event Settlement and Rewards
+
+**API URL**: `POST /api/yc365/settlement/event`
+
+**Description**: Event Settlement and Rewards
+
+**Request Parameters**:
+```json
+{
+    "app_id": "string",          // Application ID, required
+    "user_id": "string",         // User ID, required
+    "condition_id": "string",    // Condition ID, required
+    "amount": 500.0,             // Winning amount
+    "timestamp": 1759119582148,  // Timestamp, required
+    "currency": "string",        // Currency type, required
+    "signature": "string"        // SHA256 signature of the JSON string composed of the above parameters
+}
+```
+
+**Response Parameters**:
+```json
+{
+    "code": 0,        // Service acceptance status code, enumeration value: 0 - Success, 1 - Failure
+    "msg": "string",  // Acceptance description
+    "data": {
+        "balance": 1000.50,  // Balance
+        "currency": "string" // Currency type
+    }
+}
+```
+
+### 5. Callback Notification
+
+**API URL**: `POST /api/yc365/webhook`
+
+**Description**: YC365 Callback Notification
+
+**Request Parameters**:
+```json
+{
+    "event_type": "string", // Business event type, required. Event types include: Daily push overview data
+    "data": "string",       // JSON data, required
+    "signature": "string"   // SHA256 signature of the JSON string composed of the above parameters
+}
+```
+
+**Response Parameters**:
+```json
+{
+    "code": 0,       // Business acceptance status code, enumeration value: 0 - Success, 1 - Failure
+    "msg": "string", // Acceptance description
+    "data": ""
+}
+```
+
