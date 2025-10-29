@@ -8,12 +8,14 @@ theme:
     - content.code.copy
 nav:
   - Index: index.md
+  - Project Whitepaper: project-whitepaper.md
   - Prerequisites: prerequisites.md
   - System Architecture: system-architecture.md
 #  - Multi-language Support: multi-language-support.md
   - Business Process Flow: business-process.md
 #  - Role Responsibilities: role-responsibilities.md
   - Terms of Use: terms-of-use.md
+  - Earn Points: earn-points.md
   - Get Started:
       - Introduction: get-started.md
       - What is YC365?: what-is-yc365.md
