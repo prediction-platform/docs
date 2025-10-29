@@ -16,6 +16,7 @@ nav:
 #  - Role Responsibilities: role-responsibilities.md
   - Terms of Use: terms-of-use.md
   - Earn Points: earn-points.md
+  - Integration Guide: integration-guide.md     
   - Get Started:
       - Introduction: get-started.md
       - What is YC365?: what-is-yc365.md
@@ -38,6 +39,8 @@ nav:
       - How to Earn Profits: how-to-earn-profits.md
   - Merchant platform:
       - How to Integrate Dapp?: how-to-integrate-dapp.md
+  - Developer Resources:
+      - Open API: open-api.md
   - FAQs:
       - Overview: faqs.md
       - Can I Sell Early?: can-i-sell-early.md
