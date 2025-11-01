@@ -6,6 +6,30 @@ theme:
     - navigation.instant
     - search.highlight
     - content.code.copy
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        zh:
+          name: 简体中文
+          build: true
+        th:
+          name: ภาษาไทย
+          build: true
+        pt:
+          name: Português
+          build: true
+      nav_translations:
+        zh:
+          Index: 首页
+        th:
+          Index: หน้าหลัก
+        pt:
+          Index: Início
 nav:
   - Index: index.md
   - Project Whitepaper: project-whitepaper.md

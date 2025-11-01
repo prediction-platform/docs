@@ -12,6 +12,16 @@ YC365 adopts a hybrid on-chain and off-chain architecture, ensuring high efficie
 
 ---
 
+**Languages:** [English](index.md) · [简体中文](zh/index.md) · [ภาษาไทย](th/index.md) · [Português](pt/index.md)
+
+---
+
+![Home dashboard showcasing featured markets and quick category filters](../img/yc365/home-dashboard.png)
+
+*YC365 dApp homepage highlights featured markets, category filters, and quick access to live opportunities.*
+
+---
+
 ## 🌟 Our Vision
 
 !!! tip "Neutrality"
