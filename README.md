@@ -1,127 +1,127 @@
 # YC365 Documentation Site
 
-基于 MkDocs Material 的 YC365 文档站点，支持自动部署到 GitHub Pages。
+YC365 documentation site built with MkDocs Material, with automatic deployment to GitHub Pages.
 
-## 🚀 自动部署
+## 🚀 Automatic Deployment
 
-本项目配置了 GitHub Actions 工作流，实现自动构建和部署：
+This project is configured with GitHub Actions workflow for automatic build and deployment:
 
-### 触发条件
-- 推送到 `main` 或 `master` 分支
-- 创建 Pull Request
-- 手动触发（workflow_dispatch）
+### Trigger Conditions
+- Push to `main` or `master` branch
+- Pull Request creation
+- Manual trigger (workflow_dispatch)
 
-### 部署流程
-1. **构建阶段**：
-   - 检出代码
-   - 设置 Python 3.9 环境
-   - 安装 MkDocs 依赖
-   - 构建静态站点
-   - 上传构建产物
+### Deployment Process
+1. **Build Stage**:
+   - Checkout code
+   - Set up Python 3.9 environment
+   - Install MkDocs dependencies
+   - Build static site
+   - Upload build artifacts
 
-2. **部署阶段**：
-   - 部署到 GitHub Pages
-   - 自动配置 HTTPS
-   - 提供部署 URL
+2. **Deploy Stage**:
+   - Deploy to GitHub Pages
+   - Automatically configure HTTPS
+   - Provide deployment URL
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 mkdocs-material-template/
-├── .github/workflows/     # GitHub Actions 工作流
-├── docs/                  # 文档源文件
-│   ├── index.md          # 首页
-│   ├── terms-of-use.md   # 使用条款
-│   ├── get-started/      # 入门指南
-│   └── ...               # 其他文档
-├── site/                  # 构建输出（自动生成）
-├── mkdocs.yml            # MkDocs 配置
-├── requirements.txt       # Python 依赖
-└── README.md             # 项目说明
+├── .github/workflows/     # GitHub Actions workflows
+├── docs/                  # Documentation source files
+│   ├── index.md          # Home page
+│   ├── terms-of-use.md   # Terms of Use
+│   ├── get-started/      # Getting Started guide
+│   └── ...               # Other documentation
+├── site/                  # Build output (auto-generated)
+├── mkdocs.yml            # MkDocs configuration
+├── requirements.txt       # Python dependencies
+└── README.md             # Project documentation
 ```
 
-## 🛠️ 本地开发
+## 🛠️ Local Development
 
-### 环境要求
+### Requirements
 - Python 3.9+
 - Git
 
-### 安装依赖
+### Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 本地构建
+### Local Build
 ```bash
-# 构建静态站点
+# Build static site
 mkdocs build
 
-# 本地预览
+# Local preview
 mkdocs serve
 ```
 
-### 使用 Docker
+### Using Docker
 ```bash
-# 构建镜像
+# Build image
 docker build -t mkdocs-material-template .
 
-# 构建站点
+# Build site
 docker run --rm -v $(pwd):/docs mkdocs-material-template mkdocs build
 
-# 本地预览
+# Local preview
 docker run --rm -p 8000:8000 -v $(pwd):/docs mkdocs-material-template mkdocs serve -a 0.0.0.0:8000
 ```
 
-## 📝 添加新页面
+## 📝 Adding New Pages
 
-1. **创建 Markdown 文件**：
+1. **Create Markdown File**:
    ```bash
-   # 在 docs/ 目录下创建新文件
+   # Create new file in docs/ directory
    touch docs/new-page.md
    ```
 
-2. **编辑内容**：
+2. **Edit Content**:
    ```markdown
-   # 新页面标题
+   # New Page Title
    
-   这里是页面内容...
+   Page content goes here...
    ```
 
-3. **添加到导航**：
-   编辑 `mkdocs.yml` 文件：
+3. **Add to Navigation**:
+   Edit `mkdocs.yml` file:
    ```yaml
    nav:
-     - 首页: index.md
-     - 新页面: new-page.md
+     - Home: index.md
+     - New Page: new-page.md
    ```
 
-4. **多级导航**：
+4. **Multi-level Navigation**:
    ```yaml
    nav:
-     - 首页: index.md
-     - 入门指南:
-       - 概述: get-started/index.md
-       - 什么是 YC365: what-is-yc365.md
-       - 如何注册: how-to-sign-up.md
+     - Home: index.md
+     - Getting Started:
+       - Overview: get-started/index.md
+       - What is YC365: what-is-yc365.md
+       - How to Sign Up: how-to-sign-up.md
    ```
 
-## 🎨 美化页面
+## 🎨 Page Styling
 
-### 使用 MkDocs Material 功能
+### Using MkDocs Material Features
 
-1. **警告框**：
+1. **Admonitions**:
    ```markdown
-   !!! note "提示"
-       这是一个提示信息。
+   !!! note "Note"
+       This is a note message.
 
-   !!! warning "警告"
-       这是一个警告信息。
+   !!! warning "Warning"
+       This is a warning message.
 
-   !!! danger "危险"
-       这是一个危险信息。
+   !!! danger "Danger"
+       This is a danger message.
    ```
 
-2. **代码块**：
+2. **Code Blocks**:
    ```markdown
    ```python
    def hello_world():
@@ -129,76 +129,76 @@ docker run --rm -p 8000:8000 -v $(pwd):/docs mkdocs-material-template mkdocs ser
    ```
    ```
 
-3. **表格**：
+3. **Tables**:
    ```markdown
-   | 功能 | 描述 | 状态 |
-   |------|------|------|
-   | 预测市场 | 用户可创建和参与预测 | ✅ |
-   | 流动性挖矿 | 提供流动性获得奖励 | ✅ |
+   | Feature | Description | Status |
+   |---------|-------------|--------|
+   | Prediction Markets | Users can create and participate in predictions | ✅ |
+   | Liquidity Mining | Earn rewards by providing liquidity | ✅ |
    ```
 
-## 🔧 配置说明
+## 🔧 Configuration
 
-### mkdocs.yml 主要配置
-- `site_name`: 站点名称
-- `theme`: 使用 Material 主题
-- `nav`: 导航结构
-- `plugins`: 启用的插件
-- `markdown_extensions`: Markdown 扩展
+### mkdocs.yml Main Configuration
+- `site_name`: Site name
+- `theme`: Using Material theme
+- `nav`: Navigation structure
+- `plugins`: Enabled plugins
+- `markdown_extensions`: Markdown extensions
 
-### GitHub Pages 配置
-1. 进入仓库设置 (Settings)
-2. 找到 Pages 选项
-3. Source 选择 "GitHub Actions"
-4. 保存设置
+### GitHub Pages Configuration
+1. Go to repository Settings
+2. Find Pages section
+3. Set Source to "GitHub Actions"
+4. Save settings
 
-## 🌐 访问地址
+## 🌐 Access URLs
 
-部署完成后，文档将在以下地址可用：
+After deployment, documentation will be available at:
 - **GitHub Pages**: [https://prediction-platform.github.io/docs](https://prediction-platform.github.io/docs/)
-- **自定义域名**: 可在仓库设置中配置
+- **Custom Domain**: Can be configured in repository settings
 
-## 📊 部署状态
+## 📊 Deployment Status
 
-查看部署状态：
-1. 进入仓库的 Actions 标签页
-2. 查看 "Deploy to GitHub Pages" 工作流
-3. 查看构建和部署日志
+Check deployment status:
+1. Go to repository Actions tab
+2. View "Deploy to GitHub Pages" workflow
+3. Check build and deployment logs
 
-## 🔍 故障排除
+## 🔍 Troubleshooting
 
-### 常见问题
+### Common Issues
 
-1. **构建失败**：
-   - 检查 Python 版本 (需要 3.9+)
-   - 验证依赖安装
-   - 查看构建日志
+1. **Build Failure**:
+   - Check Python version (requires 3.9+)
+   - Verify dependency installation
+   - Review build logs
 
-2. **部署失败**：
-   - 确认仓库权限设置
-   - 检查 GitHub Pages 配置
-   - 验证工作流权限
+2. **Deployment Failure**:
+   - Confirm repository permission settings
+   - Check GitHub Pages configuration
+   - Verify workflow permissions
 
-3. **页面不显示**：
-   - 等待几分钟（首次部署需要时间）
-   - 检查 GitHub Pages 设置
-   - 验证分支名称
+3. **Page Not Displaying**:
+   - Wait a few minutes (first deployment takes time)
+   - Check GitHub Pages settings
+   - Verify branch name
 
-### 手动部署
+### Manual Deployment
 
-如果需要手动部署，可以使用提供的脚本：
+If manual deployment is needed, use the provided script:
 ```bash
 ./deploy_to_github_pages.sh
 ```
 
-## 🤝 贡献
+## 🤝 Contributing
 
-1. Fork 项目
-2. 创建功能分支
-3. 提交更改
-4. 推送到分支
-5. 创建 Pull Request
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
-## 📄 许可证
+## 📄 License
 
-本项目采用 MIT 许可证。
+This project is licensed under the MIT License.
