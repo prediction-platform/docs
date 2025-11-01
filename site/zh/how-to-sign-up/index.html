@@ -16,7 +16,7 @@
     
     
       
-        <title>How to Sign-Up - Welcome to yc365.io</title>
+        <title>如何注册 - Welcome to yc365.io</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-sign-up" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Sign-Up
+              如何注册
             
           </span>
         </div>
@@ -1291,45 +1291,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-open-the-yc365-dapp" class="md-nav__link">
+  <a href="#1-yc365-dapp" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Open the YC365 dApp
+      1. 打开 YC365 dApp
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-launch-the-wallet-connector" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Launch the Wallet Connector
+      2. 启动钱包连接
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-choose-your-preferred-provider" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Choose Your Preferred Provider
+      3. 选择首选服务商
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-confirm-network-and-permissions" class="md-nav__link">
+  <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Confirm Network and Permissions
+      4. 确认网络与权限
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-verify-successful-sign-up" class="md-nav__link">
+  <a href="#5" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Verify Successful Sign-Up
+      5. 验证注册成功
     </span>
   </a>
   
@@ -1351,42 +1351,42 @@
 
 
 
-<h1 id="how-to-sign-up">How to Sign-Up</h1>
-<p>YC365 does not use traditional username/password accounts. Your wallet address becomes your identity. Follow the steps below to connect your wallet and finish the lightweight sign-up flow.</p>
-<h2 id="1-open-the-yc365-dapp">1. Open the YC365 dApp</h2>
+<h1 id="_1">如何注册</h1>
+<p>YC365 不采用传统的用户名/密码体系，你的钱包地址就是你的身份。按照以下步骤连接钱包即可完成轻量化注册流程。</p>
+<h2 id="1-yc365-dapp">1. 打开 YC365 dApp</h2>
 <ul>
-<li>Visit <a href="https://dapp.yc365.io">https://dapp.yc365.io</a> in a Chromium-based browser (Chrome, Edge, Brave) for the smoothest wallet integrations.</li>
-<li>Make sure the URL uses HTTPS and matches exactly to avoid phishing sites.</li>
-<li>Optional: use the Chrome Dev MCP tooling to inspect the UI if you're validating a staging build.</li>
+<li>使用基于 Chromium 的浏览器（Chrome、Edge、Brave 等）访问 <a href="https://dapp.yc365.io">https://dapp.yc365.io</a>，钱包集成体验更佳。</li>
+<li>确认网址为 HTTPS 且与官方域名完全一致，以防钓鱼站点。</li>
+<li>如需验证测试环境，可通过 Chrome Dev MCP 工具查看界面元素。</li>
 </ul>
-<h2 id="2-launch-the-wallet-connector">2. Launch the Wallet Connector</h2>
+<h2 id="2">2. 启动钱包连接</h2>
 <ul>
-<li>Click the <strong>Connect Wallet</strong> button in the top-right corner of the dApp.</li>
-<li>A secure modal will slide in listing the supported authentication options.</li>
+<li>点击 dApp 右上角的 <strong>Connect Wallet</strong> 按钮。</li>
+<li>系统会弹出安全的连接窗口，列出支持的钱包与登录方式。</li>
 </ul>
-<p><img alt="Wallet connection modal showing Google, MetaMask, Coinbase, and Trust Wallet options" src="../img/yc365/connect-wallet.png" /></p>
-<p><em>The sign-up modal offers multiple wallet providers. MetaMask is recommended for most desktop users.</em></p>
-<h2 id="3-choose-your-preferred-provider">3. Choose Your Preferred Provider</h2>
+<p><img alt="显示 Google、MetaMask、Coinbase、Trust Wallet 等选项的钱包连接弹窗" src="../img/yc365/connect-wallet.png" /></p>
+<p><em>注册弹窗提供多种钱包选择，桌面用户推荐使用 MetaMask。</em></p>
+<h2 id="3">3. 选择首选服务商</h2>
 <ul>
-<li><strong>MetaMask (Recommended):</strong> Best general-purpose option. Approve the connection request in the extension popup.</li>
-<li><strong>Coinbase Wallet / Trust Wallet:</strong> Mobile-friendly alternatives. Scan the QR code or approve from your browser extension.</li>
-<li><strong>Google Login:</strong> Uses your Google account to issue a session-bound wallet via the embedded MPC provider, ideal for users without self-custody yet.</li>
+<li><strong>MetaMask（推荐）</strong>：通用性最佳，在扩展弹窗中批准连接请求即可。</li>
+<li><strong>Coinbase Wallet / Trust Wallet</strong>：移动端友好，可扫描二维码或在扩展中批准。</li>
+<li><strong>Google 登录</strong>：通过嵌入式 MPC 服务创建会话级钱包，适合尚未自托管资产的用户。</li>
 </ul>
-<p>If you are using the Chrome Dev MCP pipeline, verify that the injected provider appears under the <code>window.ethereum</code> object before continuing.</p>
-<h2 id="4-confirm-network-and-permissions">4. Confirm Network and Permissions</h2>
+<p>若你在使用 Chrome Dev MCP 调试，请检查 <code>window.ethereum</code> 是否已注入对应的提供商。</p>
+<h2 id="4">4. 确认网络与权限</h2>
 <ul>
-<li>Ensure your wallet is switched to <strong>BNB Smart Chain (BSC)</strong>. The dApp will prompt a network switch if needed.</li>
-<li>Review the permissions requested (view wallet address, balance, suggested transactions) and click <strong>Connect</strong> or <strong>Approve</strong>.</li>
-<li>For Google login, follow the OAuth prompts and authorize YC365 MPC access.</li>
+<li>确保钱包网络切换至 <strong>BNB Smart Chain (BSC)</strong>，如未切换 dApp 会提示。</li>
+<li>查看连接所需的权限（读取地址、余额、建议交易等），点击 <strong>Connect</strong> 或 <strong>Approve</strong>。</li>
+<li>如果选择 Google 登录，按照 OAuth 提示授权 YC365 的 MPC 服务。</li>
 </ul>
-<h2 id="5-verify-successful-sign-up">5. Verify Successful Sign-Up</h2>
+<h2 id="5">5. 验证注册成功</h2>
 <ul>
-<li>Your wallet address now appears in the header, replacing the <strong>Connect Wallet</strong> button.</li>
-<li>The <strong>Orders</strong> and <strong>Person</strong> tabs in the bottom navigation unlock, allowing access to your portfolio and profile settings.</li>
-<li>In Chrome Dev MCP, you can confirm the authenticated state by checking that <code>localStorage</code> contains the <code>yc365-auth</code> token.</li>
+<li>页眉原先的 <strong>Connect Wallet</strong> 按钮会显示为你的钱包地址。</li>
+<li>底部导航中的 <strong>Orders</strong> 与 <strong>Person</strong> 标签会解锁，可访问资产与个人设置。</li>
+<li>在 Chrome Dev MCP 中，可检查 <code>localStorage</code> 是否出现 <code>yc365-auth</code> 字段，以确认登录态。</li>
 </ul>
 <hr />
-<p>Once connected, you are ready to deposit funds, explore live markets, and place your first trade. Refer to <a href="../how-to-deposit/">How to Deposit</a> for the next steps.</p>
+<p>连接完成后，即可充值资产、浏览实时市场并进行首次交易。下一步请查看《<a href="../how-to-deposit/">如何充值</a>》。***</p>
 
 
 
