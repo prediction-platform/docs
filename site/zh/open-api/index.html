@@ -1,0 +1,3342 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../how-to-integrate-dapp/">
+      
+      
+        <link rel="next" href="../faqs/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Open API - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#open-api" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../" title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Open API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../open-api/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../th/open-api/" hreflang="th" class="md-select__link">
+              ภาษาไทย
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/open-api/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-whitepaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Whitepaper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Business Process Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../earn-points/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Earn Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-created/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prices-calculated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prediction-markets-resolved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Trading
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limit-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limit Orders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading-fees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading Fees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-order-book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using the Order Book
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-earn-profits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Earn Profits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Merchant platform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Merchant platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-dapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Integrate Dapp?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Open API
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open API
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Core Capabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Security &amp; Authentication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-api-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. API Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. API Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-key-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Key Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-base-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Base Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Base Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base URLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Market Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Market Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get All Markets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-market-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Market Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-market-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Market History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Trading Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Trading Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#place-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Place Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-order-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Order Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancel Order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      👤 User Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👤 User Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-account-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Account Balance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-transaction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Transaction History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Event Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Event Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-market-proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Market Proposal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-data-streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Real-time Data Streaming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 Real-time Data Streaming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe-to-market-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to Market Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdk-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      SDK Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SDK Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Available SDKs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Available SDKs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascriptnodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript/Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiting-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Rate Limiting Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Rate Limit Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-response-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Error Response Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Error Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Sandbox Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Sandbox Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-started_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-testing-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 API Testing Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 API Testing Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postman-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postman Collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      cURL Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Development Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Development Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#developer-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Developer Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Developer Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Channels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Contact Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            FAQs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../can-i-sell-early/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Can I Sell Early?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-do-i-contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Do I Contact Support?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-my-money-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is My Money Safe?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-crypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Crypto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-a-prediction-market/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a Prediction Market?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Core Capabilities
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Security &amp; Authentication
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getting Started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-api-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. API Access
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. API Access">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#registration-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-key-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Key Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-base-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Base Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Base Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Base URLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Market Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Market Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-all-markets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get All Markets
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-market-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Market Details
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-market-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Market History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Trading Operations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Trading Operations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#place-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Place Order
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-order-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Order Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancel-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cancel Order
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      👤 User Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👤 User Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-account-balance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Account Balance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-transaction-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Transaction History
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#event-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 Event Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Event Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-market-proposal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create Market Proposal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#websocket-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      WebSocket API
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="WebSocket API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-data-streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔌 Real-time Data Streaming
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔌 Real-time Data Streaming">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Authentication
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subscribe-to-market-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subscribe to Market Updates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#message-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      Message Format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdk-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      SDK Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SDK Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-sdks" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Available SDKs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 Available SDKs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#javascriptnodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript/Node.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go" class="md-nav__link">
+    <span class="md-ellipsis">
+      Go
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rate-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rate Limits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rate Limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rate-limiting-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Rate Limiting Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rate-limit-headers" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Rate Limit Headers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Error Handling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#error-response-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Error Response Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Error Codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing and Development
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and Development">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sandbox-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧪 Sandbox Environment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Sandbox Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getting-started_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-testing-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      📝 API Testing Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 API Testing Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#postman-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Postman Collection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curl-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      cURL Examples
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#development-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      💡 Development Guidelines
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Development Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Usage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-and-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support and Resources
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Support and Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#developer-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      🆘 Developer Support
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆘 Developer Support">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Channels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 Contact Information
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="open-api">Open API</h1>
+<h2 id="overview">Overview</h2>
+<p>YC365 provides a comprehensive Open API that enables developers to integrate prediction market functionality into their applications, build custom trading interfaces, and access real-time market data. Our API is designed with developer experience in mind, offering RESTful endpoints with comprehensive documentation and SDK support.</p>
+<h2 id="api-features">API Features</h2>
+<h3 id="core-capabilities">🔌 <strong>Core Capabilities</strong></h3>
+<ul>
+<li><strong>Market Data</strong>: Real-time price feeds, volume, and market statistics</li>
+<li><strong>Trading Operations</strong>: Place orders, manage positions, and execute trades</li>
+<li><strong>User Management</strong>: Account information, balances, and transaction history</li>
+<li><strong>Event Management</strong>: Create, monitor, and resolve prediction markets</li>
+<li><strong>WebSocket Support</strong>: Real-time data streaming for live updates</li>
+</ul>
+<h3 id="security-authentication">🛡️ <strong>Security &amp; Authentication</strong></h3>
+<ul>
+<li><strong>API Key Authentication</strong>: Secure access using API keys</li>
+<li><strong>Rate Limiting</strong>: Fair usage policies to ensure platform stability</li>
+<li><strong>Request Signing</strong>: Cryptographic request verification</li>
+<li><strong>IP Whitelisting</strong>: Enhanced security through IP restrictions</li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<h3 id="1-api-access">1. API Access</h3>
+<h4 id="registration-process"><strong>Registration Process</strong></h4>
+<ol>
+<li><strong>Create Account</strong>: Sign up for a YC365 account</li>
+<li><strong>API Key Generation</strong>: Generate your API keys in the dashboard</li>
+<li><strong>Documentation Access</strong>: Access comprehensive API documentation</li>
+<li><strong>Testing Environment</strong>: Use sandbox environment for development</li>
+</ol>
+<h4 id="api-key-management"><strong>API Key Management</strong></h4>
+<ul>
+<li><strong>Primary Key</strong>: Full access to all API endpoints</li>
+<li><strong>Read-Only Key</strong>: Limited to data retrieval operations</li>
+<li><strong>Custom Scopes</strong>: Granular permission control</li>
+<li><strong>Key Rotation</strong>: Regular key updates for enhanced security</li>
+</ul>
+<h3 id="2-base-configuration">2. Base Configuration</h3>
+<h4 id="base-urls"><strong>Base URLs</strong></h4>
+<pre><code>Production: https://api.yc365.io/v1
+Sandbox: https://api-sandbox.yc365.io/v1
+WebSocket: wss://ws.yc365.io/v1
+</code></pre>
+<h4 id="authentication-headers"><strong>Authentication Headers</strong></h4>
+<pre><code class="language-http">Authorization: Bearer YOUR_API_KEY
+Content-Type: application/json
+X-API-Version: 1.0
+</code></pre>
+<h2 id="api-endpoints">API Endpoints</h2>
+<h3 id="market-data">📊 <strong>Market Data</strong></h3>
+<h4 id="get-all-markets"><strong>Get All Markets</strong></h4>
+<pre><code class="language-http">GET /markets
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: &quot;market_001&quot;,
+      &quot;title&quot;: &quot;Will Bitcoin reach $100,000 by end of 2024?&quot;,
+      &quot;category&quot;: &quot;cryptocurrency&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;end_time&quot;: &quot;2024-12-31T23:59:59Z&quot;,
+      &quot;yes_price&quot;: 0.65,
+      &quot;no_price&quot;: 0.35,
+      &quot;volume_24h&quot;: 125000,
+      &quot;liquidity&quot;: 500000
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;page&quot;: 1,
+    &quot;limit&quot;: 50,
+    &quot;total&quot;: 150
+  }
+}
+</code></pre>
+<h4 id="get-market-details"><strong>Get Market Details</strong></h4>
+<pre><code class="language-http">GET /markets/{market_id}
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>market_id</code> (string): Unique market identifier</p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;market_001&quot;,
+    &quot;title&quot;: &quot;Will Bitcoin reach $100,000 by end of 2024?&quot;,
+    &quot;description&quot;: &quot;This market will resolve to YES if Bitcoin reaches $100,000 or higher by December 31, 2024.&quot;,
+    &quot;category&quot;: &quot;cryptocurrency&quot;,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;created_at&quot;: &quot;2024-01-15T10:30:00Z&quot;,
+    &quot;end_time&quot;: &quot;2024-12-31T23:59:59Z&quot;,
+    &quot;resolution_criteria&quot;: &quot;Price data from CoinGecko&quot;,
+    &quot;yes_price&quot;: 0.65,
+    &quot;no_price&quot;: 0.35,
+    &quot;volume_24h&quot;: 125000,
+    &quot;liquidity&quot;: 500000,
+    &quot;trading_fee&quot;: 0.0015,
+    &quot;tags&quot;: [&quot;bitcoin&quot;, &quot;price&quot;, &quot;cryptocurrency&quot;]
+  }
+}
+</code></pre>
+<h4 id="get-market-history"><strong>Get Market History</strong></h4>
+<pre><code class="language-http">GET /markets/{market_id}/history
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>market_id</code> (string): Market identifier
+- <code>interval</code> (string): Time interval (1m, 5m, 1h, 1d)
+- <code>start_time</code> (string): Start time (ISO 8601)
+- <code>end_time</code> (string): End time (ISO 8601)</p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;timestamp&quot;: &quot;2024-01-15T10:00:00Z&quot;,
+      &quot;yes_price&quot;: 0.62,
+      &quot;no_price&quot;: 0.38,
+      &quot;volume&quot;: 5000,
+      &quot;trades&quot;: 25
+    }
+  ]
+}
+</code></pre>
+<h3 id="trading-operations">💰 <strong>Trading Operations</strong></h3>
+<h4 id="place-order"><strong>Place Order</strong></h4>
+<pre><code class="language-http">POST /orders
+</code></pre>
+<p><strong>Request Body:</strong></p>
+<pre><code class="language-json">{
+  &quot;market_id&quot;: &quot;market_001&quot;,
+  &quot;side&quot;: &quot;buy&quot;,
+  &quot;outcome&quot;: &quot;yes&quot;,
+  &quot;amount&quot;: 1000,
+  &quot;price&quot;: 0.65,
+  &quot;order_type&quot;: &quot;limit&quot;
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;order_id&quot;: &quot;order_12345&quot;,
+    &quot;status&quot;: &quot;pending&quot;,
+    &quot;market_id&quot;: &quot;market_001&quot;,
+    &quot;side&quot;: &quot;buy&quot;,
+    &quot;outcome&quot;: &quot;yes&quot;,
+    &quot;amount&quot;: 1000,
+    &quot;price&quot;: 0.65,
+    &quot;filled_amount&quot;: 0,
+    &quot;remaining_amount&quot;: 1000,
+    &quot;created_at&quot;: &quot;2024-01-15T10:30:00Z&quot;
+  }
+}
+</code></pre>
+<h4 id="get-order-status"><strong>Get Order Status</strong></h4>
+<pre><code class="language-http">GET /orders/{order_id}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;order_id&quot;: &quot;order_12345&quot;,
+    &quot;status&quot;: &quot;filled&quot;,
+    &quot;market_id&quot;: &quot;market_001&quot;,
+    &quot;side&quot;: &quot;buy&quot;,
+    &quot;outcome&quot;: &quot;yes&quot;,
+    &quot;amount&quot;: 1000,
+    &quot;price&quot;: 0.65,
+    &quot;filled_amount&quot;: 1000,
+    &quot;remaining_amount&quot;: 0,
+    &quot;created_at&quot;: &quot;2024-01-15T10:30:00Z&quot;,
+    &quot;filled_at&quot;: &quot;2024-01-15T10:31:15Z&quot;,
+    &quot;trades&quot;: [
+      {
+        &quot;trade_id&quot;: &quot;trade_67890&quot;,
+        &quot;amount&quot;: 1000,
+        &quot;price&quot;: 0.65,
+        &quot;timestamp&quot;: &quot;2024-01-15T10:31:15Z&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h4 id="cancel-order"><strong>Cancel Order</strong></h4>
+<pre><code class="language-http">DELETE /orders/{order_id}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;order_id&quot;: &quot;order_12345&quot;,
+    &quot;status&quot;: &quot;cancelled&quot;,
+    &quot;message&quot;: &quot;Order successfully cancelled&quot;
+  }
+}
+</code></pre>
+<h3 id="user-management">👤 <strong>User Management</strong></h3>
+<h4 id="get-account-balance"><strong>Get Account Balance</strong></h4>
+<pre><code class="language-http">GET /account/balance
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;total_balance&quot;: 10000,
+    &quot;available_balance&quot;: 8500,
+    &quot;locked_balance&quot;: 1500,
+    &quot;currency&quot;: &quot;USDT&quot;,
+    &quot;positions&quot;: [
+      {
+        &quot;market_id&quot;: &quot;market_001&quot;,
+        &quot;outcome&quot;: &quot;yes&quot;,
+        &quot;amount&quot;: 1000,
+        &quot;average_price&quot;: 0.65,
+        &quot;unrealized_pnl&quot;: 150
+      }
+    ]
+  }
+}
+</code></pre>
+<h4 id="get-transaction-history"><strong>Get Transaction History</strong></h4>
+<pre><code class="language-http">GET /account/transactions
+</code></pre>
+<p><strong>Parameters:</strong>
+- <code>type</code> (string): Transaction type (deposit, withdrawal, trade, fee)
+- <code>start_date</code> (string): Start date (ISO 8601)
+- <code>end_date</code> (string): End date (ISO 8601)
+- <code>page</code> (integer): Page number
+- <code>limit</code> (integer): Items per page</p>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: [
+    {
+      &quot;transaction_id&quot;: &quot;tx_12345&quot;,
+      &quot;type&quot;: &quot;trade&quot;,
+      &quot;amount&quot;: 1000,
+      &quot;currency&quot;: &quot;USDT&quot;,
+      &quot;description&quot;: &quot;Buy YES tokens for market_001&quot;,
+      &quot;timestamp&quot;: &quot;2024-01-15T10:31:15Z&quot;,
+      &quot;status&quot;: &quot;completed&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;page&quot;: 1,
+    &quot;limit&quot;: 50,
+    &quot;total&quot;: 200
+  }
+}
+</code></pre>
+<h3 id="event-management">🎯 <strong>Event Management</strong></h3>
+<h4 id="create-market-proposal"><strong>Create Market Proposal</strong></h4>
+<pre><code class="language-http">POST /markets/proposals
+</code></pre>
+<p><strong>Request Body:</strong></p>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;Will Ethereum reach $5,000 by Q2 2024?&quot;,
+  &quot;description&quot;: &quot;This market will resolve to YES if Ethereum reaches $5,000 or higher by June 30, 2024.&quot;,
+  &quot;category&quot;: &quot;cryptocurrency&quot;,
+  &quot;end_time&quot;: &quot;2024-06-30T23:59:59Z&quot;,
+  &quot;resolution_criteria&quot;: &quot;Price data from CoinGecko&quot;,
+  &quot;tags&quot;: [&quot;ethereum&quot;, &quot;price&quot;, &quot;cryptocurrency&quot;]
+}
+</code></pre>
+<p><strong>Response:</strong></p>
+<pre><code class="language-json">{
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;proposal_id&quot;: &quot;prop_12345&quot;,
+    &quot;status&quot;: &quot;pending_review&quot;,
+    &quot;title&quot;: &quot;Will Ethereum reach $5,000 by Q2 2024?&quot;,
+    &quot;created_at&quot;: &quot;2024-01-15T10:30:00Z&quot;,
+    &quot;estimated_review_time&quot;: &quot;2-3 business days&quot;
+  }
+}
+</code></pre>
+<h2 id="websocket-api">WebSocket API</h2>
+<h3 id="real-time-data-streaming">🔌 <strong>Real-time Data Streaming</strong></h3>
+<h4 id="connection"><strong>Connection</strong></h4>
+<pre><code class="language-javascript">const ws = new WebSocket('wss://ws.yc365.io/v1');
+</code></pre>
+<h4 id="authentication"><strong>Authentication</strong></h4>
+<pre><code class="language-javascript">ws.onopen = function() {
+  ws.send(JSON.stringify({
+    type: 'auth',
+    api_key: 'YOUR_API_KEY'
+  }));
+};
+</code></pre>
+<h4 id="subscribe-to-market-updates"><strong>Subscribe to Market Updates</strong></h4>
+<pre><code class="language-javascript">ws.send(JSON.stringify({
+  type: 'subscribe',
+  channel: 'market_updates',
+  market_id: 'market_001'
+}));
+</code></pre>
+<h4 id="message-format"><strong>Message Format</strong></h4>
+<pre><code class="language-json">{
+  &quot;type&quot;: &quot;market_update&quot;,
+  &quot;market_id&quot;: &quot;market_001&quot;,
+  &quot;data&quot;: {
+    &quot;yes_price&quot;: 0.67,
+    &quot;no_price&quot;: 0.33,
+    &quot;volume_24h&quot;: 130000,
+    &quot;timestamp&quot;: &quot;2024-01-15T10:35:00Z&quot;
+  }
+}
+</code></pre>
+<h2 id="sdk-support">SDK Support</h2>
+<h3 id="available-sdks">📚 <strong>Available SDKs</strong></h3>
+<h4 id="javascriptnodejs"><strong>JavaScript/Node.js</strong></h4>
+<pre><code class="language-bash">npm install yc365-sdk
+</code></pre>
+<pre><code class="language-javascript">const YC365 = require('yc365-sdk');
+
+const client = new YC365({
+  apiKey: 'YOUR_API_KEY',
+  environment: 'sandbox' // or 'production'
+});
+
+// Get markets
+const markets = await client.markets.getAll();
+
+// Place order
+const order = await client.orders.create({
+  market_id: 'market_001',
+  side: 'buy',
+  outcome: 'yes',
+  amount: 1000,
+  price: 0.65
+});
+</code></pre>
+<h4 id="python"><strong>Python</strong></h4>
+<pre><code class="language-bash">pip install yc365-sdk
+</code></pre>
+<pre><code class="language-python">from yc365 import YC365Client
+
+client = YC365Client(
+    api_key='YOUR_API_KEY',
+    environment='sandbox'
+)
+
+# Get markets
+markets = client.markets.get_all()
+
+# Place order
+order = client.orders.create(
+    market_id='market_001',
+    side='buy',
+    outcome='yes',
+    amount=1000,
+    price=0.65
+)
+</code></pre>
+<h4 id="go"><strong>Go</strong></h4>
+<pre><code class="language-bash">go get github.com/yc365/go-sdk
+</code></pre>
+<pre><code class="language-go">package main
+
+import (
+    &quot;github.com/yc365/go-sdk&quot;
+)
+
+func main() {
+    client := yc365.NewClient(&quot;YOUR_API_KEY&quot;, &quot;sandbox&quot;)
+
+    // Get markets
+    markets, err := client.Markets.GetAll()
+
+    // Place order
+    order, err := client.Orders.Create(yc365.CreateOrderRequest{
+        MarketID: &quot;market_001&quot;,
+        Side:     &quot;buy&quot;,
+        Outcome:  &quot;yes&quot;,
+        Amount:   1000,
+        Price:    0.65,
+    })
+}
+</code></pre>
+<h2 id="rate-limits">Rate Limits</h2>
+<h3 id="rate-limiting-policy">⚡ <strong>Rate Limiting Policy</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint Type</th>
+<th>Rate Limit</th>
+<th>Burst Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Market Data</strong></td>
+<td>100 requests/minute</td>
+<td>200 requests/minute</td>
+</tr>
+<tr>
+<td><strong>Trading Operations</strong></td>
+<td>50 requests/minute</td>
+<td>100 requests/minute</td>
+</tr>
+<tr>
+<td><strong>User Management</strong></td>
+<td>30 requests/minute</td>
+<td>60 requests/minute</td>
+</tr>
+<tr>
+<td><strong>WebSocket</strong></td>
+<td>10 connections</td>
+<td>20 connections</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rate-limit-headers">📊 <strong>Rate Limit Headers</strong></h3>
+<pre><code class="language-http">X-RateLimit-Limit: 100
+X-RateLimit-Remaining: 95
+X-RateLimit-Reset: 1642234567
+</code></pre>
+<h2 id="error-handling">Error Handling</h2>
+<h3 id="error-response-format">❌ <strong>Error Response Format</strong></h3>
+<pre><code class="language-json">{
+  &quot;success&quot;: false,
+  &quot;error&quot;: {
+    &quot;code&quot;: &quot;INVALID_PARAMETER&quot;,
+    &quot;message&quot;: &quot;Invalid market_id provided&quot;,
+    &quot;details&quot;: {
+      &quot;field&quot;: &quot;market_id&quot;,
+      &quot;value&quot;: &quot;invalid_id&quot;,
+      &quot;expected&quot;: &quot;string&quot;
+    }
+  },
+  &quot;request_id&quot;: &quot;req_12345&quot;
+}
+</code></pre>
+<h3 id="error-codes">🔢 <strong>Error Codes</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Description</th>
+<th>HTTP Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INVALID_PARAMETER</code></td>
+<td>Invalid request parameter</td>
+<td>400</td>
+</tr>
+<tr>
+<td><code>UNAUTHORIZED</code></td>
+<td>Invalid or missing API key</td>
+<td>401</td>
+</tr>
+<tr>
+<td><code>FORBIDDEN</code></td>
+<td>Insufficient permissions</td>
+<td>403</td>
+</tr>
+<tr>
+<td><code>NOT_FOUND</code></td>
+<td>Resource not found</td>
+<td>404</td>
+</tr>
+<tr>
+<td><code>RATE_LIMITED</code></td>
+<td>Rate limit exceeded</td>
+<td>429</td>
+</tr>
+<tr>
+<td><code>INTERNAL_ERROR</code></td>
+<td>Server error</td>
+<td>500</td>
+</tr>
+<tr>
+<td><code>MARKET_CLOSED</code></td>
+<td>Market is not available for trading</td>
+<td>400</td>
+</tr>
+<tr>
+<td><code>INSUFFICIENT_BALANCE</code></td>
+<td>Not enough balance for operation</td>
+<td>400</td>
+</tr>
+<tr>
+<td><code>ORDER_NOT_FOUND</code></td>
+<td>Order does not exist</td>
+<td>404</td>
+</tr>
+</tbody>
+</table>
+<h2 id="testing-and-development">Testing and Development</h2>
+<h3 id="sandbox-environment">🧪 <strong>Sandbox Environment</strong></h3>
+<h4 id="features"><strong>Features</strong></h4>
+<ul>
+<li><strong>Test Data</strong>: Realistic market data for testing</li>
+<li><strong>Virtual Funds</strong>: Unlimited test USDT for development</li>
+<li><strong>Full API Access</strong>: All production endpoints available</li>
+<li><strong>WebSocket Support</strong>: Real-time data streaming</li>
+</ul>
+<h4 id="getting-started_1"><strong>Getting Started</strong></h4>
+<ol>
+<li><strong>Sign Up</strong>: Create a sandbox account</li>
+<li><strong>Generate API Key</strong>: Get your sandbox API key</li>
+<li><strong>Start Testing</strong>: Use sandbox endpoints for development</li>
+<li><strong>Monitor Usage</strong>: Track API usage and performance</li>
+</ol>
+<h3 id="api-testing-tools">📝 <strong>API Testing Tools</strong></h3>
+<h4 id="postman-collection"><strong>Postman Collection</strong></h4>
+<ul>
+<li><strong>Download</strong>: Complete Postman collection available</li>
+<li><strong>Environment Variables</strong>: Pre-configured environments</li>
+<li><strong>Examples</strong>: Sample requests for all endpoints</li>
+<li><strong>Documentation</strong>: Integrated API documentation</li>
+</ul>
+<h4 id="curl-examples"><strong>cURL Examples</strong></h4>
+<pre><code class="language-bash"># Get all markets
+curl -X GET &quot;https://api-sandbox.yc365.io/v1/markets&quot; \
+  -H &quot;Authorization: Bearer YOUR_API_KEY&quot; \
+  -H &quot;Content-Type: application/json&quot;
+
+# Place order
+curl -X POST &quot;https://api-sandbox.yc365.io/v1/orders&quot; \
+  -H &quot;Authorization: Bearer YOUR_API_KEY&quot; \
+  -H &quot;Content-Type: application/json&quot; \
+  -d '{
+    &quot;market_id&quot;: &quot;market_001&quot;,
+    &quot;side&quot;: &quot;buy&quot;,
+    &quot;outcome&quot;: &quot;yes&quot;,
+    &quot;amount&quot;: 1000,
+    &quot;price&quot;: 0.65
+  }'
+</code></pre>
+<h2 id="best-practices">Best Practices</h2>
+<h3 id="development-guidelines">💡 <strong>Development Guidelines</strong></h3>
+<h4 id="api-usage"><strong>API Usage</strong></h4>
+<ul>
+<li><strong>Use HTTPS</strong>: Always use secure connections</li>
+<li><strong>Handle Errors</strong>: Implement proper error handling</li>
+<li><strong>Rate Limiting</strong>: Respect rate limits and implement backoff</li>
+<li><strong>Caching</strong>: Cache market data when appropriate</li>
+<li><strong>WebSockets</strong>: Use WebSockets for real-time data</li>
+</ul>
+<h4 id="security"><strong>Security</strong></h4>
+<ul>
+<li><strong>API Key Protection</strong>: Never expose API keys in client-side code</li>
+<li><strong>Request Signing</strong>: Use request signing for sensitive operations</li>
+<li><strong>IP Whitelisting</strong>: Restrict API access to known IP addresses</li>
+<li><strong>Key Rotation</strong>: Regularly rotate API keys</li>
+</ul>
+<h4 id="performance"><strong>Performance</strong></h4>
+<ul>
+<li><strong>Connection Pooling</strong>: Reuse HTTP connections</li>
+<li><strong>Batch Operations</strong>: Use batch endpoints when available</li>
+<li><strong>Pagination</strong>: Implement proper pagination for large datasets</li>
+<li><strong>Monitoring</strong>: Monitor API usage and performance</li>
+</ul>
+<h2 id="support-and-resources">Support and Resources</h2>
+<h3 id="developer-support">🆘 <strong>Developer Support</strong></h3>
+<h4 id="documentation"><strong>Documentation</strong></h4>
+<ul>
+<li><strong>API Reference</strong>: Complete endpoint documentation</li>
+<li><strong>SDK Documentation</strong>: Language-specific guides</li>
+<li><strong>Code Examples</strong>: Sample implementations</li>
+<li><strong>Tutorials</strong>: Step-by-step integration guides</li>
+</ul>
+<h4 id="community"><strong>Community</strong></h4>
+<ul>
+<li><strong>Developer Forum</strong>: Community support and discussions</li>
+<li><strong>GitHub</strong>: Open source SDKs and examples</li>
+<li><strong>Discord</strong>: Real-time developer chat</li>
+<li><strong>Stack Overflow</strong>: Tagged questions and answers</li>
+</ul>
+<h4 id="support-channels"><strong>Support Channels</strong></h4>
+<ul>
+<li><strong>Email</strong>: api-support@yc365.io</li>
+<li><strong>Live Chat</strong>: Available 24/7 for API issues</li>
+<li><strong>Priority Support</strong>: Dedicated support for enterprise clients</li>
+</ul>
+<h3 id="contact-information">📞 <strong>Contact Information</strong></h3>
+<p>For API-related support, please contact:
+- <strong>Email</strong>: api-support@yc365.io
+- <strong>Live Chat</strong>: Available 24/7 on platform
+- <strong>Telegram</strong>: @YC365DevSupport
+- <strong>Discord</strong>: YC365 Developer Server</p>
+<hr />
+<p><strong>Start building with YC365 API today!</strong> Our comprehensive API and SDK support make it easy to integrate prediction market functionality into your applications.</p>
+<p><em>Join thousands of developers who are already building innovative applications on the YC365 platform.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

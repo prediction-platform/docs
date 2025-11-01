@@ -9,27 +9,30 @@ theme:
 plugins:
   - search
   - i18n:
-      default_language: en
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
       languages:
-        en:
+        - locale: en
+          default: true
           name: English
           build: true
-        zh:
+        - locale: zh
           name: 简体中文
           build: true
-        th:
+          nav_translations:
+            Index: 首页
+        - locale: th
           name: ภาษาไทย
           build: true
-        pt:
+          nav_translations:
+            Index: หน้าหลัก
+        - locale: pt
           name: Português
           build: true
-      nav_translations:
-        zh:
-          Index: 首页
-        th:
-          Index: หน้าหลัก
-        pt:
-          Index: Início
+          nav_translations:
+            Index: Início
 nav:
   - Index: index.md
   - Project Whitepaper: project-whitepaper.md

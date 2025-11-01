@@ -1,0 +1,2611 @@
+
+<!doctype html>
+<html lang="th" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Using the order book - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#using-the-order-book" class="md-skip">
+          ข้ามไปที่เนื้อหา
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="หัวข้อ">
+    <a href="../../" title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Using the order book
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="เลือกภาษา">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../pt/using-the-order-book/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../zh/pt/using-the-order-book/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="th" class="md-select__link">
+              ภาษาไทย
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../pt/pt/using-the-order-book/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="ค้นหา" placeholder="ค้นหา" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="ค้นหา">
+        
+        <button type="reset" class="md-search__icon md-icon" title="ล้าง" aria-label="ล้าง" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            กำลังเริ่มต้นการค้นหา
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ตัวนำทาง" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    หน้าหลัก
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-whitepaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Whitepaper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../business-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Business Process Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../earn-points/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Earn Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-are-markets-created/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-are-prices-calculated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-are-prediction-markets-resolved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Trading
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../limit-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limit Orders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../trading-fees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading Fees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-order-book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using the Order Book
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-earn-profits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Earn Profits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Merchant platform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Merchant platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to-integrate-dapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Integrate Dapp?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../open-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            FAQs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../can-i-sell-early/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Can I Sell Early?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-do-i-contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Do I Contact Support?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../is-my-money-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is My Money Safe?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../why-crypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Crypto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../what-is-a-prediction-market/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a Prediction Market?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="สารบัญ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      สารบัญ
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-an-order-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is an Order Book?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is an Order Book?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-displayed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Displayed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-book-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Layout
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Book Layout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visual Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bid-side-buy-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bid Side (Buy Orders)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ask-side-sell-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ask Side (Sell Orders)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Columns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Columns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quantity-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quantity Column
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#total-column" class="md-nav__link">
+    <span class="md-ellipsis">
+      Total Column
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reading-the-order-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading the Order Book
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading the Order Book">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Metrics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Metrics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#spread-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spread Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-depth" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Depth
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-sentiment-indicators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Sentiment Indicators
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Market Sentiment Indicators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bid-ask-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bid-Ask Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-level-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Level Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-book-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Book Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-placement-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Placement Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Placement Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-making" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Making
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#taking-liquidity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taking Liquidity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passive-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive Trading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-strategies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Strategies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Strategies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iceberg-orders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iceberg Orders
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-book-scalping" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Scalping
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#momentum-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Momentum Trading
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real-Time Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-Time Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#live-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Live Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Live Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-refresh" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Refresh
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Tracking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interactive-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interactive Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interactive Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#click-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Click Trading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#order-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Modification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filtering-and-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filtering and Customization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Filtering and Customization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Options
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Filters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-book-analysis-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Analysis Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Book Analysis Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#built-in-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Built-in Analytics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Built-in Analytics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#depth-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depth Chart
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Statistics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#historical-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Historical Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-party-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Third-Party Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Third-Party Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Export
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-order-book" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Order Book
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Order Book">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mobile-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#responsive-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Responsive Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simplified-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simplified View
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mobile-specific-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile-Specific Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mobile-Specific Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quick-trading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quick Trading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-and-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alerts and Notifications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#order-book-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Order Book Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reading Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#focus-areas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Focus Areas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-mistakes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Mistakes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trading-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trading Best Practices
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trading Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-placement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Placement
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#risk-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Risk Management
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#common-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Issues
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Issues">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#display-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Display Problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Issues
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solutions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Solutions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technical-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technical Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#support-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Planned Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Visualization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Analytics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technology-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Improvements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Technology Improvements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Enhancements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>!!! note "Aviso de tradução"
+    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.</p>
+<h1 id="using-the-order-book">Using the Order Book</h1>
+<h2 id="overview">Overview</h2>
+<p>The order book is the heart of YC365's trading system, providing real-time visibility into market depth, liquidity, and trading activity. Understanding how to read and use the order book effectively is essential for successful trading on our prediction market platform.</p>
+<h2 id="what-is-an-order-book">What is an Order Book?</h2>
+<h3 id="definition">Definition</h3>
+<p>An order book is a real-time, continuously updated list of all buy and sell orders for a specific prediction market condition, organized by price level. It shows market depth and helps traders make informed decisions about order placement and execution.</p>
+<h3 id="core-components">Core Components</h3>
+<ul>
+<li><strong>Bid Side</strong>: All buy orders (buyers willing to purchase at specified prices)</li>
+<li><strong>Ask Side</strong>: All sell orders (sellers willing to sell at specified prices)</li>
+<li><strong>Spread</strong>: The difference between the highest bid and lowest ask prices</li>
+<li><strong>Market Depth</strong>: The quantity of orders at each price level</li>
+</ul>
+<h3 id="information-displayed">Information Displayed</h3>
+<ul>
+<li><strong>Price Levels</strong>: All price points where orders exist</li>
+<li><strong>Order Quantities</strong>: Total token quantity at each price level</li>
+<li><strong>Order Count</strong>: Number of individual orders at each price level</li>
+<li><strong>Time Priority</strong>: Order sequence within each price level</li>
+</ul>
+<h2 id="order-book-layout">Order Book Layout</h2>
+<p><img alt="Order book view displaying price levels, share quantities, and total depth" src="../img/yc365/order-book.png" /></p>
+<p><em>Real YC365 market example: the order book tab shows live bids/asks, cumulative depth, and quick trade presets.</em></p>
+<h3 id="visual-structure">Visual Structure</h3>
+<h4 id="bid-side-buy-orders">Bid Side (Buy Orders)</h4>
+<pre><code>Price (USDT) | Quantity | Total | Progress Bar
+0.68        | 1,250    | 1,250 | ████████░░
+0.67        | 2,100    | 3,350 | ████████████░░
+0.66        | 1,800    | 5,150 | ██████████████░░
+0.65        | 3,200    | 8,350 | ████████████████████░░
+0.64        | 1,500    | 9,850 | ██████████████████████░░
+</code></pre>
+<h4 id="ask-side-sell-orders">Ask Side (Sell Orders)</h4>
+<pre><code>Price (USDT) | Quantity | Total | Progress Bar
+0.69        | 1,800    | 1,800 | ████████████░░
+0.70        | 2,500    | 4,300 | ████████████████░░
+0.71        | 1,200    | 5,500 | ██████████████████░░
+0.72        | 2,800    | 8,300 | ████████████████████████░░
+0.73        | 1,600    | 9,900 | ██████████████████████████░░
+</code></pre>
+<h3 id="color-coding">Color Coding</h3>
+<ul>
+<li><strong>Green/Blue</strong>: Bid side (buy orders)</li>
+<li><strong>Red/Orange</strong>: Ask side (sell orders)</li>
+<li><strong>Highlighted</strong>: Your own orders</li>
+<li><strong>Intensity</strong>: Darker colors indicate larger quantities</li>
+</ul>
+<h3 id="data-columns">Data Columns</h3>
+<h4 id="price-column">Price Column</h4>
+<ul>
+<li><strong>Bid Prices</strong>: Displayed in descending order (highest to lowest)</li>
+<li><strong>Ask Prices</strong>: Displayed in ascending order (lowest to highest)</li>
+<li><strong>Price Precision</strong>: Displayed to 2 decimal places</li>
+<li><strong>Best Prices</strong>: Highlighted or emphasized</li>
+</ul>
+<h4 id="quantity-column">Quantity Column</h4>
+<ul>
+<li><strong>Individual Levels</strong>: Shows total quantity at each specific price</li>
+<li><strong>Aggregated Orders</strong>: Combines multiple orders at the same price</li>
+<li><strong>Dynamic Updates</strong>: Real-time updates as orders are placed/cancelled</li>
+<li><strong>Unit Display</strong>: Shown in token units</li>
+</ul>
+<h4 id="total-column">Total Column</h4>
+<ul>
+<li><strong>Cumulative Quantity</strong>: Running total from best price to current level</li>
+<li><strong>Market Depth</strong>: Indicates total liquidity available</li>
+<li><strong>Liquidity Assessment</strong>: Helps assess market depth</li>
+<li><strong>Order Impact</strong>: Shows potential impact of large orders</li>
+</ul>
+<h2 id="reading-the-order-book">Reading the Order Book</h2>
+<h3 id="key-metrics">Key Metrics</h3>
+<h4 id="spread-analysis">Spread Analysis</h4>
+<ul>
+<li><strong>Bid-Ask Spread</strong>: Difference between best bid and best ask</li>
+<li><strong>Tight Spread</strong>: Indicates active, liquid market</li>
+<li><strong>Wide Spread</strong>: May indicate low liquidity or high volatility</li>
+<li><strong>Percentage Spread</strong>: Spread as percentage of mid-price</li>
+</ul>
+<h4 id="market-depth">Market Depth</h4>
+<ul>
+<li><strong>Depth Chart</strong>: Visual representation of cumulative orders</li>
+<li><strong>Liquidity Zones</strong>: Price levels with significant order concentration</li>
+<li><strong>Support/Resistance</strong>: Price levels with large order quantities</li>
+<li><strong>Imbalance</strong>: Difference between bid and ask side depth</li>
+</ul>
+<h4 id="order-flow">Order Flow</h4>
+<ul>
+<li><strong>Order Additions</strong>: New orders being added to the book</li>
+<li><strong>Order Cancellations</strong>: Orders being removed from the book</li>
+<li><strong>Order Modifications</strong>: Changes to existing orders</li>
+<li><strong>Fill Activity</strong>: Orders being executed and removed</li>
+</ul>
+<h3 id="market-sentiment-indicators">Market Sentiment Indicators</h3>
+<h4 id="bid-ask-ratio">Bid-Ask Ratio</h4>
+<ul>
+<li><strong>Balanced Market</strong>: Similar quantities on both sides</li>
+<li><strong>Bullish Sentiment</strong>: More buy orders than sell orders</li>
+<li><strong>Bearish Sentiment</strong>: More sell orders than buy orders</li>
+<li><strong>Momentum Shifts</strong>: Changes in bid-ask balance over time</li>
+</ul>
+<h4 id="price-level-analysis">Price Level Analysis</h4>
+<ul>
+<li><strong>Order Concentration</strong>: Where most orders are clustered</li>
+<li><strong>Gap Analysis</strong>: Price levels with no orders</li>
+<li><strong>Wall Analysis</strong>: Large orders that may act as price barriers</li>
+<li><strong>Distribution</strong>: How orders are spread across price levels</li>
+</ul>
+<h2 id="order-book-strategies">Order Book Strategies</h2>
+<h3 id="order-placement-strategies">Order Placement Strategies</h3>
+<h4 id="market-making">Market Making</h4>
+<ul>
+<li><strong>Bid-Ask Spread</strong>: Place orders on both sides to capture spread</li>
+<li><strong>Tight Spreads</strong>: Place orders close to current market price</li>
+<li><strong>Size Management</strong>: Manage order sizes based on risk tolerance</li>
+<li><strong>Inventory Control</strong>: Balance inventory to avoid excessive exposure</li>
+</ul>
+<h4 id="taking-liquidity">Taking Liquidity</h4>
+<ul>
+<li><strong>Market Orders</strong>: Execute immediately against existing orders</li>
+<li><strong>Aggressive Limits</strong>: Place limit orders that immediately execute</li>
+<li><strong>Price Impact</strong>: Consider impact of large orders on market price</li>
+<li><strong>Timing</strong>: Execute during periods of good liquidity</li>
+</ul>
+<h4 id="passive-trading">Passive Trading</h4>
+<ul>
+<li><strong>Join the Queue</strong>: Place orders at existing price levels</li>
+<li><strong>Better Prices</strong>: Offer slightly better prices than existing orders</li>
+<li><strong>Patience</strong>: Wait for market to come to your price</li>
+<li><strong>Queue Position</strong>: Monitor your position in the order queue</li>
+</ul>
+<h3 id="advanced-strategies">Advanced Strategies</h3>
+<h4 id="iceberg-orders">Iceberg Orders</h4>
+<ul>
+<li><strong>Hidden Quantity</strong>: Show only small portion of large order</li>
+<li><strong>Market Impact</strong>: Reduce market impact of large orders</li>
+<li><strong>Stealth Trading</strong>: Avoid revealing true order size</li>
+<li><strong>Implementation</strong>: Break large orders into smaller visible portions</li>
+</ul>
+<h4 id="order-book-scalping">Order Book Scalping</h4>
+<ul>
+<li><strong>Quick Profits</strong>: Capture small price movements</li>
+<li><strong>Spread Trading</strong>: Buy at bid, sell at ask</li>
+<li><strong>High Frequency</strong>: Multiple small trades throughout the day</li>
+<li><strong>Risk Management</strong>: Tight risk controls and position limits</li>
+</ul>
+<h4 id="momentum-trading">Momentum Trading</h4>
+<ul>
+<li><strong>Order Flow</strong>: Follow direction of order flow</li>
+<li><strong>Breakthrough</strong>: Trade when price breaks through significant levels</li>
+<li><strong>Volume Confirmation</strong>: Confirm moves with order book volume</li>
+<li><strong>Trend Following</strong>: Align trades with overall market direction</li>
+</ul>
+<h2 id="real-time-features">Real-Time Features</h2>
+<h3 id="live-updates">Live Updates</h3>
+<h4 id="dynamic-refresh">Dynamic Refresh</h4>
+<ul>
+<li><strong>Real-time Data</strong>: Order book updates in real-time</li>
+<li><strong>Microsecond Updates</strong>: Near-instantaneous order book changes</li>
+<li><strong>Conflict Resolution</strong>: Handle simultaneous order updates</li>
+<li><strong>Data Integrity</strong>: Ensure accurate and consistent data display</li>
+</ul>
+<h4 id="order-tracking">Order Tracking</h4>
+<ul>
+<li><strong>Your Orders</strong>: Highlight your own orders in the book</li>
+<li><strong>Order Status</strong>: Track status of your orders in real-time</li>
+<li><strong>Queue Position</strong>: Monitor your position in price queues</li>
+<li><strong>Fill Notifications</strong>: Instant notifications when orders fill</li>
+</ul>
+<h3 id="interactive-features">Interactive Features</h3>
+<h4 id="click-trading">Click Trading</h4>
+<ul>
+<li><strong>One-Click Orders</strong>: Place orders by clicking on price levels</li>
+<li><strong>Quick Order Entry</strong>: Rapid order placement interface</li>
+<li><strong>Size Presets</strong>: Predefined order sizes for quick trading</li>
+<li><strong>Confirmation</strong>: Optional confirmation for click trading</li>
+</ul>
+<h4 id="order-modification">Order Modification</h4>
+<ul>
+<li><strong>Drag and Drop</strong>: Move orders to different price levels</li>
+<li><strong>Quick Cancel</strong>: Cancel orders with single click</li>
+<li><strong>Bulk Operations</strong>: Cancel all orders or orders for specific side</li>
+<li><strong>Hotkeys</strong>: Keyboard shortcuts for common operations</li>
+</ul>
+<h3 id="filtering-and-customization">Filtering and Customization</h3>
+<h4 id="display-options">Display Options</h4>
+<ul>
+<li><strong>Aggregation Levels</strong>: Choose price aggregation granularity</li>
+<li><strong>Depth Levels</strong>: Select number of price levels to display</li>
+<li><strong>Order Size Filter</strong>: Filter orders below certain size threshold</li>
+<li><strong>Color Schemes</strong>: Customize colors for better visibility</li>
+</ul>
+<h4 id="advanced-filters">Advanced Filters</h4>
+<ul>
+<li><strong>Order Age</strong>: Filter orders by how long they've been in the book</li>
+<li><strong>Order Size</strong>: Show only orders above certain size</li>
+<li><strong>User Filters</strong>: Hide or highlight specific user orders</li>
+<li><strong>Time Filters</strong>: Show orders from specific time periods</li>
+</ul>
+<h2 id="order-book-analysis-tools">Order Book Analysis Tools</h2>
+<h3 id="built-in-analytics">Built-in Analytics</h3>
+<h4 id="depth-chart">Depth Chart</h4>
+<ul>
+<li><strong>Visual Representation</strong>: Graphical view of order book depth</li>
+<li><strong>Cumulative View</strong>: Shows cumulative quantity at each price</li>
+<li><strong>Bid-Ask Visualization</strong>: Clear visualization of bid-ask spread</li>
+<li><strong>Interactive Elements</strong>: Click on chart to place orders</li>
+</ul>
+<h4 id="market-statistics">Market Statistics</h4>
+<ul>
+<li><strong>Spread Statistics</strong>: Current and average spread metrics</li>
+<li><strong>Volume Analysis</strong>: Order book volume and turnover</li>
+<li><strong>Price Distribution</strong>: Distribution of orders across price levels</li>
+<li><strong>Liquidity Metrics</strong>: Various liquidity measurement indicators</li>
+</ul>
+<h4 id="historical-analysis">Historical Analysis</h4>
+<ul>
+<li><strong>Order Book History</strong>: Historical order book snapshots</li>
+<li><strong>Spread History</strong>: Historical bid-ask spread data</li>
+<li><strong>Volume Trends</strong>: Order book volume trends over time</li>
+<li><strong>Market Evolution</strong>: How order book structure evolves</li>
+</ul>
+<h3 id="third-party-integration">Third-Party Integration</h3>
+<h4 id="api-access">API Access</h4>
+<ul>
+<li><strong>Real-time Feed</strong>: Real-time order book data via API</li>
+<li><strong>Historical Data</strong>: Access to historical order book data</li>
+<li><strong>Custom Analytics</strong>: Build custom analysis tools</li>
+<li><strong>Algorithmic Trading</strong>: Support for algorithmic trading systems</li>
+</ul>
+<h4 id="data-export">Data Export</h4>
+<ul>
+<li><strong>CSV Export</strong>: Export order book data to CSV format</li>
+<li><strong>JSON Format</strong>: Structured data in JSON format</li>
+<li><strong>Time Series</strong>: Time-series order book data</li>
+<li><strong>Snapshot Data</strong>: Point-in-time order book snapshots</li>
+</ul>
+<h2 id="mobile-order-book">Mobile Order Book</h2>
+<h3 id="mobile-interface">Mobile Interface</h3>
+<h4 id="responsive-design">Responsive Design</h4>
+<ul>
+<li><strong>Touch Interface</strong>: Optimized for touch interaction</li>
+<li><strong>Swipe Navigation</strong>: Swipe between different views</li>
+<li><strong>Pinch Zoom</strong>: Zoom in/out for better visibility</li>
+<li><strong>Portrait/Landscape</strong>: Support for both orientations</li>
+</ul>
+<h4 id="simplified-view">Simplified View</h4>
+<ul>
+<li><strong>Essential Information</strong>: Focus on most important data</li>
+<li><strong>Condensed Layout</strong>: Efficient use of limited screen space</li>
+<li><strong>Quick Actions</strong>: Easy access to common trading actions</li>
+<li><strong>Gesture Controls</strong>: Intuitive gesture-based controls</li>
+</ul>
+<h3 id="mobile-specific-features">Mobile-Specific Features</h3>
+<h4 id="quick-trading">Quick Trading</h4>
+<ul>
+<li><strong>Simplified Order Entry</strong>: Streamlined order placement</li>
+<li><strong>Preset Sizes</strong>: Common order sizes for quick selection</li>
+<li><strong>Market Price</strong>: One-tap market price trading</li>
+<li><strong>Voice Commands</strong>: Optional voice command integration</li>
+</ul>
+<h4 id="alerts-and-notifications">Alerts and Notifications</h4>
+<ul>
+<li><strong>Price Alerts</strong>: Notifications when price reaches levels</li>
+<li><strong>Order Alerts</strong>: Notifications for order fills and cancellations</li>
+<li><strong>Market Alerts</strong>: Notifications for significant market changes</li>
+<li><strong>Custom Alerts</strong>: User-defined custom alert conditions</li>
+</ul>
+<h2 id="order-book-best-practices">Order Book Best Practices</h2>
+<h3 id="reading-best-practices">Reading Best Practices</h3>
+<h4 id="focus-areas">Focus Areas</h4>
+<ul>
+<li><strong>Best Bid/Ask</strong>: Always monitor the best prices</li>
+<li><strong>Spread Analysis</strong>: Regular spread monitoring</li>
+<li><strong>Depth Assessment</strong>: Evaluate market depth before trading</li>
+<li><strong>Order Flow</strong>: Watch for changes in order flow patterns</li>
+</ul>
+<h4 id="common-mistakes">Common Mistakes</h4>
+<ul>
+<li><strong>Ignoring Depth</strong>: Placing large orders without checking depth</li>
+<li><strong>Spread Neglect</strong>: Not considering spread when placing orders</li>
+<li><strong>Stale Data</strong>: Acting on outdated order book information</li>
+<li><strong>Size Mismanagement</strong>: Poor order size relative to market depth</li>
+</ul>
+<h3 id="trading-best-practices">Trading Best Practices</h3>
+<h4 id="order-placement">Order Placement</h4>
+<ul>
+<li><strong>Market Assessment</strong>: Assess market conditions before placing orders</li>
+<li><strong>Size Appropriateness</strong>: Match order size to market liquidity</li>
+<li><strong>Price Reasonableness</strong>: Place orders at reasonable price levels</li>
+<li><strong>Time Consideration</strong>: Consider optimal timing for order placement</li>
+</ul>
+<h4 id="risk-management">Risk Management</h4>
+<ul>
+<li><strong>Position Limits</strong>: Maintain appropriate position limits</li>
+<li><strong>Stop-Loss Planning</strong>: Plan exit strategies for adverse moves</li>
+<li><strong>Diversification</strong>: Don't concentrate all orders in one market</li>
+<li><strong>Liquidity Management</strong>: Ensure adequate liquidity for exits</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="common-issues">Common Issues</h3>
+<h4 id="display-problems">Display Problems</h4>
+<ul>
+<li><strong>Refresh Issues</strong>: Order book not updating properly</li>
+<li><strong>Performance</strong>: Slow order book updates</li>
+<li><strong>Visual Glitches</strong>: Display artifacts or rendering issues</li>
+<li><strong>Browser Compatibility</strong>: Issues with specific browsers</li>
+</ul>
+<h4 id="data-issues">Data Issues</h4>
+<ul>
+<li><strong>Missing Orders</strong>: Orders not appearing in book</li>
+<li><strong>Incorrect Prices</strong>: Wrong price information displayed</li>
+<li><strong>Outdated Data</strong>: Stale or delayed order book data</li>
+<li><strong>Synchronization</strong>: Order book out of sync with actual state</li>
+</ul>
+<h3 id="solutions">Solutions</h3>
+<h4 id="technical-solutions">Technical Solutions</h4>
+<ul>
+<li><strong>Browser Refresh</strong>: Refresh page to reload order book</li>
+<li><strong>Cache Clear</strong>: Clear browser cache and cookies</li>
+<li><strong>Connection Check</strong>: Verify internet connection stability</li>
+<li><strong>Browser Update</strong>: Ensure browser is up to date</li>
+</ul>
+<h4 id="support-resources">Support Resources</h4>
+<ul>
+<li><strong>Help Documentation</strong>: Comprehensive help documentation</li>
+<li><strong>Video Tutorials</strong>: Video guides for order book usage</li>
+<li><strong>Community Forum</strong>: Community support and discussions</li>
+<li><strong>Customer Support</strong>: Direct support for technical issues</li>
+</ul>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="planned-features">Planned Features</h3>
+<h4 id="advanced-visualization">Advanced Visualization</h4>
+<ul>
+<li><strong>3D Order Book</strong>: Three-dimensional order book visualization</li>
+<li><strong>Heat Maps</strong>: Order book heat map displays</li>
+<li><strong>Flow Visualization</strong>: Animated order flow visualization</li>
+<li><strong>VR/AR Support</strong>: Virtual and augmented reality support</li>
+</ul>
+<h4 id="ai-integration">AI Integration</h4>
+<ul>
+<li><strong>Smart Alerts</strong>: AI-powered intelligent alerts</li>
+<li><strong>Pattern Recognition</strong>: Automatic pattern recognition</li>
+<li><strong>Predictive Analytics</strong>: AI-based market predictions</li>
+<li><strong>Personalized Views</strong>: AI-customized order book views</li>
+</ul>
+<h4 id="enhanced-analytics">Enhanced Analytics</h4>
+<ul>
+<li><strong>Machine Learning</strong>: ML-based order book analysis</li>
+<li><strong>Sentiment Analysis</strong>: Order book sentiment indicators</li>
+<li><strong>Network Analysis</strong>: Order book network effects</li>
+<li><strong>Cross-Market Analysis</strong>: Multi-market order book analysis</li>
+</ul>
+<h3 id="technology-improvements">Technology Improvements</h3>
+<h4 id="performance-optimization">Performance Optimization</h4>
+<ul>
+<li><strong>Faster Updates</strong>: Even faster real-time updates</li>
+<li><strong>Reduced Latency</strong>: Lower latency order book data</li>
+<li><strong>Better Compression</strong>: Improved data compression</li>
+<li><strong>Edge Computing</strong>: Edge computing for better performance</li>
+</ul>
+<h4 id="integration-enhancements">Integration Enhancements</h4>
+<ul>
+<li><strong>DeFi Integration</strong>: Integration with other DeFi protocols</li>
+<li><strong>Cross-Platform</strong>: Better cross-platform compatibility</li>
+<li><strong>API Improvements</strong>: Enhanced API functionality</li>
+<li><strong>Webhook Support</strong>: Real-time webhook notifications</li>
+</ul>
+<hr />
+<p><em>For the latest information on order book features and updates, please check our official announcements.</em> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u0e04\u0e31\u0e14\u0e25\u0e2d\u0e01\u0e41\u0e25\u0e49\u0e27", "clipboard.copy": "\u0e04\u0e31\u0e14\u0e25\u0e2d\u0e01", "search.result.more.one": "\u0e2d\u0e35\u0e01\u0e2b\u0e19\u0e36\u0e48\u0e07\u0e43\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49", "search.result.more.other": "# \u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e15\u0e34\u0e21\u0e43\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49", "search.result.none": "\u0e44\u0e21\u0e48\u0e1e\u0e1a\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19", "search.result.one": "\u0e1e\u0e1a\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19", "search.result.other": "\u0e1e\u0e1a # \u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19", "search.result.placeholder": "\u0e1e\u0e34\u0e21\u0e1e\u0e4c\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e40\u0e23\u0e34\u0e48\u0e21\u0e04\u0e49\u0e19\u0e2b\u0e32", "search.result.term.missing": "\u0e44\u0e21\u0e48\u0e1e\u0e1a", "select.version": "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e27\u0e2d\u0e23\u0e4c\u0e0a\u0e31\u0e19"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

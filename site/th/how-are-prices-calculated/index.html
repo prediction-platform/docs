@@ -1,0 +1,3080 @@
+
+<!doctype html>
+<html lang="th" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../how-are-markets-created/">
+      
+      
+        <link rel="next" href="../how-are-prediction-markets-resolved/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>How Are Prices Calculated? - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-are-prices-calculated" class="md-skip">
+          ข้ามไปที่เนื้อหา
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="หัวข้อ">
+    <a href="../" title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How Are Prices Calculated?
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="เลือกภาษา">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../how-are-prices-calculated/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh/how-are-prices-calculated/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="th" class="md-select__link">
+              ภาษาไทย
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/how-are-prices-calculated/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="ค้นหา" placeholder="ค้นหา" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="ค้นหา">
+        
+        <button type="reset" class="md-search__icon md-icon" title="ล้าง" aria-label="ล้าง" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            กำลังเริ่มต้นการค้นหา
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="ตัวนำทาง" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    หน้าหลัก
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-whitepaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Whitepaper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Business Process Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../earn-points/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Earn Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-created/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="สารบัญ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      สารบัญ
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yc365-pricing-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      YC365 Pricing Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YC365 Pricing Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-architecture-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ System Architecture Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ System Architecture Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart-contract-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Contract Integration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-component-price-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Component Price Discovery:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primary-pricing-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Pricing Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Pricing Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-implementation-order-book-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Current Implementation: Order Book Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Current Implementation: Order Book Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-price-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Price Calculation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-discovery-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Discovery Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Pricing:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-enhancement-comprehensive-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Future Enhancement: Comprehensive Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Future Enhancement: Comprehensive Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-price-calculation-planned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Price Calculation (Planned):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-based-price-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role-Based Price Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Role-Based Price Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-administrator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Asset Administrator Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Asset Administrator Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquidity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liquidity Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Operations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-price-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Technical Price Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Technical Price Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-book-management-order-trading-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Management (Order Trading Model):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settlement-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settlement Service Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#price-update-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Update Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Update Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-price-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Real-Time Price Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Real-Time Price Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Triggers:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-price-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Multi-Language Price Display
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Multi-Language Price Display">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-price-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Price Consistency:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localization-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-price-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Price Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Price Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-impact-and-slippage" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Price Impact and Slippage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Price Impact and Slippage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slippage-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slippage Calculation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-affecting-price-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factors Affecting Price Impact:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-protection-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Price Protection Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Price Protection Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anti-manipulation-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Manipulation Safeguards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Systems:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fee-structure-and-price-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Structure and Price Impact
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fee Structure and Price Impact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trading-fee-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Trading Fee Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Trading Fee Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-fee-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Fee Structure:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fee-calculation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Calculation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fee-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Transparency:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#price-analytics-and-historical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Analytics and Historical Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Analytics and Historical Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Data Collection and Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Data Collection and Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dapp-backend-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      DApp Backend Service Integration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface-and-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 User Interface and Accessibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 User Interface and Accessibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-display-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Display Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Language Support:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#price-transparency-and-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Transparency and Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Transparency and Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blockchain-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Blockchain Transparency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Blockchain Transparency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-chain-price-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Chain Price Data:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Verification:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-resolution-and-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Price Resolution and Settlement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Price Resolution and Settlement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-price-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Price Determination:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-pricing-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Advanced Pricing Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Advanced Pricing Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-technical-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Technical Improvements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-upgrades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Upgrades:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-expansion-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Global Expansion Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 Global Expansion Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Localization:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prediction-markets-resolved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Trading
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limit-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limit Orders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading-fees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading Fees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-order-book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using the Order Book
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-earn-profits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Earn Profits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Merchant platform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Merchant platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-dapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Integrate Dapp?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            FAQs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../can-i-sell-early/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Can I Sell Early?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-do-i-contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Do I Contact Support?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-my-money-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is My Money Safe?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-crypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Crypto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-a-prediction-market/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a Prediction Market?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="สารบัญ">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      สารบัญ
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yc365-pricing-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      YC365 Pricing Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="YC365 Pricing Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-architecture-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🏗️ System Architecture Foundation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🏗️ System Architecture Foundation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smart-contract-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Smart Contract Integration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-component-price-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Component Price Discovery:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primary-pricing-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Pricing Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Pricing Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-implementation-order-book-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Current Implementation: Order Book Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Current Implementation: Order Book Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#market-price-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Price Calculation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-discovery-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Discovery Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-pricing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Pricing:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future-enhancement-comprehensive-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔄 Future Enhancement: Comprehensive Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔄 Future Enhancement: Comprehensive Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-price-calculation-planned" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Price Calculation (Planned):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-based-price-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Role-Based Price Management
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Role-Based Price Management">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#asset-administrator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      👥 Asset Administrator Functions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="👥 Asset Administrator Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#liquidity-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liquidity Management:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#market-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Market Operations:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#technical-price-infrastructure" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠️ Technical Price Infrastructure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Technical Price Infrastructure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-book-management-order-trading-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Order Book Management (Order Trading Model):
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#settlement-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Settlement Service Integration:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#price-update-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Update Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Update Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-time-price-updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚡ Real-Time Price Updates
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚡ Real-Time Price Updates">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#update-triggers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Triggers:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#update-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update Process:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Characteristics:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-price-display" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌐 Multi-Language Price Display
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 Multi-Language Price Display">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-price-consistency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Price Consistency:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#localization-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Localization Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-price-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Price Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced Price Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-impact-and-slippage" class="md-nav__link">
+    <span class="md-ellipsis">
+      📈 Price Impact and Slippage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📈 Price Impact and Slippage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slippage-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Slippage Calculation:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#factors-affecting-price-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Factors Affecting Price Impact:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#impact-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Impact Examples:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-protection-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛡️ Price Protection Mechanisms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛡️ Price Protection Mechanisms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#anti-manipulation-safeguards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anti-Manipulation Safeguards:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monitoring Systems:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fee-structure-and-price-impact" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Structure and Price Impact
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fee Structure and Price Impact">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trading-fee-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      💰 Trading Fee Integration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💰 Trading Fee Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#current-fee-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Current Fee Structure:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fee-calculation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Calculation Example:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fee-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fee Transparency:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#price-analytics-and-historical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Analytics and Historical Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Analytics and Historical Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-collection-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Data Collection and Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 Data Collection and Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dapp-backend-service-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      DApp Backend Service Integration:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analytics-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytics Features:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-interface-and-accessibility" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 User Interface and Accessibility
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 User Interface and Accessibility">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#price-display-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Display Features:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multi-language-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multi-Language Support:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#price-transparency-and-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Price Transparency and Verification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Price Transparency and Verification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#blockchain-transparency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔍 Blockchain Transparency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Blockchain Transparency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#on-chain-price-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      On-Chain Price Data:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#external-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Verification:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#price-resolution-and-settlement" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 Price Resolution and Settlement
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Price Resolution and Settlement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#final-price-determination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Final Price Determination:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resolution-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resolution Example:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Future Enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#advanced-pricing-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Advanced Pricing Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Advanced Pricing Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#planned-technical-improvements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Planned Technical Improvements:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-upgrades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Upgrades:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-expansion-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Global Expansion Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 Global Expansion Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-localization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced Localization:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="how-are-prices-calculated">How Are Prices Calculated?</h1>
+<h2 id="overview">Overview</h2>
+<p>YC365 employs a sophisticated pricing mechanism that combines Automated Market Maker (AMM) technology with real-time order book dynamics to ensure fair, efficient, and transparent price discovery across our global, multi-language prediction markets.</p>
+<h2 id="yc365-pricing-architecture">YC365 Pricing Architecture</h2>
+<h3 id="system-architecture-foundation">🏗️ <strong>System Architecture Foundation</strong></h3>
+<h4 id="smart-contract-integration"><strong>Smart Contract Integration</strong>:</h4>
+<ul>
+<li><strong>LP Contract Set</strong>: Manages independent liquidity pools for each condition's YES/NO tokens</li>
+<li><strong>Trading Contract Set</strong>: Executes price-based buy/sell transactions</li>
+<li><strong>Order Trading Model</strong>: Provides order book management and matching engine</li>
+<li><strong>Vault Contract Set</strong>: Handles asset management and fee collection</li>
+</ul>
+<h4 id="multi-component-price-discovery"><strong>Multi-Component Price Discovery</strong>:</h4>
+<ul>
+<li><strong>Automated Market Maker</strong>: Provides continuous liquidity and base pricing</li>
+<li><strong>Order Book System</strong>: Enables limit order trading and price improvement</li>
+<li><strong>Real-time Settlement</strong>: Instant price updates via smart contracts on BSC</li>
+<li><strong>Cross-Language Consistency</strong>: Uniform pricing across all 6 supported languages</li>
+</ul>
+<h2 id="primary-pricing-mechanisms">Primary Pricing Mechanisms</h2>
+<h3 id="current-implementation-order-book-model">📊 <strong>Current Implementation: Order Book Model</strong></h3>
+<h4 id="market-price-calculation"><strong>Market Price Calculation</strong>:</h4>
+<p>Based on YC365's technical architecture, the current pricing model uses:</p>
+<pre><code>Market Price = Lowest Ask Price (Seller's Minimum Price)
+</code></pre>
+<h4 id="price-discovery-process"><strong>Price Discovery Process</strong>:</h4>
+<ol>
+<li><strong>Limit Orders</strong>: Users place buy/sell orders at specific prices</li>
+<li><strong>Order Matching</strong>: Matching engine processes orders by price-time priority</li>
+<li><strong>Price Setting</strong>: Current market price = lowest available sell order</li>
+<li><strong>Real-time Updates</strong>: Prices update instantly with each trade</li>
+</ol>
+<h4 id="example-pricing"><strong>Example Pricing</strong>:</h4>
+<pre><code>Order Book State:
+Sell Orders: 0.65, 0.67, 0.70 USDT (YES tokens)
+Buy Orders: 0.60, 0.58, 0.55 USDT (YES tokens)
+
+Current Market Price: 0.65 USDT (lowest sell order)
+Bid-Ask Spread: 0.65 - 0.60 = 0.05 USDT
+</code></pre>
+<h3 id="future-enhancement-comprehensive-model">🔄 <strong>Future Enhancement: Comprehensive Model</strong></h3>
+<h4 id="advanced-price-calculation-planned"><strong>Advanced Price Calculation</strong> (Planned):</h4>
+<pre><code>Market Price = Weighted Average of:
+- Transaction Prices (40%)
+- Trading Volume (25%)
+- Buyer Bid Prices (20%)
+- Market Depth (15%)
+</code></pre>
+<h4 id="enhanced-features"><strong>Enhanced Features</strong>:</h4>
+<ul>
+<li><strong>Volume-Weighted Average Price (VWAP)</strong>: Historical trading volume consideration</li>
+<li><strong>Bid-Ask Spread Optimization</strong>: Tighter spreads through improved liquidity</li>
+<li><strong>Cross-Market Arbitrage</strong>: Price consistency across related markets</li>
+<li><strong>Volatility Adjustment</strong>: Price stability mechanisms</li>
+</ul>
+<h2 id="role-based-price-management">Role-Based Price Management</h2>
+<h3 id="asset-administrator-functions">👥 <strong>Asset Administrator Functions</strong></h3>
+<h4 id="liquidity-management"><strong>Liquidity Management</strong>:</h4>
+<ul>
+<li><strong>Initial Liquidity</strong>: Set initial YES/NO token ratios and pricing</li>
+<li><strong>Liquidity Monitoring</strong>: Track order book depth and trading activity</li>
+<li><strong>Liquidity Adjustment</strong>: Add or recover liquidity to maintain market efficiency</li>
+<li><strong>Price Stability</strong>: Ensure stable and fair pricing conditions</li>
+</ul>
+<h4 id="market-operations"><strong>Market Operations</strong>:</h4>
+<ul>
+<li><strong>Price Verification</strong>: Monitor pricing accuracy and fairness</li>
+<li><strong>Arbitrage Prevention</strong>: Detect and prevent price manipulation</li>
+<li><strong>Performance Analytics</strong>: Analyze market performance and pricing efficiency</li>
+<li><strong>Fee Optimization</strong>: Manage trading fees (0.15%) and gas cost optimization</li>
+</ul>
+<h3 id="technical-price-infrastructure">🛠️ <strong>Technical Price Infrastructure</strong></h3>
+<h4 id="order-book-management-order-trading-model"><strong>Order Book Management</strong> (Order Trading Model):</h4>
+<ul>
+<li><strong>Limit Order Support</strong>: Currently supports limit orders only (TPS &lt; 100)</li>
+<li><strong>Price-Time Priority</strong>: Orders matched by price first, then by time</li>
+<li><strong>Real-time Processing</strong>: Immediate order processing and price updates</li>
+<li><strong>Order Validation</strong>: Pre-matching order verification and integrity checks</li>
+</ul>
+<h4 id="settlement-service-integration"><strong>Settlement Service Integration</strong>:</h4>
+<ul>
+<li><strong>Off-chain Calculation</strong>: Price calculations performed off-chain for efficiency</li>
+<li><strong>On-chain Execution</strong>: Price changes executed on BSC blockchain</li>
+<li><strong>Batch Processing</strong>: Efficient bulk transaction processing</li>
+<li><strong>Gas Optimization</strong>: Optimized gas usage for BSC transactions</li>
+</ul>
+<h2 id="price-update-mechanisms">Price Update Mechanisms</h2>
+<h3 id="real-time-price-updates">⚡ <strong>Real-Time Price Updates</strong></h3>
+<h4 id="update-triggers"><strong>Update Triggers</strong>:</h4>
+<ul>
+<li><strong>New Trades</strong>: Every buy/sell transaction execution</li>
+<li><strong>Order Book Changes</strong>: New orders, cancellations, modifications</li>
+<li><strong>Liquidity Events</strong>: Liquidity additions or removals by Asset Administrators</li>
+<li><strong>External Events</strong>: News or information affecting market sentiment</li>
+</ul>
+<h4 id="update-process"><strong>Update Process</strong>:</h4>
+<ol>
+<li><strong>Transaction Execution</strong>: Trade executed via Trading Contract Set</li>
+<li><strong>Price Calculation</strong>: New market price calculated by Order Trading Model</li>
+<li><strong>Smart Contract Update</strong>: Price stored on-chain via LP Contract Set</li>
+<li><strong>UI Updates</strong>: Real-time price display across all language interfaces</li>
+<li><strong>API Distribution</strong>: Price data distributed to all connected services</li>
+</ol>
+<h4 id="performance-characteristics"><strong>Performance Characteristics</strong>:</h4>
+<ul>
+<li><strong>BSC Speed</strong>: 3-second block times for near-instant confirmation</li>
+<li><strong>Low Latency</strong>: Minimal delays in price propagation</li>
+<li><strong>High Throughput</strong>: Support for high-frequency trading</li>
+<li><strong>Reliability</strong>: 99.9%+ uptime for pricing services</li>
+</ul>
+<h3 id="multi-language-price-display">🌐 <strong>Multi-Language Price Display</strong></h3>
+<h4 id="global-price-consistency"><strong>Global Price Consistency</strong>:</h4>
+<ul>
+<li><strong>Uniform Pricing</strong>: Identical prices across all language interfaces</li>
+<li><strong>Currency Formatting</strong>: Local number formatting (e.g., 0.65 vs 0,65)</li>
+<li><strong>Time Zone Adjustment</strong>: Local time stamps for price history</li>
+<li><strong>Cultural Adaptation</strong>: Region-appropriate price presentation</li>
+</ul>
+<h4 id="localization-features"><strong>Localization Features</strong>:</h4>
+<ul>
+<li><strong>Number Formats</strong>: Adapt to local number formatting conventions</li>
+<li><strong>Currency Symbols</strong>: Display USDT appropriately for each region</li>
+<li><strong>Chart Styling</strong>: Cultural preferences for chart colors and styles</li>
+<li><strong>Mobile Optimization</strong>: Responsive pricing displays for all devices</li>
+</ul>
+<h2 id="advanced-price-features">Advanced Price Features</h2>
+<h3 id="price-impact-and-slippage">📈 <strong>Price Impact and Slippage</strong></h3>
+<h4 id="slippage-calculation"><strong>Slippage Calculation</strong>:</h4>
+<pre><code>Slippage = |Expected Price - Actual Execution Price| / Expected Price × 100%
+</code></pre>
+<h4 id="factors-affecting-price-impact"><strong>Factors Affecting Price Impact</strong>:</h4>
+<ul>
+<li><strong>Order Size</strong>: Larger orders create more price impact</li>
+<li><strong>Liquidity Depth</strong>: Deeper order books reduce slippage</li>
+<li><strong>Market Volatility</strong>: High volatility increases price unpredictability</li>
+<li><strong>Time of Trade</strong>: Market hours vs. off-hours liquidity differences</li>
+</ul>
+<h4 id="impact-examples"><strong>Impact Examples</strong>:</h4>
+<pre><code>Small Trade (100 USDT): 0.1-0.5% slippage
+Medium Trade (1,000 USDT): 0.5-2% slippage
+Large Trade (10,000 USDT): 2-5% slippage
+</code></pre>
+<h3 id="price-protection-mechanisms">🛡️ <strong>Price Protection Mechanisms</strong></h3>
+<h4 id="anti-manipulation-safeguards"><strong>Anti-Manipulation Safeguards</strong>:</h4>
+<ul>
+<li><strong>Circuit Breakers</strong>: Temporary trading halts for extreme price movements</li>
+<li><strong>Price Bands</strong>: Maximum price movement limits per time period</li>
+<li><strong>Volume Monitoring</strong>: Detect unusual trading volume patterns</li>
+<li><strong>Order Size Limits</strong>: Maximum order size restrictions</li>
+</ul>
+<h4 id="monitoring-systems"><strong>Monitoring Systems</strong>:</h4>
+<ul>
+<li><strong>Real-time Surveillance</strong>: AI-powered price monitoring</li>
+<li><strong>Anomaly Detection</strong>: Identify suspicious pricing patterns</li>
+<li><strong>Alert Systems</strong>: Automatic alerts for price irregularities</li>
+<li><strong>Manual Oversight</strong>: Asset Administrator monitoring and intervention</li>
+</ul>
+<h2 id="fee-structure-and-price-impact">Fee Structure and Price Impact</h2>
+<h3 id="trading-fee-integration">💰 <strong>Trading Fee Integration</strong></h3>
+<h4 id="current-fee-structure"><strong>Current Fee Structure</strong>:</h4>
+<ul>
+<li><strong>Platform Fee</strong>: 0.15% (1.5/1000) of transaction amount</li>
+<li><strong>Fee Application</strong>: Applied to both buy and sell transactions</li>
+<li><strong>Fee Collection</strong>: Automatic deduction via Trading Contract Set</li>
+<li><strong>Gas Fees</strong>: BSC network fees (typically 0.005-0.02 USDT equivalent)</li>
+</ul>
+<h4 id="fee-calculation-example"><strong>Fee Calculation Example</strong>:</h4>
+<pre><code>Trade: Buy 1,000 YES tokens at 0.60 USDT each
+Trade Value: 1,000 × 0.60 = 600 USDT
+Platform Fee: 600 × 0.0015 = 0.90 USDT
+Gas Fee: ~0.01 USDT (BSC network fee)
+Total Cost: 600 + 0.90 + 0.01 = 600.91 USDT
+</code></pre>
+<h4 id="fee-transparency"><strong>Fee Transparency</strong>:</h4>
+<ul>
+<li><strong>Pre-Trade Display</strong>: Fees shown before transaction confirmation</li>
+<li><strong>Receipt Details</strong>: Complete fee breakdown in transaction receipts</li>
+<li><strong>Multi-Language</strong>: Fee information in user's preferred language</li>
+<li><strong>Real-time Updates</strong>: Current gas fees displayed dynamically</li>
+</ul>
+<h2 id="price-analytics-and-historical-data">Price Analytics and Historical Data</h2>
+<h3 id="data-collection-and-analysis">📊 <strong>Data Collection and Analysis</strong></h3>
+<h4 id="dapp-backend-service-integration"><strong>DApp Backend Service Integration</strong>:</h4>
+<ul>
+<li><strong>Graph Services</strong>: Market price trend visualization with multiple time intervals</li>
+<li><strong>Data Collection</strong>: 10-minute API data collection from Order Trading Model</li>
+<li><strong>Chart Generation</strong>: 30-minute, 1-hour, 1-day, 1-week statistical analysis</li>
+<li><strong>Performance Tracking</strong>: Comprehensive price performance analysis</li>
+</ul>
+<h4 id="analytics-features"><strong>Analytics Features</strong>:</h4>
+<ul>
+<li><strong>Price History</strong>: Complete historical price data storage</li>
+<li><strong>Volume Analysis</strong>: Trading volume correlation with price movements</li>
+<li><strong>Volatility Metrics</strong>: Price stability and volatility measurements</li>
+<li><strong>Trend Analysis</strong>: Statistical trend identification and pattern recognition</li>
+</ul>
+<h3 id="user-interface-and-accessibility">📱 <strong>User Interface and Accessibility</strong></h3>
+<h4 id="price-display-features"><strong>Price Display Features</strong>:</h4>
+<ul>
+<li><strong>Real-time Charts</strong>: Live price charts with various time frames</li>
+<li><strong>Order Book Depth</strong>: Visual representation of buy/sell order depth</li>
+<li><strong>Price Impact Calculator</strong>: Estimate price impact before trading</li>
+<li><strong>Portfolio Tracking</strong>: Personal position value and P&amp;L calculations</li>
+</ul>
+<h4 id="multi-language-support"><strong>Multi-Language Support</strong>:</h4>
+<ul>
+<li><strong>Localized Interfaces</strong>: Price interfaces in all 6 supported languages</li>
+<li><strong>Cultural Adaptation</strong>: Chart styles and colors appropriate for each culture</li>
+<li><strong>Mobile Optimization</strong>: Responsive design for mobile price monitoring</li>
+<li><strong>Accessibility</strong>: WCAG compliance for price information accessibility</li>
+</ul>
+<h2 id="price-transparency-and-verification">Price Transparency and Verification</h2>
+<h3 id="blockchain-transparency">🔍 <strong>Blockchain Transparency</strong></h3>
+<h4 id="on-chain-price-data"><strong>On-Chain Price Data</strong>:</h4>
+<ul>
+<li><strong>Public Verification</strong>: All price changes recorded on BSC blockchain</li>
+<li><strong>Smart Contract Transparency</strong>: Open-source pricing logic</li>
+<li><strong>Transaction History</strong>: Complete trade and price history on-chain</li>
+<li><strong>Audit Trail</strong>: Immutable record of all pricing decisions</li>
+</ul>
+<h4 id="external-verification"><strong>External Verification</strong>:</h4>
+<ul>
+<li><strong>API Endpoints</strong>: Public APIs for price data verification</li>
+<li><strong>Third-party Integration</strong>: Integration with price tracking services</li>
+<li><strong>Oracle Integration</strong>: Cross-reference with external price oracles</li>
+<li><strong>Community Monitoring</strong>: User verification of pricing accuracy</li>
+</ul>
+<h3 id="price-resolution-and-settlement">📋 <strong>Price Resolution and Settlement</strong></h3>
+<h4 id="final-price-determination"><strong>Final Price Determination</strong>:</h4>
+<ul>
+<li><strong>Market Resolution</strong>: Final prices set to 0 or 1 USDT based on outcomes</li>
+<li><strong>Settlement Process</strong>: Automatic settlement via smart contracts</li>
+<li><strong>Payout Calculation</strong>: Final payout = (Token Holdings) × (Final Price)</li>
+<li><strong>Fee Settlement</strong>: Platform fees distributed according to revenue model</li>
+</ul>
+<h4 id="resolution-example"><strong>Resolution Example</strong>:</h4>
+<pre><code>Market: &quot;Will Bitcoin reach $100,000 by Dec 31, 2024?&quot;
+Your Position: 500 YES tokens purchased at average price 0.45 USDT
+Outcome: YES (Bitcoin reaches $100,000)
+Final Price: 1.00 USDT
+Payout: 500 × 1.00 = 500 USDT
+Profit: 500 - (500 × 0.45) - fees = 275 USDT - fees
+</code></pre>
+<h2 id="future-enhancements">Future Enhancements</h2>
+<h3 id="advanced-pricing-models">🚀 <strong>Advanced Pricing Models</strong></h3>
+<h4 id="planned-technical-improvements"><strong>Planned Technical Improvements</strong>:</h4>
+<ul>
+<li><strong>Dynamic AMM</strong>: Adaptive liquidity curves based on market conditions</li>
+<li><strong>Cross-Market Pricing</strong>: Correlation-based pricing across related markets</li>
+<li><strong>AI-Enhanced Pricing</strong>: Machine learning for price prediction and optimization</li>
+<li><strong>Multi-Asset Integration</strong>: Complex pricing for multi-outcome markets</li>
+</ul>
+<h4 id="performance-upgrades"><strong>Performance Upgrades</strong>:</h4>
+<ul>
+<li><strong>Increased TPS</strong>: Higher transaction throughput (target: 500+ TPS)</li>
+<li><strong>Layer 2 Integration</strong>: L2 solutions for faster, cheaper transactions</li>
+<li><strong>Advanced Order Types</strong>: Market orders, stop-loss, and conditional orders</li>
+<li><strong>Risk Management</strong>: Automated risk assessment and position sizing tools</li>
+</ul>
+<h3 id="global-expansion-features">🌍 <strong>Global Expansion Features</strong></h3>
+<h4 id="enhanced-localization"><strong>Enhanced Localization</strong>:</h4>
+<ul>
+<li><strong>Additional Languages</strong>: Japanese, Korean, Hindi, Arabic support</li>
+<li><strong>Regional Price Customization</strong>: Local market hour adjustments</li>
+<li><strong>Cultural Price Display</strong>: Region-specific price presentation preferences</li>
+<li><strong>Advanced Mobile Features</strong>: Enhanced mobile price monitoring tools</li>
+</ul>
+<hr />
+<p><strong>YC365's pricing mechanism ensures fair, transparent, and efficient price discovery through our advanced order book system and smart contract integration.</strong> Our commitment to real-time updates, multi-language accessibility, and blockchain transparency provides users worldwide with reliable and accurate pricing information.</p>
+<p><em>Through continuous innovation and system optimization, we maintain pricing excellence while expanding our global reach and improving user experience across all supported languages and regions.</em> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u0e04\u0e31\u0e14\u0e25\u0e2d\u0e01\u0e41\u0e25\u0e49\u0e27", "clipboard.copy": "\u0e04\u0e31\u0e14\u0e25\u0e2d\u0e01", "search.result.more.one": "\u0e2d\u0e35\u0e01\u0e2b\u0e19\u0e36\u0e48\u0e07\u0e43\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49", "search.result.more.other": "# \u0e40\u0e1e\u0e34\u0e48\u0e21\u0e40\u0e15\u0e34\u0e21\u0e43\u0e19\u0e2b\u0e19\u0e49\u0e32\u0e19\u0e35\u0e49", "search.result.none": "\u0e44\u0e21\u0e48\u0e1e\u0e1a\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19", "search.result.one": "\u0e1e\u0e1a\u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19", "search.result.other": "\u0e1e\u0e1a # \u0e40\u0e2d\u0e01\u0e2a\u0e32\u0e23\u0e17\u0e35\u0e48\u0e15\u0e23\u0e07\u0e01\u0e31\u0e19", "search.result.placeholder": "\u0e1e\u0e34\u0e21\u0e1e\u0e4c\u0e40\u0e1e\u0e37\u0e48\u0e2d\u0e40\u0e23\u0e34\u0e48\u0e21\u0e04\u0e49\u0e19\u0e2b\u0e32", "search.result.term.missing": "\u0e44\u0e21\u0e48\u0e1e\u0e1a", "select.version": "\u0e40\u0e25\u0e37\u0e2d\u0e01\u0e40\u0e27\u0e2d\u0e23\u0e4c\u0e0a\u0e31\u0e19"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
