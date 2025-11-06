@@ -135,6 +135,7 @@ The platform accesses the user's identity and returns the Dapp address, in the f
    "user_name": "string", // User name
    "avatar": "string",    // User avatar address
    "lang": "string",      // Language type
+   "theme": "string",     // Theme style
    "signature": "string"  // Signature method: Combine the above fields into a JSON string in order, then encrypt with HMAC-SHA256.
 }
 ```
