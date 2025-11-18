@@ -1,0 +1,2131 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../yc365-faucet/">
+      
+      
+        <link rel="next" href="../integration-guide/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>YC365 tBNB Faucet - Welcome to yc365.io</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yc365-tbnb" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../" title="Welcome to yc365.io" class="md-header__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Welcome to yc365.io
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              YC365 tBNB Faucet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../yc365-tbnb-faucet/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../th/yc365-tbnb-faucet/" hreflang="th" class="md-select__link">
+              ภาษาไทย
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/yc365-tbnb-faucet/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Welcome to yc365.io" class="md-nav__button md-logo" aria-label="Welcome to yc365.io" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Welcome to yc365.io
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-whitepaper/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Project Whitepaper
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prerequisites/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prerequisites
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system-architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    System Architecture
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business-process/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Business Process Flow
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terms-of-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Terms of Use
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../earn-points/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Earn Points
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../yc365-faucet/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    YC365 Faucet
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    YC365 tBNB Faucet
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    YC365 tBNB Faucet
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#yc365" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 关注 YC365 社交媒体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 关注 YC365 社交媒体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#twitter-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitter / X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discord
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tbnb" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚰 如何领取 tBNB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚰 如何领取 tBNB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 要求
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 要求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tbnb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      申请 tBNB 前
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 故障排除
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 故障排除">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      找不到管理员
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      社交媒体验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tbnb_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      未收到 tBNB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络错误
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 BSC 测试网配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 BSC 测试网配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络详情
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      备用 RPC 端点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ 重要说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 重要说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      仅限测试代币
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      社区准则
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全提醒
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 下一步
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 需要帮助？
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integration-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integration Guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Get Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Get Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../get-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-yc365/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is YC365?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-deposit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Deposit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../making-your-first-trade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Making Your First Trade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Deposits and Withdraw
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            Deposits and Withdraw
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deposits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deposits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../withdraw/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Withdraw
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Markets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Markets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-created/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Created?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prices-calculated/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prices Calculated?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-prediction-markets-resolved/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Prediction Markets Resolved?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-clarified/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Clarified?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-are-markets-disputed/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Are Markets Disputed?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Trading
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            Trading
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limit-orders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limit Orders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trading-fees/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trading Fees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-order-book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using the Order Book
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-earn-profits/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Earn Profits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Merchant platform
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Merchant platform
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-integrate-dapp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Integrate Dapp?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_16" >
+        
+          
+          <label class="md-nav__link" for="__nav_16" id="__nav_16_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developer Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_16_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_16">
+            <span class="md-nav__icon md-icon"></span>
+            Developer Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../open-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Open API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_17" >
+        
+          
+          <label class="md-nav__link" for="__nav_17" id="__nav_17_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    FAQs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_17_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_17">
+            <span class="md-nav__icon md-icon"></span>
+            FAQs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../can-i-sell-early/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Can I Sell Early?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-do-i-contact-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How Do I Contact Support?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../is-my-money-safe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Is My Money Safe?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-crypto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Why Crypto?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../what-is-a-prediction-market/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    What is a Prediction Market?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#yc365" class="md-nav__link">
+    <span class="md-ellipsis">
+      📱 关注 YC365 社交媒体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📱 关注 YC365 社交媒体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#twitter-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      Twitter / X
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#telegram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Telegram
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discord" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discord
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tbnb" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚰 如何领取 tBNB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚰 如何领取 tBNB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细步骤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 要求
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 要求">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tbnb_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      申请 tBNB 前
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 故障排除
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 故障排除">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      找不到管理员
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      社交媒体验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tbnb_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      未收到 tBNB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络错误
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bsc" class="md-nav__link">
+    <span class="md-ellipsis">
+      📋 BSC 测试网配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 BSC 测试网配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络详情
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      备用 RPC 端点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚠️ 重要说明
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ 重要说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      仅限测试代币
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      社区准则
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      安全提醒
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎯 下一步
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      📞 需要帮助？
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="yc365-tbnb">YC365 领取 tBNB 规则</h1>
+<p>通过关注 YC365 的社交媒体并在 Discord 上与管理员沟通，获取测试 BNB (tBNB) 用于 YC365 平台的 Gas 费用。</p>
+<h2 id="yc365">📱 关注 YC365 社交媒体</h2>
+<p>要获得领取 tBNB 的资格，您必须关注 YC365 的所有社交媒体平台：</p>
+<h3 id="twitter-x">Twitter / X</h3>
+<p><strong>👉 <a href="https://twitter.com/yc365_">@yc365_</a></strong></p>
+<ul>
+<li>关注我们的 Twitter 账号获取最新更新</li>
+<li>了解平台新闻和公告</li>
+<li>与我们的社区互动</li>
+</ul>
+<h3 id="telegram">Telegram</h3>
+<p><strong>👉 <a href="https://t.me/yc365Official">https://t.me/yc365Official</a></strong></p>
+<ul>
+<li>加入我们的官方 Telegram 频道</li>
+<li>获取实时更新和支持</li>
+<li>与其他 YC365 用户联系</li>
+</ul>
+<h3 id="discord">Discord</h3>
+<p><strong>👉 <a href="https://discord.gg/wvwRVxUE93">https://discord.gg/wvwRVxUE93</a></strong></p>
+<ul>
+<li>加入我们的 Discord 社区</li>
+<li>访问专属频道和资源</li>
+<li>参与社区讨论</li>
+</ul>
+<p>!!! note "重要提示"
+    您必须关注所有三个社交媒体平台才有资格领取 tBNB。</p>
+<h2 id="tbnb">🚰 如何领取 tBNB</h2>
+<h3 id="_1">详细步骤</h3>
+<ol>
+<li><strong>关注所有社交媒体</strong></li>
+<li>✅ 在 Twitter/X 上关注 <a href="https://twitter.com/yc365_">@yc365_</a></li>
+<li>✅ 加入 <a href="https://t.me/yc365Official">Telegram 频道</a></li>
+<li>
+<p>✅ 加入 <a href="https://discord.gg/wvwRVxUE93">Discord 服务器</a></p>
+</li>
+<li>
+<p><strong>在 Discord 上联系</strong></p>
+</li>
+<li>打开 YC365 Discord 服务器</li>
+<li>如需要，完成服务器验证</li>
+<li>
+<p>导航到水龙头请求的相应频道</p>
+</li>
+<li>
+<p><strong>联系管理员</strong></p>
+</li>
+<li>向管理员或版主发送消息</li>
+<li>说明您已关注所有社交媒体频道</li>
+<li>
+<p>提供您的 BSC 测试网钱包地址</p>
+</li>
+<li>
+<p><strong>接收 tBNB</strong></p>
+</li>
+<li>管理员将验证您的社交媒体关注情况</li>
+<li>tBNB 将发送到您的钱包地址</li>
+<li>检查您的钱包余额以确认收到</li>
+</ol>
+<h2 id="_2">📋 要求</h2>
+<h3 id="tbnb_1">申请 tBNB 前</h3>
+<ul>
+<li>✅ 在 Twitter/X 上关注了 <a href="https://twitter.com/yc365_">@yc365_</a></li>
+<li>✅ 加入了 <a href="https://t.me/yc365Official">Telegram 频道</a></li>
+<li>✅ 加入了 <a href="https://discord.gg/wvwRVxUE93">Discord 服务器</a></li>
+<li>✅ 准备好 BSC 测试网钱包地址</li>
+<li>✅ 联系管理员时保持礼貌和尊重</li>
+</ul>
+<h2 id="_3">🔧 故障排除</h2>
+<h3 id="_4">常见问题</h3>
+<h4 id="_5">找不到管理员</h4>
+<p><strong>问题</strong>：无法找到或联系管理员</p>
+<p><strong>解决方案</strong>：
+- 检查 Discord 服务器角色，寻找版主/管理员
+- 在相应频道使用 <code>@admin</code> 或 <code>@moderator</code> 提及
+- 保持耐心 - 管理员可能很忙，请等待回复
+- 查看服务器规则，找到请求水龙头的正确频道</p>
+<h4 id="_6">社交媒体验证</h4>
+<p><strong>问题</strong>：管理员要求提供关注证明</p>
+<p><strong>解决方案</strong>：
+- 截图显示您关注了所有三个平台
+- 分享您的 Twitter/X 用户名以供验证
+- 准备好显示您的 Telegram 和 Discord 成员身份</p>
+<h4 id="tbnb_2">未收到 tBNB</h4>
+<p><strong>问题</strong>：申请了 tBNB 但未收到</p>
+<p><strong>解决方案</strong>：
+- 仔细检查您的钱包地址是否正确（BSC 测试网）
+- 验证您在钱包中查看的是正确的网络
+- 等待 5-10 分钟并刷新您的钱包
+- 在 <a href="https://testnet.bscscan.com">BSC 测试网浏览器</a>上检查交易
+- 如果问题持续存在，请再次联系管理员</p>
+<h4 id="_7">网络错误</h4>
+<p><strong>问题</strong>：连接到错误的网络</p>
+<p><strong>解决方案</strong>：
+1. 打开 MetaMask 或您的钱包
+2. 点击网络下拉菜单
+3. 选择"BSC 测试网"
+4. 如果不可用，手动添加 BSC 测试网：
+   - 网络名称：BSC Testnet
+   - RPC URL：https://data-seed-prebsc-1-s1.binance.org:8545/
+   - 链 ID：97
+   - 符号：tBNB
+   - 浏览器：https://testnet.bscscan.com</p>
+<h2 id="bsc">📋 BSC 测试网配置</h2>
+<h3 id="_8">网络详情</h3>
+<p>使用以下设置将 BSC 测试网添加到您的钱包：</p>
+<pre><code>网络名称：BSC Testnet
+RPC URL：https://data-seed-prebsc-1-s1.binance.org:8545/
+链 ID：97
+货币符号：tBNB
+区块浏览器：https://testnet.bscscan.com
+</code></pre>
+<h3 id="rpc">备用 RPC 端点</h3>
+<p>如果主 RPC 较慢，请尝试以下替代方案：</p>
+<ul>
+<li>https://data-seed-prebsc-2-s1.binance.org:8545/</li>
+<li>https://data-seed-prebsc-1-s2.binance.org:8545/</li>
+<li>https://data-seed-prebsc-2-s2.binance.org:8545/</li>
+</ul>
+<h2 id="_9">⚠️ 重要说明</h2>
+<h3 id="_10">仅限测试代币</h3>
+<ul>
+<li><strong>tBNB</strong> <strong>没有实际价值</strong></li>
+<li>不能被交易、出售或兑换</li>
+<li>仅用于 BSC 测试网上的测试和开发</li>
+</ul>
+<h3 id="_11">社区准则</h3>
+<ul>
+<li>联系管理员时保持尊重</li>
+<li>遵守 Discord 服务器规则</li>
+<li>不要刷屏或重复请求代币</li>
+<li>尽可能帮助其他社区成员</li>
+</ul>
+<h3 id="_12">安全提醒</h3>
+<ul>
+<li>切勿分享您的私钥或助记词</li>
+<li>仅提供您的公共钱包地址</li>
+<li>接收代币前验证您在测试网上</li>
+<li>不要将真实资产发送到测试网地址</li>
+</ul>
+<h2 id="_13">🎯 下一步</h2>
+<p>收到 tBNB 后：</p>
+<ol>
+<li><strong>验证余额</strong></li>
+<li>检查钱包中的 tBNB 余额</li>
+<li>
+<p>确保您有足够的 Gas 费用（建议 0.01-0.05 tBNB）</p>
+</li>
+<li>
+<p><strong>获取测试 USDT</strong></p>
+</li>
+<li>访问 <a href="../yc365-faucet/">YC365 水龙头</a> 页面</li>
+<li>
+<p>领取测试 USDT 代币用于交易</p>
+</li>
+<li>
+<p><strong>开始测试</strong></p>
+</li>
+<li>在 YC365 上进行测试充值</li>
+<li>探索预测市场</li>
+<li>
+<p>使用测试代币练习交易</p>
+</li>
+<li>
+<p><strong>保持联系</strong></p>
+</li>
+<li>继续关注我们的社交媒体获取更新</li>
+<li>参与 Discord 讨论</li>
+<li>分享反馈和建议</li>
+</ol>
+<h2 id="_14">📞 需要帮助？</h2>
+<p>如果您需要帮助：</p>
+<ul>
+<li><strong>Discord</strong>：加入我们的 <a href="https://discord.gg/wvwRVxUE93">Discord 服务器</a> 并在支持频道中提问</li>
+<li><strong>Telegram</strong>：在 <a href="https://t.me/yc365Official">Telegram</a> 上联系我们</li>
+<li><strong>Twitter</strong>：通过 <a href="https://twitter.com/yc365_">@yc365_</a> 联系我们</li>
+</ul>
+<hr />
+<p><strong>立即获取您的 tBNB！</strong> 🚀 关注 YC365 的社交媒体并与我们的社区联系，为您的 YC365 测试之旅获取测试 BNB！</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
