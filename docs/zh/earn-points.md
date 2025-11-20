@@ -1,407 +1,364 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
-
-# Earn Points
-
-## Overview
-
-YC365 introduces a comprehensive points system that rewards users for platform engagement and participation. Users can earn points through various activities and later exchange them for tokens through our airdrop program. This gamification system encourages active participation and community growth.
-
-## Points System Benefits
-
-### 🎯 **Reward Active Users**
-- **Engagement Incentives**: Earn points for platform activities
-- **Community Building**: Rewards for inviting new users
-- **Trading Rewards**: Points for market participation
-- **Content Creation**: Rewards for creating prediction markets
-
-### 💰 **Token Exchange Program**
-- **Airdrop Eligibility**: Points determine airdrop token allocation
-- **Flexible Redemption**: Exchange points for platform tokens
-- **Tiered Rewards**: Higher point balances unlock better rewards
-- **Regular Distributions**: Periodic airdrop distributions
-
-## How to Earn Points
-
-### 📋 **Quick Reference: Points Earning Summary**
-
-| Category | Activity | Reward | Type |
-|----------|----------|--------|------|
-| **Registration** | Complete registration + first trade | 1,000 YCP | One-time |
-| **Referral** | Referral commission (Tier 1-4) | 10-40% of invitee points | Ongoing |
-| **Telegram** | Join official channels | 100 YCP | One-time |
-| **Telegram** | Pass Anti-Bot verification | 250 YCP | One-time |
-| **Telegram** | Guide 5+ new users | 200 YCP per 5 users | Repeatable |
-| **Telegram** | AMA question selected | 100 YCP per question | Repeatable |
-| **X (Twitter)** | Bind wallet (BSC 5+ txns) | 250 YCP | One-time |
-| **X (Twitter)** | X account age (3+ years) | Up to 1,750 YCP | One-time |
-| **X (Twitter)** | Follow official account | 50 YCP | One-time |
-| **X (Twitter)** | Retweet key announcements | 300 YCP | Per retweet |
-| **X (Twitter)** | Tag & spread (30+ interaction) | 150 YCP | Per post |
-| **X (Twitter)** | Market creation promotion (100+ interaction) | 5,000 YCP | One-time |
-| **X (Twitter)** | Daily content pool | Proportional share of 200K YCP | Daily |
-| **Discord** | Verify wallet | 100 YCP | One-time |
-| **Discord** | Reach Level 5 / Early Supporter | 1.2x multiplier | Permanent |
-| **Discord** | Market proposal accepted | 500 YCP | Repeatable |
-| **Discord** | Bug report / UI improvement | 1,000 YCP | Per contribution |
-| **Deposit** | Deposit × Days × 1.5 | Daily calculation | Ongoing |
-| **LP** | LP Amount × Days × 2 | Daily calculation | Ongoing |
-| **Trading** | Volume × Trades × Market Coefficient | Daily snapshot | Ongoing |
-| **Profitability** | Top 1 profit ranking | 50,000 YCP | Monthly |
-| **Profitability** | Top 2-3 profit ranking | 35K/20K YCP | Monthly |
-| **Profitability** | Top 4-10 profit ranking | 10,000 YCP | Monthly |
-| **Trading Commission** | Referral trading commission (Level 1-4) | 10-40% of invitee trading points | Ongoing |
-
-### 📝 **1. Registration & Referral Programs**
-
-#### **1.1 New User Registration**
-- **Reward**: 1,000 YCP (one-time)
-- **Requirement**: Complete registration and execute your first trade
-- **Purpose**: Welcome new users and encourage initial platform engagement
-
-#### **1.2 Referral Program (Invitation Rewards)**
-
-##### **Inviter Rewards** (Referral Commission)
-Inviters earn a percentage of their invitees' points based on tier level:
-
-| Tier Level | Invitee Total Trading Volume | Commission Rate | Requirements |
-|------------|------------------------------|-----------------|--------------|
-| **Tier 1** | < 10,000 USDT | 10% | Base tier, no threshold |
-| **Tier 2** | 10,000 - 20,000 USDT | 15% | Reach 10K trading volume |
-| **Tier 3** | 20,000+ USDT | 25% | Reach 20K trading volume |
-| **Tier 4+** | Continued growth | Up to 40% (capped) | Linear increase of 5% per tier |
-
-**Commission Calculation**:
-- Inviters receive 10-40% of all points earned by their invitees
-- Commission rate increases based on total trading volume of invited users
-- Maximum commission rate is capped at 40%
-- Commissions increase linearly by 5% per tier level
-
-**Key Points**:
-- No minimum threshold for Tier 1 (10% base commission)
-- Tier upgrades based on cumulative invited users' trading volume
-- Commission applies to all points earned by invitees (trading, deposits, etc.)
-
-### 📱 **2. Social Media Tasks**
-
-#### **2.1 Telegram Tasks**
-
-##### **Basic Tasks**
-- **Join Official Channels**: Join YC365 official announcement channel and discussion groups
-  - Reward: 100 YCP (one-time)
-
-- **Anti-Bot Verification**: Successfully pass Captcha or simple Q&A in TG discussion groups
-  - Reward: 250 YCP (one-time)
-
-##### **Community Engagement**
-- **New User Guidance Reward**: Be marked as a helpful guide by 5+ new users (requires bot or admin verification)
-  - Reward: 200 YCP per 5 users guided
-  - Verification: Must be verified by Bot or administrator
-
-- **AMA Question Submission**: Submit high-quality questions that are selected and answered in official AMA sessions
-  - Reward: 100 YCP per question
-  - Requirement: Questions must be officially adopted and answered during AMA
-
-#### **2.2 X (Twitter) Tasks**
-
-##### **Account Setup**
-- **Bind Wallet**: Link your X account and BSC wallet address in DApp "Task Center"
-  - Reward: 250 YCP (one-time)
-  - Requirement: BSC address must have 5+ non-zero value transactions in the past 6 months (excluding deposits/withdrawals only)
-
-- **X Account Age Verification**: Earn points based on X account age after product registration
-  - Requirements: 
-    - BSC address must have 5+ non-zero value transactions (excluding deposits/withdrawals)
-    - Points based on account age:
-    - 3-6 months: 100 YCP
-    - 6-12 months: 250 YCP
-    - 1-1.5 years: 450 YCP
-    - 1.5-2 years: 700 YCP
-    - 2-2.5 years: 1,000 YCP
-    - 2.5-3 years: 1,350 YCP
-    - 3+ years: 1,750 YCP
-    - Linear increase pattern: (150→200→250→300) per 6-month period
-
-##### **Social Engagement**
-- **Follow Official Account**: Follow YC365 official X account
-  - Reward: 50 YCP (one-time)
-
-- **Key Tweet Promotion**: Retweet YC365's key announcements
-  - Reward: 300 YCP per retweet
-
-- **Tag & Spread**: Use specified tags and @3 friends in retweets or original tweets, plus reach interaction score threshold
-  - Reward: 150 YCP
-  - Requirement: Reach interaction score of 30
-  - Interaction Points: Like = 1 pt, Retweet = 3 pts, Comment = 5 pts
-
-##### **Market Creation Promotion**
-- **Market Creation Reward**: Share your created event link on X and get it adopted by YC365
-  - Reward: 5,000 YCP (one-time)
-  - Requirement: 
-    - Tweet must include link to your created event
-    - Event must be adopted by YC365
-    - Interaction score must reach 100
-    - Interaction Points: Like = 1 pt, Retweet = 3 pts, Comment = 5 pts
-
-##### **Daily Content Pool**
-- **Information Sharing Reward**: Daily/weekly points pool allocated based on interaction scores
-  - Daily Pool: 200,000 YCP
-  - Distribution Formula: 200,000 × (User Interaction Score / Total Interaction Score)
-  - Eligibility: 
-    - Complete 1 trade OR query 3 event markets daily
-    - Points distributed proportionally based on interaction weights
-    - Interaction Points: Like = 1 pt, Retweet = 3 pts, Comment = 5 pts
-
-#### **2.3 Discord Tasks**
-
-##### **Account Setup**
-- **Wallet & Identity Verification**: Join YC365 Discord and verify BSC wallet address through DC Bot
-  - Reward: 100 YCP (one-time)
-
-##### **Community Contributions**
-- **Role Multiplier**: Reach Level 5 or obtain "Early Supporter" status through active discussion and contributions
-  - Reward: Permanent 1.2x multiplier on all YCP base earnings
-  - How to achieve: Active participation in Discord discussions
-
-- **Market Proposal Contribution**: Propose unique, tradeable prediction market topics in Market channel
-  - Reward: 500 YCP per accepted proposal (repeatable)
-
-- **Community Building**: Report bugs, submit quality UI/UX improvements, or other product enhancements that are recognized
-  - Reward: 1,000 YCP per accepted contribution
-
-### 💰 **3. Trading Activities**
-
-#### **3.1 Account Deposit**
-
-##### **Deposit Points Calculation**:
-- **Formula**: Deposit Amount (USDT) × Deposit Days × Daily Rate
-- **Daily Calculation**: Points calculated daily with n+0.5 rate
-- **Important**: If withdrawal occurs within 24 hours of deposit snapshot period, daily deposit points reward is reset to zero
-- **Purpose**: Encourage users to maintain deposits and improve conversion rates
-
-##### **Example**:
-- Deposit $10,000, hold for 30 days
-- Daily points: $10,000 × 1.5 = 15,000 YCP per day
-- Total over 30 days: 15,000 × 30 = 450,000 YCP
-
-#### **3.2 Liquidity Pool (LP) Contribution**
-
-##### **LP Pool Points Calculation**:
-- **Formula**: LP Betting Amount (USDT) × Deposit Days × Daily Multiplier
-- **Daily Calculation**: Points calculated daily with n+1 multiplier
-- **Purpose**: Increase liquidity pool depth for events and encourage long-term trading
-
-##### **Example**:
-- Contribute $5,000 to LP, hold for 20 days
-- Daily points: $5,000 × 2 = 10,000 YCP per day
-- Total over 20 days: 10,000 × 20 = 200,000 YCP
-
-#### **3.3 Trading Volume Rewards**
-
-##### **Volume Points Calculation**:
-- **Formula**: Trading Volume (USDT) × Number of Trades × Market Heat Coefficient
-- **Purpose**: Reward frequent and deep trading, especially encourage participation in newly created events
-- **Market Heat Coefficient**: 
-  - Cooler markets (lower project trading volume) receive higher rewards
-  - Encourages liquidity provision to new and less popular markets
-- **Daily Snapshot**: Points calculated and distributed daily via snapshot
-
-#### **3.4 Trading Profitability Rewards**
-
-##### **Profitability Leaderboard**:
-- **Purpose**: Reduce pure volume-gaming transactions, satisfy Web3 users' speculation and honor needs, improve user retention and activity
-
-| Rank | Reward |
-|------|--------|
-| **1st Place** | 50,000 YCP |
-| **2nd Place** | 35,000 YCP |
-| **3rd Place** | 20,000 YCP |
-| **4th-10th Place** | 10,000 YCP each |
-
-- **Calculation**: Based on profitability ranking
-- **Period**: Monthly ranking calculation
-- **Benefit**: High-profit traders receive additional YCP boost
-
-#### **3.5 Trading Referral Commission**
-
-##### **Invitation Trading Commission** (Medium Weight)
-
-Inviters earn commission based on their invitee's total trading volume:
-
-| Commission Level | Invitee Trading Volume | Commission Rate |
-|------------------|------------------------|-----------------|
-| **Level 1** | < 10,000 USDT | 10% commission |
-| **Level 2** | 10,000 - 50,000 USDT | 20% commission |
-| **Level 3** | 50,000 - 100,000 USDT | 30% commission |
-| **Level 4** | 100,000+ USDT | 40% commission |
-
-**How It Works**:
-- Inviters earn percentage of invitees' trading volume points as commission
-- Commission rate increases as invitee's cumulative trading volume grows
-- Uses invitation code to track and reward referrals
-- Commission applies to all points earned through trading activities
-
-## Points Tracking and Management
-
-### 📊 **Points Dashboard**
-
-#### **Real-Time Tracking**:
-- **Current Balance**: Live points balance display
-- **Earning History**: Detailed history of points earned
-- **Activity Log**: Complete log of all point-earning activities
-- **Tier Status**: Current tier level and benefits
-
-#### **Points Categories**:
-- **Registration Points**: Points from new user registration and first trade
-- **Referral Points**: Points from invitation rewards and referral commissions
-- **Social Media Points**: Points from Telegram, X (Twitter), and Discord activities
-- **Deposit Points**: Points from account deposits based on deposit amount and duration
-- **LP Points**: Points from liquidity pool contributions
-- **Trading Volume Points**: Points from trading volume, frequency, and market participation
-- **Profitability Points**: Points from profitability leaderboard rankings
-- **Trading Commission Points**: Points from referral trading commissions
-- **Bonus Points**: Special bonus and promotional points
-
-### 🎖️ **User Tiers**
-
-#### **Tier System**:
-| Tier | Points Required | Benefits |
-|------|----------------|----------|
-| **Bronze** | 0-4,999 points | Basic platform access |
-| **Silver** | 5,000-14,999 points | Enhanced features, priority support |
-| **Gold** | 15,000-49,999 points | VIP features, exclusive markets |
-| **Platinum** | 50,000+ points | Premium benefits, direct support |
-
-#### **Tier Benefits**:
-- **Trading Fees**: Reduced trading fees for higher tiers
-- **Support Priority**: Faster customer support response
-- **Market Access**: Early access to new markets
-- **Exclusive Events**: Invitation to special platform events
-
-## Airdrop Program
-
-### 🪂 **Token Airdrop System**
-
-#### **Airdrop Eligibility**:
-- **Points Threshold**: Minimum points required for airdrop participation
-- **Account Status**: Must have active, verified account
-- **Platform Activity**: Regular platform engagement required
-- **Compliance**: Must meet platform terms and conditions
-
-#### **Airdrop Distribution**:
-- **Quarterly Distributions**: Airdrops distributed every 3 months
-- **Points-Based Allocation**: Token amount based on points balance
-- **Tier Multipliers**: Higher tiers receive bonus multipliers
-- **Community Rewards**: Additional tokens for community participation
-
-#### **Token Exchange Rates**:
-| Points Balance | Token Allocation | Multiplier |
-|----------------|------------------|------------|
-| 1,000-4,999 | 1:100 ratio | 1x |
-| 5,000-14,999 | 1:120 ratio | 1.2x |
-| 15,000-49,999 | 1:150 ratio | 1.5x |
-| 50,000+ | 1:200 ratio | 2x |
-
-### 💎 **Airdrop Schedule**
-
-#### **Distribution Timeline**:
-- **Q1 2024**: First airdrop distribution
-- **Q2 2024**: Second airdrop distribution
-- **Q3 2024**: Third airdrop distribution
-- **Q4 2024**: Fourth airdrop distribution
-
-#### **Special Airdrops**:
-- **Platform Milestones**: Bonus airdrops for platform achievements
-- **Community Events**: Special airdrops during community events
-- **Holiday Bonuses**: Seasonal airdrop bonuses
-- **Loyalty Rewards**: Long-term user loyalty bonuses
-
-## Points Redemption
-
-### 🔄 **Redemption Options**
-
-#### **Token Exchange**:
-- **Platform Tokens**: Exchange points for YC365 platform tokens
-- **Trading Credits**: Convert points to trading credits
-- **Fee Discounts**: Use points to reduce trading fees
-- **Premium Features**: Unlock premium platform features
-
-#### **Redemption Process**:
-1. **Access Redemption**: Navigate to points redemption section
-2. **Select Option**: Choose redemption option (tokens, credits, etc.)
-3. **Confirm Transaction**: Confirm redemption transaction
-4. **Receive Benefits**: Benefits applied immediately
-
-### 🎁 **Special Redemptions**
-
-#### **Limited-Time Offers**:
-- **Exclusive Markets**: Access to special prediction markets
-- **VIP Events**: Invitation to exclusive platform events
-- **Merchandise**: Platform-branded merchandise and collectibles
-- **Partnership Benefits**: Benefits from platform partners
-
-## Best Practices for Earning Points
-
-### 💡 **Maximizing Points**
-
-#### **Strategic Approaches**:
-- **Build Referral Network**: Invite users to maximize referral commissions (up to 40%)
-- **Maintain Deposits**: Keep deposits for extended periods to maximize deposit points
-- **Active Trading**: Engage in regular trading, especially in new/cooler markets for higher rewards
-- **Social Media Engagement**: Complete all social media tasks (Telegram, X, Discord)
-- **LP Contribution**: Provide liquidity to events for long-term LP points
-- **Community Participation**: Help new users, contribute proposals, and report bugs
-
-#### **Efficiency Tips**:
-- **Early Engagement**: Complete registration tasks early (bind wallets, join social channels)
-- **X Account Age**: Link older X accounts for higher initial rewards (up to 1,750+ YCP)
-- **Market Creation**: Create and promote markets on X for high rewards (5,000 YCP)
-- **Daily Activity**: Complete daily trade or market queries to qualify for X content pool
-- **Discord Level 5**: Reach Discord Level 5 for permanent 1.2x multiplier on all earnings
-- **Cooler Markets**: Trade in newer/less popular markets for higher market heat coefficients
-- **Avoid Quick Withdrawals**: Maintain deposits for at least 24 hours to earn deposit points
-- **Profitability Focus**: Aim for profitability leaderboard (up to 50,000 YCP monthly)
-
-### ⚠️ **Important Guidelines**
-
-#### **Compliance Requirements**:
-- **Fair Play**: All activities must comply with platform terms
-- **No Gaming**: Prohibited to artificially inflate points through manipulation
-- **Account Integrity**: Maintain account integrity and authenticity
-- **Community Standards**: Follow community guidelines and standards
-
-#### **Prohibited Activities**:
-- **Fake Accounts**: Creating fake accounts for referral bonuses
-- **Market Manipulation**: Manipulating markets for points
-- **System Exploitation**: Exploiting system vulnerabilities
-- **Fraudulent Activity**: Any fraudulent or deceptive practices
-
-## Support and Assistance
-
-### 🆘 **Points Support**
-
-#### **Common Issues**:
-- **Missing Points**: Points not credited for completed activities
-- **Tier Status**: Questions about tier advancement
-- **Redemption Issues**: Problems with points redemption
-- **Account Problems**: Issues with points account management
-
-#### **Support Channels**:
-- **Help Center**: Comprehensive help documentation
-- **Live Chat**: Real-time support for urgent issues
-- **Email Support**: Detailed support via email
-- **Community Forum**: Community support and discussion
-
-### 📞 **Contact Information**
-
-For points-related support, please contact:
-- **Email**: points-support@yc365.io
-- **Live Chat**: Available 24/7 on platform
-- **Telegram**: @YC365Support
-- **Discord**: YC365 Community Server
+# 赚取积分
+
+## 概述
+
+YC365 推出了简化的积分系统（YCP），奖励用户的平台参与、交易活动和盈利能力。通过各种活动赚取积分，并通过我们的空投计划兑换代币。该系统鼓励积极参与，并奖励交易量和交易成功。
+
+## 积分系统优势
+
+### 🎯 **奖励活跃用户**
+- **交易激励**：通过活跃交易赚取积分
+- **推荐奖励**：邀请朋友并获得佣金
+- **盈利奖励**：顶级交易者获得额外奖励
+- **简单透明**：清晰的赚取规则和自动分发
+
+### 💰 **代币兑换计划**
+- **空投资格**：积分决定空投代币分配
+- **定期分发**：基于积分的定期空投分发
+- **公平分配**：基于积分的系统确保公平的代币分配
+
+## 如何赚取积分
+
+### 📋 **快速参考：积分赚取摘要**
+
+| 激励体系 | 名称 | 条件 | 验证方式 | 发放周期 | 奖励 | 奖励类型 |
+|---------|------|------|----------|----------|------|----------|
+| **① 核心积累激励** | 启动奖励 | 新用户注册并完成首笔 ≥10 U 交易 | 系统自动验证 | 一次性 | 1,000 YCP | YCP |
+| **① 核心积累激励** | 邀请返佣 | 被邀请人完成有效交易（≥10 U） | 链上追踪 / 绑定邀请码 | 每日 | 10% YCP 返佣 | YCP |
+| **② 日常交易激励** | 交易活跃奖励 | 当日交易额 ≥100 U | 系统自动结算 | 每日 | 每 100 U = 10 YCP | YCP |
+| **③ 盈利表现激励** | 盈利排行榜 | 周利润率前五名 | 系统排行 | 每周一 8:00 UTC 结算 | 第1名 50,000 YCP<br>第2名 30,000 YCP<br>第3名 15,000 YCP<br>第4–5名 8,000 YCP | YCP |
+| **④ 基础领水** | 领水入口 | 持有 tBNB | tBNB 作 gas 无需验证 | 24小时一次 | 50 测试币 | 测试代币 |
+| **⑤ 社交与测试激励** | 其他限时任务 | 各种社交和测试活动 | 任务特定 | 不定 | YCP | YCP |
+
+## ① 核心积累激励
+
+### 🚀 **启动奖励**
+
+**奖励**：1,000 YCP（一次性）
+
+**要求**：
+- 完成新用户注册
+- 执行首笔交易，最低价值 **≥10 USDT**
+
+**工作原理**：
+- 系统自动验证注册和首笔交易
+- 完成后立即发放积分
+- 每个账户仅限一次
+
+**示例**：
+- 新用户注册并完成首笔 15 USDT 交易
+- 系统自动奖励 1,000 YCP
+- 积分立即显示在账户中
+
+### 👥 **邀请返佣**
+
+**奖励**：10% YCP 佣金（每日）
+
+**要求**：
+- 使用您的推荐码邀请新用户
+- 被邀请用户必须完成有效交易（每笔 ≥10 USDT）
+- 佣金基于被邀请人的交易活动计算
+
+**工作原理**：
+- **验证方式**：链上追踪和邀请码绑定
+- **佣金比例**：被邀请人赚取的 YCP 的 10%
+- **发放周期**：每日自动发放
+- **计算方式**：基于被邀请人的有效交易量
+
+**示例**：
+- 您邀请用户 A，用户 A 交易 100 USDT 并赚取 10 YCP
+- 您获得 10% 佣金 = 1 YCP
+- 佣金每日自动发放
+
+**关键要点**：
+- 佣金无最低门槛
+- 佣金适用于所有被邀请人的交易活动
+- 在仪表板中跟踪您的推荐网络
+- 多个被邀请人 = 累计佣金收入
+
+## ② 日常交易激励
+
+### 💹 **交易活跃奖励**
+
+**奖励**：每 100 USDT 交易量 = 10 YCP
+
+**要求**：
+- 每日交易量必须 **≥100 USDT**
+- 所有交易计入每日交易量
+- 系统自动计算和结算
+
+**工作原理**：
+- **计算公式**：每日交易量 ÷ 100 × 10 YCP
+- **结算方式**：系统每日自动结算
+- **最低门槛**：每日最低 100 USDT
+- **无上限**：无限赚取潜力
+
+**示例**：
+
+| 每日交易量 | 赚取的 YCP |
+|-----------|-----------|
+| 100 USDT | 10 YCP |
+| 500 USDT | 50 YCP |
+| 1,000 USDT | 100 YCP |
+| 5,000 USDT | 500 YCP |
+
+**计算公式**：
+```
+每日 YCP = (每日交易量 ÷ 100) × 10
+```
+
+**关键要点**：
+- 交易量每日 UTC 00:00 重置
+- 所有有效交易都计入交易量
+- 积分自动发放
+- 无需手动领取
+
+## ③ 盈利表现激励
+
+### 🏆 **盈利排行榜**
+
+**奖励**：每周盈利排名奖励
+
+**要求**：
+- 参与每周盈利排名竞赛
+- 按周盈利率排名前 5 名
+- 系统基于盈利能力计算
+
+**工作原理**：
+- **排名依据**：周盈利率（盈利能力百分比）
+- **结算时间**：每周一 8:00 UTC
+- **排名周期**：上一周（周一到周日）
+- **自动发放**：奖励自动发放
+
+**奖励结构**：
+
+| 排名 | 奖励 |
+|------|------|
+| **第1名** | 50,000 YCP |
+| **第2名** | 30,000 YCP |
+| **第3名** | 15,000 YCP |
+| **第4-5名** | 各 8,000 YCP |
+
+**示例**：
+- 第1周：您以最高盈利率排名第1
+- 周一 8:00 UTC：系统自动奖励 50,000 YCP
+- 积分立即显示在您的账户中
+
+**关键要点**：
+- 基于盈利率，而非绝对利润
+- 鼓励技能交易而非刷量
+- 每周重置和新竞赛
+- 前 5 名交易者获得奖励
+
+## ④ 基础领水
+
+### 🚰 **领水入口**
+
+**奖励**：50 测试代币（24 小时一次）
+
+**要求**：
+- 钱包中持有 tBNB
+- tBNB 用作 Gas 费用
+- 无需额外验证
+
+**工作原理**：
+- **频率**：每 24 小时一次
+- **验证方式**：自动（tBNB 作为 Gas）
+- **代币类型**：测试代币（无实际价值）
+- **目的**：支持测试和开发
+
+**步骤**：
+1. 确保钱包中有 tBNB
+2. 访问平台上的领水入口
+3. 领取测试代币（50 个代币）
+4. 等待 24 小时后再次领取
+
+**关键要点**：
+- 简单自动的过程
+- 无需复杂验证
+- 定期获取测试代币
+- 支持平台测试活动
+
+!!! note "测试代币"
+    测试代币没有实际价值，仅用于测试目的。
+
+## ⑤ 社交与测试激励
+
+### 🎁 **限时任务**
+
+**奖励**：YCP（因任务而异）
+
+**要求**：
+- 完成各种社交媒体和测试任务
+- 任务特定要求
+- 不定期提供
+
+**工作原理**：
+- **任务类型**：社交媒体参与、测试活动、社区参与
+- **可用性**：限时且不定期
+- **奖励**：YCP 金额因任务而异
+- **验证方式**：任务特定的验证方法
+
+**常见任务类别**：
+- 社交媒体参与（Twitter、Telegram、Discord）
+- 平台测试和反馈
+- 社区活动和事件
+- 特别促销和活动
+
+**关键要点**：
+- 关注新任务公告
+- 在过期前完成任务
+- 奖励因任务难度和重要性而异
+- 定期有机会赚取额外 YCP
+
+## 积分跟踪和管理
+
+### 📊 **积分仪表板**
+
+#### **实时跟踪**：
+- **当前余额**：实时 YCP 余额显示
+- **赚取历史**：所有赚取积分的详细历史
+- **活动日志**：积分赚取活动的完整日志
+- **推荐网络**：跟踪您的推荐佣金
+
+#### **积分类别**：
+- **启动积分**：一次性注册奖励
+- **推荐积分**：来自推荐的每日佣金
+- **交易积分**：每日交易活动奖励
+- **盈利积分**：每周排行榜奖励
+- **任务积分**：限时任务奖励
+- **总余额**：所有赚取积分的总和
+
+### 📈 **积分统计**
+
+#### **每日摘要**：
+- 今日交易量和赚取的积分
+- 收到的推荐佣金
+- 每日积分累计总额
+
+#### **每周摘要**：
+- 每周交易活动
+- 盈利能力排名位置
+- 每周积分总额
+
+#### **历史数据**：
+- 积分赚取趋势
+- 推荐网络增长
+- 交易活动模式
+
+## 空投计划
+
+### 🪂 **代币空投系统**
+
+#### **空投资格**：
+- **积分门槛**：参与所需的最低积分
+- **账户状态**：需要活跃且已验证的账户
+- **平台活动**：建议定期参与
+- **合规性**：必须满足平台条款和条件
+
+#### **空投分发**：
+- **定期分发**：定期空投分发
+- **基于积分的分配**：代币数量基于 YCP 余额
+- **公平分配**：与赚取的积分成比例
+- **自动分发**：无需手动领取
+
+#### **代币兑换率**：
+- 兑换率由总积分池决定
+- 更高积分 = 更大的代币分配
+- 定期更新兑换率
+- 透明的分发过程
+
+### 💎 **空投时间表**
+
+#### **分发时间线**：
+- 定期季度分发
+- 特殊里程碑空投
+- 社区活动奖励
+- 平台成就奖励
+
+## 赚取积分的最佳实践
+
+### 💡 **最大化积分**
+
+#### **策略方法**：
+
+1. **完成启动奖励**
+   - 尽早注册并完成首笔交易（≥10 USDT）
+   - 立即获得 1,000 YCP 奖励
+
+2. **建立推荐网络**
+   - 邀请活跃交易者以最大化 10% 佣金
+   - 专注于定期交易的用户
+   - 在仪表板中跟踪推荐表现
+
+3. **保持每日交易**
+   - 每日交易 ≥100 USDT 获得活动奖励
+   - 每交易 100 USDT 赚取 10 YCP
+   - 持续的每日交易最大化收入
+
+4. **争取盈利能力**
+   - 专注于盈利交易以进入排行榜
+   - 每周前 5 名排名获得丰厚奖励
+   - 基于技能的奖励（每周最高 50,000 YCP）
+
+5. **完成限时任务**
+   - 关注社交媒体和测试任务
+   - 在过期前完成任务
+   - 通过各种活动赚取额外 YCP
+
+6. **定期使用领水**
+   - 每 24 小时领取测试代币
+   - 支持测试活动
+   - 保持 tBNB 用于 Gas 费用
+
+#### **效率提示**：
+- **尽早开始**：立即完成注册和首笔交易
+- **每日活动**：保持一致的每日交易量
+- **推荐重点**：建立和维护活跃的推荐网络
+- **盈利能力策略**：平衡交易量和盈利能力以进入排行榜
+- **完成任务**：完成所有可用的限时任务
+- **定期领水**：定期领取测试代币用于测试
+
+### ⚠️ **重要指南**
+
+#### **合规要求**：
+- **公平游戏**：所有活动必须遵守平台条款
+- **禁止刷量**：禁止人为刷积分
+- **账户完整性**：保持真实的账户活动
+- **社区标准**：遵循平台指南
+
+#### **禁止活动**：
+- **虚假账户**：创建虚假账户获取推荐奖励
+- **市场操纵**：操纵市场获取积分
+- **系统利用**：利用系统漏洞
+- **欺诈活动**：任何欺骗性行为
+
+## 支持和帮助
+
+### 🆘 **积分支持**
+
+#### **常见问题**：
+- **缺少积分**：已完成活动但未获得积分
+- **推荐跟踪**：关于推荐佣金的问题
+- **排行榜**：关于盈利能力排名的问题
+- **账户问题**：积分账户管理问题
+
+#### **支持渠道**：
+- **帮助中心**：全面的帮助文档
+- **在线聊天**：紧急问题的实时支持
+- **邮件支持**：通过邮件获得详细支持
+- **社区论坛**：社区支持和讨论
+
+### 📞 **联系信息**
+
+如需积分相关支持，请联系：
+- **邮箱**：points-support@yc365.io
+- **在线聊天**：平台 24/7 可用
+- **Telegram**：@YC365Support
+- **Discord**：YC365 社区服务器
 
 ---
 
-**Start earning points today and unlock exclusive benefits!** The YC365 points system rewards your platform engagement and provides a pathway to valuable token rewards through our comprehensive airdrop program.
+**立即开始赚取积分！** YC365 积分系统奖励您的交易活动、盈利能力和平台参与。建立您的积分余额，通过我们的空投计划解锁有价值的代币奖励。
 
-*Join thousands of users who are already earning points and advancing through our tier system. Your platform activity today determines your airdrop rewards tomorrow.*
+*加入数千名通过交易、推荐和盈利能力赚取 YCP 的用户。您今天的活动决定您明天的空投奖励。*
