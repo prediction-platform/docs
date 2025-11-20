@@ -182,6 +182,8 @@ Daily YCP = (Daily Trading Volume ÷ 100) × 10
 !!! note "Test Tokens"
     Test tokens have no real-world value and are for testing purposes only.
 
+**Learn More**: For detailed information about the YC365 faucet, including how to get test USDT and tBNB, see the [YC365 Faucet Guide](yc365-faucet.md).
+
 ## ⑤ Social & Testing Incentives
 
 ### 🎁 **Limited-Time Tasks**
