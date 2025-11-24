@@ -1,141 +1,138 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 存款 (Deposits)
 
-# Deposits
+## 概述
 
-## Overview
+YC365 支持多种存款方式，为用户提供灵活便捷的资金选项。所有存款均在 BSC (币安智能链) 网络上安全处理。
 
-YC365 supports multiple deposit methods to provide users with flexible and convenient funding options. All deposits are processed securely on the BSC (Binance Smart Chain) network.
+## 支持的钱包
 
-## Supported Wallets
+YC365 支持所有兼容 EVM 的钱包，包括：
 
-YC365 supports all EVM-compatible wallets, including:
+- **MetaMask** - 最流行且广泛使用
+- **WalletConnect** - 多钱包支持
+- **Trust Wallet** - 移动端优先钱包
+- **Binance Wallet** - 币安官方钱包
+- **Coinbase Wallet** - 用户友好界面
+- **任何兼容 EVM 的钱包**
 
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! note "钱包要求"
+    您的钱包必须支持 BSC (币安智能链) 网络才能使用 YC365。
 
-!!! note "Wallet Requirements"
-    Your wallet must support BSC (Binance Smart Chain) network to use YC365.
+## 支持的存款方式
 
-## Supported Deposit Methods
-
-### BSC Network Deposits
+### BSC 网络存款
 
 #### USDT (BEP-20)
-- **Minimum Deposit**: 10 USDT
-- **Processing Time**: 5-20 seconds
-- **Network Fee**: ~0.0005 BNB
-- **Network**: Binance Smart Chain (BSC) only
+- **最低存款**：10 USDT
+- **处理时间**：5-20 秒
+- **网络费用**：~0.0005 BNB
+- **网络**：仅限币安智能链 (BSC)
 
-## How to Deposit
+## 如何存款
 
-### Step 1: Access the Platform
-1. Visit **dapp.yc365.io** in your web browser
-2. Ensure you have a compatible EVM wallet installed
+### 步骤 1：访问平台
+1. 在您的网络浏览器中访问 **dapp.yc365.io**
+2. 确保您已安装兼容的 EVM 钱包
 
-### Step 2: Wallet Setup
-1. **Install Wallet** (if not already installed):
-   - Download and install MetaMask or any other EVM-compatible wallet
-   - Follow the wallet's setup instructions
+### 步骤 2：钱包设置
+1. **安装钱包**（如果尚未安装）：
+   - 下载并安装 MetaMask 或任何其他兼容 EVM 的钱包
+   - 按照钱包的设置说明进行操作
 
-2. **Connect to BSC Network**:
-   - Open your wallet and switch to BSC Mainnet
-   - If BSC network is not available, add it manually:
-     - **Network Name**: BSC Mainnet
-     - **RPC URL**: https://bsc-dataseed1.binance.org/
-     - **Chain ID**: 56
-     - **Currency Symbol**: BNB
-     - **Block Explorer**: https://bscscan.com/
+2. **连接到 BSC 网络**：
+   - 打开您的钱包并切换到 BSC 主网
+   - 如果 BSC 网络不可用，请手动添加：
+     - **网络名称**：BSC Mainnet
+     - **RPC URL**：https://bsc-dataseed1.binance.org/
+     - **链 ID**：56
+     - **货币符号**：BNB
+     - **区块浏览器**：https://bscscan.com/
 
-3. **Ensure Sufficient Balance**:
-   - Make sure your wallet has USDT (BEP-20) tokens
-   - Ensure you have enough BNB for gas fees
+3. **确保余额充足**：
+   - 确保您的钱包中有 USDT (BEP-20) 代币
+   - 确保您有足够的 BNB 用于支付 Gas 费
 
-### Step 3: Connect and Deposit
-1. **Connect Wallet**:
-   - Click the "Connect Wallet" button on dapp.yc365.io
-   - Select your wallet (MetaMask, etc.)
-   - Approve the connection in your wallet
+### 步骤 3：连接并存款
+1. **连接钱包**：
+   - 点击 dapp.yc365.io 上的“Connect Wallet”按钮
+   - 选择您的钱包（MetaMask 等）
+   - 在您的钱包中批准连接
 
-2. **Initiate Deposit**:
-   - Look for the **"Deposit"** button on the platform
-   - Click the deposit button to start the process
+2. **发起存款**：
+   - 在平台上找到 **“Deposit”** 按钮
+   - 点击存款按钮开始流程
 
-3. **Complete Transaction**:
-   - Follow the on-screen prompts to complete the deposit
-   - Confirm the transaction in your wallet
-   - Pay the required gas fees
+3. **完成交易**：
+   - 按照屏幕提示完成存款
+   - 在您的钱包中确认交易
+   - 支付所需的 Gas 费
 
-### Step 4: Confirmation
-1. **Wait for Processing**:
-   - Wait 5-20 seconds for the transaction to be processed
-   - The platform will automatically detect your deposit
+### 步骤 4：确认
+1. **等待处理**：
+   - 等待 5-20 秒以处理交易
+   - 平台将自动检测您的存款
 
-2. **Verify Deposit**:
-   - Check your vault balance to see the deposited USDT amount
-   - The deposit process is now complete
+2. **验证存款**：
+   - 检查您的金库余额以查看存入的 USDT 金额
+   - 存款流程现已完成
 
-!!! success "Deposit Complete"
-    Once you see the USDT amount in your vault, the deposit process is fully completed and you can start trading.
+!!! success "存款完成"
+    一旦您在金库中看到 USDT 金额，存款流程即完全完成，您可以开始交易。
 
-## Important Notes
+## 重要提示
 
-!!! warning "Security Reminders"
-    - Always double-check the deposit address
-    - Only send USDT (BEP-20) on BSC network
-    - Ensure you're using the correct network (BSC)
-    - Keep your private keys secure
-    - Never share your wallet's private keys or seed phrase
-    - Always verify you're on the official dapp.yc365.io website
+!!! warning "安全提醒"
+    - 务必仔细检查存款地址
+    - 仅在 BSC 网络上发送 USDT (BEP-20)
+    - 确保您使用的是正确的网络 (BSC)
+    - 保护好您的私钥
+    - 切勿分享您钱包的私钥或助记词
+    - 务必验证您位于官方 dapp.yc365.io 网站
 
-!!! info "Processing Times"
-    - Most deposits are processed within 5-20 seconds
-    - During high network congestion, processing may take up to 1-3 minutes
-    - Contact support if funds haven't appeared after 5 minutes
+!!! info "处理时间"
+    - 大多数存款在 5-20 秒内处理完毕
+    - 在网络拥堵期间，处理可能需要 1-3 分钟
+    - 如果资金在 5 分钟后仍未到账，请联系支持
 
-## Deposit Limits
+## 存款限额
 
-| Account Level | Daily Limit | Monthly Limit |
-|---------------|-------------|---------------|
-| Basic        | $1,000      | $10,000       |
-| Verified     | $10,000     | $100,000      |
-| Premium      | $50,000     | $500,000      |
+| 账户等级 | 每日限额 | 每月限额 |
+|----------|----------|----------|
+| 基础     | $1,000   | $10,000  |
+| 已验证   | $10,000  | $100,000 |
+| 高级     | $50,000  | $500,000 |
 
-## Troubleshooting
+## 故障排除
 
-### Common Issues
+### 常见问题
 
-**Q: My deposit hasn't appeared in my vault**
-A: Check the blockchain explorer to confirm the transaction has been confirmed. If confirmed but not credited, contact support with your transaction hash.
+**问：我的存款没有出现在我的金库中**
+答：检查区块链浏览器以确认交易已确认。如果已确认但未入账，请联系支持并提供您的交易哈希。
 
-**Q: I sent funds to the wrong network**
-A: Unfortunately, funds sent to unsupported networks cannot be recovered. Only USDT (BEP-20) on BSC network is supported. Always verify the network before sending.
+**问：我将资金发送到了错误的网络**
+答：遗憾的是，发送到不支持网络的资金无法找回。仅支持 BSC 网络上的 USDT (BEP-20)。发送前务必验证网络。
 
-**Q: My wallet won't connect to the platform**
-A: Ensure you're using a compatible EVM wallet (MetaMask, WalletConnect, etc.) and that you're connected to BSC Mainnet.
+**问：我的钱包无法连接到平台**
+答：确保您使用的是兼容的 EVM 钱包（MetaMask、WalletConnect 等），并且已连接到 BSC 主网。
 
-**Q: The transaction failed**
-A: Check if you have sufficient BNB for gas fees. Increase gas limit if needed or try again during lower network congestion.
+**问：交易失败**
+答：检查您是否有足够的 BNB 支付 Gas 费。如果需要，增加 Gas 限制或在网络拥堵较低时重试。
 
-**Q: I can't see the deposit button**
-A: Make sure you're connected to the correct wallet and network (BSC Mainnet). Refresh the page if necessary.
+**问：我看不到存款按钮**
+答：确保您已连接到正确的钱包和网络 (BSC 主网)。如有必要，请刷新页面。
 
-## Support
+## 支持
 
-If you encounter any issues with deposits, please contact our support team with:
-- Your wallet address
-- Transaction hash
-- Screenshot of the transaction
-- Description of the issue
-- Network used (BSC Mainnet)
+如果您在存款时遇到任何问题，请联系我们的支持团队并提供：
+- 您的钱包地址
+- 交易哈希
+- 交易截图
+- 问题描述
+- 使用的网络 (BSC Mainnet)
 
-!!! tip "Quick Support"
-    For faster support, include your wallet address and transaction hash when reporting issues.
+!!! tip "快速支持"
+    为了获得更快的支持，请在报告问题时包含您的钱包地址和交易哈希。
 
 ---
 
-*For the latest deposit information and updates, please check our official announcements.* 
+*有关最新的存款信息和更新，请查看我们的官方公告。*

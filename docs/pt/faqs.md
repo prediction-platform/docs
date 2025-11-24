@@ -1,221 +1,218 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Perguntas Frequentes (FAQs)
 
-# Frequently Asked Questions (FAQs)
+## Visão Geral
 
-## Overview
+Bem-vindo à seção de Perguntas Frequentes do YC365. Aqui você encontrará respostas para as perguntas mais comuns sobre nossa plataforma de mercado de previsão descentralizada. Se você é um novo usuário começando ou um trader experiente procurando informações específicas, este FAQ abrangente o ajudará a encontrar as respostas que você precisa.
 
-Welcome to the YC365 Frequently Asked Questions section. Here you'll find answers to the most common questions about our decentralized prediction market platform. Whether you're a new user getting started or an experienced trader looking for specific information, this comprehensive FAQ will help you find the answers you need.
+## Navegação Rápida
 
-## Quick Navigation
+### 🚀 **Perguntas de Início Rápido**
+- **[O que é um Mercado de Previsão?](what-is-a-prediction-market.md)** - Aprenda o básico sobre mercados de previsão e como eles funcionam
+- **[Por que Cripto?](why-crypto.md)** - Entenda por que usamos criptomoeda e tecnologia blockchain
+- **[Meu Dinheiro Está Seguro?](is-my-money-safe.md)** - Aprenda sobre nossas medidas de segurança e proteção de fundos
 
-### 🚀 **Getting Started Questions**
-- **[What is a Prediction Market?](what-is-a-prediction-market.md)** - Learn the basics of prediction markets and how they work
-- **[Why Crypto?](why-crypto.md)** - Understand why we use cryptocurrency and blockchain technology
-- **[Is My Money Safe?](is-my-money-safe.md)** - Learn about our security measures and fund protection
+### 💰 **Perguntas sobre Negociação**
+- **[Posso Vender Antes?](can-i-sell-early.md)** - Entenda suas opções para sair de posições antes da resolução do evento
+- **[Como Contato o Suporte?](how-do-i-contact-support.md)** - Descubra como obter ajuda quando precisar
 
-### 💰 **Trading Questions**
-- **[Can I Sell Early?](can-i-sell-early.md)** - Understand your options for exiting positions before event resolution
-- **[How Do I Contact Support?](how-do-i-contact-support.md)** - Find out how to get help when you need it
+## Perguntas Mais Populares
 
-## Most Popular Questions
+### 1. O que é o YC365?
+O YC365 é uma plataforma de mercado de previsão descentralizada construída na Binance Smart Chain (BSC) onde os usuários podem negociar sobre os resultados de eventos do mundo real. Combinamos a segurança da blockchain com interfaces amigáveis para tornar os mercados de previsão acessíveis a todos.
 
-### 1. What is YC365?
-YC365 is a decentralized prediction market platform built on Binance Smart Chain (BSC) where users can trade on the outcomes of real-world events. We combine blockchain security with user-friendly interfaces to make prediction markets accessible to everyone.
+### 2. Como começo?
+1. Instale MetaMask ou carteira EVM compatível
+2. Configure a rede BSC em sua carteira
+3. Adquira USDT (BEP-20) e BNB para taxas de gás
+4. Visite dapp.yc365.io e conecte sua carteira
+5. Faça seu primeiro depósito
+6. Comece a negociar em mercados de previsão
 
-### 2. How do I get started?
-1. Install MetaMask or compatible EVM wallet
-2. Configure BSC network in your wallet
-3. Acquire USDT (BEP-20) and BNB for gas fees
-4. Visit dapp.yc365.io and connect your wallet
-5. Make your first deposit
-6. Start trading on prediction markets
+### 3. Em que posso negociar?
+Oferecemos mercados de previsão em várias categorias:
+- **Esportes**: Futebol, basquete, tênis e outros eventos esportivos
+- **Política**: Eleições, decisões políticas, desenvolvimentos políticos
+- **Economia**: Relatórios do PIB, dados de inflação, desempenho do mercado
+- **Tecnologia**: Lançamentos de produtos, métricas de adoção, desenvolvimentos da indústria
+- **Entretenimento**: Premiações, reality shows, eventos de celebridades
+- **Criptomoeda**: Previsões de preços, métricas de adoção, desenvolvimentos regulatórios
 
-### 3. What can I trade on?
-We offer prediction markets on various categories:
-- **Sports**: Football, basketball, tennis, and other sporting events
-- **Politics**: Elections, policy decisions, political developments
-- **Economics**: GDP reports, inflation data, market performance
-- **Technology**: Product launches, adoption metrics, industry developments
-- **Entertainment**: Awards shows, reality TV, celebrity events
-- **Cryptocurrency**: Price predictions, adoption metrics, regulatory developments
+### 4. Quanto custa negociar?
+- **Taxa de Negociação**: 0,15% (1,5/1000) sobre negociações executadas
+- **Taxas de Gás**: Taxas da rede BSC (tipicamente 0,005-0,02 USDT equivalente em BNB)
+- **Depósito/Saque**: Sem taxas de plataforma (apenas taxas de gás da rede)
 
-### 4. How much does it cost to trade?
-- **Trading Fee**: 0.15% (1.5/1000) on executed trades
-- **Gas Fees**: BSC network fees (typically 0.005-0.02 USDT equivalent in BNB)
-- **Deposit/Withdrawal**: No platform fees (only network gas fees)
+### 5. O que são tokens SIM/NÃO?
+Cada mercado de previsão cria dois tokens:
+- **Tokens SIM**: Representam a crença de que o evento ocorrerá
+- **Tokens NÃO**: Representam a crença de que o evento NÃO ocorrerá
+- **Preços**: Os preços dos tokens variam de 0,01 a 0,99 USDT
+- **Liquidação**: Tokens vencedores passam a valer 1,00 USDT, tokens perdedores perdem valor
 
-### 5. What are YES/NO tokens?
-Every prediction market creates two tokens:
-- **YES tokens**: Represent belief the event will occur
-- **NO tokens**: Represent belief the event will NOT occur
-- **Pricing**: Token prices range from 0.01 to 0.99 USDT
-- **Settlement**: Winning tokens become worth 1.00 USDT, losing tokens become worthless
+## Conta e Segurança
 
-## Account and Security
+### Gestão de Conta
+- **Carteira Necessária**: Você precisa de uma carteira compatível com EVM (MetaMask recomendada)
+- **Sem KYC**: Nenhuma verificação de identidade necessária para negociação básica
+- **Descentralizado**: Seus fundos são mantidos em contratos inteligentes, não por nós
+- **Acesso**: Acesse sua conta de qualquer dispositivo com sua carteira
 
-### Account Management
-- **Wallet Required**: You need an EVM-compatible wallet (MetaMask recommended)
-- **No KYC**: No identity verification required for basic trading
-- **Decentralized**: Your funds are held in smart contracts, not by us
-- **Access**: Access your account from any device with your wallet
+### Recursos de Segurança
+- **Auditorias de Contrato Inteligente**: Todos os contratos auditados profissionalmente
+- **Código Aberto**: Código do contrato publicamente disponível
+- **Multi-assinatura**: Operações críticas requerem múltiplas assinaturas
+- **Seguro**: Seguro da plataforma para proteção adicional
 
-### Security Features
-- **Smart Contract Audits**: All contracts professionally audited
-- **Open Source**: Contract code publicly available
-- **Multi-signature**: Critical operations require multiple signatures
-- **Insurance**: Platform insurance for additional protection
+### Segurança dos Fundos
+- **Segurança Blockchain**: Fundos protegidos pela segurança da blockchain BSC
+- **Contratos Inteligentes**: Contratos auditados lidam com toda a gestão de fundos
+- **Sem Custódia**: Não mantemos seus fundos diretamente
+- **Controle do Usuário**: Você mantém o controle de suas chaves privadas
 
-### Fund Safety
-- **Blockchain Security**: Funds protected by BSC blockchain security
-- **Smart Contracts**: Audited contracts handle all fund management
-- **No Custody**: We don't hold your funds directly
-- **User Control**: You maintain control of your private keys
+## Básico de Negociação
 
-## Trading Basics
+### Como Funciona a Negociação
+1. **Escolha o Mercado**: Selecione o evento que você deseja prever
+2. **Escolha o Lado**: Compre SIM se você acha que vai acontecer, NÃO se você não acha
+3. **Defina o Preço**: Escolha o preço que você está disposto a pagar (ordem limitada)
+4. **Execute a Negociação**: Confirme a transação em sua carteira
+5. **Monitore a Posição**: Acompanhe o valor da sua posição
+6. **Sair ou Manter**: Venda antes ou mantenha até a resolução
 
-### How Trading Works
-1. **Choose Market**: Select event you want to predict
-2. **Pick Side**: Buy YES if you think it will happen, NO if you don't
-3. **Set Price**: Choose price you're willing to pay (limit order)
-4. **Execute Trade**: Confirm transaction in your wallet
-5. **Monitor Position**: Track your position value
-6. **Exit or Hold**: Sell early or hold until resolution
+### Mecanismos de Lucro
+- **Lucros de Negociação**: Compre na baixa, venda na alta antes da resolução do evento
+- **Lucros de Liquidação**: Mantenha até a resolução para retornos potenciais de 100%
+- **Market Making**: Forneça liquidez e ganhe com spreads
 
-### Profit Mechanisms
-- **Trading Profits**: Buy low, sell high before event resolution
-- **Settlement Profits**: Hold until resolution for potential 100% returns
-- **Market Making**: Provide liquidity and earn from spreads
+### Gestão de Risco
+- **Dimensionamento de Posição**: Nunca arrisque mais do que você pode perder
+- **Diversificação**: Espalhe o risco por vários eventos
+- **Pesquisa**: Sempre pesquise eventos antes de negociar
+- **Comece Pequeno**: Comece com pequenas quantias enquanto aprende
 
-### Risk Management
-- **Position Sizing**: Never risk more than you can afford to lose
-- **Diversification**: Spread risk across multiple events
-- **Research**: Always research events before trading
-- **Start Small**: Begin with small amounts while learning
+## Suporte Técnico
 
-## Technical Support
+### Problemas da Plataforma
+- **Problemas no Navegador**: Limpe o cache, tente um navegador diferente
+- **Conexão da Carteira**: Certifique-se de que a carteira esteja desbloqueada e na rede BSC
+- **Falhas de Transação**: Verifique as taxas de gás e o status da rede
+- **Atualizações de Saldo**: Dê tempo para confirmação da blockchain
 
-### Platform Issues
-- **Browser Issues**: Clear cache, try different browser
-- **Wallet Connection**: Ensure wallet is unlocked and on BSC network
-- **Transaction Failures**: Check gas fees and network status
-- **Balance Updates**: Allow time for blockchain confirmation
+### Obtendo Ajuda
+- **Documentação**: Guias e tutoriais abrangentes
+- **Comunidade**: Comunidades ativas no Telegram e Discord
+- **Equipe de Suporte**: Atendimento ao cliente disponível 24/7
+- **Busca no FAQ**: Use a função de busca para encontrar respostas específicas
 
-### Getting Help
-- **Documentation**: Comprehensive guides and tutorials
-- **Community**: Active Telegram and Discord communities
-- **Support Team**: 24/7 customer support available
-- **FAQ Search**: Use search function to find specific answers
+## Recursos da Plataforma
 
-## Platform Features
+### Recursos de Negociação
+- **Ordens Limitadas**: Defina preços exatos para suas negociações
+- **Livro de Ordens**: Veja todas as ordens de compra e venda pendentes
+- **Preços em Tempo Real**: Atualizações de preços ao vivo e dados de mercado
+- **Rastreamento de Portfólio**: Monitore todas as suas posições e desempenho
 
-### Trading Features
-- **Limit Orders**: Set exact prices for your trades
-- **Order Book**: See all pending buy and sell orders
-- **Real-time Prices**: Live price updates and market data
-- **Portfolio Tracking**: Monitor all your positions and performance
+### Recursos Avançados
+- **Análise de Mercado**: Estatísticas e tendências de mercado detalhadas
+- **Gráficos de Preço**: Gráficos de preços históricos e ferramentas de análise
+- **Otimizado para Celular**: Funcionalidade completa em dispositivos móveis
+- **Multilíngue**: Disponível em 6 idiomas
 
-### Advanced Features
-- **Market Analytics**: Detailed market statistics and trends
-- **Price Charts**: Historical price charts and analysis tools
-- **Mobile Optimized**: Full functionality on mobile devices
-- **Multi-language**: Available in 6 languages
+### Em Breve
+- **Aplicativos Móveis**: Aplicativos nativos para iOS e Android
+- **Ordens Avançadas**: Stop-loss, iceberg e ordens condicionais
+- **Recursos Sociais**: Siga e copie traders de sucesso
+- **Ativos Adicionais**: Mais criptomoedas e stablecoins
 
-### Coming Soon
-- **Mobile Apps**: Native iOS and Android applications
-- **Advanced Orders**: Stop-loss, iceberg, and conditional orders
-- **Social Features**: Follow and copy successful traders
-- **Additional Assets**: More cryptocurrencies and stablecoins
+## Regulamentação e Conformidade
 
-## Regulatory and Compliance
+### Status Legal
+- **Plataforma Descentralizada**: Opera como protocolo descentralizado
+- **Acesso Global**: Disponível mundialmente (verifique regulamentos locais)
+- **Conformidade**: Projetado com considerações regulatórias
+- **Responsabilidade do Usuário**: Usuários responsáveis pela conformidade local
 
-### Legal Status
-- **Decentralized Platform**: Operates as decentralized protocol
-- **Global Access**: Available worldwide (check local regulations)
-- **Compliance**: Designed with regulatory considerations
-- **User Responsibility**: Users responsible for local compliance
+### Considerações Fiscais
+- **Ganhos de Negociação**: Podem estar sujeitos a imposto sobre ganhos de capital
+- **Manutenção de Registros**: A plataforma fornece histórico de transações
+- **Dependente da Jurisdição**: O tratamento fiscal varia por país
+- **Conselho Profissional**: Consulte profissionais fiscais para orientação
 
-### Tax Considerations
-- **Trading Gains**: May be subject to capital gains tax
-- **Record Keeping**: Platform provides transaction history
-- **Jurisdiction Dependent**: Tax treatment varies by country
-- **Professional Advice**: Consult tax professionals for guidance
+## Solução de Problemas
 
-## Troubleshooting
+### Problemas Comuns
 
-### Common Issues
+#### "Transação Falhou"
+- Verifique o saldo de BNB para taxas de gás
+- Verifique se você está na rede BSC
+- Tente um preço de gás mais alto
+- Contate o suporte se persistir
 
-#### "Transaction Failed"
-- Check BNB balance for gas fees
-- Verify you're on BSC network
-- Try higher gas price
-- Contact support if persistent
+#### "Não Consigo Conectar Carteira"
+- Desbloqueie o MetaMask
+- Mude para a rede BSC
+- Atualize a página
+- Limpe o cache do navegador
 
-#### "Cannot Connect Wallet"
-- Unlock MetaMask
-- Switch to BSC network
-- Refresh page
-- Clear browser cache
+#### "Saldo Não Atualizando"
+- Aguarde a confirmação da blockchain
+- Atualize a página após 30 segundos
+- Verifique a transação no BSCScan
+- Contate o suporte com o hash da transação
 
-#### "Balance Not Updating"
-- Wait for blockchain confirmation
-- Refresh page after 30 seconds
-- Check transaction on BSCScan
-- Contact support with transaction hash
+#### "Ordem Não Preenchendo"
+- Verifique se o preço é competitivo
+- Verifique a liquidez do mercado
+- Considere usar ordens de mercado
+- Monitore a profundidade do livro de ordens
 
-#### "Order Not Filling"
-- Check if price is competitive
-- Verify market liquidity
-- Consider using market orders
-- Monitor order book depth
+### Problemas de Desempenho
+- **Carregamento Lento**: Verifique a conexão com a internet, tente um servidor diferente
+- **Taxas de Gás Altas**: Aguarde menor congestionamento da rede
+- **Atrasos na Ordem**: Congestionamento da rede pode atrasar a execução
+- **Problemas de Exibição**: Limpe o cache do navegador, atualize o navegador
 
-### Performance Issues
-- **Slow Loading**: Check internet connection, try different server
-- **High Gas Fees**: Wait for lower network congestion
-- **Order Delays**: Network congestion may slow execution
-- **Display Issues**: Clear browser cache, update browser
+## Comunidade e Recursos
 
-## Community and Resources
+### Recursos de Aprendizado
+- **Tutoriais em Vídeo**: Guias passo a passo em vídeo
+- **Guias Escritos**: Documentação abrangente
+- **Webinars**: Sessões educacionais regulares
+- **Blog**: Insights de mercado e atualizações da plataforma
 
-### Learning Resources
-- **Video Tutorials**: Step-by-step video guides
-- **Written Guides**: Comprehensive documentation
-- **Webinars**: Regular educational sessions
-- **Blog**: Market insights and platform updates
+### Canais da Comunidade
+- **Telegram**: Bate-papo em tempo real e suporte
+- **Discord**: Discussões técnicas e comunidade
+- **Twitter**: Notícias e anúncios
+- **Reddit**: Discussões da comunidade e feedback
 
-### Community Channels
-- **Telegram**: Real-time chat and support
-- **Discord**: Technical discussions and community
-- **Twitter**: News and announcements
-- **Reddit**: Community discussions and feedback
+### Recursos para Desenvolvedores
+- **Documentação da API**: Para desenvolvedores criando integrações
+- **Código de Contrato Inteligente**: Código de contrato de código aberto
+- **Especificações Técnicas**: Especificações técnicas da plataforma
+- **Suporte ao Desenvolvedor**: Assistência dedicada ao desenvolvedor
 
-### Developer Resources
-- **API Documentation**: For developers building integrations
-- **Smart Contract Code**: Open source contract code
-- **Technical Specs**: Platform technical specifications
-- **Developer Support**: Dedicated developer assistance
+## Informações de Contato
 
-## Contact Information
+### Canais de Suporte
+- **Suporte no App**: Sistema de ajuda integrado
+- **Suporte por E-mail**: support@yc365.io
+- **Fóruns da Comunidade**: Faça perguntas nos canais da comunidade
+- **Documentação**: Recursos de autoajuda abrangentes
 
-### Support Channels
-- **In-App Support**: Built-in help system
-- **Email Support**: support@yc365.io
-- **Community Forums**: Ask questions in community channels
-- **Documentation**: Comprehensive self-help resources
-
-### Response Times
-- **Critical Issues**: Within 1 hour
-- **General Support**: Within 24 hours
-- **Community Questions**: Usually answered within minutes
-- **Documentation Updates**: Regularly updated based on feedback
+### Tempos de Resposta
+- **Problemas Críticos**: Dentro de 1 hora
+- **Suporte Geral**: Dentro de 24 horas
+- **Perguntas da Comunidade**: Geralmente respondidas em minutos
+- **Atualizações de Documentação**: Atualizadas regularmente com base no feedback
 
 ---
 
-**Can't find what you're looking for?** 
+**Não consegue encontrar o que está procurando?**
 
-1. **Search**: Use the search function to find specific topics
-2. **Browse Categories**: Check the specific FAQ categories above
-3. **Community**: Ask in our Telegram or Discord channels
-4. **Contact Support**: Reach out to our support team directly
+1. **Pesquise**: Use a função de pesquisa para encontrar tópicos específicos
+2. **Navegue pelas Categorias**: Verifique as categorias específicas de FAQ acima
+3. **Comunidade**: Pergunte em nossos canais do Telegram ou Discord
+4. **Contate o Suporte**: Entre em contato diretamente com nossa equipe de suporte
 
-*We're constantly updating our FAQ based on user feedback. If you have suggestions for additional questions or improvements, please let us know!* 
+*Estamos constantemente atualizando nosso FAQ com base no feedback dos usuários. Se você tiver sugestões para perguntas adicionais ou melhorias, por favor nos avise!*

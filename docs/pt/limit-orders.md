@@ -1,287 +1,284 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Ordens Limitadas
 
-# Limit Orders
+## Visão Geral
 
-## Overview
+Ordens limitadas são o principal mecanismo de negociação no YC365, permitindo que os usuários especifiquem o preço exato pelo qual desejam comprar ou vender tokens SIM/NÃO para eventos de mercado de previsão. Isso dá aos traders controle preciso sobre seus pontos de entrada e saída, garantindo uma descoberta de preços transparente e justa.
 
-Limit orders are the primary trading mechanism on YC365, allowing users to specify the exact price at which they want to buy or sell YES/NO tokens for prediction market events. This gives traders precise control over their entry and exit points while ensuring transparent and fair price discovery.
+## O que são Ordens Limitadas?
 
-## What are Limit Orders?
+### Definição
+Uma ordem limitada é uma instrução para comprar ou vender tokens a um preço específico ou melhor. Ao contrário das ordens de mercado que são executadas imediatamente ao preço atual de mercado, as ordens limitadas só serão executadas quando o mercado atingir o nível de preço especificado.
 
-### Definition
-A limit order is an instruction to buy or sell tokens at a specific price or better. Unlike market orders that execute immediately at the current market price, limit orders will only execute when the market reaches your specified price level.
+### Principais Características
+- **Controle de Preço**: Defina o preço exato que você está disposto a pagar ou aceitar
+- **Tempo em Vigor**: As ordens permanecem ativas até serem preenchidas, canceladas ou expirarem
+- **Sem Slippage**: Execute ao seu preço especificado ou melhor
+- **Prioridade na Fila**: Ordens preenchidas com base na prioridade de preço-tempo
 
-### Key Features
-- **Price Control**: Set the exact price you're willing to pay or accept
-- **Time in Force**: Orders remain active until filled, cancelled, or expired
-- **No Slippage**: Execute at your specified price or better
-- **Queue Priority**: Orders filled based on price-time priority
+## Como Funcionam as Ordens Limitadas
 
-## How Limit Orders Work
+### Tipos de Ordem
 
-### Order Types
+#### Ordens de Compra Limitada (Buy Limit)
+- **Objetivo**: Comprar tokens SIM ou NÃO a um preço especificado ou abaixo
+- **Execução**: Preenche quando o preço de mercado cai para ou abaixo do seu preço limite
+- **Exemplo**: Coloque uma ordem de compra para tokens SIM a 0,65 USDT quando o preço atual for 0,70 USDT
 
-#### Buy Limit Orders
-- **Purpose**: Purchase YES or NO tokens at or below a specified price
-- **Execution**: Fills when market price drops to or below your limit price
-- **Example**: Place a buy order for YES tokens at 0.65 USDT when current price is 0.70 USDT
+#### Ordens de Venda Limitada (Sell Limit)
+- **Objetivo**: Vender tokens SIM ou NÃO a um preço especificado ou acima
+- **Execução**: Preenche quando o preço de mercado sobe para ou acima do seu preço limite
+- **Exemplo**: Coloque uma ordem de venda para tokens SIM a 0,75 USDT quando o preço atual for 0,70 USDT
 
-#### Sell Limit Orders
-- **Purpose**: Sell YES or NO tokens at or above a specified price
-- **Execution**: Fills when market price rises to or above your limit price
-- **Example**: Place a sell order for YES tokens at 0.75 USDT when current price is 0.70 USDT
+### Correspondência de Ordens
 
-### Order Matching
+#### Prioridade Preço-Tempo
+1. **Prioridade de Preço**: Ordens com melhores preços são preenchidas primeiro
+2. **Prioridade de Tempo**: Entre ordens no mesmo preço, ordens anteriores são preenchidas primeiro
+3. **Preenchimentos Parciais**: Grandes ordens podem ser preenchidas em várias transações menores
 
-#### Price-Time Priority
-1. **Price Priority**: Orders with better prices get filled first
-2. **Time Priority**: Among orders at the same price, earlier orders get filled first
-3. **Partial Fills**: Large orders may be filled in multiple smaller transactions
+#### Motor de Correspondência
+- **Processamento em Tempo Real**: Ordens processadas assim que são recebidas
+- **Execução Justa**: Sem tratamento preferencial para qualquer usuário
+- **Correspondência Transparente**: Toda a atividade do livro de ordens é visível
 
-#### Matching Engine
-- **Real-time Processing**: Orders processed as soon as they're received
-- **Fair Execution**: No preferential treatment for any user
-- **Transparent Matching**: All order book activity is visible
+## Colocando Ordens Limitadas
 
-## Placing Limit Orders
+### Processo Passo a Passo
 
-### Step-by-Step Process
+#### 1. Selecione Evento e Condição
+- **Navegue pelos Eventos**: Vá para o evento que você deseja negociar
+- **Escolha a Condição**: Selecione a condição/resultado específico
+- **Revise o Mercado**: Verifique os preços atuais e a profundidade do livro de ordens
 
-#### 1. Select Event and Condition
-- **Browse Events**: Navigate to the event you want to trade
-- **Choose Condition**: Select the specific condition/outcome
-- **Review Market**: Check current prices and order book depth
+#### 2. Escolha o Tipo de Token
+- **Tokens SIM**: Compre se você acredita que o resultado ocorrerá
+- **Tokens NÃO**: Compre se você acredita que o resultado não ocorrerá
+- **Pares de Tokens**: Cada condição tem pares de tokens SIM/NÃO correspondentes
 
-#### 2. Choose Token Type
-- **YES Tokens**: Buy if you believe the outcome will occur
-- **NO Tokens**: Buy if you believe the outcome will not occur
-- **Token Pairs**: Each condition has corresponding YES/NO token pairs
+#### 3. Defina Parâmetros da Ordem
+- **Tipo de Ordem**: Selecione "Comprar" ou "Vender"
+- **Quantidade de Tokens**: Especifique quantos tokens você deseja negociar
+- **Preço Limite**: Defina seu preço desejado por token
+- **Revisão da Ordem**: Confirme todos os detalhes antes do envio
 
-#### 3. Set Order Parameters
-- **Order Type**: Select "Buy" or "Sell"
-- **Token Amount**: Specify how many tokens you want to trade
-- **Limit Price**: Set your desired price per token
-- **Order Review**: Confirm all details before submission
+#### 4. Envie a Ordem
+- **Confirmação da Carteira**: Aprove a transação em sua carteira
+- **Bloqueio de Ativos**: Os ativos necessários são bloqueados no contrato inteligente
+- **Confirmação da Ordem**: Receba confirmação da colocação da ordem
 
-#### 4. Submit Order
-- **Wallet Confirmation**: Approve the transaction in your wallet
-- **Asset Lock**: Required assets are locked in the smart contract
-- **Order Confirmation**: Receive confirmation of order placement
+### Parâmetros da Ordem
 
-### Order Parameters
+#### Configurações de Preço
+- **Preço Mínimo**: 0,01 USDT por token
+- **Preço Máximo**: 0,99 USDT por token
+- **Incrementos de Preço**: Incrementos mínimos de 0,01 USDT
+- **Preços Dinâmicos**: Os preços se ajustam automaticamente com base na atividade do mercado
 
-#### Price Settings
-- **Minimum Price**: 0.01 USDT per token
-- **Maximum Price**: 0.99 USDT per token
-- **Price Increments**: 0.01 USDT minimum increments
-- **Dynamic Pricing**: Prices automatically adjust based on market activity
+#### Configurações de Quantidade
+- **Ordem Mínima**: Tamanho mínimo de ordem de 1 token
+- **Ordem Máxima**: Sem limite máximo (sujeito à liquidez disponível)
+- **Casas Decimais**: Ordens podem incluir quantidades decimais de tokens
+- **Valor Total**: Calculado como Preço × Quantidade
 
-#### Quantity Settings
-- **Minimum Order**: 1 token minimum order size
-- **Maximum Order**: No maximum limit (subject to available liquidity)
-- **Decimal Places**: Orders can include decimal token amounts
-- **Total Value**: Calculated as Price × Quantity
+#### Configurações de Tempo
+- **Good Till Cancelled (GTC)**: A ordem permanece ativa até ser preenchida ou cancelada
+- **Expiração do Evento**: Ordens canceladas automaticamente quando o evento expira
+- **Corte de Negociação**: Ordens canceladas 1 hora antes da resolução do evento
 
-#### Time Settings
-- **Good Till Cancelled (GTC)**: Order remains active until filled or cancelled
-- **Event Expiration**: Orders automatically cancelled when event expires
-- **Trading Cutoff**: Orders cancelled 1 hour before event resolution
+## Gestão de Ordens
 
-## Order Management
+### Visualizando Suas Ordens
 
-### Viewing Your Orders
+#### Ordens Ativas
+- **Ordens Abertas**: Veja todas as ordens não preenchidas
+- **Status da Ordem**: Acompanhe o progresso da execução da ordem
+- **Preenchimentos Parciais**: Monitore ordens parcialmente preenchidas
+- **Histórico de Ordens**: Revise todas as ordens passadas
 
-#### Active Orders
-- **Open Orders**: View all unfilled orders
-- **Order Status**: Track order execution progress
-- **Partial Fills**: Monitor partially filled orders
-- **Order History**: Review all past orders
+#### Informações da Ordem
+- **Detalhes da Ordem**: Preço, quantidade, tipo de token, carimbo de data/hora
+- **Status de Preenchimento**: Preenchida, parcialmente preenchida ou aberta
+- **Quantidade Restante**: Quantidade ainda aguardando para ser preenchida
+- **Preço Médio de Preenchimento**: Preço médio ponderado das porções preenchidas
 
-#### Order Information
-- **Order Details**: Price, quantity, token type, timestamp
-- **Fill Status**: Filled, partially filled, or open
-- **Remaining Quantity**: Amount still waiting to be filled
-- **Average Fill Price**: Weighted average price of filled portions
+### Modificando Ordens
 
-### Modifying Orders
+#### Cancelamento de Ordem
+- **Processo de Cancelamento**: Cancele ordens através da interface de negociação
+- **Liberação de Ativos**: Ativos bloqueados devolvidos à sua conta
+- **Efeito Imediato**: O cancelamento entra em vigor imediatamente
+- **Sem Taxas**: Nenhuma taxa cobrada pelo cancelamento de ordem
 
-#### Order Cancellation
-- **Cancel Process**: Cancel orders through the trading interface
-- **Asset Release**: Locked assets returned to your account
-- **Immediate Effect**: Cancellation takes effect immediately
-- **No Fees**: No fees charged for order cancellation
+#### Atualizações de Ordem
+- **Mudanças de Preço**: Cancele e substitua por um novo preço
+- **Mudanças de Quantidade**: Cancele e substitua por uma nova quantidade
+- **Sem Modificação Direta**: Ordens não podem ser modificadas diretamente
 
-#### Order Updates
-- **Price Changes**: Cancel and replace with new price
-- **Quantity Changes**: Cancel and replace with new quantity
-- **No Direct Modification**: Orders cannot be directly modified
+### Execução de Ordem
 
-### Order Execution
+#### Tipos de Preenchimento
+- **Preenchimento Completo**: Ordem inteira executada de uma vez
+- **Preenchimento Parcial**: Ordem preenchida em várias quantidades menores
+- **Sem Preenchimento**: A ordem permanece aberta se o preço não for atingido
 
-#### Fill Types
-- **Complete Fill**: Entire order executed at once
-- **Partial Fill**: Order filled in multiple smaller amounts
-- **No Fill**: Order remains open if price not reached
+#### Notificações de Execução
+- **Notificações de Preenchimento**: Notificações instantâneas quando as ordens são preenchidas
+- **Alertas por E-mail**: Notificações por e-mail opcionais para atividade de ordem
+- **Atualizações de Portfólio**: Atualizações de saldo de portfólio em tempo real
+- **Histórico de Transações**: Registro completo de todas as execuções
 
-#### Execution Notifications
-- **Fill Notifications**: Instant notifications when orders are filled
-- **Email Alerts**: Optional email notifications for order activity
-- **Portfolio Updates**: Real-time portfolio balance updates
-- **Transaction History**: Complete record of all executions
+## Recursos Avançados de Ordem
 
-## Advanced Order Features
+### Integração com Livro de Ordens
 
-### Order Book Integration
-
-#### Market Depth
-- **Bid/Ask Spread**: View the difference between buy and sell prices
-- **Order Book Depth**: See all pending orders at different price levels
-- **Liquidity Analysis**: Assess market liquidity before placing orders
-- **Price Impact**: Estimate potential price impact of large orders
+#### Profundidade de Mercado
+- **Bid/Ask Spread**: Veja a diferença entre preços de compra e venda
+- **Profundidade do Livro**: Veja todas as ordens pendentes em diferentes níveis de preço
+- **Análise de Liquidez**: Avalie a liquidez do mercado antes de colocar ordens
+- **Impacto no Preço**: Estime o impacto potencial no preço de grandes ordens
 
 #### Market Making
-- **Spread Trading**: Place both buy and sell orders to capture spread
-- **Liquidity Provision**: Provide liquidity to earn from spreads
-- **Market Efficiency**: Help maintain efficient price discovery
-- **Risk Management**: Manage inventory and exposure carefully
+- **Spread Trading**: Coloque ordens de compra e venda para capturar o spread
+- **Provisão de Liquidez**: Forneça liquidez para ganhar com spreads
+- **Eficiência de Mercado**: Ajude a manter a descoberta de preços eficiente
+- **Gestão de Risco**: Gerencie inventário e exposição cuidadosamente
 
-### Risk Management
+### Gestão de Risco
 
-#### Position Limits
-- **Account Limits**: Maximum position size based on account balance
-- **Event Limits**: Limits per individual event
-- **Portfolio Limits**: Overall portfolio exposure limits
-- **Risk Monitoring**: Real-time risk assessment and alerts
+#### Limites de Posição
+- **Limites de Conta**: Tamanho máximo da posição com base no saldo da conta
+- **Limites de Evento**: Limites por evento individual
+- **Limites de Portfólio**: Limites gerais de exposição do portfólio
+- **Monitoramento de Risco**: Avaliação de risco e alertas em tempo real
 
-#### Stop-Loss Strategies
-- **Manual Monitoring**: Monitor positions and manually place protective orders
-- **Portfolio Hedging**: Use opposite positions to hedge risk
-- **Diversification**: Spread risk across multiple events and outcomes
-- **Capital Management**: Never risk more than you can afford to lose
+#### Estratégias de Stop-Loss
+- **Monitoramento Manual**: Monitore posições e coloque ordens de proteção manualmente
+- **Hedge de Portfólio**: Use posições opostas para proteger o risco
+- **Diversificação**: Espalhe o risco por vários eventos e resultados
+- **Gestão de Capital**: Nunca arrisque mais do que você pode perder
 
-## Order Fees and Costs
+## Taxas e Custos de Ordem
 
-### Trading Fees
-- **Platform Fee**: 0.15% fee on executed trades (1.5/1000)
-- **Fee Calculation**: Fees calculated on the total trade value
-- **Fee Deduction**: Fees automatically deducted from trade proceeds
-- **Fee Transparency**: All fees clearly displayed before order submission
+### Taxas de Negociação
+- **Taxa da Plataforma**: Taxa de 0,15% sobre negociações executadas (1,5/1000)
+- **Cálculo de Taxa**: Taxas calculadas sobre o valor total da negociação
+- **Dedução de Taxa**: Taxas deduzidas automaticamente dos proventos da negociação
+- **Transparência de Taxa**: Todas as taxas claramente exibidas antes do envio da ordem
 
-### Gas Fees
-- **Network Fees**: BSC network gas fees for blockchain transactions
-- **Dynamic Pricing**: Gas fees vary based on network congestion
-- **Fee Optimization**: Platform optimizes gas usage for efficiency
-- **User Responsibility**: Users pay gas fees for their transactions
+### Taxas de Gás
+- **Taxas de Rede**: Taxas de gás da rede BSC para transações blockchain
+- **Preços Dinâmicos**: As taxas de gás variam com base no congestionamento da rede
+- **Otimização de Taxas**: A plataforma otimiza o uso de gás para eficiência
+- **Responsabilidade do Usuário**: Os usuários pagam taxas de gás por suas transações
 
-### Cost Examples
+### Exemplos de Custo
 
-#### Example 1: Buying YES Tokens
-- **Order**: Buy 100 YES tokens at 0.65 USDT each
-- **Trade Value**: 100 × 0.65 = 65 USDT
-- **Platform Fee**: 65 × 0.0015 = 0.0975 USDT
-- **Gas Fee**: ~0.01 USDT (varies)
-- **Total Cost**: 65 + 0.0975 + 0.01 = 65.1075 USDT
+#### Exemplo 1: Comprando Tokens SIM
+- **Ordem**: Comprar 100 tokens SIM a 0,65 USDT cada
+- **Valor da Negociação**: 100 × 0,65 = 65 USDT
+- **Taxa da Plataforma**: 65 × 0,0015 = 0,0975 USDT
+- **Taxa de Gás**: ~0,01 USDT (varia)
+- **Custo Total**: 65 + 0,0975 + 0,01 = 65,1075 USDT
 
-#### Example 2: Selling NO Tokens
-- **Order**: Sell 50 NO tokens at 0.45 USDT each
-- **Trade Value**: 50 × 0.45 = 22.5 USDT
-- **Platform Fee**: 22.5 × 0.0015 = 0.03375 USDT
-- **Gas Fee**: ~0.01 USDT (varies)
-- **Net Proceeds**: 22.5 - 0.03375 - 0.01 = 22.45625 USDT
+#### Exemplo 2: Vendendo Tokens NÃO
+- **Ordem**: Vender 50 tokens NÃO a 0,45 USDT cada
+- **Valor da Negociação**: 50 × 0,45 = 22,5 USDT
+- **Taxa da Plataforma**: 22,5 × 0,0015 = 0,03375 USDT
+- **Taxa de Gás**: ~0,01 USDT (varia)
+- **Proventos Líquidos**: 22,5 - 0,03375 - 0,01 = 22,45625 USDT
 
-## Best Practices
+## Melhores Práticas
 
-### Order Placement Strategy
+### Estratégia de Colocação de Ordem
 
-#### Market Analysis
-- **Study Order Book**: Analyze current buy/sell pressure
-- **Check Market History**: Review recent price movements
-- **Assess Liquidity**: Ensure sufficient liquidity for your order size
-- **Monitor News**: Stay informed about events that may affect prices
+#### Análise de Mercado
+- **Estude o Livro de Ordens**: Analise a pressão de compra/venda atual
+- **Verifique o Histórico do Mercado**: Revise os movimentos recentes de preços
+- **Avalie a Liquidez**: Garanta liquidez suficiente para o tamanho da sua ordem
+- **Monitore Notícias**: Mantenha-se informado sobre eventos que possam afetar os preços
 
-#### Timing Considerations
-- **Market Hours**: Consider when markets are most active
-- **Event Timeline**: Factor in time until event resolution
-- **Volatility Periods**: Adjust strategy during high volatility
-- **News Events**: Be aware of scheduled announcements
+#### Considerações de Tempo
+- **Horário do Mercado**: Considere quando os mercados estão mais ativos
+- **Cronograma do Evento**: Fatore o tempo até a resolução do evento
+- **Períodos de Volatilidade**: Ajuste a estratégia durante alta volatilidade
+- **Eventos de Notícias**: Esteja ciente de anúncios programados
 
-### Risk Management
+### Gestão de Risco
 
-#### Position Sizing
-- **Start Small**: Begin with smaller position sizes
-- **Gradual Increase**: Increase position sizes as you gain experience
-- **Diversification**: Don't put all funds in a single event
-- **Capital Preservation**: Protect your trading capital
+#### Dimensionamento de Posição
+- **Comece Pequeno**: Comece com tamanhos de posição menores
+- **Aumento Gradual**: Aumente os tamanhos das posições à medida que ganha experiência
+- **Diversificação**: Não coloque todos os fundos em um único evento
+- **Preservação de Capital**: Proteja seu capital de negociação
 
-#### Order Hygiene
-- **Regular Review**: Regularly review and update open orders
-- **Stale Orders**: Cancel orders that are no longer relevant
-- **Price Validation**: Ensure order prices reflect current market conditions
-- **Order Cleanup**: Maintain a clean and organized order book
+#### Higiene de Ordem
+- **Revisão Regular**: Revise e atualize regularmente as ordens abertas
+- **Ordens Obsoletas**: Cancele ordens que não são mais relevantes
+- **Validação de Preço**: Garanta que os preços das ordens reflitam as condições atuais do mercado
+- **Limpeza de Ordem**: Mantenha um livro de ordens limpo e organizado
 
-## Common Issues and Solutions
+## Problemas Comuns e Soluções
 
-### Order Execution Issues
+### Problemas de Execução de Ordem
 
-#### Orders Not Filling
-- **Price Too Aggressive**: Your limit price may be too far from market
-- **Low Liquidity**: Insufficient liquidity at your price level
-- **Market Movement**: Market moved away from your order price
-- **Solution**: Adjust price closer to current market levels
+#### Ordens Não Preenchendo
+- **Preço Muito Agressivo**: Seu preço limite pode estar muito longe do mercado
+- **Baixa Liquidez**: Liquidez insuficiente no seu nível de preço
+- **Movimento do Mercado**: O mercado se afastou do preço da sua ordem
+- **Solução**: Ajuste o preço para mais perto dos níveis atuais do mercado
 
-#### Partial Fills
-- **Limited Liquidity**: Not enough liquidity to fill entire order
-- **Large Order Size**: Order too large for current market depth
-- **Solution**: Break large orders into smaller chunks
+#### Preenchimentos Parciais
+- **Liquidez Limitada**: Liquidez insuficiente para preencher toda a ordem
+- **Tamanho Grande da Ordem**: Ordem muito grande para a profundidade atual do mercado
+- **Solução**: Quebre grandes ordens em pedaços menores
 
-### Technical Issues
+### Problemas Técnicos
 
-#### Transaction Failures
-- **Insufficient Gas**: Increase gas limit for complex transactions
-- **Network Congestion**: Wait for lower network activity periods
-- **Wallet Issues**: Ensure wallet is properly connected and funded
-- **Solution**: Check gas settings and wallet connectivity
+#### Falhas de Transação
+- **Gás Insuficiente**: Aumente o limite de gás para transações complexas
+- **Congestionamento de Rede**: Aguarde períodos de menor atividade de rede
+- **Problemas de Carteira**: Garanta que a carteira esteja conectada e financiada corretamente
+- **Solução**: Verifique as configurações de gás e a conectividade da carteira
 
-#### Order Book Delays
-- **Network Latency**: Internet connection delays
-- **Platform Load**: High platform usage during peak times
-- **Solution**: Refresh page or wait for system to update
+#### Atrasos no Livro de Ordens
+- **Latência de Rede**: Atrasos na conexão com a internet
+- **Carga da Plataforma**: Alto uso da plataforma durante horários de pico
+- **Solução**: Atualize a página ou aguarde a atualização do sistema
 
-## Trading Psychology
+## Psicologia de Negociação
 
-### Emotional Management
-- **Stay Disciplined**: Stick to your trading plan
-- **Avoid FOMO**: Don't chase prices due to fear of missing out
-- **Manage Greed**: Take profits when targets are reached
-- **Control Fear**: Don't panic during market volatility
+### Gestão Emocional
+- **Mantenha a Disciplina**: Siga seu plano de negociação
+- **Evite FOMO**: Não persiga preços devido ao medo de perder
+- **Gerencie a Ganância**: Realize lucros quando as metas forem atingidas
+- **Controle o Medo**: Não entre em pânico durante a volatilidade do mercado
 
-### Learning and Improvement
-- **Keep Records**: Maintain detailed trading logs
-- **Analyze Performance**: Regular review of trading results
-- **Learn from Mistakes**: Identify and learn from trading errors
-- **Continuous Education**: Stay informed about market developments
+### Aprendizado e Melhoria
+- **Mantenha Registros**: Mantenha registros de negociação detalhados
+- **Analise o Desempenho**: Revisão regular dos resultados de negociação
+- **Aprenda com os Erros**: Identifique e aprenda com erros de negociação
+- **Educação Contínua**: Mantenha-se informado sobre os desenvolvimentos do mercado
 
-## Future Enhancements
+## Melhorias Futuras
 
-### Advanced Order Types
-- **Stop Orders**: Automatic order triggers at specific price levels
-- **Iceberg Orders**: Hide large order sizes from public view
-- **Time-based Orders**: Orders with specific time-based conditions
-- **Conditional Orders**: Orders triggered by specific market conditions
+### Tipos de Ordem Avançados
+- **Stop Orders**: Disparadores de ordem automáticos em níveis de preço específicos
+- **Iceberg Orders**: Oculte grandes tamanhos de ordem da visão pública
+- **Time-based Orders**: Ordens com condições específicas baseadas no tempo
+- **Conditional Orders**: Ordens disparadas por condições de mercado específicas
 
-### Improved User Experience
-- **Mobile Trading**: Enhanced mobile trading interface
-- **Order Templates**: Save and reuse common order configurations
-- **Advanced Charts**: Integrated charting and technical analysis tools
-- **Social Trading**: Follow and copy successful traders
+### Experiência do Usuário Aprimorada
+- **Negociação Móvel**: Interface de negociação móvel aprimorada
+- **Modelos de Ordem**: Salve e reutilize configurações de ordem comuns
+- **Gráficos Avançados**: Ferramentas de análise técnica e gráficos integrados
+- **Social Trading**: Siga e copie traders de sucesso
 
-### AI Integration
-- **Smart Order Routing**: AI-optimized order execution
-- **Predictive Analytics**: AI-powered market predictions
-- **Risk Assessment**: Automated risk analysis and alerts
-- **Portfolio Optimization**: AI-assisted portfolio management
+### Integração de IA
+- **Smart Order Routing**: Execução de ordem otimizada por IA
+- **Predictive Analytics**: Previsões de mercado alimentadas por IA
+- **Avaliação de Risco**: Análise de risco e alertas automatizados
+- **Otimização de Portfólio**: Gestão de portfólio assistida por IA
 
 ---
 
-*For the latest information on limit orders and trading features, please check our official announcements.* 
+*Para as informações mais recentes sobre ordens limitadas e recursos de negociação, verifique nossos anúncios oficiais.*

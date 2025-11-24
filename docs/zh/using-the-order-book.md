@@ -1,40 +1,37 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 使用订单簿 (Using the Order Book)
 
-# Using the Order Book
+## 概述
 
-## Overview
+订单簿是 YC365 交易系统的核心，提供市场深度、流动性和交易活动的实时可见性。了解如何有效阅读和使用订单簿对于在我们的预测市场平台上成功交易至关重要。
 
-The order book is the heart of YC365's trading system, providing real-time visibility into market depth, liquidity, and trading activity. Understanding how to read and use the order book effectively is essential for successful trading on our prediction market platform.
+## 什么是订单簿？
 
-## What is an Order Book?
+### 定义
+订单簿是特定预测市场条件下所有买单和卖单的实时、持续更新的列表，按价格水平组织。它显示市场深度，帮助交易者就下单和执行做出明智的决定。
 
-### Definition
-An order book is a real-time, continuously updated list of all buy and sell orders for a specific prediction market condition, organized by price level. It shows market depth and helps traders make informed decisions about order placement and execution.
+### 核心组成部分
+- **买方 (Bid Side)**：所有买单（愿意以指定价格购买的买家）
+- **卖方 (Ask Side)**：所有卖单（愿意以指定价格出售的卖家）
+- **价差 (Spread)**：最高买入价和最低卖出价之间的差额
+- **市场深度**：每个价格水平的订单数量
 
-### Core Components
-- **Bid Side**: All buy orders (buyers willing to purchase at specified prices)
-- **Ask Side**: All sell orders (sellers willing to sell at specified prices)
-- **Spread**: The difference between the highest bid and lowest ask prices
-- **Market Depth**: The quantity of orders at each price level
+### 显示的信息
+- **价格水平**：存在订单的所有价格点
+- **订单数量**：每个价格水平的总代币数量
+- **订单计数**：每个价格水平的单独订单数量
+- **时间优先**：每个价格水平内的订单顺序
 
-### Information Displayed
-- **Price Levels**: All price points where orders exist
-- **Order Quantities**: Total token quantity at each price level
-- **Order Count**: Number of individual orders at each price level
-- **Time Priority**: Order sequence within each price level
+## 订单簿布局
 
-## Order Book Layout
+![显示价格水平、份额数量和总深度的订单簿视图](../img/yc365/order-book.png)
 
-![Order book view displaying price levels, share quantities, and total depth](../img/yc365/order-book.png)
+*真实的 YC365 市场示例：订单簿选项卡显示实时买/卖盘、累计深度和快速交易预设。*
 
-*Real YC365 market example: the order book tab shows live bids/asks, cumulative depth, and quick trade presets.*
+### 视觉结构
 
-### Visual Structure
-
-#### Bid Side (Buy Orders)
+#### 买方 (买单)
 ```
-Price (USDT) | Quantity | Total | Progress Bar
+价格 (USDT) | 数量     | 总计     | 进度条
 0.68        | 1,250    | 1,250 | ████████░░
 0.67        | 2,100    | 3,350 | ████████████░░
 0.66        | 1,800    | 5,150 | ██████████████░░
@@ -42,9 +39,9 @@ Price (USDT) | Quantity | Total | Progress Bar
 0.64        | 1,500    | 9,850 | ██████████████████████░░
 ```
 
-#### Ask Side (Sell Orders)
+#### 卖方 (卖单)
 ```
-Price (USDT) | Quantity | Total | Progress Bar
+价格 (USDT) | 数量     | 总计     | 进度条
 0.69        | 1,800    | 1,800 | ████████████░░
 0.70        | 2,500    | 4,300 | ████████████████░░
 0.71        | 1,200    | 5,500 | ██████████████████░░
@@ -52,316 +49,316 @@ Price (USDT) | Quantity | Total | Progress Bar
 0.73        | 1,600    | 9,900 | ██████████████████████████░░
 ```
 
-### Color Coding
-- **Green/Blue**: Bid side (buy orders)
-- **Red/Orange**: Ask side (sell orders)
-- **Highlighted**: Your own orders
-- **Intensity**: Darker colors indicate larger quantities
-
-### Data Columns
-
-#### Price Column
-- **Bid Prices**: Displayed in descending order (highest to lowest)
-- **Ask Prices**: Displayed in ascending order (lowest to highest)
-- **Price Precision**: Displayed to 2 decimal places
-- **Best Prices**: Highlighted or emphasized
-
-#### Quantity Column
-- **Individual Levels**: Shows total quantity at each specific price
-- **Aggregated Orders**: Combines multiple orders at the same price
-- **Dynamic Updates**: Real-time updates as orders are placed/cancelled
-- **Unit Display**: Shown in token units
-
-#### Total Column
-- **Cumulative Quantity**: Running total from best price to current level
-- **Market Depth**: Indicates total liquidity available
-- **Liquidity Assessment**: Helps assess market depth
-- **Order Impact**: Shows potential impact of large orders
-
-## Reading the Order Book
-
-### Key Metrics
-
-#### Spread Analysis
-- **Bid-Ask Spread**: Difference between best bid and best ask
-- **Tight Spread**: Indicates active, liquid market
-- **Wide Spread**: May indicate low liquidity or high volatility
-- **Percentage Spread**: Spread as percentage of mid-price
-
-#### Market Depth
-- **Depth Chart**: Visual representation of cumulative orders
-- **Liquidity Zones**: Price levels with significant order concentration
-- **Support/Resistance**: Price levels with large order quantities
-- **Imbalance**: Difference between bid and ask side depth
-
-#### Order Flow
-- **Order Additions**: New orders being added to the book
-- **Order Cancellations**: Orders being removed from the book
-- **Order Modifications**: Changes to existing orders
-- **Fill Activity**: Orders being executed and removed
-
-### Market Sentiment Indicators
-
-#### Bid-Ask Ratio
-- **Balanced Market**: Similar quantities on both sides
-- **Bullish Sentiment**: More buy orders than sell orders
-- **Bearish Sentiment**: More sell orders than buy orders
-- **Momentum Shifts**: Changes in bid-ask balance over time
-
-#### Price Level Analysis
-- **Order Concentration**: Where most orders are clustered
-- **Gap Analysis**: Price levels with no orders
-- **Wall Analysis**: Large orders that may act as price barriers
-- **Distribution**: How orders are spread across price levels
-
-## Order Book Strategies
-
-### Order Placement Strategies
-
-#### Market Making
-- **Bid-Ask Spread**: Place orders on both sides to capture spread
-- **Tight Spreads**: Place orders close to current market price
-- **Size Management**: Manage order sizes based on risk tolerance
-- **Inventory Control**: Balance inventory to avoid excessive exposure
-
-#### Taking Liquidity
-- **Market Orders**: Execute immediately against existing orders
-- **Aggressive Limits**: Place limit orders that immediately execute
-- **Price Impact**: Consider impact of large orders on market price
-- **Timing**: Execute during periods of good liquidity
-
-#### Passive Trading
-- **Join the Queue**: Place orders at existing price levels
-- **Better Prices**: Offer slightly better prices than existing orders
-- **Patience**: Wait for market to come to your price
-- **Queue Position**: Monitor your position in the order queue
-
-### Advanced Strategies
-
-#### Iceberg Orders
-- **Hidden Quantity**: Show only small portion of large order
-- **Market Impact**: Reduce market impact of large orders
-- **Stealth Trading**: Avoid revealing true order size
-- **Implementation**: Break large orders into smaller visible portions
-
-#### Order Book Scalping
-- **Quick Profits**: Capture small price movements
-- **Spread Trading**: Buy at bid, sell at ask
-- **High Frequency**: Multiple small trades throughout the day
-- **Risk Management**: Tight risk controls and position limits
-
-#### Momentum Trading
-- **Order Flow**: Follow direction of order flow
-- **Breakthrough**: Trade when price breaks through significant levels
-- **Volume Confirmation**: Confirm moves with order book volume
-- **Trend Following**: Align trades with overall market direction
-
-## Real-Time Features
-
-### Live Updates
-
-#### Dynamic Refresh
-- **Real-time Data**: Order book updates in real-time
-- **Microsecond Updates**: Near-instantaneous order book changes
-- **Conflict Resolution**: Handle simultaneous order updates
-- **Data Integrity**: Ensure accurate and consistent data display
-
-#### Order Tracking
-- **Your Orders**: Highlight your own orders in the book
-- **Order Status**: Track status of your orders in real-time
-- **Queue Position**: Monitor your position in price queues
-- **Fill Notifications**: Instant notifications when orders fill
-
-### Interactive Features
-
-#### Click Trading
-- **One-Click Orders**: Place orders by clicking on price levels
-- **Quick Order Entry**: Rapid order placement interface
-- **Size Presets**: Predefined order sizes for quick trading
-- **Confirmation**: Optional confirmation for click trading
-
-#### Order Modification
-- **Drag and Drop**: Move orders to different price levels
-- **Quick Cancel**: Cancel orders with single click
-- **Bulk Operations**: Cancel all orders or orders for specific side
-- **Hotkeys**: Keyboard shortcuts for common operations
-
-### Filtering and Customization
-
-#### Display Options
-- **Aggregation Levels**: Choose price aggregation granularity
-- **Depth Levels**: Select number of price levels to display
-- **Order Size Filter**: Filter orders below certain size threshold
-- **Color Schemes**: Customize colors for better visibility
-
-#### Advanced Filters
-- **Order Age**: Filter orders by how long they've been in the book
-- **Order Size**: Show only orders above certain size
-- **User Filters**: Hide or highlight specific user orders
-- **Time Filters**: Show orders from specific time periods
-
-## Order Book Analysis Tools
-
-### Built-in Analytics
-
-#### Depth Chart
-- **Visual Representation**: Graphical view of order book depth
-- **Cumulative View**: Shows cumulative quantity at each price
-- **Bid-Ask Visualization**: Clear visualization of bid-ask spread
-- **Interactive Elements**: Click on chart to place orders
-
-#### Market Statistics
-- **Spread Statistics**: Current and average spread metrics
-- **Volume Analysis**: Order book volume and turnover
-- **Price Distribution**: Distribution of orders across price levels
-- **Liquidity Metrics**: Various liquidity measurement indicators
-
-#### Historical Analysis
-- **Order Book History**: Historical order book snapshots
-- **Spread History**: Historical bid-ask spread data
-- **Volume Trends**: Order book volume trends over time
-- **Market Evolution**: How order book structure evolves
-
-### Third-Party Integration
-
-#### API Access
-- **Real-time Feed**: Real-time order book data via API
-- **Historical Data**: Access to historical order book data
-- **Custom Analytics**: Build custom analysis tools
-- **Algorithmic Trading**: Support for algorithmic trading systems
-
-#### Data Export
-- **CSV Export**: Export order book data to CSV format
-- **JSON Format**: Structured data in JSON format
-- **Time Series**: Time-series order book data
-- **Snapshot Data**: Point-in-time order book snapshots
-
-## Mobile Order Book
-
-### Mobile Interface
-
-#### Responsive Design
-- **Touch Interface**: Optimized for touch interaction
-- **Swipe Navigation**: Swipe between different views
-- **Pinch Zoom**: Zoom in/out for better visibility
-- **Portrait/Landscape**: Support for both orientations
-
-#### Simplified View
-- **Essential Information**: Focus on most important data
-- **Condensed Layout**: Efficient use of limited screen space
-- **Quick Actions**: Easy access to common trading actions
-- **Gesture Controls**: Intuitive gesture-based controls
-
-### Mobile-Specific Features
-
-#### Quick Trading
-- **Simplified Order Entry**: Streamlined order placement
-- **Preset Sizes**: Common order sizes for quick selection
-- **Market Price**: One-tap market price trading
-- **Voice Commands**: Optional voice command integration
-
-#### Alerts and Notifications
-- **Price Alerts**: Notifications when price reaches levels
-- **Order Alerts**: Notifications for order fills and cancellations
-- **Market Alerts**: Notifications for significant market changes
-- **Custom Alerts**: User-defined custom alert conditions
-
-## Order Book Best Practices
-
-### Reading Best Practices
-
-#### Focus Areas
-- **Best Bid/Ask**: Always monitor the best prices
-- **Spread Analysis**: Regular spread monitoring
-- **Depth Assessment**: Evaluate market depth before trading
-- **Order Flow**: Watch for changes in order flow patterns
-
-#### Common Mistakes
-- **Ignoring Depth**: Placing large orders without checking depth
-- **Spread Neglect**: Not considering spread when placing orders
-- **Stale Data**: Acting on outdated order book information
-- **Size Mismanagement**: Poor order size relative to market depth
-
-### Trading Best Practices
-
-#### Order Placement
-- **Market Assessment**: Assess market conditions before placing orders
-- **Size Appropriateness**: Match order size to market liquidity
-- **Price Reasonableness**: Place orders at reasonable price levels
-- **Time Consideration**: Consider optimal timing for order placement
-
-#### Risk Management
-- **Position Limits**: Maintain appropriate position limits
-- **Stop-Loss Planning**: Plan exit strategies for adverse moves
-- **Diversification**: Don't concentrate all orders in one market
-- **Liquidity Management**: Ensure adequate liquidity for exits
-
-## Troubleshooting
-
-### Common Issues
-
-#### Display Problems
-- **Refresh Issues**: Order book not updating properly
-- **Performance**: Slow order book updates
-- **Visual Glitches**: Display artifacts or rendering issues
-- **Browser Compatibility**: Issues with specific browsers
-
-#### Data Issues
-- **Missing Orders**: Orders not appearing in book
-- **Incorrect Prices**: Wrong price information displayed
-- **Outdated Data**: Stale or delayed order book data
-- **Synchronization**: Order book out of sync with actual state
-
-### Solutions
-
-#### Technical Solutions
-- **Browser Refresh**: Refresh page to reload order book
-- **Cache Clear**: Clear browser cache and cookies
-- **Connection Check**: Verify internet connection stability
-- **Browser Update**: Ensure browser is up to date
-
-#### Support Resources
-- **Help Documentation**: Comprehensive help documentation
-- **Video Tutorials**: Video guides for order book usage
-- **Community Forum**: Community support and discussions
-- **Customer Support**: Direct support for technical issues
-
-## Future Enhancements
-
-### Planned Features
-
-#### Advanced Visualization
-- **3D Order Book**: Three-dimensional order book visualization
-- **Heat Maps**: Order book heat map displays
-- **Flow Visualization**: Animated order flow visualization
-- **VR/AR Support**: Virtual and augmented reality support
-
-#### AI Integration
-- **Smart Alerts**: AI-powered intelligent alerts
-- **Pattern Recognition**: Automatic pattern recognition
-- **Predictive Analytics**: AI-based market predictions
-- **Personalized Views**: AI-customized order book views
-
-#### Enhanced Analytics
-- **Machine Learning**: ML-based order book analysis
-- **Sentiment Analysis**: Order book sentiment indicators
-- **Network Analysis**: Order book network effects
-- **Cross-Market Analysis**: Multi-market order book analysis
-
-### Technology Improvements
-
-#### Performance Optimization
-- **Faster Updates**: Even faster real-time updates
-- **Reduced Latency**: Lower latency order book data
-- **Better Compression**: Improved data compression
-- **Edge Computing**: Edge computing for better performance
-
-#### Integration Enhancements
-- **DeFi Integration**: Integration with other DeFi protocols
-- **Cross-Platform**: Better cross-platform compatibility
-- **API Improvements**: Enhanced API functionality
-- **Webhook Support**: Real-time webhook notifications
+### 颜色编码
+- **绿色/蓝色**：买方（买单）
+- **红色/橙色**：卖方（卖单）
+- **高亮显示**：您自己的订单
+- **强度**：颜色越深表示数量越大
+
+### 数据列
+
+#### 价格列
+- **买入价**：按降序显示（从高到低）
+- **卖出价**：按升序显示（从低到高）
+- **价格精度**：显示到小数点后 2 位
+- **最佳价格**：高亮或强调显示
+
+#### 数量列
+- **单独水平**：显示每个特定价格的总数量
+- **聚合订单**：合并同一价格的多个订单
+- **动态更新**：随着下单/取消实时更新
+- **单位显示**：以代币单位显示
+
+#### 总计列
+- **累计数量**：从最佳价格到当前水平的累计总数
+- **市场深度**：指示可用的总流动性
+- **流动性评估**：帮助评估市场深度
+- **订单影响**：显示大额订单的潜在影响
+
+## 阅读订单簿
+
+### 关键指标
+
+#### 价差分析
+- **买卖价差**：最佳买价与最佳卖价之间的差异
+- **窄价差**：表明市场活跃、流动性好
+- **宽价差**：可能表明流动性低或波动性高
+- **百分比价差**：价差占中间价的百分比
+
+#### 市场深度
+- **深度图**：累计订单的视觉表示
+- **流动性区域**：订单集中度显著的价格水平
+- **支撑/阻力**：具有大量订单的价格水平
+- **不平衡**：买方和卖方深度之间的差异
+
+#### 订单流
+- **新增订单**：添加到订单簿的新订单
+- **取消订单**：从订单簿中移除的订单
+- **修改订单**：现有订单的变更
+- **成交活动**：被执行并移除的订单
+
+### 市场情绪指标
+
+#### 买卖比率
+- **平衡市场**：双方数量相似
+- **看涨情绪**：买单多于卖单
+- **看跌情绪**：卖单多于买单
+- **动量转换**：买卖平衡随时间的变化
+
+#### 价格水平分析
+- **订单集中**：大多数订单聚集的地方
+- **缺口分析**：没有订单的价格水平
+- **墙分析**：可能充当价格障碍的大额订单
+- **分布**：订单如何在价格水平上分布
+
+## 订单簿策略
+
+### 下单策略
+
+#### 做市
+- **买卖价差**：在双方下单以捕获价差
+- **窄价差**：在接近当前市场价格处下单
+- **规模管理**：根据风险承受能力管理订单规模
+- **库存控制**：平衡库存以避免过度敞口
+
+#### 获取流动性
+- **市价单**：针对现有订单立即执行
+- **激进限价**：下达立即执行的限价单
+- **价格影响**：考虑大额订单对市场价格的影响
+- **时机**：在流动性好的时期执行
+
+#### 被动交易
+- **加入队列**：在现有价格水平下单
+- **更优价格**：提供比现有订单稍好的价格
+- **耐心**：等待市场达到您的价格
+- **队列位置**：监控您在订单队列中的位置
+
+### 进阶策略
+
+#### 冰山单
+- **隐藏数量**：仅显示大额订单的一小部分
+- **市场影响**：减少大额订单的市场影响
+- **隐形交易**：避免暴露真实订单规模
+- **实施**：将大额订单分解为较小的可见部分
+
+#### 订单簿剥头皮
+- **快速利润**：捕获微小的价格变动
+- **价差交易**：在买价买入，在卖价卖出
+- **高频**：全天进行多次小额交易
+- **风险管理**：严格的风险控制和头寸限制
+
+#### 动量交易
+- **订单流**：跟随订单流的方向
+- **突破**：当价格突破重要水平时交易
+- **成交量确认**：通过订单簿成交量确认移动
+- **趋势跟随**：使交易与整体市场方向一致
+
+## 实时功能
+
+### 实时更新
+
+#### 动态刷新
+- **实时数据**：订单簿实时更新
+- **微秒级更新**：近乎瞬时的订单簿变化
+- **冲突解决**：处理同时发生的订单更新
+- **数据完整性**：确保准确一致的数据显示
+
+#### 订单跟踪
+- **您的订单**：在订单簿中高亮显示您自己的订单
+- **订单状态**：实时跟踪您的订单状态
+- **队列位置**：监控您在价格队列中的位置
+- **成交通知**：订单成交时的即时通知
+
+### 交互功能
+
+#### 点击交易
+- **一键下单**：通过点击价格水平下单
+- **快速订单输入**：快速下单界面
+- **规模预设**：用于快速交易的预定义订单规模
+- **确认**：点击交易的可选确认
+
+#### 订单修改
+- **拖放**：将订单移动到不同价格水平
+- **快速取消**：单击取消订单
+- **批量操作**：取消所有订单或特定方向的订单
+- **热键**：常用操作的键盘快捷键
+
+### 筛选和自定义
+
+#### 显示选项
+- **聚合级别**：选择价格聚合粒度
+- **深度级别**：选择要显示的价格水平数量
+- **订单规模过滤器**：过滤低于特定规模阈值的订单
+- **配色方案**：自定义颜色以获得更好的可见性
+
+#### 高级过滤器
+- **订单年龄**：按订单在订单簿中的时间过滤
+- **订单规模**：仅显示高于特定规模的订单
+- **用户过滤器**：隐藏或高亮特定用户的订单
+- **时间过滤器**：显示特定时间段的订单
+
+## 订单簿分析工具
+
+### 内置分析
+
+#### 深度图
+- **视觉表示**：订单簿深度的图形视图
+- **累计视图**：显示每个价格的累计数量
+- **买卖可视化**：买卖价差的清晰可视化
+- **交互元素**：点击图表下单
+
+#### 市场统计
+- **价差统计**：当前和平均价差指标
+- **成交量分析**：订单簿成交量和周转率
+- **价格分布**：订单在价格水平上的分布
+- **流动性指标**：各种流动性测量指标
+
+#### 历史分析
+- **订单簿历史**：历史订单簿快照
+- **价差历史**：历史买卖价差数据
+- **成交量趋势**：随时间变化的订单簿成交量趋势
+- **市场演变**：订单簿结构如何演变
+
+### 第三方集成
+
+#### API 访问
+- **实时源**：通过 API 获取实时订单簿数据
+- **历史数据**：访问历史订单簿数据
+- **自定义分析**：构建自定义分析工具
+- **算法交易**：支持算法交易系统
+
+#### 数据导出
+- **CSV 导出**：将订单簿数据导出为 CSV 格式
+- **JSON 格式**：JSON 格式的结构化数据
+- **时间序列**：时间序列订单簿数据
+- **快照数据**：特定时间点的订单簿快照
+
+## 移动端订单簿
+
+### 移动界面
+
+#### 响应式设计
+- **触摸界面**：针对触摸交互进行了优化
+- **滑动导航**：在不同视图之间滑动
+- **捏合缩放**：放大/缩小以获得更好的可见性
+- **纵向/横向**：支持两种方向
+
+#### 简化视图
+- **基本信息**：专注于最重要的数据
+- **紧凑布局**：有效利用有限的屏幕空间
+- **快速操作**：轻松访问常用交易操作
+- **手势控制**：直观的手势控制
+
+### 移动端特定功能
+
+#### 快速交易
+- **简化订单输入**：简化的下单流程
+- **预设规模**：用于快速选择的常用订单规模
+- **市价**：一键市价交易
+- **语音命令**：可选的语音命令集成
+
+#### 警报和通知
+- **价格警报**：价格达到水平时的通知
+- **订单警报**：订单成交和取消的通知
+- **市场警报**：重大市场变化的通知
+- **自定义警报**：用户定义的自定义警报条件
+
+## 订单簿最佳实践
+
+### 阅读最佳实践
+
+#### 关注领域
+- **最佳买/卖价**：始终监控最佳价格
+- **价差分析**：定期价差监控
+- **深度评估**：交易前评估市场深度
+- **订单流**：观察订单流模式的变化
+
+#### 常见错误
+- **忽略深度**：在不检查深度的情况下下达大额订单
+- **忽视价差**：下单时不考虑价差
+- **陈旧数据**：根据过时的订单簿信息行动
+- **规模管理不当**：相对于市场深度的订单规模不当
+
+### 交易最佳实践
+
+#### 下单
+- **市场评估**：下单前评估市场条件
+- **规模适当性**：使订单规模与市场流动性相匹配
+- **价格合理性**：在合理的价格水平下单
+- **时间考虑**：考虑下单的最佳时机
+
+#### 风险管理
+- **头寸限制**：维持适当的头寸限制
+- **止损规划**：为不利变动规划退出策略
+- **分散投资**：不要将所有订单集中在一个市场
+- **流动性管理**：确保有足够的流动性用于退出
+
+## 故障排除
+
+### 常见问题
+
+#### 显示问题
+- **刷新问题**：订单簿未正确更新
+- **性能**：订单簿更新缓慢
+- **视觉故障**：显示伪影或渲染问题
+- **浏览器兼容性**：特定浏览器的问题
+
+#### 数据问题
+- **丢失订单**：订单未出现在订单簿中
+- **错误价格**：显示错误的价格信息
+- **过时数据**：陈旧或延迟的订单簿数据
+- **同步**：订单簿与实际状态不同步
+
+### 解决方案
+
+#### 技术解决方案
+- **浏览器刷新**：刷新页面以重新加载订单簿
+- **清除缓存**：清除浏览器缓存和 Cookie
+- **连接检查**：验证互联网连接稳定性
+- **浏览器更新**：确保浏览器是最新版本
+
+#### 支持资源
+- **帮助文档**：综合帮助文档
+- **视频教程**：订单簿使用视频指南
+- **社区论坛**：社区支持和讨论
+- **客户支持**：针对技术问题的直接支持
+
+## 未来增强
+
+### 计划功能
+
+#### 高级可视化
+- **3D 订单簿**：三维订单簿可视化
+- **热图**：订单簿热图显示
+- **流可视化**：动画订单流可视化
+- **VR/AR 支持**：虚拟和增强现实支持
+
+#### AI 集成
+- **智能警报**：AI 驱动的智能警报
+- **模式识别**：自动模式识别
+- **预测分析**：基于 AI 的市场预测
+- **个性化视图**：AI 定制的订单簿视图
+
+#### 增强分析
+- **机器学习**：基于 ML 的订单簿分析
+- **情绪分析**：订单簿情绪指标
+- **网络分析**：订单簿网络效应
+- **跨市场分析**：多市场订单簿分析
+
+### 技术改进
+
+#### 性能优化
+- **更快更新**：更快的实时更新
+- **降低延迟**：更低延迟的订单簿数据
+- **更好压缩**：改进的数据压缩
+- **边缘计算**：用于更好性能的边缘计算
+
+#### 集成增强
+- **DeFi 集成**：与其他 DeFi 协议集成
+- **跨平台**：更好的跨平台兼容性
+- **API 改进**：增强的 API 功能
+- **Webhook 支持**：实时 Webhook 通知
 
 ---
 
-*For the latest information on order book features and updates, please check our official announcements.* 
+*有关订单簿功能和更新的最新信息，请查看我们的官方公告。*

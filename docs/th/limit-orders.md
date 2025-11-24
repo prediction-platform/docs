@@ -1,287 +1,284 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# คำสั่ง Limit
 
-# Limit Orders
+## ภาพรวม
 
-## Overview
+คำสั่ง Limit เป็นกลไกการซื้อขายหลักบน YC365 ซึ่งช่วยให้ผู้ใช้สามารถระบุราคาที่แน่นอนที่พวกเขาต้องการซื้อหรือขายโทเค็น YES/NO สำหรับเหตุการณ์ตลาดการทำนาย สิ่งนี้ช่วยให้ผู้ซื้อขายสามารถควบคุมจุดเข้าและออกได้อย่างแม่นยำ ในขณะที่มั่นใจได้ถึงการค้นพบราคาที่โปร่งใสและยุติธรรม
 
-Limit orders are the primary trading mechanism on YC365, allowing users to specify the exact price at which they want to buy or sell YES/NO tokens for prediction market events. This gives traders precise control over their entry and exit points while ensuring transparent and fair price discovery.
+## คำสั่ง Limit คืออะไร?
 
-## What are Limit Orders?
+### คำจำกัดความ
+คำสั่ง Limit คือคำสั่งให้ซื้อหรือขายโทเค็นที่ราคาที่ระบุหรือดีกว่า แตกต่างจากคำสั่ง Market ที่ดำเนินการทันทีที่ราคาตลาดปัจจุบัน คำสั่ง Limit จะดำเนินการเมื่อตลาดถึงระดับราคาที่คุณระบุเท่านั้น
 
-### Definition
-A limit order is an instruction to buy or sell tokens at a specific price or better. Unlike market orders that execute immediately at the current market price, limit orders will only execute when the market reaches your specified price level.
+### คุณสมบัติหลัก
+- **การควบคุมราคา**: ตั้งราคาที่แน่นอนที่คุณยินดีจ่ายหรือยอมรับ
+- **ระยะเวลาที่มีผล**: คำสั่งยังคงใช้งานได้จนกว่าจะถูกจับคู่ ยกเลิก หรือหมดอายุ
+- **ไม่มี Slippage**: ดำเนินการที่ราคาที่คุณระบุหรือดีกว่า
+- **ลำดับความสำคัญในคิว**: คำสั่งถูกจับคู่ตามลำดับความสำคัญของราคาและเวลา
 
-### Key Features
-- **Price Control**: Set the exact price you're willing to pay or accept
-- **Time in Force**: Orders remain active until filled, cancelled, or expired
-- **No Slippage**: Execute at your specified price or better
-- **Queue Priority**: Orders filled based on price-time priority
+## วิธีการทำงานของคำสั่ง Limit
 
-## How Limit Orders Work
+### ประเภทคำสั่ง
 
-### Order Types
+#### คำสั่งซื้อ Limit (Buy Limit)
+- **วัตถุประสงค์**: ซื้อโทเค็น YES หรือ NO ที่ราคาที่ระบุหรือต่ำกว่า
+- **การดำเนินการ**: จับคู่เมื่อราคาตลาดลดลงถึงหรือต่ำกว่าราคา Limit ของคุณ
+- **ตัวอย่าง**: วางคำสั่งซื้อโทเค็น YES ที่ 0.65 USDT เมื่อราคาปัจจุบันคือ 0.70 USDT
 
-#### Buy Limit Orders
-- **Purpose**: Purchase YES or NO tokens at or below a specified price
-- **Execution**: Fills when market price drops to or below your limit price
-- **Example**: Place a buy order for YES tokens at 0.65 USDT when current price is 0.70 USDT
+#### คำสั่งขาย Limit (Sell Limit)
+- **วัตถุประสงค์**: ขายโทเค็น YES หรือ NO ที่ราคาที่ระบุหรือสูงกว่า
+- **การดำเนินการ**: จับคู่เมื่อราคาตลาดเพิ่มขึ้นถึงหรือสูงกว่าราคา Limit ของคุณ
+- **ตัวอย่าง**: วางคำสั่งขายโทเค็น YES ที่ 0.75 USDT เมื่อราคาปัจจุบันคือ 0.70 USDT
 
-#### Sell Limit Orders
-- **Purpose**: Sell YES or NO tokens at or above a specified price
-- **Execution**: Fills when market price rises to or above your limit price
-- **Example**: Place a sell order for YES tokens at 0.75 USDT when current price is 0.70 USDT
+### การจับคู่คำสั่ง
 
-### Order Matching
+#### ลำดับความสำคัญของราคาและเวลา
+1. **ลำดับความสำคัญของราคา**: คำสั่งที่มีราคาดีกว่าจะถูกจับคู่ก่อน
+2. **ลำดับความสำคัญของเวลา**: ในบรรดาคำสั่งที่มีราคาเดียวกัน คำสั่งที่มาก่อนจะถูกจับคู่ก่อน
+3. **การจับคู่บางส่วน**: คำสั่งขนาดใหญ่อาจถูกจับคู่ในธุรกรรมย่อยหลายรายการ
 
-#### Price-Time Priority
-1. **Price Priority**: Orders with better prices get filled first
-2. **Time Priority**: Among orders at the same price, earlier orders get filled first
-3. **Partial Fills**: Large orders may be filled in multiple smaller transactions
+#### เครื่องมือจับคู่
+- **การประมวลผลแบบเรียลไทม์**: คำสั่งถูกประมวลผลทันทีที่ได้รับ
+- **การดำเนินการที่ยุติธรรม**: ไม่มีการปฏิบัติที่เป็นพิเศษสำหรับผู้ใช้รายใด
+- **การจับคู่ที่โปร่งใส**: กิจกรรม Order Book ทั้งหมดสามารถมองเห็นได้
 
-#### Matching Engine
-- **Real-time Processing**: Orders processed as soon as they're received
-- **Fair Execution**: No preferential treatment for any user
-- **Transparent Matching**: All order book activity is visible
+## การวางคำสั่ง Limit
 
-## Placing Limit Orders
+### กระบวนการทีละขั้นตอน
 
-### Step-by-Step Process
+#### 1. เลือกเหตุการณ์และเงื่อนไข
+- **เรียกดูเหตุการณ์**: ไปยังเหตุการณ์ที่คุณต้องการซื้อขาย
+- **เลือกเงื่อนไข**: เลือกเงื่อนไข/ผลลัพธ์ที่เฉพาะเจาะจง
+- **ทบทวนตลาด**: ตรวจสอบราคาปัจจุบันและความลึกของ Order Book
 
-#### 1. Select Event and Condition
-- **Browse Events**: Navigate to the event you want to trade
-- **Choose Condition**: Select the specific condition/outcome
-- **Review Market**: Check current prices and order book depth
+#### 2. เลือกประเภทโทเค็น
+- **โทเค็น YES**: ซื้อหากคุณเชื่อว่าผลลัพธ์จะเกิดขึ้น
+- **โทเค็น NO**: ซื้อหากคุณเชื่อว่าผลลัพธ์จะไม่เกิดขึ้น
+- **คู่โทเค็น**: แต่ละเงื่อนไขมีคู่โทเค็น YES/NO ที่สอดคล้องกัน
 
-#### 2. Choose Token Type
-- **YES Tokens**: Buy if you believe the outcome will occur
-- **NO Tokens**: Buy if you believe the outcome will not occur
-- **Token Pairs**: Each condition has corresponding YES/NO token pairs
+#### 3. ตั้งค่าพารามิเตอร์คำสั่ง
+- **ประเภทคำสั่ง**: เลือก "ซื้อ" หรือ "ขาย"
+- **จำนวนโทเค็น**: ระบุจำนวนโทเค็นที่คุณต้องการซื้อขาย
+- **ราคา Limit**: ตั้งราคาที่คุณต้องการต่อโทเค็น
+- **ทบทวนคำสั่ง**: ยืนยันรายละเอียดทั้งหมดก่อนส่ง
 
-#### 3. Set Order Parameters
-- **Order Type**: Select "Buy" or "Sell"
-- **Token Amount**: Specify how many tokens you want to trade
-- **Limit Price**: Set your desired price per token
-- **Order Review**: Confirm all details before submission
+#### 4. ส่งคำสั่ง
+- **ยืนยันในกระเป๋าเงิน**: อนุมัติธุรกรรมในกระเป๋าเงินของคุณ
+- **ล็อคสินทรัพย์**: สินทรัพย์ที่จำเป็นจะถูกล็อคใน smart contract
+- **ยืนยันคำสั่ง**: รับการยืนยันการวางคำสั่ง
 
-#### 4. Submit Order
-- **Wallet Confirmation**: Approve the transaction in your wallet
-- **Asset Lock**: Required assets are locked in the smart contract
-- **Order Confirmation**: Receive confirmation of order placement
+### พารามิเตอร์คำสั่ง
 
-### Order Parameters
+#### การตั้งค่าราคา
+- **ราคาขั้นต่ำ**: 0.01 USDT ต่อโทเค็น
+- **ราคาสูงสุด**: 0.99 USDT ต่อโทเค็น
+- **ส่วนเพิ่มราคา**: ส่วนเพิ่มขั้นต่ำ 0.01 USDT
+- **การกำหนดราคาแบบไดนามิก**: ราคาปรับอัตโนมัติตามกิจกรรมตลาด
 
-#### Price Settings
-- **Minimum Price**: 0.01 USDT per token
-- **Maximum Price**: 0.99 USDT per token
-- **Price Increments**: 0.01 USDT minimum increments
-- **Dynamic Pricing**: Prices automatically adjust based on market activity
+#### การตั้งค่าปริมาณ
+- **คำสั่งขั้นต่ำ**: ขนาดคำสั่งขั้นต่ำ 1 โทเค็น
+- **คำสั่งสูงสุด**: ไม่มีขีดจำกัดสูงสุด (ขึ้นอยู่กับสภาพคล่องที่มีอยู่)
+- **ตำแหน่งทศนิยม**: คำสั่งสามารถรวมจำนวนโทเค็นที่เป็นทศนิยมได้
+- **มูลค่ารวม**: คำนวณเป็น ราคา × จำนวน
 
-#### Quantity Settings
-- **Minimum Order**: 1 token minimum order size
-- **Maximum Order**: No maximum limit (subject to available liquidity)
-- **Decimal Places**: Orders can include decimal token amounts
-- **Total Value**: Calculated as Price × Quantity
+#### การตั้งค่าเวลา
+- **Good Till Cancelled (GTC)**: คำสั่งยังคงใช้งานได้จนกว่าจะถูกจับคู่หรือยกเลิก
+- **การหมดอายุของเหตุการณ์**: คำสั่งถูกยกเลิกอัตโนมัติเมื่อเหตุการณ์หมดอายุ
+- **การตัดรอบการซื้อขาย**: คำสั่งถูกยกเลิก 1 ชั่วโมงก่อนการตัดสินผลเหตุการณ์
 
-#### Time Settings
-- **Good Till Cancelled (GTC)**: Order remains active until filled or cancelled
-- **Event Expiration**: Orders automatically cancelled when event expires
-- **Trading Cutoff**: Orders cancelled 1 hour before event resolution
+## การจัดการคำสั่ง
 
-## Order Management
+### การดูคำสั่งของคุณ
 
-### Viewing Your Orders
+#### คำสั่งที่ใช้งานอยู่
+- **คำสั่งที่เปิดอยู่**: ดูคำสั่งที่ยังไม่ถูกจับคู่ทั้งหมด
+- **สถานะคำสั่ง**: ติดตามความคืบหน้าการดำเนินการคำสั่ง
+- **การจับคู่บางส่วน**: ตรวจสอบคำสั่งที่ถูกจับคู่บางส่วน
+- **ประวัติคำสั่ง**: ทบทวนคำสั่งในอดีตทั้งหมด
 
-#### Active Orders
-- **Open Orders**: View all unfilled orders
-- **Order Status**: Track order execution progress
-- **Partial Fills**: Monitor partially filled orders
-- **Order History**: Review all past orders
+#### ข้อมูลคำสั่ง
+- **รายละเอียดคำสั่ง**: ราคา, จำนวน, ประเภทโทเค็น, เวลา
+- **สถานะการจับคู่**: จับคู่แล้ว, จับคู่บางส่วน, หรือเปิดอยู่
+- **ปริมาณที่เหลือ**: จำนวนที่ยังรอการจับคู่
+- **ราคาเฉลี่ยที่จับคู่**: ราคาเฉลี่ยถ่วงน้ำหนักของส่วนที่ถูกจับคู่
 
-#### Order Information
-- **Order Details**: Price, quantity, token type, timestamp
-- **Fill Status**: Filled, partially filled, or open
-- **Remaining Quantity**: Amount still waiting to be filled
-- **Average Fill Price**: Weighted average price of filled portions
+### การแก้ไขคำสั่ง
 
-### Modifying Orders
+#### การยกเลิกคำสั่ง
+- **กระบวนการยกเลิก**: ยกเลิกคำสั่งผ่านอินเทอร์เฟซการซื้อขาย
+- **การคืนสินทรัพย์**: สินทรัพย์ที่ถูกล็อคจะถูกส่งคืนไปยังบัญชีของคุณ
+- **ผลทันที**: การยกเลิกมีผลทันที
+- **ไม่มีค่าธรรมเนียม**: ไม่มีการเรียกเก็บค่าธรรมเนียมสำหรับการยกเลิกคำสั่ง
 
-#### Order Cancellation
-- **Cancel Process**: Cancel orders through the trading interface
-- **Asset Release**: Locked assets returned to your account
-- **Immediate Effect**: Cancellation takes effect immediately
-- **No Fees**: No fees charged for order cancellation
+#### การอัปเดตคำสั่ง
+- **การเปลี่ยนแปลงราคา**: ยกเลิกและแทนที่ด้วยราคาใหม่
+- **การเปลี่ยนแปลงปริมาณ**: ยกเลิกและแทนที่ด้วยปริมาณใหม่
+- **ไม่มีการแก้ไขโดยตรง**: คำสั่งไม่สามารถแก้ไขโดยตรงได้
 
-#### Order Updates
-- **Price Changes**: Cancel and replace with new price
-- **Quantity Changes**: Cancel and replace with new quantity
-- **No Direct Modification**: Orders cannot be directly modified
+### การดำเนินการคำสั่ง
 
-### Order Execution
+#### ประเภทการจับคู่
+- **จับคู่สมบูรณ์**: คำสั่งทั้งหมดดำเนินการในครั้งเดียว
+- **จับคู่บางส่วน**: คำสั่งถูกจับคู่ในจำนวนย่อยหลายครั้ง
+- **ไม่จับคู่**: คำสั่งยังคงเปิดอยู่หากราคาไม่ถึงเป้าหมาย
 
-#### Fill Types
-- **Complete Fill**: Entire order executed at once
-- **Partial Fill**: Order filled in multiple smaller amounts
-- **No Fill**: Order remains open if price not reached
+#### การแจ้งเตือนการดำเนินการ
+- **การแจ้งเตือนการจับคู่**: การแจ้งเตือนทันทีเมื่อคำสั่งถูกจับคู่
+- **การแจ้งเตือนทางอีเมล**: การแจ้งเตือนทางอีเมลทางเลือกสำหรับกิจกรรมคำสั่ง
+- **การอัปเดตพอร์ตโฟลิโอ**: การอัปเดตยอดคงเหลือพอร์ตโฟลิโอแบบเรียลไทม์
+- **ประวัติธุรกรรม**: บันทึกที่สมบูรณ์ของการดำเนินการทั้งหมด
 
-#### Execution Notifications
-- **Fill Notifications**: Instant notifications when orders are filled
-- **Email Alerts**: Optional email notifications for order activity
-- **Portfolio Updates**: Real-time portfolio balance updates
-- **Transaction History**: Complete record of all executions
+## คุณสมบัติคำสั่งขั้นสูง
 
-## Advanced Order Features
+### การรวม Order Book
 
-### Order Book Integration
-
-#### Market Depth
-- **Bid/Ask Spread**: View the difference between buy and sell prices
-- **Order Book Depth**: See all pending orders at different price levels
-- **Liquidity Analysis**: Assess market liquidity before placing orders
-- **Price Impact**: Estimate potential price impact of large orders
+#### ความลึกของตลาด
+- **Bid/Ask Spread**: ดูความแตกต่างระหว่างราคาซื้อและราคาขาย
+- **ความลึกของ Order Book**: ดูคำสั่งที่รอกำหนดการทั้งหมดที่ระดับราคาต่างๆ
+- **การวิเคราะห์สภาพคล่อง**: ประเมินสภาพคล่องของตลาดก่อนวางคำสั่ง
+- **ผลกระทบต่อราคา**: ประมาณการผลกระทบต่อราคาที่เป็นไปได้ของคำสั่งขนาดใหญ่
 
 #### Market Making
-- **Spread Trading**: Place both buy and sell orders to capture spread
-- **Liquidity Provision**: Provide liquidity to earn from spreads
-- **Market Efficiency**: Help maintain efficient price discovery
-- **Risk Management**: Manage inventory and exposure carefully
+- **Spread Trading**: วางทั้งคำสั่งซื้อและขายเพื่อจับส่วนต่างราคา
+- **การจัดหาสภาพคล่อง**: ให้สภาพคล่องเพื่อรับรายได้จากส่วนต่างราคา
+- **ประสิทธิภาพของตลาด**: ช่วยรักษาการค้นพบราคาที่มีประสิทธิภาพ
+- **การจัดการความเสี่ยง**: จัดการสินค้าคงคลังและการเปิดรับความเสี่ยงอย่างระมัดระวัง
 
-### Risk Management
+### การจัดการความเสี่ยง
 
-#### Position Limits
-- **Account Limits**: Maximum position size based on account balance
-- **Event Limits**: Limits per individual event
-- **Portfolio Limits**: Overall portfolio exposure limits
-- **Risk Monitoring**: Real-time risk assessment and alerts
+#### ขีดจำกัดตำแหน่ง
+- **ขีดจำกัดบัญชี**: ขนาดตำแหน่งสูงสุดตามยอดคงเหลือในบัญชี
+- **ขีดจำกัดเหตุการณ์**: ขีดจำกัดต่อเหตุการณ์แต่ละรายการ
+- **ขีดจำกัดพอร์ตโฟลิโอ**: ขีดจำกัดการเปิดรับความเสี่ยงพอร์ตโฟลิโอโดยรวม
+- **การตรวจสอบความเสี่ยง**: การประเมินความเสี่ยงและการแจ้งเตือนแบบเรียลไทม์
 
-#### Stop-Loss Strategies
-- **Manual Monitoring**: Monitor positions and manually place protective orders
-- **Portfolio Hedging**: Use opposite positions to hedge risk
-- **Diversification**: Spread risk across multiple events and outcomes
-- **Capital Management**: Never risk more than you can afford to lose
+#### กลยุทธ์ Stop-Loss
+- **การตรวจสอบด้วยตนเอง**: ตรวจสอบตำแหน่งและวางคำสั่งป้องกันด้วยตนเอง
+- **การป้องกันความเสี่ยงพอร์ตโฟลิโอ**: ใช้ตำแหน่งตรงข้ามเพื่อป้องกันความเสี่ยง
+- **การกระจายความเสี่ยง**: กระจายความเสี่ยงข้ามหลายเหตุการณ์และผลลัพธ์
+- **การจัดการเงินทุน**: อย่าเสี่ยงมากกว่าที่คุณจะยอมเสียได้
 
-## Order Fees and Costs
+## ค่าธรรมเนียมและต้นทุนคำสั่ง
 
-### Trading Fees
-- **Platform Fee**: 0.15% fee on executed trades (1.5/1000)
-- **Fee Calculation**: Fees calculated on the total trade value
-- **Fee Deduction**: Fees automatically deducted from trade proceeds
-- **Fee Transparency**: All fees clearly displayed before order submission
+### ค่าธรรมเนียมการซื้อขาย
+- **ค่าธรรมเนียมแพลตฟอร์ม**: ค่าธรรมเนียม 0.15% สำหรับการซื้อขายที่ดำเนินการ (1.5/1000)
+- **การคำนวณค่าธรรมเนียม**: ค่าธรรมเนียมคำนวณจากมูลค่าการซื้อขายรวม
+- **การหักค่าธรรมเนียม**: ค่าธรรมเนียมถูกหักโดยอัตโนมัติจากเงินที่ได้จากการซื้อขาย
+- **ความโปร่งใสของค่าธรรมเนียม**: ค่าธรรมเนียมทั้งหมดแสดงอย่างชัดเจนก่อนส่งคำสั่ง
 
 ### Gas Fees
-- **Network Fees**: BSC network gas fees for blockchain transactions
-- **Dynamic Pricing**: Gas fees vary based on network congestion
-- **Fee Optimization**: Platform optimizes gas usage for efficiency
-- **User Responsibility**: Users pay gas fees for their transactions
+- **ค่าธรรมเนียมเครือข่าย**: ค่าธรรมเนียม gas เครือข่าย BSC สำหรับธุรกรรมบล็อกเชน
+- **การกำหนดราคาแบบไดนามิก**: ค่าธรรมเนียม gas แตกต่างกันไปตามความหนาแน่นของเครือข่าย
+- **การเพิ่มประสิทธิภาพค่าธรรมเนียม**: แพลตฟอร์มเพิ่มประสิทธิภาพการใช้ gas เพื่อความคุ้มค่า
+- **ความรับผิดชอบของผู้ใช้**: ผู้ใช้จ่ายค่าธรรมเนียม gas สำหรับธุรกรรมของตน
 
-### Cost Examples
+### ตัวอย่างต้นทุน
 
-#### Example 1: Buying YES Tokens
-- **Order**: Buy 100 YES tokens at 0.65 USDT each
-- **Trade Value**: 100 × 0.65 = 65 USDT
-- **Platform Fee**: 65 × 0.0015 = 0.0975 USDT
-- **Gas Fee**: ~0.01 USDT (varies)
-- **Total Cost**: 65 + 0.0975 + 0.01 = 65.1075 USDT
+#### ตัวอย่างที่ 1: การซื้อโทเค็น YES
+- **คำสั่ง**: ซื้อ 100 โทเค็น YES ที่ 0.65 USDT ต่อเหรียญ
+- **มูลค่าการซื้อขาย**: 100 × 0.65 = 65 USDT
+- **ค่าธรรมเนียมแพลตฟอร์ม**: 65 × 0.0015 = 0.0975 USDT
+- **ค่า Gas**: ~0.01 USDT (แตกต่างกันไป)
+- **ต้นทุนรวม**: 65 + 0.0975 + 0.01 = 65.1075 USDT
 
-#### Example 2: Selling NO Tokens
-- **Order**: Sell 50 NO tokens at 0.45 USDT each
-- **Trade Value**: 50 × 0.45 = 22.5 USDT
-- **Platform Fee**: 22.5 × 0.0015 = 0.03375 USDT
-- **Gas Fee**: ~0.01 USDT (varies)
-- **Net Proceeds**: 22.5 - 0.03375 - 0.01 = 22.45625 USDT
+#### ตัวอย่างที่ 2: การขายโทเค็น NO
+- **คำสั่ง**: ขาย 50 โทเค็น NO ที่ 0.45 USDT ต่อเหรียญ
+- **มูลค่าการซื้อขาย**: 50 × 0.45 = 22.5 USDT
+- **ค่าธรรมเนียมแพลตฟอร์ม**: 22.5 × 0.0015 = 0.03375 USDT
+- **ค่า Gas**: ~0.01 USDT (แตกต่างกันไป)
+- **เงินสุทธิที่ได้รับ**: 22.5 - 0.03375 - 0.01 = 22.45625 USDT
 
-## Best Practices
+## แนวทางปฏิบัติที่ดีที่สุด
 
-### Order Placement Strategy
+### กลยุทธ์การวางคำสั่ง
 
-#### Market Analysis
-- **Study Order Book**: Analyze current buy/sell pressure
-- **Check Market History**: Review recent price movements
-- **Assess Liquidity**: Ensure sufficient liquidity for your order size
-- **Monitor News**: Stay informed about events that may affect prices
+#### การวิเคราะห์ตลาด
+- **ศึกษา Order Book**: วิเคราะห์แรงซื้อ/ขายปัจจุบัน
+- **ตรวจสอบประวัติตลาด**: ทบทวนการเคลื่อนไหวของราคาล่าสุด
+- **ประเมินสภาพคล่อง**: ตรวจสอบให้แน่ใจว่ามีสภาพคล่องเพียงพอสำหรับขนาดคำสั่งของคุณ
+- **ติดตามข่าวสาร**: ติดตามข่าวสารเกี่ยวกับเหตุการณ์ที่อาจส่งผลกระทบต่อราคา
 
-#### Timing Considerations
-- **Market Hours**: Consider when markets are most active
-- **Event Timeline**: Factor in time until event resolution
-- **Volatility Periods**: Adjust strategy during high volatility
-- **News Events**: Be aware of scheduled announcements
+#### ข้อพิจารณาด้านเวลา
+- **เวลาตลาด**: พิจารณาเมื่อตลาดมีการเคลื่อนไหวมากที่สุด
+- **ไทม์ไลน์เหตุการณ์**: คำนึงถึงเวลาจนถึงการตัดสินผลเหตุการณ์
+- **ช่วงความผันผวน**: ปรับกลยุทธ์ในช่วงที่มีความผันผวนสูง
+- **เหตุการณ์ข่าว**: ระวังการประกาศที่กำหนดไว้
 
-### Risk Management
+### การจัดการความเสี่ยง
 
-#### Position Sizing
-- **Start Small**: Begin with smaller position sizes
-- **Gradual Increase**: Increase position sizes as you gain experience
-- **Diversification**: Don't put all funds in a single event
-- **Capital Preservation**: Protect your trading capital
+#### การกำหนดขนาดตำแหน่ง
+- **เริ่มต้นเล็กๆ**: เริ่มต้นด้วยขนาดตำแหน่งที่เล็กลง
+- **เพิ่มขึ้นทีละน้อย**: เพิ่มขนาดตำแหน่งเมื่อคุณได้รับประสบการณ์
+- **การกระจายความเสี่ยง**: อย่าทุ่มเงินทั้งหมดในเหตุการณ์เดียว
+- **การรักษาเงินทุน**: ปกป้องเงินทุนการซื้อขายของคุณ
 
-#### Order Hygiene
-- **Regular Review**: Regularly review and update open orders
-- **Stale Orders**: Cancel orders that are no longer relevant
-- **Price Validation**: Ensure order prices reflect current market conditions
-- **Order Cleanup**: Maintain a clean and organized order book
+#### สุขอนามัยของคำสั่ง
+- **ทบทวนสม่ำเสมอ**: ทบทวนและอัปเดตคำสั่งที่เปิดอยู่อย่างสม่ำเสมอ
+- **คำสั่งเก่า**: ยกเลิกคำสั่งที่ไม่เกี่ยวข้องอีกต่อไป
+- **การตรวจสอบราคา**: ตรวจสอบให้แน่ใจว่าราคาคำสั่งสะท้อนถึงเงื่อนไขตลาดปัจจุบัน
+- **การทำความสะอาดคำสั่ง**: รักษา Order Book ให้สะอาดและเป็นระเบียบ
 
-## Common Issues and Solutions
+## ปัญหาทั่วไปและวิธีแก้ไข
 
-### Order Execution Issues
+### ปัญหาการดำเนินการคำสั่ง
 
-#### Orders Not Filling
-- **Price Too Aggressive**: Your limit price may be too far from market
-- **Low Liquidity**: Insufficient liquidity at your price level
-- **Market Movement**: Market moved away from your order price
-- **Solution**: Adjust price closer to current market levels
+#### คำสั่งไม่ถูกจับคู่
+- **ราคาดุดันเกินไป**: ราคา Limit ของคุณอาจห่างจากตลาดเกินไป
+- **สภาพคล่องต่ำ**: สภาพคล่องไม่เพียงพอที่ระดับราคาของคุณ
+- **การเคลื่อนไหวของตลาด**: ตลาดเคลื่อนตัวออกจากราคาคำสั่งของคุณ
+- **วิธีแก้ไข**: ปรับราคาให้ใกล้เคียงกับระดับตลาดปัจจุบัน
 
-#### Partial Fills
-- **Limited Liquidity**: Not enough liquidity to fill entire order
-- **Large Order Size**: Order too large for current market depth
-- **Solution**: Break large orders into smaller chunks
+#### การจับคู่บางส่วน
+- **สภาพคล่องจำกัด**: สภาพคล่องไม่เพียงพอที่จะเติมเต็มคำสั่งทั้งหมด
+- **ขนาดคำสั่งใหญ่**: คำสั่งใหญ่เกินไปสำหรับความลึกของตลาดปัจจุบัน
+- **วิธีแก้ไข**: แบ่งคำสั่งขนาดใหญ่เป็นก้อนเล็กๆ
 
-### Technical Issues
+### ปัญหาทางเทคนิค
 
-#### Transaction Failures
-- **Insufficient Gas**: Increase gas limit for complex transactions
-- **Network Congestion**: Wait for lower network activity periods
-- **Wallet Issues**: Ensure wallet is properly connected and funded
-- **Solution**: Check gas settings and wallet connectivity
+#### ธุรกรรมล้มเหลว
+- **Gas ไม่เพียงพอ**: เพิ่มขีดจำกัด gas สำหรับธุรกรรมที่ซับซ้อน
+- **ความหนาแน่นของเครือข่าย**: รอช่วงเวลากิจกรรมเครือข่ายต่ำกว่า
+- **ปัญหากระเป๋าเงิน**: ตรวจสอบให้แน่ใจว่ากระเป๋าเงินเชื่อมต่อและมีเงินทุนอย่างถูกต้อง
+- **วิธีแก้ไข**: ตรวจสอบการตั้งค่า gas และการเชื่อมต่อกระเป๋าเงิน
 
-#### Order Book Delays
-- **Network Latency**: Internet connection delays
-- **Platform Load**: High platform usage during peak times
-- **Solution**: Refresh page or wait for system to update
+#### ความล่าช้าของ Order Book
+- **ความหน่วงของเครือข่าย**: ความล่าช้าของการเชื่อมต่ออินเทอร์เน็ต
+- **ภาระของแพลตฟอร์ม**: การใช้งานแพลตฟอร์มสูงในช่วงเวลาเร่งด่วน
+- **วิธีแก้ไข**: รีเฟรชหน้าหรือรอให้ระบบอัปเดต
 
-## Trading Psychology
+## จิตวิทยาการซื้อขาย
 
-### Emotional Management
-- **Stay Disciplined**: Stick to your trading plan
-- **Avoid FOMO**: Don't chase prices due to fear of missing out
-- **Manage Greed**: Take profits when targets are reached
-- **Control Fear**: Don't panic during market volatility
+### การจัดการอารมณ์
+- **มีวินัย**: ยึดมั่นในแผนการซื้อขายของคุณ
+- **หลีกเลี่ยง FOMO**: อย่าไล่ตามราคาเนื่องจากกลัวตกรถ
+- **จัดการความโลภ**: ทำกำไรเมื่อถึงเป้าหมาย
+- **ควบคุมความกลัว**: อย่าตื่นตระหนกในช่วงความผันผวนของตลาด
 
-### Learning and Improvement
-- **Keep Records**: Maintain detailed trading logs
-- **Analyze Performance**: Regular review of trading results
-- **Learn from Mistakes**: Identify and learn from trading errors
-- **Continuous Education**: Stay informed about market developments
+### การเรียนรู้และการปรับปรุง
+- **เก็บรักษาบันทึก**: ดูแลรักษาบันทึกการซื้อขายโดยละเอียด
+- **วิเคราะห์ผลการดำเนินงาน**: ทบทวนผลการซื้อขายอย่างสม่ำเสมอ
+- **เรียนรู้จากข้อผิดพลาด**: ระบุและเรียนรู้จากข้อผิดพลาดในการซื้อขาย
+- **การศึกษาต่อเนื่อง**: ติดตามข่าวสารเกี่ยวกับการพัฒนาตลาด
 
-## Future Enhancements
+## การปรับปรุงในอนาคต
 
-### Advanced Order Types
-- **Stop Orders**: Automatic order triggers at specific price levels
-- **Iceberg Orders**: Hide large order sizes from public view
-- **Time-based Orders**: Orders with specific time-based conditions
-- **Conditional Orders**: Orders triggered by specific market conditions
+### ประเภทคำสั่งขั้นสูง
+- **Stop Orders**: คำสั่งอัตโนมัติที่ระดับราคาเฉพาะ
+- **Iceberg Orders**: ซ่อนขนาดคำสั่งขนาดใหญ่จากการมองเห็นสาธารณะ
+- **Time-based Orders**: คำสั่งที่มีเงื่อนไขตามเวลาเฉพาะ
+- **Conditional Orders**: คำสั่งที่ถูกกระตุ้นโดยเงื่อนไขตลาดเฉพาะ
 
-### Improved User Experience
-- **Mobile Trading**: Enhanced mobile trading interface
-- **Order Templates**: Save and reuse common order configurations
-- **Advanced Charts**: Integrated charting and technical analysis tools
-- **Social Trading**: Follow and copy successful traders
+### ประสบการณ์ผู้ใช้ที่ได้รับการปรับปรุง
+- **การซื้อขายบนมือถือ**: อินเทอร์เฟซการซื้อขายบนมือถือที่ได้รับการปรับปรุง
+- **เทมเพลตคำสั่ง**: บันทึกและใช้ซ้ำการกำหนดค่าคำสั่งทั่วไป
+- **กราฟขั้นสูง**: เครื่องมือสร้างกราฟและการวิเคราะห์ทางเทคนิคแบบบูรณาการ
+- **Social Trading**: ติดตามและคัดลอกผู้ซื้อขายที่ประสบความสำเร็จ
 
-### AI Integration
-- **Smart Order Routing**: AI-optimized order execution
-- **Predictive Analytics**: AI-powered market predictions
-- **Risk Assessment**: Automated risk analysis and alerts
-- **Portfolio Optimization**: AI-assisted portfolio management
+### การรวม AI
+- **Smart Order Routing**: การดำเนินการคำสั่งที่ปรับให้เหมาะสมด้วย AI
+- **Predictive Analytics**: การทำนายตลาดด้วยพลัง AI
+- **การประเมินความเสี่ยง**: การวิเคราะห์ความเสี่ยงและการแจ้งเตือนอัตโนมัติ
+- **การเพิ่มประสิทธิภาพพอร์ตโฟลิโอ**: การจัดการพอร์ตโฟลิโอด้วยความช่วยเหลือของ AI
 
 ---
 
-*For the latest information on limit orders and trading features, please check our official announcements.* 
+*สำหรับข้อมูลล่าสุดเกี่ยวกับคำสั่ง Limit และคุณสมบัติการซื้อขาย โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*

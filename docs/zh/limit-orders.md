@@ -1,287 +1,284 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 限价单 (Limit Orders)
 
-# Limit Orders
+## 概述
 
-## Overview
+限价单是 YC365 上的主要交易机制，允许用户指定他们想要买卖预测市场事件的 YES/NO 代币的确切价格。这使交易者能够精确控制他们的入场和出场点，同时确保透明和公平的价格发现。
 
-Limit orders are the primary trading mechanism on YC365, allowing users to specify the exact price at which they want to buy or sell YES/NO tokens for prediction market events. This gives traders precise control over their entry and exit points while ensuring transparent and fair price discovery.
+## 什么是限价单？
 
-## What are Limit Orders?
+### 定义
+限价单是以特定价格或更优价格买卖代币的指令。与以当前市场价格立即执行的市价单不同，限价单仅在市场达到您指定的价格水平时才会执行。
 
-### Definition
-A limit order is an instruction to buy or sell tokens at a specific price or better. Unlike market orders that execute immediately at the current market price, limit orders will only execute when the market reaches your specified price level.
+### 主要特点
+- **价格控制**：设定您愿意支付或接受的确切价格
+- **有效时间**：订单在成交、取消或过期前一直有效
+- **无滑点**：以您指定的价格或更优价格执行
+- **队列优先**：订单根据价格-时间优先顺序成交
 
-### Key Features
-- **Price Control**: Set the exact price you're willing to pay or accept
-- **Time in Force**: Orders remain active until filled, cancelled, or expired
-- **No Slippage**: Execute at your specified price or better
-- **Queue Priority**: Orders filled based on price-time priority
+## 限价单如何运作
 
-## How Limit Orders Work
+### 订单类型
 
-### Order Types
+#### 买入限价单
+- **目的**：以指定价格或更低价格购买 YES 或 NO 代币
+- **执行**：当市场价格跌至或低于您的限价时成交
+- **示例**：当当前价格为 0.70 USDT 时，以 0.65 USDT 下达 YES 代币的买单
 
-#### Buy Limit Orders
-- **Purpose**: Purchase YES or NO tokens at or below a specified price
-- **Execution**: Fills when market price drops to or below your limit price
-- **Example**: Place a buy order for YES tokens at 0.65 USDT when current price is 0.70 USDT
+#### 卖出限价单
+- **目的**：以指定价格或更高价格出售 YES 或 NO 代币
+- **执行**：当市场价格升至或高于您的限价时成交
+- **示例**：当当前价格为 0.70 USDT 时，以 0.75 USDT 下达 YES 代币的卖单
 
-#### Sell Limit Orders
-- **Purpose**: Sell YES or NO tokens at or above a specified price
-- **Execution**: Fills when market price rises to or above your limit price
-- **Example**: Place a sell order for YES tokens at 0.75 USDT when current price is 0.70 USDT
+### 订单匹配
 
-### Order Matching
+#### 价格-时间优先
+1. **价格优先**：价格更优的订单先成交
+2. **时间优先**：在相同价格的订单中，较早的订单先成交
+3. **部分成交**：大额订单可能会分多次小额交易成交
 
-#### Price-Time Priority
-1. **Price Priority**: Orders with better prices get filled first
-2. **Time Priority**: Among orders at the same price, earlier orders get filled first
-3. **Partial Fills**: Large orders may be filled in multiple smaller transactions
+#### 匹配引擎
+- **实时处理**：订单一经收到即被处理
+- **公平执行**：对任何用户无优惠待遇
+- **透明匹配**：所有订单簿活动可见
 
-#### Matching Engine
-- **Real-time Processing**: Orders processed as soon as they're received
-- **Fair Execution**: No preferential treatment for any user
-- **Transparent Matching**: All order book activity is visible
+## 下达限价单
 
-## Placing Limit Orders
+### 分步流程
 
-### Step-by-Step Process
+#### 1. 选择事件和条件
+- **浏览事件**：导航到您想要交易的事件
+- **选择条件**：选择特定的条件/结果
+- **审查市场**：检查当前价格和订单簿深度
 
-#### 1. Select Event and Condition
-- **Browse Events**: Navigate to the event you want to trade
-- **Choose Condition**: Select the specific condition/outcome
-- **Review Market**: Check current prices and order book depth
+#### 2. 选择代币类型
+- **YES 代币**：如果您相信结果会发生则买入
+- **NO 代币**：如果您相信结果不会发生则买入
+- **代币对**：每个条件都有相应的 YES/NO 代币对
 
-#### 2. Choose Token Type
-- **YES Tokens**: Buy if you believe the outcome will occur
-- **NO Tokens**: Buy if you believe the outcome will not occur
-- **Token Pairs**: Each condition has corresponding YES/NO token pairs
+#### 3. 设置订单参数
+- **订单类型**：选择“Buy”（买入）或“Sell”（卖出）
+- **代币数量**：指定您想要交易的代币数量
+- **限价**：设定您期望的每代币价格
+- **订单审查**：提交前确认所有详情
 
-#### 3. Set Order Parameters
-- **Order Type**: Select "Buy" or "Sell"
-- **Token Amount**: Specify how many tokens you want to trade
-- **Limit Price**: Set your desired price per token
-- **Order Review**: Confirm all details before submission
+#### 4. 提交订单
+- **钱包确认**：在您的钱包中批准交易
+- **资产锁定**：所需资产被锁定在智能合约中
+- **订单确认**：收到下单确认
 
-#### 4. Submit Order
-- **Wallet Confirmation**: Approve the transaction in your wallet
-- **Asset Lock**: Required assets are locked in the smart contract
-- **Order Confirmation**: Receive confirmation of order placement
+### 订单参数
+
+#### 价格设置
+- **最低价格**：每代币 0.01 USDT
+- **最高价格**：每代币 0.99 USDT
+- **价格增量**：最小增量 0.01 USDT
+- **动态定价**：价格根据市场活动自动调整
 
-### Order Parameters
-
-#### Price Settings
-- **Minimum Price**: 0.01 USDT per token
-- **Maximum Price**: 0.99 USDT per token
-- **Price Increments**: 0.01 USDT minimum increments
-- **Dynamic Pricing**: Prices automatically adjust based on market activity
-
-#### Quantity Settings
-- **Minimum Order**: 1 token minimum order size
-- **Maximum Order**: No maximum limit (subject to available liquidity)
-- **Decimal Places**: Orders can include decimal token amounts
-- **Total Value**: Calculated as Price × Quantity
-
-#### Time Settings
-- **Good Till Cancelled (GTC)**: Order remains active until filled or cancelled
-- **Event Expiration**: Orders automatically cancelled when event expires
-- **Trading Cutoff**: Orders cancelled 1 hour before event resolution
-
-## Order Management
-
-### Viewing Your Orders
-
-#### Active Orders
-- **Open Orders**: View all unfilled orders
-- **Order Status**: Track order execution progress
-- **Partial Fills**: Monitor partially filled orders
-- **Order History**: Review all past orders
-
-#### Order Information
-- **Order Details**: Price, quantity, token type, timestamp
-- **Fill Status**: Filled, partially filled, or open
-- **Remaining Quantity**: Amount still waiting to be filled
-- **Average Fill Price**: Weighted average price of filled portions
-
-### Modifying Orders
-
-#### Order Cancellation
-- **Cancel Process**: Cancel orders through the trading interface
-- **Asset Release**: Locked assets returned to your account
-- **Immediate Effect**: Cancellation takes effect immediately
-- **No Fees**: No fees charged for order cancellation
-
-#### Order Updates
-- **Price Changes**: Cancel and replace with new price
-- **Quantity Changes**: Cancel and replace with new quantity
-- **No Direct Modification**: Orders cannot be directly modified
-
-### Order Execution
-
-#### Fill Types
-- **Complete Fill**: Entire order executed at once
-- **Partial Fill**: Order filled in multiple smaller amounts
-- **No Fill**: Order remains open if price not reached
-
-#### Execution Notifications
-- **Fill Notifications**: Instant notifications when orders are filled
-- **Email Alerts**: Optional email notifications for order activity
-- **Portfolio Updates**: Real-time portfolio balance updates
-- **Transaction History**: Complete record of all executions
-
-## Advanced Order Features
-
-### Order Book Integration
-
-#### Market Depth
-- **Bid/Ask Spread**: View the difference between buy and sell prices
-- **Order Book Depth**: See all pending orders at different price levels
-- **Liquidity Analysis**: Assess market liquidity before placing orders
-- **Price Impact**: Estimate potential price impact of large orders
-
-#### Market Making
-- **Spread Trading**: Place both buy and sell orders to capture spread
-- **Liquidity Provision**: Provide liquidity to earn from spreads
-- **Market Efficiency**: Help maintain efficient price discovery
-- **Risk Management**: Manage inventory and exposure carefully
-
-### Risk Management
-
-#### Position Limits
-- **Account Limits**: Maximum position size based on account balance
-- **Event Limits**: Limits per individual event
-- **Portfolio Limits**: Overall portfolio exposure limits
-- **Risk Monitoring**: Real-time risk assessment and alerts
-
-#### Stop-Loss Strategies
-- **Manual Monitoring**: Monitor positions and manually place protective orders
-- **Portfolio Hedging**: Use opposite positions to hedge risk
-- **Diversification**: Spread risk across multiple events and outcomes
-- **Capital Management**: Never risk more than you can afford to lose
-
-## Order Fees and Costs
-
-### Trading Fees
-- **Platform Fee**: 0.15% fee on executed trades (1.5/1000)
-- **Fee Calculation**: Fees calculated on the total trade value
-- **Fee Deduction**: Fees automatically deducted from trade proceeds
-- **Fee Transparency**: All fees clearly displayed before order submission
-
-### Gas Fees
-- **Network Fees**: BSC network gas fees for blockchain transactions
-- **Dynamic Pricing**: Gas fees vary based on network congestion
-- **Fee Optimization**: Platform optimizes gas usage for efficiency
-- **User Responsibility**: Users pay gas fees for their transactions
-
-### Cost Examples
-
-#### Example 1: Buying YES Tokens
-- **Order**: Buy 100 YES tokens at 0.65 USDT each
-- **Trade Value**: 100 × 0.65 = 65 USDT
-- **Platform Fee**: 65 × 0.0015 = 0.0975 USDT
-- **Gas Fee**: ~0.01 USDT (varies)
-- **Total Cost**: 65 + 0.0975 + 0.01 = 65.1075 USDT
-
-#### Example 2: Selling NO Tokens
-- **Order**: Sell 50 NO tokens at 0.45 USDT each
-- **Trade Value**: 50 × 0.45 = 22.5 USDT
-- **Platform Fee**: 22.5 × 0.0015 = 0.03375 USDT
-- **Gas Fee**: ~0.01 USDT (varies)
-- **Net Proceeds**: 22.5 - 0.03375 - 0.01 = 22.45625 USDT
-
-## Best Practices
-
-### Order Placement Strategy
-
-#### Market Analysis
-- **Study Order Book**: Analyze current buy/sell pressure
-- **Check Market History**: Review recent price movements
-- **Assess Liquidity**: Ensure sufficient liquidity for your order size
-- **Monitor News**: Stay informed about events that may affect prices
-
-#### Timing Considerations
-- **Market Hours**: Consider when markets are most active
-- **Event Timeline**: Factor in time until event resolution
-- **Volatility Periods**: Adjust strategy during high volatility
-- **News Events**: Be aware of scheduled announcements
-
-### Risk Management
-
-#### Position Sizing
-- **Start Small**: Begin with smaller position sizes
-- **Gradual Increase**: Increase position sizes as you gain experience
-- **Diversification**: Don't put all funds in a single event
-- **Capital Preservation**: Protect your trading capital
-
-#### Order Hygiene
-- **Regular Review**: Regularly review and update open orders
-- **Stale Orders**: Cancel orders that are no longer relevant
-- **Price Validation**: Ensure order prices reflect current market conditions
-- **Order Cleanup**: Maintain a clean and organized order book
-
-## Common Issues and Solutions
-
-### Order Execution Issues
-
-#### Orders Not Filling
-- **Price Too Aggressive**: Your limit price may be too far from market
-- **Low Liquidity**: Insufficient liquidity at your price level
-- **Market Movement**: Market moved away from your order price
-- **Solution**: Adjust price closer to current market levels
-
-#### Partial Fills
-- **Limited Liquidity**: Not enough liquidity to fill entire order
-- **Large Order Size**: Order too large for current market depth
-- **Solution**: Break large orders into smaller chunks
-
-### Technical Issues
-
-#### Transaction Failures
-- **Insufficient Gas**: Increase gas limit for complex transactions
-- **Network Congestion**: Wait for lower network activity periods
-- **Wallet Issues**: Ensure wallet is properly connected and funded
-- **Solution**: Check gas settings and wallet connectivity
-
-#### Order Book Delays
-- **Network Latency**: Internet connection delays
-- **Platform Load**: High platform usage during peak times
-- **Solution**: Refresh page or wait for system to update
-
-## Trading Psychology
-
-### Emotional Management
-- **Stay Disciplined**: Stick to your trading plan
-- **Avoid FOMO**: Don't chase prices due to fear of missing out
-- **Manage Greed**: Take profits when targets are reached
-- **Control Fear**: Don't panic during market volatility
-
-### Learning and Improvement
-- **Keep Records**: Maintain detailed trading logs
-- **Analyze Performance**: Regular review of trading results
-- **Learn from Mistakes**: Identify and learn from trading errors
-- **Continuous Education**: Stay informed about market developments
-
-## Future Enhancements
-
-### Advanced Order Types
-- **Stop Orders**: Automatic order triggers at specific price levels
-- **Iceberg Orders**: Hide large order sizes from public view
-- **Time-based Orders**: Orders with specific time-based conditions
-- **Conditional Orders**: Orders triggered by specific market conditions
-
-### Improved User Experience
-- **Mobile Trading**: Enhanced mobile trading interface
-- **Order Templates**: Save and reuse common order configurations
-- **Advanced Charts**: Integrated charting and technical analysis tools
-- **Social Trading**: Follow and copy successful traders
-
-### AI Integration
-- **Smart Order Routing**: AI-optimized order execution
-- **Predictive Analytics**: AI-powered market predictions
-- **Risk Assessment**: Automated risk analysis and alerts
-- **Portfolio Optimization**: AI-assisted portfolio management
+#### 数量设置
+- **最小订单**：最小订单规模为 1 个代币
+- **最大订单**：无最大限制（受可用流动性限制）
+- **小数位**：订单可以包含小数代币数量
+- **总价值**：计算为 价格 × 数量
+
+#### 时间设置
+- **取消前有效 (GTC)**：订单在成交或取消前一直有效
+- **事件过期**：事件过期时订单自动取消
+- **交易截止**：事件决议前 1 小时订单取消
+
+## 订单管理
+
+### 查看您的订单
+
+#### 活动订单
+- **未结订单**：查看所有未成交订单
+- **订单状态**：跟踪订单执行进度
+- **部分成交**：监控部分成交的订单
+- **订单历史**：回顾所有过去的订单
+
+#### 订单信息
+- **订单详情**：价格、数量、代币类型、时间戳
+- **成交状态**：已成交、部分成交或未结
+- **剩余数量**：仍等待成交的数量
+- **平均成交价**：已成交部分的加权平均价
+
+### 修改订单
+
+#### 取消订单
+- **取消流程**：通过交易界面取消订单
+- **资产释放**：锁定资产退回到您的账户
+- **立即生效**：取消立即生效
+- **无费用**：取消订单不收取费用
+
+#### 订单更新
+- **价格变更**：取消并以新价格重新下单
+- **数量变更**：取消并以新数量重新下单
+- **无直接修改**：订单不能直接修改
+
+### 订单执行
+
+#### 成交类型
+- **完全成交**：整个订单一次性执行
+- **部分成交**：订单分多次小额执行
+- **未成交**：如果未达到价格，订单保持未结状态
+
+#### 执行通知
+- **成交通知**：订单成交时的即时通知
+- **电子邮件警报**：可选的订单活动电子邮件通知
+- **投资组合更新**：实时投资组合余额更新
+- **交易历史**：所有执行的完整记录
+
+## 进阶订单功能
+
+### 订单簿集成
+
+#### 市场深度
+- **买卖价差**：查看买入价和卖出价之间的差异
+- **订单簿深度**：查看不同价格水平的所有挂单
+- **流动性分析**：下单前评估市场流动性
+- **价格影响**：估算大额订单的潜在价格影响
+
+#### 做市
+- **价差交易**：同时下达买单和卖单以捕获价差
+- **流动性提供**：提供流动性以从价差中获利
+- **市场效率**：帮助维持有效的价格发现
+- **风险管理**：仔细管理库存和敞口
+
+### 风险管理
+
+#### 头寸限制
+- **账户限制**：基于账户余额的最大头寸规模
+- **事件限制**：每个单独事件的限制
+- **投资组合限制**：整体投资组合敞口限制
+- **风险监控**：实时风险评估和警报
+
+#### 止损策略
+- **手动监控**：监控头寸并手动下达保护性订单
+- **投资组合对冲**：使用相反头寸对冲风险
+- **分散投资**：在多个事件和结果中分散风险
+- **资金管理**：切勿冒险超过您能承受的损失
+
+## 订单费用和成本
+
+### 交易费用
+- **平台费**：已执行交易的 0.15% 费用 (1.5/1000)
+- **费用计算**：费用根据总交易价值计算
+- **费用扣除**：费用从交易收益中自动扣除
+- **费用透明度**：所有费用在提交订单前清晰显示
+
+### Gas 费
+- **网络费用**：区块链交易的 BSC 网络 Gas 费
+- **动态定价**：Gas 费根据网络拥堵情况而变化
+- **费用优化**：平台优化 Gas 使用以提高效率
+- **用户责任**：用户为其交易支付 Gas 费
+
+### 成本示例
+
+#### 示例 1：购买 YES 代币
+- **订单**：以每个 0.65 USDT 购买 100 个 YES 代币
+- **交易价值**：100 × 0.65 = 65 USDT
+- **平台费**：65 × 0.0015 = 0.0975 USDT
+- **Gas 费**：~0.01 USDT (变化)
+- **总成本**：65 + 0.0975 + 0.01 = 65.1075 USDT
+
+#### 示例 2：出售 NO 代币
+- **订单**：以每个 0.45 USDT 出售 50 个 NO 代币
+- **交易价值**：50 × 0.45 = 22.5 USDT
+- **平台费**：22.5 × 0.0015 = 0.03375 USDT
+- **Gas 费**：~0.01 USDT (变化)
+- **净收益**：22.5 - 0.03375 - 0.01 = 22.45625 USDT
+
+## 最佳实践
+
+### 下单策略
+
+#### 市场分析
+- **研究订单簿**：分析当前的买/卖压力
+- **检查市场历史**：回顾近期的价格变动
+- **评估流动性**：确保您的订单规模有足够的流动性
+- **监控新闻**：随时了解可能影响价格的事件
+
+#### 时机考虑
+- **市场时间**：考虑市场最活跃的时间
+- **事件时间表**：考虑距离事件决议的时间
+- **波动期**：在高波动期间调整策略
+- **新闻事件**：注意预定的公告
+
+### 风险管理
+
+#### 头寸规模
+- **从小开始**：以较小的头寸规模开始
+- **逐渐增加**：随着经验积累增加头寸规模
+- **分散投资**：不要将所有资金投入单一事件
+- **资本保全**：保护您的交易资本
+
+#### 订单卫生
+- **定期审查**：定期审查和更新未结订单
+- **陈旧订单**：取消不再相关的订单
+- **价格验证**：确保订单价格反映当前市场条件
+- **订单清理**：保持订单簿整洁有序
+
+## 常见问题与解决方案
+
+### 订单执行问题
+
+#### 订单未成交
+- **价格太激进**：您的限价可能离市场太远
+- **低流动性**：您的价格水平流动性不足
+- **市场移动**：市场偏离了您的订单价格
+- **解决方案**：将价格调整至接近当前市场水平
+
+#### 部分成交
+- **流动性有限**：没有足够的流动性来成交整个订单
+- **大额订单规模**：订单对于当前市场深度来说太大
+- **解决方案**：将大额订单分解为较小的块
+
+### 技术问题
+
+#### 交易失败
+- **Gas 不足**：为复杂交易增加 Gas 限制
+- **网络拥堵**：等待网络活动较低的时期
+- **钱包问题**：确保钱包正确连接并有资金
+- **解决方案**：检查 Gas 设置和钱包连接
+
+#### 订单簿延迟
+- **网络延迟**：互联网连接延迟
+- **平台负载**：高峰时段平台使用率高
+- **解决方案**：刷新页面或等待系统更新
+
+## 交易心理
+
+### 情绪管理
+- **保持纪律**：坚持您的交易计划
+- **避免 FOMO**：不要因害怕错过而追逐价格
+- **管理贪婪**：达到目标时获利了结
+- **控制恐惧**：不要在市场波动期间恐慌
+
+### 学习与改进
+- **保持记录**：维护详细的交易日志
+- **分析表现**：定期审查交易结果
+- **从错误中学习**：识别并从交易错误中学习
+- **持续教育**：随时了解市场动态
+
+## 未来增强
+
+### 进阶订单类型
+- **止损单**：在特定价格水平自动触发订单
+- **冰山单**：向公众隐藏大额订单规模
+- **基于时间的订单**：具有特定基于时间条件的订单
+- **条件订单**：由特定市场条件触发的订单
+
+### 改进的用户体验
+- **移动交易**：增强的移动交易界面
+- **订单模板**：保存并重用常见的订单配置
+- **高级图表**：集成的图表和技术分析工具
+- **社交交易**：关注并复制成功的交易者
+
+### AI 集成
+- **智能订单路由**：AI 优化的订单执行
+- **预测分析**：AI 驱动的市场预测
+- **风险评估**：自动化风险分析和警报
+- **投资组合优化**：AI 辅助的投资组合管理
 
 ---
 
-*For the latest information on limit orders and trading features, please check our official announcements.* 
+*有关限价单和交易功能的最新信息，请查看我们的官方公告。*

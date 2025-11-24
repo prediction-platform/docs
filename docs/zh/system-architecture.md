@@ -1,485 +1,482 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
-
-# System Architecture
-
-## Overview
-
-YC365 is built on a modular architecture with each component handling specific responsibilities while working together to provide a comprehensive prediction market platform. The system is designed for transparency, security, and scalability.
-
-## Architecture Overview
-
-### Core Components
-
-#### 1. Smart Contracts (BSC Chain)
-- **LP Contract Set**: Manages liquidity pools for each condition
-- **DP Contract Set**: Handles event/condition publishing and results
-- **Vault Contract Set**: Manages user deposits and withdrawals
-- **Trading Contract Set**: Executes buy/sell transactions
-- **Factory Contract Set**: Manages events, conditions, and permissions
-- **Temporary Condition Contracts**: Individual condition-specific contracts
-
-#### 2. Data Provider (DP)
-- **Event Management**: Event types, creation, and publishing
-- **Condition Management**: Condition creation and chain operations
-- **Permission Management**: Role-based access control
-- **API Services**: External data query services
-
-#### 3. Order Trading Model
-- **Order Book**: Manages limit orders
-- **Matching Engine**: Price and time priority matching
-- **Market Price**: Real-time price calculation
-- **Settlement Service**: Off-chain calculation, on-chain execution
-
-#### 4. DApp Backend Service
-- **User Management**: Wallet-based login/registration
-- **Analytics**: Historical data and trend analysis
-- **Dashboard**: User statistics and performance metrics
-- **Search & Graph**: Event search and price trend visualization
-
-#### 5. DApp Frontend
-- **User Interface**: Intuitive trading and management interface
-- **Multi-language Support**: Traditional Chinese and English
-- **Real-time Updates**: Live price and order updates
-
-## Smart Contract Architecture
-
-### 1. LP Contract Set
-
-#### Core Functions:
-- **Liquidity Pool Management**: Independent pools for each condition's YES/NO tokens
-- **TVL Management**: Stablecoin deposits from DP and users
-- **Order Processing**: Buy/sell order execution
-- **Settlement**: Profit distribution and NO token liquidation
-
-#### Key Features:
-- **Independent Pools**: Each condition has its own liquidity pool
-- **Automatic Settlement**: Triggered settlement processing
-- **Profit Distribution**: YES token holders receive 1 USDT per token
-- **NO Token Liquidation**: NO tokens become worthless
-
-### 2. DP Contract Set
-
-#### Event Management:
-- **Event Publishing**: Deploy events and conditions to chain
-- **Condition Initialization**: Set initial odds and liquidity
-- **Result Publishing**: Publish event outcomes
-- **Liquidity Management**: Add or recover liquidity
-
-#### Permission System:
-- **Role-based Access**: Different permissions for different roles
-- **No Super Admin**: Distributed authority model
-- **Specific Permissions**: Address-based permission management
-
-### 3. Vault Contract Set
-
-#### Asset Management:
-- **DP Deposits**: Data provider deposit/withdrawal management
-- **User Deposits**: Regular user deposit/withdrawal management
-- **Reward Distribution**: User reward allocation
-- **Token Management**: YES/NO token custody (under consideration)
-
-#### Security Features:
-- **Audited Contracts**: All contracts undergo security audits
-- **Open Source**: Transparent and verifiable code
-- **Risk Assessment**: Users maintain full control of assets
-
-### 4. Trading Contract Set
-
-#### Transaction Processing:
-- **Transfer Function**: Execute YES/NO token trades
-- **Order Service Integration**: Triggered by order service
-- **Asset Freezing**: Temporary asset locks for orders
-- **Batch Processing**: Efficient bulk transaction execution
-
-#### Trading Restrictions:
-- **Pre-result Trading**: Trading stops 1 hour before results
-- **Identity Verification**: Private key signature verification
-- **Order Validation**: Order service authentication
-
-### 5. Factory Contract Set
-
-#### Management Functions:
-- **Event/Condition Management**: Publish or delete events and conditions
-- **Permission Management**: Set permission addresses
-- **User Management**: Define different user roles
-- **Contract Deployment**: Deploy temporary condition contracts
-
-#### User Roles:
-- **DP Chain Operators**: Data provider chain operations
-- **Order Operators**: Order book transaction submission
-- **Regular Users**: Deposit, withdrawal, order placement
-
-### 6. Temporary Condition Contracts
-
-#### Individual Contracts:
-- **Condition-specific Services**: Each condition gets its own contract
-- **YES/NO Token Management**: Token creation and destruction
-- **TVL Management**: Condition-specific total value locked
-- **Settlement Implementation**: Specific liquidation logic
-
-#### Design Considerations:
-- **Modular Design**: Independent contract for each condition
-- **Service Integration**: Called by other contracts, not directly by users
-- **Gas Optimization**: Efficient contract design for BSC
-
-## Data Provider (DP) System
-
-### 1. Event Type Management
-
-#### Core Functions:
-- **Type Creation**: Add and manage event categories
-- **Classification System**: All events belong to specific types
-- **Import/Export**: Batch import and export capabilities
-- **Data Maintenance**: Type data management and updates
-
-### 2. Event Management
-
-#### Event Operations:
-- **Manual Entry**: Admin user manual event creation
-- **Batch Import**: External file bulk import
-- **Data Validation**: Event data verification
-- **Chain Publishing**: Blockchain event deployment
-
-#### Publishing Process:
-- **Event Creation**: Define event parameters
-- **Condition Setup**: Create event conditions
-- **Liquidity Initialization**: Set initial odds and liquidity
-- **Market Launch**: Enable trading for the event
-
-### 3. Chain Operations
-
-#### DP Functions:
-- **Event Publishing**: Deploy events to blockchain
-- **Condition Management**: Create and manage conditions
-- **Liquidity Operations**: Add or recover liquidity
-- **Result Publishing**: Publish event outcomes
-- **Settlement Execution**: Trigger liquidation process
-
-#### Automated Services:
-- **Scheduled Operations**: Automatic execution of specific tasks
-- **Trading Halts**: Automatic condition trading stops
-- **Result Publishing**: Automatic result publication
-- **Settlement Processing**: Automatic liquidation execution
-
-### 4. Permission Management
-
-#### Role-based Access:
-- **Administrators**: Manage other account permissions and contract configuration
-- **Data Entry Staff**: Event/condition data entry and maintenance
-- **Asset Managers**: Chain operations and operations management
-
-#### Security Features:
-- **Specific Permissions**: Only authorized users can operate chain data
-- **Transaction Confirmation**: Wait for transaction confirmation before next step
-- **Permission Auditing**: Regular permission review and updates
-
-## Order Trading Model
-
-### 1. Order Book Management
-
-#### Core Functions:
-- **Limit Order Support**: Only limit orders currently supported
-- **Order Storage**: Efficient order data management
-- **Order Matching**: Price and time priority matching
-- **Order Validation**: Order integrity verification
-
-#### Technical Considerations:
-- **Single Cluster**: No distributed deployment requirements
-- **Performance**: TPS < 100
-- **Scalability**: Future expansion considerations
-
-### 2. Matching Engine
-
-#### Matching Principles:
-- **Price Priority**: Better prices matched first
-- **Time Priority**: Earlier orders matched first
-- **Order Types**: Currently only limit orders
-- **Real-time Processing**: Immediate order processing
-
-#### Engine Features:
-- **Efficient Matching**: Optimized matching algorithms
-- **Order Validation**: Pre-matching order verification
-- **Settlement Integration**: Seamless settlement processing
-
-### 3. Market Price Calculation
-
-#### Price Determination:
-- **Seller-based Pricing**: Minimum seller price as market price
-- **Future Enhancements**: Comprehensive price calculation
-- **Real-time Updates**: Continuous price updates
-- **Historical Data**: Price history tracking
-
-#### Calculation Factors:
-- **Current Version**: Minimum seller price
-- **Future Version**: Comprehensive calculation including:
-  - Transaction prices
-  - Trading volume
-  - Buyer prices
-  - Market depth
-
-### 4. Settlement Service
-
-#### Settlement Process:
-- **Off-chain Calculation**: Settlement calculations performed off-chain
-- **On-chain Execution**: Asset changes executed on blockchain
-- **Batch Processing**: Efficient bulk transaction processing
-- **Verification**: Settlement result verification
-
-#### Security Features:
-- **Transaction Verification**: All transactions verified on-chain
-- **Asset Safety**: User assets protected throughout process
-- **Audit Trail**: Complete transaction history
-
-## DApp Backend Service
-
-### 1. User Management
-
-#### Authentication:
-- **Wallet Connection**: Connect wallet for login/registration
-- **SSO Support**: Single sign-on integration
-- **User Settings**: User preference management
-- **Overview Module**: User dashboard and statistics
-
-#### User Features:
-- **Profile Management**: User profile and settings
-- **Activity Tracking**: User activity monitoring
-- **Performance Analytics**: User performance metrics
-
-### 2. Activity Module
-
-#### Admin Configuration:
-- **Activity Management**: Direct admin configuration
-- **Image Management**: Activity image address management
-- **Link Management**: Activity link address management
-- **API Integration**: Client-side activity data provision
-
-#### Features:
-- **Dynamic Content**: Configurable activity content
-- **Image Display**: Activity image presentation
-- **Link Handling**: External link management
-- **API Services**: Activity data API provision
-
-### 3. Historical Order Management
-
-#### Order History:
-- **Time Filtering**: Filter orders by time period
-- **Status Filtering**: Filter orders by status
-- **Event Filtering**: Filter orders by event
-- **Comprehensive Search**: Multi-criteria order search
-
-#### Data Integration:
-- **Order Book API**: Basic API from order book service
-- **Data Aggregation**: Comprehensive order data collection
-- **User Interface**: User-friendly order history display
-
-### 4. Dashboard Module
-
-#### Deposit Analytics:
-- **Deposit Trends**: Deposit amount trend charts
-- **Data Collection**: 30-second contract reading intervals
-- **Event Monitoring**: Vault contract deposit/withdraw event monitoring
-- **Profit Calculation**: Comprehensive profit calculation
-
-#### Revenue Analytics:
-- **Profit Trends**: Profit amount trend charts
-- **Real-time Updates**: Live profit calculation
-- **Historical Data**: Complete profit history
-- **Performance Metrics**: User performance analysis
-
-#### Activity Analytics:
-- **Order Volume Trends**: Daily order volume charts
-- **Order Amount Trends**: Daily order amount charts
-- **Event Monitoring**: SubmitOrderEvent monitoring
-- **Data Analysis**: Comprehensive order data analysis
-
-### 5. Search and Graph Services
-
-#### Search Functionality:
-- **Keyword Search**: Search all related events
-- **DP Service Integration**: Basic API from DP service
-- **Advanced Filtering**: Multi-criteria search
-- **Real-time Results**: Instant search results
-
-#### Graph Services:
-- **Price Trend Charts**: Market price trend visualization
-- **Time Intervals**: 30-minute, 1-hour, 1-day, 1-week statistics
-- **Data Collection**: 10-minute API data collection intervals
-- **Price Analysis**: Comprehensive price data analysis
-
-## DApp Frontend
-
-### 1. User Interface
-
-#### Core Features:
-- **Simple Design**: Intuitive and user-friendly interface
-- **Trustworthy Experience**: Transparent and reliable service
-- **Real-time Updates**: Live data updates
-- **Responsive Design**: Mobile and desktop compatibility
-
-#### User Experience:
-- **Easy Navigation**: Simple and clear navigation
-- **Visual Feedback**: Clear visual indicators
-- **Error Handling**: Comprehensive error management
-- **Loading States**: Clear loading indicators
-
-### 2. Authentication System
-
-#### Login Methods:
-- **Wallet Connection**: MetaMask and other EVM wallets
-- **SSO Integration**: Single sign-on support
-- **Registration Process**: Simple user registration
-- **Session Management**: Secure session handling
-
-#### Security Features:
-- **Private Key Security**: Secure private key handling
-- **Transaction Signing**: Secure transaction signing
-- **Identity Verification**: User identity verification
-
-### 3. Asset Management
-
-#### Deposit/Withdrawal:
-- **Asset Viewing**: View user assets by address
-- **Deposit Function**: Simple deposit process
-- **Withdrawal Function**: Secure withdrawal process
-- **Balance Tracking**: Real-time balance updates
-
-#### Asset Features:
-- **Multi-asset Support**: Support for various assets
-- **Transaction History**: Complete transaction records
-- **Asset Analytics**: Asset performance analysis
-
-### 4. Personal Center
-
-#### User Dashboard:
-- **Personal Overview**: Comprehensive user overview
-- **My Orders**: User order management
-- **Settings**: User preference settings
-- **Performance Tracking**: User performance metrics
-
-#### Management Features:
-- **Order History**: Complete order history
-- **Asset Management**: Asset overview and management
-- **Settings Configuration**: User settings and preferences
-
-### 5. Limit Order Trading
-
-#### Order Features:
-- **Buy/Sell Orders**: Submit buy and sell orders
-- **Market Price View**: Real-time market price display
-- **Price Trends**: Price trend visualization
-- **Order Book Details**: Detailed order book information
-
-#### Trading Interface:
-- **Order Placement**: Simple order placement
-- **Price Charts**: Real-time price charts
-- **Order Management**: Order modification and cancellation
-- **Trade History**: Complete trade history
-
-### 6. Event Management
-
-#### Event Services:
-- **Event Lists**: Comprehensive event listings
-- **Event Filtering**: Advanced event filtering
-- **Event Search**: Event search functionality
-- **Event Details**: Detailed event information
-
-#### Condition Management:
-- **Condition Lists**: Event condition listings
-- **Price Information**: Real-time price data
-- **Order Book Details**: Detailed order book information
-- **Market Price Trends**: Price trend visualization
-
-### 7. Data Analytics
-
-#### Trend Analysis:
-- **Deposit Trends**: Deposit amount trend charts
-- **Profit Trends**: Profit amount trend charts
-- **Activity Trends**: Order volume and amount trends
-- **Performance Metrics**: User performance analysis
-
-#### Visualization:
-- **Interactive Charts**: Interactive data visualization
-- **Real-time Updates**: Live data updates
-- **Historical Analysis**: Historical data analysis
-- **Custom Timeframes**: Flexible time period selection
-
-### 8. Multi-language Support
-
-#### Language Options:
-- **English**: English language support (default)
-- **Simplified Chinese**: Simplified Chinese language support
-- **Traditional Chinese**: Traditional Chinese language support
-- **Thai**: Thai language support
-- **Indonesian**: Indonesian language support
-- **Vietnamese**: Vietnamese language support
-
-#### Localization Features:
-- **Dynamic Translation**: Real-time language switching
-- **Cultural Adaptation**: Localized content and design
-- **User Preferences**: User language preference settings
-- **Regional Content**: Region-specific content and features
-
-## Revenue Model
-
-### 1. Transaction Fees
-
-#### Fee Structure:
-- **Trading Fee**: 1.5/1000 (0.15%) of transaction amount
-- **Buyer/Seller Split**: Both parties charged the fee
-- **Automatic Deduction**: Fees automatically deducted from transactions
-- **Revenue Distribution**: Platform revenue distribution
-
-#### Fee Collection:
-- **Automatic Processing**: Automatic fee collection
-- **Transparent Pricing**: Clear fee structure
-- **Revenue Tracking**: Comprehensive revenue tracking
-- **Platform Sustainability**: Revenue for platform development
-
-## System Limitations and Risks
-
-### 1. Technical Limitations
-
-#### Performance Constraints:
-- **Contract TPS**: < 500 transactions per second
-- **Order System TPS**: < 100 transactions per second
-- **Centralization Risk**: Event results determined by DP
-- **Liquidity Management**: Operator-provided liquidity only
-
-#### Current Restrictions:
-- **Limit Orders Only**: No market orders currently supported
-- **No Internal Wallet**: Direct use of market wallets (MetaMask)
-- **No Risk Control**: Risk control system not implemented
-- **Single Cluster**: No distributed deployment
-
-### 2. Security Considerations
-
-#### Contract Security:
-- **Vulnerability Risk**: Smart contract vulnerability potential
-- **Audit Requirements**: Comprehensive security audits
-- **Open Source**: Transparent code for community review
-- **Regular Updates**: Continuous security improvements
-
-#### Operational Security:
-- **Permission Management**: Strict permission controls
-- **Transaction Verification**: All transactions verified
-- **Asset Protection**: User asset security measures
-- **Monitoring Systems**: Continuous security monitoring
-
-### 3. Risk Mitigation
-
-#### Technical Measures:
-- **Comprehensive Testing**: Extensive testing procedures
-- **Security Audits**: Regular security audits
-- **Code Reviews**: Thorough code review processes
-- **Backup Systems**: Redundant system implementations
-
-#### Operational Measures:
-- **Risk Assessment**: Regular risk assessments
-- **Incident Response**: Comprehensive incident response plans
-- **User Education**: User security education
-- **Community Oversight**: Community monitoring and feedback
+# 系统架构 (System Architecture)
+
+## 概览
+
+YC365 建立在模块化架构之上，每个组件处理特定职责，同时协同工作以提供全面的预测市场平台。该系统旨在实现透明度、安全性和可扩展性。
+
+## 架构概览
+
+### 核心组件
+
+#### 1. 智能合约 (BSC 链)
+- **LP 合约集**：管理每个条件的流动性池
+- **DP 合约集**：处理事件/条件发布和结果
+- **Vault 合约集**：管理用户存款和取款
+- **交易合约集**：执行买入/卖出交易
+- **工厂合约集**：管理事件、条件和权限
+- **临时条件合约**：单个条件特定的合约
+
+#### 2. 数据提供者 (DP)
+- **事件管理**：事件类型、创建和发布
+- **条件管理**：条件创建和链上操作
+- **权限管理**：基于角色的访问控制
+- **API 服务**：外部数据查询服务
+
+#### 3. 订单交易模型
+- **订单簿**：管理限价订单
+- **撮合引擎**：价格和时间优先撮合
+- **市场价格**：实时价格计算
+- **结算服务**：链下计算，链上执行
+
+#### 4. DApp 后端服务
+- **用户管理**：基于钱包的登录/注册
+- **分析**：历史数据和趋势分析
+- **仪表板**：用户统计和绩效指标
+- **搜索和图表**：事件搜索和价格趋势可视化
+
+#### 5. DApp 前端
+- **用户界面**：直观的交易和管理界面
+- **多语言支持**：繁体中文和英文
+- **实时更新**：实时价格和订单更新
+
+## 智能合约架构
+
+### 1. LP 合约集
+
+#### 核心功能：
+- **流动性池管理**：每个条件的 YES/NO 代币拥有独立的池
+- **TVL 管理**：来自 DP 和用户的稳定币存款
+- **订单处理**：买入/卖出订单执行
+- **结算**：利润分配和 NO 代币清算
+
+#### 主要特点：
+- **独立池**：每个条件都有自己的流动性池
+- **自动结算**：触发式结算处理
+- **利润分配**：YES 代币持有者每代币获得 1 USDT
+- **NO 代币清算**：NO 代币变得一文不值
+
+### 2. DP 合约集
+
+#### 事件管理：
+- **事件发布**：将事件和条件部署到链上
+- **条件初始化**：设置初始赔率和流动性
+- **结果发布**：发布事件结果
+- **流动性管理**：添加或回收流动性
+
+#### 权限系统：
+- **基于角色的访问**：不同角色拥有不同权限
+- **无超级管理员**：分布式权限模型
+- **特定权限**：基于地址的权限管理
+
+### 3. Vault 合约集
+
+#### 资产管理：
+- **DP 存款**：数据提供者存款/取款管理
+- **用户存款**：普通用户存款/取款管理
+- **奖励分配**：用户奖励分配
+- **代币管理**：YES/NO 代币托管（考虑中）
+
+#### 安全特性：
+- **经审计的合约**：所有合约均经过安全审计
+- **开源**：透明且可验证的代码
+- **风险评估**：用户保持对资产的完全控制
+
+### 4. 交易合约集
+
+#### 交易处理：
+- **转账功能**：执行 YES/NO 代币交易
+- **订单服务集成**：由订单服务触发
+- **资产冻结**：订单的临时资产锁定
+- **批量处理**：高效的批量交易执行
+
+#### 交易限制：
+- **结果前交易**：结果公布前 1 小时停止交易
+- **身份验证**：私钥签名验证
+- **订单验证**：订单服务认证
+
+### 5. 工厂合约集
+
+#### 管理功能：
+- **事件/条件管理**：发布或删除事件和条件
+- **权限管理**：设置权限地址
+- **用户管理**：定义不同的用户角色
+- **合约部署**：部署临时条件合约
+
+#### 用户角色：
+- **DP 链操作员**：数据提供者链操作
+- **订单操作员**：订单簿交易提交
+- **普通用户**：存款、取款、下订单
+
+### 6. 临时条件合约
+
+#### 独立合约：
+- **条件特定服务**：每个条件都有自己的合约
+- **YES/NO 代币管理**：代币创建和销毁
+- **TVL 管理**：条件特定的总锁定价值
+- **结算实现**：特定的清算逻辑
+
+#### 设计考虑：
+- **模块化设计**：每个条件拥有独立合约
+- **服务集成**：由其他合约调用，而非直接由用户调用
+- **Gas 优化**：针对 BSC 的高效合约设计
+
+## 数据提供者 (DP) 系统
+
+### 1. 事件类型管理
+
+#### 核心功能：
+- **类型创建**：添加和管理事件类别
+- **分类系统**：所有事件属于特定类型
+- **导入/导出**：批量导入和导出功能
+- **数据维护**：类型数据管理和更新
+
+### 2. 事件管理
+
+#### 事件操作：
+- **手动录入**：管理员用户手动创建事件
+- **批量导入**：外部文件批量导入
+- **数据验证**：事件数据验证
+- **链上发布**：区块链事件部署
+
+#### 发布流程：
+- **事件创建**：定义事件参数
+- **条件设置**：创建事件条件
+- **流动性初始化**：设置初始赔率和流动性
+- **市场启动**：启用事件交易
+
+### 3. 链操作
+
+#### DP 功能：
+- **事件发布**：将事件部署到区块链
+- **条件管理**：创建和管理条件
+- **流动性操作**：添加或回收流动性
+- **结果发布**：发布事件结果
+- **结算执行**：触发清算流程
+
+#### 自动化服务：
+- **计划操作**：自动执行特定任务
+- **交易暂停**：自动停止条件交易
+- **结果发布**：自动结果发布
+- **结算处理**：自动清算执行
+
+### 4. 权限管理
+
+#### 基于角色的访问：
+- **管理员**：管理其他账户权限和合约配置
+- **数据录入员**：事件/条件数据录入和维护
+- **资产经理**：链操作和运营管理
+
+#### 安全特性：
+- **特定权限**：只有授权用户可以操作链数据
+- **交易确认**：等待交易确认后再进行下一步
+- **权限审计**：定期权限审查和更新
+
+## 订单交易模型
+
+### 1. 订单簿管理
+
+#### 核心功能：
+- **限价订单支持**：目前仅支持限价订单
+- **订单存储**：高效的订单数据管理
+- **订单撮合**：价格和时间优先撮合
+- **订单验证**：订单完整性验证
+
+#### 技术考虑：
+- **单集群**：无分布式部署要求
+- **性能**：TPS < 100
+- **可扩展性**：未来扩展考虑
+
+### 2. 撮合引擎
+
+#### 撮合原则：
+- **价格优先**：更优价格优先撮合
+- **时间优先**：更早订单优先撮合
+- **订单类型**：目前仅限价订单
+- **实时处理**：立即订单处理
+
+#### 引擎特性：
+- **高效撮合**：优化的撮合算法
+- **订单验证**：撮合前订单验证
+- **结算集成**：无缝结算处理
+
+### 3. 市场价格计算
+
+#### 价格确定：
+- **基于卖方定价**：最低卖方价格作为市场价格
+- **未来增强**：综合价格计算
+- **实时更新**：持续价格更新
+- **历史数据**：价格历史跟踪
+
+#### 计算因素：
+- **当前版本**：最低卖方价格
+- **未来版本**：综合计算包括：
+  - 交易价格
+  - 交易量
+  - 买方价格
+  - 市场深度
+
+### 4. 结算服务
+
+#### 结算流程：
+- **链下计算**：结算计算在链下执行
+- **链上执行**：资产变更在区块链上执行
+- **批量处理**：高效的批量交易处理
+- **验证**：结算结果验证
+
+#### 安全特性：
+- **交易验证**：所有交易在链上验证
+- **资产安全**：用户资产在整个过程中受到保护
+- **审计跟踪**：完整的交易历史
+
+## DApp 后端服务
+
+### 1. 用户管理
+
+#### 认证：
+- **钱包连接**：连接钱包进行登录/注册
+- **SSO 支持**：单点登录集成
+- **用户设置**：用户偏好管理
+- **概览模块**：用户仪表板和统计
+
+#### 用户功能：
+- **个人资料管理**：用户个人资料和设置
+- **活动跟踪**：用户活动监控
+- **绩效分析**：用户绩效指标
+
+### 2. 活动模块
+
+#### 管理员配置：
+- **活动管理**：直接管理员配置
+- **图片管理**：活动图片地址管理
+- **链接管理**：活动链接地址管理
+- **API 集成**：客户端活动数据提供
+
+#### 功能：
+- **动态内容**：可配置的活动内容
+- **图片显示**：活动图片展示
+- **链接处理**：外部链接管理
+- **API 服务**：活动数据 API 提供
+
+### 3. 历史订单管理
+
+#### 订单历史：
+- **时间过滤**：按时间段过滤订单
+- **状态过滤**：按状态过滤订单
+- **事件过滤**：按事件过滤订单
+- **综合搜索**：多条件订单搜索
+
+#### 数据集成：
+- **订单簿 API**：来自订单簿服务的基本 API
+- **数据聚合**：综合订单数据收集
+- **用户界面**：用户友好的订单历史显示
+
+### 4. 仪表板模块
+
+#### 存款分析：
+- **存款趋势**：存款金额趋势图
+- **数据收集**：30 秒合约读取间隔
+- **事件监控**：Vault 合约存款/取款事件监控
+- **利润计算**：综合利润计算
+
+#### 收入分析：
+- **利润趋势**：利润金额趋势图
+- **实时更新**：实时利润计算
+- **历史数据**：完整的利润历史
+- **绩效指标**：用户绩效分析
+
+#### 活动分析：
+- **订单量趋势**：每日订单量图表
+- **订单金额趋势**：每日订单金额图表
+- **事件监控**：SubmitOrderEvent 监控
+- **数据分析**：综合订单数据分析
+
+### 5. 搜索和图表服务
+
+#### 搜索功能：
+- **关键词搜索**：搜索所有相关事件
+- **DP 服务集成**：来自 DP 服务的基本 API
+- **高级过滤**：多条件搜索
+- **实时结果**：即时搜索结果
+
+#### 图表服务：
+- **价格趋势图**：市场价格趋势可视化
+- **时间间隔**：30 分钟、1 小时、1 天、1 周统计
+- **数据收集**：10 分钟 API 数据收集间隔
+- **价格分析**：综合价格数据分析
+
+## DApp 前端
+
+### 1. 用户界面
+
+#### 核心功能：
+- **简洁设计**：直观且用户友好的界面
+- **值得信赖的体验**：透明且可靠的服务
+- **实时更新**：实时数据更新
+- **响应式设计**：移动和桌面兼容性
+
+#### 用户体验：
+- **轻松导航**：简单清晰的导航
+- **视觉反馈**：清晰的视觉指示
+- **错误处理**：全面的错误管理
+- **加载状态**：清晰的加载指示
+
+### 2. 认证系统
+
+#### 登录方式：
+- **钱包连接**：MetaMask 和其他 EVM 钱包
+- **SSO 集成**：单点登录支持
+- **注册流程**：简单的用户注册
+- **会话管理**：安全会话处理
+
+#### 安全特性：
+- **私钥安全**：安全私钥处理
+- **交易签名**：安全交易签名
+- **身份验证**：用户身份验证
+
+### 3. 资产管理
+
+#### 存款/取款：
+- **资产查看**：按地址查看用户资产
+- **存款功能**：简单的存款流程
+- **取款功能**：安全的取款流程
+- **余额跟踪**：实时余额更新
+
+#### 资产特性：
+- **多资产支持**：支持各种资产
+- **交易历史**：完整的交易记录
+- **资产分析**：资产绩效分析
+
+### 4. 个人中心
+
+#### 用户仪表板：
+- **个人概览**：综合用户概览
+- **我的订单**：用户订单管理
+- **设置**：用户偏好设置
+- **绩效跟踪**：用户绩效指标
+
+#### 管理功能：
+- **订单历史**：完整的订单历史
+- **资产管理**：资产概览和管理
+- **设置配置**：用户设置和偏好
+
+### 5. 限价订单交易
+
+#### 订单功能：
+- **买入/卖出订单**：提交买入和卖出订单
+- **市场价格查看**：实时市场价格显示
+- **价格趋势**：价格趋势可视化
+- **订单簿详情**：详细的订单簿信息
+
+#### 交易界面：
+- **下订单**：简单的订单下达
+- **价格图表**：实时价格图表
+- **订单管理**：订单修改和取消
+- **交易历史**：完整的交易历史
+
+### 6. 事件管理
+
+#### 事件服务：
+- **事件列表**：综合事件列表
+- **事件过滤**：高级事件过滤
+- **事件搜索**：事件搜索功能
+- **事件详情**：详细的事件信息
+
+#### 条件管理：
+- **条件列表**：事件条件列表
+- **价格信息**：实时价格数据
+- **订单簿详情**：详细的订单簿信息
+- **市场价格趋势**：价格趋势可视化
+
+### 7. 数据分析
+
+#### 趋势分析：
+- **存款趋势**：存款金额趋势图
+- **利润趋势**：利润金额趋势图
+- **活动趋势**：订单量和金额趋势
+- **绩效指标**：用户绩效分析
+
+#### 可视化：
+- **交互式图表**：交互式数据可视化
+- **实时更新**：实时数据更新
+- **历史分析**：历史数据分析
+- **自定义时间范围**：灵活的时间段选择
+
+### 8. 多语言支持
+
+#### 语言选项：
+- **英语**：英语语言支持（默认）
+- **简体中文**：简体中文语言支持
+- **繁体中文**：繁体中文语言支持
+- **泰语**：泰语语言支持
+- **印尼语**：印尼语语言支持
+- **越南语**：越南语语言支持
+
+#### 本地化特性：
+- **动态翻译**：实时语言切换
+- **文化适应**：本地化内容和设计
+- **用户偏好**：用户语言偏好设置
+- **区域内容**：特定区域的内容和功能
+
+## 收入模型
+
+### 1. 交易费用
+
+#### 费用结构：
+- **交易费**：交易金额的 1.5/1000 (0.15%)
+- **买方/卖方分摊**：双方均收取费用
+- **自动扣除**：从交易中自动扣除费用
+- **收入分配**：平台收入分配
+
+#### 费用收集：
+- **自动处理**：自动费用收集
+- **透明定价**：清晰的费用结构
+- **收入跟踪**：综合收入跟踪
+- **平台可持续性**：用于平台开发的收入
+
+## 系统限制和风险
+
+### 1. 技术限制
+
+#### 性能约束：
+- **合约 TPS**：< 500 交易/秒
+- **订单系统 TPS**：< 100 交易/秒
+- **中心化风险**：事件结果由 DP 决定
+- **流动性管理**：仅限运营商提供的流动性
+
+#### 当前限制：
+- **仅限价订单**：目前不支持市价订单
+- **无内部钱包**：直接使用市场钱包 (MetaMask)
+- **无风控**：未实施风控系统
+- **单集群**：无分布式部署
+
+### 2. 安全注意事项
+
+#### 合约安全：
+- **漏洞风险**：智能合约潜在漏洞
+- **审计要求**：综合安全审计
+- **开源**：透明代码供社区审查
+- **定期更新**：持续安全改进
+
+#### 运营安全：
+- **权限管理**：严格的权限控制
+- **交易验证**：所有交易均经过验证
+- **资产保护**：用户资产安全措施
+- **监控系统**：持续安全监控
+
+### 3. 风险缓解
+
+#### 技术措施：
+- **综合测试**：广泛的测试程序
+- **安全审计**：定期安全审计
+- **代码审查**：彻底的代码审查流程
+- **备份系统**：冗余系统实现
+
+#### 运营措施：
+- **风险评估**：定期风险评估
+- **事件响应**：综合事件响应计划
+- **用户教育**：用户安全教育
+- **社区监督**：社区监控和反馈
 
 ---
 
-*For the latest information on system architecture and updates, please check our official announcements.* 
+*有关系统架构和更新的最新信息，请查看我们的官方公告。*

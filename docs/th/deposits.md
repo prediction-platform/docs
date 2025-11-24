@@ -1,141 +1,138 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# การฝากเงิน
 
-# Deposits
+## ภาพรวม
 
-## Overview
+YC365 รองรับวิธีการฝากเงินหลายวิธีเพื่อให้ผู้ใช้มีตัวเลือกการเติมเงินที่ยืดหยุ่นและสะดวกสบาย การฝากเงินทั้งหมดได้รับการประมวลผลอย่างปลอดภัยบนเครือข่าย BSC (Binance Smart Chain)
 
-YC365 supports multiple deposit methods to provide users with flexible and convenient funding options. All deposits are processed securely on the BSC (Binance Smart Chain) network.
+## กระเป๋าเงินที่รองรับ
 
-## Supported Wallets
+YC365 รองรับกระเป๋าเงินที่เข้ากันได้กับ EVM ทั้งหมด รวมถึง:
 
-YC365 supports all EVM-compatible wallets, including:
+- **MetaMask** - เป็นที่นิยมและใช้กันอย่างแพร่หลายที่สุด
+- **WalletConnect** - รองรับหลายกระเป๋าเงิน
+- **Trust Wallet** - กระเป๋าเงินที่เน้นมือถือ
+- **Binance Wallet** - กระเป๋าเงินอย่างเป็นทางการของ Binance
+- **Coinbase Wallet** - อินเทอร์เฟซที่ใช้งานง่าย
+- **กระเป๋าเงินที่เข้ากันได้กับ EVM ใดๆ**
 
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! note "ข้อกำหนดของกระเป๋าเงิน"
+    กระเป๋าเงินของคุณต้องรองรับเครือข่าย BSC (Binance Smart Chain) เพื่อใช้ YC365
 
-!!! note "Wallet Requirements"
-    Your wallet must support BSC (Binance Smart Chain) network to use YC365.
+## วิธีการฝากเงินที่รองรับ
 
-## Supported Deposit Methods
-
-### BSC Network Deposits
+### การฝากเงินผ่านเครือข่าย BSC
 
 #### USDT (BEP-20)
-- **Minimum Deposit**: 10 USDT
-- **Processing Time**: 5-20 seconds
-- **Network Fee**: ~0.0005 BNB
-- **Network**: Binance Smart Chain (BSC) only
+- **การฝากขั้นต่ำ**: 10 USDT
+- **เวลาดำเนินการ**: 5-20 วินาที
+- **ค่าธรรมเนียมเครือข่าย**: ~0.0005 BNB
+- **เครือข่าย**: Binance Smart Chain (BSC) เท่านั้น
 
-## How to Deposit
+## วิธีการฝากเงิน
 
-### Step 1: Access the Platform
-1. Visit **dapp.yc365.io** in your web browser
-2. Ensure you have a compatible EVM wallet installed
+### ขั้นตอนที่ 1: เข้าถึงแพลตฟอร์ม
+1. ไปที่ **dapp.yc365.io** ในเว็บเบราว์เซอร์ของคุณ
+2. ตรวจสอบให้แน่ใจว่าคุณได้ติดตั้งกระเป๋าเงิน EVM ที่เข้ากันได้แล้ว
 
-### Step 2: Wallet Setup
-1. **Install Wallet** (if not already installed):
-   - Download and install MetaMask or any other EVM-compatible wallet
-   - Follow the wallet's setup instructions
+### ขั้นตอนที่ 2: การตั้งค่ากระเป๋าเงิน
+1. **ติดตั้งกระเป๋าเงิน** (หากยังไม่ได้ติดตั้ง):
+   - ดาวน์โหลดและติดตั้ง MetaMask หรือกระเป๋าเงิน EVM อื่นๆ
+   - ทำตามคำแนะนำการตั้งค่าของกระเป๋าเงิน
 
-2. **Connect to BSC Network**:
-   - Open your wallet and switch to BSC Mainnet
-   - If BSC network is not available, add it manually:
+2. **เชื่อมต่อกับเครือข่าย BSC**:
+   - เปิดกระเป๋าเงินของคุณและเปลี่ยนเป็น BSC Mainnet
+   - หากไม่มีเครือข่าย BSC ให้เพิ่มด้วยตนเอง:
      - **Network Name**: BSC Mainnet
      - **RPC URL**: https://bsc-dataseed1.binance.org/
      - **Chain ID**: 56
      - **Currency Symbol**: BNB
      - **Block Explorer**: https://bscscan.com/
 
-3. **Ensure Sufficient Balance**:
-   - Make sure your wallet has USDT (BEP-20) tokens
-   - Ensure you have enough BNB for gas fees
+3. **ตรวจสอบยอดคงเหลือให้เพียงพอ**:
+   - ตรวจสอบให้แน่ใจว่ากระเป๋าเงินของคุณมีโทเค็น USDT (BEP-20)
+   - ตรวจสอบให้แน่ใจว่าคุณมี BNB เพียงพอสำหรับค่าธรรมเนียม gas
 
-### Step 3: Connect and Deposit
-1. **Connect Wallet**:
-   - Click the "Connect Wallet" button on dapp.yc365.io
-   - Select your wallet (MetaMask, etc.)
-   - Approve the connection in your wallet
+### ขั้นตอนที่ 3: เชื่อมต่อและฝากเงิน
+1. **เชื่อมต่อกระเป๋าเงิน**:
+   - คลิกปุ่ม "Connect Wallet" บน dapp.yc365.io
+   - เลือกกระเป๋าเงินของคุณ (MetaMask, ฯลฯ)
+   - อนุมัติการเชื่อมต่อในกระเป๋าเงินของคุณ
 
-2. **Initiate Deposit**:
-   - Look for the **"Deposit"** button on the platform
-   - Click the deposit button to start the process
+2. **เริ่มการฝากเงิน**:
+   - มองหาปุ่ม **"Deposit"** บนแพลตฟอร์ม
+   - คลิกปุ่มฝากเงินเพื่อเริ่มกระบวนการ
 
-3. **Complete Transaction**:
-   - Follow the on-screen prompts to complete the deposit
-   - Confirm the transaction in your wallet
-   - Pay the required gas fees
+3. **ทำธุรกรรมให้เสร็จสมบูรณ์**:
+   - ทำตามคำแนะนำบนหน้าจอเพื่อทำการฝากเงินให้เสร็จสมบูรณ์
+   - ยืนยันธุรกรรมในกระเป๋าเงินของคุณ
+   - จ่ายค่าธรรมเนียม gas ที่จำเป็น
 
-### Step 4: Confirmation
-1. **Wait for Processing**:
-   - Wait 5-20 seconds for the transaction to be processed
-   - The platform will automatically detect your deposit
+### ขั้นตอนที่ 4: การยืนยัน
+1. **รอการประมวลผล**:
+   - รอ 5-20 วินาทีเพื่อให้ธุรกรรมได้รับการประมวลผล
+   - แพลตฟอร์มจะตรวจจับการฝากเงินของคุณโดยอัตโนมัติ
 
-2. **Verify Deposit**:
-   - Check your vault balance to see the deposited USDT amount
-   - The deposit process is now complete
+2. **ตรวจสอบการฝากเงิน**:
+   - ตรวจสอบยอดคงเหลือใน vault ของคุณเพื่อดูจำนวน USDT ที่ฝาก
+   - กระบวนการฝากเงินเสร็จสมบูรณ์แล้ว
 
-!!! success "Deposit Complete"
-    Once you see the USDT amount in your vault, the deposit process is fully completed and you can start trading.
+!!! success "การฝากเงินเสร็จสมบูรณ์"
+    เมื่อคุณเห็นจำนวน USDT ใน vault ของคุณ กระบวนการฝากเงินจะเสร็จสมบูรณ์อย่างสมบูรณ์และคุณสามารถเริ่มซื้อขายได้
 
-## Important Notes
+## หมายเหตุสำคัญ
 
-!!! warning "Security Reminders"
-    - Always double-check the deposit address
-    - Only send USDT (BEP-20) on BSC network
-    - Ensure you're using the correct network (BSC)
-    - Keep your private keys secure
-    - Never share your wallet's private keys or seed phrase
-    - Always verify you're on the official dapp.yc365.io website
+!!! warning "คำเตือนความปลอดภัย"
+    - ตรวจสอบที่อยู่ฝากเงินซ้ำเสมอ
+    - ส่ง USDT (BEP-20) บนเครือข่าย BSC เท่านั้น
+    - ตรวจสอบให้แน่ใจว่าคุณใช้เครือข่ายที่ถูกต้อง (BSC)
+    - เก็บ private keys ของคุณให้ปลอดภัย
+    - ห้ามแชร์ private keys หรือ seed phrase ของกระเป๋าเงินของคุณ
+    - ตรวจสอบเสมอว่าคุณอยู่บนเว็บไซต์ dapp.yc365.io อย่างเป็นทางการ
 
-!!! info "Processing Times"
-    - Most deposits are processed within 5-20 seconds
-    - During high network congestion, processing may take up to 1-3 minutes
-    - Contact support if funds haven't appeared after 5 minutes
+!!! info "เวลาดำเนินการ"
+    - การฝากเงินส่วนใหญ่จะได้รับการประมวลผลภายใน 5-20 วินาที
+    - ในช่วงที่มีความหนาแน่นของเครือข่ายสูง การประมวลผลอาจใช้เวลาถึง 1-3 นาที
+    - ติดต่อฝ่ายสนับสนุนหากเงินยังไม่เข้าหลังจาก 5 นาที
 
-## Deposit Limits
+## ขีดจำกัดการฝากเงิน
 
-| Account Level | Daily Limit | Monthly Limit |
-|---------------|-------------|---------------|
-| Basic        | $1,000      | $10,000       |
-| Verified     | $10,000     | $100,000      |
-| Premium      | $50,000     | $500,000      |
+| ระดับบัญชี | ขีดจำกัดรายวัน | ขีดจำกัดรายเดือน |
+|------------|----------------|------------------|
+| Basic      | $1,000         | $10,000          |
+| Verified   | $10,000        | $100,000         |
+| Premium    | $50,000        | $500,000         |
 
-## Troubleshooting
+## การแก้ไขปัญหา
 
-### Common Issues
+### ปัญหาทั่วไป
 
-**Q: My deposit hasn't appeared in my vault**
-A: Check the blockchain explorer to confirm the transaction has been confirmed. If confirmed but not credited, contact support with your transaction hash.
+**Q: การฝากเงินของฉันยังไม่ปรากฏใน vault**
+A: ตรวจสอบ blockchain explorer เพื่อยืนยันว่าธุรกรรมได้รับการยืนยันแล้ว หากยืนยันแล้วแต่ยังไม่เข้าเครดิต ให้ติดต่อฝ่ายสนับสนุนพร้อม transaction hash ของคุณ
 
-**Q: I sent funds to the wrong network**
-A: Unfortunately, funds sent to unsupported networks cannot be recovered. Only USDT (BEP-20) on BSC network is supported. Always verify the network before sending.
+**Q: ฉันส่งเงินไปผิดเครือข่าย**
+A: น่าเสียดายที่เงินที่ส่งไปยังเครือข่ายที่ไม่รองรับไม่สามารถกู้คืนได้ รองรับเฉพาะ USDT (BEP-20) บนเครือข่าย BSC เท่านั้น ตรวจสอบเครือข่ายเสมอก่อนส่ง
 
-**Q: My wallet won't connect to the platform**
-A: Ensure you're using a compatible EVM wallet (MetaMask, WalletConnect, etc.) and that you're connected to BSC Mainnet.
+**Q: กระเป๋าเงินของฉันเชื่อมต่อกับแพลตฟอร์มไม่ได้**
+A: ตรวจสอบให้แน่ใจว่าคุณใช้กระเป๋าเงิน EVM ที่เข้ากันได้ (MetaMask, WalletConnect, ฯลฯ) และคุณเชื่อมต่อกับ BSC Mainnet
 
-**Q: The transaction failed**
-A: Check if you have sufficient BNB for gas fees. Increase gas limit if needed or try again during lower network congestion.
+**Q: ธุรกรรมล้มเหลว**
+A: ตรวจสอบว่าคุณมี BNB เพียงพอสำหรับค่าธรรมเนียม gas หรือไม่ เพิ่มขีดจำกัด gas หากจำเป็นหรือลองอีกครั้งในช่วงที่มีความหนาแน่นของเครือข่ายต่ำกว่า
 
-**Q: I can't see the deposit button**
-A: Make sure you're connected to the correct wallet and network (BSC Mainnet). Refresh the page if necessary.
+**Q: ฉันไม่เห็นปุ่มฝากเงิน**
+A: ตรวจสอบให้แน่ใจว่าคุณเชื่อมต่อกับกระเป๋าเงินและเครือข่ายที่ถูกต้อง (BSC Mainnet) รีเฟรชหน้าหากจำเป็น
 
-## Support
+## การสนับสนุน
 
-If you encounter any issues with deposits, please contact our support team with:
-- Your wallet address
+หากคุณพบปัญหาใดๆ เกี่ยวกับการฝากเงิน โปรดติดต่อทีมสนับสนุนของเราพร้อม:
+- ที่อยู่กระเป๋าเงินของคุณ
 - Transaction hash
-- Screenshot of the transaction
-- Description of the issue
-- Network used (BSC Mainnet)
+- ภาพหน้าจอของธุรกรรม
+- คำอธิบายปัญหา
+- เครือข่ายที่ใช้ (BSC Mainnet)
 
-!!! tip "Quick Support"
-    For faster support, include your wallet address and transaction hash when reporting issues.
+!!! tip "การสนับสนุนด่วน"
+    เพื่อการสนับสนุนที่รวดเร็วยิ่งขึ้น ให้ระบุที่อยู่กระเป๋าเงินและ transaction hash ของคุณเมื่อรายงานปัญหา
 
 ---
 
-*For the latest deposit information and updates, please check our official announcements.* 
+*สำหรับข้อมูลการฝากเงินและการอัปเดตล่าสุด โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*

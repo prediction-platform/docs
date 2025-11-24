@@ -1,221 +1,218 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 常见问题解答 (FAQs)
 
-# Frequently Asked Questions (FAQs)
+## 概述
 
-## Overview
+欢迎来到 YC365 常见问题解答部分。在这里，您将找到有关我们去中心化预测市场平台的最常见问题的答案。无论您是刚入门的新用户，还是寻找特定信息的经验丰富的交易者，这份全面的常见问题解答都将帮助您找到所需的答案。
 
-Welcome to the YC365 Frequently Asked Questions section. Here you'll find answers to the most common questions about our decentralized prediction market platform. Whether you're a new user getting started or an experienced trader looking for specific information, this comprehensive FAQ will help you find the answers you need.
+## 快速导航
 
-## Quick Navigation
+### 🚀 **入门问题**
+- **[什么是预测市场？](what-is-a-prediction-market.md)** - 了解预测市场的基础知识及其工作原理
+- **[为什么使用加密货币？](why-crypto.md)** - 了解我们为什么使用加密货币和区块链技术
+- **[我的资金安全吗？](is-my-money-safe.md)** - 了解我们的安全措施和资金保护
 
-### 🚀 **Getting Started Questions**
-- **[What is a Prediction Market?](what-is-a-prediction-market.md)** - Learn the basics of prediction markets and how they work
-- **[Why Crypto?](why-crypto.md)** - Understand why we use cryptocurrency and blockchain technology
-- **[Is My Money Safe?](is-my-money-safe.md)** - Learn about our security measures and fund protection
+### 💰 **交易问题**
+- **[我可以提前出售吗？](can-i-sell-early.md)** - 了解在事件决议前退出头寸的选项
+- **[如何联系支持？](how-do-i-contact-support.md)** - 了解如何在需要时获得帮助
 
-### 💰 **Trading Questions**
-- **[Can I Sell Early?](can-i-sell-early.md)** - Understand your options for exiting positions before event resolution
-- **[How Do I Contact Support?](how-do-i-contact-support.md)** - Find out how to get help when you need it
+## 最热门问题
 
-## Most Popular Questions
+### 1. 什么是 YC365？
+YC365 是一个建立在币安智能链 (BSC) 上的去中心化预测市场平台，用户可以在此对现实世界事件的结果进行交易。我们将区块链安全性与用户友好的界面相结合，使每个人都能访问预测市场。
 
-### 1. What is YC365?
-YC365 is a decentralized prediction market platform built on Binance Smart Chain (BSC) where users can trade on the outcomes of real-world events. We combine blockchain security with user-friendly interfaces to make prediction markets accessible to everyone.
+### 2. 如何开始？
+1. 安装 MetaMask 或兼容的 EVM 钱包
+2. 在钱包中配置 BSC 网络
+3. 获取 USDT (BEP-20) 和 BNB 用于 Gas 费用
+4. 访问 dapp.yc365.io 并连接您的钱包
+5. 进行首次充值
+6. 开始在预测市场上交易
 
-### 2. How do I get started?
-1. Install MetaMask or compatible EVM wallet
-2. Configure BSC network in your wallet
-3. Acquire USDT (BEP-20) and BNB for gas fees
-4. Visit dapp.yc365.io and connect your wallet
-5. Make your first deposit
-6. Start trading on prediction markets
+### 3. 我可以交易什么？
+我们提供各种类别的预测市场：
+- **体育**：足球、篮球、网球和其他体育赛事
+- **政治**：选举、政策决定、政治动态
+- **经济**：GDP 报告、通胀数据、市场表现
+- **技术**：产品发布、采用指标、行业发展
+- **娱乐**：颁奖典礼、真人秀、名人事件
+- **加密货币**：价格预测、采用指标、监管动态
 
-### 3. What can I trade on?
-We offer prediction markets on various categories:
-- **Sports**: Football, basketball, tennis, and other sporting events
-- **Politics**: Elections, policy decisions, political developments
-- **Economics**: GDP reports, inflation data, market performance
-- **Technology**: Product launches, adoption metrics, industry developments
-- **Entertainment**: Awards shows, reality TV, celebrity events
-- **Cryptocurrency**: Price predictions, adoption metrics, regulatory developments
+### 4. 交易成本是多少？
+- **交易费**：执行交易的 0.15% (1.5/1000)
+- **Gas 费**：BSC 网络费用（通常相当于 0.005-0.02 USDT 的 BNB）
+- **充值/提现**：无平台费用（仅需网络 Gas 费）
 
-### 4. How much does it cost to trade?
-- **Trading Fee**: 0.15% (1.5/1000) on executed trades
-- **Gas Fees**: BSC network fees (typically 0.005-0.02 USDT equivalent in BNB)
-- **Deposit/Withdrawal**: No platform fees (only network gas fees)
+### 5. 什么是 YES/NO 代币？
+每个预测市场都会创建两种代币：
+- **YES 代币**：代表相信事件会发生
+- **NO 代币**：代表相信事件不会发生
+- **定价**：代币价格范围从 0.01 到 0.99 USDT
+- **结算**：获胜代币价值变为 1.00 USDT，失败代币变为一文不值
 
-### 5. What are YES/NO tokens?
-Every prediction market creates two tokens:
-- **YES tokens**: Represent belief the event will occur
-- **NO tokens**: Represent belief the event will NOT occur
-- **Pricing**: Token prices range from 0.01 to 0.99 USDT
-- **Settlement**: Winning tokens become worth 1.00 USDT, losing tokens become worthless
+## 账户与安全
 
-## Account and Security
+### 账户管理
+- **需要钱包**：您需要一个兼容 EVM 的钱包（推荐 MetaMask）
+- **无需 KYC**：基本交易无需身份验证
+- **去中心化**：您的资金保存在智能合约中，而不是由我们持有
+- **访问**：使用您的钱包从任何设备访问您的账户
 
-### Account Management
-- **Wallet Required**: You need an EVM-compatible wallet (MetaMask recommended)
-- **No KYC**: No identity verification required for basic trading
-- **Decentralized**: Your funds are held in smart contracts, not by us
-- **Access**: Access your account from any device with your wallet
+### 安全功能
+- **智能合约审计**：所有合约均经过专业审计
+- **开源**：合约代码公开可用
+- **多重签名**：关键操作需要多重签名
+- **保险**：平台保险提供额外保护
 
-### Security Features
-- **Smart Contract Audits**: All contracts professionally audited
-- **Open Source**: Contract code publicly available
-- **Multi-signature**: Critical operations require multiple signatures
-- **Insurance**: Platform insurance for additional protection
+### 资金安全
+- **区块链安全**：资金受 BSC 区块链安全保护
+- **智能合约**：经审计的合约处理所有资金管理
+- **无托管**：我们不直接持有您的资金
+- **用户控制**：您保持对私钥的控制
 
-### Fund Safety
-- **Blockchain Security**: Funds protected by BSC blockchain security
-- **Smart Contracts**: Audited contracts handle all fund management
-- **No Custody**: We don't hold your funds directly
-- **User Control**: You maintain control of your private keys
+## 交易基础
 
-## Trading Basics
+### 交易如何运作
+1. **选择市场**：选择您想要预测的事件
+2. **选择立场**：如果您认为会发生买入 YES，如果不认为会发生买入 NO
+3. **设定价格**：选择您愿意支付的价格（限价单）
+4. **执行交易**：在您的钱包中确认交易
+5. **监控头寸**：跟踪您的头寸价值
+6. **退出或持有**：提前出售或持有直到决议
 
-### How Trading Works
-1. **Choose Market**: Select event you want to predict
-2. **Pick Side**: Buy YES if you think it will happen, NO if you don't
-3. **Set Price**: Choose price you're willing to pay (limit order)
-4. **Execute Trade**: Confirm transaction in your wallet
-5. **Monitor Position**: Track your position value
-6. **Exit or Hold**: Sell early or hold until resolution
+### 获利机制
+- **交易利润**：在事件决议前低买高卖
+- **结算利润**：持有直到决议以获得潜在的 100% 回报
+- **做市**：提供流动性并从价差中赚取收益
 
-### Profit Mechanisms
-- **Trading Profits**: Buy low, sell high before event resolution
-- **Settlement Profits**: Hold until resolution for potential 100% returns
-- **Market Making**: Provide liquidity and earn from spreads
+### 风险管理
+- **头寸规模**：永远不要拿超过您能承受损失的资金冒险
+- **多元化**：将风险分散到多个事件中
+- **研究**：交易前始终研究事件
+- **从小额开始**：在学习的同时从小额开始
 
-### Risk Management
-- **Position Sizing**: Never risk more than you can afford to lose
-- **Diversification**: Spread risk across multiple events
-- **Research**: Always research events before trading
-- **Start Small**: Begin with small amounts while learning
+## 技术支持
 
-## Technical Support
+### 平台问题
+- **浏览器问题**：清除缓存，尝试不同的浏览器
+- **钱包连接**：确保钱包已解锁并在 BSC 网络上
+- **交易失败**：检查 Gas 费用和网络状态
+- **余额更新**：给区块链确认留出时间
 
-### Platform Issues
-- **Browser Issues**: Clear cache, try different browser
-- **Wallet Connection**: Ensure wallet is unlocked and on BSC network
-- **Transaction Failures**: Check gas fees and network status
-- **Balance Updates**: Allow time for blockchain confirmation
+### 获取帮助
+- **文档**：全面的指南和教程
+- **社区**：活跃的 Telegram 和 Discord 社区
+- **支持团队**：提供 24/7 客户支持
+- **FAQ 搜索**：使用搜索功能查找特定答案
 
-### Getting Help
-- **Documentation**: Comprehensive guides and tutorials
-- **Community**: Active Telegram and Discord communities
-- **Support Team**: 24/7 customer support available
-- **FAQ Search**: Use search function to find specific answers
+## 平台功能
 
-## Platform Features
+### 交易功能
+- **限价单**：为您的交易设定确切价格
+- **订单簿**：查看所有挂单的买入和卖出订单
+- **实时价格**：实时价格更新和市场数据
+- **投资组合跟踪**：监控您的所有头寸和表现
 
-### Trading Features
-- **Limit Orders**: Set exact prices for your trades
-- **Order Book**: See all pending buy and sell orders
-- **Real-time Prices**: Live price updates and market data
-- **Portfolio Tracking**: Monitor all your positions and performance
+### 高级功能
+- **市场分析**：详细的市场统计和趋势
+- **价格图表**：历史价格图表和分析工具
+- **移动优化**：移动设备上的全功能
+- **多语言**：提供 6 种语言版本
 
-### Advanced Features
-- **Market Analytics**: Detailed market statistics and trends
-- **Price Charts**: Historical price charts and analysis tools
-- **Mobile Optimized**: Full functionality on mobile devices
-- **Multi-language**: Available in 6 languages
+### 即将推出
+- **移动应用**：原生 iOS 和 Android 应用程序
+- **高级订单**：止损单、冰山单和条件单
+- **社交功能**：关注并复制成功的交易者
+- **额外资产**：更多加密货币和稳定币
 
-### Coming Soon
-- **Mobile Apps**: Native iOS and Android applications
-- **Advanced Orders**: Stop-loss, iceberg, and conditional orders
-- **Social Features**: Follow and copy successful traders
-- **Additional Assets**: More cryptocurrencies and stablecoins
+## 监管与合规
 
-## Regulatory and Compliance
+### 法律地位
+- **去中心化平台**：作为去中心化协议运行
+- **全球访问**：全球可用（请查看当地法规）
+- **合规性**：设计时考虑了监管因素
+- **用户责任**：用户负责当地合规性
 
-### Legal Status
-- **Decentralized Platform**: Operates as decentralized protocol
-- **Global Access**: Available worldwide (check local regulations)
-- **Compliance**: Designed with regulatory considerations
-- **User Responsibility**: Users responsible for local compliance
+### 税务考虑
+- **交易收益**：可能需要缴纳资本利得税
+- **记录保存**：平台提供交易历史
+- **管辖区依赖**：税务处理因国家/地区而异
+- **专业建议**：咨询税务专业人士以获得指导
 
-### Tax Considerations
-- **Trading Gains**: May be subject to capital gains tax
-- **Record Keeping**: Platform provides transaction history
-- **Jurisdiction Dependent**: Tax treatment varies by country
-- **Professional Advice**: Consult tax professionals for guidance
+## 故障排除
 
-## Troubleshooting
+### 常见问题
 
-### Common Issues
+#### "交易失败"
+- 检查 BNB 余额是否足够支付 Gas 费
+- 验证您是否在 BSC 网络上
+- 尝试更高的 Gas 价格
+- 如果持续存在，请联系支持
 
-#### "Transaction Failed"
-- Check BNB balance for gas fees
-- Verify you're on BSC network
-- Try higher gas price
-- Contact support if persistent
+#### "无法连接钱包"
+- 解锁 MetaMask
+- 切换到 BSC 网络
+- 刷新页面
+- 清除浏览器缓存
 
-#### "Cannot Connect Wallet"
-- Unlock MetaMask
-- Switch to BSC network
-- Refresh page
-- Clear browser cache
+#### "余额未更新"
+- 等待区块链确认
+- 30 秒后刷新页面
+- 在 BSCScan 上检查交易
+- 联系支持并提供交易哈希
 
-#### "Balance Not Updating"
-- Wait for blockchain confirmation
-- Refresh page after 30 seconds
-- Check transaction on BSCScan
-- Contact support with transaction hash
+#### "订单未成交"
+- 检查价格是否具有竞争力
+- 验证市场流动性
+- 考虑使用市价单
+- 监控订单簿深度
 
-#### "Order Not Filling"
-- Check if price is competitive
-- Verify market liquidity
-- Consider using market orders
-- Monitor order book depth
+### 性能问题
+- **加载缓慢**：检查互联网连接，尝试不同的服务器
+- **高 Gas 费**：等待网络拥堵降低
+- **订单延迟**：网络拥堵可能会减慢执行速度
+- **显示问题**：清除浏览器缓存，更新浏览器
 
-### Performance Issues
-- **Slow Loading**: Check internet connection, try different server
-- **High Gas Fees**: Wait for lower network congestion
-- **Order Delays**: Network congestion may slow execution
-- **Display Issues**: Clear browser cache, update browser
+## 社区和资源
 
-## Community and Resources
+### 学习资源
+- **视频教程**：分步视频指南
+- **书面指南**：全面的文档
+- **网络研讨会**：定期教育会议
+- **博客**：市场见解和平台更新
 
-### Learning Resources
-- **Video Tutorials**: Step-by-step video guides
-- **Written Guides**: Comprehensive documentation
-- **Webinars**: Regular educational sessions
-- **Blog**: Market insights and platform updates
+### 社区渠道
+- **Telegram**：实时聊天和支持
+- **Discord**：技术讨论和社区
+- **Twitter**：新闻和公告
+- **Reddit**：社区讨论和反馈
 
-### Community Channels
-- **Telegram**: Real-time chat and support
-- **Discord**: Technical discussions and community
-- **Twitter**: News and announcements
-- **Reddit**: Community discussions and feedback
+### 开发者资源
+- **API 文档**：供开发者构建集成
+- **智能合约代码**：开源合约代码
+- **技术规范**：平台技术规范
+- **开发者支持**：专门的开发者协助
 
-### Developer Resources
-- **API Documentation**: For developers building integrations
-- **Smart Contract Code**: Open source contract code
-- **Technical Specs**: Platform technical specifications
-- **Developer Support**: Dedicated developer assistance
+## 联系信息
 
-## Contact Information
+### 支持渠道
+- **应用内支持**：内置帮助系统
+- **邮件支持**：support@yc365.io
+- **社区论坛**：在社区频道提问
+- **文档**：全面的自助资源
 
-### Support Channels
-- **In-App Support**: Built-in help system
-- **Email Support**: support@yc365.io
-- **Community Forums**: Ask questions in community channels
-- **Documentation**: Comprehensive self-help resources
-
-### Response Times
-- **Critical Issues**: Within 1 hour
-- **General Support**: Within 24 hours
-- **Community Questions**: Usually answered within minutes
-- **Documentation Updates**: Regularly updated based on feedback
+### 响应时间
+- **关键问题**：1 小时内
+- **一般支持**：24 小时内
+- **社区问题**：通常在几分钟内回答
+- **文档更新**：根据反馈定期更新
 
 ---
 
-**Can't find what you're looking for?** 
+**找不到您要找的内容？**
 
-1. **Search**: Use the search function to find specific topics
-2. **Browse Categories**: Check the specific FAQ categories above
-3. **Community**: Ask in our Telegram or Discord channels
-4. **Contact Support**: Reach out to our support team directly
+1. **搜索**：使用搜索功能查找特定主题
+2. **浏览类别**：查看上面的特定 FAQ 类别
+3. **社区**：在我们的 Telegram 或 Discord 频道提问
+4. **联系支持**：直接联系我们的支持团队
 
-*We're constantly updating our FAQ based on user feedback. If you have suggestions for additional questions or improvements, please let us know!* 
+*我们会根据用户反馈不断更新我们的常见问题解答。如果您有关于其他问题或改进的建议，请告诉我们！*

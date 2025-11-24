@@ -1,90 +1,87 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Termos de Uso da YC365 (Terms of Use)
 
-# YC365 Terms of Use
-
-_Last Updated: July 22, 2025_
+_Última Atualização: 22 de Julho de 2025_
 
 ---
 
-Welcome to YC365 (hereinafter referred to as "the Platform" or "we"). Before accessing or using our services, please read and agree to the following Terms of Use ("Terms"). **If you do not agree to these Terms, do not use the Platform.**
+Bem-vindo à YC365 (doravante referida como "a Plataforma" ou "nós"). Antes de acessar ou usar nossos serviços, leia e concorde com os seguintes Termos de Uso ("Termos"). **Se você não concordar com estes Termos, não use a Plataforma.**
 
 ---
 
-## 1. Eligibility
+## 1. Elegibilidade
 
-You may not use the Platform if:
+Você não pode usar a Plataforma se:
 
-- You are located, incorporated, or otherwise established in the United States, United Kingdom, France, Ontario (Canada), Singapore, Poland, Thailand, Belgium, Taiwan, or any other jurisdiction where participation in the Platform is prohibited by local laws or regulations.
-- You are subject to any sanctions administered or enforced by the United Nations, the European Union, the U.S. Department of the Treasury’s Office of Foreign Assets Control (OFAC), or any similar regulatory body.
-- You are under the age of 18 (or the age of majority in your jurisdiction).
+- Você estiver localizado, incorporado ou de outra forma estabelecido nos Estados Unidos, Reino Unido, França, Ontário (Canadá), Cingapura, Polônia, Tailândia, Bélgica, Taiwan ou qualquer outra jurisdição onde a participação na Plataforma seja proibida por leis ou regulamentos locais.
+- Você estiver sujeito a quaisquer sanções administradas ou aplicadas pelas Nações Unidas, União Europeia, Escritório de Controle de Ativos Estrangeiros do Departamento do Tesouro dos EUA (OFAC) ou qualquer órgão regulador semelhante.
+- Você tiver menos de 18 anos (ou a maioridade em sua jurisdição).
 
-!!! warning "Important Notice"
-    By using the Platform, you represent and warrant that you are not located in or subject to the jurisdiction of any restricted location and that you are not a person barred from using the Platform under applicable laws.
-
----
-
-## 2. Use of the Platform
-
-The Platform provides a decentralized interface for accessing public data and services related to prediction markets and blockchain-based tools.
-
-**We do not provide financial, investment, or legal advice, and we are not a registered broker-dealer, financial institution, or investment advisor.**
-
-You agree not to:
-
-- Use the Platform for illegal activities, including but not limited to money laundering, terrorist financing, or market manipulation.
-- Interfere with the Platform’s security, systems, or any other users’ access.
-- Attempt to gain unauthorized access to any portion of the Platform, servers, or networks.
+!!! warning "Aviso Importante"
+    Ao usar a Plataforma, você declara e garante que não está localizado ou sujeito à jurisdição de qualquer local restrito e que não é uma pessoa impedida de usar a Plataforma sob as leis aplicáveis.
 
 ---
 
-## 3. Assumption of Risk
+## 2. Uso da Plataforma
 
-!!! note "Risk Notice"
-    - Your use of the Platform involves inherent risks, including but not limited to market volatility, smart contract bugs, and software vulnerabilities.
-    - You are solely responsible for any transactions you make or decisions you take on or through the Platform.
-    - Digital assets and blockchain technology are inherently risky, and prices may fluctuate dramatically.
-    - YC365 does not operate, control, or take custody of any smart contracts, tokens, or user funds. **Use the Platform at your own risk!**
+A Plataforma fornece uma interface descentralizada para acessar dados públicos e serviços relacionados a mercados de previsão e ferramentas baseadas em blockchain.
 
----
+**Não fornecemos consultoria financeira, de investimento ou jurídica, e não somos uma corretora registrada, instituição financeira ou consultor de investimentos.**
 
-## 4. No Warranty
+Você concorda em não:
 
-!!! info "Disclaimer"
-    The Platform is provided "as is" and "as available" without warranties of any kind.
-    We make no representations or warranties about the accuracy, completeness, or suitability of the content provided via the Platform.
-
-**We disclaim any and all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.**
+- Usar a Plataforma para atividades ilegais, incluindo, mas não se limitando a lavagem de dinheiro, financiamento ao terrorismo ou manipulação de mercado.
+- Interferir na segurança, sistemas ou acesso de outros usuários da Plataforma.
+- Tentar obter acesso não autorizado a qualquer parte da Plataforma, servidores ou redes.
 
 ---
 
-## 5. Limitation of Liability
+## 3. Assunção de Risco
 
-To the maximum extent permitted by applicable law:
-
-- YC365 and its affiliates shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use of the Platform.
-- In no event shall our total liability exceed $100 USD or the amount you paid to use the Platform in the last 12 months, whichever is lower.
-
----
-
-## 6. Changes to the Terms
-
-We may update or modify these Terms at any time. Changes will become effective immediately upon posting.
-
-!!! tip "Reminder"
-    Your continued use of the Platform after changes are posted will constitute your acceptance of the revised Terms.
+!!! note "Aviso de Risco"
+    - O uso da Plataforma envolve riscos inerentes, incluindo, mas não se limitando a volatilidade do mercado, bugs de contratos inteligentes e vulnerabilidades de software.
+    - Você é o único responsável por quaisquer transações que fizer ou decisões que tomar na ou através da Plataforma.
+    - Ativos digitais e tecnologia blockchain são inerentemente arriscados, e os preços podem flutuar drasticamente.
+    - A YC365 não opera, controla ou detém a custódia de quaisquer contratos inteligentes, tokens ou fundos de usuários. **Use a Plataforma por sua conta e risco!**
 
 ---
 
-## 7. Governing Law
+## 4. Sem Garantia
 
-These Terms shall be governed by and construed in accordance with the laws of the British Virgin Islands, without regard to conflict of law principles.
+!!! info "Isenção de Responsabilidade"
+    A Plataforma é fornecida "como está" e "conforme disponível" sem garantias de qualquer tipo.
+    Não fazemos representações ou garantias sobre a precisão, integridade ou adequação do conteúdo fornecido através da Plataforma.
+
+**Nós nos isentamos de toda e qualquer garantia implícita, incluindo comercialização, adequação a uma finalidade específica e não violação.**
 
 ---
 
-## 8. Contact
+## 5. Limitação de Responsabilidade
 
-For questions or feedback regarding these Terms, please contact:
+Na extensão máxima permitida pela lei aplicável:
+
+- A YC365 e suas afiliadas não serão responsáveis por quaisquer danos indiretos, incidentais, especiais ou consequenciais resultantes do seu uso da Plataforma.
+- Em nenhum caso nossa responsabilidade total excederá $100 USD ou o valor que você pagou para usar a Plataforma nos últimos 12 meses, o que for menor.
+
+---
+
+## 6. Alterações nos Termos
+
+Podemos atualizar ou modificar estes Termos a qualquer momento. As alterações entrarão em vigor imediatamente após a publicação.
+
+!!! tip "Lembrete"
+    Seu uso continuado da Plataforma após a publicação das alterações constituirá sua aceitação dos Termos revisados.
+
+---
+
+## 7. Lei Aplicável
+
+Estes Termos serão regidos e interpretados de acordo com as leis das Ilhas Virgens Britânicas, sem levar em consideração os princípios de conflito de leis.
+
+---
+
+## 8. Contato
+
+Para perguntas ou feedback sobre estes Termos, entre em contato:
 
 [**support@yc365.io**](mailto:support@yc365.io)
 

@@ -1,58 +1,55 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 集成指南 (Integration Guide)
 
-# Integration Guide
+## 概览
 
-## Overview
+这份全面的集成指南将帮助开发人员将 YC365 的预测市场功能无缝集成到他们的应用程序中。无论您是构建交易机器人、创建自定义界面还是开发 DeFi 应用程序，本指南都提供了分步说明和最佳实践。
 
-This comprehensive integration guide will help developers seamlessly integrate YC365's prediction market functionality into their applications. Whether you're building a trading bot, creating a custom interface, or developing a DeFi application, this guide provides step-by-step instructions and best practices.
+## 快速开始
 
-## Quick Start
+### 🚀 **5 分钟集成**
 
-### 🚀 **5-Minute Integration**
+#### **第 1 步：获取 API 访问权限**
+1. **注册**：创建您的 YC365 账户
+2. **生成 API 密钥**：访问开发者仪表板
+3. **选择环境**：从沙盒开始进行测试
+4. **下载 SDK**：安装您首选语言的 SDK
 
-#### **Step 1: Get API Access**
-1. **Sign Up**: Create your YC365 account
-2. **Generate API Key**: Access the developer dashboard
-3. **Choose Environment**: Start with sandbox for testing
-4. **Download SDK**: Install your preferred language SDK
-
-#### **Step 2: Basic Integration**
+#### **第 2 步：基本集成**
 ```javascript
-// Install SDK
+// 安装 SDK
 npm install yc365-sdk
 
-// Basic setup
+// 基本设置
 const YC365 = require('yc365-sdk');
 const client = new YC365({
   apiKey: 'YOUR_API_KEY',
   environment: 'sandbox'
 });
 
-// Get markets
+// 获取市场
 const markets = await client.markets.getAll();
-console.log('Available markets:', markets.data);
+console.log('可用市场:', markets.data);
 ```
 
-#### **Step 3: Test Trading**
+#### **第 3 步：测试交易**
 ```javascript
-// Place a test order
+// 下达测试订单
 const order = await client.orders.create({
   market_id: 'market_001',
   side: 'buy',
   outcome: 'yes',
-  amount: 100, // Test with small amount
+  amount: 100, // 使用小额测试
   price: 0.5
 });
 
-console.log('Order placed:', order.data);
+console.log('订单已下达:', order.data);
 ```
 
-## Integration Patterns
+## 集成模式
 
-### 📱 **Mobile App Integration**
+### 📱 **移动应用集成**
 
-#### **React Native Example**
+#### **React Native 示例**
 ```javascript
 import { YC365Client } from 'yc365-sdk-react-native';
 
@@ -70,7 +67,7 @@ class TradingApp extends Component {
       const response = await this.client.markets.getAll();
       this.setState({ markets: response.data });
     } catch (error) {
-      console.error('Failed to load markets:', error);
+      console.error('加载市场失败:', error);
     }
   }
 
@@ -85,13 +82,13 @@ class TradingApp extends Component {
       });
       return order.data;
     } catch (error) {
-      throw new Error(`Order failed: ${error.message}`);
+      throw new Error(`订单失败: ${error.message}`);
     }
   }
 }
 ```
 
-#### **iOS Swift Example**
+#### **iOS Swift 示例**
 ```swift
 import YC365SDK
 
@@ -111,7 +108,7 @@ class TradingViewController: UIViewController {
                     self.updateMarkets(markets.data)
                 }
             case .failure(let error):
-                print("Failed to load markets: \(error)")
+                print("加载市场失败: \(error)")
             }
         }
     }
@@ -128,18 +125,18 @@ class TradingViewController: UIViewController {
         client.orders.create(orderRequest) { result in
             switch result {
             case .success(let order):
-                print("Order placed: \(order.data)")
+                print("订单已下达: \(order.data)")
             case .failure(let error):
-                print("Order failed: \(error)")
+                print("订单失败: \(error)")
             }
         }
     }
 }
 ```
 
-### 🌐 **Web Application Integration**
+### 🌐 **Web 应用程序集成**
 
-#### **React.js Example**
+#### **React.js 示例**
 ```jsx
 import React, { useState, useEffect } from 'react';
 import { YC365Client } from 'yc365-sdk';
@@ -167,7 +164,7 @@ const TradingInterface = () => {
       const response = await client.markets.getAll();
       setMarkets(response.data);
     } catch (error) {
-      console.error('Failed to load markets:', error);
+      console.error('加载市场失败:', error);
     }
   };
 
@@ -180,25 +177,25 @@ const TradingInterface = () => {
         amount: parseFloat(orderForm.amount),
         price: parseFloat(orderForm.price)
       });
-      alert('Order placed successfully!');
+      alert('订单下达成功！');
       setOrderForm({ side: 'buy', outcome: 'yes', amount: '', price: '' });
     } catch (error) {
-      alert(`Order failed: ${error.message}`);
+      alert(`订单失败: ${error.message}`);
     }
   };
 
   return (
     <div className="trading-interface">
-      <h2>YC365 Trading Interface</h2>
+      <h2>YC365 交易界面</h2>
       
       <div className="markets-section">
-        <h3>Available Markets</h3>
+        <h3>可用市场</h3>
         {markets.map(market => (
           <div key={market.id} className="market-card">
             <h4>{market.title}</h4>
             <p>YES: {market.yes_price} | NO: {market.no_price}</p>
             <button onClick={() => setSelectedMarket(market)}>
-              Trade This Market
+              交易此市场
             </button>
           </div>
         ))}
@@ -206,14 +203,14 @@ const TradingInterface = () => {
 
       {selectedMarket && (
         <div className="order-form">
-          <h3>Place Order - {selectedMarket.title}</h3>
+          <h3>下订单 - {selectedMarket.title}</h3>
           <form onSubmit={handleOrderSubmit}>
             <select 
               value={orderForm.side} 
               onChange={(e) => setOrderForm({...orderForm, side: e.target.value})}
             >
-              <option value="buy">Buy</option>
-              <option value="sell">Sell</option>
+              <option value="buy">买入</option>
+              <option value="sell">卖出</option>
             </select>
             
             <select 
@@ -226,7 +223,7 @@ const TradingInterface = () => {
             
             <input
               type="number"
-              placeholder="Amount"
+              placeholder="数量"
               value={orderForm.amount}
               onChange={(e) => setOrderForm({...orderForm, amount: e.target.value})}
               required
@@ -235,13 +232,13 @@ const TradingInterface = () => {
             <input
               type="number"
               step="0.01"
-              placeholder="Price"
+              placeholder="价格"
               value={orderForm.price}
               onChange={(e) => setOrderForm({...orderForm, price: e.target.value})}
               required
             />
             
-            <button type="submit">Place Order</button>
+            <button type="submit">下订单</button>
           </form>
         </div>
       )}
@@ -252,11 +249,11 @@ const TradingInterface = () => {
 export default TradingInterface;
 ```
 
-#### **Vue.js Example**
+#### **Vue.js 示例**
 ```vue
 <template>
   <div class="trading-app">
-    <h2>YC365 Trading App</h2>
+    <h2>YC365 交易应用</h2>
     
     <div class="markets-grid">
       <div 
@@ -270,24 +267,24 @@ export default TradingInterface;
           <span class="yes-price">YES: {{ market.yes_price }}</span>
           <span class="no-price">NO: {{ market.no_price }}</span>
         </div>
-        <div class="volume">Volume: {{ formatVolume(market.volume_24h) }}</div>
+        <div class="volume">成交量: {{ formatVolume(market.volume_24h) }}</div>
       </div>
     </div>
 
     <div v-if="selectedMarket" class="order-panel">
-      <h3>Trade: {{ selectedMarket.title }}</h3>
+      <h3>交易: {{ selectedMarket.title }}</h3>
       
       <form @submit.prevent="placeOrder">
         <div class="form-group">
-          <label>Side:</label>
+          <label>方向:</label>
           <select v-model="orderForm.side">
-            <option value="buy">Buy</option>
-            <option value="sell">Sell</option>
+            <option value="buy">买入</option>
+            <option value="sell">卖出</option>
           </select>
         </div>
         
         <div class="form-group">
-          <label>Outcome:</label>
+          <label>结果:</label>
           <select v-model="orderForm.outcome">
             <option value="yes">YES</option>
             <option value="no">NO</option>
@@ -295,28 +292,28 @@ export default TradingInterface;
         </div>
         
         <div class="form-group">
-          <label>Amount:</label>
+          <label>数量:</label>
           <input 
             type="number" 
             v-model="orderForm.amount"
-            placeholder="Enter amount"
+            placeholder="输入数量"
             required
           />
         </div>
         
         <div class="form-group">
-          <label>Price:</label>
+          <label>价格:</label>
           <input 
             type="number" 
             step="0.01"
             v-model="orderForm.price"
-            placeholder="Enter price"
+            placeholder="输入价格"
             required
           />
         </div>
         
         <button type="submit" :disabled="!isOrderValid">
-          Place Order
+          下订单
         </button>
       </form>
     </div>
@@ -358,7 +355,7 @@ export default {
         const response = await this.client.markets.getAll();
         this.markets = response.data;
       } catch (error) {
-        console.error('Failed to load markets:', error);
+        console.error('加载市场失败:', error);
       }
     },
     
@@ -375,10 +372,10 @@ export default {
           price: parseFloat(this.orderForm.price)
         });
         
-        this.$toast.success('Order placed successfully!');
+        this.$toast.success('订单下达成功！');
         this.resetOrderForm();
       } catch (error) {
-        this.$toast.error(`Order failed: ${error.message}`);
+        this.$toast.error(`订单失败: ${error.message}`);
       }
     },
     
@@ -399,9 +396,9 @@ export default {
 </script>
 ```
 
-### 🤖 **Trading Bot Integration**
+### 🤖 **交易机器人集成**
 
-#### **Python Trading Bot**
+#### **Python 交易机器人**
 ```python
 import asyncio
 import logging
@@ -416,45 +413,45 @@ class TradingBot:
         self.logger = logging.getLogger(__name__)
         
     async def start(self):
-        """Start the trading bot"""
-        # Connect to WebSocket for real-time data
+        """启动交易机器人"""
+        # 连接到 WebSocket 以获取实时数据
         await self.ws.connect()
         
-        # Subscribe to market updates
+        # 订阅市场更新
         await self.ws.subscribe('market_updates')
         
-        # Start main trading loop
+        # 启动主交易循环
         await self.trading_loop()
     
     async def trading_loop(self):
-        """Main trading strategy loop"""
+        """主交易策略循环"""
         while True:
             try:
-                # Get current markets
+                # 获取当前市场
                 markets = await self.client.markets.get_all()
                 
-                # Analyze each market
+                # 分析每个市场
                 for market in markets.data:
                     await self.analyze_market(market)
                 
-                # Wait before next iteration
-                await asyncio.sleep(60)  # 1 minute intervals
+                # 在下一次迭代前等待
+                await asyncio.sleep(60)  # 1 分钟间隔
                 
             except Exception as e:
-                self.logger.error(f"Error in trading loop: {e}")
-                await asyncio.sleep(30)  # Wait before retry
+                self.logger.error(f"交易循环错误: {e}")
+                await asyncio.sleep(30)  # 重试前等待
     
     async def analyze_market(self, market):
-        """Analyze market and make trading decisions"""
+        """分析市场并做出交易决策"""
         try:
-            # Get market history for analysis
+            # 获取市场历史进行分析
             history = await self.client.markets.get_history(
                 market_id=market['id'],
                 interval='1h',
                 limit=24
             )
             
-            # Simple moving average strategy
+            # 简单移动平均策略
             prices = [h['yes_price'] for h in history.data]
             if len(prices) >= 20:
                 sma_short = sum(prices[-10:]) / 10
@@ -462,7 +459,7 @@ class TradingBot:
                 
                 current_price = market['yes_price']
                 
-                # Buy signal: short MA crosses above long MA
+                # 买入信号：短期 MA 上穿长期 MA
                 if sma_short > sma_long and current_price < sma_short:
                     await self.place_order(
                         market_id=market['id'],
@@ -472,15 +469,15 @@ class TradingBot:
                         price=current_price
                     )
                 
-                # Sell signal: short MA crosses below long MA
+                # 卖出信号：短期 MA 下穿长期 MA
                 elif sma_short < sma_long and current_price > sma_short:
                     await self.close_position(market['id'])
                     
         except Exception as e:
-            self.logger.error(f"Error analyzing market {market['id']}: {e}")
+            self.logger.error(f"分析市场 {market['id']} 时出错: {e}")
     
     async def place_order(self, market_id, side, outcome, amount, price):
-        """Place a trading order"""
+        """下达交易订单"""
         try:
             order = await self.client.orders.create(
                 market_id=market_id,
@@ -490,22 +487,22 @@ class TradingBot:
                 price=price
             )
             
-            self.logger.info(f"Order placed: {order.data}")
+            self.logger.info(f"订单已下达: {order.data}")
             
-            # Track position
+            # 跟踪头寸
             if market_id not in self.positions:
                 self.positions[market_id] = []
             self.positions[market_id].append(order.data)
             
         except Exception as e:
-            self.logger.error(f"Failed to place order: {e}")
+            self.logger.error(f"下订单失败: {e}")
     
     async def close_position(self, market_id):
-        """Close existing position"""
+        """平仓现有头寸"""
         if market_id in self.positions:
             for position in self.positions[market_id]:
                 try:
-                    # Place opposite order to close position
+                    # 下达相反订单以平仓
                     opposite_side = 'sell' if position['side'] == 'buy' else 'buy'
                     await self.client.orders.create(
                         market_id=market_id,
@@ -514,14 +511,14 @@ class TradingBot:
                         amount=position['amount'],
                         price=position['price']
                     )
-                    self.logger.info(f"Position closed for market {market_id}")
+                    self.logger.info(f"市场 {market_id} 已平仓")
                 except Exception as e:
-                    self.logger.error(f"Failed to close position: {e}")
+                    self.logger.error(f"平仓失败: {e}")
             
-            # Clear positions
+            # 清除头寸
             self.positions[market_id] = []
 
-# Usage
+# 用法
 async def main():
     bot = TradingBot(
         api_key='YOUR_API_KEY',
@@ -534,7 +531,7 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
-#### **Node.js Trading Bot**
+#### **Node.js 交易机器人**
 ```javascript
 const YC365 = require('yc365-sdk');
 const WebSocket = require('ws');
@@ -551,13 +548,13 @@ class TradingBot {
   }
 
   async start() {
-    console.log('Starting trading bot...');
+    console.log('正在启动交易机器人...');
     this.isRunning = true;
     
-    // Connect to WebSocket
+    // 连接到 WebSocket
     await this.connectWebSocket();
     
-    // Start trading loop
+    // 启动交易循环
     this.tradingLoop();
   }
 
@@ -566,15 +563,15 @@ class TradingBot {
       this.ws = new WebSocket('wss://ws.yc365.io/v1');
       
       this.ws.on('open', () => {
-        console.log('WebSocket connected');
+        console.log('WebSocket 已连接');
         
-        // Authenticate
+        // 认证
         this.ws.send(JSON.stringify({
           type: 'auth',
           api_key: this.client.apiKey
         }));
         
-        // Subscribe to market updates
+        // 订阅市场更新
         this.ws.send(JSON.stringify({
           type: 'subscribe',
           channel: 'market_updates'
@@ -589,7 +586,7 @@ class TradingBot {
       });
       
       this.ws.on('error', (error) => {
-        console.error('WebSocket error:', error);
+        console.error('WebSocket 错误:', error);
         reject(error);
       });
     });
@@ -604,12 +601,12 @@ class TradingBot {
   async handleMarketUpdate(data) {
     const { market_id, yes_price, no_price } = data;
     
-    // Simple strategy: buy when price drops significantly
+    // 简单策略：价格大幅下跌时买入
     if (yes_price < 0.3) {
       await this.placeOrder(market_id, 'buy', 'yes', 100, yes_price);
     }
     
-    // Sell when price rises significantly
+    // 价格大幅上涨时卖出
     if (yes_price > 0.7) {
       await this.closePosition(market_id);
     }
@@ -618,27 +615,27 @@ class TradingBot {
   async tradingLoop() {
     while (this.isRunning) {
       try {
-        // Get all markets
+        // 获取所有市场
         const markets = await this.client.markets.getAll();
         
-        // Analyze each market
+        // 分析每个市场
         for (const market of markets.data) {
           await this.analyzeMarket(market);
         }
         
-        // Wait before next iteration
-        await this.sleep(60000); // 1 minute
+        // 在下一次迭代前等待
+        await this.sleep(60000); // 1 分钟
         
       } catch (error) {
-        console.error('Error in trading loop:', error);
-        await this.sleep(30000); // Wait before retry
+        console.error('交易循环错误:', error);
+        await this.sleep(30000); // 重试前等待
       }
     }
   }
 
   async analyzeMarket(market) {
     try {
-      // Get market history
+      // 获取市场历史
       const history = await this.client.markets.getHistory(market.id, {
         interval: '1h',
         limit: 24
@@ -651,7 +648,7 @@ class TradingBot {
         
         const currentPrice = market.yes_price;
         
-        // Trading logic
+        // 交易逻辑
         if (smaShort > smaLong && currentPrice < smaShort) {
           await this.placeOrder(market.id, 'buy', 'yes', 100, currentPrice);
         } else if (smaShort < smaLong && currentPrice > smaShort) {
@@ -660,7 +657,7 @@ class TradingBot {
       }
       
     } catch (error) {
-      console.error(`Error analyzing market ${market.id}:`, error);
+      console.error(`分析市场 ${market.id} 时出错:`, error);
     }
   }
 
@@ -678,16 +675,16 @@ class TradingBot {
         price: price
       });
       
-      console.log('Order placed:', order.data);
+      console.log('订单已下达:', order.data);
       
-      // Track position
+      // 跟踪头寸
       if (!this.positions.has(marketId)) {
         this.positions.set(marketId, []);
       }
       this.positions.get(marketId).push(order.data);
       
     } catch (error) {
-      console.error('Failed to place order:', error);
+      console.error('下订单失败:', error);
     }
   }
 
@@ -704,13 +701,13 @@ class TradingBot {
             amount: position.amount,
             price: position.price
           });
-          console.log(`Position closed for market ${marketId}`);
+          console.log(`市场 ${marketId} 已平仓`);
         } catch (error) {
-          console.error('Failed to close position:', error);
+          console.error('平仓失败:', error);
         }
       }
       
-      // Clear positions
+      // 清除头寸
       this.positions.set(marketId, []);
     }
   }
@@ -720,7 +717,7 @@ class TradingBot {
   }
 
   stop() {
-    console.log('Stopping trading bot...');
+    console.log('正在停止交易机器人...');
     this.isRunning = false;
     if (this.ws) {
       this.ws.close();
@@ -728,22 +725,22 @@ class TradingBot {
   }
 }
 
-// Usage
+// 用法
 const bot = new TradingBot('YOUR_API_KEY', 'sandbox');
 bot.start().catch(console.error);
 
-// Graceful shutdown
+// 优雅关闭
 process.on('SIGINT', () => {
   bot.stop();
   process.exit(0);
 });
 ```
 
-## DeFi Integration
+## DeFi 集成
 
-### 🔗 **Smart Contract Integration**
+### 🔗 **智能合约集成**
 
-#### **Solidity Example**
+#### **Solidity 示例**
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -752,14 +749,14 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract YC365Integration is ReentrancyGuard, Ownable {
-    // YC365 API endpoints
+    // YC365 API 端点
     string private constant API_BASE = "https://api.yc365.io/v1";
     
-    // Events
+    // 事件
     event OrderPlaced(bytes32 indexed orderId, string marketId, uint256 amount);
     event OrderFilled(bytes32 indexed orderId, uint256 fillAmount);
     
-    // Order structure
+    // 订单结构
     struct Order {
         string marketId;
         string side;
@@ -772,7 +769,7 @@ contract YC365Integration is ReentrancyGuard, Ownable {
     mapping(bytes32 => Order) public orders;
     mapping(address => bytes32[]) public userOrders;
     
-    // Place order through API
+    // 通过 API 下订单
     function placeOrder(
         string memory marketId,
         string memory side,
@@ -780,8 +777,8 @@ contract YC365Integration is ReentrancyGuard, Ownable {
         uint256 amount,
         uint256 price
     ) external nonReentrant returns (bytes32) {
-        require(amount > 0, "Amount must be greater than 0");
-        require(price > 0 && price <= 1e18, "Invalid price");
+        require(amount > 0, "金额必须大于 0");
+        require(price > 0 && price <= 1e18, "价格无效");
         
         bytes32 orderId = keccak256(abi.encodePacked(
             msg.sender,
@@ -806,44 +803,44 @@ contract YC365Integration is ReentrancyGuard, Ownable {
         
         emit OrderPlaced(orderId, marketId, amount);
         
-        // Call external API (would need oracle or off-chain execution)
+        // 调用外部 API (需要预言机或链下执行)
         _executeOrder(orderId);
         
         return orderId;
     }
     
-    // Execute order through API call
+    // 通过 API 调用执行订单
     function _executeOrder(bytes32 orderId) internal {
         Order storage order = orders[orderId];
         
-        // This would typically be done off-chain or through an oracle
-        // For demonstration purposes, we'll simulate the API call
+        // 这通常在链下或通过预言机完成
+        // 为了演示目的，我们将模拟 API 调用
         
-        // In a real implementation, you would:
-        // 1. Make HTTP request to YC365 API
-        // 2. Handle the response
-        // 3. Update order status
+        // 在实际实现中，您将：
+        // 1. 向 YC365 API 发出 HTTP 请求
+        // 2. 处理响应
+        // 3. 更新订单状态
         
-        // Simulate successful execution
+        // 模拟成功执行
         order.isActive = false;
         emit OrderFilled(orderId, order.amount);
     }
     
-    // Get user's orders
+    // 获取用户的订单
     function getUserOrders(address user) external view returns (bytes32[] memory) {
         return userOrders[user];
     }
     
-    // Get order details
+    // 获取订单详情
     function getOrder(bytes32 orderId) external view returns (Order memory) {
         return orders[orderId];
     }
 }
 ```
 
-### 🌉 **Cross-Chain Integration**
+### 🌉 **跨链集成**
 
-#### **Multi-Chain Support**
+#### **多链支持**
 ```javascript
 class CrossChainYC365 {
   constructor(config) {
@@ -874,7 +871,7 @@ class CrossChainYC365 {
         const response = await client.markets.getAll();
         markets[chain] = response.data;
       } catch (error) {
-        console.error(`Failed to get markets from ${chain}:`, error);
+        console.error(`从 ${chain} 获取市场失败:`, error);
         markets[chain] = [];
       }
     }
@@ -885,38 +882,38 @@ class CrossChainYC365 {
   async placeOrderOnChain(chain, orderParams) {
     const client = this.chains[chain];
     if (!client) {
-      throw new Error(`Unsupported chain: ${chain}`);
+      throw new Error(`不支持的链: ${chain}`);
     }
     
     return await client.orders.create(orderParams);
   }
 
   async bridgeAndTrade(fromChain, toChain, orderParams) {
-    // 1. Bridge tokens to target chain
+    // 1. 将代币桥接到目标链
     await this.bridgeTokens(fromChain, toChain, orderParams.amount);
     
-    // 2. Place order on target chain
+    // 2. 在目标链上下订单
     return await this.placeOrderOnChain(toChain, orderParams);
   }
 
   async bridgeTokens(fromChain, toChain, amount) {
-    // Implementation would depend on your bridge solution
-    // This is a placeholder for the actual bridging logic
-    console.log(`Bridging ${amount} tokens from ${fromChain} to ${toChain}`);
+    // 实现将取决于您的桥接解决方案
+    // 这是实际桥接逻辑的占位符
+    console.log(`将 ${amount} 代币从 ${fromChain} 桥接到 ${toChain}`);
   }
 }
 ```
 
-## Testing and Debugging
+## 测试与调试
 
-### 🧪 **Testing Strategies**
+### 🧪 **测试策略**
 
-#### **Unit Testing**
+#### **单元测试**
 ```javascript
-// Jest test example
+// Jest 测试示例
 const YC365 = require('yc365-sdk');
 
-describe('YC365 Integration Tests', () => {
+describe('YC365 集成测试', () => {
   let client;
   
   beforeEach(() => {
@@ -926,13 +923,13 @@ describe('YC365 Integration Tests', () => {
     });
   });
   
-  test('should get markets', async () => {
+  test('应该获取市场', async () => {
     const markets = await client.markets.getAll();
     expect(markets.success).toBe(true);
     expect(Array.isArray(markets.data)).toBe(true);
   });
   
-  test('should place order', async () => {
+  test('应该下订单', async () => {
     const order = await client.orders.create({
       market_id: 'test-market',
       side: 'buy',
@@ -945,7 +942,7 @@ describe('YC365 Integration Tests', () => {
     expect(order.data.order_id).toBeDefined();
   });
   
-  test('should handle errors gracefully', async () => {
+  test('应该优雅地处理错误', async () => {
     try {
       await client.orders.create({
         market_id: 'invalid-market',
@@ -961,7 +958,7 @@ describe('YC365 Integration Tests', () => {
 });
 ```
 
-#### **Integration Testing**
+#### **集成测试**
 ```python
 import pytest
 import asyncio
@@ -973,12 +970,12 @@ async def client():
 
 @pytest.mark.asyncio
 async def test_market_integration(client):
-    # Test market retrieval
+    # 测试市场检索
     markets = await client.markets.get_all()
     assert markets.success is True
     assert len(markets.data) > 0
     
-    # Test market details
+    # 测试市场详情
     market_id = markets.data[0]['id']
     market_details = await client.markets.get_details(market_id)
     assert market_details.success is True
@@ -986,7 +983,7 @@ async def test_market_integration(client):
 
 @pytest.mark.asyncio
 async def test_trading_integration(client):
-    # Test order placement
+    # 测试下订单
     order = await client.orders.create(
         market_id='test-market',
         side='buy',
@@ -997,7 +994,7 @@ async def test_trading_integration(client):
     assert order.success is True
     assert order.data['order_id'] is not None
     
-    # Test order status
+    # 测试订单状态
     order_status = await client.orders.get_status(order.data['order_id'])
     assert order_status.success is True
     assert order_status.data['status'] in ['pending', 'filled', 'cancelled']
@@ -1016,9 +1013,9 @@ async def test_error_handling(client):
     assert exc_info.value.code == 'NOT_FOUND'
 ```
 
-### 🐛 **Debugging Tools**
+### 🐛 **调试工具**
 
-#### **API Debugging**
+#### **API 调试**
 ```javascript
 class YC365Debugger {
   constructor(client) {
@@ -1027,7 +1024,7 @@ class YC365Debugger {
   }
   
   enableDebugMode() {
-    // Override client methods to add logging
+    // 覆盖客户端方法以添加日志记录
     const originalRequest = this.client.request;
     
     this.client.request = async (...args) => {
@@ -1048,7 +1045,7 @@ class YC365Debugger {
         logEntry.response = response;
         
         this.logs.push(logEntry);
-        console.log('API Call:', logEntry);
+        console.log('API 调用:', logEntry);
         
         return response;
       } catch (error) {
@@ -1058,7 +1055,7 @@ class YC365Debugger {
         logEntry.error = error.message;
         
         this.logs.push(logEntry);
-        console.error('API Error:', logEntry);
+        console.error('API 错误:', logEntry);
         
         throw error;
       }
@@ -1074,24 +1071,24 @@ class YC365Debugger {
   }
 }
 
-// Usage
+// 用法
 const client = new YC365({ apiKey: 'your-key', environment: 'sandbox' });
 const debugger = new YC365Debugger(client);
 debugger.enableDebugMode();
 
-// Your API calls will now be logged
+// 您的 API 调用现在将被记录
 const markets = await client.markets.getAll();
-console.log('Debug logs:', debugger.getLogs());
+console.log('调试日志:', debugger.getLogs());
 ```
 
-## Performance Optimization
+## 性能优化
 
-### ⚡ **Best Practices**
+### ⚡ **最佳实践**
 
-#### **Caching Strategy**
+#### **缓存策略**
 ```javascript
 class YC365Cache {
-  constructor(ttl = 60000) { // 1 minute default TTL
+  constructor(ttl = 60000) { // 默认 1 分钟 TTL
     this.cache = new Map();
     this.ttl = ttl;
   }
@@ -1160,7 +1157,7 @@ class OptimizedYC365Client {
 }
 ```
 
-#### **Connection Pooling**
+#### **连接池**
 ```javascript
 const http = require('http');
 const https = require('https');
@@ -1187,7 +1184,7 @@ class YC365ConnectionPool {
   }
 }
 
-// Use in client configuration
+// 在客户端配置中使用
 const pool = new YC365ConnectionPool();
 const client = new YC365({
   apiKey: 'your-key',
@@ -1196,30 +1193,30 @@ const client = new YC365({
 });
 ```
 
-## Security Considerations
+## 安全注意事项
 
-### 🔒 **Security Best Practices**
+### 🔒 **安全最佳实践**
 
-#### **API Key Management**
+#### **API 密钥管理**
 ```javascript
 class SecureYC365Client {
   constructor(config) {
-    // Never log API keys
+    // 切勿记录 API 密钥
     this.apiKey = config.apiKey;
     this.environment = config.environment;
     
-    // Validate API key format
+    // 验证 API 密钥格式
     if (!this.validateApiKey(this.apiKey)) {
-      throw new Error('Invalid API key format');
+      throw new Error('无效的 API 密钥格式');
     }
   }
   
   validateApiKey(apiKey) {
-    // Basic validation - adjust based on your key format
+    // 基本验证 - 根据您的密钥格式进行调整
     return typeof apiKey === 'string' && apiKey.length >= 32;
   }
   
-  // Sanitize logs to remove sensitive data
+  // 清理日志以删除敏感数据
   sanitizeLog(data) {
     const sanitized = { ...data };
     if (sanitized.apiKey) {
@@ -1230,7 +1227,7 @@ class SecureYC365Client {
 }
 ```
 
-#### **Request Signing**
+#### **请求签名**
 ```javascript
 const crypto = require('crypto');
 
@@ -1262,44 +1259,44 @@ class SignedYC365Client {
       'Content-Type': 'application/json'
     };
     
-    // Make request with signed headers
+    // 使用签名标头发出请求
     return await this.client.request(method, path, body, headers);
   }
 }
 ```
 
-## Support and Resources
+## 支持与资源
 
-### 📚 **Additional Resources**
+### 📚 **其他资源**
 
-#### **Documentation Links**
-- **API Reference**: Complete endpoint documentation
-- **SDK Documentation**: Language-specific guides
-- **Code Examples**: Sample implementations
-- **Tutorials**: Step-by-step guides
+#### **文档链接**
+- **API 参考**：完整的端点文档
+- **SDK 文档**：特定语言指南
+- **代码示例**：示例实现
+- **教程**：分步指南
 
-#### **Community Support**
-- **Developer Forum**: Community discussions
-- **GitHub**: Open source examples and SDKs
-- **Discord**: Real-time developer chat
-- **Stack Overflow**: Tagged questions
+#### **社区支持**
+- **开发者论坛**：社区讨论
+- **GitHub**：开源示例和 SDK
+- **Discord**：实时开发者聊天
+- **Stack Overflow**：标记的问题
 
-#### **Enterprise Support**
-- **Dedicated Support**: Priority support for enterprise clients
-- **Custom Integration**: Tailored integration assistance
-- **Training**: Team training and workshops
-- **Consulting**: Architecture and strategy consulting
+#### **企业支持**
+- **专属支持**：为企业客户提供优先支持
+- **自定义集成**：量身定制的集成协助
+- **培训**：团队培训和研讨会
+- **咨询**：架构和策略咨询
 
-### 📞 **Contact Information**
+### 📞 **联系信息**
 
-For integration support, please contact:
-- **Email**: integration-support@yc365.io
-- **Live Chat**: Available 24/7 on platform
-- **Telegram**: @YC365DevSupport
-- **Discord**: YC365 Developer Server
+有关集成支持，请联系：
+- **电子邮件**：integration-support@yc365.io
+- **实时聊天**：平台全天候可用
+- **Telegram**：@YC365DevSupport
+- **Discord**：YC365 开发者服务器
 
 ---
 
-**Ready to integrate YC365 into your application?** Our comprehensive integration guide and SDK support make it easy to get started with prediction market functionality.
+**准备好将 YC365 集成到您的应用程序中了吗？** 我们全面的集成指南和 SDK 支持使您可以轻松开始使用预测市场功能。
 
-*Join thousands of developers who are already building innovative applications on the YC365 platform.*
+*加入成千上万已经在 YC365 平台上构建创新应用程序的开发人员。*

@@ -1,309 +1,306 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Taxas de Negociação
 
-# Trading Fees
+## Visão Geral
 
-## Overview
+O YC365 opera com uma estrutura de taxas transparente e competitiva, projetada para manter a sustentabilidade da plataforma enquanto mantém os custos baixos para os traders. Compreender nossa estrutura de taxas ajuda você a tomar decisões de negociação informadas e calcular seus retornos potenciais com precisão.
 
-YC365 operates with a transparent and competitive fee structure designed to maintain platform sustainability while keeping costs low for traders. Understanding our fee structure helps you make informed trading decisions and calculate your potential returns accurately.
+## Estrutura de Taxas
 
-## Fee Structure
+### Taxa de Negociação da Plataforma
 
-### Platform Trading Fee
+#### Taxa de Negociação Padrão
+- **Taxa**: 0,15% (1,5/1000) do valor da negociação
+- **Aplicação**: Aplicada a todas as negociações executadas
+- **Cálculo**: Taxa = Valor da Negociação × 0,0015
+- **Dedução**: Deduzida automaticamente dos proventos da negociação
 
-#### Standard Trading Fee
-- **Rate**: 0.15% (1.5/1000) of trade value
-- **Application**: Applied to all executed trades
-- **Calculation**: Fee = Trade Value × 0.0015
-- **Deduction**: Automatically deducted from trade proceeds
+#### Método de Cálculo de Taxa
+- **Valor da Negociação**: Calculado como Quantidade de Tokens × Preço de Execução
+- **Base da Taxa**: Taxas calculadas sobre o valor total das negociações executadas
+- **Arredondamento**: Taxas arredondadas para 6 casas decimais
+- **Moeda**: Todas as taxas calculadas e pagas em USDT
 
-#### Fee Calculation Method
-- **Trade Value**: Calculated as Token Quantity × Execution Price
-- **Fee Base**: Fees calculated on the total value of executed trades
-- **Rounding**: Fees rounded to 6 decimal places
-- **Currency**: All fees calculated and paid in USDT
+### Taxas de Rede (Taxas de Gás)
 
-### Network Fees (Gas Fees)
+#### Taxas de Rede BSC
+- **Blockchain**: Taxas de rede da Binance Smart Chain (BSC)
+- **Variabilidade**: As taxas variam com base no congestionamento da rede
+- **Faixa Típica**: 0,005 - 0,02 USDT por transação
+- **Pagamento**: Pago em BNB (convertido automaticamente)
 
-#### BSC Network Fees
-- **Blockchain**: Binance Smart Chain (BSC) network fees
-- **Variability**: Fees vary based on network congestion
-- **Typical Range**: 0.005 - 0.02 USDT per transaction
-- **Payment**: Paid in BNB (automatically converted)
+#### Componentes da Taxa de Gás
+- **Colocação de Ordem**: Taxa de gás para enviar ordens para a blockchain
+- **Cancelamento de Ordem**: Taxa de gás para cancelar ordens
+- **Execução de Negociação**: Taxa de gás para executar negociações correspondidas
+- **Liquidação**: Taxa de gás para liquidação de eventos e resgate de tokens
 
-#### Gas Fee Components
-- **Order Placement**: Gas fee for submitting orders to blockchain
-- **Order Cancellation**: Gas fee for cancelling orders
-- **Trade Execution**: Gas fee for executing matched trades
-- **Settlement**: Gas fee for event settlement and token redemption
+## Exemplos Detalhados de Taxas
 
-## Detailed Fee Examples
+### Exemplos de Taxas de Negociação
 
-### Trading Fee Examples
+#### Exemplo 1: Comprando Tokens SIM
+**Cenário**: Comprar 1.000 tokens SIM a 0,60 USDT cada
 
-#### Example 1: Buying YES Tokens
-**Scenario**: Buy 1,000 YES tokens at 0.60 USDT each
+**Cálculo**:
+- Valor da Negociação: 1.000 × 0,60 = 600 USDT
+- Taxa da Plataforma: 600 × 0,0015 = 0,90 USDT
+- Taxa de Gás: ~0,01 USDT (estimada)
+- **Custo Total**: 600 + 0,90 + 0,01 = 600,91 USDT
 
-**Calculation**:
-- Trade Value: 1,000 × 0.60 = 600 USDT
-- Platform Fee: 600 × 0.0015 = 0.90 USDT
-- Gas Fee: ~0.01 USDT (estimated)
-- **Total Cost**: 600 + 0.90 + 0.01 = 600.91 USDT
+#### Exemplo 2: Vendendo Tokens NÃO
+**Cenário**: Vender 500 tokens NÃO a 0,75 USDT cada
 
-#### Example 2: Selling NO Tokens
-**Scenario**: Sell 500 NO tokens at 0.75 USDT each
+**Cálculo**:
+- Valor da Negociação: 500 × 0,75 = 375 USDT
+- Taxa da Plataforma: 375 × 0,0015 = 0,5625 USDT
+- Taxa de Gás: ~0,01 USDT (estimada)
+- **Proventos Líquidos**: 375 - 0,5625 - 0,01 = 374,4275 USDT
 
-**Calculation**:
-- Trade Value: 500 × 0.75 = 375 USDT
-- Platform Fee: 375 × 0.0015 = 0.5625 USDT
-- Gas Fee: ~0.01 USDT (estimated)
-- **Net Proceeds**: 375 - 0.5625 - 0.01 = 374.4275 USDT
+#### Exemplo 3: Múltiplos Preenchimentos Parciais
+**Cenário**: Ordem de compra de 2.000 tokens preenchida em 3 partes
 
-#### Example 3: Multiple Partial Fills
-**Scenario**: Buy order for 2,000 tokens filled in 3 parts
+**Preenchimento 1**: 800 tokens a 0,55 USDT
+- Valor da Negociação: 800 × 0,55 = 440 USDT
+- Taxa da Plataforma: 440 × 0,0015 = 0,66 USDT
 
-**Fill 1**: 800 tokens at 0.55 USDT
-- Trade Value: 800 × 0.55 = 440 USDT
-- Platform Fee: 440 × 0.0015 = 0.66 USDT
+**Preenchimento 2**: 700 tokens a 0,56 USDT
+- Valor da Negociação: 700 × 0,56 = 392 USDT
+- Taxa da Plataforma: 392 × 0,0015 = 0,588 USDT
 
-**Fill 2**: 700 tokens at 0.56 USDT
-- Trade Value: 700 × 0.56 = 392 USDT
-- Platform Fee: 392 × 0.0015 = 0.588 USDT
-
-**Fill 3**: 500 tokens at 0.57 USDT
-- Trade Value: 500 × 0.57 = 285 USDT
-- Platform Fee: 285 × 0.0015 = 0.4275 USDT
+**Preenchimento 3**: 500 tokens a 0,57 USDT
+- Valor da Negociação: 500 × 0,57 = 285 USDT
+- Taxa da Plataforma: 285 × 0,0015 = 0,4275 USDT
 
 **Total**:
-- Combined Trade Value: 1,117 USDT
-- Combined Platform Fees: 1.6755 USDT
-- Combined Gas Fees: ~0.03 USDT (3 transactions)
-- **Total Cost**: 1,117 + 1.6755 + 0.03 = 1,118.7055 USDT
+- Valor Combinado da Negociação: 1.117 USDT
+- Taxas Combinadas da Plataforma: 1,6755 USDT
+- Taxas Combinadas de Gás: ~0,03 USDT (3 transações)
+- **Custo Total**: 1.117 + 1,6755 + 0,03 = 1.118,7055 USDT
 
-### Settlement Fee Examples
+### Exemplos de Taxa de Liquidação
 
-#### Winning Position Settlement
-**Scenario**: Hold 1,000 YES tokens, event resolves to YES
+#### Liquidação de Posição Vencedora
+**Cenário**: Manter 1.000 tokens SIM, evento resolve para SIM
 
-**Settlement**:
-- Token Value: 1,000 × 1.00 = 1,000 USDT (YES tokens worth 1 USDT each)
-- Platform Fee: Already deducted during original trade
-- Gas Fee: ~0.01 USDT (settlement transaction)
-- **Net Settlement**: 1,000 - 0.01 = 999.99 USDT
+**Liquidação**:
+- Valor do Token: 1.000 × 1,00 = 1.000 USDT (tokens SIM valem 1 USDT cada)
+- Taxa da Plataforma: Já deduzida durante a negociação original
+- Taxa de Gás: ~0,01 USDT (transação de liquidação)
+- **Liquidação Líquida**: 1.000 - 0,01 = 999,99 USDT
 
-#### Losing Position Settlement
-**Scenario**: Hold 800 NO tokens, event resolves to YES
+#### Liquidação de Posição Perdedora
+**Cenário**: Manter 800 tokens NÃO, evento resolve para SIM
 
-**Settlement**:
-- Token Value: 800 × 0.00 = 0 USDT (NO tokens worth 0 USDT each)
-- Platform Fee: Already deducted during original trade
-- Gas Fee: 0 USDT (no settlement needed for worthless tokens)
-- **Net Settlement**: 0 USDT
+**Liquidação**:
+- Valor do Token: 800 × 0,00 = 0 USDT (tokens NÃO valem 0 USDT cada)
+- Taxa da Plataforma: Já deduzida durante a negociação original
+- Taxa de Gás: 0 USDT (nenhuma liquidação necessária para tokens sem valor)
+- **Liquidação Líquida**: 0 USDT
 
-## Fee Transparency
+## Transparência de Taxas
 
-### Real-time Fee Display
+### Exibição de Taxas em Tempo Real
 
-#### Order Placement Interface
-- **Fee Preview**: Estimated fees shown before order submission
-- **Total Cost**: Complete cost breakdown including fees
-- **Fee Calculator**: Interactive fee calculator available
-- **Gas Estimate**: Real-time gas fee estimates
+#### Interface de Colocação de Ordem
+- **Prévia de Taxa**: Taxas estimadas mostradas antes do envio da ordem
+- **Custo Total**: Detalhamento completo dos custos, incluindo taxas
+- **Calculadora de Taxas**: Calculadora de taxas interativa disponível
+- **Estimativa de Gás**: Estimativas de taxa de gás em tempo real
 
-#### Trade Confirmation
-- **Exact Fees**: Precise fee amounts displayed at confirmation
-- **Fee Breakdown**: Detailed breakdown of all fee components
-- **Net Amount**: Clear display of net proceeds or costs
-- **Receipt**: Complete transaction receipt with all fees
+#### Confirmação de Negociação
+- **Taxas Exatas**: Valores precisos das taxas exibidos na confirmação
+- **Detalhamento de Taxas**: Detalhamento de todos os componentes da taxa
+- **Valor Líquido**: Exibição clara dos proventos ou custos líquidos
+- **Recibo**: Recibo de transação completo com todas as taxas
 
-### Fee History and Tracking
+### Histórico e Rastreamento de Taxas
 
-#### Portfolio Dashboard
-- **Fee Summary**: Total fees paid over different time periods
-- **Fee Analytics**: Fee analysis and trends
-- **Tax Reporting**: Fee data formatted for tax purposes
-- **Export Options**: Download fee data in various formats
+#### Painel de Portfólio
+- **Resumo de Taxas**: Total de taxas pagas em diferentes períodos de tempo
+- **Análise de Taxas**: Análise e tendências de taxas
+- **Relatórios Fiscais**: Dados de taxas formatados para fins fiscais
+- **Opções de Exportação**: Baixe dados de taxas em vários formatos
 
-#### Transaction History
-- **Per-Trade Fees**: Fees associated with each individual trade
-- **Cumulative Fees**: Running total of fees paid
-- **Fee Categories**: Breakdown by fee type (trading, gas, etc.)
-- **Time Filters**: Filter fee data by date ranges
+#### Histórico de Transações
+- **Taxas por Negociação**: Taxas associadas a cada negociação individual
+- **Taxas Acumuladas**: Total acumulado de taxas pagas
+- **Categorias de Taxas**: Detalhamento por tipo de taxa (negociação, gás, etc.)
+- **Filtros de Tempo**: Filtre dados de taxas por intervalos de datas
 
-## Fee Optimization
+## Otimização de Taxas
 
-### Minimizing Trading Fees
+### Minimizando Taxas de Negociação
 
-#### Order Size Optimization
-- **Larger Orders**: Larger single orders are more fee-efficient than multiple small orders
-- **Order Batching**: Combine multiple small trades into larger orders when possible
-- **Threshold Analysis**: Calculate minimum trade sizes for cost-effectiveness
+#### Otimização do Tamanho da Ordem
+- **Ordens Maiores**: Ordens únicas maiores são mais eficientes em termos de taxas do que várias ordens pequenas
+- **Agrupamento de Ordens**: Combine várias pequenas negociações em ordens maiores quando possível
+- **Análise de Limite**: Calcule tamanhos mínimos de negociação para custo-benefício
 
-#### Timing Strategies
-- **Gas Price Monitoring**: Execute trades during low gas price periods
-- **Network Congestion**: Avoid trading during peak network activity
-- **Fee Forecasting**: Use historical data to predict optimal trading times
+#### Estratégias de Tempo
+- **Monitoramento de Preço de Gás**: Execute negociações durante períodos de baixo preço de gás
+- **Congestionamento de Rede**: Evite negociar durante picos de atividade da rede
+- **Previsão de Taxas**: Use dados históricos para prever horários ideais de negociação
 
-### Gas Fee Management
+### Gestão de Taxas de Gás
 
-#### Network Optimization
-- **Gas Price Settings**: Adjust gas price settings based on urgency
-- **Transaction Batching**: Batch multiple operations when possible
-- **Off-Peak Trading**: Trade during off-peak hours for lower gas fees
-- **Fee Alerts**: Set up alerts for favorable gas price conditions
+#### Otimização de Rede
+- **Configurações de Preço de Gás**: Ajuste as configurações de preço de gás com base na urgência
+- **Agrupamento de Transações**: Agrupe várias operações quando possível
+- **Negociação Fora de Pico**: Negocie fora do horário de pico para taxas de gás mais baixas
+- **Alertas de Taxas**: Configure alertas para condições favoráveis de preço de gás
 
-#### BSC Network Efficiency
-- **Fast Confirmation**: BSC's fast block times reduce waiting costs
-- **Low Base Fees**: BSC's low base fees compared to other networks
-- **Predictable Costs**: More predictable gas costs than other networks
+#### Eficiência da Rede BSC
+- **Confirmação Rápida**: Tempos de bloco rápidos da BSC reduzem custos de espera
+- **Taxas Base Baixas**: Taxas base baixas da BSC em comparação com outras redes
+- **Custos Previsíveis**: Custos de gás mais previsíveis do que outras redes
 
-## Fee Comparison
+## Comparação de Taxas
 
-### Industry Comparison
+### Comparação da Indústria
 
-#### Traditional Prediction Markets
-- **Centralized Platforms**: Typically 2-5% fees
-- **YC365 Advantage**: 0.15% significantly lower than traditional platforms
-- **Hidden Fees**: Many platforms have hidden withdrawal or deposit fees
-- **Transparency**: YC365 provides complete fee transparency
+#### Mercados de Previsão Tradicionais
+- **Plataformas Centralizadas**: Tipicamente 2-5% de taxas
+- **Vantagem do YC365**: 0,15% significativamente menor que plataformas tradicionais
+- **Taxas Ocultas**: Muitas plataformas têm taxas ocultas de saque ou depósito
+- **Transparência**: YC365 fornece transparência total de taxas
 
-#### Other DeFi Platforms
-- **DEX Trading**: Typically 0.25-0.30% plus gas fees
-- **AMM Platforms**: Often 0.30% plus slippage costs
-- **Competitive Positioning**: YC365's 0.15% rate is highly competitive
-- **Added Value**: Lower fees with prediction market specialization
+#### Outras Plataformas DeFi
+- **Negociação DEX**: Tipicamente 0,25-0,30% mais taxas de gás
+- **Plataformas AMM**: Frequentemente 0,30% mais custos de slippage
+- **Posicionamento Competitivo**: A taxa de 0,15% do YC365 é altamente competitiva
+- **Valor Agregado**: Taxas mais baixas com especialização em mercado de previsão
 
-### Fee Value Proposition
+### Proposta de Valor da Taxa
 
-#### Platform Benefits
-- **Infrastructure**: Fees support platform development and maintenance
-- **Security**: Fees contribute to security audits and improvements
-- **Liquidity**: Fees help incentivize market making and liquidity provision
-- **Innovation**: Fees fund continued platform innovation and features
+#### Benefícios da Plataforma
+- **Infraestrutura**: Taxas apoiam o desenvolvimento e manutenção da plataforma
+- **Segurança**: Taxas contribuem para auditorias de segurança e melhorias
+- **Liquidez**: Taxas ajudam a incentivar a criação de mercado e provisão de liquidez
+- **Inovação**: Taxas financiam inovação contínua e recursos da plataforma
 
-#### User Benefits
-- **Low Costs**: Among the lowest fees in the prediction market space
-- **Transparency**: Complete transparency in fee structure and calculation
-- **No Hidden Fees**: No additional deposit, withdrawal, or account fees
-- **Value**: High-quality trading experience at competitive costs
+#### Benefícios do Usuário
+- **Baixos Custos**: Entre as taxas mais baixas no espaço de mercado de previsão
+- **Transparência**: Transparência total na estrutura e cálculo de taxas
+- **Sem Taxas Ocultas**: Sem taxas adicionais de depósito, saque ou conta
+- **Valor**: Experiência de negociação de alta qualidade a custos competitivos
 
-## Special Fee Situations
+## Situações Especiais de Taxas
 
-### Fee Waivers and Discounts
+### Isenções e Descontos de Taxas
 
-#### Current Policy
-- **No Discounts**: Currently no volume-based discounts available
-- **Equal Treatment**: All users pay the same fee rate
-- **Future Considerations**: Volume discounts may be considered in the future
+#### Política Atual
+- **Sem Descontos**: Atualmente não há descontos baseados em volume disponíveis
+- **Tratamento Igualitário**: Todos os usuários pagam a mesma taxa
+- **Considerações Futuras**: Descontos por volume podem ser considerados no futuro
 
-#### Promotional Periods
-- **Launch Promotions**: Occasional promotional periods with reduced fees
-- **Event Specials**: Special fee rates for specific events or periods
-- **Community Rewards**: Potential fee rebates for community participation
+#### Períodos Promocionais
+- **Promoções de Lançamento**: Períodos promocionais ocasionais com taxas reduzidas
+- **Especiais de Eventos**: Taxas especiais para eventos ou períodos específicos
+- **Recompensas da Comunidade**: Possíveis reembolsos de taxas para participação da comunidade
 
-### Fee-Free Operations
+### Operações Sem Taxa
 
-#### No-Fee Activities
-- **Order Placement**: No fee for placing orders (only gas fees)
-- **Order Cancellation**: No platform fee for cancelling orders
-- **Account Management**: No fees for account-related activities
-- **Information Access**: No fees for accessing market data and information
+#### Atividades Sem Taxa
+- **Colocação de Ordem**: Sem taxa para colocar ordens (apenas taxas de gás)
+- **Cancelamento de Ordem**: Sem taxa de plataforma para cancelar ordens
+- **Gestão de Conta**: Sem taxas para atividades relacionadas à conta
+- **Acesso à Informação**: Sem taxas para acessar dados de mercado e informações
 
-#### Gas-Only Operations
-- **Deposits**: Only gas fees for depositing funds
-- **Withdrawals**: Only gas fees for withdrawing funds
-- **Portfolio Viewing**: No fees for viewing portfolio and history
+#### Operações Apenas com Gás
+- **Depósitos**: Apenas taxas de gás para depositar fundos
+- **Saques**: Apenas taxas de gás para sacar fundos
+- **Visualização de Portfólio**: Sem taxas para visualizar portfólio e histórico
 
-## Fee Payment and Processing
+## Pagamento e Processamento de Taxas
 
-### Payment Method
+### Método de Pagamento
 
-#### Automatic Deduction
-- **Trade Execution**: Fees automatically deducted during trade execution
-- **USDT Payment**: All platform fees paid in USDT
-- **Real-time Processing**: Fees processed immediately with trades
-- **Smart Contract**: Fee deduction handled by smart contracts
+#### Dedução Automática
+- **Execução de Negociação**: Taxas deduzidas automaticamente durante a execução da negociação
+- **Pagamento em USDT**: Todas as taxas da plataforma pagas em USDT
+- **Processamento em Tempo Real**: Taxas processadas imediatamente com as negociações
+- **Contrato Inteligente**: Dedução de taxas tratada por contratos inteligentes
 
-#### Gas Fee Payment
-- **BNB Required**: Gas fees paid in BNB (BSC's native token)
-- **Automatic Conversion**: Platform may facilitate BNB acquisition
-- **Wallet Balance**: Users responsible for maintaining BNB balance
-- **Fee Estimation**: Real-time gas fee estimation provided
+#### Pagamento de Taxa de Gás
+- **BNB Necessário**: Taxas de gás pagas em BNB (token nativo da BSC)
+- **Conversão Automática**: A plataforma pode facilitar a aquisição de BNB
+- **Saldo da Carteira**: Usuários responsáveis por manter saldo em BNB
+- **Estimativa de Taxa**: Estimativa de taxa de gás em tempo real fornecida
 
-### Fee Distribution
+### Distribuição de Taxas
 
-#### Platform Operations
-- **Development**: Fees support ongoing platform development
-- **Maintenance**: Fees cover infrastructure and operational costs
-- **Security**: Fees fund security measures and audits
-- **Customer Support**: Fees support user support services
+#### Operações da Plataforma
+- **Desenvolvimento**: Taxas apoiam o desenvolvimento contínuo da plataforma
+- **Manutenção**: Taxas cobrem custos de infraestrutura e operacionais
+- **Segurança**: Taxas financiam medidas de segurança e auditorias
+- **Suporte ao Cliente**: Taxas apoiam serviços de suporte ao usuário
 
-#### Future Enhancements
-- **Feature Development**: Fees fund new feature development
-- **Scaling Solutions**: Fees support platform scaling initiatives
-- **Community Programs**: Potential community reward programs
-- **Ecosystem Growth**: Fees support overall ecosystem development
+#### Melhorias Futuras
+- **Desenvolvimento de Recursos**: Taxas financiam o desenvolvimento de novos recursos
+- **Soluções de Escala**: Taxas apoiam iniciativas de escala da plataforma
+- **Programas da Comunidade**: Possíveis programas de recompensa da comunidade
+- **Crescimento do Ecossistema**: Taxas apoiam o desenvolvimento geral do ecossistema
 
-## Tax Implications
+## Implicações Fiscais
 
-### Trading Fee Tax Treatment
+### Tratamento Fiscal de Taxas de Negociação
 
-#### Tax Deductibility
-- **Business Expense**: Trading fees may be deductible as business expenses
-- **Investment Costs**: Fees may be treated as investment-related costs
-- **Jurisdiction Dependent**: Tax treatment varies by jurisdiction
-- **Professional Advice**: Consult tax professionals for specific guidance
+#### Dedutibilidade Fiscal
+- **Despesa Comercial**: Taxas de negociação podem ser dedutíveis como despesas comerciais
+- **Custos de Investimento**: Taxas podem ser tratadas como custos relacionados a investimentos
+- **Dependente da Jurisdição**: O tratamento fiscal varia de acordo com a jurisdição
+- **Conselho Profissional**: Consulte profissionais fiscais para orientação específica
 
-#### Record Keeping
-- **Fee Documentation**: Platform provides complete fee records
-- **Tax Reports**: Fee data available in tax-friendly formats
-- **Historical Data**: Complete historical fee data maintained
-- **Export Features**: Easy export of fee data for tax purposes
+#### Manutenção de Registros
+- **Documentação de Taxas**: A plataforma fornece registros completos de taxas
+- **Relatórios Fiscais**: Dados de taxas disponíveis em formatos amigáveis para impostos
+- **Dados Históricos**: Dados históricos completos de taxas mantidos
+- **Recursos de Exportação**: Exportação fácil de dados de taxas para fins fiscais
 
-### Reporting Requirements
+### Requisitos de Relatórios
 
-#### Documentation Provided
-- **Transaction Records**: Complete transaction history with fees
-- **Annual Summaries**: Annual fee summaries available
-- **Real-time Data**: Real-time access to all fee information
-- **Multiple Formats**: Data available in various formats (CSV, PDF, etc.)
+#### Documentação Fornecida
+- **Registros de Transações**: Histórico completo de transações com taxas
+- **Resumos Anuais**: Resumos anuais de taxas disponíveis
+- **Dados em Tempo Real**: Acesso em tempo real a todas as informações de taxas
+- **Múltiplos Formatos**: Dados disponíveis em vários formatos (CSV, PDF, etc.)
 
-#### Tax Jurisdiction Considerations
-- **Local Regulations**: Users responsible for local tax compliance
-- **Professional Guidance**: Recommend consulting tax professionals
-- **Record Maintenance**: Users should maintain their own tax records
-- **Regulatory Changes**: Stay informed about changing tax regulations
+#### Considerações de Jurisdição Fiscal
+- **Regulamentos Locais**: Usuários responsáveis pela conformidade fiscal local
+- **Orientação Profissional**: Recomendamos consultar profissionais fiscais
+- **Manutenção de Registros**: Usuários devem manter seus próprios registros fiscais
+- **Mudanças Regulatórias**: Mantenha-se informado sobre mudanças nos regulamentos fiscais
 
-## Future Fee Structure
+## Estrutura de Taxas Futura
 
-### Planned Enhancements
+### Melhorias Planejadas
 
-#### Volume-Based Discounts
-- **Tiered Structure**: Potential introduction of volume-based fee tiers
-- **Loyalty Rewards**: Possible loyalty program with fee benefits
-- **Market Maker Incentives**: Special rates for liquidity providers
-- **Community Benefits**: Fee benefits for active community members
+#### Descontos Baseados em Volume
+- **Estrutura em Níveis**: Possível introdução de níveis de taxas baseados em volume
+- **Recompensas de Lealdade**: Possível programa de fidelidade com benefícios de taxas
+- **Incentivos para Market Makers**: Taxas especiais para provedores de liquidez
+- **Benefícios da Comunidade**: Benefícios de taxas para membros ativos da comunidade
 
-#### Token-Based Benefits
-- **Platform Token**: Potential platform token for fee discounts
-- **Staking Rewards**: Fee discounts for token staking participants
-- **Governance Participation**: Fee benefits for governance participation
-- **Long-term Holdings**: Rewards for long-term platform users
+#### Benefícios Baseados em Token
+- **Token da Plataforma**: Possível token da plataforma para descontos em taxas
+- **Recompensas de Staking**: Descontos em taxas para participantes de staking de tokens
+- **Participação na Governança**: Benefícios de taxas para participação na governança
+- **Participações de Longo Prazo**: Recompensas para usuários de longo prazo da plataforma
 
-### Technology Improvements
+### Melhorias Tecnológicas
 
-#### Layer 2 Integration
-- **Reduced Gas Fees**: Layer 2 solutions for lower gas costs
-- **Faster Transactions**: Improved transaction speed and efficiency
-- **Scalability**: Enhanced platform scalability and capacity
-- **User Experience**: Better overall user experience
+#### Integração de Camada 2
+- **Taxas de Gás Reduzidas**: Soluções de Camada 2 para custos de gás mais baixos
+- **Transações Mais Rápidas**: Velocidade e eficiência de transação aprimoradas
+- **Escalabilidade**: Escalabilidade e capacidade da plataforma aprimoradas
+- **Experiência do Usuário**: Melhor experiência geral do usuário
 
-#### Fee Optimization
-- **Smart Routing**: Intelligent routing for optimal fee structures
-- **Batch Processing**: Enhanced batch processing for fee efficiency
-- **Dynamic Fees**: Potential dynamic fee structures based on market conditions
-- **Cross-chain Support**: Multi-chain support for fee optimization
+#### Otimização de Taxas
+- **Roteamento Inteligente**: Roteamento inteligente para estruturas de taxas ideais
+- **Processamento em Lote**: Processamento em lote aprimorado para eficiência de taxas
+- **Taxas Dinâmicas**: Possíveis estruturas de taxas dinâmicas baseadas nas condições de mercado
+- **Suporte Cross-chain**: Suporte multi-chain para otimização de taxas
 
 ---
 
-*For the latest information on trading fees and fee structure updates, please check our official announcements.* 
+*Para as informações mais recentes sobre taxas de negociação e atualizações da estrutura de taxas, verifique nossos anúncios oficiais.*

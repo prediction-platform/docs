@@ -1,345 +1,342 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
-
-# Is My Money Safe?
-
-## Quick Answer
-
-**Yes, your funds are protected by multiple layers of security!** YC365 uses audited smart contracts, industry-leading security practices, and decentralized architecture to keep your assets safe. Your funds are never held by YC365 directly - they're secured by blockchain technology and smart contracts that you control.
-
-## Security Architecture Overview
-
-### 🔒 **Multi-Layered Security**
-
-#### **Smart Contract Security**
-- **Professional Audits**: All contracts audited by leading security firms
-- **Open Source**: Contract code publicly available for review
-- **Battle-tested**: Based on proven DeFi security patterns
-- **Immutable Logic**: Core security features cannot be changed
-- **Upgrade Mechanisms**: Secure upgrade paths for improvements
-
-#### **Blockchain Security**
-- **BSC Network**: Protected by Binance Smart Chain's consensus mechanism
-- **Decentralized Validation**: Thousands of validators secure the network
-- **Cryptographic Security**: Military-grade cryptographic protection
-- **Immutable Records**: All transactions permanently recorded
-- **Byzantine Fault Tolerance**: Network continues operating despite node failures
-
-#### **User Control**
-- **Non-custodial**: You maintain control of your private keys
-- **Wallet Security**: Funds secured by your wallet, not our platform
-- **Self-Sovereignty**: You have complete control over your assets
-- **No Central Point of Failure**: Decentralized architecture eliminates single points of failure
-
-## Smart Contract Security
-
-### 🛡️ **Contract Audits**
-
-#### **Professional Security Audits**
-- **Multiple Auditors**: Contracts reviewed by different security firms
-- **Comprehensive Testing**: Automated and manual testing procedures
-- **Vulnerability Assessment**: Systematic search for potential exploits
-- **Code Review**: Line-by-line analysis of all contract code
-- **Public Reports**: Audit reports publicly available
-
-#### **Audit Process**
-1. **Initial Review**: Preliminary security assessment
-2. **Detailed Analysis**: Comprehensive code and logic review
-3. **Automated Testing**: Systematic vulnerability scanning
-4. **Manual Testing**: Expert manual security testing
-5. **Report Generation**: Detailed findings and recommendations
-6. **Issue Resolution**: Fix any identified vulnerabilities
-7. **Final Verification**: Confirm all issues resolved
-
-#### **Ongoing Security**
-- **Continuous Monitoring**: Real-time security monitoring
-- **Bug Bounty Program**: Incentivized vulnerability discovery
-- **Regular Updates**: Periodic security assessments
-- **Community Review**: Open source enables community security review
-
-### 🔐 **Contract Architecture**
-
-#### **Vault Contracts**
-- **Asset Custody**: Secure storage of user deposits
-- **Access Controls**: Multi-signature and role-based permissions
-- **Withdrawal Limits**: Built-in limits and cooling periods
-- **Emergency Pauses**: Ability to pause operations if needed
-- **Upgrade Safety**: Secure upgrade mechanisms for improvements
-
-#### **Trading Contracts**
-- **Order Execution**: Secure order matching and execution
-- **Fee Collection**: Automated and transparent fee handling
-- **Settlement Logic**: Automatic event resolution and payouts
-- **Slippage Protection**: Built-in protection against price manipulation
-- **Front-running Prevention**: MEV protection mechanisms
-
-#### **Oracle Contracts**
-- **Result Verification**: Secure event outcome verification
-- **Multiple Sources**: Cross-verification from multiple data sources
-- **Dispute Resolution**: Mechanisms for handling disputed results
-- **Time Delays**: Cooling periods before final settlement
-- **Manual Override**: Emergency intervention capabilities
-
-## Fund Protection Mechanisms
-
-### 💰 **Asset Security**
-
-#### **Segregated Funds**
-- **User Segregation**: User funds separated from operational funds
-- **Individual Accounts**: Each user's assets tracked separately
-- **No Commingling**: User funds never mixed with platform funds
-- **Reserved Backing**: All user tokens backed by real assets
-- **Transparent Accounting**: All balances verifiable on-chain
-
-#### **Withdrawal Security**
-- **User Control**: Only you can initiate withdrawals
-- **Cryptographic Signatures**: Withdrawals require your private key
-- **Instant Processing**: Most withdrawals processed immediately
-- **No Lock-ups**: No artificial delays on withdrawals
-- **Emergency Exits**: Always possible to exit positions
-
-#### **Multi-signature Protection**
-- **Distributed Control**: Critical operations require multiple signatures
-- **No Single Points of Failure**: No individual can compromise funds
-- **Geographic Distribution**: Signers located in different regions
-- **Hardware Security**: Hardware wallets used for critical keys
-- **Regular Rotation**: Signing keys rotated periodically
-
-### 🛡️ **Risk Mitigation**
-
-#### **Smart Contract Risks**
-- **Formal Verification**: Mathematical proofs of contract correctness
-- **Gradual Deployments**: Phased rollouts to minimize risk
-- **Circuit Breakers**: Automatic pauses if anomalies detected
-- **Upgrade Timeouts**: Delays before upgrades take effect
-- **Community Oversight**: Public review periods for changes
-
-#### **Economic Risks**
-- **Liquidity Reserves**: Adequate reserves for normal operations
-- **Stress Testing**: Regular testing under extreme conditions
-- **Insurance Coverage**: Platform insurance for additional protection
-- **Risk Monitoring**: Continuous monitoring of platform risks
-- **Diversification**: Risk spread across multiple mechanisms
-
-## Platform Security Measures
-
-### 🔒 **Infrastructure Security**
-
-#### **Web Application Security**
-- **HTTPS Encryption**: All communications encrypted
-- **Security Headers**: CSRF, XSS, and clickjacking protection
-- **Input Validation**: All user inputs sanitized and validated
-- **Session Management**: Secure session handling
-- **Rate Limiting**: Protection against automated attacks
-
-#### **API Security**
-- **Authentication**: Secure API authentication mechanisms
-- **Rate Limiting**: API rate limits to prevent abuse
-- **Input Validation**: All API inputs validated
-- **Monitoring**: Real-time API usage monitoring
-- **Access Controls**: Role-based API access controls
-
-#### **Database Security**
-- **Encryption**: All sensitive data encrypted at rest
-- **Access Controls**: Strict database access controls
-- **Audit Logging**: Complete audit trails
-- **Backup Security**: Encrypted and secure backups
-- **Regular Updates**: Security patches applied promptly
-
-### 🌐 **Network Security**
-
-#### **DDoS Protection**
-- **CDN Protection**: Cloudflare DDoS protection
-- **Rate Limiting**: Automated rate limiting
-- **Geographic Filtering**: Block traffic from suspicious regions
-- **Load Balancing**: Distributed load to prevent overload
-- **Monitoring**: Real-time attack detection and mitigation
-
-#### **Infrastructure Monitoring**
-- **24/7 Monitoring**: Continuous infrastructure monitoring
-- **Intrusion Detection**: Automated intrusion detection systems
-- **Anomaly Detection**: AI-powered anomaly detection
-- **Incident Response**: Rapid incident response procedures
-- **Security Operations Center**: Dedicated security team
-
-## User Security Best Practices
-
-### 🔑 **Wallet Security**
-
-#### **Private Key Protection**
-- **Never Share**: Never share private keys or seed phrases
-- **Secure Storage**: Store seed phrases offline and securely
-- **Multiple Copies**: Keep backup copies in separate secure locations
-- **Hardware Wallets**: Consider hardware wallets for large amounts
-- **Regular Backups**: Regularly backup wallet information
-
-#### **MetaMask Security**
-- **Password Protection**: Use strong, unique passwords
-- **Lock When Not Using**: Always lock MetaMask when done
-- **Regular Updates**: Keep MetaMask updated to latest version
-- **Extension Security**: Only install MetaMask from official sources
-- **Phishing Protection**: Always verify website URLs
-
-#### **Transaction Security**
-- **Verify Addresses**: Always verify destination addresses
-- **Check Amounts**: Double-check transaction amounts
-- **Gas Fee Verification**: Ensure gas fees are reasonable
-- **Transaction Review**: Review all transaction details before confirming
-- **Network Verification**: Ensure you're on the correct network (BSC)
-
-### 🛡️ **Operational Security**
-
-#### **Browser Security**
-- **Updated Browser**: Keep browser updated to latest version
-- **Extension Security**: Only install trusted browser extensions
-- **Clear Cache**: Regularly clear browser cache and data
-- **Incognito Mode**: Consider using incognito mode for trading
-- **Antivirus**: Keep antivirus software updated
-
-#### **Device Security**
-- **Device Updates**: Keep operating system updated
-- **Secure WiFi**: Only use secure, trusted WiFi networks
-- **VPN Usage**: Consider VPN for additional privacy
-- **Physical Security**: Protect devices from physical access
-- **Regular Scans**: Run regular malware scans
-
-## Insurance and Recovery
-
-### 🏥 **Platform Insurance**
-
-#### **Coverage Areas**
-- **Smart Contract Bugs**: Coverage for smart contract vulnerabilities
-- **Key Management**: Protection against key management failures
-- **Operational Risks**: Coverage for operational incidents
-- **External Attacks**: Protection against external security breaches
-- **Technology Risks**: Coverage for technology failures
-
-#### **Insurance Providers**
-- **Multiple Providers**: Insurance from multiple reputable providers
-- **Coverage Limits**: Substantial coverage limits
-- **Regular Reviews**: Coverage reviewed and updated regularly
-- **Claims Process**: Clear and efficient claims procedures
-- **Transparency**: Insurance details publicly available
-
-### 🔄 **Recovery Mechanisms**
-
-#### **User Recovery Options**
-- **Wallet Recovery**: Standard wallet recovery procedures
-- **Seed Phrase Recovery**: Restore access using seed phrases
-- **Multi-device Access**: Access from multiple devices
-- **Support Assistance**: Customer support for recovery help
-- **Documentation**: Comprehensive recovery documentation
-
-#### **Platform Recovery**
-- **Disaster Recovery**: Comprehensive disaster recovery plans
-- **Data Backups**: Multiple secure data backups
-- **Geographic Distribution**: Infrastructure spread across regions
-- **Failover Systems**: Automatic failover to backup systems
-- **Recovery Testing**: Regular testing of recovery procedures
-
-## Regulatory Compliance
-
-### 📜 **Legal Framework**
-
-#### **Regulatory Approach**
-- **Compliance Design**: Platform designed with regulatory considerations
-- **Legal Review**: Regular legal and regulatory reviews
-- **Jurisdiction Analysis**: Analysis of regulatory requirements
-- **Proactive Compliance**: Proactive approach to regulatory compliance
-- **Future-proofing**: Designed to adapt to regulatory changes
-
-#### **Data Protection**
-- **Privacy by Design**: Privacy considerations built into platform
-- **Data Minimization**: Collect only necessary user data
-- **GDPR Compliance**: Compliance with privacy regulations
-- **Data Security**: Secure handling of all user data
-- **User Rights**: Respect for user privacy rights
-
-### 🔍 **Transparency and Accountability**
-
-#### **Public Transparency**
-- **Open Source**: Smart contract code publicly available
-- **Audit Reports**: Security audit reports publicly accessible
-- **Treasury Transparency**: Platform treasury holdings transparent
-- **Governance**: Community participation in platform governance
-- **Regular Reports**: Regular transparency and security reports
-
-#### **Accountability Mechanisms**
-- **Bug Bounty**: Incentivized vulnerability discovery
-- **Community Oversight**: Community monitoring and feedback
-- **External Audits**: Regular third-party audits
-- **Incident Reporting**: Public reporting of security incidents
-- **Continuous Improvement**: Ongoing security improvements
-
-## Red Flags and Scam Prevention
-
-### ⚠️ **Common Scam Types**
-
-#### **Phishing Attacks**
-- **Fake Websites**: Imposter websites mimicking YC365
-- **Email Phishing**: Fake emails requesting sensitive information
-- **Social Media Scams**: Fake social media accounts
-- **App Spoofing**: Fake mobile applications
-- **DNS Hijacking**: Redirecting traffic to malicious sites
-
-#### **Social Engineering**
-- **Fake Support**: Impersonators claiming to be YC365 support
-- **Investment Scams**: Promises of guaranteed returns
-- **Urgency Tactics**: Creating false sense of urgency
-- **Authority Impersonation**: Pretending to be officials or experts
-- **Technical Support Scams**: Offering fake technical assistance
-
-### 🚨 **Protection Strategies**
-
-#### **Verification Methods**
-- **Official URLs**: Always use official YC365 URLs
-- **SSL Certificates**: Verify SSL certificates and HTTPS
-- **Official Channels**: Only use verified official channels
-- **Domain Verification**: Check domain spelling carefully
-- **Bookmark Sites**: Bookmark official sites for easy access
-
-#### **Communication Security**
-- **Official Support**: Only contact support through official channels
-- **No Unsolicited Contact**: YC365 will never contact you unsolicited
-- **Verify Identity**: Always verify identity of support staff
-- **No Payment Requests**: Support will never request payments
-- **Documentation**: Keep records of all communications
-
-## Emergency Procedures
-
-### 🚨 **Security Incidents**
-
-#### **If You Suspect Compromise**
-1. **Immediate Actions**: Stop all trading activity immediately
-2. **Secure Wallet**: Change wallet passwords and move funds if possible
-3. **Contact Support**: Immediately contact YC365 support
-4. **Document Everything**: Take screenshots and document the incident
-5. **Monitor Accounts**: Watch for unauthorized activity
-
-#### **Platform-Wide Issues**
-- **Official Communications**: Check official channels for updates
-- **Avoid Panic**: Don't make hasty decisions during incidents
-- **Follow Instructions**: Follow official guidance from YC365 team
-- **Community Updates**: Monitor community channels for real-time updates
-- **Patient Response**: Allow time for proper incident response
-
-### 📞 **Emergency Contacts**
-
-#### **Immediate Assistance**
-- **Email**: security@yc365.io (for security issues)
-- **Telegram**: @YC365Security (verified security channel)
-- **Discord**: Official YC365 Discord server
-- **Twitter**: @YC365Official (for public announcements)
-
-#### **Response Expectations**
-- **Acknowledgment**: Security issues acknowledged within 1 hour
-- **Investigation**: Full investigation initiated within 4 hours
-- **Updates**: Regular updates every 4-6 hours during incidents
-- **Resolution**: Target resolution within 24-48 hours
-- **Post-incident**: Full post-incident report published
+# 我的资金安全吗？(Is My Money Safe?)
+
+## 快速回答
+
+**是的，您的资金受到多层安全保护！** YC365 使用经过审计的智能合约、行业领先的安全实践和去中心化架构来保护您的资产。您的资金从未直接由 YC365 持有——它们由您控制的区块链技术和智能合约保护。
+
+## 安全架构概览
+
+### 🔒 **多层安全**
+
+#### **智能合约安全**
+- **专业审计**：所有合约均由领先的安全公司审计
+- **开源**：合约代码公开可供审查
+- **实战检验**：基于经过验证的 DeFi 安全模式
+- **不可变逻辑**：核心安全功能无法更改
+- **升级机制**：用于改进的安全升级路径
+
+#### **区块链安全**
+- **BSC 网络**：受币安智能链共识机制保护
+- **去中心化验证**：数千名验证者保护网络
+- **加密安全**：军用级加密保护
+- **不可篡改记录**：所有交易永久记录
+- **拜占庭容错**：即使节点故障网络仍继续运行
+
+#### **用户控制**
+- **非托管**：您保持对私钥的控制
+- **钱包安全**：资金由您的钱包保护，而非我们的平台
+- **自主权**：您对自己的资产拥有完全控制权
+- **无中心故障点**：去中心化架构消除了单点故障
+
+## 智能合约安全
+
+### 🛡️ **合约审计**
+
+#### **专业安全审计**
+- **多方审计**：合约由不同的安全公司审查
+- **综合测试**：自动化和手动测试程序
+- **漏洞评估**：系统搜索潜在漏洞
+- **代码审查**：对所有合约代码进行逐行分析
+- **公开报告**：审计报告公开可用
+
+#### **审计流程**
+1. **初步审查**：初步安全评估
+2. **详细分析**：全面的代码和逻辑审查
+3. **自动化测试**：系统漏洞扫描
+4. **手动测试**：专家手动安全测试
+5. **报告生成**：详细的发现和建议
+6. **问题解决**：修复任何已识别的漏洞
+7. **最终验证**：确认所有问题已解决
+
+#### **持续安全**
+- **持续监控**：实时安全监控
+- **漏洞赏金计划**：激励漏洞发现
+- **定期更新**：定期安全评估
+- **社区审查**：开源支持社区安全审查
+
+### 🔐 **合约架构**
+
+#### **金库合约**
+- **资产托管**：用户存款的安全存储
+- **访问控制**：多重签名和基于角色的权限
+- **提款限制**：内置限制和冷却期
+- **紧急暂停**：如果需要，能够暂停操作
+- **升级安全**：用于改进的安全升级机制
+
+#### **交易合约**
+- **订单执行**：安全的订单匹配和执行
+- **费用收集**：自动化和透明的费用处理
+- **结算逻辑**：自动事件决议和支付
+- **滑点保护**：内置防止价格操纵的保护
+- **防抢先交易**：MEV 保护机制
+
+#### **预言机合约**
+- **结果验证**：安全事件结果验证
+- **多源**：来自多个数据源的交叉验证
+- **争议解决**：处理争议结果的机制
+- **时间延迟**：最终结算前的冷却期
+- **手动覆盖**：紧急干预能力
+
+## 资金保护机制
+
+### 💰 **资产安全**
+
+#### **资金隔离**
+- **用户隔离**：用户资金与运营资金分离
+- **个人账户**：每个用户的资产单独跟踪
+- **不混同**：用户资金从未与平台资金混合
+- **储备支持**：所有用户代币均由实物资产支持
+- **透明会计**：所有余额可在链上验证
+
+#### **提款安全**
+- **用户控制**：只有您可以发起提款
+- **加密签名**：提款需要您的私钥
+- **即时处理**：大多数提款立即处理
+- **无锁定**：提款没有人为延迟
+- **紧急退出**：始终可以退出头寸
+
+#### **多重签名保护**
+- **分布式控制**：关键操作需要多个签名
+- **无单点故障**：没有任何个人可以危及资金
+- **地理分布**：签名者位于不同地区
+- **硬件安全**：关键密钥使用硬件钱包
+- **定期轮换**：签名密钥定期轮换
+
+### 🛡️ **风险缓解**
+
+#### **智能合约风险**
+- **形式化验证**：合约正确性的数学证明
+- **逐步部署**：分阶段推出以最小化风险
+- **断路器**：如果检测到异常自动暂停
+- **升级超时**：升级生效前的延迟
+- **社区监督**：变更的公开审查期
+
+#### **经济风险**
+- **流动性储备**：正常运营的充足储备
+- **压力测试**：极端条件下的定期测试
+- **保险覆盖**：平台保险提供额外保护
+- **风险监控**：持续监控平台风险
+- **分散化**：风险分散在多种机制中
+
+## 平台安全措施
+
+### 🔒 **基础设施安全**
+
+#### **Web 应用程序安全**
+- **HTTPS 加密**：所有通信加密
+- **安全标头**：CSRF、XSS 和点击劫持保护
+- **输入验证**：所有用户输入均经过清理和验证
+- **会话管理**：安全会话处理
+- **速率限制**：防止自动攻击
+
+#### **API 安全**
+- **身份验证**：安全 API 身份验证机制
+- **速率限制**：API 速率限制以防止滥用
+- **输入验证**：所有 API 输入均经过验证
+- **监控**：实时 API 使用监控
+- **访问控制**：基于角色的 API 访问控制
+
+#### **数据库安全**
+- **加密**：所有敏感数据静态加密
+- **访问控制**：严格的数据库访问控制
+- **审计日志**：完整的审计跟踪
+- **备份安全**：加密和安全的备份
+- **定期更新**：及时应用安全补丁
+
+### 🌐 **网络安全**
+
+#### **DDoS 保护**
+- **CDN 保护**：Cloudflare DDoS 保护
+- **速率限制**：自动速率限制
+- **地理过滤**：阻止来自可疑地区的流量
+- **负载均衡**：分布式负载以防止过载
+- **监控**：实时攻击检测和缓解
+
+#### **基础设施监控**
+- **24/7 监控**：持续基础设施监控
+- **入侵检测**：自动入侵检测系统
+- **异常检测**：AI 驱动的异常检测
+- **事件响应**：快速事件响应程序
+- **安全运营中心**：专门的安全团队
+
+## 用户安全最佳实践
+
+### 🔑 **钱包安全**
+
+#### **私钥保护**
+- **从不分享**：从不分享私钥或助记词
+- **安全存储**：离线并安全地存储助记词
+- **多个副本**：在单独的安全位置保留备份副本
+- **硬件钱包**：考虑为大额资金使用硬件钱包
+- **定期备份**：定期备份钱包信息
+
+#### **MetaMask 安全**
+- **密码保护**：使用强、唯一的密码
+- **不用时锁定**：完成后始终锁定 MetaMask
+- **定期更新**：保持 MetaMask 更新到最新版本
+- **扩展安全**：仅从官方来源安装 MetaMask
+- **网络钓鱼保护**：始终验证网站 URL
+
+#### **交易安全**
+- **验证地址**：始终验证目标地址
+- **检查金额**：仔细检查交易金额
+- **Gas 费验证**：确保 Gas 费合理
+- **交易审查**：确认前审查所有交易详情
+- **网络验证**：确保您在正确的网络 (BSC) 上
+
+### 🛡️ **操作安全**
+
+#### **浏览器安全**
+- **更新浏览器**：保持浏览器更新到最新版本
+- **扩展安全**：仅安装受信任的浏览器扩展
+- **清除缓存**：定期清除浏览器缓存和数据
+- **隐身模式**：考虑使用隐身模式进行交易
+- **杀毒软件**：保持杀毒软件更新
+
+#### **设备安全**
+- **设备更新**：保持操作系统更新
+- **安全 WiFi**：仅使用安全、受信任的 WiFi 网络
+- **VPN 使用**：考虑使用 VPN 以获得额外隐私
+- **物理安全**：保护设备免受物理访问
+- **定期扫描**：运行定期恶意软件扫描
+
+## 保险和恢复
+
+### 🏥 **平台保险**
+
+#### **覆盖范围**
+- **智能合约漏洞**：智能合约漏洞的覆盖
+- **密钥管理**：防止密钥管理失败
+- **运营风险**：运营事件的覆盖
+- **外部攻击**：防止外部安全漏洞
+- **技术风险**：技术故障的覆盖
+
+#### **保险提供商**
+- **多家提供商**：来自多家信誉良好的提供商的保险
+- **覆盖限额**：大量的覆盖限额
+- **定期审查**：定期审查和更新覆盖范围
+- **理赔流程**：清晰高效的理赔程序
+- **透明度**：保险详情公开可用
+
+### 🔄 **恢复机制**
+
+#### **用户恢复选项**
+- **钱包恢复**：标准钱包恢复程序
+- **助记词恢复**：使用助记词恢复访问
+- **多设备访问**：从多个设备访问
+- **支持协助**：客户支持提供恢复帮助
+- **文档**：全面的恢复文档
+
+#### **平台恢复**
+- **灾难恢复**：全面的灾难恢复计划
+- **数据备份**：多个安全数据备份
+- **地理分布**：基础设施分布在各地区
+- **故障转移系统**：自动故障转移到备份系统
+- **恢复测试**：定期测试恢复程序
+
+## 监管合规
+
+### 📜 **法律框架**
+
+#### **监管方法**
+- **合规设计**：设计平台时考虑监管因素
+- **法律审查**：定期法律和监管审查
+- **管辖权分析**：监管要求分析
+- **主动合规**：主动遵守监管规定
+- **面向未来**：旨在适应监管变化
+
+#### **数据保护**
+- **隐私设计**：平台内置隐私考虑
+- **数据最小化**：仅收集必要的用户数据
+- **GDPR 合规**：遵守隐私法规
+- **数据安全**：安全处理所有用户数据
+- **用户权利**：尊重用户隐私权
+
+### 🔍 **透明度和问责制**
+
+#### **公开透明**
+- **开源**：智能合约代码公开可用
+- **审计报告**：安全审计报告公开可访问
+- **国库透明**：平台国库持有透明
+- **治理**：社区参与平台治理
+- **定期报告**：定期透明度和安全报告
+
+#### **问责机制**
+- **漏洞赏金**：激励漏洞发现
+- **社区监督**：社区监控和反馈
+- **外部审计**：定期第三方审计
+- **事件报告**：公开报告安全事件
+- **持续改进**：持续安全改进
+
+## 危险信号和防骗
+
+### ⚠️ **常见诈骗类型**
+
+#### **网络钓鱼攻击**
+- **假冒网站**：模仿 YC365 的冒名网站
+- **电子邮件网络钓鱼**：索要敏感信息的虚假电子邮件
+- **社交媒体诈骗**：虚假社交媒体账户
+- **应用欺骗**：虚假移动应用程序
+- **DNS 劫持**：将流量重定向到恶意网站
+
+#### **社会工程**
+- **假冒支持**：冒充 YC365 支持人员的冒名顶替者
+- **投资诈骗**：承诺保证回报
+- **紧迫策略**：制造虚假的紧迫感
+- **权威冒充**：假装是官员或专家
+- **技术支持诈骗**：提供虚假技术援助
+
+### 🚨 **保护策略**
+
+#### **验证方法**
+- **官方 URL**：始终使用官方 YC365 URL
+- **SSL 证书**：验证 SSL 证书和 HTTPS
+- **官方渠道**：仅使用经过验证的官方渠道
+- **域名验证**：仔细检查域名拼写
+- **书签网站**：将官方网站加入书签以便轻松访问
+
+#### **通信安全**
+- **官方支持**：仅通过官方渠道联系支持
+- **无主动联系**：YC365 绝不会主动联系您
+- **验证身份**：始终验证支持人员的身份
+- **无付款请求**：支持人员绝不会要求付款
+- **文档**：保留所有通信记录
+
+## 紧急程序
+
+### 🚨 **安全事件**
+
+#### **如果您怀疑受到损害**
+1. **立即行动**：立即停止所有交易活动
+2. **保护钱包**：更改钱包密码并在可能的情况下转移资金
+3. **联系支持**：立即联系 YC365 支持
+4. **记录一切**：截图并记录事件
+5. **监控账户**：观察未经授权的活动
+
+#### **全平台问题**
+- **官方沟通**：查看官方渠道以获取更新
+- **避免恐慌**：不要在事件期间做出仓促决定
+- **遵循指示**：遵循 YC365 团队的官方指导
+- **社区更新**：监控社区渠道以获取实时更新
+- **耐心响应**：给予适当事件响应的时间
+
+### 📞 **紧急联系人**
+
+#### **立即协助**
+- **电子邮件**：security@yc365.io (用于安全问题)
+- **Telegram**：@YC365Security (经过验证的安全频道)
+- **Discord**：官方 YC365 Discord 服务器
+- **Twitter**：@YC365Official (用于公告)
+
+#### **响应预期**
+- **确认**：安全问题在 1 小时内确认
+- **调查**：全面调查在 4 小时内启动
+- **更新**：事件期间每 4-6 小时定期更新
+- **解决**：目标在 24-48 小时内解决
+- **事后**：发布完整的事故后报告
 
 ---
 
-**Your security is our top priority.** We've implemented multiple layers of protection to keep your funds safe, but your own security practices are equally important. Follow the guidelines above, stay vigilant, and never hesitate to contact us if you have security concerns.
+**您的安全是我们的首要任务。** 我们已实施多层保护来确保您的资金安全，但您自己的安全实践同样重要。遵循上述指南，保持警惕，如果您有安全疑虑，请随时联系我们。
 
-*Remember: If something seems suspicious or too good to be true, it probably is. When in doubt, verify through official channels and take your time to make informed decisions.* 
+*请记住：如果某件事看起来可疑或好得令人难以置信，那可能就是假的。如有疑问，请通过官方渠道验证，并花时间做出明智的决定。*

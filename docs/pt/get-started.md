@@ -1,167 +1,164 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Começar
 
-# Get Started
+## Bem-vindo ao YC365
 
-## Welcome to YC365
+Bem-vindo ao YC365, a plataforma de mercado de previsão descentralizada de ponta construída na Binance Smart Chain (BSC). Este guia abrangente irá guiá-lo por tudo o que você precisa saber para começar a negociar em nossa plataforma com sucesso.
 
-Welcome to YC365, the cutting-edge decentralized prediction market platform built on Binance Smart Chain (BSC). This comprehensive guide will walk you through everything you need to know to start trading on our platform successfully.
+## O Que Você Vai Aprender
 
-## What You'll Learn
+Esta seção Começar cobre todas as informações essenciais que você precisa para iniciar sua jornada com o YC365:
 
-This Get Started section covers all the essential information you need to begin your journey with YC365:
+### 📚 **Entendendo o YC365**
+- Aprenda o que é o YC365 e como ele funciona
+- Entenda nossa missão e valores fundamentais
+- Explore os recursos exclusivos e vantagens da plataforma
 
-### 📚 **Understanding YC365**
-- Learn what YC365 is and how it works
-- Understand our mission and core values
-- Explore the platform's unique features and advantages
+### 💰 **Fazendo Seu Primeiro Depósito**
+- Guia passo a passo para depositar USDT
+- Configuração da carteira e configuração da rede BSC
+- Melhores práticas de segurança para gestão de ativos
 
-### 💰 **Making Your First Deposit**
-- Step-by-step guide to depositing USDT
-- Wallet setup and BSC network configuration
-- Security best practices for asset management
+### 🚀 **Sua Primeira Negociação**
+- Passo a passo completo para colocar sua primeira ordem
+- Entendendo tokens SIM/NÃO e mecânica de mercado
+- Gestão de risco e noções básicas de dimensionamento de posição
 
-### 🚀 **Your First Trade**
-- Complete walkthrough of placing your first order
-- Understanding YES/NO tokens and market mechanics
-- Risk management and position sizing basics
+## Checklist de Início Rápido
 
-## Quick Start Checklist
+Antes de começar a negociar no YC365, certifique-se de ter:
 
-Before you begin trading on YC365, make sure you have:
+### ✅ **Pré-requisitos Concluídos**
+- **Carteira compatível com EVM instalada** (MetaMask recomendada)
+- **BSC Mainnet configurada** em sua carteira
+- **USDT (BEP-20) adquirido** para negociação
+- **BNB adquirido** para taxas de gás
+- **Carteira conectada** à plataforma YC365
 
-### ✅ **Prerequisites Completed**
-- **EVM-compatible wallet installed** (MetaMask recommended)
-- **BSC Mainnet configured** in your wallet
-- **USDT (BEP-20) acquired** for trading
-- **BNB acquired** for gas fees
-- **Wallet connected** to YC365 platform
+### ✅ **Entendimento da Plataforma**
+- **Lido a visão geral da plataforma** e entendido os conceitos principais
+- **Revisado a mecânica de negociação** e estrutura de taxas
+- **Entendido os mecanismos de lucro** (negociação vs. liquidação)
+- **Familiarizado com fatores de risco** e medidas de segurança
 
-### ✅ **Platform Understanding**
-- **Read platform overview** and understand core concepts
-- **Reviewed trading mechanics** and fee structure
-- **Understood profit mechanisms** (trading vs. settlement)
-- **Familiarized with risk factors** and safety measures
+### ✅ **Configuração da Conta**
+- **Carteira conectada** ao dapp.yc365.io
+- **Processo de depósito concluído** e saldo verificado
+- **Interface da plataforma explorada** e principais recursos
+- **Notificações configuradas** para atualizações importantes
 
-### ✅ **Account Setup**
-- **Connected wallet** to dapp.yc365.io
-- **Completed deposit process** and verified balance
-- **Explored platform interface** and key features
-- **Set up notifications** for important updates
+## Visão Geral da Plataforma
 
-## Platform Overview
-
-### 🎯 **Core Mission**
-YC365 provides a neutral, secure, and trustworthy decentralized prediction market platform that combines on-chain and off-chain hybrid architecture to ensure efficiency, low costs, and reliability.
+### 🎯 **Missão Central**
+O YC365 fornece uma plataforma de mercado de previsão descentralizada neutra, segura e confiável que combina arquitetura híbrida on-chain e off-chain para garantir eficiência, baixos custos e confiabilidade.
 
 ![Home screen with live markets, quick filters, and connect wallet button](../img/yc365/home-dashboard.png)
 
-*The YC365 landing page gives newcomers an immediate overview of trending markets and the one-click wallet connection entry point.*
+*A página inicial do YC365 oferece aos recém-chegados uma visão geral imediata dos mercados em alta e o ponto de entrada de conexão de carteira com um clique.*
 
-### 🔧 **Key Features**
-- **Decentralized Architecture**: Smart contracts ensure transparency and trust
-- **Low Trading Fees**: Only 0.15% trading fees (1.5/1000)
-- **Fast Settlement**: BSC network provides quick transaction confirmation
-- **Multi-language Support**: Available in 6 languages including English, Chinese, Thai, Indonesian, and Vietnamese
-- **24/7 Trading**: Round-the-clock trading on global events
+### 🔧 **Principais Recursos**
+- **Arquitetura Descentralizada**: Contratos inteligentes garantem transparência e confiança
+- **Baixas Taxas de Negociação**: Apenas 0,15% de taxas de negociação (1,5/1000)
+- **Liquidação Rápida**: A rede BSC fornece confirmação rápida de transações
+- **Suporte Multilíngue**: Disponível em 6 idiomas, incluindo inglês, chinês, tailandês, indonésio e vietnamita
+- **Negociação 24/7**: Negociação 24 horas por dia em eventos globais
 
-### 🌐 **Supported Markets**
-- **Sports Events**: Football, basketball, tennis, and more
-- **Political Elections**: Global elections and political outcomes
-- **Economic Indicators**: GDP, inflation, employment data
-- **Technology Events**: Product launches, adoption metrics
-- **Entertainment**: Awards shows, reality TV outcomes
-- **Cryptocurrency**: Price predictions and adoption metrics
+### 🌐 **Mercados Suportados**
+- **Eventos Esportivos**: Futebol, basquete, tênis e mais
+- **Eleições Políticas**: Eleições globais e resultados políticos
+- **Indicadores Econômicos**: PIB, inflação, dados de emprego
+- **Eventos de Tecnologia**: Lançamentos de produtos, métricas de adoção
+- **Entretenimento**: Premiações, resultados de reality shows
+- **Criptomoeda**: Previsões de preços e métricas de adoção
 
-## How YC365 Works
+## Como o YC365 Funciona
 
-### 🔄 **Trading Process**
-1. **Event Creation**: Administrators create prediction markets for real-world events
-2. **Market Launch**: Events go live with initial liquidity and pricing
-3. **User Participation**: Users buy YES/NO tokens based on their predictions
-4. **Price Discovery**: Market prices adjust based on supply and demand
-5. **Event Resolution**: Results are published via oracle systems
-6. **Settlement**: Winners receive payouts, losers forfeit their stakes
+### 🔄 **Processo de Negociação**
+1. **Criação de Evento**: Administradores criam mercados de previsão para eventos do mundo real
+2. **Lançamento do Mercado**: Eventos entram no ar com liquidez inicial e preços
+3. **Participação do Usuário**: Usuários compram tokens SIM/NÃO com base em suas previsões
+4. **Descoberta de Preço**: Os preços de mercado se ajustam com base na oferta e demanda
+5. **Resolução do Evento**: Resultados são publicados via sistemas de oráculo
+6. **Liquidação**: Vencedores recebem pagamentos, perdedores perdem suas apostas
 
-### 💡 **Profit Opportunities**
-- **Market Trading**: Buy and sell tokens before event resolution
-- **Event Settlement**: Hold tokens until resolution for potential 100% returns
-- **Market Making**: Provide liquidity and earn from spreads
-- **Arbitrage**: Exploit price differences across related markets
+### 💡 **Oportunidades de Lucro**
+- **Negociação de Mercado**: Compre e venda tokens antes da resolução do evento
+- **Liquidação de Evento**: Mantenha tokens até a resolução para retornos potenciais de 100%
+- **Criação de Mercado (Market Making)**: Forneça liquidez e ganhe com spreads
+- **Arbitragem**: Explore diferenças de preços em mercados relacionados
 
-## Safety and Security
+## Segurança e Proteção
 
-### 🔒 **Platform Security**
-- **Smart Contract Audits**: All contracts professionally audited
-- **Open Source**: Contract code available for public review
-- **Decentralized Operation**: No single point of failure
-- **Oracle Integration**: Reliable result verification system
+### 🔒 **Segurança da Plataforma**
+- **Auditorias de Contrato Inteligente**: Todos os contratos auditados profissionalmente
+- **Código Aberto**: Código do contrato disponível para revisão pública
+- **Operação Descentralizada**: Sem ponto único de falha
+- **Integração de Oráculo**: Sistema confiável de verificação de resultados
 
-### 🛡️ **User Security Tips**
-- **Never share private keys** or seed phrases
-- **Use official links only** (dapp.yc365.io)
-- **Verify transactions** before confirming
-- **Start with small amounts** while learning
-- **Keep software updated** (wallet, browser)
+### 🛡️ **Dicas de Segurança para o Usuário**
+- **Nunca compartilhe chaves privadas** ou frases semente
+- **Use apenas links oficiais** (dapp.yc365.io)
+- **Verifique transações** antes de confirmar
+- **Comece com pequenas quantias** enquanto aprende
+- **Mantenha o software atualizado** (carteira, navegador)
 
-## Support and Resources
+## Suporte e Recursos
 
-### 📖 **Documentation**
-- **Complete User Guide**: Comprehensive platform documentation
-- **Video Tutorials**: Step-by-step video guides
-- **FAQ Section**: Answers to common questions
-- **Best Practices**: Trading tips and strategies
+### 📖 **Documentação**
+- **Guia do Usuário Completo**: Documentação abrangente da plataforma
+- **Tutoriais em Vídeo**: Guias em vídeo passo a passo
+- **Seção de FAQ**: Respostas para perguntas comuns
+- **Melhores Práticas**: Dicas e estratégias de negociação
 
-### 🤝 **Community Support**
-- **Official Telegram**: Real-time community discussions
-- **Discord Server**: Technical support and community chat
-- **Twitter Updates**: Latest news and announcements
-- **Email Support**: Direct customer service
+### 🤝 **Suporte da Comunidade**
+- **Telegram Oficial**: Discussões da comunidade em tempo real
+- **Servidor Discord**: Suporte técnico e bate-papo da comunidade
+- **Atualizações do Twitter**: Últimas notícias e anúncios
+- **Suporte por Email**: Atendimento direto ao cliente
 
-### 🆘 **Getting Help**
-If you encounter any issues or have questions:
+### 🆘 **Obtendo Ajuda**
+Se você encontrar algum problema ou tiver dúvidas:
 
-1. **Check FAQ**: Most common questions are answered in our FAQ section
-2. **Community Forums**: Ask questions in our community channels
-3. **Contact Support**: Reach out to our support team directly
-4. **Documentation**: Refer to our comprehensive documentation
+1. **Verifique o FAQ**: A maioria das perguntas comuns é respondida em nossa seção de FAQ
+2. **Fóruns da Comunidade**: Faça perguntas em nossos canais da comunidade
+3. **Contate o Suporte**: Entre em contato diretamente com nossa equipe de suporte
+4. **Documentação**: Consulte nossa documentação abrangente
 
-## Next Steps
+## Próximos Passos
 
-Ready to begin your YC365 journey? Follow these next steps:
+Pronto para começar sua jornada no YC365? Siga estes próximos passos:
 
-### 1️⃣ **Learn About YC365**
-Start by reading "[What is YC365?](what-is-yc365.md)" to understand our platform's core concepts and unique value proposition.
+### 1️⃣ **Aprenda Sobre o YC365**
+Comece lendo "[O que é o YC365?](what-is-yc365.md)" para entender os conceitos principais e a proposta de valor única da nossa plataforma.
 
-### 2️⃣ **Make Your First Deposit**
-Follow our "[How to Deposit](how-to-deposit.md)" guide to fund your account and prepare for trading.
+### 2️⃣ **Faça Seu Primeiro Depósito**
+Siga nosso guia "[Como Depositar](how-to-deposit.md)" para financiar sua conta e se preparar para a negociação.
 
-### 3️⃣ **Place Your First Trade**
-Complete your onboarding with "[Making Your First Trade](making-your-first-trade.md)" to execute your first prediction market transaction.
+### 3️⃣ **Faça Sua Primeira Negociação**
+Complete sua integração com "[Realizando sua primeira negociação](making-your-first-trade.md)" para executar sua primeira transação no mercado de previsão.
 
-## Important Reminders
+## Lembretes Importantes
 
-### ⚠️ **Risk Warnings**
-- **Trading Risk**: All trading involves risk of loss
-- **Market Volatility**: Prediction markets can be highly volatile
-- **Total Loss**: It's possible to lose your entire investment
-- **Regulatory Risk**: Prediction markets may face regulatory changes
+### ⚠️ **Avisos de Risco**
+- **Risco de Negociação**: Toda negociação envolve risco de perda
+- **Volatilidade do Mercado**: Mercados de previsão podem ser altamente voláteis
+- **Perda Total**: É possível perder todo o seu investimento
+- **Risco Regulatório**: Mercados de previsão podem enfrentar mudanças regulatórias
 
-### 📋 **Best Practices**
-- **Start Small**: Begin with small amounts while learning
-- **Diversify**: Don't put all funds in a single event
-- **Research**: Thoroughly research events before trading
-- **Manage Risk**: Never invest more than you can afford to lose
-- **Stay Informed**: Keep up with news that may affect your positions
+### 📋 **Melhores Práticas**
+- **Comece Pequeno**: Comece com pequenas quantias enquanto aprende
+- **Diversifique**: Não coloque todos os fundos em um único evento
+- **Pesquise**: Pesquise minuciosamente os eventos antes de negociar
+- **Gerencie o Risco**: Nunca invista mais do que você pode perder
+- **Mantenha-se Informado**: Acompanhe notícias que possam afetar suas posições
 
-### 🎓 **Continuous Learning**
-- **Practice**: Start with small trades to gain experience
-- **Analyze**: Review your trades to identify improvements
-- **Stay Updated**: Follow platform updates and new features
-- **Engage**: Participate in community discussions and learning
+### 🎓 **Aprendizado Contínuo**
+- **Pratique**: Comece com pequenas negociações para ganhar experiência
+- **Analise**: Revise suas negociações para identificar melhorias
+- **Mantenha-se Atualizado**: Siga as atualizações da plataforma e novos recursos
+- **Envolva-se**: Participe de discussões da comunidade e aprendizado
 
 ---
 
-**Ready to start?** Navigate to the next section to learn more about what makes YC365 special, or jump directly to our deposit guide if you're ready to fund your account.
+**Pronto para começar?** Navegue para a próxima seção para saber mais sobre o que torna o YC365 especial, ou pule diretamente para o nosso guia de depósito se estiver pronto para financiar sua conta.
 
-*Remember: Successful trading requires patience, discipline, and continuous learning. Take your time to understand the platform before making significant investments.* 
+*Lembre-se: A negociação bem-sucedida requer paciência, disciplina e aprendizado contínuo. Leve seu tempo para entender a plataforma antes de fazer investimentos significativos.*

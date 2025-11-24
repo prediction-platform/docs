@@ -1,186 +1,183 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# การถอนเงิน
 
-# Withdraw
+## ภาพรวม
 
-## Overview
+YC365 ให้บริการถอนเงินที่ปลอดภัยและมีประสิทธิภาพสำหรับสกุลเงินดิจิทัลที่รองรับทั้งหมด การถอนเงินได้รับการประมวลผลบนเครือข่าย BSC (Binance Smart Chain) ด้วยค่าธรรมเนียมที่แข่งขันได้และเวลาดำเนินการที่รวดเร็ว
 
-YC365 provides secure and efficient withdrawal services for all supported cryptocurrencies. Withdrawals are processed on the BSC (Binance Smart Chain) network with competitive fees and fast processing times.
+## กระเป๋าเงินที่รองรับ
 
-## Supported Wallets
+YC365 รองรับกระเป๋าเงินที่เข้ากันได้กับ EVM ทั้งหมด รวมถึง:
 
-YC365 supports all EVM-compatible wallets, including:
+- **MetaMask** - เป็นที่นิยมและใช้กันอย่างแพร่หลายที่สุด
+- **WalletConnect** - รองรับหลายกระเป๋าเงิน
+- **Trust Wallet** - กระเป๋าเงินที่เน้นมือถือ
+- **Binance Wallet** - กระเป๋าเงินอย่างเป็นทางการของ Binance
+- **Coinbase Wallet** - อินเทอร์เฟซที่ใช้งานง่าย
+- **กระเป๋าเงินที่เข้ากันได้กับ EVM ใดๆ**
 
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! note "ข้อกำหนดของกระเป๋าเงิน"
+    กระเป๋าเงินของคุณต้องรองรับเครือข่าย BSC (Binance Smart Chain) เพื่อใช้ YC365
 
-!!! note "Wallet Requirements"
-    Your wallet must support BSC (Binance Smart Chain) network to use YC365.
+## วิธีการถอนเงินที่รองรับ
 
-## Supported Withdrawal Methods
-
-### BSC Network Withdrawals
+### การถอนเงินผ่านเครือข่าย BSC
 
 #### USDT (BEP-20)
-- **Minimum Withdrawal**: 10 USDT
-- **Processing Time**: 5-30 seconds
-- **Network Fee**: 0.0005 BNB
-- **Network**: Binance Smart Chain (BSC) only
+- **การถอนขั้นต่ำ**: 10 USDT
+- **เวลาดำเนินการ**: 5-30 วินาที
+- **ค่าธรรมเนียมเครือข่าย**: 0.0005 BNB
+- **เครือข่าย**: Binance Smart Chain (BSC) เท่านั้น
 
-## How to Withdraw
+## วิธีการถอนเงิน
 
-### Step 1: Wallet Setup
-1. **Connect Wallet** (if not already connected):
-   - Visit **dapp.yc365.io**
-   - Click "Connect Wallet" and select your EVM wallet
-   - Ensure you're connected to BSC Mainnet
+### ขั้นตอนที่ 1: การตั้งค่ากระเป๋าเงิน
+1. **เชื่อมต่อกระเป๋าเงิน** (หากยังไม่ได้เชื่อมต่อ):
+   - ไปที่ **dapp.yc365.io**
+   - คลิก "Connect Wallet" และเลือกกระเป๋าเงิน EVM ของคุณ
+   - ตรวจสอบให้แน่ใจว่าคุณเชื่อมต่อกับ BSC Mainnet
 
-2. **Install Wallet** (if needed):
-   - Download and install MetaMask or any EVM-compatible wallet
-   - Follow the wallet's setup instructions
+2. **ติดตั้งกระเป๋าเงิน** (หากจำเป็น):
+   - ดาวน์โหลดและติดตั้ง MetaMask หรือกระเป๋าเงิน EVM ที่เข้ากันได้
+   - ทำตามคำแนะนำการตั้งค่าของกระเป๋าเงิน
 
-3. **Configure BSC Network** (if needed):
-   - Open your wallet and switch to BSC Mainnet
-   - If BSC network is not available, add it manually:
+3. **กำหนดค่าเครือข่าย BSC** (หากจำเป็น):
+   - เปิดกระเป๋าเงินของคุณและเปลี่ยนเป็น BSC Mainnet
+   - หากไม่มีเครือข่าย BSC ให้เพิ่มด้วยตนเอง:
      - **Network Name**: BSC Mainnet
      - **RPC URL**: https://bsc-dataseed1.binance.org/
      - **Chain ID**: 56
      - **Currency Symbol**: BNB
      - **Block Explorer**: https://bscscan.com/
 
-4. **Ensure Sufficient Balance**:
-   - Make sure you have enough BNB for gas fees
-   - Verify you have USDT in your vault to withdraw
+4. **ตรวจสอบยอดคงเหลือให้เพียงพอ**:
+   - ตรวจสอบให้แน่ใจว่าคุณมี BNB เพียงพอสำหรับค่าธรรมเนียม gas
+   - ตรวจสอบว่าคุณมี USDT ใน vault เพื่อถอน
 
-### Step 2: Access Overview Page
-1. After successfully connecting your wallet
-2. Navigate to the **Overview** page on dapp.yc365.io
-3. You should see your vault balance and available actions
+### ขั้นตอนที่ 2: เข้าถึงหน้าภาพรวม
+1. หลังจากเชื่อมต่อกระเป๋าเงินของคุณสำเร็จ
+2. ไปที่หน้า **Overview** บน dapp.yc365.io
+3. คุณควรเห็นยอดคงเหลือใน vault ของคุณและการดำเนินการที่มีอยู่
 
-### Step 3: Initiate Withdrawal
-1. Look for the **"Withdraw"** button on the Overview page
-2. Click the withdraw button to start the withdrawal process
-3. The system will automatically detect your connected wallet
+### ขั้นตอนที่ 3: เริ่มการถอนเงิน
+1. มองหาปุ่ม **"Withdraw"** บนหน้า Overview
+2. คลิกปุ่มถอนเงินเพื่อเริ่มกระบวนการถอนเงิน
+3. ระบบจะตรวจจับกระเป๋าเงินที่เชื่อมต่อของคุณโดยอัตโนมัติ
 
-### Step 4: Complete Withdrawal
-1. **Enter Withdrawal Details**:
-   - Select the amount of USDT you want to withdraw
-   - The destination address will be your connected wallet address
-   - Review all transaction details
+### ขั้นตอนที่ 4: ทำการถอนเงินให้เสร็จสมบูรณ์
+1. **ป้อนรายละเอียดการถอนเงิน**:
+   - เลือกจำนวน USDT ที่คุณต้องการถอน
+   - ที่อยู่ปลายทางจะเป็นที่อยู่กระเป๋าเงินที่เชื่อมต่อของคุณ
+   - ทบทวนรายละเอียดธุรกรรมทั้งหมด
 
-2. **Confirm Transaction**:
-   - Follow the on-screen prompts
-   - Confirm the transaction in your wallet
-   - Pay the required gas fees
+2. **ยืนยันธุรกรรม**:
+   - ทำตามคำแนะนำบนหน้าจอ
+   - ยืนยันธุรกรรมในกระเป๋าเงินของคุณ
+   - จ่ายค่าธรรมเนียม gas ที่จำเป็น
 
-### Step 5: Receive Funds
-1. **Wait for Processing**:
-   - The withdrawal will be processed on the blockchain
-   - Usually takes 5-30 seconds for confirmation
+### ขั้นตอนที่ 5: รับเงิน
+1. **รอการประมวลผล**:
+   - การถอนเงินจะได้รับการประมวลผลบนบล็อกเชน
+   - โดยปกติจะใช้เวลา 5-30 วินาทีสำหรับการยืนยัน
 
-2. **Check Your Wallet**:
-   - USDT tokens will be automatically sent to your connected wallet
-   - You can verify the transaction on BSCscan
+2. **ตรวจสอบกระเป๋าเงินของคุณ**:
+   - โทเค็น USDT จะถูกส่งไปยังกระเป๋าเงินที่เชื่อมต่อของคุณโดยอัตโนมัติ
+   - คุณสามารถตรวจสอบธุรกรรมได้บน BSCscan
 
-!!! success "Withdrawal Complete"
-    Once you see the USDT tokens in your wallet, the withdrawal process is fully completed.
+!!! success "การถอนเงินเสร็จสมบูรณ์"
+    เมื่อคุณเห็นโทเค็น USDT ในกระเป๋าเงินของคุณ กระบวนการถอนเงินจะเสร็จสมบูรณ์อย่างสมบูรณ์
 
-## Security Features
+## คุณสมบัติความปลอดภัย
 
-!!! success "Multi-Layer Security"
-    - **2FA Protection**: Two-factor authentication for withdrawals
-    - **Whitelist Addresses**: Save trusted addresses for faster withdrawals
-    - **Withdrawal Password**: Additional password protection
-    - **Email Notifications**: Real-time withdrawal status updates
+!!! success "ความปลอดภัยหลายชั้น"
+    - **การป้องกัน 2FA**: การยืนยันตัวตนสองปัจจัยสำหรับการถอนเงิน
+    - **ที่อยู่ที่อนุญาต (Whitelist)**: บันทึกที่อยู่ที่เชื่อถือได้เพื่อการถอนเงินที่รวดเร็วยิ่งขึ้น
+    - **รหัสผ่านการถอนเงิน**: การป้องกันด้วยรหัสผ่านเพิ่มเติม
+    - **การแจ้งเตือนทางอีเมล**: การอัปเดตสถานะการถอนเงินแบบเรียลไทม์
 
-!!! warning "Security Best Practices"
-    - Always verify the destination address (BSC network only)
-    - Use whitelisted addresses when possible
-    - Enable 2FA for enhanced security
-    - Never share your withdrawal password
-    - Only withdraw USDT (BEP-20) to BSC addresses
+!!! warning "แนวทางปฏิบัติที่ดีที่สุดด้านความปลอดภัย"
+    - ตรวจสอบที่อยู่ปลายทางเสมอ (เครือข่าย BSC เท่านั้น)
+    - ใช้ที่อยู่ที่อนุญาตเมื่อเป็นไปได้
+    - เปิดใช้งาน 2FA เพื่อความปลอดภัยที่เพิ่มขึ้น
+    - ห้ามแชร์รหัสผ่านการถอนเงินของคุณ
+    - ถอน USDT (BEP-20) ไปยังที่อยู่ BSC เท่านั้น
 
-## Withdrawal Limits
+## ขีดจำกัดการถอนเงิน
 
-| Account Level | Daily Limit | Monthly Limit | Minimum Withdrawal |
-|---------------|-------------|---------------|-------------------|
-| Basic        | $1,000      | $10,000       | $10               |
-| Verified     | $10,000     | $100,000      | $10               |
-| Premium      | $50,000     | $500,000      | $10               |
+| ระดับบัญชี | ขีดจำกัดรายวัน | ขีดจำกัดรายเดือน | การถอนขั้นต่ำ |
+|------------|----------------|------------------|---------------|
+| Basic      | $1,000         | $10,000          | $10           |
+| Verified   | $10,000        | $100,000         | $10           |
+| Premium    | $50,000        | $500,000         | $10           |
 
-## Processing Times
+## เวลาดำเนินการ
 
-### Standard Processing
-- **Platform Processing**: 5-30 seconds
-- **Blockchain Confirmation**: 1-3 confirmations
-- **Total Time**: Usually 10-60 seconds
+### การประมวลผลมาตรฐาน
+- **การประมวลผลแพลตฟอร์ม**: 5-30 วินาที
+- **การยืนยันบล็อกเชน**: 1-3 การยืนยัน
+- **เวลารวม**: โดยปกติ 10-60 วินาที
 
-### Factors Affecting Speed
-- **Network Congestion**: High traffic may delay processing
-- **Security Checks**: Large amounts require additional verification
-- **Account Status**: New accounts may have longer processing times
+### ปัจจัยที่ส่งผลต่อความเร็ว
+- **ความหนาแน่นของเครือข่าย**: การจราจรสูงอาจทำให้การประมวลผลล่าช้า
+- **การตรวจสอบความปลอดภัย**: จำนวนเงินจำนวนมากต้องการการตรวจสอบเพิ่มเติม
+- **สถานะบัญชี**: บัญชีใหม่อาจมีเวลาดำเนินการนานขึ้น
 
-## Fees Structure
+## โครงสร้างค่าธรรมเนียม
 
-| Cryptocurrency | Network Fee | Platform Fee |
-|----------------|-------------|--------------|
-| USDT (BEP-20)  | 0.0005 BNB  | Free         |
+| สกุลเงินดิจิทัล | ค่าธรรมเนียมเครือข่าย | ค่าธรรมเนียมแพลตฟอร์ม |
+|-----------------|-----------------------|-----------------------|
+| USDT (BEP-20)   | 0.0005 BNB            | ฟรี                   |
 
-!!! info "Fee Information"
-    - Network fees are charged by the BSC network
-    - YC365 does not charge additional platform fees
-    - Fees are deducted from the withdrawal amount
-    - Only USDT (BEP-20) withdrawals are supported
+!!! info "ข้อมูลค่าธรรมเนียม"
+    - ค่าธรรมเนียมเครือข่ายเรียกเก็บโดยเครือข่าย BSC
+    - YC365 ไม่เรียกเก็บค่าธรรมเนียมแพลตฟอร์มเพิ่มเติม
+    - ค่าธรรมเนียมจะถูกหักจากจำนวนเงินที่ถอน
+    - รองรับเฉพาะการถอน USDT (BEP-20) เท่านั้น
 
-## Address Whitelisting
+## การอนุญาตที่อยู่ (Address Whitelisting)
 
-### Benefits of Whitelisting
-- **Faster Processing**: Pre-approved addresses process faster
-- **Enhanced Security**: Reduces risk of sending to wrong addresses
-- **Convenience**: No need to re-enter trusted addresses
+### ประโยชน์ของการอนุญาตที่อยู่
+- **การประมวลผลที่เร็วขึ้น**: ที่อยู่ที่ได้รับการอนุมัติล่วงหน้าจะประมวลผลได้เร็วกว่า
+- **ความปลอดภัยที่เพิ่มขึ้น**: ลดความเสี่ยงในการส่งไปยังที่อยู่ผิด
+- **ความสะดวก**: ไม่ต้องป้อนที่อยู่ที่เชื่อถือได้ซ้ำ
 
-### How to Whitelist an Address
-1. Go to **Security Settings**
-2. Select **Address Whitelist**
-3. Add the destination address
-4. Complete verification process
-5. Wait for approval (24-48 hours)
+### วิธีการอนุญาตที่อยู่
+1. ไปที่ **Security Settings**
+2. เลือก **Address Whitelist**
+3. เพิ่มที่อยู่ปลายทาง
+4. เสร็จสิ้นกระบวนการยืนยัน
+5. รอการอนุมัติ (24-48 ชั่วโมง)
 
-## Troubleshooting
+## การแก้ไขปัญหา
 
-### Common Issues
+### ปัญหาทั่วไป
 
-**Q: My withdrawal is pending for a long time**
-A: Check if you have sufficient BNB for gas fees. Large withdrawals may require additional confirmations. Try increasing the gas limit if needed.
+**Q: การถอนเงินของฉันรอดำเนินการเป็นเวลานาน**
+A: ตรวจสอบว่าคุณมี BNB เพียงพอสำหรับค่าธรรมเนียม gas หรือไม่ การถอนเงินจำนวนมากอาจต้องการการยืนยันเพิ่มเติม ลองเพิ่มขีดจำกัด gas หากจำเป็น
 
-**Q: I can't see the withdraw button**
-A: Make sure you're connected to the correct wallet and network (BSC Mainnet). Ensure you have USDT in your vault to withdraw.
+**Q: ฉันไม่เห็นปุ่มถอนเงิน**
+A: ตรวจสอบให้แน่ใจว่าคุณเชื่อมต่อกับกระเป๋าเงินและเครือข่ายที่ถูกต้อง (BSC Mainnet) ตรวจสอบให้แน่ใจว่าคุณมี USDT ใน vault เพื่อถอน
 
-**Q: The transaction failed**
-A: Check if you have sufficient BNB for gas fees. Increase gas limit if needed or try again during lower network congestion.
+**Q: ธุรกรรมล้มเหลว**
+A: ตรวจสอบว่าคุณมี BNB เพียงพอสำหรับค่าธรรมเนียม gas หรือไม่ เพิ่มขีดจำกัด gas หากจำเป็นหรือลองอีกครั้งในช่วงที่มีความหนาแน่นของเครือข่ายต่ำกว่า
 
-**Q: My wallet won't connect**
-A: Ensure you're using a compatible EVM wallet (MetaMask, WalletConnect, etc.) and that you're connected to BSC Mainnet.
+**Q: กระเป๋าเงินของฉันไม่เชื่อมต่อ**
+A: ตรวจสอบให้แน่ใจว่าคุณใช้กระเป๋าเงิน EVM ที่เข้ากันได้ (MetaMask, WalletConnect, ฯลฯ) และคุณเชื่อมต่อกับ BSC Mainnet
 
-**Q: The withdrawal fee seems high**
-A: Network fees are determined by BSC network conditions. Fees are transparent and shown before confirmation.
+**Q: ค่าธรรมเนียมการถอนเงินดูเหมือนสูง**
+A: ค่าธรรมเนียมเครือข่ายถูกกำหนดโดยเงื่อนไขเครือข่าย BSC ค่าธรรมเนียมมีความโปร่งใสและแสดงก่อนการยืนยัน
 
-## Support
+## การสนับสนุน
 
-For withdrawal-related issues, please contact support with:
-- Your wallet address
+สำหรับปัญหาที่เกี่ยวข้องกับการถอนเงิน โปรดติดต่อฝ่ายสนับสนุนพร้อม:
+- ที่อยู่กระเป๋าเงินของคุณ
 - Transaction hash
-- Screenshot of the issue
-- Detailed description of the problem
-- Network used (BSC Mainnet)
+- ภาพหน้าจอของปัญหา
+- คำอธิบายปัญหาโดยละเอียด
+- เครือข่ายที่ใช้ (BSC Mainnet)
 
-!!! tip "Quick Support"
-    For faster support, include your wallet address and transaction hash when reporting issues.
+!!! tip "การสนับสนุนด่วน"
+    เพื่อการสนับสนุนที่รวดเร็วยิ่งขึ้น ให้ระบุที่อยู่กระเป๋าเงินและ transaction hash ของคุณเมื่อรายงานปัญหา
 
 ---
 
-*For the latest withdrawal information and updates, please check our official announcements.* 
+*สำหรับข้อมูลการถอนเงินและการอัปเดตล่าสุด โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*

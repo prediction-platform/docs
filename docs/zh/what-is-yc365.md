@@ -1,295 +1,292 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 什么是 YC365？
 
-# What is YC365?
+## 概述
 
-## Overview
+YC365 是一个建立在币安智能链 (BSC) 上的革命性去中心化预测市场平台，使用户能够对现实世界事件的结果进行交易。我们的平台将区块链技术的安全性和透明度与直观的用户体验相结合，使每个人都能访问预测市场。
 
-YC365 is a revolutionary decentralized prediction market platform built on Binance Smart Chain (BSC) that enables users to trade on the outcomes of real-world events. Our platform combines the security and transparency of blockchain technology with an intuitive user experience, making prediction markets accessible to everyone.
+## 我们的使命和愿景
 
-## Our Mission and Vision
+### 🎯 **使命宣言**
+提供一个**中立**、**安全**和**值得信赖**的去中心化预测平台，使用户能够参与全球预测市场，同时保持最高标准的透明度和可靠性。
 
-### 🎯 **Mission Statement**
-To provide a **neutral**, **secure**, and **trustworthy** decentralized prediction platform that empowers users to participate in global prediction markets while maintaining the highest standards of transparency and reliability.
+### 🔮 **我们的愿景**
+我们设想这样一个世界：预测市场作为信息聚合、风险管理和民主决策的有力工具，通过去中心化技术供全球用户使用。
 
-### 🔮 **Our Vision**
-We envision a world where prediction markets serve as powerful tools for information aggregation, risk management, and democratic decision-making, accessible to users worldwide through decentralized technology.
+### 🌟 **核心价值观**
+- **中立性**：公平服务于所有用户的公正平台
+- **安全性**：保护用户资产的强大安全措施
+- **可信赖性**：建立在可验证智能合约之上的透明运营
+- **高效性**：BSC 网络上的快速、低成本交易
+- **可访问性**：提供多语言版本的用户友好界面
 
-### 🌟 **Core Values**
-- **Neutrality**: Unbiased platform serving all users equally
-- **Security**: Robust security measures protecting user assets
-- **Trustworthiness**: Transparent operations built on verifiable smart contracts
-- **Efficiency**: Fast, low-cost transactions on BSC network
-- **Accessibility**: User-friendly interface available in multiple languages
+## 什么是预测市场？
 
-## What Are Prediction Markets?
+### 📊 **定义**
+预测市场是交易所交易市场，参与者根据未来事件的结果交易合约。这些市场利用群体的集体智慧，产生比传统预测方法更准确的预测。
 
-### 📊 **Definition**
-Prediction markets are exchange-traded markets where participants trade contracts based on the outcomes of future events. These markets harness the collective wisdom of crowds to generate more accurate predictions than traditional forecasting methods.
+### 🎲 **它们如何运作**
+1. **事件创建**：现实世界的事件被转化为可交易的市场
+2. **代币交易**：用户购买代表不同结果的 YES 或 NO 代币
+3. **价格发现**：市场价格反映了集体概率评估
+4. **决议**：事件结束，获胜代币被兑换为奖励
+5. **结算**：智能合约自动向获胜者分发奖金
 
-### 🎲 **How They Work**
-1. **Event Creation**: Real-world events are transformed into tradeable markets
-2. **Token Trading**: Users buy YES or NO tokens representing different outcomes
-3. **Price Discovery**: Market prices reflect the collective probability assessment
-4. **Resolution**: Events conclude and winning tokens are redeemed for rewards
-5. **Settlement**: Smart contracts automatically distribute payouts to winners
+### 💡 **预测市场的好处**
+- **信息聚合**：结合不同的意见和信息
+- **风险管理**：对冲不确定的结果
+- **价格发现**：揭示关于未来事件的真实市场情绪
+- **激励一致性**：用利润奖励准确的预测
+- **民主参与**：实现更广泛的预测参与
 
-### 💡 **Benefits of Prediction Markets**
-- **Information Aggregation**: Combine diverse opinions and information
-- **Risk Management**: Hedge against uncertain outcomes
-- **Price Discovery**: Reveal true market sentiment about future events
-- **Incentive Alignment**: Reward accurate predictions with profits
-- **Democratic Participation**: Enable broader participation in forecasting
+## YC365 的独特功能
 
-## YC365's Unique Features
+### 🏗️ **混合架构**
+YC365 采用复杂的混合架构，结合了链上和链下组件：
 
-### 🏗️ **Hybrid Architecture**
-YC365 employs a sophisticated hybrid architecture combining on-chain and off-chain components:
+#### **链上组件** (智能合约)
+- **资产管理**：用户资金在金库合约中的安全托管
+- **交易执行**：透明的订单撮合和结算
+- **事件决议**：事件结果的不可篡改记录
+- **自动支付**：基于智能合约的奖励分配
 
-#### **On-Chain Components** (Smart Contracts)
-- **Asset Management**: Secure custody of user funds in vault contracts
-- **Trading Execution**: Transparent order matching and settlement
-- **Event Resolution**: Immutable recording of event outcomes
-- **Automated Payouts**: Smart contract-based reward distribution
+#### **链下组件** (传统基础设施)
+- **订单簿管理**：高性能订单撮合引擎
+- **市场数据**：实时价格源和市场统计
+- **用户界面**：用于无缝交易的响应式 Web 应用程序
+- **预言机集成**：用于事件决议的可靠数据源
 
-#### **Off-Chain Components** (Traditional Infrastructure)
-- **Order Book Management**: High-performance order matching engine
-- **Market Data**: Real-time price feeds and market statistics
-- **User Interface**: Responsive web application for seamless trading
-- **Oracle Integration**: Reliable data feeds for event resolution
+### 🔧 **技术优势**
 
-### 🔧 **Technical Advantages**
+#### **建立在 BSC 上**
+- **低费用**：所有交易的 Gas 成本极低
+- **快速确认**：3 秒出块时间实现快速执行
+- **EVM 兼容性**：完全兼容以太坊虚拟机
+- **经过验证的安全性**：久经考验的区块链基础设施
 
-#### **Built on BSC**
-- **Low Fees**: Minimal gas costs for all transactions
-- **Fast Confirmation**: 3-second block times for quick execution
-- **EVM Compatibility**: Full Ethereum Virtual Machine compatibility
-- **Proven Security**: Battle-tested blockchain infrastructure
+#### **智能合约安全**
+- **专业审计**：所有合约均由领先的安全公司审计
+- **开源**：合约代码公开可查以供审查
+- **可升级设计**：用于未来改进的安全升级机制
+- **多重签名控制**：关键操作的分布式控制
 
-#### **Smart Contract Security**
-- **Professional Audits**: All contracts audited by leading security firms
-- **Open Source**: Contract code publicly available for review
-- **Upgradeable Design**: Secure upgrade mechanisms for future improvements
-- **Multi-signature Controls**: Distributed control for critical operations
+#### **可扩展基础设施**
+- **高吞吐量**：支持数千并发用户
+- **全球 CDN**：全球快速加载时间
+- **冗余系统**：99.9% 的正常运行时间，具有故障转移保护
+- **移动优化**：跨所有设备的无缝体验
 
-#### **Scalable Infrastructure**
-- **High Throughput**: Support for thousands of concurrent users
-- **Global CDN**: Fast loading times worldwide
-- **Redundant Systems**: 99.9% uptime with failover protection
-- **Mobile Optimization**: Seamless experience across all devices
+### 💰 **经济模型**
 
-### 💰 **Economic Model**
+#### **交易费用**
+- **低成本**：仅 0.15% (1.5/1000) 的交易费用
+- **透明定价**：无隐藏费用或收费
+- **有竞争力的费率**：预测市场领域最低费率之一
+- **增值**：费用支持平台开发和安全
 
-#### **Trading Fees**
-- **Low Cost**: Only 0.15% (1.5/1000) trading fees
-- **Transparent Pricing**: No hidden fees or charges
-- **Competitive Rates**: Among the lowest in the prediction market space
-- **Value Addition**: Fees support platform development and security
+#### **代币经济学**
+- **YES/NO 代币**：每个预测市场的二元结果代币
+- **1:1 支持**：所有代币均由 USDT 储备支持
+- **自动结算**：智能合约处理所有结算
+- **即时流动性**：市场创建后立即获得交易权限
 
-#### **Token Economics**
-- **YES/NO Tokens**: Binary outcome tokens for each prediction market
-- **1:1 Backing**: All tokens backed by USDT reserves
-- **Automatic Settlement**: Smart contracts handle all settlements
-- **Instant Liquidity**: Immediate access to trading upon market creation
+## 平台生态系统
 
-## Platform Ecosystem
+### 👥 **用户类型**
 
-### 👥 **User Types**
+#### **普通交易者**
+- **散户参与者**：基于个人信念进行交易的个人用户
+- **机构交易者**：使用市场进行对冲的组织
+- **套利者**：利用价格效率低下的交易者
+- **做市商**：从价差中获利的流动性提供者
 
-#### **Regular Traders**
-- **Retail Participants**: Individual users trading on personal beliefs
-- **Institutional Traders**: Organizations using markets for hedging
-- **Arbitrageurs**: Traders exploiting price inefficiencies
-- **Market Makers**: Liquidity providers earning from spreads
+#### **平台管理员**
+- **超级管理员**：平台配置和系统管理
+- **数据管理员**：事件创建和内容管理
+- **资产管理员**：区块链操作和结算管理
 
-#### **Platform Administrators**
-- **Super Administrators**: Platform configuration and system management
-- **Data Administrators**: Event creation and content management
-- **Asset Administrators**: Blockchain operations and settlement management
+### 🎪 **市场类别**
 
-### 🎪 **Market Categories**
+#### **体育赛事**
+- **足球**：世界杯、欧冠、国内联赛
+- **篮球**：NBA、FIBA 世界杯、奥运会
+- **网球**：大满贯、ATP/WTA 巡回赛
+- **其他体育**：棒球、曲棍球、高尔夫、赛车
 
-#### **Sports Events**
-- **Football/Soccer**: World Cup, Champions League, domestic leagues
-- **Basketball**: NBA, FIBA World Cup, Olympics
-- **Tennis**: Grand Slams, ATP/WTA tours
-- **Other Sports**: Baseball, hockey, golf, motorsports
+#### **政治事件**
+- **选举**：总统、议会、地方选举
+- **政策决定**：公投结果、立法投票
+- **政治动态**：任命、辞职、丑闻
+- **国际关系**：贸易协定、外交动态
 
-#### **Political Events**
-- **Elections**: Presidential, parliamentary, local elections
-- **Policy Decisions**: Referendum outcomes, legislative votes
-- **Political Developments**: Appointments, resignations, scandals
-- **International Relations**: Trade agreements, diplomatic developments
+#### **经济指标**
+- **宏观经济数据**：GDP 增长、通货膨胀率、就业
+- **央行决策**：利率变化、政策公告
+- **市场表现**：股指、商品价格
+- **企业事件**：财报结果、合并公告
 
-#### **Economic Indicators**
-- **Macroeconomic Data**: GDP growth, inflation rates, employment
-- **Central Bank Decisions**: Interest rate changes, policy announcements
-- **Market Performance**: Stock indices, commodity prices
-- **Corporate Events**: Earnings results, merger announcements
+#### **技术与创新**
+- **产品发布**：新设备发布、软件更新
+- **采用指标**：用户增长、市场渗透率
+- **监管决策**：技术政策、审批流程
+- **行业发展**：标准采用、合作公告
 
-#### **Technology and Innovation**
-- **Product Launches**: New device releases, software updates
-- **Adoption Metrics**: User growth, market penetration
-- **Regulatory Decisions**: Technology policy, approval processes
-- **Industry Developments**: Standards adoption, partnership announcements
+#### **娱乐与文化**
+- **颁奖典礼**：奥斯卡、艾美奖、格莱美预测
+- **真人秀**：竞赛节目结果
+- **名人事件**：关系状态、职业变动
+- **文化现象**：病毒式趋势、社会运动
 
-#### **Entertainment and Culture**
-- **Awards Shows**: Oscars, Emmys, Grammy predictions
-- **Reality TV**: Competition show outcomes
-- **Celebrity Events**: Relationship status, career moves
-- **Cultural Phenomena**: Viral trends, social movements
+#### **加密货币与 DeFi**
+- **价格预测**：比特币、以太坊、主要山寨币价格
+- **采用指标**：网络使用情况、机构采用
+- **监管动态**：政府政策决定
+- **技术里程碑**：网络升级、扩容解决方案
 
-#### **Cryptocurrency and DeFi**
-- **Price Predictions**: Bitcoin, Ethereum, major altcoin prices
-- **Adoption Metrics**: Network usage, institutional adoption
-- **Regulatory Developments**: Government policy decisions
-- **Technology Milestones**: Network upgrades, scaling solutions
+## YC365 与竞争对手的区别
 
-## How YC365 Differs from Competitors
+### 🆚 **与传统博彩相比**
+- **去中心化**：没有控制结果的中央机构
+- **透明**：所有操作在区块链上可见
+- **全球访问**：全球可用，无地理限制
+- **更低费用**：费用显著低于传统博彩公司
+- **即时结算**：事件决议后即时支付
 
-### 🆚 **Compared to Traditional Betting**
-- **Decentralized**: No central authority controlling outcomes
-- **Transparent**: All operations visible on blockchain
-- **Global Access**: Available worldwide without geographic restrictions
-- **Lower Fees**: Significantly lower fees than traditional bookmakers
-- **Immediate Settlement**: Instant payouts upon event resolution
+### 🆚 **与其他预测平台相比**
+- **更低成本**：0.15% vs 其他平台的 2-5% 费用
+- **更好性能**：BSC 提供更快、更便宜的交易
+- **混合架构**：兼具中心化和去中心化的优点
+- **多语言支持**：提供 6 种语言版本
+- **专业级**：企业级安全性和可靠性
 
-### 🆚 **Compared to Other Prediction Platforms**
-- **Lower Costs**: 0.15% vs 2-5% fees on other platforms
-- **Better Performance**: BSC provides faster, cheaper transactions
-- **Hybrid Architecture**: Best of both centralized and decentralized worlds
-- **Multi-language Support**: Available in 6 languages
-- **Professional Grade**: Enterprise-level security and reliability
+### 🆚 **与纯 DeFi 解决方案相比**
+- **用户友好**：直观的界面促进主流采用
+- **专业支持**：专门的客户服务团队
+- **监管合规**：设计时考虑了监管因素
+- **教育资源**：全面的学习材料
+- **市场多样性**：多样化的预测市场
 
-### 🆚 **Compared to Pure DeFi Solutions**
-- **User-Friendly**: Intuitive interface for mainstream adoption
-- **Professional Support**: Dedicated customer service team
-- **Regulatory Compliance**: Designed with regulatory considerations
-- **Educational Resources**: Comprehensive learning materials
-- **Market Variety**: Diverse range of prediction markets
+## 平台安全与信任
 
-## Platform Security and Trust
+### 🔐 **安全措施**
 
-### 🔐 **Security Measures**
+#### **智能合约安全**
+- **形式化验证**：合约正确性的数学证明
+- **漏洞赏金计划**：激励性安全研究
+- **定期审计**：季度安全评估
+- **安全开发**：代码开发中的行业最佳实践
 
-#### **Smart Contract Security**
-- **Formal Verification**: Mathematical proofs of contract correctness
-- **Bug Bounty Programs**: Incentivized security research
-- **Regular Audits**: Quarterly security assessments
-- **Secure Development**: Industry best practices in code development
+#### **运营安全**
+- **多重签名钱包**：分布式密钥管理
+- **冷存储**：大部分资金离线存储
+- **访问控制**：基于角色的权限和认证
+- **监控系统**：全天候安全监控和警报
 
-#### **Operational Security**
-- **Multi-signature Wallets**: Distributed key management
-- **Cold Storage**: Offline storage for majority of funds
-- **Access Controls**: Role-based permissions and authentication
-- **Monitoring Systems**: 24/7 security monitoring and alerting
+#### **数据保护**
+- **加密**：敏感数据的端到端加密
+- **隐私保护**：最少的数据收集和保留
+- **GDPR 合规**：完全遵守隐私法规
+- **安全基础设施**：强化的服务器和网络安全
 
-#### **Data Protection**
-- **Encryption**: End-to-end encryption for sensitive data
-- **Privacy Protection**: Minimal data collection and retention
-- **GDPR Compliance**: Full compliance with privacy regulations
-- **Secure Infrastructure**: Hardened servers and network security
+### 🛡️ **信任机制**
 
-### 🛡️ **Trust Mechanisms**
+#### **透明度**
+- **开源合约**：所有智能合约代码公开可用
+- **实时审计**：所有交易在区块链上可见
+- **公开验证**：所有操作的独立验证
+- **定期报告**：季度透明度报告
 
-#### **Transparency**
-- **Open Source Contracts**: All smart contract code publicly available
-- **Real-time Auditing**: All transactions visible on blockchain
-- **Public Verification**: Independent verification of all operations
-- **Regular Reporting**: Quarterly transparency reports
+#### **去中心化**
+- **无单点故障**：分布式架构
+- **社区治理**：用户参与关键决策
+- **预言机多样性**：用于事件决议的多个数据源
+- **地理分布**：全球基础设施部署
 
-#### **Decentralization**
-- **No Single Point of Failure**: Distributed architecture
-- **Community Governance**: User participation in key decisions
-- **Oracle Diversity**: Multiple data sources for event resolution
-- **Geographic Distribution**: Global infrastructure deployment
+## 开始使用 YC365
 
-## Getting Started with YC365
+### 🚀 **快速入门流程**
+1. **设置 EVM 钱包**（推荐 MetaMask）
+2. **在钱包中配置 BSC 网络**
+3. **获取 USDT 和 BNB** 用于交易和 Gas 费
+4. **连接到 dapp.yc365.io**
+5. **完成您的首次充值**
+6. **探索可用市场**
+7. **进行您的第一笔交易**
 
-### 🚀 **Quick Start Process**
-1. **Set up EVM wallet** (MetaMask recommended)
-2. **Configure BSC network** in your wallet
-3. **Acquire USDT and BNB** for trading and gas fees
-4. **Connect to dapp.yc365.io**
-5. **Complete your first deposit**
-6. **Explore available markets**
-7. **Place your first trade**
+### 📚 **学习资源**
+- **视频教程**：所有功能的分步指南
+- **文档**：全面的用户和开发者指南
+- **社区支持**：活跃的 Telegram 和 Discord 社区
+- **教育内容**：关于预测市场策略的文章
+- **网络研讨会**：定期教育会议和问答
 
-### 📚 **Learning Resources**
-- **Video Tutorials**: Step-by-step guides for all features
-- **Documentation**: Comprehensive user and developer guides
-- **Community Support**: Active Telegram and Discord communities
-- **Educational Content**: Articles about prediction market strategies
-- **Webinars**: Regular educational sessions and Q&A
+### 🌍 **多语言支持**
+YC365 提供多种语言版本，以服务我们的全球用户群：
+- **英语**：主要语言，支持全部功能
+- **简体中文**：完全本地化
+- **繁体中文**：完全繁体中文支持
+- **泰语 (ไทย)**：原生泰语界面
+- **印度尼西亚语 (Bahasa Indonesia)**：全面的印尼语支持
+- **越南语 (Tiếng Việt)**：完全的越南语本地化
 
-### 🌍 **Multi-language Support**
-YC365 is available in multiple languages to serve our global user base:
-- **English**: Primary language with full feature support
-- **Simplified Chinese (简体中文)**: Complete localization
-- **Traditional Chinese (繁體中文)**: Full traditional Chinese support
-- **Thai (ไทย)**: Native Thai language interface
-- **Indonesian (Bahasa Indonesia)**: Comprehensive Indonesian support
-- **Vietnamese (Tiếng Việt)**: Full Vietnamese localization
+## YC365 的未来
 
-## The Future of YC365
+### 🔮 **路线图亮点**
 
-### 🔮 **Roadmap Highlights**
+#### **2024 第一季度：平台增强**
+- **高级订单类型**：止损单、冰山单和条件单
+- **移动应用程序**：原生 iOS 和 Android 应用程序
+- **API 扩展**：增强的第三方集成开发者 API
+- **性能优化**：降低延迟并提高可扩展性
 
-#### **Q1 2024: Platform Enhancement**
-- **Advanced Order Types**: Stop-loss, iceberg, and conditional orders
-- **Mobile Applications**: Native iOS and Android apps
-- **API Expansion**: Enhanced developer APIs for third-party integration
-- **Performance Optimization**: Reduced latency and improved scalability
+#### **2024 第二季度：市场扩展**
+- **新市场类别**：天气、太空探索、科学发现
+- **合成市场**：AI 生成的预测市场
+- **跨链集成**：多区块链支持
+- **机构功能**：面向专业交易者的高级工具
 
-#### **Q2 2024: Market Expansion**
-- **New Market Categories**: Weather, space exploration, scientific discoveries
-- **Synthetic Markets**: AI-generated prediction markets
-- **Cross-chain Integration**: Multi-blockchain support
-- **Institutional Features**: Advanced tools for professional traders
+#### **2024 第三季度：创新功能**
+- **AI 集成**：用于市场分析的机器学习
+- **社交交易**：关注并复制成功的交易者
+- **预测池**：协作预测机制
+- **游戏化**：成就系统和排行榜
 
-#### **Q3 2024: Innovation Features**
-- **AI Integration**: Machine learning for market analysis
-- **Social Trading**: Follow and copy successful traders
-- **Prediction Pools**: Collaborative prediction mechanisms
-- **Gamification**: Achievement systems and leaderboards
+#### **2024 第四季度：生态系统增长**
+- **DeFi 集成**：收益耕作和流动性挖矿
+- **治理代币**：社区治理机制
+- **合作伙伴计划**：与其他 DeFi 协议集成
+- **全球扩张**：区域合作伙伴关系和本地化
 
-#### **Q4 2024: Ecosystem Growth**
-- **DeFi Integration**: Yield farming and liquidity mining
-- **Governance Token**: Community governance mechanisms
-- **Partnership Program**: Integration with other DeFi protocols
-- **Global Expansion**: Regional partnerships and localization
+### 🌟 **长期愿景**
+- **市场领导地位**：成为领先的去中心化预测平台
+- **主流采用**：将预测市场连接到主流用户
+- **创新中心**：开拓新的预测市场机制
+- **全球影响**：为全球更好的决策做出贡献
 
-### 🌟 **Long-term Vision**
-- **Market Leadership**: Become the leading decentralized prediction platform
-- **Mainstream Adoption**: Bridge prediction markets to mainstream users
-- **Innovation Hub**: Pioneer new prediction market mechanisms
-- **Global Impact**: Contribute to better decision-making worldwide
+## 为什么选择 YC365？
 
-## Why Choose YC365?
+### ✅ **对于个人交易者**
+- **低门槛**：轻松入门，只需极少的技术知识
+- **具有成本效益**：业内最低费用之一
+- **多样化市场**：各种各样的交易事件
+- **教育支持**：全面的学习资源
+- **社区**：活跃、支持性的交易社区
 
-### ✅ **For Individual Traders**
-- **Low Barriers**: Easy entry with minimal technical knowledge required
-- **Cost Effective**: Among the lowest fees in the industry
-- **Diverse Markets**: Wide variety of events to trade on
-- **Educational Support**: Comprehensive learning resources
-- **Community**: Active, supportive trading community
+### ✅ **对于机构用户**
+- **专业级**：企业级安全性和可靠性
+- **可扩展基础设施**：支持大批量交易
+- **API 访问**：程序化交易能力
+- **专属支持**：优先客户服务
+- **监管合规**：设计时考虑了机构要求
 
-### ✅ **For Institutional Users**
-- **Professional Grade**: Enterprise-level security and reliability
-- **Scalable Infrastructure**: Support for high-volume trading
-- **API Access**: Programmatic trading capabilities
-- **Dedicated Support**: Priority customer service
-- **Regulatory Compliance**: Designed with institutional requirements in mind
-
-### ✅ **For Developers**
-- **Open Source**: Transparent, auditable smart contracts
-- **Comprehensive APIs**: Full-featured integration capabilities
-- **Documentation**: Extensive technical documentation
-- **Developer Community**: Active developer support community
-- **Innovation Opportunities**: Contribute to cutting-edge DeFi technology
+### ✅ **对于开发者**
+- **开源**：透明、可审计的智能合约
+- **全面的 API**：全功能的集成能力
+- **文档**：广泛的技术文档
+- **开发者社区**：活跃的开发者支持社区
+- **创新机会**：为尖端 DeFi 技术做出贡献
 
 ---
 
-**Ready to experience the future of prediction markets?** Continue to our [How to Deposit](how-to-deposit.md) guide to fund your account and start trading, or learn about [Making Your First Trade](making-your-first-trade.md) to understand the trading process.
+**准备好体验预测市场的未来了吗？** 继续阅读我们的[如何充值](how-to-deposit.md)指南为您的账户注资并开始交易，或了解[进行您的第一笔交易](making-your-first-trade.md)以了解交易流程。
 
-*YC365 represents the next evolution of prediction markets - combining the best of traditional finance with cutting-edge blockchain technology to create a platform that's secure, efficient, and accessible to everyone.* 
+*YC365 代表了预测市场的下一次进化——结合传统金融的最佳实践与尖端区块链技术，创建一个安全、高效且人人可用的平台。*

@@ -1,45 +1,42 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# ข้อกำหนดเบื้องต้นสำหรับการใช้ YC365
 
-# Prerequisites for Using YC365
+## ภาพรวม
 
-## Overview
+ก่อนที่คุณจะเริ่มใช้ YC365 คุณต้องปฏิบัติตามข้อกำหนดบางประการและทำตามขั้นตอนการตั้งค่า คู่มือนี้จะช่วยคุณเตรียมทุกสิ่งที่จำเป็นในการเข้าร่วมตลาดการทำนายผลของ YC365
 
-Before you can start using YC365, you need to meet certain requirements and complete some setup steps. This guide will help you prepare everything you need to participate in YC365's prediction markets.
+## ข้อกำหนดเบื้องต้นที่จำเป็น
 
-## Required Prerequisites
+### 1. ติดตั้งกระเป๋าเงินที่เข้ากันได้
 
-### 1. Install a Compatible Wallet
+YC365 รองรับกระเป๋าเงินที่เข้ากันได้กับ EVM ทั้งหมด คุณต้องติดตั้งหนึ่งในรายการต่อไปนี้:
 
-YC365 supports all EVM-compatible wallets. You need to install one of the following:
+#### ตัวเลือกกระเป๋าเงินยอดนิยม:
+- **MetaMask** - เป็นที่นิยมและใช้กันอย่างแพร่หลายที่สุด
+- **WalletConnect** - รองรับหลายกระเป๋าเงิน
+- **Trust Wallet** - กระเป๋าเงินที่เน้นมือถือ
+- **Binance Wallet** - กระเป๋าเงินอย่างเป็นทางการของ Binance
+- **Coinbase Wallet** - อินเทอร์เฟซที่ใช้งานง่าย
+- **กระเป๋าเงินที่เข้ากันได้กับ EVM ใดๆ**
 
-#### Popular Wallet Options:
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! tip "กระเป๋าเงินที่แนะนำ"
+    MetaMask เป็นตัวเลือกที่ได้รับการสนับสนุนอย่างกว้างขวางที่สุดและเป็นมิตรกับผู้ใช้สำหรับผู้เริ่มต้น
 
-!!! tip "Recommended Wallet"
-    MetaMask is the most widely supported and user-friendly option for beginners.
+#### ขั้นตอนการติดตั้ง:
+1. ไปที่เว็บไซต์อย่างเป็นทางการของกระเป๋าเงินที่คุณเลือก
+2. ดาวน์โหลดและติดตั้งส่วนขยาย/แอปกระเป๋าเงิน
+3. ทำตามคำแนะนำการตั้งค่าของกระเป๋าเงิน
+4. สร้างกระเป๋าเงินใหม่หรือนำเข้ากระเป๋าเงินที่มีอยู่
+5. **สำคัญ**: เก็บ seed phrase/private keys ของคุณไว้อย่างปลอดภัย
 
-#### Installation Steps:
-1. Visit the official website of your chosen wallet
-2. Download and install the wallet extension/app
-3. Follow the wallet's setup instructions
-4. Create a new wallet or import an existing one
-5. **Important**: Safely store your seed phrase/private keys
+### 2. กำหนดค่า BSC Mainnet
 
-### 2. Configure BSC Mainnet
+กระเป๋าเงินของคุณต้องเชื่อมต่อกับเครือข่าย Binance Smart Chain (BSC) เพื่อใช้ YC365
 
-Your wallet must be connected to the Binance Smart Chain (BSC) network to use YC365.
+#### การกำหนดค่าอัตโนมัติ:
+กระเป๋าเงินส่วนใหญ่จะตรวจจับและเพิ่มเครือข่าย BSC โดยอัตโนมัติเมื่อคุณไปที่ dapp.yc365.io
 
-#### Automatic Configuration:
-Most wallets will automatically detect and add BSC network when you visit dapp.yc365.io.
-
-#### Manual Configuration (if needed):
-If BSC network is not available, add it manually with these settings:
+#### การกำหนดค่าด้วยตนเอง (หากจำเป็น):
+หากไม่มีเครือข่าย BSC ให้เพิ่มด้วยตนเองด้วยการตั้งค่าเหล่านี้:
 
 - **Network Name**: BSC Mainnet
 - **RPC URL**: https://bsc-dataseed1.binance.org/
@@ -47,124 +44,124 @@ If BSC network is not available, add it manually with these settings:
 - **Currency Symbol**: BNB
 - **Block Explorer**: https://bscscan.com/
 
-!!! warning "Network Verification"
-    Always verify you're connected to BSC Mainnet before making any transactions.
+!!! warning "การตรวจสอบเครือข่าย"
+    ตรวจสอบเสมอว่าคุณเชื่อมต่อกับ BSC Mainnet ก่อนทำธุรกรรมใดๆ
 
-### 3. Acquire Required Assets
+### 3. รับสินทรัพย์ที่จำเป็น
 
-You need two types of assets to use YC365:
+คุณต้องมีสินทรัพย์สองประเภทเพื่อใช้ YC365:
 
 #### USDT (BEP-20)
-- **Purpose**: Main trading currency for prediction markets
-- **Minimum**: 10 USDT recommended to start
-- **Network**: Must be BEP-20 tokens on BSC network
+- **วัตถุประสงค์**: สกุลเงินหลักสำหรับการซื้อขายในตลาดการทำนายผล
+- **ขั้นต่ำ**: แนะนำ 10 USDT เพื่อเริ่มต้น
+- **เครือข่าย**: ต้องเป็นโทเค็น BEP-20 บนเครือข่าย BSC
 
 #### BNB (Binance Coin)
-- **Purpose**: Gas fees for transactions
-- **Minimum**: 0.01 BNB recommended for multiple transactions
-- **Network**: Native BSC token
+- **วัตถุประสงค์**: ค่าธรรมเนียม gas สำหรับธุรกรรม
+- **ขั้นต่ำ**: แนะนำ 0.01 BNB สำหรับหลายธุรกรรม
+- **เครือข่าย**: โทเค็นดั้งเดิมของ BSC
 
-#### How to Get These Assets:
-1. **From Centralized Exchanges**:
-   - Purchase USDT and BNB on Binance, Coinbase, etc.
-   - Withdraw to BSC network
+#### วิธีการรับสินทรัพย์เหล่านี้:
+1. **จาก Centralized Exchanges**:
+   - ซื้อ USDT และ BNB บน Binance, Coinbase, ฯลฯ
+   - ถอนไปยังเครือข่าย BSC
 
-2. **From DEXs**:
-   - Use PancakeSwap or other BSC DEXs
-   - Swap other tokens for USDT and BNB
+2. **จาก DEXs**:
+   - ใช้ PancakeSwap หรือ BSC DEXs อื่นๆ
+   - แลกเปลี่ยนโทเค็นอื่นเป็น USDT และ BNB
 
-3. **From Other Networks**:
-   - Bridge assets from Ethereum, Polygon, etc.
-   - Use official bridges or third-party services
+3. **จากเครือข่ายอื่น**:
+   - Bridge สินทรัพย์จาก Ethereum, Polygon, ฯลฯ
+   - ใช้ official bridges หรือบริการบุคคลที่สาม
 
-!!! info "Asset Requirements"
-    - USDT is used for trading predictions
-    - BNB is used for transaction gas fees
-    - Both must be on BSC network
+!!! info "ข้อกำหนดสินทรัพย์"
+    - USDT ใช้สำหรับการซื้อขายการทำนาย
+    - BNB ใช้สำหรับค่าธรรมเนียม gas ของธุรกรรม
+    - ทั้งสองต้องอยู่บนเครือข่าย BSC
 
-## Getting Started with YC365
+## เริ่มต้นใช้งานกับ YC365
 
-### Step 1: Complete Prerequisites
-1. ✅ Install compatible wallet
-2. ✅ Configure BSC Mainnet
-3. ✅ Acquire USDT and BNB assets
+### ขั้นตอนที่ 1: ทำข้อกำหนดเบื้องต้นให้เสร็จสมบูรณ์
+1. ✅ ติดตั้งกระเป๋าเงินที่เข้ากันได้
+2. ✅ กำหนดค่า BSC Mainnet
+3. ✅ รับสินทรัพย์ USDT และ BNB
 
-### Step 2: Access the Platform
-1. Visit **dapp.yc365.io**
-2. Connect your wallet
-3. Verify you're on BSC Mainnet
+### ขั้นตอนที่ 2: เข้าถึงแพลตฟอร์ม
+1. ไปที่ **dapp.yc365.io**
+2. เชื่อมต่อกระเป๋าเงินของคุณ
+3. ตรวจสอบว่าคุณอยู่บน BSC Mainnet
 
-### Step 3: Deposit Assets
-1. Click the **"Deposit"** button
-2. Follow the deposit process
-3. Wait for confirmation (5-20 seconds)
-4. Verify assets appear in your vault
+### ขั้นตอนที่ 3: ฝากสินทรัพย์
+1. คลิกปุ่ม **"Deposit"**
+2. ทำตามกระบวนการฝากเงิน
+3. รอการยืนยัน (5-20 วินาที)
+4. ตรวจสอบสินทรัพย์ที่ปรากฏใน vault ของคุณ
 
-### Step 4: Start Trading
-1. Browse available prediction markets
-2. Place your predictions
-3. Monitor your positions
+### ขั้นตอนที่ 4: เริ่มซื้อขาย
+1. เรียกดูตลาดการทำนายผลที่มีอยู่
+2. วางการทำนายของคุณ
+3. ติดตามตำแหน่งของคุณ
 
-## Asset Management
+## การจัดการสินทรัพย์
 
-### Deposits
-- **Process**: Transfer USDT from your wallet to YC365 vault
-- **Purpose**: Fund your trading account
-- **Time**: 5-20 seconds for confirmation
+### การฝากเงิน
+- **กระบวนการ**: โอน USDT จากกระเป๋าเงินของคุณไปยัง YC365 vault
+- **วัตถุประสงค์**: เติมเงินในบัญชีซื้อขายของคุณ
+- **เวลา**: 5-20 วินาทีสำหรับการยืนยัน
 
-### Withdrawals
-- **Process**: Transfer USDT from vault back to your wallet
-- **Purpose**: Cash out your winnings or unused funds
-- **Time**: 5-30 seconds for confirmation
+### การถอนเงิน
+- **กระบวนการ**: โอน USDT จาก vault กลับไปยังกระเป๋าเงินของคุณ
+- **วัตถุประสงค์**: ถอนเงินรางวัลหรือเงินที่ไม่ได้ใช้ของคุณ
+- **เวลา**: 5-30 วินาทีสำหรับการยืนยัน
 
-!!! success "Key Points"
-    - Deposits fund your trading account
-    - Withdrawals return funds to your personal wallet
-    - All transactions require BNB for gas fees
+!!! success "ประเด็นสำคัญ"
+    - การฝากเงินเติมเงินในบัญชีซื้อขายของคุณ
+    - การถอนเงินคืนเงินไปยังกระเป๋าเงินส่วนตัวของคุณ
+    - ธุรกรรมทั้งหมดต้องใช้ BNB สำหรับค่าธรรมเนียม gas
 
-## Security Considerations
+## ข้อพิจารณาด้านความปลอดภัย
 
-### Wallet Security
-- **Never share your private keys or seed phrase**
-- **Use hardware wallets for large amounts**
-- **Enable 2FA where available**
-- **Verify website URLs before connecting**
+### ความปลอดภัยของกระเป๋าเงิน
+- **ห้ามแชร์ private keys หรือ seed phrase ของคุณ**
+- **ใช้ hardware wallets สำหรับจำนวนเงินมาก**
+- **เปิดใช้งาน 2FA ในที่ที่มีให้บริการ**
+- **ตรวจสอบ URL ของเว็บไซต์ก่อนเชื่อมต่อ**
 
-### Transaction Security
-- **Always verify transaction details**
-- **Check gas fees before confirming**
-- **Use trusted networks only**
-- **Keep some BNB for gas fees**
+### ความปลอดภัยของธุรกรรม
+- **ตรวจสอบรายละเอียดธุรกรรมเสมอ**
+- **ตรวจสอบค่าธรรมเนียม gas ก่อนยืนยัน**
+- **ใช้เครือข่ายที่เชื่อถือได้เท่านั้น**
+- **เก็บ BNB ไว้บ้างสำหรับค่าธรรมเนียม gas**
 
-### Platform Security
-- **Only use official dapp.yc365.io**
-- **Verify smart contract addresses**
-- **Report suspicious activity immediately**
+### ความปลอดภัยของแพลตฟอร์ม
+- **ใช้เฉพาะ dapp.yc365.io อย่างเป็นทางการ**
+- **ตรวจสอบที่อยู่ smart contract**
+- **รายงานกิจกรรมที่น่าสงสัยทันที**
 
-## Troubleshooting
+## การแก้ไขปัญหา
 
-### Common Issues
+### ปัญหาทั่วไป
 
-**Q: My wallet won't connect**
-A: Ensure you're using a compatible EVM wallet and have configured BSC Mainnet correctly.
+**Q: กระเป๋าเงินของฉันไม่เชื่อมต่อ**
+A: ตรวจสอบให้แน่ใจว่าคุณใช้กระเป๋าเงิน EVM ที่เข้ากันได้และกำหนดค่า BSC Mainnet อย่างถูกต้อง
 
-**Q: I don't have enough BNB for gas fees**
-A: Purchase BNB from exchanges or swap other tokens for BNB on DEXs.
+**Q: ฉันมี BNB ไม่พอสำหรับค่าธรรมเนียม gas**
+A: ซื้อ BNB จากกระดานแลกเปลี่ยนหรือแลกเปลี่ยนโทเค็นอื่นเป็น BNB บน DEXs
 
-**Q: My USDT is on the wrong network**
-A: Use a bridge service to transfer USDT to BSC network, or purchase USDT directly on BSC.
+**Q: USDT ของฉันอยู่ผิดเครือข่าย**
+A: ใช้บริการ bridge เพื่อโอน USDT ไปยังเครือข่าย BSC หรือซื้อ USDT โดยตรงบน BSC
 
-**Q: The platform doesn't recognize my assets**
-A: Make sure your assets are on BSC network and you're connected to the correct wallet.
+**Q: แพลตฟอร์มไม่รู้จักสินทรัพย์ของฉัน**
+A: ตรวจสอบให้แน่ใจว่าสินทรัพย์ของคุณอยู่บนเครือข่าย BSC และคุณเชื่อมต่อกับกระเป๋าเงินที่ถูกต้อง
 
-## Support
+## การสนับสนุน
 
-If you encounter issues with prerequisites, please contact support with:
-- Your wallet type and version
-- Network configuration details
-- Screenshot of the issue
-- Description of the problem
+หากคุณพบปัญหาเกี่ยวกับข้อกำหนดเบื้องต้น โปรดติดต่อฝ่ายสนับสนุนพร้อม:
+- ประเภทและเวอร์ชันของกระเป๋าเงินของคุณ
+- รายละเอียดการกำหนดค่าเครือข่าย
+- ภาพหน้าจอของปัญหา
+- คำอธิบายปัญหา
 
 ---
 
-*For the latest information and updates, please check our official announcements.* 
+*สำหรับข้อมูลและการอัปเดตล่าสุด โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*

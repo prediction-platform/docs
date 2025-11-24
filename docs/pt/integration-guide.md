@@ -1,58 +1,55 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Guia de Integração (Integration Guide)
 
-# Integration Guide
+## Visão Geral
 
-## Overview
+Este guia de integração abrangente ajudará os desenvolvedores a integrar perfeitamente a funcionalidade do mercado de previsão da YC365 em seus aplicativos. Esteja você construindo um bot de negociação, criando uma interface personalizada ou desenvolvendo um aplicativo DeFi, este guia fornece instruções passo a passo e melhores práticas.
 
-This comprehensive integration guide will help developers seamlessly integrate YC365's prediction market functionality into their applications. Whether you're building a trading bot, creating a custom interface, or developing a DeFi application, this guide provides step-by-step instructions and best practices.
+## Início Rápido
 
-## Quick Start
+### 🚀 **Integração em 5 Minutos**
 
-### 🚀 **5-Minute Integration**
+#### **Passo 1: Obter Acesso à API**
+1. **Inscrever-se**: Crie sua conta YC365
+2. **Gerar Chave API**: Acesse o painel do desenvolvedor
+3. **Escolher Ambiente**: Comece com sandbox para testes
+4. **Baixar SDK**: Instale o SDK da sua linguagem preferida
 
-#### **Step 1: Get API Access**
-1. **Sign Up**: Create your YC365 account
-2. **Generate API Key**: Access the developer dashboard
-3. **Choose Environment**: Start with sandbox for testing
-4. **Download SDK**: Install your preferred language SDK
-
-#### **Step 2: Basic Integration**
+#### **Passo 2: Configuração Básica**
 ```javascript
-// Install SDK
+// Instalar SDK
 npm install yc365-sdk
 
-// Basic setup
+// Configuração básica
 const YC365 = require('yc365-sdk');
 const client = new YC365({
-  apiKey: 'YOUR_API_KEY',
+  apiKey: 'SUA_CHAVE_API',
   environment: 'sandbox'
 });
 
-// Get markets
+// Obter mercados
 const markets = await client.markets.getAll();
 console.log('Available markets:', markets.data);
 ```
 
-#### **Step 3: Test Trading**
+#### **Passo 3: Testar Negociação**
 ```javascript
-// Place a test order
+// Colocar uma ordem de teste
 const order = await client.orders.create({
   market_id: 'market_001',
   side: 'buy',
   outcome: 'yes',
-  amount: 100, // Test with small amount
+  amount: 100, // Teste com pequena quantidade
   price: 0.5
 });
 
 console.log('Order placed:', order.data);
 ```
 
-## Integration Patterns
+## Padrões de Integração
 
-### 📱 **Mobile App Integration**
+### 📱 **Integração de Aplicativo Móvel**
 
-#### **React Native Example**
+#### **Exemplo React Native**
 ```javascript
 import { YC365Client } from 'yc365-sdk-react-native';
 
@@ -60,7 +57,7 @@ class TradingApp extends Component {
   constructor(props) {
     super(props);
     this.client = new YC365Client({
-      apiKey: 'YOUR_API_KEY',
+      apiKey: 'SUA_CHAVE_API',
       environment: 'production'
     });
   }
@@ -91,12 +88,12 @@ class TradingApp extends Component {
 }
 ```
 
-#### **iOS Swift Example**
+#### **Exemplo iOS Swift**
 ```swift
 import YC365SDK
 
 class TradingViewController: UIViewController {
-    private let client = YC365Client(apiKey: "YOUR_API_KEY", environment: .production)
+    private let client = YC365Client(apiKey: "SUA_CHAVE_API", environment: .production)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -137,9 +134,9 @@ class TradingViewController: UIViewController {
 }
 ```
 
-### 🌐 **Web Application Integration**
+### 🌐 **Integração de Aplicativo Web**
 
-#### **React.js Example**
+#### **Exemplo React.js**
 ```jsx
 import React, { useState, useEffect } from 'react';
 import { YC365Client } from 'yc365-sdk';
@@ -252,7 +249,7 @@ const TradingInterface = () => {
 export default TradingInterface;
 ```
 
-#### **Vue.js Example**
+#### **Exemplo Vue.js**
 ```vue
 <template>
   <div class="trading-app">
@@ -399,9 +396,9 @@ export default {
 </script>
 ```
 
-### 🤖 **Trading Bot Integration**
+### 🤖 **Integração de Bot de Negociação**
 
-#### **Python Trading Bot**
+#### **Bot de Negociação Python**
 ```python
 import asyncio
 import logging
@@ -524,7 +521,7 @@ class TradingBot:
 # Usage
 async def main():
     bot = TradingBot(
-        api_key='YOUR_API_KEY',
+        api_key='SUA_CHAVE_API',
         environment='sandbox'
     )
     
@@ -534,7 +531,7 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
-#### **Node.js Trading Bot**
+#### **Bot de Negociação Node.js**
 ```javascript
 const YC365 = require('yc365-sdk');
 const WebSocket = require('ws');
@@ -729,7 +726,7 @@ class TradingBot {
 }
 
 // Usage
-const bot = new TradingBot('YOUR_API_KEY', 'sandbox');
+const bot = new TradingBot('SUA_CHAVE_API', 'sandbox');
 bot.start().catch(console.error);
 
 // Graceful shutdown
@@ -739,11 +736,11 @@ process.on('SIGINT', () => {
 });
 ```
 
-## DeFi Integration
+## Integração DeFi
 
-### 🔗 **Smart Contract Integration**
+### 🔗 **Integração de Contrato Inteligente**
 
-#### **Solidity Example**
+#### **Exemplo Solidity**
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -841,9 +838,9 @@ contract YC365Integration is ReentrancyGuard, Ownable {
 }
 ```
 
-### 🌉 **Cross-Chain Integration**
+### 🌉 **Integração Cross-Chain**
 
-#### **Multi-Chain Support**
+#### **Suporte Multi-Chain**
 ```javascript
 class CrossChainYC365 {
   constructor(config) {
@@ -907,11 +904,11 @@ class CrossChainYC365 {
 }
 ```
 
-## Testing and Debugging
+## Teste e Depuração
 
-### 🧪 **Testing Strategies**
+### 🧪 **Estratégias de Teste**
 
-#### **Unit Testing**
+#### **Teste Unitário**
 ```javascript
 // Jest test example
 const YC365 = require('yc365-sdk');
@@ -961,7 +958,7 @@ describe('YC365 Integration Tests', () => {
 });
 ```
 
-#### **Integration Testing**
+#### **Teste de Integração**
 ```python
 import pytest
 import asyncio
@@ -1016,9 +1013,9 @@ async def test_error_handling(client):
     assert exc_info.value.code == 'NOT_FOUND'
 ```
 
-### 🐛 **Debugging Tools**
+### 🐛 **Ferramentas de Depuração**
 
-#### **API Debugging**
+#### **Depuração de API**
 ```javascript
 class YC365Debugger {
   constructor(client) {
@@ -1075,7 +1072,7 @@ class YC365Debugger {
 }
 
 // Usage
-const client = new YC365({ apiKey: 'your-key', environment: 'sandbox' });
+const client = new YC365({ apiKey: 'sua-chave', environment: 'sandbox' });
 const debugger = new YC365Debugger(client);
 debugger.enableDebugMode();
 
@@ -1084,11 +1081,11 @@ const markets = await client.markets.getAll();
 console.log('Debug logs:', debugger.getLogs());
 ```
 
-## Performance Optimization
+## Otimização de Desempenho
 
-### ⚡ **Best Practices**
+### ⚡ **Melhores Práticas**
 
-#### **Caching Strategy**
+#### **Estratégia de Cache**
 ```javascript
 class YC365Cache {
   constructor(ttl = 60000) { // 1 minute default TTL
@@ -1160,7 +1157,7 @@ class OptimizedYC365Client {
 }
 ```
 
-#### **Connection Pooling**
+#### **Pooling de Conexão**
 ```javascript
 const http = require('http');
 const https = require('https');
@@ -1190,17 +1187,17 @@ class YC365ConnectionPool {
 // Use in client configuration
 const pool = new YC365ConnectionPool();
 const client = new YC365({
-  apiKey: 'your-key',
+  apiKey: 'sua-chave',
   environment: 'production',
   httpAgent: pool.getAgent('https://api.yc365.io')
 });
 ```
 
-## Security Considerations
+## Considerações de Segurança
 
-### 🔒 **Security Best Practices**
+### 🔒 **Melhores Práticas de Segurança**
 
-#### **API Key Management**
+#### **Gestão de Chave API**
 ```javascript
 class SecureYC365Client {
   constructor(config) {
@@ -1230,7 +1227,7 @@ class SecureYC365Client {
 }
 ```
 
-#### **Request Signing**
+#### **Assinatura de Solicitação**
 ```javascript
 const crypto = require('crypto');
 
@@ -1268,38 +1265,38 @@ class SignedYC365Client {
 }
 ```
 
-## Support and Resources
+## Suporte e Recursos
 
-### 📚 **Additional Resources**
+### 📚 **Recursos Adicionais**
 
-#### **Documentation Links**
-- **API Reference**: Complete endpoint documentation
-- **SDK Documentation**: Language-specific guides
-- **Code Examples**: Sample implementations
-- **Tutorials**: Step-by-step guides
+#### **Links de Documentação**
+- **Referência da API**: Documentação completa do endpoint
+- **Documentação do SDK**: Guias específicos de linguagem
+- **Exemplos de Código**: Implementações de amostra
+- **Tutoriais**: Guias passo a passo
 
-#### **Community Support**
-- **Developer Forum**: Community discussions
-- **GitHub**: Open source examples and SDKs
-- **Discord**: Real-time developer chat
-- **Stack Overflow**: Tagged questions
+#### **Suporte da Comunidade**
+- **Fórum de Desenvolvedores**: Discussões da comunidade
+- **GitHub**: Exemplos e SDKs de código aberto
+- **Discord**: Chat de desenvolvedores em tempo real
+- **Stack Overflow**: Perguntas marcadas
 
-#### **Enterprise Support**
-- **Dedicated Support**: Priority support for enterprise clients
-- **Custom Integration**: Tailored integration assistance
-- **Training**: Team training and workshops
-- **Consulting**: Architecture and strategy consulting
+#### **Suporte Empresarial**
+- **Suporte Dedicado**: Suporte prioritário para clientes corporativos
+- **Integração Personalizada**: Assistência de integração sob medida
+- **Treinamento**: Treinamento de equipe e workshops
+- **Consultoria**: Consultoria de arquitetura e estratégia
 
-### 📞 **Contact Information**
+### 📞 **Informações de Contato**
 
-For integration support, please contact:
-- **Email**: integration-support@yc365.io
-- **Live Chat**: Available 24/7 on platform
+Para suporte de integração, entre em contato:
+- **E-mail**: integration-support@yc365.io
+- **Chat Ao Vivo**: Disponível 24/7 na plataforma
 - **Telegram**: @YC365DevSupport
-- **Discord**: YC365 Developer Server
+- **Discord**: Servidor de Desenvolvedores YC365
 
 ---
 
-**Ready to integrate YC365 into your application?** Our comprehensive integration guide and SDK support make it easy to get started with prediction market functionality.
+**Pronto para integrar a YC365 em seu aplicativo?** Nosso guia de integração abrangente e suporte a SDK facilitam o início com a funcionalidade do mercado de previsão.
 
-*Join thousands of developers who are already building innovative applications on the YC365 platform.*
+*Junte-se a milhares de desenvolvedores que já estão construindo aplicativos inovadores na plataforma YC365.*

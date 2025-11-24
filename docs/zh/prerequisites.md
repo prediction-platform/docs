@@ -1,170 +1,167 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 使用 YC365 的先决条件
 
-# Prerequisites for Using YC365
+## 概述
 
-## Overview
+在开始使用 YC365 之前，您需要满足某些要求并完成一些设置步骤。本指南将帮助您准备参与 YC365 预测市场所需的一切。
 
-Before you can start using YC365, you need to meet certain requirements and complete some setup steps. This guide will help you prepare everything you need to participate in YC365's prediction markets.
+## 必要先决条件
 
-## Required Prerequisites
+### 1. 安装兼容的钱包
 
-### 1. Install a Compatible Wallet
+YC365 支持所有兼容 EVM 的钱包。您需要安装以下之一：
 
-YC365 supports all EVM-compatible wallets. You need to install one of the following:
+#### 热门钱包选项：
+- **MetaMask** - 最受欢迎且使用最广泛
+- **WalletConnect** - 多钱包支持
+- **Trust Wallet** - 移动优先钱包
+- **Binance Wallet** - 官方币安钱包
+- **Coinbase Wallet** - 用户友好的界面
+- **任何兼容 EVM 的钱包**
 
-#### Popular Wallet Options:
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! tip "推荐钱包"
+    MetaMask 是初学者最广泛支持且用户友好的选项。
 
-!!! tip "Recommended Wallet"
-    MetaMask is the most widely supported and user-friendly option for beginners.
+#### 安装步骤：
+1. 访问您选择的钱包的官方网站
+2. 下载并安装钱包扩展/应用程序
+3. 按照钱包的设置说明进行操作
+4. 创建新钱包或导入现有钱包
+5. **重要**：安全存储您的助记词/私钥
 
-#### Installation Steps:
-1. Visit the official website of your chosen wallet
-2. Download and install the wallet extension/app
-3. Follow the wallet's setup instructions
-4. Create a new wallet or import an existing one
-5. **Important**: Safely store your seed phrase/private keys
+### 2. 配置 BSC 主网
 
-### 2. Configure BSC Mainnet
+您的钱包必须连接到币安智能链 (BSC) 网络才能使用 YC365。
 
-Your wallet must be connected to the Binance Smart Chain (BSC) network to use YC365.
+#### 自动配置：
+当您访问 dapp.yc365.io 时，大多数钱包会自动检测并添加 BSC 网络。
 
-#### Automatic Configuration:
-Most wallets will automatically detect and add BSC network when you visit dapp.yc365.io.
+#### 手动配置（如果需要）：
+如果 BSC 网络不可用，请使用以下设置手动添加：
 
-#### Manual Configuration (if needed):
-If BSC network is not available, add it manually with these settings:
+- **网络名称**：BSC Mainnet
+- **RPC URL**：https://bsc-dataseed1.binance.org/
+- **链 ID**：56
+- **货币符号**：BNB
+- **区块浏览器**：https://bscscan.com/
 
-- **Network Name**: BSC Mainnet
-- **RPC URL**: https://bsc-dataseed1.binance.org/
-- **Chain ID**: 56
-- **Currency Symbol**: BNB
-- **Block Explorer**: https://bscscan.com/
+!!! warning "网络验证"
+    在进行任何交易之前，请务必验证您已连接到 BSC 主网。
 
-!!! warning "Network Verification"
-    Always verify you're connected to BSC Mainnet before making any transactions.
+### 3. 获取所需资产
 
-### 3. Acquire Required Assets
-
-You need two types of assets to use YC365:
+您需要两种类型的资产来使用 YC365：
 
 #### USDT (BEP-20)
-- **Purpose**: Main trading currency for prediction markets
-- **Minimum**: 10 USDT recommended to start
-- **Network**: Must be BEP-20 tokens on BSC network
+- **用途**：预测市场的主要交易货币
+- **最低**：建议 10 USDT 起步
+- **网络**：必须是 BSC 网络上的 BEP-20 代币
 
-#### BNB (Binance Coin)
-- **Purpose**: Gas fees for transactions
-- **Minimum**: 0.01 BNB recommended for multiple transactions
-- **Network**: Native BSC token
+#### BNB (币安币)
+- **用途**：交易的 Gas 费用
+- **最低**：建议 0.01 BNB 用于多次交易
+- **网络**：原生 BSC 代币
 
-#### How to Get These Assets:
-1. **From Centralized Exchanges**:
-   - Purchase USDT and BNB on Binance, Coinbase, etc.
-   - Withdraw to BSC network
+#### 如何获取这些资产：
+1. **从中心化交易所**：
+   - 在币安、Coinbase 等购买 USDT 和 BNB
+   - 提现到 BSC 网络
 
-2. **From DEXs**:
-   - Use PancakeSwap or other BSC DEXs
-   - Swap other tokens for USDT and BNB
+2. **从去中心化交易所 (DEX)**：
+   - 使用 PancakeSwap 或其他 BSC DEX
+   - 将其他代币兑换为 USDT 和 BNB
 
-3. **From Other Networks**:
-   - Bridge assets from Ethereum, Polygon, etc.
-   - Use official bridges or third-party services
+3. **从其他网络**：
+   - 从以太坊、Polygon 等跨链资产
+   - 使用官方桥接或第三方服务
 
-!!! info "Asset Requirements"
-    - USDT is used for trading predictions
-    - BNB is used for transaction gas fees
-    - Both must be on BSC network
+!!! info "资产要求"
+    - USDT 用于交易预测
+    - BNB 用于交易 Gas 费用
+    - 两者都必须在 BSC 网络上
 
-## Getting Started with YC365
+## 开始使用 YC365
 
-### Step 1: Complete Prerequisites
-1. ✅ Install compatible wallet
-2. ✅ Configure BSC Mainnet
-3. ✅ Acquire USDT and BNB assets
+### 第 1 步：完成先决条件
+1. ✅ 安装兼容钱包
+2. ✅ 配置 BSC 主网
+3. ✅ 获取 USDT 和 BNB 资产
 
-### Step 2: Access the Platform
-1. Visit **dapp.yc365.io**
-2. Connect your wallet
-3. Verify you're on BSC Mainnet
+### 第 2 步：访问平台
+1. 访问 **dapp.yc365.io**
+2. 连接您的钱包
+3. 验证您在 BSC 主网上
 
-### Step 3: Deposit Assets
-1. Click the **"Deposit"** button
-2. Follow the deposit process
-3. Wait for confirmation (5-20 seconds)
-4. Verify assets appear in your vault
+### 第 3 步：充值资产
+1. 点击 **"充值"** 按钮
+2. 遵循充值流程
+3. 等待确认（5-20 秒）
+4. 验证资产出现在您的金库中
 
-### Step 4: Start Trading
-1. Browse available prediction markets
-2. Place your predictions
-3. Monitor your positions
+### 第 4 步：开始交易
+1. 浏览可用的预测市场
+2. 进行预测
+3. 监控您的头寸
 
-## Asset Management
+## 资产管理
 
-### Deposits
-- **Process**: Transfer USDT from your wallet to YC365 vault
-- **Purpose**: Fund your trading account
-- **Time**: 5-20 seconds for confirmation
+### 充值
+- **流程**：将 USDT 从您的钱包转移到 YC365 金库
+- **用途**：为您的交易账户注资
+- **时间**：5-20 秒确认
 
-### Withdrawals
-- **Process**: Transfer USDT from vault back to your wallet
-- **Purpose**: Cash out your winnings or unused funds
-- **Time**: 5-30 seconds for confirmation
+### 提现
+- **流程**：将 USDT 从金库转回您的钱包
+- **用途**：提取您的奖金或未使用的资金
+- **时间**：5-30 秒确认
 
-!!! success "Key Points"
-    - Deposits fund your trading account
-    - Withdrawals return funds to your personal wallet
-    - All transactions require BNB for gas fees
+!!! success "关键点"
+    - 充值为您的交易账户注资
+    - 提现将资金返还到您的个人钱包
+    - 所有交易都需要 BNB 作为 Gas 费用
 
-## Security Considerations
+## 安全注意事项
 
-### Wallet Security
-- **Never share your private keys or seed phrase**
-- **Use hardware wallets for large amounts**
-- **Enable 2FA where available**
-- **Verify website URLs before connecting**
+### 钱包安全
+- **切勿分享您的私钥或助记词**
+- **大额资金使用硬件钱包**
+- **在可用时启用 2FA**
+- **连接前验证网站 URL**
 
-### Transaction Security
-- **Always verify transaction details**
-- **Check gas fees before confirming**
-- **Use trusted networks only**
-- **Keep some BNB for gas fees**
+### 交易安全
+- **始终验证交易详情**
+- **确认前检查 Gas 费用**
+- **仅使用受信任的网络**
+- **保留一些 BNB 用于 Gas 费用**
 
-### Platform Security
-- **Only use official dapp.yc365.io**
-- **Verify smart contract addresses**
-- **Report suspicious activity immediately**
+### 平台安全
+- **仅使用官方 dapp.yc365.io**
+- **验证智能合约地址**
+- **立即报告可疑活动**
 
-## Troubleshooting
+## 故障排除
 
-### Common Issues
+### 常见问题
 
-**Q: My wallet won't connect**
-A: Ensure you're using a compatible EVM wallet and have configured BSC Mainnet correctly.
+**问：我的钱包无法连接**
+答：确保您使用的是兼容的 EVM 钱包并已正确配置 BSC 主网。
 
-**Q: I don't have enough BNB for gas fees**
-A: Purchase BNB from exchanges or swap other tokens for BNB on DEXs.
+**问：我没有足够的 BNB 支付 Gas 费**
+答：从交易所购买 BNB 或在 DEX 上将其他代币兑换为 BNB。
 
-**Q: My USDT is on the wrong network**
-A: Use a bridge service to transfer USDT to BSC network, or purchase USDT directly on BSC.
+**问：我的 USDT 在错误的网络上**
+答：使用桥接服务将 USDT 转移到 BSC 网络，或直接在 BSC 上购买 USDT。
 
-**Q: The platform doesn't recognize my assets**
-A: Make sure your assets are on BSC network and you're connected to the correct wallet.
+**问：平台无法识别我的资产**
+答：确保您的资产在 BSC 网络上，并且您已连接到正确的钱包。
 
-## Support
+## 支持
 
-If you encounter issues with prerequisites, please contact support with:
-- Your wallet type and version
-- Network configuration details
-- Screenshot of the issue
-- Description of the problem
+如果您遇到先决条件问题，请联系支持并提供：
+- 您的钱包类型和版本
+- 网络配置详情
+- 问题截图
+- 问题描述
 
 ---
 
-*For the latest information and updates, please check our official announcements.* 
+*有关最新信息和更新，请查看我们的官方公告。*

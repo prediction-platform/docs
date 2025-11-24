@@ -1,170 +1,167 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Pré-requisitos para Usar o YC365
 
-# Prerequisites for Using YC365
+## Visão Geral
 
-## Overview
+Antes de começar a usar o YC365, você precisa atender a certos requisitos e concluir algumas etapas de configuração. Este guia o ajudará a preparar tudo o que você precisa para participar dos mercados de previsão do YC365.
 
-Before you can start using YC365, you need to meet certain requirements and complete some setup steps. This guide will help you prepare everything you need to participate in YC365's prediction markets.
+## Pré-requisitos Necessários
 
-## Required Prerequisites
+### 1. Instale uma Carteira Compatível
 
-### 1. Install a Compatible Wallet
+O YC365 suporta todas as carteiras compatíveis com EVM. Você precisa instalar uma das seguintes:
 
-YC365 supports all EVM-compatible wallets. You need to install one of the following:
+#### Opções Populares de Carteira:
+- **MetaMask** - Mais popular e amplamente utilizada
+- **WalletConnect** - Suporte multi-carteira
+- **Trust Wallet** - Carteira mobile-first
+- **Binance Wallet** - Carteira oficial da Binance
+- **Coinbase Wallet** - Interface amigável
+- **Qualquer carteira compatível com EVM**
 
-#### Popular Wallet Options:
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! tip "Carteira Recomendada"
+    MetaMask é a opção mais amplamente suportada e amigável para iniciantes.
 
-!!! tip "Recommended Wallet"
-    MetaMask is the most widely supported and user-friendly option for beginners.
+#### Passos de Instalação:
+1. Visite o site oficial da carteira escolhida
+2. Baixe e instale a extensão/aplicativo da carteira
+3. Siga as instruções de configuração da carteira
+4. Crie uma nova carteira ou importe uma existente
+5. **Importante**: Guarde com segurança sua frase semente/chaves privadas
 
-#### Installation Steps:
-1. Visit the official website of your chosen wallet
-2. Download and install the wallet extension/app
-3. Follow the wallet's setup instructions
-4. Create a new wallet or import an existing one
-5. **Important**: Safely store your seed phrase/private keys
+### 2. Configure a BSC Mainnet
 
-### 2. Configure BSC Mainnet
+Sua carteira deve estar conectada à rede Binance Smart Chain (BSC) para usar o YC365.
 
-Your wallet must be connected to the Binance Smart Chain (BSC) network to use YC365.
+#### Configuração Automática:
+A maioria das carteiras detectará e adicionará automaticamente a rede BSC quando você visitar dapp.yc365.io.
 
-#### Automatic Configuration:
-Most wallets will automatically detect and add BSC network when you visit dapp.yc365.io.
+#### Configuração Manual (se necessário):
+Se a rede BSC não estiver disponível, adicione-a manualmente com estas configurações:
 
-#### Manual Configuration (if needed):
-If BSC network is not available, add it manually with these settings:
-
-- **Network Name**: BSC Mainnet
-- **RPC URL**: https://bsc-dataseed1.binance.org/
+- **Nome da Rede**: BSC Mainnet
+- **URL RPC**: https://bsc-dataseed1.binance.org/
 - **Chain ID**: 56
-- **Currency Symbol**: BNB
+- **Símbolo da Moeda**: BNB
 - **Block Explorer**: https://bscscan.com/
 
-!!! warning "Network Verification"
-    Always verify you're connected to BSC Mainnet before making any transactions.
+!!! warning "Verificação de Rede"
+    Sempre verifique se você está conectado à BSC Mainnet antes de fazer qualquer transação.
 
-### 3. Acquire Required Assets
+### 3. Adquira os Ativos Necessários
 
-You need two types of assets to use YC365:
+Você precisa de dois tipos de ativos para usar o YC365:
 
 #### USDT (BEP-20)
-- **Purpose**: Main trading currency for prediction markets
-- **Minimum**: 10 USDT recommended to start
-- **Network**: Must be BEP-20 tokens on BSC network
+- **Objetivo**: Moeda principal de negociação para mercados de previsão
+- **Mínimo**: 10 USDT recomendados para começar
+- **Rede**: Devem ser tokens BEP-20 na rede BSC
 
 #### BNB (Binance Coin)
-- **Purpose**: Gas fees for transactions
-- **Minimum**: 0.01 BNB recommended for multiple transactions
-- **Network**: Native BSC token
+- **Objetivo**: Taxas de gás para transações
+- **Mínimo**: 0,01 BNB recomendado para múltiplas transações
+- **Rede**: Token nativo da BSC
 
-#### How to Get These Assets:
-1. **From Centralized Exchanges**:
-   - Purchase USDT and BNB on Binance, Coinbase, etc.
-   - Withdraw to BSC network
+#### Como Obter Esses Ativos:
+1. **De Exchanges Centralizadas**:
+   - Compre USDT e BNB na Binance, Coinbase, etc.
+   - Saque para a rede BSC
 
-2. **From DEXs**:
-   - Use PancakeSwap or other BSC DEXs
-   - Swap other tokens for USDT and BNB
+2. **De DEXs**:
+   - Use PancakeSwap ou outras DEXs da BSC
+   - Troque outros tokens por USDT e BNB
 
-3. **From Other Networks**:
-   - Bridge assets from Ethereum, Polygon, etc.
-   - Use official bridges or third-party services
+3. **De Outras Redes**:
+   - Faça a ponte de ativos da Ethereum, Polygon, etc.
+   - Use pontes oficiais ou serviços de terceiros
 
-!!! info "Asset Requirements"
-    - USDT is used for trading predictions
-    - BNB is used for transaction gas fees
-    - Both must be on BSC network
+!!! info "Requisitos de Ativos"
+    - USDT é usado para negociar previsões
+    - BNB é usado para taxas de gás de transação
+    - Ambos devem estar na rede BSC
 
-## Getting Started with YC365
+## Começando com o YC365
 
-### Step 1: Complete Prerequisites
-1. ✅ Install compatible wallet
+### Passo 1: Complete os Pré-requisitos
+1. ✅ Instale carteira compatível
 2. ✅ Configure BSC Mainnet
-3. ✅ Acquire USDT and BNB assets
+3. ✅ Adquira ativos USDT e BNB
 
-### Step 2: Access the Platform
-1. Visit **dapp.yc365.io**
-2. Connect your wallet
-3. Verify you're on BSC Mainnet
+### Passo 2: Acesse a Plataforma
+1. Visite **dapp.yc365.io**
+2. Conecte sua carteira
+3. Verifique se você está na BSC Mainnet
 
-### Step 3: Deposit Assets
-1. Click the **"Deposit"** button
-2. Follow the deposit process
-3. Wait for confirmation (5-20 seconds)
-4. Verify assets appear in your vault
+### Passo 3: Deposite Ativos
+1. Clique no botão **"Deposit"**
+2. Siga o processo de depósito
+3. Aguarde a confirmação (5-20 segundos)
+4. Verifique se os ativos aparecem no seu cofre
 
-### Step 4: Start Trading
-1. Browse available prediction markets
-2. Place your predictions
-3. Monitor your positions
+### Passo 4: Comece a Negociar
+1. Navegue pelos mercados de previsão disponíveis
+2. Faça suas previsões
+3. Monitore suas posições
 
-## Asset Management
+## Gestão de Ativos
 
-### Deposits
-- **Process**: Transfer USDT from your wallet to YC365 vault
-- **Purpose**: Fund your trading account
-- **Time**: 5-20 seconds for confirmation
+### Depósitos
+- **Processo**: Transfira USDT da sua carteira para o cofre YC365
+- **Objetivo**: Financiar sua conta de negociação
+- **Tempo**: 5-20 segundos para confirmação
 
-### Withdrawals
-- **Process**: Transfer USDT from vault back to your wallet
-- **Purpose**: Cash out your winnings or unused funds
-- **Time**: 5-30 seconds for confirmation
+### Saques
+- **Processo**: Transfira USDT do cofre de volta para sua carteira
+- **Objetivo**: Sacar seus ganhos ou fundos não utilizados
+- **Tempo**: 5-30 segundos para confirmação
 
-!!! success "Key Points"
-    - Deposits fund your trading account
-    - Withdrawals return funds to your personal wallet
-    - All transactions require BNB for gas fees
+!!! success "Pontos Chave"
+    - Depósitos financiam sua conta de negociação
+    - Saques retornam fundos para sua carteira pessoal
+    - Todas as transações requerem BNB para taxas de gás
 
-## Security Considerations
+## Considerações de Segurança
 
-### Wallet Security
-- **Never share your private keys or seed phrase**
-- **Use hardware wallets for large amounts**
-- **Enable 2FA where available**
-- **Verify website URLs before connecting**
+### Segurança da Carteira
+- **Nunca compartilhe suas chaves privadas ou frase semente**
+- **Use carteiras de hardware para grandes quantias**
+- **Ative 2FA onde disponível**
+- **Verifique URLs de sites antes de conectar**
 
-### Transaction Security
-- **Always verify transaction details**
-- **Check gas fees before confirming**
-- **Use trusted networks only**
-- **Keep some BNB for gas fees**
+### Segurança da Transação
+- **Sempre verifique detalhes da transação**
+- **Verifique taxas de gás antes de confirmar**
+- **Use apenas redes confiáveis**
+- **Mantenha algum BNB para taxas de gás**
 
-### Platform Security
-- **Only use official dapp.yc365.io**
-- **Verify smart contract addresses**
-- **Report suspicious activity immediately**
+### Segurança da Plataforma
+- **Use apenas dapp.yc365.io oficial**
+- **Verifique endereços de contrato inteligente**
+- **Relate atividades suspeitas imediatamente**
 
-## Troubleshooting
+## Solução de Problemas
 
-### Common Issues
+### Problemas Comuns
 
-**Q: My wallet won't connect**
-A: Ensure you're using a compatible EVM wallet and have configured BSC Mainnet correctly.
+**P: Minha carteira não conecta**
+R: Certifique-se de estar usando uma carteira EVM compatível e ter configurado a BSC Mainnet corretamente.
 
-**Q: I don't have enough BNB for gas fees**
-A: Purchase BNB from exchanges or swap other tokens for BNB on DEXs.
+**P: Não tenho BNB suficiente para taxas de gás**
+R: Compre BNB de exchanges ou troque outros tokens por BNB em DEXs.
 
-**Q: My USDT is on the wrong network**
-A: Use a bridge service to transfer USDT to BSC network, or purchase USDT directly on BSC.
+**P: Meu USDT está na rede errada**
+R: Use um serviço de ponte para transferir USDT para a rede BSC, ou compre USDT diretamente na BSC.
 
-**Q: The platform doesn't recognize my assets**
-A: Make sure your assets are on BSC network and you're connected to the correct wallet.
+**P: A plataforma não reconhece meus ativos**
+R: Certifique-se de que seus ativos estejam na rede BSC e que você esteja conectado à carteira correta.
 
-## Support
+## Suporte
 
-If you encounter issues with prerequisites, please contact support with:
-- Your wallet type and version
-- Network configuration details
-- Screenshot of the issue
-- Description of the problem
+Se você encontrar problemas com pré-requisitos, entre em contato com o suporte com:
+- Seu tipo e versão de carteira
+- Detalhes de configuração de rede
+- Captura de tela do problema
+- Descrição do problema
 
 ---
 
-*For the latest information and updates, please check our official announcements.* 
+*Para as informações mais recentes e atualizações, verifique nossos anúncios oficiais.*

@@ -1,58 +1,55 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# คู่มือการรวมระบบ (Integration Guide)
 
-# Integration Guide
+## ภาพรวม
 
-## Overview
+คู่มือการรวมระบบที่ครอบคลุมนี้จะช่วยให้นักพัฒนาสามารถรวมฟังก์ชันการทำงานของตลาดการทำนายผลของ YC365 เข้ากับแอปพลิเคชันของตนได้อย่างราบรื่น ไม่ว่าคุณกำลังสร้างบอทซื้อขาย สร้างอินเทอร์เฟซที่กำหนดเอง หรือพัฒนาแอปพลิเคชัน DeFi คู่มือนี้จะให้คำแนะนำทีละขั้นตอนและแนวทางปฏิบัติที่ดีที่สุด
 
-This comprehensive integration guide will help developers seamlessly integrate YC365's prediction market functionality into their applications. Whether you're building a trading bot, creating a custom interface, or developing a DeFi application, this guide provides step-by-step instructions and best practices.
+## เริ่มต้นด่วน
 
-## Quick Start
+### 🚀 **การรวมระบบใน 5 นาที**
 
-### 🚀 **5-Minute Integration**
+#### **ขั้นตอนที่ 1: รับการเข้าถึง API**
+1. **ลงทะเบียน**: สร้างบัญชี YC365 ของคุณ
+2. **สร้างคีย์ API**: เข้าถึงแดชบอร์ดนักพัฒนา
+3. **เลือกสภาพแวดล้อม**: เริ่มต้นด้วย Sandbox สำหรับการทดสอบ
+4. **ดาวน์โหลด SDK**: ติดตั้ง SDK ภาษาที่คุณต้องการ
 
-#### **Step 1: Get API Access**
-1. **Sign Up**: Create your YC365 account
-2. **Generate API Key**: Access the developer dashboard
-3. **Choose Environment**: Start with sandbox for testing
-4. **Download SDK**: Install your preferred language SDK
-
-#### **Step 2: Basic Integration**
+#### **ขั้นตอนที่ 2: การตั้งค่าพื้นฐาน**
 ```javascript
-// Install SDK
+// ติดตั้ง SDK
 npm install yc365-sdk
 
-// Basic setup
+// การตั้งค่าพื้นฐาน
 const YC365 = require('yc365-sdk');
 const client = new YC365({
   apiKey: 'YOUR_API_KEY',
   environment: 'sandbox'
 });
 
-// Get markets
+// รับตลาด
 const markets = await client.markets.getAll();
 console.log('Available markets:', markets.data);
 ```
 
-#### **Step 3: Test Trading**
+#### **ขั้นตอนที่ 3: ทดสอบการซื้อขาย**
 ```javascript
-// Place a test order
+// วางคำสั่งทดสอบ
 const order = await client.orders.create({
   market_id: 'market_001',
   side: 'buy',
   outcome: 'yes',
-  amount: 100, // Test with small amount
+  amount: 100, // ทดสอบด้วยจำนวนเล็กน้อย
   price: 0.5
 });
 
 console.log('Order placed:', order.data);
 ```
 
-## Integration Patterns
+## รูปแบบการรวมระบบ
 
-### 📱 **Mobile App Integration**
+### 📱 **การรวมแอปมือถือ**
 
-#### **React Native Example**
+#### **ตัวอย่าง React Native**
 ```javascript
 import { YC365Client } from 'yc365-sdk-react-native';
 
@@ -91,7 +88,7 @@ class TradingApp extends Component {
 }
 ```
 
-#### **iOS Swift Example**
+#### **ตัวอย่าง iOS Swift**
 ```swift
 import YC365SDK
 
@@ -137,9 +134,9 @@ class TradingViewController: UIViewController {
 }
 ```
 
-### 🌐 **Web Application Integration**
+### 🌐 **การรวมเว็บแอปพลิเคชัน**
 
-#### **React.js Example**
+#### **ตัวอย่าง React.js**
 ```jsx
 import React, { useState, useEffect } from 'react';
 import { YC365Client } from 'yc365-sdk';
@@ -252,7 +249,7 @@ const TradingInterface = () => {
 export default TradingInterface;
 ```
 
-#### **Vue.js Example**
+#### **ตัวอย่าง Vue.js**
 ```vue
 <template>
   <div class="trading-app">
@@ -399,9 +396,9 @@ export default {
 </script>
 ```
 
-### 🤖 **Trading Bot Integration**
+### 🤖 **การรวมบอทซื้อขาย**
 
-#### **Python Trading Bot**
+#### **บอทซื้อขาย Python**
 ```python
 import asyncio
 import logging
@@ -534,7 +531,7 @@ if __name__ == '__main__':
     asyncio.run(main())
 ```
 
-#### **Node.js Trading Bot**
+#### **บอทซื้อขาย Node.js**
 ```javascript
 const YC365 = require('yc365-sdk');
 const WebSocket = require('ws');
@@ -739,11 +736,11 @@ process.on('SIGINT', () => {
 });
 ```
 
-## DeFi Integration
+## การรวม DeFi
 
-### 🔗 **Smart Contract Integration**
+### 🔗 **การรวม Smart Contract**
 
-#### **Solidity Example**
+#### **ตัวอย่าง Solidity**
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
@@ -841,9 +838,9 @@ contract YC365Integration is ReentrancyGuard, Ownable {
 }
 ```
 
-### 🌉 **Cross-Chain Integration**
+### 🌉 **การรวมข้ามเชน (Cross-Chain)**
 
-#### **Multi-Chain Support**
+#### **การรองรับหลายเชน**
 ```javascript
 class CrossChainYC365 {
   constructor(config) {
@@ -907,9 +904,9 @@ class CrossChainYC365 {
 }
 ```
 
-## Testing and Debugging
+## การทดสอบและการดีบัก
 
-### 🧪 **Testing Strategies**
+### 🧪 **กลยุทธ์การทดสอบ**
 
 #### **Unit Testing**
 ```javascript
@@ -1016,7 +1013,7 @@ async def test_error_handling(client):
     assert exc_info.value.code == 'NOT_FOUND'
 ```
 
-### 🐛 **Debugging Tools**
+### 🐛 **เครื่องมือดีบัก**
 
 #### **API Debugging**
 ```javascript
@@ -1084,11 +1081,11 @@ const markets = await client.markets.getAll();
 console.log('Debug logs:', debugger.getLogs());
 ```
 
-## Performance Optimization
+## การเพิ่มประสิทธิภาพ
 
-### ⚡ **Best Practices**
+### ⚡ **แนวทางปฏิบัติที่ดีที่สุด**
 
-#### **Caching Strategy**
+#### **กลยุทธ์การแคช**
 ```javascript
 class YC365Cache {
   constructor(ttl = 60000) { // 1 minute default TTL
@@ -1196,11 +1193,11 @@ const client = new YC365({
 });
 ```
 
-## Security Considerations
+## ข้อควรพิจารณาด้านความปลอดภัย
 
-### 🔒 **Security Best Practices**
+### 🔒 **แนวทางปฏิบัติที่ดีที่สุดด้านความปลอดภัย**
 
-#### **API Key Management**
+#### **การจัดการคีย์ API**
 ```javascript
 class SecureYC365Client {
   constructor(config) {
@@ -1230,7 +1227,7 @@ class SecureYC365Client {
 }
 ```
 
-#### **Request Signing**
+#### **การลงนามคำขอ**
 ```javascript
 const crypto = require('crypto');
 
@@ -1268,38 +1265,38 @@ class SignedYC365Client {
 }
 ```
 
-## Support and Resources
+## การสนับสนุนและทรัพยากร
 
-### 📚 **Additional Resources**
+### 📚 **ทรัพยากรเพิ่มเติม**
 
-#### **Documentation Links**
-- **API Reference**: Complete endpoint documentation
-- **SDK Documentation**: Language-specific guides
-- **Code Examples**: Sample implementations
-- **Tutorials**: Step-by-step guides
+#### **ลิงก์เอกสาร**
+- **อ้างอิง API**: เอกสารจุดสิ้นสุดที่สมบูรณ์
+- **เอกสาร SDK**: คู่มือเฉพาะภาษา
+- **ตัวอย่างโค้ด**: ตัวอย่างการใช้งาน
+- **บทช่วยสอน**: คู่มือทีละขั้นตอน
 
-#### **Community Support**
-- **Developer Forum**: Community discussions
-- **GitHub**: Open source examples and SDKs
-- **Discord**: Real-time developer chat
-- **Stack Overflow**: Tagged questions
+#### **การสนับสนุนชุมชน**
+- **ฟอรัมนักพัฒนา**: การอภิปรายของชุมชน
+- **GitHub**: ตัวอย่างโอเพ่นซอร์สและ SDK
+- **Discord**: แชทนักพัฒนาแบบเรียลไทม์
+- **Stack Overflow**: คำถามที่ติดแท็ก
 
-#### **Enterprise Support**
-- **Dedicated Support**: Priority support for enterprise clients
-- **Custom Integration**: Tailored integration assistance
-- **Training**: Team training and workshops
-- **Consulting**: Architecture and strategy consulting
+#### **การสนับสนุนระดับองค์กร**
+- **การสนับสนุนเฉพาะ**: การสนับสนุนลำดับความสำคัญสำหรับลูกค้าระดับองค์กร
+- **การรวมที่กำหนดเอง**: ความช่วยเหลือในการรวมที่ปรับให้เหมาะสม
+- **การฝึกอบรม**: การฝึกอบรมทีมและเวิร์กช็อป
+- **การให้คำปรึกษา**: การให้คำปรึกษาด้านสถาปัตยกรรมและกลยุทธ์
 
-### 📞 **Contact Information**
+### 📞 **ข้อมูลการติดต่อ**
 
-For integration support, please contact:
-- **Email**: integration-support@yc365.io
-- **Live Chat**: Available 24/7 on platform
+สำหรับการสนับสนุนการรวมระบบ โปรดติดต่อ:
+- **อีเมล**: integration-support@yc365.io
+- **แชทสด**: ให้บริการ 24/7 บนแพลตฟอร์ม
 - **Telegram**: @YC365DevSupport
 - **Discord**: YC365 Developer Server
 
 ---
 
-**Ready to integrate YC365 into your application?** Our comprehensive integration guide and SDK support make it easy to get started with prediction market functionality.
+**พร้อมที่จะรวม YC365 เข้ากับแอปพลิเคชันของคุณแล้วหรือยัง?** คู่มือการรวมระบบที่ครอบคลุมและการรองรับ SDK ของเราทำให้การเริ่มต้นใช้งานฟังก์ชันการทำงานของตลาดการทำนายผลเป็นเรื่องง่าย
 
-*Join thousands of developers who are already building innovative applications on the YC365 platform.*
+*เข้าร่วมกับนักพัฒนาหลายพันคนที่กำลังสร้างแอปพลิเคชันนวัตกรรมบนแพลตฟอร์ม YC365*

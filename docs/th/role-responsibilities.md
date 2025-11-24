@@ -1,319 +1,316 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
-
-# Role Responsibilities
-
-## Overview
-
-YC365 platform operates with a well-defined role-based access control system to ensure proper security, data management, and operational efficiency. Each role has specific permissions and responsibilities within the platform ecosystem.
-
-## Role Hierarchy
-
-### 1. Super Administrator (超级管理员)
-
-#### Primary Responsibilities:
-- **Platform Configuration**: Set platform-wide parameters and configurations
-- **System Management**: Manage core system settings and security
-- **User Management**: Oversee all user roles and permissions
-- **Financial Control**: Manage platform revenue and fee structures
-
-#### Specific Duties:
-
-##### Fee Management (费率管理):
-- **Trading Fee Configuration**: Set platform trading fees (currently 1.5/1000)
-- **Fee Structure Updates**: Modify fee structures as needed
-- **Revenue Distribution**: Configure revenue distribution mechanisms
-- **Fee Optimization**: Optimize fees for platform sustainability
-
-##### Address Management (地址管理):
-- **Fee Collection Address**: Set addresses for fee collection
-- **Asset Management Addresses**: Configure asset management addresses
-- **Treasury Addresses**: Set up treasury and reserve addresses
-- **Emergency Addresses**: Configure emergency fund addresses
-
-##### System Configuration (系统配置):
-- **Contract Addresses**: Manage smart contract addresses
-- **Oracle Configuration**: Set up oracle system addresses
-- **Network Parameters**: Configure BSC network parameters
-- **Security Settings**: Manage platform security configurations
-
-#### Access Level:
-- **Full System Access**: Complete access to all platform features
-- **Configuration Rights**: Ability to modify system parameters
-- **User Management**: Can create, modify, and delete user roles
-- **Financial Control**: Complete control over platform finances
-
-### 2. Data Administrator (数据管理员)
-
-#### Primary Responsibilities:
-- **Data Management**: Maintain all platform data and information
-- **Event Administration**: Create and manage events and conditions
-- **Content Management**: Manage platform content and metadata
-- **Data Quality**: Ensure data accuracy and consistency
-
-#### Specific Duties:
-
-##### Event Management (事件管理):
-- **Event Creation**: Create new events in the system
-- **Event Modification**: Update existing event information
-- **Event Deletion**: Remove obsolete or incorrect events
-- **Event Validation**: Verify event data accuracy
-
-##### Condition Management (条件管理):
-- **Condition Creation**: Define specific conditions for events
-- **Condition Updates**: Modify condition parameters
-- **Condition Validation**: Ensure condition logic is correct
-- **Condition Documentation**: Document condition rules and criteria
-
-##### Tag Management (标签管理):
-- **Tag Creation**: Create new tags for categorization
-- **Tag Assignment**: Assign tags to events and conditions
-- **Tag Organization**: Organize tags into hierarchies
-- **Tag Maintenance**: Maintain tag consistency and relevance
-
-##### Event Type Management (事件类型管理):
-- **Type Creation**: Create new event categories
-- **Type Organization**: Organize events by type
-- **Type Validation**: Ensure event type accuracy
-- **Type Documentation**: Document event type definitions
-
-#### Data Operations:
-- **Batch Import**: Import large datasets efficiently
-- **Data Export**: Export data for analysis and backup
-- **Data Validation**: Ensure data integrity and accuracy
-- **Data Cleanup**: Remove duplicate or obsolete data
-
-#### Access Level:
-- **Data Management Access**: Full access to data management features
-- **Content Creation**: Ability to create and modify content
-- **No Financial Access**: Cannot access financial or system settings
-- **Limited User Management**: Can manage data-related user permissions
-
-### 3. Asset Administrator (资产管理员)
-
-#### Primary Responsibilities:
-- **Blockchain Operations**: Execute all blockchain transactions
-- **Smart Contract Management**: Deploy and manage smart contracts
-- **Liquidity Management**: Manage platform liquidity
-- **Settlement Operations**: Handle event settlements
-
-#### Specific Duties:
-
-##### Publishing Operations (发布操作):
-- **Event Publishing**: Deploy events to blockchain
-- **Condition Publishing**: Publish conditions to smart contracts
-- **Contract Deployment**: Deploy new smart contracts
-- **Market Launch**: Enable trading for new events
-
-##### Result Management (结果管理):
-- **Result Upload**: Upload event results to oracle systems
-- **Result Verification**: Verify result accuracy and reliability
-- **Result Publishing**: Publish verified results to blockchain
-- **Dispute Resolution**: Handle result disputes and challenges
-
-##### Settlement Operations (结算操作):
-- **Settlement Execution**: Execute automatic settlements
-- **Profit Distribution**: Distribute profits to winning users
-- **Fee Collection**: Collect platform fees
-- **Asset Reconciliation**: Reconcile platform assets
-
-##### Liquidity Management (流动性管理):
-- **Liquidity Addition**: Add liquidity to markets when needed
-- **Liquidity Recovery**: Recover liquidity when appropriate
-- **Market Monitoring**: Monitor liquidity levels
-- **Liquidity Optimization**: Optimize liquidity for efficiency
-
-##### Viewing Operations (查看操作):
-- **Asset Monitoring**: Monitor platform assets and balances
-- **Transaction Tracking**: Track all blockchain transactions
-- **Performance Analysis**: Analyze platform performance metrics
-- **Risk Assessment**: Assess platform risks and exposure
-
-#### Technical Operations:
-- **Smart Contract Interaction**: Interact with all smart contracts
-- **Oracle Integration**: Manage oracle system integration
-- **Transaction Management**: Manage all blockchain transactions
-- **Gas Fee Management**: Optimize gas fee usage
-
-#### Access Level:
-- **Blockchain Access**: Full access to blockchain operations
-- **Contract Management**: Can deploy and manage smart contracts
-- **Asset Control**: Control over platform assets
-- **No User Management**: Cannot manage user accounts
-
-### 4. Regular User (普通用户)
-
-#### Primary Responsibilities:
-- **Event Participation**: Participate in prediction markets
-- **Asset Management**: Manage personal assets and positions
-- **Trading Activities**: Execute trades and manage positions
-- **Portfolio Management**: Monitor and optimize portfolio
-
-#### Specific Duties:
-
-##### Event Participation (事件参与):
-- **Event Browsing**: Browse available events and conditions
-- **Market Analysis**: Analyze odds and market conditions
-- **Event Selection**: Choose events to participate in
-- **Participation Strategy**: Develop participation strategies
-
-##### Asset Management (资产管理):
-- **Deposit Operations**: Deposit assets to platform vault
-- **Withdrawal Operations**: Withdraw assets from platform
-- **Balance Monitoring**: Monitor account balances
-- **Transaction History**: Review transaction history
-
-##### Trading Activities (交易活动):
-- **Order Placement**: Place buy/sell orders
-- **Position Management**: Manage trading positions
-- **Risk Management**: Implement risk management strategies
-- **Portfolio Optimization**: Optimize portfolio performance
-
-##### Portfolio Management (投资组合管理):
-- **Position Tracking**: Track all active positions
-- **Profit/Loss Analysis**: Analyze P&L performance
-- **Performance Review**: Review trading performance
-- **Strategy Adjustment**: Adjust trading strategies
-
-#### User Experience:
-- **Platform Navigation**: Navigate platform features
-- **Information Access**: Access market information and data
-- **Support Utilization**: Use platform support features
-- **Community Participation**: Participate in platform community
-
-#### Access Level:
-- **User Features**: Access to all user-facing features
-- **Personal Data**: Access to personal data and history
-- **No Administrative Access**: Cannot access administrative features
-- **Limited System Access**: Limited access to system features
-
-## Permission Matrix
-
-### Access Control Levels
-
-#### Super Administrator:
-- ✅ **System Configuration**: Full access to system settings
-- ✅ **User Management**: Create and manage all user roles
-- ✅ **Financial Control**: Complete financial management
-- ✅ **Data Management**: Full data management access
-- ✅ **Asset Management**: Complete asset management
-- ✅ **Blockchain Operations**: Full blockchain access
-
-#### Data Administrator:
-- ❌ **System Configuration**: No system configuration access
-- ⚠️ **User Management**: Limited user management
-- ❌ **Financial Control**: No financial control
-- ✅ **Data Management**: Full data management access
-- ❌ **Asset Management**: No asset management
-- ❌ **Blockchain Operations**: No blockchain operations
-
-#### Asset Administrator:
-- ❌ **System Configuration**: No system configuration access
-- ❌ **User Management**: No user management
-- ❌ **Financial Control**: No financial control
-- ❌ **Data Management**: No data management
-- ✅ **Asset Management**: Full asset management
-- ✅ **Blockchain Operations**: Full blockchain access
-
-#### Regular User:
-- ❌ **System Configuration**: No system configuration access
-- ❌ **User Management**: No user management
-- ❌ **Financial Control**: No financial control
-- ❌ **Data Management**: No data management
-- ❌ **Asset Management**: No asset management
-- ⚠️ **Blockchain Operations**: Limited blockchain access (personal transactions only)
-
-## Security Considerations
-
-### Role-based Security
-
-#### Authentication:
-- **Multi-factor Authentication**: Required for administrative roles
-- **Session Management**: Secure session handling
-- **Access Logging**: Complete access logging for all roles
-- **Audit Trails**: Comprehensive audit trails
-
-#### Authorization:
-- **Principle of Least Privilege**: Users have minimum required permissions
-- **Role Separation**: Clear separation of duties
-- **Permission Inheritance**: Proper permission inheritance
-- **Access Reviews**: Regular access reviews and updates
-
-### Data Security
-
-#### Data Protection:
-- **Encryption**: All sensitive data encrypted
-- **Access Control**: Strict access control for sensitive data
-- **Data Backup**: Regular data backup and recovery
-- **Data Retention**: Proper data retention policies
-
-#### Privacy Protection:
-- **User Privacy**: Protect user personal information
-- **Data Minimization**: Collect only necessary data
-- **Consent Management**: Proper consent management
-- **GDPR Compliance**: Compliance with privacy regulations
-
-## Operational Procedures
-
-### Role Assignment
-
-#### Assignment Process:
-1. **Role Definition**: Define specific role requirements
-2. **Candidate Selection**: Select qualified candidates
-3. **Training**: Provide role-specific training
-4. **Access Granting**: Grant appropriate access permissions
-5. **Monitoring**: Monitor role performance and compliance
-
-#### Training Requirements:
-- **System Training**: Platform-specific training
-- **Security Training**: Security awareness training
-- **Compliance Training**: Regulatory compliance training
-- **Ongoing Education**: Continuous education and updates
-
-### Role Monitoring
-
-#### Performance Monitoring:
-- **Activity Tracking**: Track role activities and performance
-- **Compliance Monitoring**: Monitor compliance with policies
-- **Security Monitoring**: Monitor security-related activities
-- **Quality Assurance**: Ensure role quality and effectiveness
-
-#### Review Process:
-- **Regular Reviews**: Regular role performance reviews
-- **Access Reviews**: Periodic access permission reviews
-- **Security Audits**: Regular security audits
-- **Compliance Checks**: Regular compliance checks
-
-## Future Enhancements
-
-### Role Evolution
-
-#### Advanced Roles:
-- **AI Administrator**: Manage AI and ML systems
-- **Analytics Administrator**: Manage analytics and reporting
-- **Community Manager**: Manage community features
-- **Content Curator**: Manage content and media
-
-#### Specialized Roles:
-- **Risk Manager**: Specialized risk management role
-- **Compliance Officer**: Regulatory compliance role
-- **Technical Support**: Technical support role
-- **Customer Success**: Customer success role
-
-### Technology Integration
-
-#### Automation:
-- **Automated Role Assignment**: AI-powered role assignment
-- **Smart Permissions**: Intelligent permission management
-- **Automated Monitoring**: Automated role monitoring
-- **Predictive Analytics**: Predictive role analytics
-
-#### Enhanced Security:
-- **Biometric Authentication**: Advanced authentication methods
-- **Behavioral Analysis**: User behavior analysis
-- **Threat Detection**: Advanced threat detection
-- **Zero Trust**: Zero trust security model
+# ความรับผิดชอบตามบทบาท (Role Responsibilities)
+
+## ภาพรวม
+
+แพลตฟอร์ม YC365 ดำเนินการด้วยระบบควบคุมการเข้าถึงตามบทบาท (Role-based access control) ที่กำหนดไว้อย่างชัดเจน เพื่อให้มั่นใจถึงความปลอดภัย การจัดการข้อมูล และประสิทธิภาพการดำเนินงานที่เหมาะสม แต่ละบทบาทมีสิทธิ์และความรับผิดชอบเฉพาะภายในระบบนิเวศของแพลตฟอร์ม
+
+## ลำดับขั้นของบทบาท
+
+### 1. ผู้ดูแลระบบสูงสุด (Super Administrator)
+
+#### ความรับผิดชอบหลัก:
+- **การกำหนดค่าแพลตฟอร์ม**: กำหนดพารามิเตอร์และการกำหนดค่าทั่วทั้งแพลตฟอร์ม
+- **การจัดการระบบ**: จัดการการตั้งค่าระบบหลักและความปลอดภัย
+- **การจัดการผู้ใช้**: ดูแลบทบาทและสิทธิ์ของผู้ใช้ทั้งหมด
+- **การควบคุมทางการเงิน**: จัดการรายได้และโครงสร้างค่าธรรมเนียมของแพลตฟอร์ม
+
+#### หน้าที่เฉพาะ:
+
+##### การจัดการค่าธรรมเนียม (Fee Management):
+- **การกำหนดค่าค่าธรรมเนียมการซื้อขาย**: กำหนดค่าธรรมเนียมการซื้อขายของแพลตฟอร์ม (ปัจจุบัน 1.5/1000)
+- **การอัปเดตโครงสร้างค่าธรรมเนียม**: แก้ไขโครงสร้างค่าธรรมเนียมตามความจำเป็น
+- **การกระจายรายได้**: กำหนดค่ากลไกการกระจายรายได้
+- **การเพิ่มประสิทธิภาพค่าธรรมเนียม**: ปรับปรุงค่าธรรมเนียมเพื่อความยั่งยืนของแพลตฟอร์ม
+
+##### การจัดการที่อยู่ (Address Management):
+- **ที่อยู่สำหรับเก็บค่าธรรมเนียม**: กำหนดที่อยู่สำหรับการเก็บค่าธรรมเนียม
+- **ที่อยู่การจัดการสินทรัพย์**: กำหนดค่าที่อยู่การจัดการสินทรัพย์
+- **ที่อยู่คลัง**: ตั้งค่าที่อยู่คลังและทุนสำรอง
+- **ที่อยู่ฉุกเฉิน**: กำหนดค่าที่อยู่กองทุนฉุกเฉิน
+
+##### การกำหนดค่าระบบ (System Configuration):
+- **ที่อยู่สัญญา**: จัดการที่อยู่ Smart Contract
+- **การกำหนดค่า Oracle**: ตั้งค่าที่อยู่ระบบ Oracle
+- **พารามิเตอร์เครือข่าย**: กำหนดค่าพารามิเตอร์เครือข่าย BSC
+- **การตั้งค่าความปลอดภัย**: จัดการการกำหนดค่าความปลอดภัยของแพลตฟอร์ม
+
+#### ระดับการเข้าถึง:
+- **การเข้าถึงระบบเต็มรูปแบบ**: เข้าถึงคุณสมบัติทั้งหมดของแพลตฟอร์มได้อย่างสมบูรณ์
+- **สิทธิ์การกำหนดค่า**: ความสามารถในการแก้ไขพารามิเตอร์ระบบ
+- **การจัดการผู้ใช้**: สามารถสร้าง แก้ไข และลบบทบาทผู้ใช้ได้
+- **การควบคุมทางการเงิน**: ควบคุมการเงินของแพลตฟอร์มได้อย่างสมบูรณ์
+
+### 2. ผู้ดูแลข้อมูล (Data Administrator)
+
+#### ความรับผิดชอบหลัก:
+- **การจัดการข้อมูล**: ดูแลรักษาข้อมูลและสารสนเทศทั้งหมดของแพลตฟอร์ม
+- **การบริหารเหตุการณ์**: สร้างและจัดการเหตุการณ์และเงื่อนไข
+- **การจัดการเนื้อหา**: จัดการเนื้อหาและ Metadata ของแพลตฟอร์ม
+- **คุณภาพข้อมูล**: รับรองความถูกต้องและความสอดคล้องของข้อมูล
+
+#### หน้าที่เฉพาะ:
+
+##### การจัดการเหตุการณ์ (Event Management):
+- **การสร้างเหตุการณ์**: สร้างเหตุการณ์ใหม่ในระบบ
+- **การแก้ไขเหตุการณ์**: อัปเดตข้อมูลเหตุการณ์ที่มีอยู่
+- **การลบเหตุการณ์**: ลบเหตุการณ์ที่ล้าสมัยหรือไม่ถูกต้อง
+- **การตรวจสอบเหตุการณ์**: ตรวจสอบความถูกต้องของข้อมูลเหตุการณ์
+
+##### การจัดการเงื่อนไข (Condition Management):
+- **การสร้างเงื่อนไข**: กำหนดเงื่อนไขเฉพาะสำหรับเหตุการณ์
+- **การอัปเดตเงื่อนไข**: แก้ไขพารามิเตอร์เงื่อนไข
+- **การตรวจสอบเงื่อนไข**: รับรองว่าตรรกะของเงื่อนไขถูกต้อง
+- **เอกสารเงื่อนไข**: จัดทำเอกสารกฎและเกณฑ์ของเงื่อนไข
+
+##### การจัดการแท็ก (Tag Management):
+- **การสร้างแท็ก**: สร้างแท็กใหม่สำหรับการจัดหมวดหมู่
+- **การกำหนดแท็ก**: กำหนดแท็กให้กับเหตุการณ์และเงื่อนไข
+- **การจัดระเบียบแท็ก**: จัดระเบียบแท็กเป็นลำดับชั้น
+- **การบำรุงรักษาแท็ก**: ดูแลรักษาความสอดคล้องและความเกี่ยวข้องของแท็ก
+
+##### การจัดการประเภทเหตุการณ์ (Event Type Management):
+- **การสร้างประเภท**: สร้างหมวดหมู่เหตุการณ์ใหม่
+- **การจัดระเบียบประเภท**: จัดระเบียบเหตุการณ์ตามประเภท
+- **การตรวจสอบประเภท**: รับรองความถูกต้องของประเภทเหตุการณ์
+- **เอกสารประเภท**: จัดทำเอกสารคำจำกัดความประเภทเหตุการณ์
+
+#### การดำเนินงานข้อมูล:
+- **การนำเข้าเป็นชุด**: นำเข้าชุดข้อมูลขนาดใหญ่อย่างมีประสิทธิภาพ
+- **การส่งออกข้อมูล**: ส่งออกข้อมูลเพื่อการวิเคราะห์และสำรองข้อมูล
+- **การตรวจสอบข้อมูล**: รับรองความสมบูรณ์และความถูกต้องของข้อมูล
+- **การล้างข้อมูล**: ลบข้อมูลที่ซ้ำซ้อนหรือล้าสมัย
+
+#### ระดับการเข้าถึง:
+- **การเข้าถึงการจัดการข้อมูล**: เข้าถึงคุณสมบัติการจัดการข้อมูลได้อย่างสมบูรณ์
+- **การสร้างเนื้อหา**: ความสามารถในการสร้างและแก้ไขเนื้อหา
+- **ไม่มีการเข้าถึงทางการเงิน**: ไม่สามารถเข้าถึงการตั้งค่าทางการเงินหรือระบบ
+- **การจัดการผู้ใช้ที่จำกัด**: สามารถจัดการสิทธิ์ผู้ใช้ที่เกี่ยวข้องกับข้อมูล
+
+### 3. ผู้ดูแลสินทรัพย์ (Asset Administrator)
+
+#### ความรับผิดชอบหลัก:
+- **การดำเนินการบล็อกเชน**: ดำเนินการธุรกรรมบล็อกเชนทั้งหมด
+- **การจัดการ Smart Contract**: ปรับใช้และจัดการ Smart Contract
+- **การจัดการสภาพคล่อง**: จัดการสภาพคล่องของแพลตฟอร์ม
+- **การดำเนินการชำระบัญชี**: จัดการการชำระบัญชีเหตุการณ์
+
+#### หน้าที่เฉพาะ:
+
+##### การดำเนินการเผยแพร่ (Publishing Operations):
+- **การเผยแพร่เหตุการณ์**: ปรับใช้เหตุการณ์บนบล็อกเชน
+- **การเผยแพร่เงื่อนไข**: เผยแพร่เงื่อนไขไปยัง Smart Contract
+- **การปรับใช้สัญญา**: ปรับใช้ Smart Contract ใหม่
+- **การเปิดตลาด**: เปิดให้ซื้อขายสำหรับเหตุการณ์ใหม่
+
+##### การจัดการผลลัพธ์ (Result Management):
+- **การอัปโหลดผลลัพธ์**: อัปโหลดผลลัพธ์เหตุการณ์ไปยังระบบ Oracle
+- **การตรวจสอบผลลัพธ์**: ตรวจสอบความถูกต้องและความน่าเชื่อถือของผลลัพธ์
+- **การเผยแพร่ผลลัพธ์**: เผยแพร่ผลลัพธ์ที่ตรวจสอบแล้วไปยังบล็อกเชน
+- **การแก้ไขข้อพิพาท**: จัดการข้อพิพาทและการคัดค้านผลลัพธ์
+
+##### การดำเนินการชำระบัญชี (Settlement Operations):
+- **การดำเนินการชำระบัญชี**: ดำเนินการชำระบัญชีอัตโนมัติ
+- **การกระจายผลกำไร**: กระจายผลกำไรให้กับผู้ใช้ที่ชนะ
+- **การเก็บค่าธรรมเนียม**: เก็บค่าธรรมเนียมแพลตฟอร์ม
+- **การกระทบยอดสินทรัพย์**: กระทบยอดสินทรัพย์ของแพลตฟอร์ม
+
+##### การจัดการสภาพคล่อง (Liquidity Management):
+- **การเพิ่มสภาพคล่อง**: เพิ่มสภาพคล่องให้กับตลาดเมื่อจำเป็น
+- **การกู้คืนสภาพคล่อง**: กู้คืนสภาพคล่องเมื่อเหมาะสม
+- **การตรวจสอบตลาด**: ตรวจสอบระดับสภาพคล่อง
+- **การเพิ่มประสิทธิภาพสภาพคล่อง**: ปรับปรุงสภาพคล่องเพื่อประสิทธิภาพ
+
+##### การดำเนินการดูข้อมูล (Viewing Operations):
+- **การตรวจสอบสินทรัพย์**: ตรวจสอบสินทรัพย์และยอดคงเหลือของแพลตฟอร์ม
+- **การติดตามธุรกรรม**: ติดตามธุรกรรมบล็อกเชนทั้งหมด
+- **การวิเคราะห์ประสิทธิภาพ**: วิเคราะห์ตัวชี้วัดประสิทธิภาพของแพลตฟอร์ม
+- **การประเมินความเสี่ยง**: ประเมินความเสี่ยงและการเปิดรับความเสี่ยงของแพลตฟอร์ม
+
+#### การดำเนินงานทางเทคนิค:
+- **การโต้ตอบกับ Smart Contract**: โต้ตอบกับ Smart Contract ทั้งหมด
+- **การรวม Oracle**: จัดการการรวมระบบ Oracle
+- **การจัดการธุรกรรม**: จัดการธุรกรรมบล็อกเชนทั้งหมด
+- **การจัดการค่า Gas**: เพิ่มประสิทธิภาพการใช้ค่า Gas
+
+#### ระดับการเข้าถึง:
+- **การเข้าถึงบล็อกเชน**: เข้าถึงการดำเนินการบล็อกเชนได้อย่างสมบูรณ์
+- **การจัดการสัญญา**: สามารถปรับใช้และจัดการ Smart Contract
+- **การควบคุมสินทรัพย์**: ควบคุมสินทรัพย์ของแพลตฟอร์ม
+- **ไม่มีการจัดการผู้ใช้**: ไม่สามารถจัดการบัญชีผู้ใช้
+
+### 4. ผู้ใช้ทั่วไป (Regular User)
+
+#### ความรับผิดชอบหลัก:
+- **การเข้าร่วมเหตุการณ์**: เข้าร่วมในตลาดการทำนายผล
+- **การจัดการสินทรัพย์**: จัดการสินทรัพย์และสถานะส่วนบุคคล
+- **กิจกรรมการซื้อขาย**: ดำเนินการซื้อขายและจัดการสถานะ
+- **การจัดการพอร์ตโฟลิโอ**: ตรวจสอบและปรับปรุงพอร์ตโฟลิโอ
+
+#### หน้าที่เฉพาะ:
+
+##### การเข้าร่วมเหตุการณ์ (Event Participation):
+- **การเรียกดูเหตุการณ์**: เรียกดูเหตุการณ์และเงื่อนไขที่มีอยู่
+- **การวิเคราะห์ตลาด**: วิเคราะห์อัตราต่อรองและสภาวะตลาด
+- **การเลือกเหตุการณ์**: เลือกเหตุการณ์ที่จะเข้าร่วม
+- **กลยุทธ์การเข้าร่วม**: พัฒนากลยุทธ์การเข้าร่วม
+
+##### การจัดการสินทรัพย์ (Asset Management):
+- **การดำเนินการฝากเงิน**: ฝากสินทรัพย์เข้าสู่ Vault ของแพลตฟอร์ม
+- **การดำเนินการถอนเงิน**: ถอนสินทรัพย์ออกจากแพลตฟอร์ม
+- **การตรวจสอบยอดคงเหลือ**: ตรวจสอบยอดคงเหลือในบัญชี
+- **ประวัติธุรกรรม**: ตรวจสอบประวัติธุรกรรม
+
+##### กิจกรรมการซื้อขาย (Trading Activities):
+- **การวางคำสั่ง**: วางคำสั่งซื้อ/ขาย
+- **การจัดการสถานะ**: จัดการสถานะการซื้อขาย
+- **การบริหารความเสี่ยง**: ดำเนินการตามกลยุทธ์การบริหารความเสี่ยง
+- **การเพิ่มประสิทธิภาพพอร์ตโฟลิโอ**: ปรับปรุงผลการดำเนินงานของพอร์ตโฟลิโอ
+
+##### การจัดการพอร์ตโฟลิโอ (Portfolio Management):
+- **การติดตามสถานะ**: ติดตามสถานะที่ใช้งานอยู่ทั้งหมด
+- **การวิเคราะห์กำไร/ขาดทุน**: วิเคราะห์ผลการดำเนินงาน P&L
+- **การทบทวนผลการดำเนินงาน**: ทบทวนผลการดำเนินงานการซื้อขาย
+- **การปรับกลยุทธ์**: ปรับกลยุทธ์การซื้อขาย
+
+#### ประสบการณ์ผู้ใช้:
+- **การนำทางแพลตฟอร์ม**: ใช้งานคุณสมบัติต่างๆ ของแพลตฟอร์ม
+- **การเข้าถึงข้อมูล**: เข้าถึงข้อมูลตลาดและข้อมูลต่างๆ
+- **การใช้บริการสนับสนุน**: ใช้คุณสมบัติการสนับสนุนของแพลตฟอร์ม
+- **การมีส่วนร่วมในชุมชน**: เข้าร่วมในชุมชนของแพลตฟอร์ม
+
+#### ระดับการเข้าถึง:
+- **คุณสมบัติผู้ใช้**: เข้าถึงคุณสมบัติสำหรับผู้ใช้ทั้งหมด
+- **ข้อมูลส่วนบุคคล**: เข้าถึงข้อมูลส่วนบุคคลและประวัติ
+- **ไม่มีการเข้าถึงระดับผู้ดูแลระบบ**: ไม่สามารถเข้าถึงคุณสมบัติระดับผู้ดูแลระบบ
+- **การเข้าถึงระบบที่จำกัด**: การเข้าถึงคุณสมบัติระบบที่จำกัด
+
+## ตารางสิทธิ์ (Permission Matrix)
+
+### ระดับการควบคุมการเข้าถึง
+
+#### ผู้ดูแลระบบสูงสุด:
+- ✅ **การกำหนดค่าระบบ**: เข้าถึงการตั้งค่าระบบได้อย่างสมบูรณ์
+- ✅ **การจัดการผู้ใช้**: สร้างและจัดการบทบาทผู้ใช้ทั้งหมด
+- ✅ **การควบคุมทางการเงิน**: การจัดการทางการเงินที่สมบูรณ์
+- ✅ **การจัดการข้อมูล**: การเข้าถึงการจัดการข้อมูลที่สมบูรณ์
+- ✅ **การจัดการสินทรัพย์**: การจัดการสินทรัพย์ที่สมบูรณ์
+- ✅ **การดำเนินการบล็อกเชน**: การเข้าถึงบล็อกเชนที่สมบูรณ์
+
+#### ผู้ดูแลข้อมูล:
+- ❌ **การกำหนดค่าระบบ**: ไม่มีการเข้าถึงการกำหนดค่าระบบ
+- ⚠️ **การจัดการผู้ใช้**: การจัดการผู้ใช้ที่จำกัด
+- ❌ **การควบคุมทางการเงิน**: ไม่มีการควบคุมทางการเงิน
+- ✅ **การจัดการข้อมูล**: การเข้าถึงการจัดการข้อมูลที่สมบูรณ์
+- ❌ **การจัดการสินทรัพย์**: ไม่มีการจัดการสินทรัพย์
+- ❌ **การดำเนินการบล็อกเชน**: ไม่มีการดำเนินการบล็อกเชน
+
+#### ผู้ดูแลสินทรัพย์:
+- ❌ **การกำหนดค่าระบบ**: ไม่มีการเข้าถึงการกำหนดค่าระบบ
+- ❌ **การจัดการผู้ใช้**: ไม่มีการจัดการผู้ใช้
+- ❌ **การควบคุมทางการเงิน**: ไม่มีการควบคุมทางการเงิน
+- ❌ **การจัดการข้อมูล**: ไม่มีการจัดการข้อมูล
+- ✅ **การจัดการสินทรัพย์**: การจัดการสินทรัพย์ที่สมบูรณ์
+- ✅ **การดำเนินการบล็อกเชน**: การเข้าถึงบล็อกเชนที่สมบูรณ์
+
+#### ผู้ใช้ทั่วไป:
+- ❌ **การกำหนดค่าระบบ**: ไม่มีการเข้าถึงการกำหนดค่าระบบ
+- ❌ **การจัดการผู้ใช้**: ไม่มีการจัดการผู้ใช้
+- ❌ **การควบคุมทางการเงิน**: ไม่มีการควบคุมทางการเงิน
+- ❌ **การจัดการข้อมูล**: ไม่มีการจัดการข้อมูล
+- ❌ **การจัดการสินทรัพย์**: ไม่มีการจัดการสินทรัพย์
+- ⚠️ **การดำเนินการบล็อกเชน**: การเข้าถึงบล็อกเชนที่จำกัด (ธุรกรรมส่วนตัวเท่านั้น)
+
+## ข้อควรพิจารณาด้านความปลอดภัย
+
+### ความปลอดภัยตามบทบาท
+
+#### การตรวจสอบสิทธิ์:
+- **การตรวจสอบสิทธิ์หลายปัจจัย (MFA)**: จำเป็นสำหรับบทบาทผู้ดูแลระบบ
+- **การจัดการเซสชัน**: การจัดการเซสชันที่ปลอดภัย
+- **การบันทึกการเข้าถึง**: การบันทึกการเข้าถึงที่สมบูรณ์สำหรับทุกบทบาท
+- **เส้นทางการตรวจสอบ**: เส้นทางการตรวจสอบที่ครอบคลุม
+
+#### การอนุญาต:
+- **หลักการสิทธิ์น้อยที่สุด**: ผู้ใช้มีสิทธิ์ขั้นต่ำที่จำเป็นเท่านั้น
+- **การแยกหน้าที่**: การแยกหน้าที่ที่ชัดเจน
+- **การสืบทอดสิทธิ์**: การสืบทอดสิทธิ์ที่เหมาะสม
+- **การทบทวนการเข้าถึง**: การทบทวนและอัปเดตการเข้าถึงเป็นประจำ
+
+### ความปลอดภัยของข้อมูล
+
+#### การปกป้องข้อมูล:
+- **การเข้ารหัส**: ข้อมูลที่ละเอียดอ่อนทั้งหมดถูกเข้ารหัส
+- **การควบคุมการเข้าถึง**: การควบคุมการเข้าถึงที่เข้มงวดสำหรับข้อมูลที่ละเอียดอ่อน
+- **การสำรองข้อมูล**: การสำรองข้อมูลและการกู้คืนเป็นประจำ
+- **การเก็บรักษาข้อมูล**: นโยบายการเก็บรักษาข้อมูลที่เหมาะสม
+
+#### การคุ้มครองความเป็นส่วนตัว:
+- **ความเป็นส่วนตัวของผู้ใช้**: ปกป้องข้อมูลส่วนบุคคลของผู้ใช้
+- **การลดข้อมูล**: รวบรวมเฉพาะข้อมูลที่จำเป็น
+- **การจัดการความยินยอม**: การจัดการความยินยอมที่เหมาะสม
+- **การปฏิบัติตาม GDPR**: การปฏิบัติตามกฎระเบียบความเป็นส่วนตัว
+
+## ขั้นตอนการปฏิบัติงาน
+
+### การมอบหมายบทบาท
+
+#### กระบวนการมอบหมาย:
+1. **การกำหนดบทบาท**: กำหนดข้อกำหนดบทบาทเฉพาะ
+2. **การคัดเลือกผู้สมัคร**: คัดเลือกผู้สมัครที่มีคุณสมบัติ
+3. **การฝึกอบรม**: ให้การฝึกอบรมเฉพาะบทบาท
+4. **การให้สิทธิ์การเข้าถึง**: ให้สิทธิ์การเข้าถึงที่เหมาะสม
+5. **การตรวจสอบ**: ตรวจสอบประสิทธิภาพและการปฏิบัติตามกฎระเบียบของบทบาท
+
+#### ข้อกำหนดการฝึกอบรม:
+- **การฝึกอบรมระบบ**: การฝึกอบรมเฉพาะแพลตฟอร์ม
+- **การฝึกอบรมความปลอดภัย**: การฝึกอบรมความตระหนักด้านความปลอดภัย
+- **การฝึกอบรมการปฏิบัติตามกฎระเบียบ**: การฝึกอบรมการปฏิบัติตามกฎระเบียบ
+- **การศึกษาต่อเนื่อง**: การศึกษาและการอัปเดตอย่างต่อเนื่อง
+
+### การตรวจสอบบทบาท
+
+#### การตรวจสอบประสิทธิภาพ:
+- **การติดตามกิจกรรม**: ติดตามกิจกรรมและประสิทธิภาพของบทบาท
+- **การตรวจสอบการปฏิบัติตามกฎระเบียบ**: ตรวจสอบการปฏิบัติตามนโยบาย
+- **การตรวจสอบความปลอดภัย**: ตรวจสอบกิจกรรมที่เกี่ยวข้องกับความปลอดภัย
+- **การประกันคุณภาพ**: รับรองคุณภาพและประสิทธิผลของบทบาท
+
+#### กระบวนการทบทวน:
+- **การทบทวนเป็นประจำ**: การทบทวนประสิทธิภาพบทบาทเป็นประจำ
+- **การทบทวนการเข้าถึง**: การทบทวนสิทธิ์การเข้าถึงเป็นระยะ
+- **การตรวจสอบความปลอดภัย**: การตรวจสอบความปลอดภัยเป็นประจำ
+- **การตรวจสอบการปฏิบัติตามกฎระเบียบ**: การตรวจสอบการปฏิบัติตามกฎระเบียบเป็นประจำ
+
+## การปรับปรุงในอนาคต
+
+### วิวัฒนาการของบทบาท
+
+#### บทบาทขั้นสูง:
+- **ผู้ดูแลระบบ AI**: จัดการระบบ AI และ ML
+- **ผู้ดูแลระบบการวิเคราะห์**: จัดการการวิเคราะห์และการรายงาน
+- **ผู้จัดการชุมชน**: จัดการคุณสมบัติชุมชน
+- **ผู้ดูแลเนื้อหา**: จัดการเนื้อหาและสื่อ
+
+#### บทบาทเฉพาะทาง:
+- **ผู้จัดการความเสี่ยง**: บทบาทการบริหารความเสี่ยงเฉพาะทาง
+- **เจ้าหน้าที่ปฏิบัติตามกฎระเบียบ**: บทบาทการปฏิบัติตามกฎระเบียบ
+- **ฝ่ายสนับสนุนทางเทคนิค**: บทบาทการสนับสนุนทางเทคนิค
+- **ความสำเร็จของลูกค้า**: บทบาทความสำเร็จของลูกค้า
+
+### การรวมเทคโนโลยี
+
+#### ระบบอัตโนมัติ:
+- **การมอบหมายบทบาทอัตโนมัติ**: การมอบหมายบทบาทที่ขับเคลื่อนด้วย AI
+- **สิทธิ์อัจฉริยะ**: การจัดการสิทธิ์อัจฉริยะ
+- **การตรวจสอบอัตโนมัติ**: การตรวจสอบบทบาทอัตโนมัติ
+- **การวิเคราะห์เชิงคาดการณ์**: การวิเคราะห์บทบาทเชิงคาดการณ์
+
+#### ความปลอดภัยที่เพิ่มขึ้น:
+- **การตรวจสอบสิทธิ์ทางชีวภาพ**: วิธีการตรวจสอบสิทธิ์ขั้นสูง
+- **การวิเคราะห์พฤติกรรม**: การวิเคราะห์พฤติกรรมผู้ใช้
+- **การตรวจจับภัยคุกคาม**: การตรวจจับภัยคุกคามขั้นสูง
+- **Zero Trust**: โมเดลความปลอดภัยแบบ Zero Trust
 
 ---
 
-*For the latest information on role responsibilities and updates, please check our official announcements.* 
+*สำหรับข้อมูลล่าสุดเกี่ยวกับความรับผิดชอบตามบทบาทและการอัปเดต โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*

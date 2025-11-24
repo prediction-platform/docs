@@ -1,186 +1,183 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 提现 (Withdraw)
 
-# Withdraw
+## 概述
 
-## Overview
+YC365 为所有支持的加密货币提供安全高效的提现服务。提现通过 BSC (币安智能链) 网络处理，费用低廉且处理速度快。
 
-YC365 provides secure and efficient withdrawal services for all supported cryptocurrencies. Withdrawals are processed on the BSC (Binance Smart Chain) network with competitive fees and fast processing times.
+## 支持的钱包
 
-## Supported Wallets
+YC365 支持所有兼容 EVM 的钱包，包括：
 
-YC365 supports all EVM-compatible wallets, including:
+- **MetaMask** - 最流行且广泛使用
+- **WalletConnect** - 多钱包支持
+- **Trust Wallet** - 移动端优先钱包
+- **Binance Wallet** - 币安官方钱包
+- **Coinbase Wallet** - 用户友好界面
+- **任何兼容 EVM 的钱包**
 
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! note "钱包要求"
+    您的钱包必须支持 BSC (币安智能链) 网络才能使用 YC365。
 
-!!! note "Wallet Requirements"
-    Your wallet must support BSC (Binance Smart Chain) network to use YC365.
+## 支持的提现方式
 
-## Supported Withdrawal Methods
-
-### BSC Network Withdrawals
+### BSC 网络提现
 
 #### USDT (BEP-20)
-- **Minimum Withdrawal**: 10 USDT
-- **Processing Time**: 5-30 seconds
-- **Network Fee**: 0.0005 BNB
-- **Network**: Binance Smart Chain (BSC) only
+- **最低提现**：10 USDT
+- **处理时间**：5-30 秒
+- **网络费用**：0.0005 BNB
+- **网络**：仅限币安智能链 (BSC)
 
-## How to Withdraw
+## 如何提现
 
-### Step 1: Wallet Setup
-1. **Connect Wallet** (if not already connected):
-   - Visit **dapp.yc365.io**
-   - Click "Connect Wallet" and select your EVM wallet
-   - Ensure you're connected to BSC Mainnet
+### 步骤 1：钱包设置
+1. **连接钱包**（如果尚未连接）：
+   - 访问 **dapp.yc365.io**
+   - 点击“Connect Wallet”并选择您的 EVM 钱包
+   - 确保您已连接到 BSC 主网
 
-2. **Install Wallet** (if needed):
-   - Download and install MetaMask or any EVM-compatible wallet
-   - Follow the wallet's setup instructions
+2. **安装钱包**（如果需要）：
+   - 下载并安装 MetaMask 或任何兼容 EVM 的钱包
+   - 按照钱包的设置说明进行操作
 
-3. **Configure BSC Network** (if needed):
-   - Open your wallet and switch to BSC Mainnet
-   - If BSC network is not available, add it manually:
-     - **Network Name**: BSC Mainnet
-     - **RPC URL**: https://bsc-dataseed1.binance.org/
-     - **Chain ID**: 56
-     - **Currency Symbol**: BNB
-     - **Block Explorer**: https://bscscan.com/
+3. **配置 BSC 网络**（如果需要）：
+   - 打开您的钱包并切换到 BSC 主网
+   - 如果 BSC 网络不可用，请手动添加：
+     - **网络名称**：BSC Mainnet
+     - **RPC URL**：https://bsc-dataseed1.binance.org/
+     - **链 ID**：56
+     - **货币符号**：BNB
+     - **区块浏览器**：https://bscscan.com/
 
-4. **Ensure Sufficient Balance**:
-   - Make sure you have enough BNB for gas fees
-   - Verify you have USDT in your vault to withdraw
+4. **确保余额充足**：
+   - 确保您有足够的 BNB 用于支付 Gas 费
+   - 验证您的金库中有 USDT 可供提现
 
-### Step 2: Access Overview Page
-1. After successfully connecting your wallet
-2. Navigate to the **Overview** page on dapp.yc365.io
-3. You should see your vault balance and available actions
+### 步骤 2：访问概览页面
+1. 成功连接钱包后
+2. 导航到 dapp.yc365.io 上的 **Overview**（概览）页面
+3. 您应该能看到您的金库余额和可用操作
 
-### Step 3: Initiate Withdrawal
-1. Look for the **"Withdraw"** button on the Overview page
-2. Click the withdraw button to start the withdrawal process
-3. The system will automatically detect your connected wallet
+### 步骤 3：发起提现
+1. 在概览页面上找到 **“Withdraw”** 按钮
+2. 点击提现按钮开始提现流程
+3. 系统将自动检测您连接的钱包
 
-### Step 4: Complete Withdrawal
-1. **Enter Withdrawal Details**:
-   - Select the amount of USDT you want to withdraw
-   - The destination address will be your connected wallet address
-   - Review all transaction details
+### 步骤 4：完成提现
+1. **输入提现详情**：
+   - 选择您要提现的 USDT 金额
+   - 目标地址将是您连接的钱包地址
+   - 审查所有交易详情
 
-2. **Confirm Transaction**:
-   - Follow the on-screen prompts
-   - Confirm the transaction in your wallet
-   - Pay the required gas fees
+2. **确认交易**：
+   - 按照屏幕提示操作
+   - 在您的钱包中确认交易
+   - 支付所需的 Gas 费
 
-### Step 5: Receive Funds
-1. **Wait for Processing**:
-   - The withdrawal will be processed on the blockchain
-   - Usually takes 5-30 seconds for confirmation
+### 步骤 5：接收资金
+1. **等待处理**：
+   - 提现将在区块链上处理
+   - 通常需要 5-30 秒进行确认
 
-2. **Check Your Wallet**:
-   - USDT tokens will be automatically sent to your connected wallet
-   - You can verify the transaction on BSCscan
+2. **检查您的钱包**：
+   - USDT 代币将自动发送到您连接的钱包
+   - 您可以在 BSCscan 上验证交易
 
-!!! success "Withdrawal Complete"
-    Once you see the USDT tokens in your wallet, the withdrawal process is fully completed.
+!!! success "提现完成"
+    一旦您在钱包中看到 USDT 代币，提现流程即完全完成。
 
-## Security Features
+## 安全功能
 
-!!! success "Multi-Layer Security"
-    - **2FA Protection**: Two-factor authentication for withdrawals
-    - **Whitelist Addresses**: Save trusted addresses for faster withdrawals
-    - **Withdrawal Password**: Additional password protection
-    - **Email Notifications**: Real-time withdrawal status updates
+!!! success "多层安全"
+    - **2FA 保护**：提现的双重身份验证
+    - **白名单地址**：保存受信任的地址以便更快提现
+    - **提现密码**：额外的密码保护
+    - **电子邮件通知**：实时提现状态更新
 
-!!! warning "Security Best Practices"
-    - Always verify the destination address (BSC network only)
-    - Use whitelisted addresses when possible
-    - Enable 2FA for enhanced security
-    - Never share your withdrawal password
-    - Only withdraw USDT (BEP-20) to BSC addresses
+!!! warning "安全最佳实践"
+    - 务必验证目标地址（仅限 BSC 网络）
+    - 尽可能使用白名单地址
+    - 启用 2FA 以增强安全性
+    - 切勿分享您的提现密码
+    - 仅将 USDT (BEP-20) 提现到 BSC 地址
 
-## Withdrawal Limits
+## 提现限额
 
-| Account Level | Daily Limit | Monthly Limit | Minimum Withdrawal |
-|---------------|-------------|---------------|-------------------|
-| Basic        | $1,000      | $10,000       | $10               |
-| Verified     | $10,000     | $100,000      | $10               |
-| Premium      | $50,000     | $500,000      | $10               |
+| 账户等级 | 每日限额 | 每月限额 | 最低提现 |
+|----------|----------|----------|----------|
+| 基础     | $1,000   | $10,000  | $10      |
+| 已验证   | $10,000  | $100,000 | $10      |
+| 高级     | $50,000  | $500,000 | $10      |
 
-## Processing Times
+## 处理时间
 
-### Standard Processing
-- **Platform Processing**: 5-30 seconds
-- **Blockchain Confirmation**: 1-3 confirmations
-- **Total Time**: Usually 10-60 seconds
+### 标准处理
+- **平台处理**：5-30 秒
+- **区块链确认**：1-3 次确认
+- **总时间**：通常 10-60 秒
 
-### Factors Affecting Speed
-- **Network Congestion**: High traffic may delay processing
-- **Security Checks**: Large amounts require additional verification
-- **Account Status**: New accounts may have longer processing times
+### 影响速度的因素
+- **网络拥堵**：高流量可能会延迟处理
+- **安全检查**：大额资金需要额外验证
+- **账户状态**：新账户可能有较长的处理时间
 
-## Fees Structure
+## 费用结构
 
-| Cryptocurrency | Network Fee | Platform Fee |
-|----------------|-------------|--------------|
-| USDT (BEP-20)  | 0.0005 BNB  | Free         |
+| 加密货币 | 网络费用 | 平台费用 |
+|----------|----------|----------|
+| USDT (BEP-20) | 0.0005 BNB | 免费 |
 
-!!! info "Fee Information"
-    - Network fees are charged by the BSC network
-    - YC365 does not charge additional platform fees
-    - Fees are deducted from the withdrawal amount
-    - Only USDT (BEP-20) withdrawals are supported
+!!! info "费用信息"
+    - 网络费用由 BSC 网络收取
+    - YC365 不收取额外的平台费用
+    - 费用从提现金额中扣除
+    - 仅支持 USDT (BEP-20) 提现
 
-## Address Whitelisting
+## 地址白名单
 
-### Benefits of Whitelisting
-- **Faster Processing**: Pre-approved addresses process faster
-- **Enhanced Security**: Reduces risk of sending to wrong addresses
-- **Convenience**: No need to re-enter trusted addresses
+### 白名单的好处
+- **更快的处理**：预先批准的地址处理速度更快
+- **增强安全性**：降低发送到错误地址的风险
+- **便捷**：无需重新输入受信任的地址
 
-### How to Whitelist an Address
-1. Go to **Security Settings**
-2. Select **Address Whitelist**
-3. Add the destination address
-4. Complete verification process
-5. Wait for approval (24-48 hours)
+### 如何将地址列入白名单
+1. 转到 **Security Settings**（安全设置）
+2. 选择 **Address Whitelist**（地址白名单）
+3. 添加目标地址
+4. 完成验证流程
+5. 等待批准（24-48 小时）
 
-## Troubleshooting
+## 故障排除
 
-### Common Issues
+### 常见问题
 
-**Q: My withdrawal is pending for a long time**
-A: Check if you have sufficient BNB for gas fees. Large withdrawals may require additional confirmations. Try increasing the gas limit if needed.
+**问：我的提现长时间处于待处理状态**
+答：检查您是否有足够的 BNB 支付 Gas 费。大额提现可能需要额外的确认。如果需要，尝试增加 Gas 限制。
 
-**Q: I can't see the withdraw button**
-A: Make sure you're connected to the correct wallet and network (BSC Mainnet). Ensure you have USDT in your vault to withdraw.
+**问：我看不到提现按钮**
+答：确保您已连接到正确的钱包和网络 (BSC 主网)。确保您的金库中有 USDT 可供提现。
 
-**Q: The transaction failed**
-A: Check if you have sufficient BNB for gas fees. Increase gas limit if needed or try again during lower network congestion.
+**问：交易失败**
+答：检查您是否有足够的 BNB 支付 Gas 费。如果需要，增加 Gas 限制或在网络拥堵较低时重试。
 
-**Q: My wallet won't connect**
-A: Ensure you're using a compatible EVM wallet (MetaMask, WalletConnect, etc.) and that you're connected to BSC Mainnet.
+**问：我的钱包无法连接**
+答：确保您使用的是兼容的 EVM 钱包（MetaMask、WalletConnect 等），并且已连接到 BSC 主网。
 
-**Q: The withdrawal fee seems high**
-A: Network fees are determined by BSC network conditions. Fees are transparent and shown before confirmation.
+**问：提现费用似乎很高**
+答：网络费用由 BSC 网络状况决定。费用是透明的，并在确认前显示。
 
-## Support
+## 支持
 
-For withdrawal-related issues, please contact support with:
-- Your wallet address
-- Transaction hash
-- Screenshot of the issue
-- Detailed description of the problem
-- Network used (BSC Mainnet)
+对于提现相关问题，请联系支持并提供：
+- 您的钱包地址
+- 交易哈希
+- 问题截图
+- 问题的详细描述
+- 使用的网络 (BSC Mainnet)
 
-!!! tip "Quick Support"
-    For faster support, include your wallet address and transaction hash when reporting issues.
+!!! tip "快速支持"
+    为了获得更快的支持，请在报告问题时包含您的钱包地址和交易哈希。
 
 ---
 
-*For the latest withdrawal information and updates, please check our official announcements.* 
+*有关最新的提现信息和更新，请查看我们的官方公告。*

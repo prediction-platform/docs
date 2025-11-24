@@ -1,90 +1,87 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# YC365 使用条款 (Terms of Use)
 
-# YC365 Terms of Use
-
-_Last Updated: July 22, 2025_
+_最后更新：2025 年 7 月 22 日_
 
 ---
 
-Welcome to YC365 (hereinafter referred to as "the Platform" or "we"). Before accessing or using our services, please read and agree to the following Terms of Use ("Terms"). **If you do not agree to these Terms, do not use the Platform.**
+欢迎来到 YC365（以下简称“平台”或“我们”）。在访问或使用我们的服务之前，请阅读并同意以下使用条款（“条款”）。**如果您不同意这些条款，请勿使用本平台。**
 
 ---
 
-## 1. Eligibility
+## 1. 资格
 
-You may not use the Platform if:
+如果您符合以下情况，则不得使用本平台：
 
-- You are located, incorporated, or otherwise established in the United States, United Kingdom, France, Ontario (Canada), Singapore, Poland, Thailand, Belgium, Taiwan, or any other jurisdiction where participation in the Platform is prohibited by local laws or regulations.
-- You are subject to any sanctions administered or enforced by the United Nations, the European Union, the U.S. Department of the Treasury’s Office of Foreign Assets Control (OFAC), or any similar regulatory body.
-- You are under the age of 18 (or the age of majority in your jurisdiction).
+- 您位于、注册于或以其他方式设立于美国、英国、法国、安大略省（加拿大）、新加坡、波兰、泰国、比利时、台湾或任何其他当地法律或法规禁止参与本平台的司法管辖区。
+- 您受到联合国、欧盟、美国财政部外国资产控制办公室 (OFAC) 或任何类似监管机构实施或执行的任何制裁。
+- 您未满 18 岁（或您所在司法管辖区的法定成年年龄）。
 
-!!! warning "Important Notice"
-    By using the Platform, you represent and warrant that you are not located in or subject to the jurisdiction of any restricted location and that you are not a person barred from using the Platform under applicable laws.
-
----
-
-## 2. Use of the Platform
-
-The Platform provides a decentralized interface for accessing public data and services related to prediction markets and blockchain-based tools.
-
-**We do not provide financial, investment, or legal advice, and we are not a registered broker-dealer, financial institution, or investment advisor.**
-
-You agree not to:
-
-- Use the Platform for illegal activities, including but not limited to money laundering, terrorist financing, or market manipulation.
-- Interfere with the Platform’s security, systems, or any other users’ access.
-- Attempt to gain unauthorized access to any portion of the Platform, servers, or networks.
+!!! warning "重要通知"
+    通过使用本平台，您声明并保证您不位于任何受限地点或受其司法管辖，并且您不是适用法律禁止使用本平台的人员。
 
 ---
 
-## 3. Assumption of Risk
+## 2. 平台的使用
 
-!!! note "Risk Notice"
-    - Your use of the Platform involves inherent risks, including but not limited to market volatility, smart contract bugs, and software vulnerabilities.
-    - You are solely responsible for any transactions you make or decisions you take on or through the Platform.
-    - Digital assets and blockchain technology are inherently risky, and prices may fluctuate dramatically.
-    - YC365 does not operate, control, or take custody of any smart contracts, tokens, or user funds. **Use the Platform at your own risk!**
+本平台提供了一个去中心化的接口，用于访问与预测市场和基于区块链的工具相关的公共数据和服务。
 
----
+**我们不提供财务、投资或法律建议，我们也不是注册经纪交易商、金融机构或投资顾问。**
 
-## 4. No Warranty
+您同意不：
 
-!!! info "Disclaimer"
-    The Platform is provided "as is" and "as available" without warranties of any kind.
-    We make no representations or warranties about the accuracy, completeness, or suitability of the content provided via the Platform.
-
-**We disclaim any and all implied warranties, including merchantability, fitness for a particular purpose, and non-infringement.**
+- 将本平台用于非法活动，包括但不限于洗钱、恐怖主义融资或市场操纵。
+- 干扰本平台的安全性、系统或任何其他用户的访问。
+- 试图未经授权访问本平台的任何部分、服务器或网络。
 
 ---
 
-## 5. Limitation of Liability
+## 3. 风险承担
 
-To the maximum extent permitted by applicable law:
-
-- YC365 and its affiliates shall not be liable for any indirect, incidental, special, or consequential damages resulting from your use of the Platform.
-- In no event shall our total liability exceed $100 USD or the amount you paid to use the Platform in the last 12 months, whichever is lower.
-
----
-
-## 6. Changes to the Terms
-
-We may update or modify these Terms at any time. Changes will become effective immediately upon posting.
-
-!!! tip "Reminder"
-    Your continued use of the Platform after changes are posted will constitute your acceptance of the revised Terms.
+!!! note "风险提示"
+    - 您使用本平台涉及固有风险，包括但不限于市场波动、智能合约错误和软件漏洞。
+    - 您对您在平台上或通过平台进行的任何交易或做出的决定承担全部责任。
+    - 数字资产和区块链技术具有固有风险，价格可能会剧烈波动。
+    - YC365 不运营、控制或托管任何智能合约、代币或用户资金。**使用本平台风险自负！**
 
 ---
 
-## 7. Governing Law
+## 4. 无担保
 
-These Terms shall be governed by and construed in accordance with the laws of the British Virgin Islands, without regard to conflict of law principles.
+!!! info "免责声明"
+    本平台按“原样”和“可用”提供，不提供任何形式的保证。
+    我们不对通过本平台提供的内容的准确性、完整性或适用性做出任何陈述或保证。
+
+**我们否认任何及所有默示保证，包括适销性、特定用途适用性和非侵权性。**
 
 ---
 
-## 8. Contact
+## 5. 责任限制
 
-For questions or feedback regarding these Terms, please contact:
+在适用法律允许的最大范围内：
+
+- YC365 及其关联公司不对因您使用本平台而导致的任何间接、偶然、特殊或后果性损害承担责任。
+- 在任何情况下，我们的总责任不超过 100 美元或您在过去 12 个月内为使用本平台支付的金额，以较低者为准。
+
+---
+
+## 6. 条款变更
+
+我们可能随时更新或修改这些条款。变更将在发布后立即生效。
+
+!!! tip "提醒"
+    您在变更发布后继续使用本平台将构成您接受修订后的条款。
+
+---
+
+## 7. 适用法律
+
+本条款应受英属维尔京群岛法律管辖并据其解释，不考虑法律冲突原则。
+
+---
+
+## 8. 联系方式
+
+有关这些条款的问题或反馈，请联系：
 
 [**support@yc365.io**](mailto:support@yc365.io)
 

@@ -1,167 +1,164 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 快速开始 (Get Started)
 
-# Get Started
+## 欢迎来到 YC365
 
-## Welcome to YC365
+欢迎来到 YC365，这是建立在币安智能链 (BSC) 上的尖端去中心化预测市场平台。本综合指南将带您了解在我们的平台上成功开始交易所需的一切知识。
 
-Welcome to YC365, the cutting-edge decentralized prediction market platform built on Binance Smart Chain (BSC). This comprehensive guide will walk you through everything you need to know to start trading on our platform successfully.
+## 您将学到什么
 
-## What You'll Learn
+本“快速开始”部分涵盖了您开启 YC365 之旅所需的所有基本信息：
 
-This Get Started section covers all the essential information you need to begin your journey with YC365:
+### 📚 **了解 YC365**
+- 了解 YC365 是什么以及它是如何运作的
+- 理解我们的使命和核心价值观
+- 探索平台的独特功能和优势
 
-### 📚 **Understanding YC365**
-- Learn what YC365 is and how it works
-- Understand our mission and core values
-- Explore the platform's unique features and advantages
+### 💰 **进行首次存款**
+- 存入 USDT 的分步指南
+- 钱包设置和 BSC 网络配置
+- 资产管理的安全最佳实践
 
-### 💰 **Making Your First Deposit**
-- Step-by-step guide to depositing USDT
-- Wallet setup and BSC network configuration
-- Security best practices for asset management
+### 🚀 **您的第一笔交易**
+- 下达第一个订单的完整演练
+- 理解 YES/NO 代币和市场机制
+- 风险管理和头寸规模基础
 
-### 🚀 **Your First Trade**
-- Complete walkthrough of placing your first order
-- Understanding YES/NO tokens and market mechanics
-- Risk management and position sizing basics
+## 快速入门清单
 
-## Quick Start Checklist
+在您开始在 YC365 上交易之前，请确保您已具备：
 
-Before you begin trading on YC365, make sure you have:
+### ✅ **完成先决条件**
+- **已安装兼容 EVM 的钱包**（推荐 MetaMask）
+- **钱包中已配置 BSC 主网**
+- **已获取 USDT (BEP-20)** 用于交易
+- **已获取 BNB** 用于支付 Gas 费
+- **钱包已连接** 到 YC365 平台
 
-### ✅ **Prerequisites Completed**
-- **EVM-compatible wallet installed** (MetaMask recommended)
-- **BSC Mainnet configured** in your wallet
-- **USDT (BEP-20) acquired** for trading
-- **BNB acquired** for gas fees
-- **Wallet connected** to YC365 platform
+### ✅ **了解平台**
+- **阅读平台概览** 并理解核心概念
+- **查看交易机制** 和费用结构
+- **理解盈利机制**（交易 vs 结算）
+- **熟悉风险因素** 和安全措施
 
-### ✅ **Platform Understanding**
-- **Read platform overview** and understand core concepts
-- **Reviewed trading mechanics** and fee structure
-- **Understood profit mechanisms** (trading vs. settlement)
-- **Familiarized with risk factors** and safety measures
+### ✅ **账户设置**
+- **连接钱包** 到 dapp.yc365.io
+- **完成存款流程** 并验证余额
+- **探索平台界面** 和主要功能
+- **设置通知** 以获取重要更新
 
-### ✅ **Account Setup**
-- **Connected wallet** to dapp.yc365.io
-- **Completed deposit process** and verified balance
-- **Explored platform interface** and key features
-- **Set up notifications** for important updates
+## 平台概览
 
-## Platform Overview
+### 🎯 **核心使命**
+YC365 提供一个中立、安全且值得信赖的去中心化预测市场平台，结合链上和链下混合架构，以确保效率、低成本和可靠性。
 
-### 🎯 **Core Mission**
-YC365 provides a neutral, secure, and trustworthy decentralized prediction market platform that combines on-chain and off-chain hybrid architecture to ensure efficiency, low costs, and reliability.
+![主屏幕显示实时市场、快速过滤器和连接钱包按钮](../img/yc365/home-dashboard.png)
 
-![Home screen with live markets, quick filters, and connect wallet button](../img/yc365/home-dashboard.png)
+*YC365 登陆页面让新用户可以立即概览热门市场和一键连接钱包的入口点。*
 
-*The YC365 landing page gives newcomers an immediate overview of trending markets and the one-click wallet connection entry point.*
+### 🔧 **主要功能**
+- **去中心化架构**：智能合约确保透明度和信任
+- **低交易费用**：仅 0.15% 的交易费 (1.5/1000)
+- **快速结算**：BSC 网络提供快速的交易确认
+- **多语言支持**：支持 6 种语言，包括英语、中文、泰语、印尼语和越南语
+- **24/7 交易**：全天候交易全球事件
 
-### 🔧 **Key Features**
-- **Decentralized Architecture**: Smart contracts ensure transparency and trust
-- **Low Trading Fees**: Only 0.15% trading fees (1.5/1000)
-- **Fast Settlement**: BSC network provides quick transaction confirmation
-- **Multi-language Support**: Available in 6 languages including English, Chinese, Thai, Indonesian, and Vietnamese
-- **24/7 Trading**: Round-the-clock trading on global events
+### 🌐 **支持的市场**
+- **体育赛事**：足球、篮球、网球等
+- **政治选举**：全球选举和政治结果
+- **经济指标**：GDP、通货膨胀、就业数据
+- **科技事件**：产品发布、采用指标
+- **娱乐**：颁奖典礼、真人秀结果
+- **加密货币**：价格预测和采用指标
 
-### 🌐 **Supported Markets**
-- **Sports Events**: Football, basketball, tennis, and more
-- **Political Elections**: Global elections and political outcomes
-- **Economic Indicators**: GDP, inflation, employment data
-- **Technology Events**: Product launches, adoption metrics
-- **Entertainment**: Awards shows, reality TV outcomes
-- **Cryptocurrency**: Price predictions and adoption metrics
+## YC365 如何运作
 
-## How YC365 Works
+### 🔄 **交易流程**
+1. **事件创建**：管理员为现实世界的事件创建预测市场
+2. **市场启动**：事件上线，具有初始流动性和定价
+3. **用户参与**：用户根据预测购买 YES/NO 代币
+4. **价格发现**：市场价格根据供需进行调整
+5. **事件决议**：结果通过预言机系统发布
+6. **结算**：赢家获得赔付，输家没收本金
 
-### 🔄 **Trading Process**
-1. **Event Creation**: Administrators create prediction markets for real-world events
-2. **Market Launch**: Events go live with initial liquidity and pricing
-3. **User Participation**: Users buy YES/NO tokens based on their predictions
-4. **Price Discovery**: Market prices adjust based on supply and demand
-5. **Event Resolution**: Results are published via oracle systems
-6. **Settlement**: Winners receive payouts, losers forfeit their stakes
+### 💡 **盈利机会**
+- **市场交易**：在事件决议前买卖代币
+- **事件结算**：持有代币直到决议，以获得潜在的 100% 回报
+- **做市**：提供流动性并从点差中赚取收益
+- **套利**：利用相关市场的价格差异
 
-### 💡 **Profit Opportunities**
-- **Market Trading**: Buy and sell tokens before event resolution
-- **Event Settlement**: Hold tokens until resolution for potential 100% returns
-- **Market Making**: Provide liquidity and earn from spreads
-- **Arbitrage**: Exploit price differences across related markets
+## 安全与保障
 
-## Safety and Security
+### 🔒 **平台安全**
+- **智能合约审计**：所有合约均经过专业审计
+- **开源**：合约代码可供公众审查
+- **去中心化运营**：无单点故障
+- **预言机集成**：可靠的结果验证系统
 
-### 🔒 **Platform Security**
-- **Smart Contract Audits**: All contracts professionally audited
-- **Open Source**: Contract code available for public review
-- **Decentralized Operation**: No single point of failure
-- **Oracle Integration**: Reliable result verification system
+### 🛡️ **用户安全提示**
+- **切勿分享私钥** 或助记词
+- **仅使用官方链接** (dapp.yc365.io)
+- **确认前验证交易**
+- **学习时从小额开始**
+- **保持软件更新**（钱包、浏览器）
 
-### 🛡️ **User Security Tips**
-- **Never share private keys** or seed phrases
-- **Use official links only** (dapp.yc365.io)
-- **Verify transactions** before confirming
-- **Start with small amounts** while learning
-- **Keep software updated** (wallet, browser)
+## 支持与资源
 
-## Support and Resources
+### 📖 **文档**
+- **完整用户指南**：全面的平台文档
+- **视频教程**：分步视频指南
+- **常见问题解答**：常见问题的解答
+- **最佳实践**：交易技巧和策略
 
-### 📖 **Documentation**
-- **Complete User Guide**: Comprehensive platform documentation
-- **Video Tutorials**: Step-by-step video guides
-- **FAQ Section**: Answers to common questions
-- **Best Practices**: Trading tips and strategies
+### 🤝 **社区支持**
+- **官方 Telegram**：实时社区讨论
+- **Discord 服务器**：技术支持和社区聊天
+- **Twitter 更新**：最新新闻和公告
+- **电子邮件支持**：直接客户服务
 
-### 🤝 **Community Support**
-- **Official Telegram**: Real-time community discussions
-- **Discord Server**: Technical support and community chat
-- **Twitter Updates**: Latest news and announcements
-- **Email Support**: Direct customer service
+### 🆘 **获取帮助**
+如果您遇到任何问题或有疑问：
 
-### 🆘 **Getting Help**
-If you encounter any issues or have questions:
+1. **查看 FAQ**：大多数常见问题都在我们的 FAQ 部分有解答
+2. **社区论坛**：在我们的社区频道提问
+3. **联系支持**：直接联系我们的支持团队
+4. **文档**：参考我们全面的文档
 
-1. **Check FAQ**: Most common questions are answered in our FAQ section
-2. **Community Forums**: Ask questions in our community channels
-3. **Contact Support**: Reach out to our support team directly
-4. **Documentation**: Refer to our comprehensive documentation
+## 下一步
 
-## Next Steps
+准备好开始您的 YC365 之旅了吗？请遵循以下步骤：
 
-Ready to begin your YC365 journey? Follow these next steps:
+### 1️⃣ **了解 YC365**
+首先阅读“[什么是 YC365？](what-is-yc365.md)”以了解我们平台的核心概念和独特价值主张。
 
-### 1️⃣ **Learn About YC365**
-Start by reading "[What is YC365?](what-is-yc365.md)" to understand our platform's core concepts and unique value proposition.
+### 2️⃣ **进行首次存款**
+按照我们的“[如何存款](how-to-deposit.md)”指南为您的账户注资并准备交易。
 
-### 2️⃣ **Make Your First Deposit**
-Follow our "[How to Deposit](how-to-deposit.md)" guide to fund your account and prepare for trading.
+### 3️⃣ **下达第一笔交易**
+通过“[进行您的第一笔交易](making-your-first-trade.md)”完成您的入职培训，执行您的第一笔预测市场交易。
 
-### 3️⃣ **Place Your First Trade**
-Complete your onboarding with "[Making Your First Trade](making-your-first-trade.md)" to execute your first prediction market transaction.
+## 重要提醒
 
-## Important Reminders
+### ⚠️ **风险警告**
+- **交易风险**：所有交易都涉及损失风险
+- **市场波动**：预测市场可能波动很大
+- **全部损失**：可能会损失您的全部投资
+- **监管风险**：预测市场可能面临监管变化
 
-### ⚠️ **Risk Warnings**
-- **Trading Risk**: All trading involves risk of loss
-- **Market Volatility**: Prediction markets can be highly volatile
-- **Total Loss**: It's possible to lose your entire investment
-- **Regulatory Risk**: Prediction markets may face regulatory changes
+### 📋 **最佳实践**
+- **从小额开始**：学习时从小金额开始
+- **分散投资**：不要将所有资金投入单一事件
+- **研究**：交易前彻底研究事件
+- **管理风险**：切勿投资超过您能承受的损失
+- **保持知情**：关注可能影响您头寸的新闻
 
-### 📋 **Best Practices**
-- **Start Small**: Begin with small amounts while learning
-- **Diversify**: Don't put all funds in a single event
-- **Research**: Thoroughly research events before trading
-- **Manage Risk**: Never invest more than you can afford to lose
-- **Stay Informed**: Keep up with news that may affect your positions
-
-### 🎓 **Continuous Learning**
-- **Practice**: Start with small trades to gain experience
-- **Analyze**: Review your trades to identify improvements
-- **Stay Updated**: Follow platform updates and new features
-- **Engage**: Participate in community discussions and learning
+### 🎓 **持续学习**
+- **练习**：从小额交易开始积累经验
+- **分析**：回顾您的交易以确定改进之处
+- **保持更新**：关注平台更新和新功能
+- **参与**：参与社区讨论和学习
 
 ---
 
-**Ready to start?** Navigate to the next section to learn more about what makes YC365 special, or jump directly to our deposit guide if you're ready to fund your account.
+**准备好开始了吗？** 导航到下一部分以了解更多关于 YC365 的独特之处，或者如果您准备好为账户注资，请直接跳转到我们的存款指南。
 
-*Remember: Successful trading requires patience, discipline, and continuous learning. Take your time to understand the platform before making significant investments.* 
+*记住：成功的交易需要耐心、纪律和持续学习。在进行重大投资之前，请花时间了解平台。*

@@ -1,366 +1,363 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
-
-# Multi-language Support
-
-## Overview
-
-YC365 provides comprehensive multi-language support to serve users from different regions and cultural backgrounds. Our platform supports six languages to ensure accessibility and user-friendly experience for our global community.
-
-## Supported Languages
-
-### 1. English (Default)
-
-#### Language Code: `en`
-- **Status**: Primary language and default
-- **Region**: Global
-- **Content**: Complete platform translation
-- **Updates**: Real-time updates and new features
-
-#### Features:
-- **Complete Translation**: All platform content available
-- **Technical Terms**: Standardized technical terminology
-- **User Interface**: Full UI translation
-- **Documentation**: Comprehensive documentation support
-
-### 2. Simplified Chinese
-
-#### Language Code: `zh-CN`
-- **Status**: Fully supported
-- **Region**: Mainland China
-- **Content**: Complete platform translation
-- **Cultural Adaptation**: China-specific content and features
-
-#### Features:
-- **Localized Content**: China-specific market events
-- **Cultural Elements**: Traditional Chinese cultural elements
-- **Payment Methods**: Local payment integration
-- **Regulatory Compliance**: China-specific compliance features
-
-### 3. Traditional Chinese
-
-#### Language Code: `zh-TW`
-- **Status**: Fully supported
-- **Region**: Taiwan, Hong Kong, Macau
-- **Content**: Complete platform translation
-- **Cultural Adaptation**: Traditional Chinese cultural elements
-
-#### Features:
-- **Traditional Characters**: Full traditional character support
-- **Regional Content**: Taiwan/Hong Kong specific events
-- **Local Markets**: Regional market integration
-- **Cultural Features**: Traditional Chinese cultural elements
-
-### 4. Thai
-
-#### Language Code: `th`
-- **Status**: Fully supported
-- **Region**: Thailand
-- **Content**: Complete platform translation
-- **Cultural Adaptation**: Thailand-specific content
-
-#### Features:
-- **Thai Script**: Full Thai language support
-- **Local Events**: Thailand-specific market events
-- **Cultural Integration**: Thai cultural elements
-- **Regional Markets**: Thailand market integration
-
-### 5. Indonesian
-
-#### Language Code: `id`
-- **Status**: Fully supported
-- **Region**: Indonesia
-- **Content**: Complete platform translation
-- **Cultural Adaptation**: Indonesia-specific content
-
-#### Features:
-- **Indonesian Language**: Full Indonesian language support
-- **Local Events**: Indonesia-specific market events
-- **Cultural Elements**: Indonesian cultural features
-- **Regional Markets**: Indonesia market integration
-
-### 6. Vietnamese
-
-#### Language Code: `vi`
-- **Status**: Fully supported
-- **Region**: Vietnam
-- **Content**: Complete platform translation
-- **Cultural Adaptation**: Vietnam-specific content
-
-#### Features:
-- **Vietnamese Language**: Full Vietnamese language support
-- **Local Events**: Vietnam-specific market events
-- **Cultural Elements**: Vietnamese cultural features
-- **Regional Markets**: Vietnam market integration
-
-## Language Features
-
-### 1. Dynamic Language Switching
-
-#### Real-time Switching:
-- **Instant Translation**: Immediate language switching
-- **No Page Reload**: Seamless language transitions
-- **Session Persistence**: Language preference saved
-- **Cross-device Sync**: Language settings synchronized
-
-#### User Experience:
-- **Intuitive Interface**: Easy language selection
-- **Visual Indicators**: Clear language indicators
-- **Quick Access**: One-click language switching
-- **Responsive Design**: Mobile-friendly language selection
-
-### 2. Cultural Adaptation
-
-#### Regional Content:
-- **Local Events**: Region-specific prediction markets
-- **Cultural Holidays**: Local holiday celebrations
-- **Regional Sports**: Local sports events and leagues
-- **Economic Data**: Regional economic indicators
-
-#### Cultural Elements:
-- **Date Formats**: Local date and time formats
-- **Number Formats**: Regional number formatting
-- **Currency Display**: Local currency preferences
-- **Cultural Symbols**: Region-specific symbols and icons
-
-### 3. Technical Implementation
-
-#### Translation System:
-- **JSON-based**: Structured translation files
-- **Key-value Pairs**: Efficient translation management
-- **Context Support**: Context-aware translations
-- **Pluralization**: Proper plural forms for each language
-
-#### Content Management:
-- **Dynamic Content**: Real-time content updates
-- **Version Control**: Translation version management
-- **Quality Assurance**: Translation quality review
-- **Community Feedback**: User translation suggestions
-
-## Language Selection
-
-### 1. Automatic Detection
-
-#### Browser Detection:
-- **Language Detection**: Automatic language detection
-- **Region Detection**: Geographic location detection
-- **User Agent**: Browser language preference
-- **IP-based**: Geographic IP-based detection
-
-#### Smart Defaults:
-- **First Visit**: Automatic language selection
-- **Return Users**: Remembered language preference
-- **Device Sync**: Cross-device language sync
-- **Fallback**: English as default fallback
-
-### 2. Manual Selection
-
-#### Language Menu:
-- **Dropdown Menu**: Easy language selection
-- **Flag Icons**: Visual language indicators
-- **Language Names**: Native language names
-- **Quick Access**: Prominent language selector
-
-#### User Preferences:
-- **Account Settings**: Language preference in user settings
-- **Profile Management**: Language in user profile
-- **Persistent Choice**: Saved language preference
-- **Global Setting**: Platform-wide language setting
-
-## Content Localization
-
-### 1. Platform Content
-
-#### User Interface:
-- **Navigation Menus**: Translated navigation elements
-- **Buttons and Labels**: All UI elements translated
-- **Error Messages**: Localized error messages
-- **Success Notifications**: Localized success messages
-
-#### Documentation:
-- **Help Articles**: Translated help documentation
-- **Tutorials**: Localized tutorial content
-- **FAQ Sections**: Translated frequently asked questions
-- **Terms of Service**: Localized legal documents
-
-### 2. Market Content
-
-#### Event Descriptions:
-- **Event Titles**: Translated event names
-- **Event Descriptions**: Localized event descriptions
-- **Category Names**: Translated category labels
-- **Condition Details**: Localized condition information
-
-#### Market Data:
-- **Price Information**: Localized price displays
-- **Time Formats**: Regional time formatting
-- **Currency Display**: Local currency preferences
-- **Statistical Data**: Localized data presentation
-
-## Regional Features
-
-### 1. Market Events
-
-#### Local Markets:
-- **Regional Elections**: Local political events
-- **Sports Events**: Local sports leagues and teams
-- **Economic Indicators**: Regional economic data
-- **Cultural Events**: Local cultural celebrations
-
-#### International Markets:
-- **Global Events**: International events with local context
-- **Cross-border**: Events affecting multiple regions
-- **International Sports**: Global sports with local interest
-- **Economic Data**: International economic indicators
-
-### 2. Payment Methods
-
-#### Local Payment:
-- **Regional Currencies**: Local currency support
-- **Payment Gateways**: Local payment methods
-- **Bank Integration**: Regional bank connections
-- **Digital Wallets**: Local digital wallet support
-
-#### Crypto Support:
-- **Multi-chain**: Support for various blockchains
-- **Local Exchanges**: Regional cryptocurrency exchanges
-- **Stablecoins**: Local stablecoin preferences
-- **Cross-border**: International crypto transactions
-
-## Quality Assurance
-
-### 1. Translation Quality
-
-#### Professional Translation:
-- **Native Speakers**: Native language translators
-- **Expert Review**: Subject matter expert review
-- **Cultural Accuracy**: Cultural context verification
-- **Technical Accuracy**: Technical term consistency
-
-#### Quality Control:
-- **Translation Review**: Multi-stage review process
-- **User Feedback**: Community translation feedback
-- **Regular Updates**: Continuous translation updates
-- **Consistency Check**: Translation consistency verification
-
-### 2. Content Updates
-
-#### Real-time Updates:
-- **Dynamic Content**: Live content translation
-- **New Features**: Immediate feature translation
-- **Market Updates**: Real-time market translation
-- **System Messages**: Instant message translation
-
-#### Version Management:
-- **Translation Versions**: Version control for translations
-- **Rollback Capability**: Translation rollback features
-- **A/B Testing**: Translation effectiveness testing
-- **Performance Monitoring**: Translation performance tracking
-
-## User Experience
-
-### 1. Accessibility
-
-#### Language Accessibility:
-- **Screen Readers**: Language-specific screen reader support
-- **Font Support**: Proper font rendering for all languages
-- **Text Direction**: RTL/LTR text direction support
-- **Character Encoding**: Proper character encoding
-
-#### Cultural Accessibility:
-- **Cultural Sensitivity**: Culturally appropriate content
-- **Local Customs**: Respect for local customs
-- **Regional Preferences**: Regional user preferences
-- **Accessibility Standards**: WCAG compliance
-
-### 2. Performance
-
-#### Loading Speed:
-- **Optimized Assets**: Language-specific asset optimization
-- **Caching**: Efficient translation caching
-- **CDN Support**: Global content delivery
-- **Compression**: Optimized file compression
-
-#### Resource Management:
-- **Lazy Loading**: On-demand translation loading
-- **Memory Efficiency**: Efficient memory usage
-- **Bandwidth Optimization**: Reduced bandwidth usage
-- **Mobile Optimization**: Mobile-specific optimizations
-
-## Future Enhancements
-
-### 1. Additional Languages
-
-#### Planned Languages:
-- **Japanese**: Japanese language support
-- **Korean**: Korean language support
-- **Hindi**: Hindi language support
-- **Arabic**: Arabic language support
-
-#### Expansion Criteria:
-- **User Demand**: High user demand for language
-- **Market Size**: Significant market potential
-- **Technical Feasibility**: Technical implementation capability
-- **Resource Availability**: Translation resource availability
-
-### 2. Advanced Features
-
-#### AI-powered Translation:
-- **Machine Learning**: AI-enhanced translation quality
-- **Context Awareness**: Context-aware translations
-- **Real-time Translation**: Live translation capabilities
-- **Voice Support**: Voice-based language interaction
-
-#### Enhanced Localization:
-- **Cultural AI**: AI-powered cultural adaptation
-- **Personalization**: Personalized language experience
-- **Regional AI**: Region-specific AI features
-- **Smart Defaults**: Intelligent language defaults
-
-### 3. Community Features
-
-#### User Contributions:
-- **Translation Suggestions**: User translation improvements
-- **Community Review**: Community translation review
-- **Crowdsourcing**: Crowdsourced translation projects
-- **Quality Voting**: Community quality voting
-
-#### Feedback System:
-- **Translation Feedback**: User translation feedback
-- **Bug Reporting**: Translation bug reporting
-- **Feature Requests**: Language feature requests
-- **Improvement Suggestions**: Translation improvement ideas
-
-## Support and Resources
-
-### 1. Language Support
-
-#### Help Resources:
-- **Language Guides**: Language-specific help guides
-- **Translation FAQs**: Frequently asked translation questions
-- **Contact Support**: Language-specific support contact
-- **Community Forums**: Language-specific community forums
-
-#### Documentation:
-- **Translation Manuals**: Comprehensive translation guides
-- **API Documentation**: Language-specific API docs
-- **Developer Guides**: Language integration guides
-- **Best Practices**: Translation best practices
-
-### 2. Technical Support
-
-#### Developer Resources:
-- **Translation APIs**: Language API documentation
-- **Integration Guides**: Language integration guides
-- **SDK Support**: Language SDK support
-- **Code Examples**: Language-specific code examples
-
-#### Community Support:
-- **Developer Forums**: Language development forums
-- **GitHub Repositories**: Open-source translation projects
-- **Community Chat**: Language-specific chat channels
-- **Meetup Groups**: Local language meetup groups
+# 多语言支持
+
+## 概述
+
+YC365 提供全面的多语言支持，以服务来自不同地区和文化背景的用户。我们的平台支持六种语言，以确保我们全球社区的可访问性和用户友好体验。
+
+## 支持的语言
+
+### 1. 英语 (默认)
+
+#### 语言代码：`en`
+- **状态**：主要语言和默认语言
+- **地区**：全球
+- **内容**：完整的平台翻译
+- **更新**：实时更新和新功能
+
+#### 特性：
+- **完整翻译**：所有平台内容可用
+- **技术术语**：标准化的技术术语
+- **用户界面**：完整的 UI 翻译
+- **文档**：全面的文档支持
+
+### 2. 简体中文
+
+#### 语言代码：`zh-CN`
+- **状态**：完全支持
+- **地区**：中国大陆
+- **内容**：完整的平台翻译
+- **文化适应**：中国特定的内容和功能
+
+#### 特性：
+- **本地化内容**：中国特定的市场事件
+- **文化元素**：中国传统文化元素
+- **支付方式**：本地支付集成
+- **监管合规**：中国特定的合规功能
+
+### 3. 繁体中文
+
+#### 语言代码：`zh-TW`
+- **状态**：完全支持
+- **地区**：台湾、香港、澳门
+- **内容**：完整的平台翻译
+- **文化适应**：中国传统文化元素
+
+#### 特性：
+- **繁体字符**：完全的繁体字符支持
+- **区域内容**：台湾/香港特定的事件
+- **本地市场**：区域市场集成
+- **文化功能**：中国传统文化元素
+
+### 4. 泰语
+
+#### 语言代码：`th`
+- **状态**：完全支持
+- **地区**：泰国
+- **内容**：完整的平台翻译
+- **文化适应**：泰国特定的内容
+
+#### 特性：
+- **泰语脚本**：完全的泰语支持
+- **本地事件**：泰国特定的市场事件
+- **文化整合**：泰国文化元素
+- **区域市场**：泰国市场集成
+
+### 5. 印度尼西亚语
+
+#### 语言代码：`id`
+- **状态**：完全支持
+- **地区**：印度尼西亚
+- **内容**：完整的平台翻译
+- **文化适应**：印度尼西亚特定的内容
+
+#### 特性：
+- **印尼语**：完全的印尼语支持
+- **本地事件**：印度尼西亚特定的市场事件
+- **文化元素**：印尼文化特征
+- **区域市场**：印度尼西亚市场集成
+
+### 6. 越南语
+
+#### 语言代码：`vi`
+- **状态**：完全支持
+- **地区**：越南
+- **内容**：完整的平台翻译
+- **文化适应**：越南特定的内容
+
+#### 特性：
+- **越南语**：完全的越南语支持
+- **本地事件**：越南特定的市场事件
+- **文化元素**：越南文化特征
+- **区域市场**：越南市场集成
+
+## 语言功能
+
+### 1. 动态语言切换
+
+#### 实时切换：
+- **即时翻译**：立即切换语言
+- **无页面刷新**：无缝的语言转换
+- **会话持久性**：保存语言偏好
+- **跨设备同步**：语言设置同步
+
+#### 用户体验：
+- **直观界面**：轻松选择语言
+- **视觉指示器**：清晰的语言指示器
+- **快速访问**：一键切换语言
+- **响应式设计**：移动友好的语言选择
+
+### 2. 文化适应
+
+#### 区域内容：
+- **本地事件**：特定区域的预测市场
+- **文化节日**：当地节日庆祝活动
+- **区域体育**：当地体育赛事和联赛
+- **经济数据**：区域经济指标
+
+#### 文化元素：
+- **日期格式**：本地日期和时间格式
+- **数字格式**：区域数字格式
+- **货币显示**：本地货币偏好
+- **文化符号**：特定区域的符号和图标
+
+### 3. 技术实现
+
+#### 翻译系统：
+- **基于 JSON**：结构化的翻译文件
+- **键值对**：高效的翻译管理
+- **上下文支持**：上下文感知翻译
+- **复数形式**：每种语言的正确复数形式
+
+#### 内容管理：
+- **动态内容**：实时内容更新
+- **版本控制**：翻译版本管理
+- **质量保证**：翻译质量审查
+- **社区反馈**：用户翻译建议
+
+## 语言选择
+
+### 1. 自动检测
+
+#### 浏览器检测：
+- **语言检测**：自动语言检测
+- **地区检测**：地理位置检测
+- **用户代理**：浏览器语言偏好
+- **基于 IP**：基于地理 IP 的检测
+
+#### 智能默认值：
+- **首次访问**：自动语言选择
+- **回访用户**：记住的语言偏好
+- **设备同步**：跨设备语言同步
+- **回退**：英语作为默认回退
+
+### 2. 手动选择
+
+#### 语言菜单：
+- **下拉菜单**：轻松选择语言
+- **旗帜图标**：视觉语言指示器
+- **语言名称**：母语名称
+- **快速访问**：显眼的语言选择器
+
+#### 用户偏好：
+- **账户设置**：用户设置中的语言偏好
+- **个人资料管理**：用户资料中的语言
+- **持久选择**：保存的语言偏好
+- **全局设置**：全平台语言设置
+
+## 内容本地化
+
+### 1. 平台内容
+
+#### 用户界面：
+- **导航菜单**：翻译的导航元素
+- **按钮和标签**：所有 UI 元素已翻译
+- **错误消息**：本地化的错误消息
+- **成功通知**：本地化的成功消息
+
+#### 文档：
+- **帮助文章**：翻译的帮助文档
+- **教程**：本地化的教程内容
+- **常见问题解答**：翻译的常见问题
+- **服务条款**：本地化的法律文件
+
+### 2. 市场内容
+
+#### 事件描述：
+- **事件标题**：翻译的事件名称
+- **事件描述**：本地化的事件描述
+- **类别名称**：翻译的类别标签
+- **条件详情**：本地化的条件信息
+
+#### 市场数据：
+- **价格信息**：本地化的价格显示
+- **时间格式**：区域时间格式
+- **货币显示**：本地货币偏好
+- **统计数据**：本地化的数据展示
+
+## 区域功能
+
+### 1. 市场事件
+
+#### 本地市场：
+- **区域选举**：当地政治事件
+- **体育赛事**：当地体育联赛和球队
+- **经济指标**：区域经济数据
+- **文化事件**：当地文化庆祝活动
+
+#### 国际市场：
+- **全球事件**：具有本地背景的国际事件
+- **跨境**：影响多个地区的事件
+- **国际体育**：具有本地兴趣的全球体育
+- **经济数据**：国际经济指标
+
+### 2. 支付方式
+
+#### 本地支付：
+- **区域货币**：本地货币支持
+- **支付网关**：本地支付方式
+- **银行集成**：区域银行连接
+- **数字钱包**：本地数字钱包支持
+
+#### 加密货币支持：
+- **多链**：支持各种区块链
+- **本地交易所**：区域加密货币交易所
+- **稳定币**：本地稳定币偏好
+- **跨境**：国际加密货币交易
+
+## 质量保证
+
+### 1. 翻译质量
+
+#### 专业翻译：
+- **母语人士**：母语翻译人员
+- **专家审查**：主题专家审查
+- **文化准确性**：文化背景验证
+- **技术准确性**：技术术语一致性
+
+#### 质量控制：
+- **翻译审查**：多阶段审查流程
+- **用户反馈**：社区翻译反馈
+- **定期更新**：持续的翻译更新
+- **一致性检查**：翻译一致性验证
+
+### 2. 内容更新
+
+#### 实时更新：
+- **动态内容**：实时内容翻译
+- **新功能**：即时功能翻译
+- **市场更新**：实时市场翻译
+- **系统消息**：即时消息翻译
+
+#### 版本管理：
+- **翻译版本**：翻译的版本控制
+- **回滚能力**：翻译回滚功能
+- **A/B 测试**：翻译有效性测试
+- **性能监控**：翻译性能跟踪
+
+## 用户体验
+
+### 1. 可访问性
+
+#### 语言可访问性：
+- **屏幕阅读器**：特定语言的屏幕阅读器支持
+- **字体支持**：所有语言的正确字体渲染
+- **文本方向**：RTL/LTR 文本方向支持
+- **字符编码**：正确的字符编码
+
+#### 文化可访问性：
+- **文化敏感性**：文化上适当的内容
+- **当地习俗**：尊重当地习俗
+- **区域偏好**：区域用户偏好
+- **可访问性标准**：WCAG 合规
+
+### 2. 性能
+
+#### 加载速度：
+- **优化资产**：特定语言的资产优化
+- **缓存**：高效的翻译缓存
+- **CDN 支持**：全球内容分发
+- **压缩**：优化的文件压缩
+
+#### 资源管理：
+- **懒加载**：按需加载翻译
+- **内存效率**：高效的内存使用
+- **带宽优化**：减少带宽使用
+- **移动优化**：移动特定的优化
+
+## 未来增强
+
+### 1. 额外语言
+
+#### 计划语言：
+- **日语**：日语支持
+- **韩语**：韩语支持
+- **印地语**：印地语支持
+- **阿拉伯语**：阿拉伯语支持
+
+#### 扩展标准：
+- **用户需求**：对语言的高用户需求
+- **市场规模**：巨大的市场潜力
+- **技术可行性**：技术实现能力
+- **资源可用性**：翻译资源可用性
+
+### 2. 高级功能
+
+#### AI 驱动的翻译：
+- **机器学习**：AI 增强的翻译质量
+- **上下文感知**：上下文感知翻译
+- **实时翻译**：实时翻译能力
+- **语音支持**：基于语音的语言交互
+
+#### 增强的本地化：
+- **文化 AI**：AI 驱动的文化适应
+- **个性化**：个性化的语言体验
+- **区域 AI**：特定区域的 AI 功能
+- **智能默认值**：智能语言默认值
+
+### 3. 社区功能
+
+#### 用户贡献：
+- **翻译建议**：用户翻译改进
+- **社区审查**：社区翻译审查
+- **众包**：众包翻译项目
+- **质量投票**：社区质量投票
+
+#### 反馈系统：
+- **翻译反馈**：用户翻译反馈
+- **错误报告**：翻译错误报告
+- **功能请求**：语言功能请求
+- **改进建议**：翻译改进想法
+
+## 支持和资源
+
+### 1. 语言支持
+
+#### 帮助资源：
+- **语言指南**：特定语言的帮助指南
+- **翻译常见问题**：常见的翻译问题
+- **联系支持**：特定语言的支持联系方式
+- **社区论坛**：特定语言的社区论坛
+
+#### 文档：
+- **翻译手册**：全面的翻译指南
+- **API 文档**：特定语言的 API 文档
+- **开发者指南**：语言集成指南
+- **最佳实践**：翻译最佳实践
+
+### 2. 技术支持
+
+#### 开发者资源：
+- **翻译 API**：语言 API 文档
+- **集成指南**：语言集成指南
+- **SDK 支持**：语言 SDK 支持
+- **代码示例**：特定语言的代码示例
+
+#### 社区支持：
+- **开发者论坛**：语言开发论坛
+- **GitHub 仓库**：开源翻译项目
+- **社区聊天**：特定语言的聊天频道
+- **聚会小组**：当地语言聚会小组
 
 ---
 
-*For the latest information on multi-language support and updates, please check our official announcements.* 
+*有关多语言支持和更新的最新信息，请查看我们的官方公告。*

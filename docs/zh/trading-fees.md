@@ -1,309 +1,306 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 交易费用 (Trading Fees)
 
-# Trading Fees
+## 概述
 
-## Overview
+YC365 采用透明且具有竞争力的费用结构，旨在维持平台可持续性的同时，为交易者保持低成本。了解我们的费用结构有助于您做出明智的交易决策并准确计算您的潜在回报。
 
-YC365 operates with a transparent and competitive fee structure designed to maintain platform sustainability while keeping costs low for traders. Understanding our fee structure helps you make informed trading decisions and calculate your potential returns accurately.
+## 费用结构
 
-## Fee Structure
+### 平台交易费
 
-### Platform Trading Fee
+#### 标准交易费
+- **费率**：交易价值的 0.15% (1.5/1000)
+- **适用范围**：适用于所有已执行的交易
+- **计算方式**：费用 = 交易价值 × 0.0015
+- **扣除方式**：从交易收益中自动扣除
 
-#### Standard Trading Fee
-- **Rate**: 0.15% (1.5/1000) of trade value
-- **Application**: Applied to all executed trades
-- **Calculation**: Fee = Trade Value × 0.0015
-- **Deduction**: Automatically deducted from trade proceeds
+#### 费用计算方法
+- **交易价值**：计算为 代币数量 × 执行价格
+- **费用基数**：费用根据已执行交易的总价值计算
+- **四舍五入**：费用四舍五入至小数点后 6 位
+- **货币**：所有费用均以 USDT 计算和支付
 
-#### Fee Calculation Method
-- **Trade Value**: Calculated as Token Quantity × Execution Price
-- **Fee Base**: Fees calculated on the total value of executed trades
-- **Rounding**: Fees rounded to 6 decimal places
-- **Currency**: All fees calculated and paid in USDT
+### 网络费用 (Gas 费)
 
-### Network Fees (Gas Fees)
+#### BSC 网络费用
+- **区块链**：币安智能链 (BSC) 网络费用
+- **可变性**：费用根据网络拥堵情况而变化
+- **典型范围**：每笔交易 0.005 - 0.02 USDT
+- **支付方式**：以 BNB 支付（自动转换）
 
-#### BSC Network Fees
-- **Blockchain**: Binance Smart Chain (BSC) network fees
-- **Variability**: Fees vary based on network congestion
-- **Typical Range**: 0.005 - 0.02 USDT per transaction
-- **Payment**: Paid in BNB (automatically converted)
+#### Gas 费组成部分
+- **下单**：将订单提交到区块链的 Gas 费
+- **取消订单**：取消订单的 Gas 费
+- **交易执行**：执行匹配交易的 Gas 费
+- **结算**：事件结算和代币赎回的 Gas 费
 
-#### Gas Fee Components
-- **Order Placement**: Gas fee for submitting orders to blockchain
-- **Order Cancellation**: Gas fee for cancelling orders
-- **Trade Execution**: Gas fee for executing matched trades
-- **Settlement**: Gas fee for event settlement and token redemption
+## 详细费用示例
 
-## Detailed Fee Examples
+### 交易费用示例
 
-### Trading Fee Examples
+#### 示例 1：购买 YES 代币
+**场景**：以每个 0.60 USDT 的价格购买 1,000 个 YES 代币
 
-#### Example 1: Buying YES Tokens
-**Scenario**: Buy 1,000 YES tokens at 0.60 USDT each
+**计算**：
+- 交易价值：1,000 × 0.60 = 600 USDT
+- 平台费：600 × 0.0015 = 0.90 USDT
+- Gas 费：~0.01 USDT (估算)
+- **总成本**：600 + 0.90 + 0.01 = 600.91 USDT
 
-**Calculation**:
-- Trade Value: 1,000 × 0.60 = 600 USDT
-- Platform Fee: 600 × 0.0015 = 0.90 USDT
-- Gas Fee: ~0.01 USDT (estimated)
-- **Total Cost**: 600 + 0.90 + 0.01 = 600.91 USDT
+#### 示例 2：出售 NO 代币
+**场景**：以每个 0.75 USDT 的价格出售 500 个 NO 代币
 
-#### Example 2: Selling NO Tokens
-**Scenario**: Sell 500 NO tokens at 0.75 USDT each
+**计算**：
+- 交易价值：500 × 0.75 = 375 USDT
+- 平台费：375 × 0.0015 = 0.5625 USDT
+- Gas 费：~0.01 USDT (估算)
+- **净收益**：375 - 0.5625 - 0.01 = 374.4275 USDT
 
-**Calculation**:
-- Trade Value: 500 × 0.75 = 375 USDT
-- Platform Fee: 375 × 0.0015 = 0.5625 USDT
-- Gas Fee: ~0.01 USDT (estimated)
-- **Net Proceeds**: 375 - 0.5625 - 0.01 = 374.4275 USDT
+#### 示例 3：多次部分成交
+**场景**：2,000 个代币的买单分 3 部分成交
 
-#### Example 3: Multiple Partial Fills
-**Scenario**: Buy order for 2,000 tokens filled in 3 parts
+**成交 1**：800 个代币，价格 0.55 USDT
+- 交易价值：800 × 0.55 = 440 USDT
+- 平台费：440 × 0.0015 = 0.66 USDT
 
-**Fill 1**: 800 tokens at 0.55 USDT
-- Trade Value: 800 × 0.55 = 440 USDT
-- Platform Fee: 440 × 0.0015 = 0.66 USDT
+**成交 2**：700 个代币，价格 0.56 USDT
+- 交易价值：700 × 0.56 = 392 USDT
+- 平台费：392 × 0.0015 = 0.588 USDT
 
-**Fill 2**: 700 tokens at 0.56 USDT
-- Trade Value: 700 × 0.56 = 392 USDT
-- Platform Fee: 392 × 0.0015 = 0.588 USDT
+**成交 3**：500 个代币，价格 0.57 USDT
+- 交易价值：500 × 0.57 = 285 USDT
+- 平台费：285 × 0.0015 = 0.4275 USDT
 
-**Fill 3**: 500 tokens at 0.57 USDT
-- Trade Value: 500 × 0.57 = 285 USDT
-- Platform Fee: 285 × 0.0015 = 0.4275 USDT
+**总计**：
+- 合并交易价值：1,117 USDT
+- 合并平台费：1.6755 USDT
+- 合并 Gas 费：~0.03 USDT (3 笔交易)
+- **总成本**：1,117 + 1.6755 + 0.03 = 1,118.7055 USDT
 
-**Total**:
-- Combined Trade Value: 1,117 USDT
-- Combined Platform Fees: 1.6755 USDT
-- Combined Gas Fees: ~0.03 USDT (3 transactions)
-- **Total Cost**: 1,117 + 1.6755 + 0.03 = 1,118.7055 USDT
+### 结算费用示例
 
-### Settlement Fee Examples
+#### 获胜头寸结算
+**场景**：持有 1,000 个 YES 代币，事件决议为 YES
 
-#### Winning Position Settlement
-**Scenario**: Hold 1,000 YES tokens, event resolves to YES
+**结算**：
+- 代币价值：1,000 × 1.00 = 1,000 USDT (YES 代币每个价值 1 USDT)
+- 平台费：已在原始交易期间扣除
+- Gas 费：~0.01 USDT (结算交易)
+- **净结算**：1,000 - 0.01 = 999.99 USDT
 
-**Settlement**:
-- Token Value: 1,000 × 1.00 = 1,000 USDT (YES tokens worth 1 USDT each)
-- Platform Fee: Already deducted during original trade
-- Gas Fee: ~0.01 USDT (settlement transaction)
-- **Net Settlement**: 1,000 - 0.01 = 999.99 USDT
+#### 亏损头寸结算
+**场景**：持有 800 个 NO 代币，事件决议为 YES
 
-#### Losing Position Settlement
-**Scenario**: Hold 800 NO tokens, event resolves to YES
+**结算**：
+- 代币价值：800 × 0.00 = 0 USDT (NO 代币每个价值 0 USDT)
+- 平台费：已在原始交易期间扣除
+- Gas 费：0 USDT (无价值代币无需结算)
+- **净结算**：0 USDT
 
-**Settlement**:
-- Token Value: 800 × 0.00 = 0 USDT (NO tokens worth 0 USDT each)
-- Platform Fee: Already deducted during original trade
-- Gas Fee: 0 USDT (no settlement needed for worthless tokens)
-- **Net Settlement**: 0 USDT
-
-## Fee Transparency
+## 费用透明度
 
-### Real-time Fee Display
+### 实时费用显示
 
-#### Order Placement Interface
-- **Fee Preview**: Estimated fees shown before order submission
-- **Total Cost**: Complete cost breakdown including fees
-- **Fee Calculator**: Interactive fee calculator available
-- **Gas Estimate**: Real-time gas fee estimates
+#### 下单界面
+- **费用预览**：提交订单前显示估算费用
+- **总成本**：包括费用在内的完整成本明细
+- **费用计算器**：提供交互式费用计算器
+- **Gas 估算**：实时 Gas 费估算
 
-#### Trade Confirmation
-- **Exact Fees**: Precise fee amounts displayed at confirmation
-- **Fee Breakdown**: Detailed breakdown of all fee components
-- **Net Amount**: Clear display of net proceeds or costs
-- **Receipt**: Complete transaction receipt with all fees
-
-### Fee History and Tracking
+#### 交易确认
+- **确切费用**：确认时显示精确的费用金额
+- **费用明细**：所有费用组成部分的详细明细
+- **净额**：清晰显示净收益或成本
+- **收据**：包含所有费用的完整交易收据
+
+### 费用历史和跟踪
 
-#### Portfolio Dashboard
-- **Fee Summary**: Total fees paid over different time periods
-- **Fee Analytics**: Fee analysis and trends
-- **Tax Reporting**: Fee data formatted for tax purposes
-- **Export Options**: Download fee data in various formats
-
-#### Transaction History
-- **Per-Trade Fees**: Fees associated with each individual trade
-- **Cumulative Fees**: Running total of fees paid
-- **Fee Categories**: Breakdown by fee type (trading, gas, etc.)
-- **Time Filters**: Filter fee data by date ranges
-
-## Fee Optimization
-
-### Minimizing Trading Fees
+#### 投资组合仪表板
+- **费用摘要**：不同时间段支付的总费用
+- **费用分析**：费用分析和趋势
+- **税务报告**：为税务目的格式化的费用数据
+- **导出选项**：以各种格式下载费用数据
+
+#### 交易历史
+- **单笔交易费用**：与每笔单独交易相关的费用
+- **累计费用**：支付费用的累计总额
+- **费用类别**：按费用类型（交易、Gas 等）分类
+- **时间过滤器**：按日期范围筛选费用数据
+
+## 费用优化
+
+### 最小化交易费用
 
-#### Order Size Optimization
-- **Larger Orders**: Larger single orders are more fee-efficient than multiple small orders
-- **Order Batching**: Combine multiple small trades into larger orders when possible
-- **Threshold Analysis**: Calculate minimum trade sizes for cost-effectiveness
-
-#### Timing Strategies
-- **Gas Price Monitoring**: Execute trades during low gas price periods
-- **Network Congestion**: Avoid trading during peak network activity
-- **Fee Forecasting**: Use historical data to predict optimal trading times
-
-### Gas Fee Management
-
-#### Network Optimization
-- **Gas Price Settings**: Adjust gas price settings based on urgency
-- **Transaction Batching**: Batch multiple operations when possible
-- **Off-Peak Trading**: Trade during off-peak hours for lower gas fees
-- **Fee Alerts**: Set up alerts for favorable gas price conditions
-
-#### BSC Network Efficiency
-- **Fast Confirmation**: BSC's fast block times reduce waiting costs
-- **Low Base Fees**: BSC's low base fees compared to other networks
-- **Predictable Costs**: More predictable gas costs than other networks
-
-## Fee Comparison
-
-### Industry Comparison
-
-#### Traditional Prediction Markets
-- **Centralized Platforms**: Typically 2-5% fees
-- **YC365 Advantage**: 0.15% significantly lower than traditional platforms
-- **Hidden Fees**: Many platforms have hidden withdrawal or deposit fees
-- **Transparency**: YC365 provides complete fee transparency
-
-#### Other DeFi Platforms
-- **DEX Trading**: Typically 0.25-0.30% plus gas fees
-- **AMM Platforms**: Often 0.30% plus slippage costs
-- **Competitive Positioning**: YC365's 0.15% rate is highly competitive
-- **Added Value**: Lower fees with prediction market specialization
-
-### Fee Value Proposition
-
-#### Platform Benefits
-- **Infrastructure**: Fees support platform development and maintenance
-- **Security**: Fees contribute to security audits and improvements
-- **Liquidity**: Fees help incentivize market making and liquidity provision
-- **Innovation**: Fees fund continued platform innovation and features
-
-#### User Benefits
-- **Low Costs**: Among the lowest fees in the prediction market space
-- **Transparency**: Complete transparency in fee structure and calculation
-- **No Hidden Fees**: No additional deposit, withdrawal, or account fees
-- **Value**: High-quality trading experience at competitive costs
-
-## Special Fee Situations
-
-### Fee Waivers and Discounts
-
-#### Current Policy
-- **No Discounts**: Currently no volume-based discounts available
-- **Equal Treatment**: All users pay the same fee rate
-- **Future Considerations**: Volume discounts may be considered in the future
-
-#### Promotional Periods
-- **Launch Promotions**: Occasional promotional periods with reduced fees
-- **Event Specials**: Special fee rates for specific events or periods
-- **Community Rewards**: Potential fee rebates for community participation
-
-### Fee-Free Operations
-
-#### No-Fee Activities
-- **Order Placement**: No fee for placing orders (only gas fees)
-- **Order Cancellation**: No platform fee for cancelling orders
-- **Account Management**: No fees for account-related activities
-- **Information Access**: No fees for accessing market data and information
-
-#### Gas-Only Operations
-- **Deposits**: Only gas fees for depositing funds
-- **Withdrawals**: Only gas fees for withdrawing funds
-- **Portfolio Viewing**: No fees for viewing portfolio and history
-
-## Fee Payment and Processing
-
-### Payment Method
-
-#### Automatic Deduction
-- **Trade Execution**: Fees automatically deducted during trade execution
-- **USDT Payment**: All platform fees paid in USDT
-- **Real-time Processing**: Fees processed immediately with trades
-- **Smart Contract**: Fee deduction handled by smart contracts
-
-#### Gas Fee Payment
-- **BNB Required**: Gas fees paid in BNB (BSC's native token)
-- **Automatic Conversion**: Platform may facilitate BNB acquisition
-- **Wallet Balance**: Users responsible for maintaining BNB balance
-- **Fee Estimation**: Real-time gas fee estimation provided
-
-### Fee Distribution
-
-#### Platform Operations
-- **Development**: Fees support ongoing platform development
-- **Maintenance**: Fees cover infrastructure and operational costs
-- **Security**: Fees fund security measures and audits
-- **Customer Support**: Fees support user support services
-
-#### Future Enhancements
-- **Feature Development**: Fees fund new feature development
-- **Scaling Solutions**: Fees support platform scaling initiatives
-- **Community Programs**: Potential community reward programs
-- **Ecosystem Growth**: Fees support overall ecosystem development
-
-## Tax Implications
-
-### Trading Fee Tax Treatment
-
-#### Tax Deductibility
-- **Business Expense**: Trading fees may be deductible as business expenses
-- **Investment Costs**: Fees may be treated as investment-related costs
-- **Jurisdiction Dependent**: Tax treatment varies by jurisdiction
-- **Professional Advice**: Consult tax professionals for specific guidance
-
-#### Record Keeping
-- **Fee Documentation**: Platform provides complete fee records
-- **Tax Reports**: Fee data available in tax-friendly formats
-- **Historical Data**: Complete historical fee data maintained
-- **Export Features**: Easy export of fee data for tax purposes
-
-### Reporting Requirements
-
-#### Documentation Provided
-- **Transaction Records**: Complete transaction history with fees
-- **Annual Summaries**: Annual fee summaries available
-- **Real-time Data**: Real-time access to all fee information
-- **Multiple Formats**: Data available in various formats (CSV, PDF, etc.)
-
-#### Tax Jurisdiction Considerations
-- **Local Regulations**: Users responsible for local tax compliance
-- **Professional Guidance**: Recommend consulting tax professionals
-- **Record Maintenance**: Users should maintain their own tax records
-- **Regulatory Changes**: Stay informed about changing tax regulations
-
-## Future Fee Structure
-
-### Planned Enhancements
-
-#### Volume-Based Discounts
-- **Tiered Structure**: Potential introduction of volume-based fee tiers
-- **Loyalty Rewards**: Possible loyalty program with fee benefits
-- **Market Maker Incentives**: Special rates for liquidity providers
-- **Community Benefits**: Fee benefits for active community members
-
-#### Token-Based Benefits
-- **Platform Token**: Potential platform token for fee discounts
-- **Staking Rewards**: Fee discounts for token staking participants
-- **Governance Participation**: Fee benefits for governance participation
-- **Long-term Holdings**: Rewards for long-term platform users
-
-### Technology Improvements
-
-#### Layer 2 Integration
-- **Reduced Gas Fees**: Layer 2 solutions for lower gas costs
-- **Faster Transactions**: Improved transaction speed and efficiency
-- **Scalability**: Enhanced platform scalability and capacity
-- **User Experience**: Better overall user experience
-
-#### Fee Optimization
-- **Smart Routing**: Intelligent routing for optimal fee structures
-- **Batch Processing**: Enhanced batch processing for fee efficiency
-- **Dynamic Fees**: Potential dynamic fee structures based on market conditions
-- **Cross-chain Support**: Multi-chain support for fee optimization
+#### 订单规模优化
+- **大额订单**：大额单笔订单比多个小额订单更具费用效率
+- **订单批处理**：尽可能将多个小额交易合并为大额订单
+- **阈值分析**：计算成本效益的最小交易规模
+
+#### 时机策略
+- **Gas 价格监控**：在低 Gas 价格期间执行交易
+- **网络拥堵**：避免在网络活动高峰期交易
+- **费用预测**：使用历史数据预测最佳交易时间
+
+### Gas 费管理
+
+#### 网络优化
+- **Gas 价格设置**：根据紧急程度调整 Gas 价格设置
+- **交易批处理**：尽可能批处理多个操作
+- **非高峰期交易**：在非高峰时段交易以获得更低的 Gas 费
+- **费用警报**：设置有利 Gas 价格条件的警报
+
+#### BSC 网络效率
+- **快速确认**：BSC 的快速出块时间减少了等待成本
+- **低基础费用**：与其他网络相比，BSC 的基础费用较低
+- **可预测成本**：比其他网络更可预测的 Gas 成本
+
+## 费用比较
+
+### 行业比较
+
+#### 传统预测市场
+- **中心化平台**：通常 2-5% 的费用
+- **YC365 优势**：0.15% 显著低于传统平台
+- **隐性费用**：许多平台有隐性提现或存款费用
+- **透明度**：YC365 提供完全的费用透明度
+
+#### 其他 DeFi 平台
+- **DEX 交易**：通常 0.25-0.30% 加上 Gas 费
+- **AMM 平台**：通常 0.30% 加上滑点成本
+- **竞争定位**：YC365 的 0.15% 费率极具竞争力
+- **增值**：预测市场专业化带来的更低费用
+
+### 费用价值主张
+
+#### 平台利益
+- **基础设施**：费用支持平台开发和维护
+- **安全**：费用有助于安全审计和改进
+- **流动性**：费用有助于激励做市和流动性提供
+- **创新**：费用资助持续的平台创新和功能
+
+#### 用户利益
+- **低成本**：预测市场领域最低的费用之一
+- **透明度**：费用结构和计算完全透明
+- **无隐性费用**：无额外存款、提现或账户费用
+- **价值**：以具有竞争力的成本提供高质量的交易体验
+
+## 特殊费用情况
+
+### 费用减免和折扣
+
+#### 当前政策
+- **无折扣**：目前没有基于交易量的折扣
+- **平等待遇**：所有用户支付相同的费率
+- **未来考虑**：未来可能会考虑交易量折扣
+
+#### 促销期
+- **发布促销**：偶尔会有费用降低的促销期
+- **事件特惠**：特定事件或期间的特惠费率
+- **社区奖励**：社区参与的潜在费用返还
+
+### 免手续费操作
+
+#### 无费用活动
+- **下单**：下单无费用（仅 Gas 费）
+- **取消订单**：取消订单无平台费
+- **账户管理**：账户相关活动无费用
+- **信息访问**：访问市场数据和信息无费用
+
+#### 仅 Gas 费操作
+- **存款**：存入资金仅需 Gas 费
+- **提现**：提取资金仅需 Gas 费
+- **投资组合查看**：查看投资组合和历史记录无费用
+
+## 费用支付和处理
+
+### 支付方式
+
+#### 自动扣除
+- **交易执行**：交易执行期间自动扣除费用
+- **USDT 支付**：所有平台费用以 USDT 支付
+- **实时处理**：费用随交易立即处理
+- **智能合约**：费用扣除由智能合约处理
+
+#### Gas 费支付
+- **需要 BNB**：Gas 费以 BNB（BSC 的原生代币）支付
+- **自动转换**：平台可能促进 BNB 获取
+- **钱包余额**：用户负责维持 BNB 余额
+- **费用估算**：提供实时 Gas 费估算
+
+### 费用分配
+
+#### 平台运营
+- **开发**：费用支持持续的平台开发
+- **维护**：费用涵盖基础设施和运营成本
+- **安全**：费用资助安全措施和审计
+- **客户支持**：费用支持用户支持服务
+
+#### 未来增强
+- **功能开发**：费用资助新功能开发
+- **扩展解决方案**：费用支持平台扩展计划
+- **社区计划**：潜在的社区奖励计划
+- **生态系统增长**：费用支持整体生态系统发展
+
+## 税务影响
+
+### 交易费税务处理
+
+#### 税务减免
+- **业务支出**：交易费用可作为业务支出扣除
+- **投资成本**：费用可被视为投资相关成本
+- **取决于司法管辖区**：税务处理因司法管辖区而异
+- **专业建议**：咨询税务专业人士以获得具体指导
+
+#### 记录保存
+- **费用文件**：平台提供完整的费用记录
+- **税务报告**：提供税务友好格式的费用数据
+- **历史数据**：保留完整的历史费用数据
+- **导出功能**：轻松导出费用数据用于税务目的
+
+### 报告要求
+
+#### 提供的文件
+- **交易记录**：包含费用的完整交易历史
+- **年度摘要**：提供年度费用摘要
+- **实时数据**：实时访问所有费用信息
+- **多种格式**：提供各种格式的数据（CSV, PDF 等）
+
+#### 税务司法管辖区考虑因素
+- **当地法规**：用户负责当地税务合规
+- **专业指导**：建议咨询税务专业人士
+- **记录维护**：用户应维护自己的税务记录
+- **监管变化**：随时了解不断变化的税务法规
+
+## 未来费用结构
+
+### 计划的增强功能
+
+#### 基于交易量的折扣
+- **分层结构**：可能引入基于交易量的费用层级
+- **忠诚度奖励**：可能的忠诚度计划和费用优惠
+- **做市商激励**：流动性提供者的特惠费率
+- **社区福利**：活跃社区成员的费用福利
+
+#### 基于代币的福利
+- **平台代币**：潜在的平台代币用于费用折扣
+- **质押奖励**：代币质押参与者的费用折扣
+- **治理参与**：治理参与的费用福利
+- **长期持有**：长期平台用户的奖励
+
+### 技术改进
+
+#### Layer 2 集成
+- **降低 Gas 费**：Layer 2 解决方案以降低 Gas 成本
+- **更快的交易**：提高交易速度和效率
+- **可扩展性**：增强平台可扩展性和容量
+- **用户体验**：更好的整体用户体验
+
+#### 费用优化
+- **智能路由**：用于最佳费用结构的智能路由
+- **批处理**：增强的批处理以提高费用效率
+- **动态费用**：基于市场条件的潜在动态费用结构
+- **跨链支持**：用于费用优化的多链支持
 
 ---
 
-*For the latest information on trading fees and fee structure updates, please check our official announcements.* 
+*有关交易费用和费用结构更新的最新信息，请查看我们的官方公告。*

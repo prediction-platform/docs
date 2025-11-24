@@ -1,475 +1,472 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# YC365 项目白皮书
 
-# YC365 Project Whitepaper
+## 执行摘要
 
-## Executive Summary
+YC365 是一个建立在币安智能链 (BSC) 上的革命性去中心化预测市场平台，旨在通过区块链技术的力量为全球用户提供安全、透明和高效的预测市场交易体验。我们的使命是创建一个中立、值得信赖的去中心化预测平台，使预测市场成为信息聚合、风险管理和民主决策的有力工具。
 
-YC365 is a revolutionary decentralized prediction market platform built on Binance Smart Chain (BSC) that aims to provide secure, transparent, and efficient prediction market trading experiences for global users through the power of blockchain technology. Our mission is to create a neutral, trustworthy decentralized prediction platform that makes prediction markets a powerful tool for information aggregation, risk management, and democratic decision-making.
+### 核心价值主张
+- **低成本交易**：仅 0.15% 的交易费用，业内最低
+- **快速结算**：基于 BSC 的 3 秒确认时间
+- **全球可访问性**：支持 6 种语言的国际化平台
+- **安全可靠**：经专业审计的智能合约
+- **混合架构**：结合链上和链下组件的优势
 
-### Core Value Propositions
-- **Low-Cost Trading**: Only 0.15% trading fees, the lowest in the industry
-- **Fast Settlement**: 3-second confirmation times based on BSC
-- **Global Accessibility**: International platform supporting 6 languages
-- **Security & Reliability**: Professionally audited smart contracts
-- **Hybrid Architecture**: Combining advantages of on-chain and off-chain components
+## 1. 项目概览
 
-## 1. Project Overview
+### 1.1 项目愿景
 
-### 1.1 Project Vision
+YC365 致力于成为全球领先的去中心化预测市场平台，通过创新的技术架构和经济模型，为个人用户、机构投资者和开发人员提供高质量的预测市场服务。我们相信预测市场可以：
 
-YC365 is committed to becoming the world's leading decentralized prediction market platform, providing high-quality prediction market services for individual users, institutional investors, and developers through innovative technical architecture and economic models. We believe prediction markets can:
+- **聚合集体智慧**：通过市场机制整合分散的信息和意见
+- **提供风险管理工具**：帮助用户对冲不确定事件的风险
+- **促进价格发现**：揭示未来事件的真实市场预期
+- **激励准确预测**：通过利润奖励机制鼓励准确预测
 
-- **Aggregate Collective Wisdom**: Integrate dispersed information and opinions through market mechanisms
-- **Provide Risk Management Tools**: Help users hedge against uncertain events
-- **Promote Price Discovery**: Reveal true market expectations for future events
-- **Incentivize Accurate Predictions**: Encourage accurate predictions through profit reward mechanisms
+### 1.2 核心使命
 
-### 1.2 Core Mission
+- **中立性**：为所有用户提供公平、公正的平台服务
+- **安全性**：通过多种安全措施保护用户资产
+- **可信赖性**：基于可验证智能合约的透明运营
+- **高效性**：在 BSC 网络上实现快速、低成本的交易
+- **可访问性**：提供多语言用户友好界面
 
-- **Neutrality**: Provide fair, unbiased platform services for all users
-- **Security**: Protect user assets through multiple security measures
-- **Trustworthiness**: Transparent operations based on verifiable smart contracts
-- **Efficiency**: Achieve fast, low-cost transactions on the BSC network
-- **Accessibility**: Provide multi-language user-friendly interfaces
+### 1.3 市场定位
 
-### 1.3 Market Positioning
+YC365 在预测市场领域拥有独特的竞争优势：
 
-YC365 has unique competitive advantages in the prediction market space:
+| 比较维度 | YC365 | 传统博彩 | 其他预测平台 | 纯 DeFi 解决方案 |
+|---------|-------|---------|-------------|----------------|
+| 费用 | 0.15% | 5-10% | 2-5% | 1-3% |
+| 去中心化 | 混合架构 | 中心化 | 部分去中心化 | 完全去中心化 |
+| 用户体验 | 专业级 | 简单 | 复杂 | 高技术门槛 |
+| 全球访问 | 支持 | 地理限制 | 部分支持 | 支持 |
+| 多语言 | 6 种语言 | 有限 | 有限 | 有限 |
 
-| Comparison Dimension | YC365 | Traditional Betting | Other Prediction Platforms | Pure DeFi Solutions |
-|---------------------|-------|---------------------|---------------------------|---------------------|
-| Fees | 0.15% | 5-10% | 2-5% | 1-3% |
-| Decentralization | Hybrid Architecture | Centralized | Partially Decentralized | Fully Decentralized |
-| User Experience | Professional Grade | Simple | Complex | High Technical Barrier |
-| Global Access | Supported | Geographic Restrictions | Partially Supported | Supported |
-| Multi-language | 6 Languages | Limited | Limited | Limited |
+## 2. 技术架构
 
-## 2. Technical Architecture
+### 2.1 混合架构设计
 
-### 2.1 Hybrid Architecture Design
+YC365 采用创新的混合架构，结合了链上和链下组件的优势：
 
-YC365 adopts an innovative hybrid architecture that combines the advantages of on-chain and off-chain components:
+#### 链上组件 (智能合约)
+- **资产管理**：用户资金的安全托管
+- **交易执行**：透明的订单撮合和结算
+- **事件决议**：事件结果的不可篡改记录
+- **自动支付**：基于智能合约的奖励分配
 
-#### On-Chain Components (Smart Contracts)
-- **Asset Management**: Secure custody of user funds
-- **Trading Execution**: Transparent order matching and settlement
-- **Event Resolution**: Immutable recording of event outcomes
-- **Automated Payouts**: Smart contract-based reward distribution
+#### 链下组件 (传统基础设施)
+- **订单簿管理**：高性能订单撮合引擎
+- **市场数据**：实时价格源和市场统计
+- **用户界面**：响应式 Web 应用程序
+- **预言机集成**：用于事件决议的可靠数据源
 
-#### Off-Chain Components (Traditional Infrastructure)
-- **Order Book Management**: High-performance order matching engine
-- **Market Data**: Real-time price feeds and market statistics
-- **User Interface**: Responsive web application
-- **Oracle Integration**: Reliable data sources for event resolution
+### 2.2 技术优势
 
-### 2.2 Technical Advantages
+#### 建立在 BSC 上
+- **低费用**：所有交易的 Gas 成本极低
+- **快速确认**：3 秒出块时间实现快速执行
+- **EVM 兼容性**：完全兼容以太坊虚拟机
+- **经过验证的安全性**：久经考验的区块链基础设施
+
+#### 智能合约安全
+- **专业审计**：所有合约均由领先的安全公司审计
+- **开源**：合约代码公开可查
+- **可升级设计**：用于未来改进的安全升级机制
+- **多重签名控制**：关键操作的分布式控制
 
-#### Built on BSC
-- **Low Fees**: Minimal gas costs for all transactions
-- **Fast Confirmation**: 3-second block times for quick execution
-- **EVM Compatibility**: Full Ethereum Virtual Machine compatibility
-- **Proven Security**: Battle-tested blockchain infrastructure
+#### 可扩展基础设施
+- **高吞吐量**：支持数千并发用户
+- **全球 CDN**：全球快速加载时间
+- **冗余系统**：99.9% 的正常运行时间，具有故障转移保护
+- **移动优化**：跨所有设备的无缝体验
+
+### 2.3 安全机制
+
+#### 智能合约安全
+- **形式化验证**：合约正确性的数学证明
+- **漏洞赏金计划**：激励性安全研究
+- **定期审计**：季度安全评估
+- **安全开发**：代码开发中的行业最佳实践
 
-#### Smart Contract Security
-- **Professional Audits**: All contracts audited by leading security firms
-- **Open Source**: Contract code publicly available for review
-- **Upgradeable Design**: Secure upgrade mechanisms for future improvements
-- **Multi-signature Controls**: Distributed control for critical operations
+#### 运营安全
+- **多重签名钱包**：分布式密钥管理
+- **冷存储**：大部分资金离线存储
+- **访问控制**：基于角色的权限和认证
+- **监控系统**：全天候安全监控和警报
 
-#### Scalable Infrastructure
-- **High Throughput**: Support for thousands of concurrent users
-- **Global CDN**: Fast loading times worldwide
-- **Redundant Systems**: 99.9% uptime with failover protection
-- **Mobile Optimization**: Seamless experience across all devices
-
-### 2.3 Security Mechanisms
-
-#### Smart Contract Security
-- **Formal Verification**: Mathematical proofs of contract correctness
-- **Bug Bounty Programs**: Incentivized security research
-- **Regular Audits**: Quarterly security assessments
-- **Secure Development**: Industry best practices in code development
-
-#### Operational Security
-- **Multi-signature Wallets**: Distributed key management
-- **Cold Storage**: Offline storage for majority of funds
-- **Access Controls**: Role-based permissions and authentication
-- **Monitoring Systems**: 24/7 security monitoring and alerting
-
-## 3. Economic Model
-
-### 3.1 Token Economics
-
-#### YES/NO Token System
-- **Binary Outcome Tokens**: Binary outcome tokens for each prediction market
-- **1:1 Backing**: All tokens backed by USDT reserves
-- **Automatic Settlement**: Smart contracts handle all settlements
-- **Instant Liquidity**: Immediate access to trading upon market creation
-
-#### Trading Fee Structure
-- **Low Cost**: Only 0.15% (1.5/1000) trading fees
-- **Transparent Pricing**: No hidden fees or charges
-- **Competitive Rates**: Among the lowest in the prediction market space
-- **Value Addition**: Fees support platform development and security
-
-### 3.2 Points System
-
-YC365 introduces a comprehensive points system that rewards users for platform engagement:
-
-#### Points Earning Mechanisms
-- **Invitation Rewards**: Both inviter and invitee receive 1,000 points
-- **Deposit Rewards**: 1,000 points per $1,000 deposit
-- **Trading Rewards**: 100 points per completed trade
-- **Market Creation**: 2,000 points for each approved market creation
-
-#### Airdrop Mechanism
-- **Quarterly Distribution**: Airdrops distributed every 3 months
-- **Points-Based Allocation**: Token amount based on points balance
-- **Tier Multipliers**: Higher tiers receive bonus multipliers
-- **Community Rewards**: Additional tokens for community participation
-
-### 3.3 Revenue Model
-
-#### Primary Revenue Sources
-- **Trading Fees**: 0.15% of platform trading fees
-- **Premium Features**: Subscription fees for premium users
-- **API Access**: Usage fees for developer APIs
-- **Enterprise Services**: Custom services for institutional users
-
-#### Revenue Distribution
-- **Platform Development**: 40% for technical development and improvements
-- **Security Maintenance**: 25% for security audits and monitoring
-- **Market Promotion**: 20% for user acquisition and brand building
-- **Team Incentives**: 15% for team development and incentives
-
-## 4. Market Mechanisms
-
-### 4.1 Prediction Market Principles
-
-#### Market Types
-- **Binary Markets**: Simple predictions with YES/NO outcomes
-- **Multi-Outcome Markets**: Complex predictions with multiple possible outcomes
-- **Continuous Markets**: Real-time value prediction markets
-- **Conditional Markets**: Markets dependent on other outcomes
-
-#### Price Discovery Mechanisms
-- **Order Book Matching**: Traditional order book system
-- **Automated Market Makers**: AMM mechanisms providing liquidity
-- **Dynamic Pricing**: Real-time price adjustments based on supply and demand
-- **Arbitrage Opportunities**: Automatic arbitrage of price differences
-
-### 4.2 Market Creation Process
-
-#### Role Division
-- **Data Administrators**: Event creation and content management
-- **Asset Administrators**: Blockchain operations and settlement management
-- **Super Administrators**: Platform configuration and system management
-
-#### Quality Control
-- **Event Verification**: Ensure objectivity and verifiability of events
-- **Multi-language Support**: Localized content in 6 languages
-- **Compliance Review**: Ensure regulatory compliance
-- **Community Feedback**: User participation in quality assessment
-
-### 4.3 Event Resolution Mechanism
-
-#### Oracle System
-- **Multiple Data Sources**: Verification from multiple independent data sources
-- **Time Locks**: Time windows for dispute resolution
-- **Community Governance**: Community participation in dispute resolution
-- **Automatic Execution**: Smart contract automatic settlement
-
-#### Dispute Resolution
-- **Tiered Resolution**: Escalation from automation to human intervention
-- **Transparent Process**: All dispute resolution processes are public
-- **Fair Mechanisms**: Ensure fair treatment for all participants
-- **Final Arbitration**: Community governance final decision authority
-
-## 5. Ecosystem
-
-### 5.1 User Types
-
-#### Individual Traders
-- **Retail Participants**: Individual users trading based on personal beliefs
-- **Arbitrage Traders**: Traders exploiting price inefficiencies
-- **Market Makers**: Liquidity providers earning from spreads
-
-#### Institutional Users
-- **Hedge Funds**: Using markets for risk hedging
-- **Corporate Clients**: Enterprise risk management tools
-- **Research Institutions**: Academic research and data analysis
-- **Media Companies**: News and content creation
-
-#### Developers
-- **DApp Developers**: Building applications based on YC365
-- **API Integrators**: Third parties integrating YC365 services
-- **Data Analysts**: Market data analysis and insights
-- **Community Contributors**: Open source contributions and community building
-
-### 5.2 Market Categories
-
-#### Sports Events
-- **Football/Soccer**: World Cup, Champions League, domestic leagues
-- **Basketball**: NBA, FIBA World Cup, Olympics
-- **Tennis**: Grand Slams, ATP/WTA tours
-- **Other Sports**: Baseball, hockey, golf, motorsports
-
-#### Political Events
-- **Elections**: Presidential, parliamentary, local elections
-- **Policy Decisions**: Referendum outcomes, legislative votes
-- **Political Developments**: Appointments, resignations, scandals
-- **International Relations**: Trade agreements, diplomatic developments
-
-#### Economic Indicators
-- **Macroeconomic Data**: GDP growth, inflation rates, employment
-- **Central Bank Decisions**: Interest rate changes, policy announcements
-- **Market Performance**: Stock indices, commodity prices
-- **Corporate Events**: Earnings results, merger announcements
-
-#### Technology and Innovation
-- **Product Launches**: New device releases, software updates
-- **Adoption Metrics**: User growth, market penetration
-- **Regulatory Decisions**: Technology policy, approval processes
-- **Industry Developments**: Standards adoption, partnership announcements
-
-### 5.3 Partner Ecosystem
-
-#### Technical Partners
-- **Blockchain Infrastructure**: BSC, Ethereum, other Layer 2s
-- **Oracle Services**: Chainlink, Band Protocol
-- **Wallet Integration**: MetaMask, WalletConnect
-- **DeFi Protocols**: Uniswap, PancakeSwap
-
-#### Content Partners
-- **News Media**: Reuters, Bloomberg, CoinDesk
-- **Data Providers**: Market data and analytics services
-- **Educational Institutions**: Universities and research institutions
-- **Community Organizations**: User communities and interest groups
-
-## 6. Governance and Compliance
-
-### 6.1 Governance Mechanisms
-
-#### Community Governance
-- **Token Holder Voting**: Democratic voting on important decisions
-- **Proposal System**: Community members can propose improvements
-- **Tiered Governance**: Tiered governance from technical to strategic decisions
-- **Transparency**: All governance processes are public and transparent
-
-#### Technical Governance
-- **Code Review**: Community review of open source code
-- **Security Audits**: Regular security assessments and audits
-- **Upgrade Mechanisms**: Secure upgrades and feature improvements
-- **Emergency Response**: Rapid response mechanisms for security incidents
-
-### 6.2 Compliance Framework
-
-#### Regulatory Compliance
-- **Multi-jurisdiction**: Compliance across supported regions
-- **Legal Review**: Legal assessment for each market type
-- **User Protection**: Strong user protection measures
-- **Transparency**: Complete transparency in market operations
-
-#### Anti-Money Laundering (AML)
-- **KYC Procedures**: Know Your Customer procedures
-- **Transaction Monitoring**: Monitoring of suspicious transaction activities
-- **Reporting Mechanisms**: Regulatory reporting and compliance reporting
-- **Risk Assessment**: Continuous risk assessment and mitigation
-
-### 6.3 Risk Management
-
-#### Technical Risks
-- **Smart Contract Risks**: Contract vulnerabilities and attack risks
-- **Network Risks**: Blockchain network interruption risks
-- **Oracle Risks**: Data source manipulation and error risks
-- **Upgrade Risks**: System upgrade and change risks
-
-#### Operational Risks
-- **Liquidity Risks**: Insufficient market liquidity risks
-- **Market Risks**: Price volatility and market crash risks
-- **Regulatory Risks**: Regulatory policy change risks
-- **Reputation Risks**: Platform reputation and trust risks
-
-## 7. Roadmap and Development Plans
-
-### 7.1 Short-term Goals (2025 Q3-Q4)
-
-#### Platform Enhancement
-- **Advanced Order Types**: Stop-loss, iceberg, and conditional orders
-- **Mobile Applications**: Native iOS and Android apps
-- **API Expansion**: Enhanced developer APIs
-- **Performance Optimization**: Reduced latency and improved scalability
-
-#### Market Expansion
-- **New Market Categories**: Weather, space exploration, scientific discoveries
-- **Synthetic Markets**: AI-generated prediction markets
-- **Cross-chain Integration**: Multi-blockchain support
-- **Institutional Features**: Advanced tools for professional traders
-
-### 7.2 Medium-term Goals (2026 Q1-Q2)
-
-#### Innovation Features
-- **AI Integration**: Machine learning for market analysis
-- **Social Trading**: Follow and copy successful traders
-- **Prediction Pools**: Collaborative prediction mechanisms
-- **Gamification**: Achievement systems and leaderboards
-
-#### Ecosystem Growth
-- **DeFi Integration**: Yield farming and liquidity mining
-- **Governance Token**: Community governance mechanisms
-- **Partnership Program**: Integration with other DeFi protocols
-- **Global Expansion**: Regional partnerships and localization
-
-### 7.3 Long-term Vision (2026 Q3-Q4)
-
-#### Market Leadership
-- **Industry Standard**: Become the industry standard for prediction markets
-- **Mainstream Adoption**: Bridge prediction markets to mainstream users
-- **Innovation Hub**: Pioneer new prediction market mechanisms
-- **Global Impact**: Contribute to better decision-making worldwide
-
-#### Technical Evolution
-- **Layer 2 Solutions**: Scaling solutions for increased throughput
-- **Cross-chain Interoperability**: Seamless multi-blockchain integration
-- **AI-Driven**: Artificial intelligence-driven market insights
-- **Quantum Security**: Future-proof security technology
-
-## 8. Team and Advisors
-
-### 8.1 Core Team
-
-#### Technical Team
-- **Blockchain Development**: Experienced smart contract developers
-- **Frontend Development**: User interface and experience experts
-- **Backend Development**: Scalable system architects
-- **Security Experts**: Cybersecurity and audit experts
-
-#### Business Team
-- **Product Management**: Product strategy and roadmap planning
-- **Marketing**: User acquisition and brand building
-- **Business Development**: Partnership relationships and strategic cooperation
-- **Customer Support**: Multi-language customer service team
-
-### 8.2 Advisory Team
-
-#### Technical Advisors
-- **Blockchain Experts**: Renowned blockchain technology experts
-- **DeFi Experts**: Decentralized finance domain experts
-- **Security Advisors**: Cybersecurity and audit experts
-- **Academic Advisors**: University and research institution experts
-
-#### Business Advisors
-- **Industry Experts**: Prediction market and gambling industry experts
-- **Regulatory Experts**: Legal and compliance experts
-- **Investment Advisors**: Venture capital and strategic investment experts
-- **Market Experts**: Global market expansion experts
-
-## 9. Finance and Investment
-
-### 9.1 Funding Requirements
-
-#### Development Funding
-- **Technical Development**: Core platform development and maintenance
-- **Security Audits**: Regular security audits and assessments
-- **Infrastructure**: Server and network infrastructure
-- **Team Building**: Talent recruitment and team development
-
-#### Operational Funding
-- **Marketing**: User acquisition and brand building
-- **Compliance Costs**: Legal and regulatory compliance fees
-- **Customer Support**: Multi-language customer service
-- **Partnerships**: Strategic partnership relationships
-
-### 9.2 Revenue Projections
-
-#### Revenue Model
-- **Trading Fees**: Primary revenue source based on trading volume
-- **Subscription Services**: Premium user subscription fees
-- **API Services**: Developer API usage fees
-- **Enterprise Services**: Custom services for institutional users
-
-#### Growth Projections
-- **User Growth**: Expected annual growth rate of 200-300%
-- **Trading Volume Growth**: Expected annual growth rate of 300-500%
-- **Revenue Growth**: Expected annual growth rate of 250-400%
-- **Market Share**: Target to become top 3 in the industry
-
-### 9.3 Investment Returns
-
-#### Investor Returns
-- **Equity Appreciation**: Equity appreciation from company value growth
-- **Dividend Policy**: Shareholder dividends after profitability
-- **Exit Mechanisms**: IPO or acquisition exit opportunities
-- **Governance Participation**: Voting rights on major decisions
-
-#### Risk Mitigation
-- **Diversified Investment**: Diversified investment risk
-- **Insurance Coverage**: Insurance coverage for key risks
-- **Emergency Funds**: Emergency funds for market volatility
-- **Risk Monitoring**: Continuous risk assessment and monitoring
-
-## 10. Risks and Challenges
-
-### 10.1 Technical Risks
-
-#### Smart Contract Risks
-- **Code Vulnerabilities**: Potential vulnerabilities in smart contracts
-- **Upgrade Risks**: System upgrades may introduce new issues
-- **Network Attacks**: Malicious attacks and hacker intrusions
-- **Oracle Manipulation**: Manipulation risks of external data sources
-
-#### Mitigation Measures
-- **Multiple Audits**: Independent audits by multiple security companies
-- **Bug Bounty Programs**: Reward programs incentivizing security research
-- **Insurance Coverage**: Insurance protection for key risks
-- **Emergency Response**: Rapid response mechanisms for security incidents
-
-### 10.2 Market Risks
-
-#### Competitive Risks
-- **New Entrants**: Entry of new competitors
-- **Technology Substitution**: New technologies replacing existing solutions
-- **Price Competition**: Price wars and fee compression
-- **User Churn**: Users switching to other platforms
-
-#### Regulatory Risks
-- **Policy Changes**: Uncertainty in regulatory policies
-- **Compliance Costs**: Increasing compliance costs
-- **Geographic Restrictions**: Usage restrictions in certain regions
-- **Legal Disputes**: Potential legal disputes and litigation
-
-### 10.3 Operational Risks
-
-#### Liquidity Risks
-- **Market Liquidity**: Insufficient liquidity in prediction markets
-- **User Participation**: Declining user participation
-- **Event Quality**: Low-quality events affecting platform reputation
-- **Technical Failures**: System failures and service interruptions
-
-#### Mitigation Strategies
-- **Market Diversification**: Various types of prediction markets
-- **User Incentives**: Points and reward systems to incentivize participation
-- **Quality Control**: Strict event quality review
-- **Redundant Systems**: Multiple backups and failover mechanisms
-
-## 11. Conclusion
-
-YC365 represents the next evolution of prediction markets, creating a secure, efficient, and accessible platform for everyone by combining the best practices of traditional finance with cutting-edge blockchain technology.
-
-### Core Advantages
-- **Technical Innovation**: Hybrid architecture providing optimal user experience and security
-- **Cost Advantage**: Industry's lowest trading fees
-- **Global Accessibility**: Multi-language support and global availability
-- **Community-Driven**: Strong community governance and participation mechanisms
-
-### Future Outlook
-YC365 is committed to becoming the world's leading decentralized prediction market platform, providing high-quality prediction market services for global users through continuous technological innovation, user-friendly design, and strong community support.
-
-We believe that through the power of collective wisdom and market mechanisms, YC365 can make important contributions to better decision-making, risk management, and information aggregation, ultimately driving mainstream adoption of prediction market technology.
+## 3. 经济模型
+
+### 3.1 代币经济学
+
+#### YES/NO 代币系统
+- **二元结果代币**：每个预测市场的二元结果代币
+- **1:1 支持**：所有代币均由 USDT 储备支持
+- **自动结算**：智能合约处理所有结算
+- **即时流动性**：市场创建后立即获得交易权限
+
+#### 交易费用结构
+- **低成本**：仅 0.15% (1.5/1000) 的交易费用
+- **透明定价**：无隐藏费用或收费
+- **有竞争力的费率**：预测市场领域最低费率之一
+- **增值**：费用支持平台开发和安全
+
+### 3.2 积分系统
+
+YC365 引入了全面的积分系统，奖励用户参与平台：
+
+#### 积分获取机制
+- **邀请奖励**：邀请人和被邀请人均获得 1,000 积分
+- **存款奖励**：每存入 1,000 美元获得 1,000 积分
+- **交易奖励**：每完成一笔交易获得 100 积分
+- **市场创建**：每个获批的市场创建获得 2,000 积分
+
+#### 空投机制
+- **季度分配**：每 3 个月分发一次空投
+- **基于积分的分配**：代币数量基于积分余额
+- **等级乘数**：更高等级获得奖金乘数
+- **社区奖励**：社区参与的额外代币
+
+### 3.3 收入模型
+
+#### 主要收入来源
+- **交易费用**：平台交易费用的 0.15%
+- **高级功能**：高级用户的订阅费
+- **API 访问**：开发者 API 的使用费
+- **企业服务**：机构用户的定制服务
+
+#### 收入分配
+- **平台开发**：40% 用于技术开发和改进
+- **安全维护**：25% 用于安全审计和监控
+- **市场推广**：20% 用于用户获取和品牌建设
+- **团队激励**：15% 用于团队发展和激励
+
+## 4. 市场机制
+
+### 4.1 预测市场原则
+
+#### 市场类型
+- **二元市场**：具有 YES/NO 结果的简单预测
+- **多结果市场**：具有多个可能结果的复杂预测
+- **连续市场**：实时价值预测市场
+- **条件市场**：依赖于其他结果的市场
+
+#### 价格发现机制
+- **订单簿撮合**：传统订单簿系统
+- **自动做市商**：提供流动性的 AMM 机制
+- **动态定价**：基于供需的实时价格调整
+- **套利机会**：价格差异的自动套利
+
+### 4.2 市场创建流程
+
+#### 角色分工
+- **数据管理员**：事件创建和内容管理
+- **资产管理员**：区块链操作和结算管理
+- **超级管理员**：平台配置和系统管理
+
+#### 质量控制
+- **事件验证**：确保事件的客观性和可验证性
+- **多语言支持**：6 种语言的本地化内容
+- **合规审查**：确保监管合规
+- **社区反馈**：用户参与质量评估
+
+### 4.3 事件决议机制
+
+#### 预言机系统
+- **多数据源**：来自多个独立数据源的验证
+- **时间锁**：争议解决的时间窗口
+- **社区治理**：社区参与争议解决
+- **自动执行**：智能合约自动结算
+
+#### 争议解决
+- **分级解决**：从自动化升级到人工干预
+- **透明流程**：所有争议解决流程公开
+- **公平机制**：确保所有参与者受到公平对待
+- **最终仲裁**：社区治理最终决策权
+
+## 5. 生态系统
+
+### 5.1 用户类型
+
+#### 个人交易者
+- **散户参与者**：基于个人信念进行交易的个人用户
+- **套利交易者**：利用价格效率低下的交易者
+- **做市商**：从价差中获利的流动性提供者
+
+#### 机构用户
+- **对冲基金**：使用市场进行风险对冲
+- **企业客户**：企业风险管理工具
+- **研究机构**：学术研究和数据分析
+- **媒体公司**：新闻和内容创作
+
+#### 开发者
+- **DApp 开发者**：构建基于 YC365 的应用程序
+- **API 集成商**：集成 YC365 服务的第三方
+- **数据分析师**：市场数据分析和见解
+- **社区贡献者**：开源贡献和社区建设
+
+### 5.2 市场类别
+
+#### 体育赛事
+- **足球**：世界杯、欧冠、国内联赛
+- **篮球**：NBA、FIBA 世界杯、奥运会
+- **网球**：大满贯、ATP/WTA 巡回赛
+- **其他体育**：棒球、曲棍球、高尔夫、赛车
+
+#### 政治事件
+- **选举**：总统、议会、地方选举
+- **政策决定**：公投结果、立法投票
+- **政治动态**：任命、辞职、丑闻
+- **国际关系**：贸易协定、外交动态
+
+#### 经济指标
+- **宏观经济数据**：GDP 增长、通货膨胀率、就业
+- **央行决策**：利率变化、政策公告
+- **市场表现**：股指、商品价格
+- **企业事件**：财报结果、合并公告
+
+#### 技术与创新
+- **产品发布**：新设备发布、软件更新
+- **采用指标**：用户增长、市场渗透率
+- **监管决策**：技术政策、审批流程
+- **行业发展**：标准采用、合作公告
+
+### 5.3 合作伙伴生态系统
+
+#### 技术合作伙伴
+- **区块链基础设施**：BSC、以太坊、其他 Layer 2
+- **预言机服务**：Chainlink、Band Protocol
+- **钱包集成**：MetaMask、WalletConnect
+- **DeFi 协议**：Uniswap、PancakeSwap
+
+#### 内容合作伙伴
+- **新闻媒体**：路透社、彭博社、CoinDesk
+- **数据提供商**：市场数据和分析服务
+- **教育机构**：大学和研究机构
+- **社区组织**：用户社区和兴趣小组
+
+## 6. 治理与合规
+
+### 6.1 治理机制
+
+#### 社区治理
+- **代币持有者投票**：对重要决策进行民主投票
+- **提案系统**：社区成员可以提出改进建议
+- **分级治理**：从技术到战略决策的分级治理
+- **透明度**：所有治理流程公开透明
+
+#### 技术治理
+- **代码审查**：开源代码的社区审查
+- **安全审计**：定期安全评估和审计
+- **升级机制**：安全升级和功能改进
+- **应急响应**：安全事件的快速响应机制
+
+### 6.2 合规框架
+
+#### 监管合规
+- **多司法管辖区**：跨支持区域的合规性
+- **法律审查**：每种市场类型的法律评估
+- **用户保护**：强有力的用户保护措施
+- **透明度**：市场运营的完全透明
+
+#### 反洗钱 (AML)
+- **KYC 程序**：了解你的客户程序
+- **交易监控**：可疑交易活动的监控
+- **报告机制**：监管报告和合规报告
+- **风险评估**：持续的风险评估和缓解
+
+### 6.3 风险管理
+
+#### 技术风险
+- **智能合约风险**：合约漏洞和攻击风险
+- **网络风险**：区块链网络中断风险
+- **预言机风险**：数据源操纵和错误风险
+- **升级风险**：系统升级和变更风险
+
+#### 运营风险
+- **流动性风险**：预测市场流动性不足风险
+- **市场风险**：价格波动和市场崩盘风险
+- **监管风险**：监管政策变化风险
+- **声誉风险**：平台声誉和信任风险
+
+## 7. 路线图和发展计划
+
+### 7.1 短期目标 (2025 Q3-Q4)
+
+#### 平台增强
+- **高级订单类型**：止损、冰山和条件订单
+- **移动应用程序**：原生 iOS 和 Android 应用程序
+- **API 扩展**：增强的开发者 API
+- **性能优化**：降低延迟并提高可扩展性
+
+#### 市场扩展
+- **新市场类别**：天气、太空探索、科学发现
+- **合成市场**：AI 生成的预测市场
+- **跨链集成**：多区块链支持
+- **机构功能**：面向专业交易者的高级工具
+
+### 7.2 中期目标 (2026 Q1-Q2)
+
+#### 创新功能
+- **AI 集成**：用于市场分析的机器学习
+- **社交交易**：关注并复制成功的交易者
+- **预测池**：协作预测机制
+- **游戏化**：成就系统和排行榜
+
+#### 生态系统增长
+- **DeFi 集成**：收益耕作和流动性挖矿
+- **治理代币**：社区治理机制
+- **合作伙伴计划**：与其他 DeFi 协议集成
+- **全球扩张**：区域合作伙伴关系和本地化
+
+### 7.3 长期愿景 (2026 Q3-Q4)
+
+#### 市场领导地位
+- **行业标准**：成为预测市场的行业标准
+- **主流采用**：将预测市场连接到主流用户
+- **创新中心**：开拓新的预测市场机制
+- **全球影响**：为全球更好的决策做出贡献
+
+#### 技术演进
+- **Layer 2 解决方案**：提高吞吐量的扩容解决方案
+- **跨链互操作性**：无缝多区块链集成
+- **AI 驱动**：人工智能驱动的市场洞察
+- **量子安全**：面向未来的安全技术
+
+## 8. 团队和顾问
+
+### 8.1 核心团队
+
+#### 技术团队
+- **区块链开发**：经验丰富的智能合约开发人员
+- **前端开发**：用户界面和体验专家
+- **后端开发**：可扩展系统架构师
+- **安全专家**：网络安全和审计专家
+
+#### 业务团队
+- **产品管理**：产品战略和路线图规划
+- **市场营销**：用户获取和品牌建设
+- **业务发展**：合作伙伴关系和战略合作
+- **客户支持**：多语言客户服务团队
+
+### 8.2 顾问团队
+
+#### 技术顾问
+- **区块链专家**：知名区块链技术专家
+- **DeFi 专家**：去中心化金融领域专家
+- **安全顾问**：网络安全和审计专家
+- **学术顾问**：大学和研究机构专家
+
+#### 业务顾问
+- **行业专家**：预测市场和博彩行业专家
+- **监管专家**：法律和合规专家
+- **投资顾问**：风险投资和战略投资专家
+- **市场专家**：全球市场扩张专家
+
+## 9. 财务与投资
+
+### 9.1 资金需求
+
+#### 开发资金
+- **技术开发**：核心平台开发和维护
+- **安全审计**：定期安全审计和评估
+- **基础设施**：服务器和网络基础设施
+- **团队建设**：人才招聘和团队发展
+
+#### 运营资金
+- **市场营销**：用户获取和品牌建设
+- **合规成本**：法律和监管合规费用
+- **客户支持**：多语言客户服务
+- **合作伙伴关系**：战略合作伙伴关系
+
+### 9.2 收入预测
+
+#### 收入模型
+- **交易费用**：基于交易量的主要收入来源
+- **订阅服务**：高级用户订阅费
+- **API 服务**：开发者 API 使用费
+- **企业服务**：机构用户的定制服务
+
+#### 增长预测
+- **用户增长**：预期年增长率 200-300%
+- **交易量增长**：预期年增长率 300-500%
+- **收入增长**：预期年增长率 250-400%
+- **市场份额**：目标成为行业前三
+
+### 9.3 投资回报
+
+#### 投资者回报
+- **股权增值**：公司价值增长带来的股权增值
+- **股息政策**：盈利后的股东分红
+- **退出机制**：IPO 或收购退出机会
+- **治理参与**：重大决策的投票权
+
+#### 风险缓解
+- **多元化投资**：分散投资风险
+- **保险覆盖**：关键风险的保险覆盖
+- **应急资金**：应对市场波动的应急资金
+- **风险监控**：持续的风险评估和监控
+
+## 10. 风险与挑战
+
+### 10.1 技术风险
+
+#### 智能合约风险
+- **代码漏洞**：智能合约中的潜在漏洞
+- **升级风险**：系统升级可能引入新问题
+- **网络攻击**：恶意攻击和黑客入侵
+- **预言机操纵**：外部数据源的操纵风险
+
+#### 缓解措施
+- **多重审计**：多家安全公司的独立审计
+- **漏洞赏金计划**：激励安全研究的奖励计划
+- **保险覆盖**：关键风险的保险保护
+- **应急响应**：安全事件的快速响应机制
+
+### 10.2 市场风险
+
+#### 竞争风险
+- **新进入者**：新竞争对手的进入
+- **技术替代**：新技术取代现有解决方案
+- **价格竞争**：价格战和费用压缩
+- **用户流失**：用户切换到其他平台
+
+#### 监管风险
+- **政策变化**：监管政策的不确定性
+- **合规成本**：合规成本增加
+- **地理限制**：某些地区的使用限制
+- **法律纠纷**：潜在的法律纠纷和诉讼
+
+### 10.3 运营风险
+
+#### 流动性风险
+- **市场流动性**：预测市场流动性不足
+- **用户参与**：用户参与度下降
+- **事件质量**：低质量事件影响平台声誉
+- **技术故障**：系统故障和服务中断
+
+#### 缓解策略
+- **市场多元化**：多种类型的预测市场
+- **用户激励**：积分和奖励系统激励参与
+- **质量控制**：严格的事件质量审查
+- **冗余系统**：多重备份和故障转移机制
+
+## 11. 结论
+
+YC365 代表了预测市场的下一次进化，通过结合传统金融的最佳实践与尖端区块链技术，为每个人创建一个安全、高效且可访问的平台。
+
+### 核心优势
+- **技术创新**：提供最佳用户体验和安全性的混合架构
+- **成本优势**：行业最低的交易费用
+- **全球可访问性**：多语言支持和全球可用性
+- **社区驱动**：强大的社区治理和参与机制
+
+### 未来展望
+YC365 致力于成为全球领先的去中心化预测市场平台，通过持续的技术创新、用户友好的设计和强大的社区支持，为全球用户提供高质量的预测市场服务。
+
+我们相信，通过集体智慧和市场机制的力量，YC365 可以为更好的决策、风险管理和信息聚合做出重要贡献，最终推动预测市场技术的主流采用。
 
 ---
 
-**Join the YC365 ecosystem and experience the future of prediction markets!**
+**加入 YC365 生态系统，体验预测市场的未来！**
 
-*This whitepaper outlines the vision, technical architecture, economic model, and development plans of the YC365 project. As the project continues to evolve, we will continuously update and refine relevant content to ensure accuracy and timeliness of information.*
+*本白皮书概述了 YC365 项目的愿景、技术架构、经济模型和发展计划。随着项目的不断发展，我们将持续更新和完善相关内容，以确保信息的准确性和时效性。*

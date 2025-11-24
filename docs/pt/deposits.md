@@ -1,141 +1,138 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Depósitos
 
-# Deposits
+## Visão Geral
 
-## Overview
+O YC365 suporta vários métodos de depósito para fornecer aos usuários opções de financiamento flexíveis e convenientes. Todos os depósitos são processados com segurança na rede BSC (Binance Smart Chain).
 
-YC365 supports multiple deposit methods to provide users with flexible and convenient funding options. All deposits are processed securely on the BSC (Binance Smart Chain) network.
+## Carteiras Suportadas
 
-## Supported Wallets
+O YC365 suporta todas as carteiras compatíveis com EVM, incluindo:
 
-YC365 supports all EVM-compatible wallets, including:
+- **MetaMask** - Mais popular e amplamente utilizada
+- **WalletConnect** - Suporte multi-carteira
+- **Trust Wallet** - Carteira mobile-first
+- **Binance Wallet** - Carteira oficial da Binance
+- **Coinbase Wallet** - Interface amigável
+- **Qualquer carteira compatível com EVM**
 
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! note "Requisitos da Carteira"
+    Sua carteira deve suportar a rede BSC (Binance Smart Chain) para usar o YC365.
 
-!!! note "Wallet Requirements"
-    Your wallet must support BSC (Binance Smart Chain) network to use YC365.
+## Métodos de Depósito Suportados
 
-## Supported Deposit Methods
-
-### BSC Network Deposits
+### Depósitos na Rede BSC
 
 #### USDT (BEP-20)
-- **Minimum Deposit**: 10 USDT
-- **Processing Time**: 5-20 seconds
-- **Network Fee**: ~0.0005 BNB
-- **Network**: Binance Smart Chain (BSC) only
+- **Depósito Mínimo**: 10 USDT
+- **Tempo de Processamento**: 5-20 segundos
+- **Taxa de Rede**: ~0,0005 BNB
+- **Rede**: Apenas Binance Smart Chain (BSC)
 
-## How to Deposit
+## Como Depositar
 
-### Step 1: Access the Platform
-1. Visit **dapp.yc365.io** in your web browser
-2. Ensure you have a compatible EVM wallet installed
+### Passo 1: Acesse a Plataforma
+1. Visite **dapp.yc365.io** no seu navegador web
+2. Certifique-se de ter uma carteira EVM compatível instalada
 
-### Step 2: Wallet Setup
-1. **Install Wallet** (if not already installed):
-   - Download and install MetaMask or any other EVM-compatible wallet
-   - Follow the wallet's setup instructions
+### Passo 2: Configuração da Carteira
+1. **Instale a Carteira** (se ainda não estiver instalada):
+   - Baixe e instale MetaMask ou qualquer outra carteira compatível com EVM
+   - Siga as instruções de configuração da carteira
 
-2. **Connect to BSC Network**:
-   - Open your wallet and switch to BSC Mainnet
-   - If BSC network is not available, add it manually:
-     - **Network Name**: BSC Mainnet
-     - **RPC URL**: https://bsc-dataseed1.binance.org/
+2. **Conecte-se à Rede BSC**:
+   - Abra sua carteira e mude para BSC Mainnet
+   - Se a rede BSC não estiver disponível, adicione-a manualmente:
+     - **Nome da Rede**: BSC Mainnet
+     - **URL RPC**: https://bsc-dataseed1.binance.org/
      - **Chain ID**: 56
-     - **Currency Symbol**: BNB
+     - **Símbolo da Moeda**: BNB
      - **Block Explorer**: https://bscscan.com/
 
-3. **Ensure Sufficient Balance**:
-   - Make sure your wallet has USDT (BEP-20) tokens
-   - Ensure you have enough BNB for gas fees
+3. **Garanta Saldo Suficiente**:
+   - Certifique-se de que sua carteira tenha tokens USDT (BEP-20)
+   - Certifique-se de ter BNB suficiente para taxas de gás
 
-### Step 3: Connect and Deposit
-1. **Connect Wallet**:
-   - Click the "Connect Wallet" button on dapp.yc365.io
-   - Select your wallet (MetaMask, etc.)
-   - Approve the connection in your wallet
+### Passo 3: Conectar e Depositar
+1. **Conectar Carteira**:
+   - Clique no botão "Connect Wallet" em dapp.yc365.io
+   - Selecione sua carteira (MetaMask, etc.)
+   - Aprove a conexão em sua carteira
 
-2. **Initiate Deposit**:
-   - Look for the **"Deposit"** button on the platform
-   - Click the deposit button to start the process
+2. **Iniciar Depósito**:
+   - Procure o botão **"Deposit"** na plataforma
+   - Clique no botão de depósito para iniciar o processo
 
-3. **Complete Transaction**:
-   - Follow the on-screen prompts to complete the deposit
-   - Confirm the transaction in your wallet
-   - Pay the required gas fees
+3. **Completar Transação**:
+   - Siga as instruções na tela para completar o depósito
+   - Confirme a transação em sua carteira
+   - Pague as taxas de gás necessárias
 
-### Step 4: Confirmation
-1. **Wait for Processing**:
-   - Wait 5-20 seconds for the transaction to be processed
-   - The platform will automatically detect your deposit
+### Passo 4: Confirmação
+1. **Aguarde o Processamento**:
+   - Aguarde 5-20 segundos para que a transação seja processada
+   - A plataforma detectará automaticamente seu depósito
 
-2. **Verify Deposit**:
-   - Check your vault balance to see the deposited USDT amount
-   - The deposit process is now complete
+2. **Verificar Depósito**:
+   - Verifique o saldo do seu cofre para ver o valor depositado em USDT
+   - O processo de depósito está agora completo
 
-!!! success "Deposit Complete"
-    Once you see the USDT amount in your vault, the deposit process is fully completed and you can start trading.
+!!! success "Depósito Completo"
+    Assim que você vir o valor em USDT no seu cofre, o processo de depósito está totalmente concluído e você pode começar a negociar.
 
-## Important Notes
+## Notas Importantes
 
-!!! warning "Security Reminders"
-    - Always double-check the deposit address
-    - Only send USDT (BEP-20) on BSC network
-    - Ensure you're using the correct network (BSC)
-    - Keep your private keys secure
-    - Never share your wallet's private keys or seed phrase
-    - Always verify you're on the official dapp.yc365.io website
+!!! warning "Lembretes de Segurança"
+    - Sempre verifique o endereço de depósito
+    - Envie apenas USDT (BEP-20) na rede BSC
+    - Certifique-se de estar usando a rede correta (BSC)
+    - Mantenha suas chaves privadas seguras
+    - Nunca compartilhe as chaves privadas ou frase semente da sua carteira
+    - Sempre verifique se você está no site oficial dapp.yc365.io
 
-!!! info "Processing Times"
-    - Most deposits are processed within 5-20 seconds
-    - During high network congestion, processing may take up to 1-3 minutes
-    - Contact support if funds haven't appeared after 5 minutes
+!!! info "Tempos de Processamento"
+    - A maioria dos depósitos é processada em 5-20 segundos
+    - Durante alta congestão da rede, o processamento pode levar de 1 a 3 minutos
+    - Contate o suporte se os fundos não aparecerem após 5 minutos
 
-## Deposit Limits
+## Limites de Depósito
 
-| Account Level | Daily Limit | Monthly Limit |
-|---------------|-------------|---------------|
-| Basic        | $1,000      | $10,000       |
-| Verified     | $10,000     | $100,000      |
-| Premium      | $50,000     | $500,000      |
+| Nível da Conta | Limite Diário | Limite Mensal |
+|----------------|---------------|---------------|
+| Básico         | $1.000        | $10.000       |
+| Verificado     | $10.000       | $100.000      |
+| Premium        | $50.000       | $500.000      |
 
-## Troubleshooting
+## Solução de Problemas
 
-### Common Issues
+### Problemas Comuns
 
-**Q: My deposit hasn't appeared in my vault**
-A: Check the blockchain explorer to confirm the transaction has been confirmed. If confirmed but not credited, contact support with your transaction hash.
+**P: Meu depósito não apareceu no meu cofre**
+R: Verifique o explorador de blockchain para confirmar se a transação foi confirmada. Se confirmada, mas não creditada, contate o suporte com seu hash de transação.
 
-**Q: I sent funds to the wrong network**
-A: Unfortunately, funds sent to unsupported networks cannot be recovered. Only USDT (BEP-20) on BSC network is supported. Always verify the network before sending.
+**P: Enviei fundos para a rede errada**
+R: Infelizmente, fundos enviados para redes não suportadas não podem ser recuperados. Apenas USDT (BEP-20) na rede BSC é suportado. Sempre verifique a rede antes de enviar.
 
-**Q: My wallet won't connect to the platform**
-A: Ensure you're using a compatible EVM wallet (MetaMask, WalletConnect, etc.) and that you're connected to BSC Mainnet.
+**P: Minha carteira não conecta à plataforma**
+R: Certifique-se de estar usando uma carteira EVM compatível (MetaMask, WalletConnect, etc.) e de estar conectado à BSC Mainnet.
 
-**Q: The transaction failed**
-A: Check if you have sufficient BNB for gas fees. Increase gas limit if needed or try again during lower network congestion.
+**P: A transação falhou**
+R: Verifique se você tem BNB suficiente para taxas de gás. Aumente o limite de gás se necessário ou tente novamente durante menor congestão da rede.
 
-**Q: I can't see the deposit button**
-A: Make sure you're connected to the correct wallet and network (BSC Mainnet). Refresh the page if necessary.
+**P: Não consigo ver o botão de depósito**
+R: Certifique-se de estar conectado à carteira e rede corretas (BSC Mainnet). Atualize a página se necessário.
 
-## Support
+## Suporte
 
-If you encounter any issues with deposits, please contact our support team with:
-- Your wallet address
-- Transaction hash
-- Screenshot of the transaction
-- Description of the issue
-- Network used (BSC Mainnet)
+Se você encontrar algum problema com depósitos, entre em contato com nossa equipe de suporte com:
+- Seu endereço de carteira
+- Hash da transação
+- Captura de tela da transação
+- Descrição do problema
+- Rede usada (BSC Mainnet)
 
-!!! tip "Quick Support"
-    For faster support, include your wallet address and transaction hash when reporting issues.
+!!! tip "Suporte Rápido"
+    Para suporte mais rápido, inclua seu endereço de carteira e hash de transação ao relatar problemas.
 
 ---
 
-*For the latest deposit information and updates, please check our official announcements.* 
+*Para as informações mais recentes sobre depósitos e atualizações, verifique nossos anúncios oficiais.*

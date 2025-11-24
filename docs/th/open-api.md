@@ -1,76 +1,73 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
-
 # Open API
 
-## Overview
+## ภาพรวม
 
-YC365 provides a comprehensive Open API that enables developers to integrate prediction market functionality into their applications, build custom trading interfaces, and access real-time market data. Our API is designed with developer experience in mind, offering RESTful endpoints with comprehensive documentation and SDK support.
+YC365 ให้บริการ Open API ที่ครอบคลุมซึ่งช่วยให้นักพัฒนาสามารถรวมฟังก์ชันการทำงานของตลาดการทำนายผลเข้ากับแอปพลิเคชันของตน สร้างอินเทอร์เฟซการซื้อขายที่กำหนดเอง และเข้าถึงข้อมูลตลาดแบบเรียลไทม์ API ของเราได้รับการออกแบบโดยคำนึงถึงประสบการณ์ของนักพัฒนา โดยนำเสนอจุดสิ้นสุด (Endpoints) แบบ RESTful พร้อมเอกสารประกอบที่ครอบคลุมและการรองรับ SDK
 
-## API Features
+## คุณสมบัติ API
 
-### 🔌 **Core Capabilities**
-- **Market Data**: Real-time price feeds, volume, and market statistics
-- **Trading Operations**: Place orders, manage positions, and execute trades
-- **User Management**: Account information, balances, and transaction history
-- **Event Management**: Create, monitor, and resolve prediction markets
-- **WebSocket Support**: Real-time data streaming for live updates
+### 🔌 **ความสามารถหลัก**
+- **ข้อมูลตลาด**: ฟีดราคา ปริมาณ และสถิติตลาดแบบเรียลไทม์
+- **การดำเนินการซื้อขาย**: วางคำสั่ง จัดการตำแหน่ง และดำเนินการซื้อขาย
+- **การจัดการผู้ใช้**: ข้อมูลบัญชี ยอดคงเหลือ และประวัติการทำธุรกรรม
+- **การจัดการเหตุการณ์**: สร้าง ตรวจสอบ และแก้ไขตลาดการทำนายผล
+- **การรองรับ WebSocket**: การสตรีมข้อมูลแบบเรียลไทม์สำหรับการอัปเดตสด
 
-### 🛡️ **Security & Authentication**
-- **API Key Authentication**: Secure access using API keys
-- **Rate Limiting**: Fair usage policies to ensure platform stability
-- **Request Signing**: Cryptographic request verification
-- **IP Whitelisting**: Enhanced security through IP restrictions
+### 🛡️ **ความปลอดภัยและการตรวจสอบสิทธิ์**
+- **การตรวจสอบสิทธิ์ด้วยคีย์ API**: การเข้าถึงที่ปลอดภัยโดยใช้คีย์ API
+- **การจำกัดอัตรา (Rate Limiting)**: นโยบายการใช้งานที่เป็นธรรมเพื่อให้มั่นใจถึงความเสถียรของแพลตฟอร์ม
+- **การลงนามคำขอ**: การตรวจสอบคำขอด้วยการเข้ารหัส
+- **การอนุญาต IP (IP Whitelisting)**: ความปลอดภัยที่เพิ่มขึ้นผ่านข้อจำกัด IP
 
-## Getting Started
+## การเริ่มต้นใช้งาน
 
-### 1. API Access
+### 1. การเข้าถึง API
 
-#### **Registration Process**
-1. **Create Account**: Sign up for a YC365 account
-2. **API Key Generation**: Generate your API keys in the dashboard
-3. **Documentation Access**: Access comprehensive API documentation
-4. **Testing Environment**: Use sandbox environment for development
+#### **กระบวนการลงทะเบียน**
+1. **สร้างบัญชี**: ลงทะเบียนบัญชี YC365
+2. **สร้างคีย์ API**: สร้างคีย์ API ของคุณในแดชบอร์ด
+3. **เข้าถึงเอกสาร**: เข้าถึงเอกสาร API ที่ครอบคลุม
+4. **สภาพแวดล้อมการทดสอบ**: ใช้สภาพแวดล้อม Sandbox สำหรับการพัฒนา
 
-#### **API Key Management**
-- **Primary Key**: Full access to all API endpoints
-- **Read-Only Key**: Limited to data retrieval operations
-- **Custom Scopes**: Granular permission control
-- **Key Rotation**: Regular key updates for enhanced security
+#### **การจัดการคีย์ API**
+- **คีย์หลัก**: เข้าถึงจุดสิ้นสุด API ทั้งหมดได้อย่างเต็มที่
+- **คีย์อ่านอย่างเดียว**: จำกัดเฉพาะการดำเนินการดึงข้อมูล
+- **ขอบเขตที่กำหนดเอง**: การควบคุมสิทธิ์แบบละเอียด
+- **การหมุนเวียนคีย์**: การอัปเดตคีย์เป็นประจำเพื่อความปลอดภัยที่เพิ่มขึ้น
 
-### 2. Base Configuration
+### 2. การกำหนดค่าพื้นฐาน
 
-#### **Base URLs**
+#### **URL พื้นฐาน**
 ```
 Production: https://api.yc365.io/v1
 Sandbox: https://api-sandbox.yc365.io/v1
 WebSocket: wss://ws.yc365.io/v1
 ```
 
-#### **Authentication Headers**
+#### **ส่วนหัวการตรวจสอบสิทธิ์**
 ```http
 Authorization: Bearer YOUR_API_KEY
 Content-Type: application/json
 X-API-Version: 1.0
 ```
 
-## API Endpoints
+## จุดสิ้นสุด API (API Endpoints)
 
-### 📊 **Market Data**
+### 📊 **ข้อมูลตลาด**
 
-#### **Get All Markets**
+#### **รับตลาดทั้งหมด**
 ```http
 GET /markets
 ```
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
   "data": [
     {
       "id": "market_001",
-      "title": "Will Bitcoin reach $100,000 by end of 2024?",
+      "title": "Bitcoin จะถึง $100,000 ภายในสิ้นปี 2024 หรือไม่?",
       "category": "cryptocurrency",
       "status": "active",
       "end_time": "2024-12-31T23:59:59Z",
@@ -88,27 +85,27 @@ GET /markets
 }
 ```
 
-#### **Get Market Details**
+#### **รับรายละเอียดตลาด**
 ```http
 GET /markets/{market_id}
 ```
 
-**Parameters:**
-- `market_id` (string): Unique market identifier
+**พารามิเตอร์:**
+- `market_id` (string): ตัวระบุตลาดที่ไม่ซ้ำกัน
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
   "data": {
     "id": "market_001",
-    "title": "Will Bitcoin reach $100,000 by end of 2024?",
-    "description": "This market will resolve to YES if Bitcoin reaches $100,000 or higher by December 31, 2024.",
+    "title": "Bitcoin จะถึง $100,000 ภายในสิ้นปี 2024 หรือไม่?",
+    "description": "ตลาดนี้จะตัดสินเป็น YES หาก Bitcoin ถึง $100,000 หรือสูงกว่าภายในวันที่ 31 ธันวาคม 2024",
     "category": "cryptocurrency",
     "status": "active",
     "created_at": "2024-01-15T10:30:00Z",
     "end_time": "2024-12-31T23:59:59Z",
-    "resolution_criteria": "Price data from CoinGecko",
+    "resolution_criteria": "ข้อมูลราคาจาก CoinGecko",
     "yes_price": 0.65,
     "no_price": 0.35,
     "volume_24h": 125000,
@@ -119,18 +116,18 @@ GET /markets/{market_id}
 }
 ```
 
-#### **Get Market History**
+#### **รับประวัติตลาด**
 ```http
 GET /markets/{market_id}/history
 ```
 
-**Parameters:**
-- `market_id` (string): Market identifier
-- `interval` (string): Time interval (1m, 5m, 1h, 1d)
-- `start_time` (string): Start time (ISO 8601)
-- `end_time` (string): End time (ISO 8601)
+**พารามิเตอร์:**
+- `market_id` (string): ตัวระบุตลาด
+- `interval` (string): ช่วงเวลา (1m, 5m, 1h, 1d)
+- `start_time` (string): เวลาเริ่มต้น (ISO 8601)
+- `end_time` (string): เวลาสิ้นสุด (ISO 8601)
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
@@ -146,14 +143,14 @@ GET /markets/{market_id}/history
 }
 ```
 
-### 💰 **Trading Operations**
+### 💰 **การดำเนินการซื้อขาย**
 
-#### **Place Order**
+#### **วางคำสั่ง**
 ```http
 POST /orders
 ```
 
-**Request Body:**
+**เนื้อหาคำขอ (Request Body):**
 ```json
 {
   "market_id": "market_001",
@@ -165,7 +162,7 @@ POST /orders
 }
 ```
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
@@ -184,12 +181,12 @@ POST /orders
 }
 ```
 
-#### **Get Order Status**
+#### **รับสถานะคำสั่ง**
 ```http
 GET /orders/{order_id}
 ```
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
@@ -217,12 +214,12 @@ GET /orders/{order_id}
 }
 ```
 
-#### **Cancel Order**
+#### **ยกเลิกคำสั่ง**
 ```http
 DELETE /orders/{order_id}
 ```
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
@@ -234,14 +231,14 @@ DELETE /orders/{order_id}
 }
 ```
 
-### 👤 **User Management**
+### 👤 **การจัดการผู้ใช้**
 
-#### **Get Account Balance**
+#### **รับยอดคงเหลือบัญชี**
 ```http
 GET /account/balance
 ```
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
@@ -263,19 +260,19 @@ GET /account/balance
 }
 ```
 
-#### **Get Transaction History**
+#### **รับประวัติการทำธุรกรรม**
 ```http
 GET /account/transactions
 ```
 
-**Parameters:**
-- `type` (string): Transaction type (deposit, withdrawal, trade, fee)
-- `start_date` (string): Start date (ISO 8601)
-- `end_date` (string): End date (ISO 8601)
-- `page` (integer): Page number
-- `limit` (integer): Items per page
+**พารามิเตอร์:**
+- `type` (string): ประเภทธุรกรรม (deposit, withdrawal, trade, fee)
+- `start_date` (string): วันที่เริ่มต้น (ISO 8601)
+- `end_date` (string): วันที่สิ้นสุด (ISO 8601)
+- `page` (integer): หมายเลขหน้า
+- `limit` (integer): รายการต่อหน้า
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
@@ -298,33 +295,33 @@ GET /account/transactions
 }
 ```
 
-### 🎯 **Event Management**
+### 🎯 **การจัดการเหตุการณ์**
 
-#### **Create Market Proposal**
+#### **สร้างข้อเสนอตลาด**
 ```http
 POST /markets/proposals
 ```
 
-**Request Body:**
+**เนื้อหาคำขอ:**
 ```json
 {
-  "title": "Will Ethereum reach $5,000 by Q2 2024?",
-  "description": "This market will resolve to YES if Ethereum reaches $5,000 or higher by June 30, 2024.",
+  "title": "Ethereum จะถึง $5,000 ภายในไตรมาส 2 ปี 2024 หรือไม่?",
+  "description": "ตลาดนี้จะตัดสินเป็น YES หาก Ethereum ถึง $5,000 หรือสูงกว่าภายในวันที่ 30 มิถุนายน 2024",
   "category": "cryptocurrency",
   "end_time": "2024-06-30T23:59:59Z",
-  "resolution_criteria": "Price data from CoinGecko",
+  "resolution_criteria": "ข้อมูลราคาจาก CoinGecko",
   "tags": ["ethereum", "price", "cryptocurrency"]
 }
 ```
 
-**Response:**
+**การตอบกลับ:**
 ```json
 {
   "success": true,
   "data": {
     "proposal_id": "prop_12345",
     "status": "pending_review",
-    "title": "Will Ethereum reach $5,000 by Q2 2024?",
+    "title": "Ethereum จะถึง $5,000 ภายในไตรมาส 2 ปี 2024 หรือไม่?",
     "created_at": "2024-01-15T10:30:00Z",
     "estimated_review_time": "2-3 business days"
   }
@@ -333,14 +330,14 @@ POST /markets/proposals
 
 ## WebSocket API
 
-### 🔌 **Real-time Data Streaming**
+### 🔌 **การสตรีมข้อมูลแบบเรียลไทม์**
 
-#### **Connection**
+#### **การเชื่อมต่อ**
 ```javascript
 const ws = new WebSocket('wss://ws.yc365.io/v1');
 ```
 
-#### **Authentication**
+#### **การตรวจสอบสิทธิ์**
 ```javascript
 ws.onopen = function() {
   ws.send(JSON.stringify({
@@ -350,7 +347,7 @@ ws.onopen = function() {
 };
 ```
 
-#### **Subscribe to Market Updates**
+#### **สมัครรับการอัปเดตตลาด**
 ```javascript
 ws.send(JSON.stringify({
   type: 'subscribe',
@@ -359,7 +356,7 @@ ws.send(JSON.stringify({
 }));
 ```
 
-#### **Message Format**
+#### **รูปแบบข้อความ**
 ```json
 {
   "type": "market_update",
@@ -373,9 +370,9 @@ ws.send(JSON.stringify({
 }
 ```
 
-## SDK Support
+## การรองรับ SDK
 
-### 📚 **Available SDKs**
+### 📚 **SDK ที่มีให้บริการ**
 
 #### **JavaScript/Node.js**
 ```bash
@@ -387,13 +384,13 @@ const YC365 = require('yc365-sdk');
 
 const client = new YC365({
   apiKey: 'YOUR_API_KEY',
-  environment: 'sandbox' // or 'production'
+  environment: 'sandbox' // หรือ 'production'
 });
 
-// Get markets
+// รับตลาด
 const markets = await client.markets.getAll();
 
-// Place order
+// วางคำสั่ง
 const order = await client.orders.create({
   market_id: 'market_001',
   side: 'buy',
@@ -416,10 +413,10 @@ client = YC365Client(
     environment='sandbox'
 )
 
-# Get markets
+# รับตลาด
 markets = client.markets.get_all()
 
-# Place order
+# วางคำสั่ง
 order = client.orders.create(
     market_id='market_001',
     side='buy',
@@ -444,10 +441,10 @@ import (
 func main() {
     client := yc365.NewClient("YOUR_API_KEY", "sandbox")
     
-    // Get markets
+    // รับตลาด
     markets, err := client.Markets.GetAll()
     
-    // Place order
+    // วางคำสั่ง
     order, err := client.Orders.Create(yc365.CreateOrderRequest{
         MarketID: "market_001",
         Side:     "buy",
@@ -458,27 +455,27 @@ func main() {
 }
 ```
 
-## Rate Limits
+## ขีดจำกัดอัตรา (Rate Limits)
 
-### ⚡ **Rate Limiting Policy**
+### ⚡ **นโยบายการจำกัดอัตรา**
 
-| Endpoint Type | Rate Limit | Burst Limit |
+| ประเภทจุดสิ้นสุด | ขีดจำกัดอัตรา | ขีดจำกัด Burst |
 |---------------|------------|-------------|
-| **Market Data** | 100 requests/minute | 200 requests/minute |
-| **Trading Operations** | 50 requests/minute | 100 requests/minute |
-| **User Management** | 30 requests/minute | 60 requests/minute |
-| **WebSocket** | 10 connections | 20 connections |
+| **ข้อมูลตลาด** | 100 คำขอ/นาที | 200 คำขอ/นาที |
+| **การดำเนินการซื้อขาย** | 50 คำขอ/นาที | 100 คำขอ/นาที |
+| **การจัดการผู้ใช้** | 30 คำขอ/นาที | 60 คำขอ/นาที |
+| **WebSocket** | 10 การเชื่อมต่อ | 20 การเชื่อมต่อ |
 
-### 📊 **Rate Limit Headers**
+### 📊 **ส่วนหัวขีดจำกัดอัตรา**
 ```http
 X-RateLimit-Limit: 100
 X-RateLimit-Remaining: 95
 X-RateLimit-Reset: 1642234567
 ```
 
-## Error Handling
+## การจัดการข้อผิดพลาด
 
-### ❌ **Error Response Format**
+### ❌ **รูปแบบการตอบกลับข้อผิดพลาด**
 ```json
 {
   "success": false,
@@ -495,52 +492,52 @@ X-RateLimit-Reset: 1642234567
 }
 ```
 
-### 🔢 **Error Codes**
+### 🔢 **รหัสข้อผิดพลาด**
 
-| Code | Description | HTTP Status |
+| รหัส | คำอธิบาย | สถานะ HTTP |
 |------|-------------|-------------|
-| `INVALID_PARAMETER` | Invalid request parameter | 400 |
-| `UNAUTHORIZED` | Invalid or missing API key | 401 |
-| `FORBIDDEN` | Insufficient permissions | 403 |
-| `NOT_FOUND` | Resource not found | 404 |
-| `RATE_LIMITED` | Rate limit exceeded | 429 |
-| `INTERNAL_ERROR` | Server error | 500 |
-| `MARKET_CLOSED` | Market is not available for trading | 400 |
-| `INSUFFICIENT_BALANCE` | Not enough balance for operation | 400 |
-| `ORDER_NOT_FOUND` | Order does not exist | 404 |
+| `INVALID_PARAMETER` | พารามิเตอร์คำขอไม่ถูกต้อง | 400 |
+| `UNAUTHORIZED` | คีย์ API ไม่ถูกต้องหรือหายไป | 401 |
+| `FORBIDDEN` | สิทธิ์ไม่เพียงพอ | 403 |
+| `NOT_FOUND` | ไม่พบทรัพยากร | 404 |
+| `RATE_LIMITED` | เกินขีดจำกัดอัตรา | 429 |
+| `INTERNAL_ERROR` | ข้อผิดพลาดของเซิร์ฟเวอร์ | 500 |
+| `MARKET_CLOSED` | ตลาดไม่พร้อมสำหรับการซื้อขาย | 400 |
+| `INSUFFICIENT_BALANCE` | ยอดคงเหลือไม่เพียงพอสำหรับการดำเนินการ | 400 |
+| `ORDER_NOT_FOUND` | ไม่มีคำสั่งอยู่ | 404 |
 
-## Testing and Development
+## การทดสอบและการพัฒนา
 
-### 🧪 **Sandbox Environment**
+### 🧪 **สภาพแวดล้อม Sandbox**
 
-#### **Features**
-- **Test Data**: Realistic market data for testing
-- **Virtual Funds**: Unlimited test USDT for development
-- **Full API Access**: All production endpoints available
-- **WebSocket Support**: Real-time data streaming
+#### **คุณสมบัติ**
+- **ข้อมูลทดสอบ**: ข้อมูลตลาดที่สมจริงสำหรับการทดสอบ
+- **เงินทุนเสมือน**: USDT ทดสอบไม่จำกัดสำหรับการพัฒนา
+- **การเข้าถึง API เต็มรูปแบบ**: จุดสิ้นสุดการผลิตทั้งหมดที่มีอยู่
+- **การรองรับ WebSocket**: การสตรีมข้อมูลแบบเรียลไทม์
 
-#### **Getting Started**
-1. **Sign Up**: Create a sandbox account
-2. **Generate API Key**: Get your sandbox API key
-3. **Start Testing**: Use sandbox endpoints for development
-4. **Monitor Usage**: Track API usage and performance
+#### **การเริ่มต้นใช้งาน**
+1. **ลงทะเบียน**: สร้างบัญชี Sandbox
+2. **สร้างคีย์ API**: รับคีย์ API Sandbox ของคุณ
+3. **เริ่มการทดสอบ**: ใช้จุดสิ้นสุด Sandbox สำหรับการพัฒนา
+4. **ตรวจสอบการใช้งาน**: ติดตามการใช้งาน API และประสิทธิภาพ
 
-### 📝 **API Testing Tools**
+### 📝 **เครื่องมือทดสอบ API**
 
 #### **Postman Collection**
-- **Download**: Complete Postman collection available
-- **Environment Variables**: Pre-configured environments
-- **Examples**: Sample requests for all endpoints
-- **Documentation**: Integrated API documentation
+- **ดาวน์โหลด**: มี Postman collection ที่สมบูรณ์ให้ดาวน์โหลด
+- **ตัวแปรสภาพแวดล้อม**: สภาพแวดล้อมที่กำหนดค่าไว้ล่วงหน้า
+- **ตัวอย่าง**: ตัวอย่างคำขอสำหรับจุดสิ้นสุดทั้งหมด
+- **เอกสาร**: เอกสาร API ที่รวมอยู่
 
-#### **cURL Examples**
+#### **ตัวอย่าง cURL**
 ```bash
-# Get all markets
+# รับตลาดทั้งหมด
 curl -X GET "https://api-sandbox.yc365.io/v1/markets" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json"
 
-# Place order
+# วางคำสั่ง
 curl -X POST "https://api-sandbox.yc365.io/v1/orders" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
@@ -553,60 +550,60 @@ curl -X POST "https://api-sandbox.yc365.io/v1/orders" \
   }'
 ```
 
-## Best Practices
+## แนวทางปฏิบัติที่ดีที่สุด
 
-### 💡 **Development Guidelines**
+### 💡 **แนวทางการพัฒนา**
 
-#### **API Usage**
-- **Use HTTPS**: Always use secure connections
-- **Handle Errors**: Implement proper error handling
-- **Rate Limiting**: Respect rate limits and implement backoff
-- **Caching**: Cache market data when appropriate
-- **WebSockets**: Use WebSockets for real-time data
+#### **การใช้ API**
+- **ใช้ HTTPS**: ใช้การเชื่อมต่อที่ปลอดภัยเสมอ
+- **จัดการข้อผิดพลาด**: ใช้การจัดการข้อผิดพลาดที่เหมาะสม
+- **การจำกัดอัตรา**: เคารพขีดจำกัดอัตราและใช้ backoff
+- **การแคช**: แคชข้อมูลตลาดเมื่อเหมาะสม
+- **WebSockets**: ใช้ WebSockets สำหรับข้อมูลเรียลไทม์
 
-#### **Security**
-- **API Key Protection**: Never expose API keys in client-side code
-- **Request Signing**: Use request signing for sensitive operations
-- **IP Whitelisting**: Restrict API access to known IP addresses
-- **Key Rotation**: Regularly rotate API keys
+#### **ความปลอดภัย**
+- **การป้องกันคีย์ API**: อย่าเปิดเผยคีย์ API ในโค้ดฝั่งไคลเอนต์
+- **การลงนามคำขอ**: ใช้การลงนามคำขอสำหรับการดำเนินการที่ละเอียดอ่อน
+- **การอนุญาต IP**: จำกัดการเข้าถึง API เฉพาะที่อยู่ IP ที่รู้จัก
+- **การหมุนเวียนคีย์**: หมุนเวียนคีย์ API เป็นประจำ
 
-#### **Performance**
-- **Connection Pooling**: Reuse HTTP connections
-- **Batch Operations**: Use batch endpoints when available
-- **Pagination**: Implement proper pagination for large datasets
-- **Monitoring**: Monitor API usage and performance
+#### **ประสิทธิภาพ**
+- **Connection Pooling**: ใช้การเชื่อมต่อ HTTP ซ้ำ
+- **การดำเนินการแบบกลุ่ม**: ใช้จุดสิ้นสุดแบบกลุ่มเมื่อมีให้บริการ
+- **การแบ่งหน้า**: ใช้การแบ่งหน้าอย่างเหมาะสมสำหรับชุดข้อมูลขนาดใหญ่
+- **การตรวจสอบ**: ตรวจสอบการใช้งาน API และประสิทธิภาพ
 
-## Support and Resources
+## การสนับสนุนและทรัพยากร
 
-### 🆘 **Developer Support**
+### 🆘 **การสนับสนุนนักพัฒนา**
 
-#### **Documentation**
-- **API Reference**: Complete endpoint documentation
-- **SDK Documentation**: Language-specific guides
-- **Code Examples**: Sample implementations
-- **Tutorials**: Step-by-step integration guides
+#### **เอกสาร**
+- **อ้างอิง API**: เอกสารจุดสิ้นสุดที่สมบูรณ์
+- **เอกสาร SDK**: คู่มือเฉพาะภาษา
+- **ตัวอย่างโค้ด**: ตัวอย่างการใช้งาน
+- **บทช่วยสอน**: คู่มือการรวมทีละขั้นตอน
 
-#### **Community**
-- **Developer Forum**: Community support and discussions
-- **GitHub**: Open source SDKs and examples
-- **Discord**: Real-time developer chat
-- **Stack Overflow**: Tagged questions and answers
+#### **ชุมชน**
+- **ฟอรัมนักพัฒนา**: การสนับสนุนและการอภิปรายของชุมชน
+- **GitHub**: SDK และตัวอย่างโอเพ่นซอร์ส
+- **Discord**: แชทนักพัฒนาแบบเรียลไทม์
+- **Stack Overflow**: คำถามและคำตอบที่ติดแท็ก
 
-#### **Support Channels**
-- **Email**: api-support@yc365.io
-- **Live Chat**: Available 24/7 for API issues
-- **Priority Support**: Dedicated support for enterprise clients
+#### **ช่องทางการสนับสนุน**
+- **อีเมล**: api-support@yc365.io
+- **แชทสด**: ให้บริการ 24/7 สำหรับปัญหา API
+- **การสนับสนุนลำดับความสำคัญ**: การสนับสนุนเฉพาะสำหรับลูกค้าระดับองค์กร
 
-### 📞 **Contact Information**
+### 📞 **ข้อมูลการติดต่อ**
 
-For API-related support, please contact:
-- **Email**: api-support@yc365.io
-- **Live Chat**: Available 24/7 on platform
+สำหรับการสนับสนุนที่เกี่ยวข้องกับ API โปรดติดต่อ:
+- **อีเมล**: api-support@yc365.io
+- **แชทสด**: ให้บริการ 24/7 บนแพลตฟอร์ม
 - **Telegram**: @YC365DevSupport
 - **Discord**: YC365 Developer Server
 
 ---
 
-**Start building with YC365 API today!** Our comprehensive API and SDK support make it easy to integrate prediction market functionality into your applications.
+**เริ่มสร้างด้วย YC365 API วันนี้!** API ที่ครอบคลุมและการรองรับ SDK ของเราทำให้ง่ายต่อการรวมฟังก์ชันการทำงานของตลาดการทำนายผลเข้ากับแอปพลิเคชันของคุณ
 
-*Join thousands of developers who are already building innovative applications on the YC365 platform.*
+*เข้าร่วมกับนักพัฒนาหลายพันคนที่กำลังสร้างแอปพลิเคชันนวัตกรรมบนแพลตฟอร์ม YC365*

@@ -1,76 +1,73 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 开放 API (Open API)
 
-# Open API
+## 概览
 
-## Overview
+YC365 提供全面的开放 API，使开发人员能够将预测市场功能集成到他们的应用程序中，构建自定义交易界面，并访问实时市场数据。我们的 API 专为开发人员体验而设计，提供具有全面文档和 SDK 支持的 RESTful 端点。
 
-YC365 provides a comprehensive Open API that enables developers to integrate prediction market functionality into their applications, build custom trading interfaces, and access real-time market data. Our API is designed with developer experience in mind, offering RESTful endpoints with comprehensive documentation and SDK support.
+## API 功能
 
-## API Features
+### 🔌 **核心能力**
+- **市场数据**：实时价格源、成交量和市场统计数据
+- **交易操作**：下达订单、管理头寸和执行交易
+- **用户管理**：账户信息、余额和交易历史
+- **事件管理**：创建、监控和解决预测市场
+- **WebSocket 支持**：用于实时更新的实时数据流
 
-### 🔌 **Core Capabilities**
-- **Market Data**: Real-time price feeds, volume, and market statistics
-- **Trading Operations**: Place orders, manage positions, and execute trades
-- **User Management**: Account information, balances, and transaction history
-- **Event Management**: Create, monitor, and resolve prediction markets
-- **WebSocket Support**: Real-time data streaming for live updates
+### 🛡️ **安全与认证**
+- **API 密钥认证**：使用 API 密钥的安全访问
+- **速率限制**：确保平台稳定性的公平使用政策
+- **请求签名**：加密请求验证
+- **IP 白名单**：通过 IP 限制增强安全性
 
-### 🛡️ **Security & Authentication**
-- **API Key Authentication**: Secure access using API keys
-- **Rate Limiting**: Fair usage policies to ensure platform stability
-- **Request Signing**: Cryptographic request verification
-- **IP Whitelisting**: Enhanced security through IP restrictions
+## 入门指南
 
-## Getting Started
+### 1. API 访问
 
-### 1. API Access
+#### **注册流程**
+1. **创建账户**：注册 YC365 账户
+2. **API 密钥生成**：在仪表板中生成您的 API 密钥
+3. **文档访问**：访问全面的 API 文档
+4. **测试环境**：使用沙盒环境进行开发
 
-#### **Registration Process**
-1. **Create Account**: Sign up for a YC365 account
-2. **API Key Generation**: Generate your API keys in the dashboard
-3. **Documentation Access**: Access comprehensive API documentation
-4. **Testing Environment**: Use sandbox environment for development
+#### **API 密钥管理**
+- **主密钥**：完全访问所有 API 端点
+- **只读密钥**：仅限于数据检索操作
+- **自定义范围**：细粒度的权限控制
+- **密钥轮换**：定期密钥更新以增强安全性
 
-#### **API Key Management**
-- **Primary Key**: Full access to all API endpoints
-- **Read-Only Key**: Limited to data retrieval operations
-- **Custom Scopes**: Granular permission control
-- **Key Rotation**: Regular key updates for enhanced security
+### 2. 基础配置
 
-### 2. Base Configuration
-
-#### **Base URLs**
+#### **基础 URL**
 ```
-Production: https://api.yc365.io/v1
-Sandbox: https://api-sandbox.yc365.io/v1
+生产环境: https://api.yc365.io/v1
+沙盒环境: https://api-sandbox.yc365.io/v1
 WebSocket: wss://ws.yc365.io/v1
 ```
 
-#### **Authentication Headers**
+#### **认证标头**
 ```http
 Authorization: Bearer YOUR_API_KEY
 Content-Type: application/json
 X-API-Version: 1.0
 ```
 
-## API Endpoints
+## API 端点
 
-### 📊 **Market Data**
+### 📊 **市场数据**
 
-#### **Get All Markets**
+#### **获取所有市场**
 ```http
 GET /markets
 ```
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
   "data": [
     {
       "id": "market_001",
-      "title": "Will Bitcoin reach $100,000 by end of 2024?",
+      "title": "比特币会在 2024 年底达到 100,000 美元吗？",
       "category": "cryptocurrency",
       "status": "active",
       "end_time": "2024-12-31T23:59:59Z",
@@ -88,27 +85,27 @@ GET /markets
 }
 ```
 
-#### **Get Market Details**
+#### **获取市场详情**
 ```http
 GET /markets/{market_id}
 ```
 
-**Parameters:**
-- `market_id` (string): Unique market identifier
+**参数:**
+- `market_id` (string): 唯一市场标识符
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
   "data": {
     "id": "market_001",
-    "title": "Will Bitcoin reach $100,000 by end of 2024?",
-    "description": "This market will resolve to YES if Bitcoin reaches $100,000 or higher by December 31, 2024.",
+    "title": "比特币会在 2024 年底达到 100,000 美元吗？",
+    "description": "如果比特币在 2024 年 12 月 31 日达到或超过 100,000 美元，该市场将决议为 YES。",
     "category": "cryptocurrency",
     "status": "active",
     "created_at": "2024-01-15T10:30:00Z",
     "end_time": "2024-12-31T23:59:59Z",
-    "resolution_criteria": "Price data from CoinGecko",
+    "resolution_criteria": "来自 CoinGecko 的价格数据",
     "yes_price": 0.65,
     "no_price": 0.35,
     "volume_24h": 125000,
@@ -119,18 +116,18 @@ GET /markets/{market_id}
 }
 ```
 
-#### **Get Market History**
+#### **获取市场历史**
 ```http
 GET /markets/{market_id}/history
 ```
 
-**Parameters:**
-- `market_id` (string): Market identifier
-- `interval` (string): Time interval (1m, 5m, 1h, 1d)
-- `start_time` (string): Start time (ISO 8601)
-- `end_time` (string): End time (ISO 8601)
+**参数:**
+- `market_id` (string): 市场标识符
+- `interval` (string): 时间间隔 (1m, 5m, 1h, 1d)
+- `start_time` (string): 开始时间 (ISO 8601)
+- `end_time` (string): 结束时间 (ISO 8601)
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
@@ -146,14 +143,14 @@ GET /markets/{market_id}/history
 }
 ```
 
-### 💰 **Trading Operations**
+### 💰 **交易操作**
 
-#### **Place Order**
+#### **下订单**
 ```http
 POST /orders
 ```
 
-**Request Body:**
+**请求体:**
 ```json
 {
   "market_id": "market_001",
@@ -165,7 +162,7 @@ POST /orders
 }
 ```
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
@@ -184,12 +181,12 @@ POST /orders
 }
 ```
 
-#### **Get Order Status**
+#### **获取订单状态**
 ```http
 GET /orders/{order_id}
 ```
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
@@ -217,31 +214,31 @@ GET /orders/{order_id}
 }
 ```
 
-#### **Cancel Order**
+#### **取消订单**
 ```http
 DELETE /orders/{order_id}
 ```
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
   "data": {
     "order_id": "order_12345",
     "status": "cancelled",
-    "message": "Order successfully cancelled"
+    "message": "订单已成功取消"
   }
 }
 ```
 
-### 👤 **User Management**
+### 👤 **用户管理**
 
-#### **Get Account Balance**
+#### **获取账户余额**
 ```http
 GET /account/balance
 ```
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
@@ -263,19 +260,19 @@ GET /account/balance
 }
 ```
 
-#### **Get Transaction History**
+#### **获取交易历史**
 ```http
 GET /account/transactions
 ```
 
-**Parameters:**
-- `type` (string): Transaction type (deposit, withdrawal, trade, fee)
-- `start_date` (string): Start date (ISO 8601)
-- `end_date` (string): End date (ISO 8601)
-- `page` (integer): Page number
-- `limit` (integer): Items per page
+**参数:**
+- `type` (string): 交易类型 (deposit, withdrawal, trade, fee)
+- `start_date` (string): 开始日期 (ISO 8601)
+- `end_date` (string): 结束日期 (ISO 8601)
+- `page` (integer): 页码
+- `limit` (integer): 每页条目数
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
@@ -285,7 +282,7 @@ GET /account/transactions
       "type": "trade",
       "amount": 1000,
       "currency": "USDT",
-      "description": "Buy YES tokens for market_001",
+      "description": "购买 market_001 的 YES 代币",
       "timestamp": "2024-01-15T10:31:15Z",
       "status": "completed"
     }
@@ -298,49 +295,49 @@ GET /account/transactions
 }
 ```
 
-### 🎯 **Event Management**
+### 🎯 **事件管理**
 
-#### **Create Market Proposal**
+#### **创建市场提案**
 ```http
 POST /markets/proposals
 ```
 
-**Request Body:**
+**请求体:**
 ```json
 {
-  "title": "Will Ethereum reach $5,000 by Q2 2024?",
-  "description": "This market will resolve to YES if Ethereum reaches $5,000 or higher by June 30, 2024.",
+  "title": "以太坊会在 2024 年第二季度达到 5,000 美元吗？",
+  "description": "如果以太坊在 2024 年 6 月 30 日达到或超过 5,000 美元，该市场将决议为 YES。",
   "category": "cryptocurrency",
   "end_time": "2024-06-30T23:59:59Z",
-  "resolution_criteria": "Price data from CoinGecko",
+  "resolution_criteria": "来自 CoinGecko 的价格数据",
   "tags": ["ethereum", "price", "cryptocurrency"]
 }
 ```
 
-**Response:**
+**响应:**
 ```json
 {
   "success": true,
   "data": {
     "proposal_id": "prop_12345",
     "status": "pending_review",
-    "title": "Will Ethereum reach $5,000 by Q2 2024?",
+    "title": "以太坊会在 2024 年第二季度达到 5,000 美元吗？",
     "created_at": "2024-01-15T10:30:00Z",
-    "estimated_review_time": "2-3 business days"
+    "estimated_review_time": "2-3 个工作日"
   }
 }
 ```
 
 ## WebSocket API
 
-### 🔌 **Real-time Data Streaming**
+### 🔌 **实时数据流**
 
-#### **Connection**
+#### **连接**
 ```javascript
 const ws = new WebSocket('wss://ws.yc365.io/v1');
 ```
 
-#### **Authentication**
+#### **认证**
 ```javascript
 ws.onopen = function() {
   ws.send(JSON.stringify({
@@ -350,7 +347,7 @@ ws.onopen = function() {
 };
 ```
 
-#### **Subscribe to Market Updates**
+#### **订阅市场更新**
 ```javascript
 ws.send(JSON.stringify({
   type: 'subscribe',
@@ -359,7 +356,7 @@ ws.send(JSON.stringify({
 }));
 ```
 
-#### **Message Format**
+#### **消息格式**
 ```json
 {
   "type": "market_update",
@@ -373,9 +370,9 @@ ws.send(JSON.stringify({
 }
 ```
 
-## SDK Support
+## SDK 支持
 
-### 📚 **Available SDKs**
+### 📚 **可用 SDK**
 
 #### **JavaScript/Node.js**
 ```bash
@@ -387,13 +384,13 @@ const YC365 = require('yc365-sdk');
 
 const client = new YC365({
   apiKey: 'YOUR_API_KEY',
-  environment: 'sandbox' // or 'production'
+  environment: 'sandbox' // 或 'production'
 });
 
-// Get markets
+// 获取市场
 const markets = await client.markets.getAll();
 
-// Place order
+// 下订单
 const order = await client.orders.create({
   market_id: 'market_001',
   side: 'buy',
@@ -416,10 +413,10 @@ client = YC365Client(
     environment='sandbox'
 )
 
-# Get markets
+# 获取市场
 markets = client.markets.get_all()
 
-# Place order
+# 下订单
 order = client.orders.create(
     market_id='market_001',
     side='buy',
@@ -444,10 +441,10 @@ import (
 func main() {
     client := yc365.NewClient("YOUR_API_KEY", "sandbox")
     
-    // Get markets
+    // 获取市场
     markets, err := client.Markets.GetAll()
     
-    // Place order
+    // 下订单
     order, err := client.Orders.Create(yc365.CreateOrderRequest{
         MarketID: "market_001",
         Side:     "buy",
@@ -458,33 +455,33 @@ func main() {
 }
 ```
 
-## Rate Limits
+## 速率限制
 
-### ⚡ **Rate Limiting Policy**
+### ⚡ **速率限制政策**
 
-| Endpoint Type | Rate Limit | Burst Limit |
+| 端点类型 | 速率限制 | 突发限制 |
 |---------------|------------|-------------|
-| **Market Data** | 100 requests/minute | 200 requests/minute |
-| **Trading Operations** | 50 requests/minute | 100 requests/minute |
-| **User Management** | 30 requests/minute | 60 requests/minute |
-| **WebSocket** | 10 connections | 20 connections |
+| **市场数据** | 100 请求/分钟 | 200 请求/分钟 |
+| **交易操作** | 50 请求/分钟 | 100 请求/分钟 |
+| **用户管理** | 30 请求/分钟 | 60 请求/分钟 |
+| **WebSocket** | 10 连接 | 20 连接 |
 
-### 📊 **Rate Limit Headers**
+### 📊 **速率限制标头**
 ```http
 X-RateLimit-Limit: 100
 X-RateLimit-Remaining: 95
 X-RateLimit-Reset: 1642234567
 ```
 
-## Error Handling
+## 错误处理
 
-### ❌ **Error Response Format**
+### ❌ **错误响应格式**
 ```json
 {
   "success": false,
   "error": {
     "code": "INVALID_PARAMETER",
-    "message": "Invalid market_id provided",
+    "message": "提供的 market_id 无效",
     "details": {
       "field": "market_id",
       "value": "invalid_id",
@@ -495,52 +492,52 @@ X-RateLimit-Reset: 1642234567
 }
 ```
 
-### 🔢 **Error Codes**
+### 🔢 **错误代码**
 
-| Code | Description | HTTP Status |
+| 代码 | 描述 | HTTP 状态 |
 |------|-------------|-------------|
-| `INVALID_PARAMETER` | Invalid request parameter | 400 |
-| `UNAUTHORIZED` | Invalid or missing API key | 401 |
-| `FORBIDDEN` | Insufficient permissions | 403 |
-| `NOT_FOUND` | Resource not found | 404 |
-| `RATE_LIMITED` | Rate limit exceeded | 429 |
-| `INTERNAL_ERROR` | Server error | 500 |
-| `MARKET_CLOSED` | Market is not available for trading | 400 |
-| `INSUFFICIENT_BALANCE` | Not enough balance for operation | 400 |
-| `ORDER_NOT_FOUND` | Order does not exist | 404 |
+| `INVALID_PARAMETER` | 无效的请求参数 | 400 |
+| `UNAUTHORIZED` | 无效或缺失 API 密钥 | 401 |
+| `FORBIDDEN` | 权限不足 | 403 |
+| `NOT_FOUND` | 未找到资源 | 404 |
+| `RATE_LIMITED` | 超过速率限制 | 429 |
+| `INTERNAL_ERROR` | 服务器错误 | 500 |
+| `MARKET_CLOSED` | 市场不可交易 | 400 |
+| `INSUFFICIENT_BALANCE` | 余额不足以进行操作 | 400 |
+| `ORDER_NOT_FOUND` | 订单不存在 | 404 |
 
-## Testing and Development
+## 测试与开发
 
-### 🧪 **Sandbox Environment**
+### 🧪 **沙盒环境**
 
-#### **Features**
-- **Test Data**: Realistic market data for testing
-- **Virtual Funds**: Unlimited test USDT for development
-- **Full API Access**: All production endpoints available
-- **WebSocket Support**: Real-time data streaming
+#### **功能**
+- **测试数据**：用于测试的真实市场数据
+- **虚拟资金**：用于开发的无限测试 USDT
+- **完全 API 访问**：所有生产端点可用
+- **WebSocket 支持**：实时数据流
 
-#### **Getting Started**
-1. **Sign Up**: Create a sandbox account
-2. **Generate API Key**: Get your sandbox API key
-3. **Start Testing**: Use sandbox endpoints for development
-4. **Monitor Usage**: Track API usage and performance
+#### **入门指南**
+1. **注册**：创建沙盒账户
+2. **生成 API 密钥**：获取您的沙盒 API 密钥
+3. **开始测试**：使用沙盒端点进行开发
+4. **监控使用**：跟踪 API 使用和性能
 
-### 📝 **API Testing Tools**
+### 📝 **API 测试工具**
 
-#### **Postman Collection**
-- **Download**: Complete Postman collection available
-- **Environment Variables**: Pre-configured environments
-- **Examples**: Sample requests for all endpoints
-- **Documentation**: Integrated API documentation
+#### **Postman 集合**
+- **下载**：提供完整的 Postman 集合
+- **环境变量**：预配置的环境
+- **示例**：所有端点的示例请求
+- **文档**：集成 API 文档
 
-#### **cURL Examples**
+#### **cURL 示例**
 ```bash
-# Get all markets
+# 获取所有市场
 curl -X GET "https://api-sandbox.yc365.io/v1/markets" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json"
 
-# Place order
+# 下订单
 curl -X POST "https://api-sandbox.yc365.io/v1/orders" \
   -H "Authorization: Bearer YOUR_API_KEY" \
   -H "Content-Type: application/json" \
@@ -553,60 +550,60 @@ curl -X POST "https://api-sandbox.yc365.io/v1/orders" \
   }'
 ```
 
-## Best Practices
+## 最佳实践
 
-### 💡 **Development Guidelines**
+### 💡 **开发指南**
 
-#### **API Usage**
-- **Use HTTPS**: Always use secure connections
-- **Handle Errors**: Implement proper error handling
-- **Rate Limiting**: Respect rate limits and implement backoff
-- **Caching**: Cache market data when appropriate
-- **WebSockets**: Use WebSockets for real-time data
+#### **API 使用**
+- **使用 HTTPS**：始终使用安全连接
+- **处理错误**：实施适当的错误处理
+- **速率限制**：遵守速率限制并实施退避
+- **缓存**：适当时缓存市场数据
+- **WebSockets**：使用 WebSockets 获取实时数据
 
-#### **Security**
-- **API Key Protection**: Never expose API keys in client-side code
-- **Request Signing**: Use request signing for sensitive operations
-- **IP Whitelisting**: Restrict API access to known IP addresses
-- **Key Rotation**: Regularly rotate API keys
+#### **安全**
+- **API 密钥保护**：切勿在客户端代码中暴露 API 密钥
+- **请求签名**：对敏感操作使用请求签名
+- **IP 白名单**：将 API 访问限制为已知 IP 地址
+- **密钥轮换**：定期轮换 API 密钥
 
-#### **Performance**
-- **Connection Pooling**: Reuse HTTP connections
-- **Batch Operations**: Use batch endpoints when available
-- **Pagination**: Implement proper pagination for large datasets
-- **Monitoring**: Monitor API usage and performance
+#### **性能**
+- **连接池**：重用 HTTP 连接
+- **批量操作**：可用时使用批量端点
+- **分页**：对大型数据集实施适当的分页
+- **监控**：监控 API 使用和性能
 
-## Support and Resources
+## 支持与资源
 
-### 🆘 **Developer Support**
+### 🆘 **开发者支持**
 
-#### **Documentation**
-- **API Reference**: Complete endpoint documentation
-- **SDK Documentation**: Language-specific guides
-- **Code Examples**: Sample implementations
-- **Tutorials**: Step-by-step integration guides
+#### **文档**
+- **API 参考**：完整的端点文档
+- **SDK 文档**：特定语言指南
+- **代码示例**：示例实现
+- **教程**：分步集成指南
 
-#### **Community**
-- **Developer Forum**: Community support and discussions
-- **GitHub**: Open source SDKs and examples
-- **Discord**: Real-time developer chat
-- **Stack Overflow**: Tagged questions and answers
+#### **社区**
+- **开发者论坛**：社区支持和讨论
+- **GitHub**：开源 SDK 和示例
+- **Discord**：实时开发者聊天
+- **Stack Overflow**：标记的问题和答案
 
-#### **Support Channels**
-- **Email**: api-support@yc365.io
-- **Live Chat**: Available 24/7 for API issues
-- **Priority Support**: Dedicated support for enterprise clients
+#### **支持渠道**
+- **电子邮件**：api-support@yc365.io
+- **实时聊天**：全天候提供 API 问题支持
+- **优先支持**：为企业客户提供专门支持
 
-### 📞 **Contact Information**
+### 📞 **联系信息**
 
-For API-related support, please contact:
-- **Email**: api-support@yc365.io
-- **Live Chat**: Available 24/7 on platform
-- **Telegram**: @YC365DevSupport
-- **Discord**: YC365 Developer Server
+有关 API 相关的支持，请联系：
+- **电子邮件**：api-support@yc365.io
+- **实时聊天**：平台全天候可用
+- **Telegram**：@YC365DevSupport
+- **Discord**：YC365 开发者服务器
 
 ---
 
-**Start building with YC365 API today!** Our comprehensive API and SDK support make it easy to integrate prediction market functionality into your applications.
+**立即开始使用 YC365 API 进行构建！** 我们全面的 API 和 SDK 支持使您可以轻松地将预测市场功能集成到您的应用程序中。
 
-*Join thousands of developers who are already building innovative applications on the YC365 platform.*
+*加入成千上万已经在 YC365 平台上构建创新应用程序的开发人员。*

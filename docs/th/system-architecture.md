@@ -1,485 +1,482 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# สถาปัตยกรรมระบบ (System Architecture)
 
-# System Architecture
+## ภาพรวม
 
-## Overview
+YC365 สร้างขึ้นบนสถาปัตยกรรมแบบแยกส่วน (Modular Architecture) โดยแต่ละองค์ประกอบจะจัดการความรับผิดชอบเฉพาะในขณะที่ทำงานร่วมกันเพื่อให้บริการแพลตฟอร์มตลาดการทำนายผลที่ครอบคลุม ระบบได้รับการออกแบบเพื่อความโปร่งใส ความปลอดภัย และความสามารถในการขยายขนาด
 
-YC365 is built on a modular architecture with each component handling specific responsibilities while working together to provide a comprehensive prediction market platform. The system is designed for transparency, security, and scalability.
+## ภาพรวมสถาปัตยกรรม
 
-## Architecture Overview
+### องค์ประกอบหลัก
 
-### Core Components
+#### 1. ชุด Smart Contract (BSC Chain)
+- **ชุดสัญญา LP**: จัดการ Liquidity Pools สำหรับแต่ละเงื่อนไข
+- **ชุดสัญญา DP**: จัดการการเผยแพร่เหตุการณ์/เงื่อนไขและผลลัพธ์
+- **ชุดสัญญา Vault**: จัดการการฝากและถอนเงินของผู้ใช้
+- **ชุดสัญญา Trading**: ดำเนินการธุรกรรมซื้อ/ขาย
+- **ชุดสัญญา Factory**: จัดการเหตุการณ์ เงื่อนไข และสิทธิ์
+- **สัญญา Temporary Condition**: สัญญาเฉพาะสำหรับแต่ละเงื่อนไข
 
-#### 1. Smart Contracts (BSC Chain)
-- **LP Contract Set**: Manages liquidity pools for each condition
-- **DP Contract Set**: Handles event/condition publishing and results
-- **Vault Contract Set**: Manages user deposits and withdrawals
-- **Trading Contract Set**: Executes buy/sell transactions
-- **Factory Contract Set**: Manages events, conditions, and permissions
-- **Temporary Condition Contracts**: Individual condition-specific contracts
+#### 2. ผู้ให้บริการข้อมูล (Data Provider - DP)
+- **การจัดการเหตุการณ์**: ประเภทเหตุการณ์ การสร้าง และการเผยแพร่
+- **การจัดการเงื่อนไข**: การสร้างเงื่อนไขและการดำเนินการบนเชน
+- **การจัดการสิทธิ์**: การควบคุมการเข้าถึงตามบทบาท (Role-based access control)
+- **บริการ API**: บริการสอบถามข้อมูลภายนอก
 
-#### 2. Data Provider (DP)
-- **Event Management**: Event types, creation, and publishing
-- **Condition Management**: Condition creation and chain operations
-- **Permission Management**: Role-based access control
-- **API Services**: External data query services
+#### 3. โมเดลการซื้อขายตามคำสั่ง (Order Trading Model)
+- **Order Book**: จัดการคำสั่ง Limit Orders
+- **Matching Engine**: การจับคู่ตามลำดับความสำคัญของราคาและเวลา
+- **ราคาตลาด**: การคำนวณราคาแบบเรียลไทม์
+- **บริการชำระบัญชี**: การคำนวณนอกเชน (Off-chain), การดำเนินการบนเชน (On-chain)
 
-#### 3. Order Trading Model
-- **Order Book**: Manages limit orders
-- **Matching Engine**: Price and time priority matching
-- **Market Price**: Real-time price calculation
-- **Settlement Service**: Off-chain calculation, on-chain execution
-
-#### 4. DApp Backend Service
-- **User Management**: Wallet-based login/registration
-- **Analytics**: Historical data and trend analysis
-- **Dashboard**: User statistics and performance metrics
-- **Search & Graph**: Event search and price trend visualization
+#### 4. บริการ DApp Backend
+- **การจัดการผู้ใช้**: การเข้าสู่ระบบ/ลงทะเบียนด้วยกระเป๋าเงิน
+- **การวิเคราะห์**: ข้อมูลย้อนหลังและการวิเคราะห์แนวโน้ม
+- **แดชบอร์ด**: สถิติผู้ใช้และตัวชี้วัดประสิทธิภาพ
+- **การค้นหาและกราฟ**: การค้นหาเหตุการณ์และการแสดงภาพแนวโน้มราคา
 
 #### 5. DApp Frontend
-- **User Interface**: Intuitive trading and management interface
-- **Multi-language Support**: Traditional Chinese and English
-- **Real-time Updates**: Live price and order updates
+- **ส่วนต่อประสานผู้ใช้**: อินเทอร์เฟซการซื้อขายและการจัดการที่ใช้งานง่าย
+- **การรองรับหลายภาษา**: จีนตัวเต็มและอังกฤษ
+- **การอัปเดตแบบเรียลไทม์**: การอัปเดตราคาและคำสั่งสด
 
-## Smart Contract Architecture
+## สถาปัตยกรรม Smart Contract
 
-### 1. LP Contract Set
+### 1. ชุดสัญญา LP (Liquidity Pool)
 
-#### Core Functions:
-- **Liquidity Pool Management**: Independent pools for each condition's YES/NO tokens
-- **TVL Management**: Stablecoin deposits from DP and users
-- **Order Processing**: Buy/sell order execution
-- **Settlement**: Profit distribution and NO token liquidation
+#### ฟังก์ชันหลัก:
+- **การจัดการ Liquidity Pool**: พูลอิสระสำหรับโทเค็น YES/NO ของแต่ละเงื่อนไข
+- **การจัดการ TVL**: การฝาก Stablecoin จาก DP และผู้ใช้
+- **การประมวลผลคำสั่ง**: การดำเนินการคำสั่งซื้อ/ขาย
+- **การชำระบัญชี**: การกระจายผลกำไรและการชำระบัญชีโทเค็น NO
 
-#### Key Features:
-- **Independent Pools**: Each condition has its own liquidity pool
-- **Automatic Settlement**: Triggered settlement processing
-- **Profit Distribution**: YES token holders receive 1 USDT per token
-- **NO Token Liquidation**: NO tokens become worthless
+#### คุณสมบัติหลัก:
+- **พูลอิสระ**: แต่ละเงื่อนไขมี Liquidity Pool ของตัวเอง
+- **การชำระบัญชีอัตโนมัติ**: การประมวลผลการชำระบัญชีที่ถูกกระตุ้น
+- **การกระจายผลกำไร**: ผู้ถือโทเค็น YES ได้รับ 1 USDT ต่อโทเค็น
+- **การชำระบัญชีโทเค็น NO**: โทเค็น NO จะไม่มีมูลค่า
 
-### 2. DP Contract Set
+### 2. ชุดสัญญา DP (Data Provider)
 
-#### Event Management:
-- **Event Publishing**: Deploy events and conditions to chain
-- **Condition Initialization**: Set initial odds and liquidity
-- **Result Publishing**: Publish event outcomes
-- **Liquidity Management**: Add or recover liquidity
+#### การจัดการเหตุการณ์:
+- **การเผยแพร่เหตุการณ์**: ปรับใช้ (Deploy) เหตุการณ์และเงื่อนไขบนเชน
+- **การเริ่มต้นเงื่อนไข**: กำหนดอัตราต่อรองและสภาพคล่องเริ่มต้น
+- **การเผยแพร่ผลลัพธ์**: เผยแพร่ผลลัพธ์ของเหตุการณ์
+- **การจัดการสภาพคล่อง**: เพิ่มหรือกู้คืนสภาพคล่อง
 
-#### Permission System:
-- **Role-based Access**: Different permissions for different roles
-- **No Super Admin**: Distributed authority model
-- **Specific Permissions**: Address-based permission management
+#### ระบบสิทธิ์:
+- **การเข้าถึงตามบทบาท**: สิทธิ์ที่แตกต่างกันสำหรับบทบาทที่แตกต่างกัน
+- **ไม่มี Super Admin**: โมเดลอำนาจแบบกระจาย
+- **สิทธิ์เฉพาะเจาะจง**: การจัดการสิทธิ์ตามที่อยู่ (Address-based)
 
-### 3. Vault Contract Set
+### 3. ชุดสัญญา Vault
 
-#### Asset Management:
-- **DP Deposits**: Data provider deposit/withdrawal management
-- **User Deposits**: Regular user deposit/withdrawal management
-- **Reward Distribution**: User reward allocation
-- **Token Management**: YES/NO token custody (under consideration)
+#### การจัดการสินทรัพย์:
+- **การฝากของ DP**: การจัดการการฝาก/ถอนของผู้ให้บริการข้อมูล
+- **การฝากของผู้ใช้**: การจัดการการฝาก/ถอนของผู้ใช้ทั่วไป
+- **การกระจายรางวัล**: การจัดสรรรางวัลผู้ใช้
+- **การจัดการโทเค็น**: การดูแลโทเค็น YES/NO (อยู่ระหว่างการพิจารณา)
 
-#### Security Features:
-- **Audited Contracts**: All contracts undergo security audits
-- **Open Source**: Transparent and verifiable code
-- **Risk Assessment**: Users maintain full control of assets
+#### คุณสมบัติด้านความปลอดภัย:
+- **สัญญาที่ผ่านการตรวจสอบ**: สัญญาทั้งหมดผ่านการตรวจสอบความปลอดภัย
+- **โอเพ่นซอร์ส**: โค้ดที่โปร่งใสและตรวจสอบได้
+- **การประเมินความเสี่ยง**: ผู้ใช้ยังคงควบคุมสินทรัพย์ได้อย่างเต็มที่
 
-### 4. Trading Contract Set
+### 4. ชุดสัญญา Trading
 
-#### Transaction Processing:
-- **Transfer Function**: Execute YES/NO token trades
-- **Order Service Integration**: Triggered by order service
-- **Asset Freezing**: Temporary asset locks for orders
-- **Batch Processing**: Efficient bulk transaction execution
+#### การประมวลผลธุรกรรม:
+- **ฟังก์ชันการโอน**: ดำเนินการซื้อขายโทเค็น YES/NO
+- **การรวมบริการคำสั่ง**: ถูกกระตุ้นโดยบริการคำสั่ง
+- **การแช่แข็งสินทรัพย์**: การล็อคสินทรัพย์ชั่วคราวสำหรับคำสั่ง
+- **การประมวลผลแบบกลุ่ม**: การดำเนินการธุรกรรมจำนวนมากอย่างมีประสิทธิภาพ
 
-#### Trading Restrictions:
-- **Pre-result Trading**: Trading stops 1 hour before results
-- **Identity Verification**: Private key signature verification
-- **Order Validation**: Order service authentication
+#### ข้อจำกัดการซื้อขาย:
+- **การซื้อขายก่อนผลลัพธ์**: การซื้อขายหยุด 1 ชั่วโมงก่อนผลลัพธ์
+- **การยืนยันตัวตน**: การตรวจสอบลายเซ็น Private Key
+- **การตรวจสอบคำสั่ง**: การตรวจสอบสิทธิ์บริการคำสั่ง
 
-### 5. Factory Contract Set
+### 5. ชุดสัญญา Factory
 
-#### Management Functions:
-- **Event/Condition Management**: Publish or delete events and conditions
-- **Permission Management**: Set permission addresses
-- **User Management**: Define different user roles
-- **Contract Deployment**: Deploy temporary condition contracts
+#### ฟังก์ชันการจัดการ:
+- **การจัดการเหตุการณ์/เงื่อนไข**: เผยแพร่หรือลบเหตุการณ์และเงื่อนไข
+- **การจัดการสิทธิ์**: กำหนดที่อยู่สิทธิ์
+- **การจัดการผู้ใช้**: กำหนดบทบาทผู้ใช้ที่แตกต่างกัน
+- **การปรับใช้สัญญา**: ปรับใช้สัญญา Temporary Condition
 
-#### User Roles:
-- **DP Chain Operators**: Data provider chain operations
-- **Order Operators**: Order book transaction submission
-- **Regular Users**: Deposit, withdrawal, order placement
+#### บทบาทผู้ใช้:
+- **ผู้ดำเนินการเชน DP**: การดำเนินการเชนของผู้ให้บริการข้อมูล
+- **ผู้ดำเนินการคำสั่ง**: การส่งธุรกรรม Order Book
+- **ผู้ใช้ทั่วไป**: ฝาก ถอน วางคำสั่ง
 
-### 6. Temporary Condition Contracts
+### 6. สัญญา Temporary Condition
 
-#### Individual Contracts:
-- **Condition-specific Services**: Each condition gets its own contract
-- **YES/NO Token Management**: Token creation and destruction
-- **TVL Management**: Condition-specific total value locked
-- **Settlement Implementation**: Specific liquidation logic
+#### สัญญาเฉพาะบุคคล:
+- **บริการเฉพาะเงื่อนไข**: แต่ละเงื่อนไขได้รับสัญญาของตัวเอง
+- **การจัดการโทเค็น YES/NO**: การสร้างและทำลายโทเค็น
+- **การจัดการ TVL**: มูลค่ารวมที่ถูกล็อคเฉพาะเงื่อนไข
+- **การดำเนินการชำระบัญชี**: ตรรกะการชำระบัญชีเฉพาะ
 
-#### Design Considerations:
-- **Modular Design**: Independent contract for each condition
-- **Service Integration**: Called by other contracts, not directly by users
-- **Gas Optimization**: Efficient contract design for BSC
+#### ข้อควรพิจารณาในการออกแบบ:
+- **การออกแบบแบบแยกส่วน**: สัญญาอิสระสำหรับแต่ละเงื่อนไข
+- **การรวมบริการ**: ถูกเรียกโดยสัญญาอื่น ไม่ใช่โดยผู้ใช้โดยตรง
+- **การเพิ่มประสิทธิภาพ Gas**: การออกแบบสัญญาที่มีประสิทธิภาพสำหรับ BSC
 
-## Data Provider (DP) System
+## ระบบผู้ให้บริการข้อมูล (DP System)
 
-### 1. Event Type Management
+### 1. การจัดการประเภทเหตุการณ์
 
-#### Core Functions:
-- **Type Creation**: Add and manage event categories
-- **Classification System**: All events belong to specific types
-- **Import/Export**: Batch import and export capabilities
-- **Data Maintenance**: Type data management and updates
+#### ฟังก์ชันหลัก:
+- **การสร้างประเภท**: เพิ่มและจัดการหมวดหมู่เหตุการณ์
+- **ระบบการจำแนกประเภท**: เหตุการณ์ทั้งหมดเป็นของประเภทเฉพาะ
+- **การนำเข้า/ส่งออก**: ความสามารถในการนำเข้าและส่งออกเป็นชุด
+- **การบำรุงรักษาข้อมูล**: การจัดการและอัปเดตข้อมูลประเภท
 
-### 2. Event Management
+### 2. การจัดการเหตุการณ์
 
-#### Event Operations:
-- **Manual Entry**: Admin user manual event creation
-- **Batch Import**: External file bulk import
-- **Data Validation**: Event data verification
-- **Chain Publishing**: Blockchain event deployment
+#### การดำเนินการเหตุการณ์:
+- **การป้อนข้อมูลด้วยตนเอง**: การสร้างเหตุการณ์ด้วยตนเองโดยผู้ใช้ Admin
+- **การนำเข้าเป็นชุด**: การนำเข้าไฟล์ภายนอกจำนวนมาก
+- **การตรวจสอบข้อมูล**: การตรวจสอบข้อมูลเหตุการณ์
+- **การเผยแพร่บนเชน**: การปรับใช้เหตุการณ์บนบล็อกเชน
 
-#### Publishing Process:
-- **Event Creation**: Define event parameters
-- **Condition Setup**: Create event conditions
-- **Liquidity Initialization**: Set initial odds and liquidity
-- **Market Launch**: Enable trading for the event
+#### กระบวนการเผยแพร่:
+- **การสร้างเหตุการณ์**: กำหนดพารามิเตอร์เหตุการณ์
+- **การตั้งค่าเงื่อนไข**: สร้างเงื่อนไขเหตุการณ์
+- **การเริ่มต้นสภาพคล่อง**: กำหนดอัตราต่อรองและสภาพคล่องเริ่มต้น
+- **การเปิดตลาด**: เปิดให้ซื้อขายสำหรับเหตุการณ์
 
-### 3. Chain Operations
+### 3. การดำเนินการบนเชน
 
-#### DP Functions:
-- **Event Publishing**: Deploy events to blockchain
-- **Condition Management**: Create and manage conditions
-- **Liquidity Operations**: Add or recover liquidity
-- **Result Publishing**: Publish event outcomes
-- **Settlement Execution**: Trigger liquidation process
+#### ฟังก์ชัน DP:
+- **การเผยแพร่เหตุการณ์**: ปรับใช้เหตุการณ์บนบล็อกเชน
+- **การจัดการเงื่อนไข**: สร้างและจัดการเงื่อนไข
+- **การดำเนินการสภาพคล่อง**: เพิ่มหรือกู้คืนสภาพคล่อง
+- **การเผยแพร่ผลลัพธ์**: เผยแพร่ผลลัพธ์ของเหตุการณ์
+- **การดำเนินการชำระบัญชี**: กระตุ้นกระบวนการชำระบัญชี
 
-#### Automated Services:
-- **Scheduled Operations**: Automatic execution of specific tasks
-- **Trading Halts**: Automatic condition trading stops
-- **Result Publishing**: Automatic result publication
-- **Settlement Processing**: Automatic liquidation execution
+#### บริการอัตโนมัติ:
+- **การดำเนินการตามกำหนดเวลา**: การดำเนินการอัตโนมัติสำหรับงานเฉพาะ
+- **การหยุดการซื้อขาย**: การหยุดการซื้อขายเงื่อนไขอัตโนมัติ
+- **การเผยแพร่ผลลัพธ์**: การเผยแพร่ผลลัพธ์อัตโนมัติ
+- **การประมวลผลการชำระบัญชี**: การดำเนินการชำระบัญชีอัตโนมัติ
 
-### 4. Permission Management
+### 4. การจัดการสิทธิ์
 
-#### Role-based Access:
-- **Administrators**: Manage other account permissions and contract configuration
-- **Data Entry Staff**: Event/condition data entry and maintenance
-- **Asset Managers**: Chain operations and operations management
+#### การเข้าถึงตามบทบาท:
+- **ผู้ดูแลระบบ**: จัดการสิทธิ์บัญชีอื่นและการกำหนดค่าสัญญา
+- **เจ้าหน้าที่ป้อนข้อมูล**: การป้อนข้อมูลและบำรุงรักษาข้อมูลเหตุการณ์/เงื่อนไข
+- **ผู้จัดการสินทรัพย์**: การดำเนินการเชนและการจัดการการดำเนินงาน
 
-#### Security Features:
-- **Specific Permissions**: Only authorized users can operate chain data
-- **Transaction Confirmation**: Wait for transaction confirmation before next step
-- **Permission Auditing**: Regular permission review and updates
+#### คุณสมบัติด้านความปลอดภัย:
+- **สิทธิ์เฉพาะเจาะจง**: เฉพาะผู้ใช้ที่ได้รับอนุญาตเท่านั้นที่สามารถดำเนินการข้อมูลบนเชน
+- **การยืนยันธุรกรรม**: รอการยืนยันธุรกรรมก่อนขั้นตอนถัดไป
+- **การตรวจสอบสิทธิ์**: การตรวจสอบและอัปเดตสิทธิ์เป็นประจำ
 
-## Order Trading Model
+## โมเดลการซื้อขายตามคำสั่ง (Order Trading Model)
 
-### 1. Order Book Management
+### 1. การจัดการ Order Book
 
-#### Core Functions:
-- **Limit Order Support**: Only limit orders currently supported
-- **Order Storage**: Efficient order data management
-- **Order Matching**: Price and time priority matching
-- **Order Validation**: Order integrity verification
+#### ฟังก์ชันหลัก:
+- **รองรับ Limit Order**: ปัจจุบันรองรับเฉพาะ Limit Orders
+- **การจัดเก็บคำสั่ง**: การจัดการข้อมูลคำสั่งที่มีประสิทธิภาพ
+- **การจับคู่คำสั่ง**: การจับคู่ตามลำดับความสำคัญของราคาและเวลา
+- **การตรวจสอบคำสั่ง**: การตรวจสอบความสมบูรณ์ของคำสั่ง
 
-#### Technical Considerations:
-- **Single Cluster**: No distributed deployment requirements
-- **Performance**: TPS < 100
-- **Scalability**: Future expansion considerations
+#### ข้อควรพิจารณาทางเทคนิค:
+- **คลัสเตอร์เดียว**: ไม่มีข้อกำหนดการปรับใช้แบบกระจาย
+- **ประสิทธิภาพ**: TPS < 100
+- **ความสามารถในการขยายขนาด**: ข้อควรพิจารณาสำหรับการขยายตัวในอนาคต
 
-### 2. Matching Engine
+### 2. Matching Engine (เครื่องมือจับคู่)
 
-#### Matching Principles:
-- **Price Priority**: Better prices matched first
-- **Time Priority**: Earlier orders matched first
-- **Order Types**: Currently only limit orders
-- **Real-time Processing**: Immediate order processing
+#### หลักการจับคู่:
+- **ลำดับความสำคัญของราคา**: ราคาที่ดีกว่าจะถูกจับคู่ก่อน
+- **ลำดับความสำคัญของเวลา**: คำสั่งที่มาก่อนจะถูกจับคู่ก่อน
+- **ประเภทคำสั่ง**: ปัจจุบันมีเฉพาะ Limit Orders
+- **การประมวลผลแบบเรียลไทม์**: การประมวลผลคำสั่งทันที
 
-#### Engine Features:
-- **Efficient Matching**: Optimized matching algorithms
-- **Order Validation**: Pre-matching order verification
-- **Settlement Integration**: Seamless settlement processing
+#### คุณสมบัติของเครื่องมือ:
+- **การจับคู่ที่มีประสิทธิภาพ**: อัลกอริทึมการจับคู่ที่ได้รับการปรับปรุง
+- **การตรวจสอบคำสั่ง**: การตรวจสอบคำสั่งก่อนการจับคู่
+- **การรวมการชำระบัญชี**: การประมวลผลการชำระบัญชีที่ราบรื่น
 
-### 3. Market Price Calculation
+### 3. การคำนวณราคาตลาด
 
-#### Price Determination:
-- **Seller-based Pricing**: Minimum seller price as market price
-- **Future Enhancements**: Comprehensive price calculation
-- **Real-time Updates**: Continuous price updates
-- **Historical Data**: Price history tracking
+#### การกำหนดราคา:
+- **การกำหนดราคาตามผู้ขาย**: ราคาผู้ขายขั้นต่ำเป็นราคาตลาด
+- **การปรับปรุงในอนาคต**: การคำนวณราคาที่ครอบคลุม
+- **การอัปเดตแบบเรียลไทม์**: การอัปเดตราคาอย่างต่อเนื่อง
+- **ข้อมูลย้อนหลัง**: การติดตามประวัติราคา
 
-#### Calculation Factors:
-- **Current Version**: Minimum seller price
-- **Future Version**: Comprehensive calculation including:
-  - Transaction prices
-  - Trading volume
-  - Buyer prices
-  - Market depth
+#### ปัจจัยการคำนวณ:
+- **เวอร์ชันปัจจุบัน**: ราคาผู้ขายขั้นต่ำ
+- **เวอร์ชันในอนาคต**: การคำนวณที่ครอบคลุมรวมถึง:
+  - ราคาธุรกรรม
+  - ปริมาณการซื้อขาย
+  - ราคาผู้ซื้อ
+  - ความลึกของตลาด
 
-### 4. Settlement Service
+### 4. บริการชำระบัญชี
 
-#### Settlement Process:
-- **Off-chain Calculation**: Settlement calculations performed off-chain
-- **On-chain Execution**: Asset changes executed on blockchain
-- **Batch Processing**: Efficient bulk transaction processing
-- **Verification**: Settlement result verification
+#### กระบวนการชำระบัญชี:
+- **การคำนวณนอกเชน**: การคำนวณการชำระบัญชีดำเนินการนอกเชน
+- **การดำเนินการบนเชน**: การเปลี่ยนแปลงสินทรัพย์ดำเนินการบนบล็อกเชน
+- **การประมวลผลแบบกลุ่ม**: การประมวลผลธุรกรรมจำนวนมากอย่างมีประสิทธิภาพ
+- **การตรวจสอบ**: การตรวจสอบผลลัพธ์การชำระบัญชี
 
-#### Security Features:
-- **Transaction Verification**: All transactions verified on-chain
-- **Asset Safety**: User assets protected throughout process
-- **Audit Trail**: Complete transaction history
+#### คุณสมบัติด้านความปลอดภัย:
+- **การตรวจสอบธุรกรรม**: ธุรกรรมทั้งหมดได้รับการตรวจสอบบนเชน
+- **ความปลอดภัยของสินทรัพย์**: สินทรัพย์ของผู้ใช้ได้รับการปกป้องตลอดกระบวนการ
+- **เส้นทางการตรวจสอบ (Audit Trail)**: ประวัติธุรกรรมที่สมบูรณ์
 
-## DApp Backend Service
+## บริการ DApp Backend
 
-### 1. User Management
+### 1. การจัดการผู้ใช้
 
-#### Authentication:
-- **Wallet Connection**: Connect wallet for login/registration
-- **SSO Support**: Single sign-on integration
-- **User Settings**: User preference management
-- **Overview Module**: User dashboard and statistics
+#### การตรวจสอบสิทธิ์:
+- **การเชื่อมต่อกระเป๋าเงิน**: เชื่อมต่อกระเป๋าเงินเพื่อเข้าสู่ระบบ/ลงทะเบียน
+- **การรองรับ SSO**: การรวม Single sign-on
+- **การตั้งค่าผู้ใช้**: การจัดการการตั้งค่าผู้ใช้
+- **โมดูลภาพรวม**: แดชบอร์ดผู้ใช้และสถิติ
 
-#### User Features:
-- **Profile Management**: User profile and settings
-- **Activity Tracking**: User activity monitoring
-- **Performance Analytics**: User performance metrics
+#### คุณสมบัติผู้ใช้:
+- **การจัดการโปรไฟล์**: โปรไฟล์และการตั้งค่าผู้ใช้
+- **การติดตามกิจกรรม**: การตรวจสอบกิจกรรมผู้ใช้
+- **การวิเคราะห์ประสิทธิภาพ**: ตัวชี้วัดประสิทธิภาพผู้ใช้
 
-### 2. Activity Module
+### 2. โมดูลกิจกรรม
 
-#### Admin Configuration:
-- **Activity Management**: Direct admin configuration
-- **Image Management**: Activity image address management
-- **Link Management**: Activity link address management
-- **API Integration**: Client-side activity data provision
+#### การกำหนดค่า Admin:
+- **การจัดการกิจกรรม**: การกำหนดค่าโดยตรงจาก Admin
+- **การจัดการรูปภาพ**: การจัดการที่อยู่รูปภาพกิจกรรม
+- **การจัดการลิงก์**: การจัดการที่อยู่ลิงก์กิจกรรม
+- **การรวม API**: การจัดเตรียมข้อมูลกิจกรรมฝั่งไคลเอนต์
 
-#### Features:
-- **Dynamic Content**: Configurable activity content
-- **Image Display**: Activity image presentation
-- **Link Handling**: External link management
-- **API Services**: Activity data API provision
+#### คุณสมบัติ:
+- **เนื้อหาแบบไดนามิก**: เนื้อหากิจกรรมที่กำหนดค่าได้
+- **การแสดงรูปภาพ**: การนำเสนอรูปภาพกิจกรรม
+- **การจัดการลิงก์**: การจัดการลิงก์ภายนอก
+- **บริการ API**: การจัดเตรียม API ข้อมูลกิจกรรม
 
-### 3. Historical Order Management
+### 3. การจัดการประวัติคำสั่ง
 
-#### Order History:
-- **Time Filtering**: Filter orders by time period
-- **Status Filtering**: Filter orders by status
-- **Event Filtering**: Filter orders by event
-- **Comprehensive Search**: Multi-criteria order search
+#### ประวัติคำสั่ง:
+- **การกรองเวลา**: กรองคำสั่งตามช่วงเวลา
+- **การกรองสถานะ**: กรองคำสั่งตามสถานะ
+- **การกรองเหตุการณ์**: กรองคำสั่งตามเหตุการณ์
+- **การค้นหาที่ครอบคลุม**: การค้นหาคำสั่งหลายเกณฑ์
 
-#### Data Integration:
-- **Order Book API**: Basic API from order book service
-- **Data Aggregation**: Comprehensive order data collection
-- **User Interface**: User-friendly order history display
+#### การรวมข้อมูล:
+- **Order Book API**: API พื้นฐานจากบริการ Order Book
+- **การรวบรวมข้อมูล**: การรวบรวมข้อมูลคำสั่งที่ครอบคลุม
+- **ส่วนต่อประสานผู้ใช้**: การแสดงประวัติคำสั่งที่ใช้งานง่าย
 
-### 4. Dashboard Module
+### 4. โมดูลแดชบอร์ด
 
-#### Deposit Analytics:
-- **Deposit Trends**: Deposit amount trend charts
-- **Data Collection**: 30-second contract reading intervals
-- **Event Monitoring**: Vault contract deposit/withdraw event monitoring
-- **Profit Calculation**: Comprehensive profit calculation
+#### การวิเคราะห์การฝาก:
+- **แนวโน้มการฝาก**: แผนภูมิแนวโน้มจำนวนเงินฝาก
+- **การรวบรวมข้อมูล**: ช่วงเวลาการอ่านสัญญา 30 วินาที
+- **การตรวจสอบเหตุการณ์**: การตรวจสอบเหตุการณ์การฝาก/ถอนของสัญญา Vault
+- **การคำนวณกำไร**: การคำนวณกำไรที่ครอบคลุม
 
-#### Revenue Analytics:
-- **Profit Trends**: Profit amount trend charts
-- **Real-time Updates**: Live profit calculation
-- **Historical Data**: Complete profit history
-- **Performance Metrics**: User performance analysis
+#### การวิเคราะห์รายได้:
+- **แนวโน้มกำไร**: แผนภูมิแนวโน้มจำนวนกำไร
+- **การอัปเดตแบบเรียลไทม์**: การคำนวณกำไรสด
+- **ข้อมูลย้อนหลัง**: ประวัติกำไรที่สมบูรณ์
+- **ตัวชี้วัดประสิทธิภาพ**: การวิเคราะห์ประสิทธิภาพผู้ใช้
 
-#### Activity Analytics:
-- **Order Volume Trends**: Daily order volume charts
-- **Order Amount Trends**: Daily order amount charts
-- **Event Monitoring**: SubmitOrderEvent monitoring
-- **Data Analysis**: Comprehensive order data analysis
+#### การวิเคราะห์กิจกรรม:
+- **แนวโน้มปริมาณคำสั่ง**: แผนภูมิปริมาณคำสั่งรายวัน
+- **แนวโน้มจำนวนเงินคำสั่ง**: แผนภูมิจำนวนเงินคำสั่งรายวัน
+- **การตรวจสอบเหตุการณ์**: การตรวจสอบ SubmitOrderEvent
+- **การวิเคราะห์ข้อมูล**: การวิเคราะห์ข้อมูลคำสั่งที่ครอบคลุม
 
-### 5. Search and Graph Services
+### 5. บริการค้นหาและกราฟ
 
-#### Search Functionality:
-- **Keyword Search**: Search all related events
-- **DP Service Integration**: Basic API from DP service
-- **Advanced Filtering**: Multi-criteria search
-- **Real-time Results**: Instant search results
+#### ฟังก์ชันการค้นหา:
+- **การค้นหาคำหลัก**: ค้นหาเหตุการณ์ที่เกี่ยวข้องทั้งหมด
+- **การรวมบริการ DP**: API พื้นฐานจากบริการ DP
+- **การกรองขั้นสูง**: การค้นหาหลายเกณฑ์
+- **ผลลัพธ์แบบเรียลไทม์**: ผลลัพธ์การค้นหาทันที
 
-#### Graph Services:
-- **Price Trend Charts**: Market price trend visualization
-- **Time Intervals**: 30-minute, 1-hour, 1-day, 1-week statistics
-- **Data Collection**: 10-minute API data collection intervals
-- **Price Analysis**: Comprehensive price data analysis
+#### บริการกราฟ:
+- **แผนภูมิแนวโน้มราคา**: การแสดงภาพแนวโน้มราคาตลาด
+- **ช่วงเวลา**: สถิติ 30 นาที, 1 ชั่วโมง, 1 วัน, 1 สัปดาห์
+- **การรวบรวมข้อมูล**: ช่วงเวลาการรวบรวมข้อมูล API 10 นาที
+- **การวิเคราะห์ราคา**: การวิเคราะห์ข้อมูลราคาที่ครอบคลุม
 
 ## DApp Frontend
 
-### 1. User Interface
+### 1. ส่วนต่อประสานผู้ใช้ (User Interface)
 
-#### Core Features:
-- **Simple Design**: Intuitive and user-friendly interface
-- **Trustworthy Experience**: Transparent and reliable service
-- **Real-time Updates**: Live data updates
-- **Responsive Design**: Mobile and desktop compatibility
+#### คุณสมบัติหลัก:
+- **การออกแบบที่เรียบง่าย**: อินเทอร์เฟซที่ใช้งานง่ายและเป็นมิตรกับผู้ใช้
+- **ประสบการณ์ที่น่าเชื่อถือ**: บริการที่โปร่งใสและเชื่อถือได้
+- **การอัปเดตแบบเรียลไทม์**: การอัปเดตข้อมูลสด
+- **การออกแบบที่ตอบสนอง (Responsive)**: ความเข้ากันได้กับมือถือและเดสก์ท็อป
 
-#### User Experience:
-- **Easy Navigation**: Simple and clear navigation
-- **Visual Feedback**: Clear visual indicators
-- **Error Handling**: Comprehensive error management
-- **Loading States**: Clear loading indicators
+#### ประสบการณ์ผู้ใช้:
+- **การนำทางที่ง่าย**: การนำทางที่เรียบง่ายและชัดเจน
+- **การตอบสนองทางภาพ**: ตัวบ่งชี้ทางภาพที่ชัดเจน
+- **การจัดการข้อผิดพลาด**: การจัดการข้อผิดพลาดที่ครอบคลุม
+- **สถานะการโหลด**: ตัวบ่งชี้การโหลดที่ชัดเจน
 
-### 2. Authentication System
+### 2. ระบบตรวจสอบสิทธิ์
 
-#### Login Methods:
-- **Wallet Connection**: MetaMask and other EVM wallets
-- **SSO Integration**: Single sign-on support
-- **Registration Process**: Simple user registration
-- **Session Management**: Secure session handling
+#### วิธีการเข้าสู่ระบบ:
+- **การเชื่อมต่อกระเป๋าเงิน**: MetaMask และกระเป๋าเงิน EVM อื่นๆ
+- **การรวม SSO**: การรองรับ Single sign-on
+- **กระบวนการลงทะเบียน**: การลงทะเบียนผู้ใช้ที่เรียบง่าย
+- **การจัดการเซสชัน**: การจัดการเซสชันที่ปลอดภัย
 
-#### Security Features:
-- **Private Key Security**: Secure private key handling
-- **Transaction Signing**: Secure transaction signing
-- **Identity Verification**: User identity verification
+#### คุณสมบัติด้านความปลอดภัย:
+- **ความปลอดภัยของ Private Key**: การจัดการ Private Key ที่ปลอดภัย
+- **การลงนามธุรกรรม**: การลงนามธุรกรรมที่ปลอดภัย
+- **การยืนยันตัวตน**: การยืนยันตัวตนผู้ใช้
 
-### 3. Asset Management
+### 3. การจัดการสินทรัพย์
 
-#### Deposit/Withdrawal:
-- **Asset Viewing**: View user assets by address
-- **Deposit Function**: Simple deposit process
-- **Withdrawal Function**: Secure withdrawal process
-- **Balance Tracking**: Real-time balance updates
+#### การฝาก/ถอน:
+- **การดูสินทรัพย์**: ดูสินทรัพย์ผู้ใช้ตามที่อยู่
+- **ฟังก์ชันการฝาก**: กระบวนการฝากที่เรียบง่าย
+- **ฟังก์ชันการถอน**: กระบวนการถอนที่ปลอดภัย
+- **การติดตามยอดคงเหลือ**: การอัปเดตยอดคงเหลือแบบเรียลไทม์
 
-#### Asset Features:
-- **Multi-asset Support**: Support for various assets
-- **Transaction History**: Complete transaction records
-- **Asset Analytics**: Asset performance analysis
+#### คุณสมบัติสินทรัพย์:
+- **รองรับหลายสินทรัพย์**: รองรับสินทรัพย์ต่างๆ
+- **ประวัติธุรกรรม**: บันทึกธุรกรรมที่สมบูรณ์
+- **การวิเคราะห์สินทรัพย์**: การวิเคราะห์ประสิทธิภาพสินทรัพย์
 
-### 4. Personal Center
+### 4. ศูนย์ส่วนบุคคล (Personal Center)
 
-#### User Dashboard:
-- **Personal Overview**: Comprehensive user overview
-- **My Orders**: User order management
-- **Settings**: User preference settings
-- **Performance Tracking**: User performance metrics
+#### แดชบอร์ดผู้ใช้:
+- **ภาพรวมส่วนบุคคล**: ภาพรวมผู้ใช้ที่ครอบคลุม
+- **คำสั่งของฉัน**: การจัดการคำสั่งผู้ใช้
+- **การตั้งค่า**: การตั้งค่าผู้ใช้
+- **การติดตามประสิทธิภาพ**: ตัวชี้วัดประสิทธิภาพผู้ใช้
 
-#### Management Features:
-- **Order History**: Complete order history
-- **Asset Management**: Asset overview and management
-- **Settings Configuration**: User settings and preferences
+#### ฟังก์ชันการจัดการ:
+- **ประวัติคำสั่ง**: ประวัติคำสั่งที่สมบูรณ์
+- **การจัดการสินทรัพย์**: ภาพรวมและการจัดการสินทรัพย์
+- **การกำหนดค่าการตั้งค่า**: การตั้งค่าและการตั้งค่าผู้ใช้
 
-### 5. Limit Order Trading
+### 5. การซื้อขาย Limit Order
 
-#### Order Features:
-- **Buy/Sell Orders**: Submit buy and sell orders
-- **Market Price View**: Real-time market price display
-- **Price Trends**: Price trend visualization
-- **Order Book Details**: Detailed order book information
+#### คุณสมบัติคำสั่ง:
+- **คำสั่งซื้อ/ขาย**: ส่งคำสั่งซื้อและขาย
+- **มุมมองราคาตลาด**: การแสดงราคาตลาดแบบเรียลไทม์
+- **แนวโน้มราคา**: การแสดงภาพแนวโน้มราคา
+- **รายละเอียด Order Book**: ข้อมูล Order Book โดยละเอียด
 
-#### Trading Interface:
-- **Order Placement**: Simple order placement
-- **Price Charts**: Real-time price charts
-- **Order Management**: Order modification and cancellation
-- **Trade History**: Complete trade history
+#### อินเทอร์เฟซการซื้อขาย:
+- **การวางคำสั่ง**: การวางคำสั่งที่เรียบง่าย
+- **แผนภูมิราคา**: แผนภูมิราคาแบบเรียลไทม์
+- **การจัดการคำสั่ง**: การแก้ไขและยกเลิกคำสั่ง
+- **ประวัติการซื้อขาย**: ประวัติการซื้อขายที่สมบูรณ์
 
-### 6. Event Management
+### 6. การจัดการเหตุการณ์
 
-#### Event Services:
-- **Event Lists**: Comprehensive event listings
-- **Event Filtering**: Advanced event filtering
-- **Event Search**: Event search functionality
-- **Event Details**: Detailed event information
+#### บริการเหตุการณ์:
+- **รายการเหตุการณ์**: รายการเหตุการณ์ที่ครอบคลุม
+- **การกรองเหตุการณ์**: การกรองเหตุการณ์ขั้นสูง
+- **การค้นหาเหตุการณ์**: ฟังก์ชันการค้นหาเหตุการณ์
+- **รายละเอียดเหตุการณ์**: ข้อมูลเหตุการณ์โดยละเอียด
 
-#### Condition Management:
-- **Condition Lists**: Event condition listings
-- **Price Information**: Real-time price data
-- **Order Book Details**: Detailed order book information
-- **Market Price Trends**: Price trend visualization
+#### การจัดการเงื่อนไข:
+- **รายการเงื่อนไข**: รายการเงื่อนไขเหตุการณ์
+- **ข้อมูลราคา**: ข้อมูลราคาแบบเรียลไทม์
+- **รายละเอียด Order Book**: ข้อมูล Order Book โดยละเอียด
+- **แนวโน้มราคาตลาด**: การแสดงภาพแนวโน้มราคา
 
-### 7. Data Analytics
+### 7. การวิเคราะห์ข้อมูล
 
-#### Trend Analysis:
-- **Deposit Trends**: Deposit amount trend charts
-- **Profit Trends**: Profit amount trend charts
-- **Activity Trends**: Order volume and amount trends
-- **Performance Metrics**: User performance analysis
+#### การวิเคราะห์แนวโน้ม:
+- **แนวโน้มการฝาก**: แผนภูมิแนวโน้มจำนวนเงินฝาก
+- **แนวโน้มกำไร**: แผนภูมิแนวโน้มจำนวนกำไร
+- **แนวโน้มกิจกรรม**: แนวโน้มปริมาณและจำนวนเงินคำสั่ง
+- **ตัวชี้วัดประสิทธิภาพ**: การวิเคราะห์ประสิทธิภาพผู้ใช้
 
-#### Visualization:
-- **Interactive Charts**: Interactive data visualization
-- **Real-time Updates**: Live data updates
-- **Historical Analysis**: Historical data analysis
-- **Custom Timeframes**: Flexible time period selection
+#### การแสดงภาพ:
+- **แผนภูมิเชิงโต้ตอบ**: การแสดงภาพข้อมูลเชิงโต้ตอบ
+- **การอัปเดตแบบเรียลไทม์**: การอัปเดตข้อมูลสด
+- **การวิเคราะห์ย้อนหลัง**: การวิเคราะห์ข้อมูลย้อนหลัง
+- **กรอบเวลาที่กำหนดเอง**: การเลือกช่วงเวลาที่ยืดหยุ่น
 
-### 8. Multi-language Support
+### 8. การรองรับหลายภาษา
 
-#### Language Options:
-- **English**: English language support (default)
-- **Simplified Chinese**: Simplified Chinese language support
-- **Traditional Chinese**: Traditional Chinese language support
-- **Thai**: Thai language support
-- **Indonesian**: Indonesian language support
-- **Vietnamese**: Vietnamese language support
+#### ตัวเลือกภาษา:
+- **อังกฤษ**: รองรับภาษาอังกฤษ (ค่าเริ่มต้น)
+- **จีนตัวย่อ**: รองรับภาษาจีนตัวย่อ
+- **จีนตัวเต็ม**: รองรับภาษาจีนตัวเต็ม
+- **ไทย**: รองรับภาษาไทย
+- **อินโดนีเซีย**: รองรับภาษาอินโดนีเซีย
+- **เวียดนาม**: รองรับภาษาเวียดนาม
 
-#### Localization Features:
-- **Dynamic Translation**: Real-time language switching
-- **Cultural Adaptation**: Localized content and design
-- **User Preferences**: User language preference settings
-- **Regional Content**: Region-specific content and features
+#### คุณสมบัติการแปลภาษา:
+- **การแปลแบบไดนามิก**: การสลับภาษาแบบเรียลไทม์
+- **การปรับให้เข้ากับวัฒนธรรม**: เนื้อหาและการออกแบบที่แปลเป็นภาษาท้องถิ่น
+- **การตั้งค่าผู้ใช้**: การตั้งค่าภาษาของผู้ใช้
+- **เนื้อหาภูมิภาค**: เนื้อหาและคุณสมบัติเฉพาะภูมิภาค
 
-## Revenue Model
+## โมเดลรายได้
 
-### 1. Transaction Fees
+### 1. ค่าธรรมเนียมธุรกรรม
 
-#### Fee Structure:
-- **Trading Fee**: 1.5/1000 (0.15%) of transaction amount
-- **Buyer/Seller Split**: Both parties charged the fee
-- **Automatic Deduction**: Fees automatically deducted from transactions
-- **Revenue Distribution**: Platform revenue distribution
+#### โครงสร้างค่าธรรมเนียม:
+- **ค่าธรรมเนียมการซื้อขาย**: 1.5/1000 (0.15%) ของจำนวนเงินธุรกรรม
+- **การแบ่งผู้ซื้อ/ผู้ขาย**: ทั้งสองฝ่ายถูกเรียกเก็บค่าธรรมเนียม
+- **การหักอัตโนมัติ**: ค่าธรรมเนียมถูกหักอัตโนมัติจากธุรกรรม
+- **การกระจายรายได้**: การกระจายรายได้ของแพลตฟอร์ม
 
-#### Fee Collection:
-- **Automatic Processing**: Automatic fee collection
-- **Transparent Pricing**: Clear fee structure
-- **Revenue Tracking**: Comprehensive revenue tracking
-- **Platform Sustainability**: Revenue for platform development
+#### การเก็บค่าธรรมเนียม:
+- **การประมวลผลอัตโนมัติ**: การเก็บค่าธรรมเนียมอัตโนมัติ
+- **ราคาที่โปร่งใส**: โครงสร้างค่าธรรมเนียมที่ชัดเจน
+- **การติดตามรายได้**: การติดตามรายได้ที่ครอบคลุม
+- **ความยั่งยืนของแพลตฟอร์ม**: รายได้สำหรับการพัฒนาแพลตฟอร์ม
 
-## System Limitations and Risks
+## ข้อจำกัดและความเสี่ยงของระบบ
 
-### 1. Technical Limitations
+### 1. ข้อจำกัดทางเทคนิค
 
-#### Performance Constraints:
-- **Contract TPS**: < 500 transactions per second
-- **Order System TPS**: < 100 transactions per second
-- **Centralization Risk**: Event results determined by DP
-- **Liquidity Management**: Operator-provided liquidity only
+#### ข้อจำกัดด้านประสิทธิภาพ:
+- **TPS ของสัญญา**: < 500 ธุรกรรมต่อวินาที
+- **TPS ของระบบคำสั่ง**: < 100 ธุรกรรมต่อวินาที
+- **ความเสี่ยงจากการรวมศูนย์**: ผลลัพธ์เหตุการณ์กำหนดโดย DP
+- **การจัดการสภาพคล่อง**: สภาพคล่องที่ผู้ดำเนินการจัดหาให้เท่านั้น
 
-#### Current Restrictions:
-- **Limit Orders Only**: No market orders currently supported
-- **No Internal Wallet**: Direct use of market wallets (MetaMask)
-- **No Risk Control**: Risk control system not implemented
-- **Single Cluster**: No distributed deployment
+#### ข้อจำกัดปัจจุบัน:
+- **Limit Orders เท่านั้น**: ปัจจุบันไม่รองรับ Market Orders
+- **ไม่มีกระเป๋าเงินภายใน**: การใช้กระเป๋าเงินตลาดโดยตรง (MetaMask)
+- **ไม่มีการควบคุมความเสี่ยง**: ระบบควบคุมความเสี่ยงยังไม่ได้ดำเนินการ
+- **คลัสเตอร์เดียว**: ไม่มีการปรับใช้แบบกระจาย
 
-### 2. Security Considerations
+### 2. ข้อควรพิจารณาด้านความปลอดภัย
 
-#### Contract Security:
-- **Vulnerability Risk**: Smart contract vulnerability potential
-- **Audit Requirements**: Comprehensive security audits
-- **Open Source**: Transparent code for community review
-- **Regular Updates**: Continuous security improvements
+#### ความปลอดภัยของสัญญา:
+- **ความเสี่ยงช่องโหว่**: โอกาสเกิดช่องโหว่ของ Smart Contract
+- **ข้อกำหนดการตรวจสอบ**: การตรวจสอบความปลอดภัยที่ครอบคลุม
+- **โอเพ่นซอร์ส**: โค้ดที่โปร่งใสสำหรับการตรวจสอบโดยชุมชน
+- **การอัปเดตเป็นประจำ**: การปรับปรุงความปลอดภัยอย่างต่อเนื่อง
 
-#### Operational Security:
-- **Permission Management**: Strict permission controls
-- **Transaction Verification**: All transactions verified
-- **Asset Protection**: User asset security measures
-- **Monitoring Systems**: Continuous security monitoring
+#### ความปลอดภัยในการดำเนินงาน:
+- **การจัดการสิทธิ์**: การควบคุมสิทธิ์ที่เข้มงวด
+- **การตรวจสอบธุรกรรม**: ธุรกรรมทั้งหมดได้รับการตรวจสอบ
+- **การปกป้องสินทรัพย์**: มาตรการความปลอดภัยของสินทรัพย์ผู้ใช้
+- **ระบบตรวจสอบ**: การตรวจสอบความปลอดภัยอย่างต่อเนื่อง
 
-### 3. Risk Mitigation
+### 3. การลดความเสี่ยง
 
-#### Technical Measures:
-- **Comprehensive Testing**: Extensive testing procedures
-- **Security Audits**: Regular security audits
-- **Code Reviews**: Thorough code review processes
-- **Backup Systems**: Redundant system implementations
+#### มาตรการทางเทคนิค:
+- **การทดสอบที่ครอบคลุม**: ขั้นตอนการทดสอบที่กว้างขวาง
+- **การตรวจสอบความปลอดภัย**: การตรวจสอบความปลอดภัยเป็นประจำ
+- **การตรวจสอบโค้ด**: กระบวนการตรวจสอบโค้ดอย่างละเอียด
+- **ระบบสำรอง**: การดำเนินการระบบสำรอง
 
-#### Operational Measures:
-- **Risk Assessment**: Regular risk assessments
-- **Incident Response**: Comprehensive incident response plans
-- **User Education**: User security education
-- **Community Oversight**: Community monitoring and feedback
+#### มาตรการในการดำเนินงาน:
+- **การประเมินความเสี่ยง**: การประเมินความเสี่ยงเป็นประจำ
+- **การตอบสนองต่อเหตุการณ์**: แผนการตอบสนองต่อเหตุการณ์ที่ครอบคลุม
+- **การศึกษาผู้ใช้**: การศึกษาความปลอดภัยของผู้ใช้
+- **การกำกับดูแลโดยชุมชน**: การตรวจสอบและข้อเสนอแนะจากชุมชน
 
 ---
 
-*For the latest information on system architecture and updates, please check our official announcements.* 
+*สำหรับข้อมูลล่าสุดเกี่ยวกับสถาปัตยกรรมระบบและการอัปเดต โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*

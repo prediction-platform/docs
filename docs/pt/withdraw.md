@@ -1,186 +1,183 @@
-!!! note "Aviso de tradução"
-    Estamos preparando a versão completa em português. O conteúdo abaixo permanece em inglês para que você tenha acesso imediato às informações.
+# Saque
 
-# Withdraw
+## Visão Geral
 
-## Overview
+O YC365 fornece serviços de saque seguros e eficientes para todas as criptomoedas suportadas. Os saques são processados na rede BSC (Binance Smart Chain) com taxas competitivas e tempos de processamento rápidos.
 
-YC365 provides secure and efficient withdrawal services for all supported cryptocurrencies. Withdrawals are processed on the BSC (Binance Smart Chain) network with competitive fees and fast processing times.
+## Carteiras Suportadas
 
-## Supported Wallets
+O YC365 suporta todas as carteiras compatíveis com EVM, incluindo:
 
-YC365 supports all EVM-compatible wallets, including:
+- **MetaMask** - Mais popular e amplamente utilizada
+- **WalletConnect** - Suporte multi-carteira
+- **Trust Wallet** - Carteira mobile-first
+- **Binance Wallet** - Carteira oficial da Binance
+- **Coinbase Wallet** - Interface amigável
+- **Qualquer carteira compatível com EVM**
 
-- **MetaMask** - Most popular and widely used
-- **WalletConnect** - Multi-wallet support
-- **Trust Wallet** - Mobile-first wallet
-- **Binance Wallet** - Official Binance wallet
-- **Coinbase Wallet** - User-friendly interface
-- **Any EVM-compatible wallet**
+!!! note "Requisitos da Carteira"
+    Sua carteira deve suportar a rede BSC (Binance Smart Chain) para usar o YC365.
 
-!!! note "Wallet Requirements"
-    Your wallet must support BSC (Binance Smart Chain) network to use YC365.
+## Métodos de Saque Suportados
 
-## Supported Withdrawal Methods
-
-### BSC Network Withdrawals
+### Saques na Rede BSC
 
 #### USDT (BEP-20)
-- **Minimum Withdrawal**: 10 USDT
-- **Processing Time**: 5-30 seconds
-- **Network Fee**: 0.0005 BNB
-- **Network**: Binance Smart Chain (BSC) only
+- **Saque Mínimo**: 10 USDT
+- **Tempo de Processamento**: 5-30 segundos
+- **Taxa de Rede**: 0,0005 BNB
+- **Rede**: Apenas Binance Smart Chain (BSC)
 
-## How to Withdraw
+## Como Sacar
 
-### Step 1: Wallet Setup
-1. **Connect Wallet** (if not already connected):
-   - Visit **dapp.yc365.io**
-   - Click "Connect Wallet" and select your EVM wallet
-   - Ensure you're connected to BSC Mainnet
+### Passo 1: Configuração da Carteira
+1. **Conectar Carteira** (se ainda não estiver conectada):
+   - Visite **dapp.yc365.io**
+   - Clique em "Connect Wallet" e selecione sua carteira EVM
+   - Certifique-se de estar conectado à BSC Mainnet
 
-2. **Install Wallet** (if needed):
-   - Download and install MetaMask or any EVM-compatible wallet
-   - Follow the wallet's setup instructions
+2. **Instalar Carteira** (se necessário):
+   - Baixe e instale MetaMask ou qualquer carteira compatível com EVM
+   - Siga as instruções de configuração da carteira
 
-3. **Configure BSC Network** (if needed):
-   - Open your wallet and switch to BSC Mainnet
-   - If BSC network is not available, add it manually:
-     - **Network Name**: BSC Mainnet
-     - **RPC URL**: https://bsc-dataseed1.binance.org/
+3. **Configurar Rede BSC** (se necessário):
+   - Abra sua carteira e mude para BSC Mainnet
+   - Se a rede BSC não estiver disponível, adicione-a manualmente:
+     - **Nome da Rede**: BSC Mainnet
+     - **URL RPC**: https://bsc-dataseed1.binance.org/
      - **Chain ID**: 56
-     - **Currency Symbol**: BNB
+     - **Símbolo da Moeda**: BNB
      - **Block Explorer**: https://bscscan.com/
 
-4. **Ensure Sufficient Balance**:
-   - Make sure you have enough BNB for gas fees
-   - Verify you have USDT in your vault to withdraw
+4. **Garantir Saldo Suficiente**:
+   - Certifique-se de ter BNB suficiente para taxas de gás
+   - Verifique se você tem USDT em seu cofre para sacar
 
-### Step 2: Access Overview Page
-1. After successfully connecting your wallet
-2. Navigate to the **Overview** page on dapp.yc365.io
-3. You should see your vault balance and available actions
+### Passo 2: Acessar Página de Visão Geral
+1. Após conectar sua carteira com sucesso
+2. Navegue até a página **Overview** em dapp.yc365.io
+3. Você deve ver o saldo do seu cofre e as ações disponíveis
 
-### Step 3: Initiate Withdrawal
-1. Look for the **"Withdraw"** button on the Overview page
-2. Click the withdraw button to start the withdrawal process
-3. The system will automatically detect your connected wallet
+### Passo 3: Iniciar Saque
+1. Procure o botão **"Withdraw"** na página de Visão Geral
+2. Clique no botão de saque para iniciar o processo de saque
+3. O sistema detectará automaticamente sua carteira conectada
 
-### Step 4: Complete Withdrawal
-1. **Enter Withdrawal Details**:
-   - Select the amount of USDT you want to withdraw
-   - The destination address will be your connected wallet address
-   - Review all transaction details
+### Passo 4: Completar Saque
+1. **Inserir Detalhes do Saque**:
+   - Selecione a quantidade de USDT que você deseja sacar
+   - O endereço de destino será o endereço da sua carteira conectada
+   - Revise todos os detalhes da transação
 
-2. **Confirm Transaction**:
-   - Follow the on-screen prompts
-   - Confirm the transaction in your wallet
-   - Pay the required gas fees
+2. **Confirmar Transação**:
+   - Siga as instruções na tela
+   - Confirme a transação em sua carteira
+   - Pague as taxas de gás necessárias
 
-### Step 5: Receive Funds
-1. **Wait for Processing**:
-   - The withdrawal will be processed on the blockchain
-   - Usually takes 5-30 seconds for confirmation
+### Passo 5: Receber Fundos
+1. **Aguardar Processamento**:
+   - O saque será processado na blockchain
+   - Geralmente leva de 5 a 30 segundos para confirmação
 
-2. **Check Your Wallet**:
-   - USDT tokens will be automatically sent to your connected wallet
-   - You can verify the transaction on BSCscan
+2. **Verificar Sua Carteira**:
+   - Tokens USDT serão enviados automaticamente para sua carteira conectada
+   - Você pode verificar a transação no BSCscan
 
-!!! success "Withdrawal Complete"
-    Once you see the USDT tokens in your wallet, the withdrawal process is fully completed.
+!!! success "Saque Completo"
+    Assim que você vir os tokens USDT em sua carteira, o processo de saque está totalmente concluído.
 
-## Security Features
+## Recursos de Segurança
 
-!!! success "Multi-Layer Security"
-    - **2FA Protection**: Two-factor authentication for withdrawals
-    - **Whitelist Addresses**: Save trusted addresses for faster withdrawals
-    - **Withdrawal Password**: Additional password protection
-    - **Email Notifications**: Real-time withdrawal status updates
+!!! success "Segurança em Várias Camadas"
+    - **Proteção 2FA**: Autenticação de dois fatores para saques
+    - **Endereços na Lista Branca**: Salve endereços confiáveis para saques mais rápidos
+    - **Senha de Saque**: Proteção adicional por senha
+    - **Notificações por E-mail**: Atualizações de status de saque em tempo real
 
-!!! warning "Security Best Practices"
-    - Always verify the destination address (BSC network only)
-    - Use whitelisted addresses when possible
-    - Enable 2FA for enhanced security
-    - Never share your withdrawal password
-    - Only withdraw USDT (BEP-20) to BSC addresses
+!!! warning "Melhores Práticas de Segurança"
+    - Sempre verifique o endereço de destino (apenas rede BSC)
+    - Use endereços na lista branca quando possível
+    - Ative 2FA para segurança aprimorada
+    - Nunca compartilhe sua senha de saque
+    - Saque apenas USDT (BEP-20) para endereços BSC
 
-## Withdrawal Limits
+## Limites de Saque
 
-| Account Level | Daily Limit | Monthly Limit | Minimum Withdrawal |
-|---------------|-------------|---------------|-------------------|
-| Basic        | $1,000      | $10,000       | $10               |
-| Verified     | $10,000     | $100,000      | $10               |
-| Premium      | $50,000     | $500,000      | $10               |
+| Nível da Conta | Limite Diário | Limite Mensal | Saque Mínimo |
+|----------------|---------------|---------------|--------------|
+| Básico         | $1.000        | $10.000       | $10          |
+| Verificado     | $10.000       | $100.000      | $10          |
+| Premium        | $50.000       | $500.000      | $10          |
 
-## Processing Times
+## Tempos de Processamento
 
-### Standard Processing
-- **Platform Processing**: 5-30 seconds
-- **Blockchain Confirmation**: 1-3 confirmations
-- **Total Time**: Usually 10-60 seconds
+### Processamento Padrão
+- **Processamento da Plataforma**: 5-30 segundos
+- **Confirmação da Blockchain**: 1-3 confirmações
+- **Tempo Total**: Geralmente 10-60 segundos
 
-### Factors Affecting Speed
-- **Network Congestion**: High traffic may delay processing
-- **Security Checks**: Large amounts require additional verification
-- **Account Status**: New accounts may have longer processing times
+### Fatores que Afetam a Velocidade
+- **Congestionamento da Rede**: Alto tráfego pode atrasar o processamento
+- **Verificações de Segurança**: Grandes quantias requerem verificação adicional
+- **Status da Conta**: Novas contas podem ter tempos de processamento mais longos
 
-## Fees Structure
+## Estrutura de Taxas
 
-| Cryptocurrency | Network Fee | Platform Fee |
-|----------------|-------------|--------------|
-| USDT (BEP-20)  | 0.0005 BNB  | Free         |
+| Criptomoeda    | Taxa de Rede  | Taxa da Plataforma |
+|----------------|---------------|--------------------|
+| USDT (BEP-20)  | 0,0005 BNB    | Grátis             |
 
-!!! info "Fee Information"
-    - Network fees are charged by the BSC network
-    - YC365 does not charge additional platform fees
-    - Fees are deducted from the withdrawal amount
-    - Only USDT (BEP-20) withdrawals are supported
+!!! info "Informações sobre Taxas"
+    - As taxas de rede são cobradas pela rede BSC
+    - O YC365 não cobra taxas adicionais de plataforma
+    - As taxas são deduzidas do valor do saque
+    - Apenas saques de USDT (BEP-20) são suportados
 
-## Address Whitelisting
+## Lista Branca de Endereços
 
-### Benefits of Whitelisting
-- **Faster Processing**: Pre-approved addresses process faster
-- **Enhanced Security**: Reduces risk of sending to wrong addresses
-- **Convenience**: No need to re-enter trusted addresses
+### Benefícios da Lista Branca
+- **Processamento Mais Rápido**: Endereços pré-aprovados processam mais rápido
+- **Segurança Aprimorada**: Reduz o risco de enviar para endereços errados
+- **Conveniência**: Não há necessidade de reinserir endereços confiáveis
 
-### How to Whitelist an Address
-1. Go to **Security Settings**
-2. Select **Address Whitelist**
-3. Add the destination address
-4. Complete verification process
-5. Wait for approval (24-48 hours)
+### Como Colocar um Endereço na Lista Branca
+1. Vá para **Security Settings**
+2. Selecione **Address Whitelist**
+3. Adicione o endereço de destino
+4. Complete o processo de verificação
+5. Aguarde a aprovação (24-48 horas)
 
-## Troubleshooting
+## Solução de Problemas
 
-### Common Issues
+### Problemas Comuns
 
-**Q: My withdrawal is pending for a long time**
-A: Check if you have sufficient BNB for gas fees. Large withdrawals may require additional confirmations. Try increasing the gas limit if needed.
+**P: Meu saque está pendente há muito tempo**
+R: Verifique se você tem BNB suficiente para taxas de gás. Grandes saques podem exigir confirmações adicionais. Tente aumentar o limite de gás se necessário.
 
-**Q: I can't see the withdraw button**
-A: Make sure you're connected to the correct wallet and network (BSC Mainnet). Ensure you have USDT in your vault to withdraw.
+**P: Não consigo ver o botão de saque**
+R: Certifique-se de estar conectado à carteira e rede corretas (BSC Mainnet). Certifique-se de ter USDT em seu cofre para sacar.
 
-**Q: The transaction failed**
-A: Check if you have sufficient BNB for gas fees. Increase gas limit if needed or try again during lower network congestion.
+**P: A transação falhou**
+R: Verifique se você tem BNB suficiente para taxas de gás. Aumente o limite de gás se necessário ou tente novamente durante menor congestão da rede.
 
-**Q: My wallet won't connect**
-A: Ensure you're using a compatible EVM wallet (MetaMask, WalletConnect, etc.) and that you're connected to BSC Mainnet.
+**P: Minha carteira não conecta**
+R: Certifique-se de estar usando uma carteira EVM compatível (MetaMask, WalletConnect, etc.) e de estar conectado à BSC Mainnet.
 
-**Q: The withdrawal fee seems high**
-A: Network fees are determined by BSC network conditions. Fees are transparent and shown before confirmation.
+**P: A taxa de saque parece alta**
+R: As taxas de rede são determinadas pelas condições da rede BSC. As taxas são transparentes e mostradas antes da confirmação.
 
-## Support
+## Suporte
 
-For withdrawal-related issues, please contact support with:
-- Your wallet address
-- Transaction hash
-- Screenshot of the issue
-- Detailed description of the problem
-- Network used (BSC Mainnet)
+Para problemas relacionados a saques, entre em contato com o suporte com:
+- Seu endereço de carteira
+- Hash da transação
+- Captura de tela do problema
+- Descrição detalhada do problema
+- Rede usada (BSC Mainnet)
 
-!!! tip "Quick Support"
-    For faster support, include your wallet address and transaction hash when reporting issues.
+!!! tip "Suporte Rápido"
+    Para suporte mais rápido, inclua seu endereço de carteira e hash de transação ao relatar problemas.
 
 ---
 
-*For the latest withdrawal information and updates, please check our official announcements.* 
+*Para as informações mais recentes sobre saques e atualizações, verifique nossos anúncios oficiais.*

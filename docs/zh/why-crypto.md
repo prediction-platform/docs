@@ -1,303 +1,300 @@
-!!! note "翻译说明"
-    本页面的完整中文翻译正在准备中。以下内容暂为英文原文，保证您可以立即查阅所有信息。
+# 为什么选择加密货币？(Why Crypto?)
 
-# Why Crypto?
+## 快速回答
 
-## Quick Answer
+**加密货币和区块链技术使 YC365 能够提供透明、全球化、无许可和无需信任的预测市场。** 传统金融无法提供我们基于加密货币的平台向全球用户提供的相同水平的可访问性、安全性和公平性。
 
-**Cryptocurrency and blockchain technology enable YC365 to offer prediction markets that are transparent, global, permissionless, and trustless.** Traditional finance couldn't provide the same level of accessibility, security, and fairness that our crypto-based platform delivers to users worldwide.
+## 区块链对预测市场的力量
 
-## The Power of Blockchain for Prediction Markets
+### 🌍 **全球可访问性**
 
-### 🌍 **Global Accessibility**
+#### **无地理限制**
+- **全球访问**：任何有互联网的人都可以参与
+- **无需银行**：无需传统银行账户
+- **24/7 可用性**：市场永不关闭，随时交易
+- **跨境**：无缝的国际参与
+- **金融包容性**：为无银行账户和银行服务不足的人群提供访问
 
-#### **No Geographic Restrictions**
-- **Worldwide Access**: Anyone with internet can participate
-- **No Banking Required**: No need for traditional bank accounts
-- **24/7 Availability**: Markets never close, trade anytime
-- **Cross-border**: Seamless international participation
-- **Financial Inclusion**: Access for the unbanked and underbanked
+#### **无许可参与**
+- **无 KYC 障碍**：无需冗长的验证即可立即开始交易
+- **向所有人开放**：无最低收入或财富要求
+- **自主权**：您控制自己的参与
+- **即时入职**：几分钟内设置并开始交易
+- **平等访问**：所有人的条款和条件相同
 
-#### **Permissionless Participation**
-- **No KYC Barriers**: Start trading immediately without lengthy verification
-- **Open to All**: No minimum income or wealth requirements
-- **Self-Sovereign**: You control your own participation
-- **Instant Onboarding**: Set up and start trading in minutes
-- **Equal Access**: Same terms and conditions for everyone
+### 🔒 **信任与透明度**
 
-### 🔒 **Trust and Transparency**
+#### **无需信任的系统**
+- **智能合约**：无需人工干预的自动执行
+- **无交易对手风险**：无需信任 YC365 保管您的资金
+- **可验证结果**：所有结果在区块链上验证
+- **不可篡改记录**：交易历史无法更改
+- **开源**：智能合约代码可公开审计
 
-#### **Trustless System**
-- **Smart Contracts**: Automated execution without human intervention
-- **No Counterparty Risk**: Don't need to trust YC365 with your funds
-- **Verifiable Results**: All outcomes verified on blockchain
-- **Immutable Records**: Transaction history cannot be altered
-- **Open Source**: Smart contract code publicly auditable
+#### **完全透明**
+- **公共账本**：所有交易在区块链上可见
+- **实时验证**：任何人都可以验证平台运营
+- **公开会计**：平台储备和运营透明
+- **审计跟踪**：所有平台活动的完整历史
+- **无隐藏操作**：一切都在链上发生
 
-#### **Complete Transparency**
-- **Public Ledger**: All transactions visible on blockchain
-- **Real-time Verification**: Anyone can verify platform operations
-- **Open Accounting**: Platform reserves and operations transparent
-- **Audit Trail**: Complete history of all platform activities
-- **No Hidden Operations**: Everything happens on-chain
+## 优于传统金融的优势
 
-## Advantages Over Traditional Finance
+### 🏦 **传统金融的局限性**
 
-### 🏦 **Traditional Finance Limitations**
+#### **中心化控制**
+- **单点故障**：银行和机构可能倒闭
+- **审查风险**：账户可能被冻结或限制
+- **地理限制**：服务受司法管辖区限制
+- **运营时间**：仅限于工作时间和工作日
+- **人为错误**：手动流程容易出错
 
-#### **Centralized Control**
-- **Single Points of Failure**: Banks and institutions can fail
-- **Censorship Risk**: Accounts can be frozen or restricted
-- **Geographic Limitations**: Services limited by jurisdiction
-- **Operational Hours**: Limited to business hours and weekdays
-- **Human Error**: Manual processes prone to mistakes
+#### **高进入门槛**
+- **复杂 KYC**：冗长的身份验证流程
+- **最低要求**：高最低存款或净资产要求
+- **地理限制**：许多人因位置被排除在外
+- **监管障碍**：复杂的监管合规要求
+- **传统基础设施**：需要现有的银行关系
 
-#### **High Barriers to Entry**
-- **Complex KYC**: Lengthy identity verification processes
-- **Minimum Requirements**: High minimum deposits or net worth
-- **Geographic Restrictions**: Many excluded based on location
-- **Regulatory Barriers**: Complex regulatory compliance requirements
-- **Traditional Infrastructure**: Requires existing banking relationships
+#### **不透明和信任问题**
+- **黑箱操作**：内部操作对用户隐藏
+- **交易对手风险**：必须信任金融机构
+- **结算延迟**：T+2 或 T+3 结算周期
+- **隐藏费用**：复杂的费用结构和隐藏成本
+- **操纵风险**：内部操纵的潜力
 
-#### **Opacity and Trust Issues**
-- **Black Box Operations**: Internal operations hidden from users
-- **Counterparty Risk**: Must trust financial institutions
-- **Settlement Delays**: T+2 or T+3 settlement periods
-- **Hidden Fees**: Complex fee structures and hidden costs
-- **Manipulation Risk**: Potential for insider manipulation
+### 💎 **加密货币优势**
 
-### 💎 **Crypto Advantages**
+#### **去中心化架构**
+- **无单点故障**：分布在数千个节点上
+- **抗审查**：没有任何单一实体可以阻止交易
+- **全球基础设施**：同一系统在全球范围内运作
+- **始终可用**：24/7/365 运营
+- **自动执行**：智能合约消除人为错误
 
-#### **Decentralized Architecture**
-- **No Single Point of Failure**: Distributed across thousands of nodes
-- **Censorship Resistance**: No single entity can block transactions
-- **Global Infrastructure**: Same system works worldwide
-- **Always Available**: 24/7/365 operation
-- **Automated Execution**: Smart contracts eliminate human error
+#### **低进入门槛**
+- **即时访问**：立即开始使用
+- **无最低限额**：以您觉得舒适的任何金额交易
+- **全球参与**：无论身在何处，访问权限相同
+- **自我托管**：您控制自己的资金
+- **简单入职**：只需钱包和互联网连接
 
-#### **Low Barriers to Entry**
-- **Instant Access**: Start using immediately
-- **No Minimums**: Trade with any amount you're comfortable with
-- **Global Participation**: Same access regardless of location
-- **Self-Custody**: You control your own funds
-- **Simple Onboarding**: Just need a wallet and internet connection
+#### **透明与信任**
+- **公开操作**：所有操作可见且可验证
+- **无需信任设计**：无需信任任何中央机构
+- **即时结算**：交易在几秒钟内结算
+- **清晰费用**：所有费用清晰可见且可预测
+- **抗操纵**：去中心化操作防止操纵
 
-#### **Transparency and Trust**
-- **Open Operations**: All operations visible and verifiable
-- **Trustless Design**: Don't need to trust any central authority
-- **Instant Settlement**: Transactions settle in seconds
-- **Clear Fees**: All fees clearly visible and predictable
-- **Manipulation Resistant**: Decentralized operation prevents manipulation
+## 为什么选择 BSC (币安智能链)？
 
-## Why BSC (Binance Smart Chain)?
+### ⚡ **性能优势**
 
-### ⚡ **Performance Benefits**
+#### **速度和效率**
+- **3 秒出块时间**：近乎即时的交易确认
+- **高吞吐量**：每秒数千笔交易
+- **低延迟**：订单执行延迟极小
+- **可扩展基础设施**：可以处理平台增长
+- **可靠网络**：99.9%+ 的正常运行时间和可用性
 
-#### **Speed and Efficiency**
-- **3-Second Block Times**: Near-instant transaction confirmation
-- **High Throughput**: Thousands of transactions per second
-- **Low Latency**: Minimal delays in order execution
-- **Scalable Infrastructure**: Can handle platform growth
-- **Reliable Network**: 99.9%+ uptime and availability
+#### **成本效益**
+- **低 Gas 费**：典型费用低于每笔交易 $0.01-0.05
+- **可预测成本**：稳定且可预测的费用结构
+- **经济效率**：您的更多资金用于交易，而非费用
+- **人人可用**：低费用支持小额交易
+- **费用透明度**：交易前清晰显示 Gas 费
 
-#### **Cost Effectiveness**
-- **Low Gas Fees**: Typical fees under $0.01-0.05 per transaction
-- **Predictable Costs**: Stable and predictable fee structure
-- **Economic Efficiency**: More of your money goes to trading, not fees
-- **Accessible to All**: Low fees enable small trades
-- **Fee Transparency**: Gas fees clearly displayed before transactions
+### 🔧 **技术优势**
 
-### 🔧 **Technical Advantages**
+#### **EVM 兼容性**
+- **以太坊兼容性**：使用熟悉的以太坊工具和钱包
+- **开发者生态系统**：庞大的开发者社区和工具
+- **钱包支持**：支持 MetaMask 和其他流行钱包
+- **智能合约兼容性**：经过实战检验的智能合约模式
+- **互操作性**：易于与其他 DeFi 协议集成
 
-#### **EVM Compatibility**
-- **Ethereum Compatibility**: Use familiar Ethereum tools and wallets
-- **Developer Ecosystem**: Large developer community and tools
-- **Wallet Support**: Works with MetaMask and other popular wallets
-- **Smart Contract Compatibility**: Battle-tested smart contract patterns
-- **Interoperability**: Easy integration with other DeFi protocols
+#### **安全与稳定**
+- **经过验证的记录**：安全保障数十亿价值
+- **定期更新**：持续改进和安全更新
+- **验证者网络**：由专业验证者网络保护
+- **实战检验**：在现实条件下经过广泛测试
+- **机构级**：被主要机构和项目使用
 
-#### **Security and Stability**
-- **Proven Track Record**: Billions in value secured safely
-- **Regular Updates**: Continuous improvements and security updates
-- **Validator Network**: Secured by professional validator network
-- **Battle-tested**: Extensively tested under real-world conditions
-- **Institutional Grade**: Used by major institutions and projects
+## 为什么选择 USDT 稳定币？
 
-## Why USDT Stablecoin?
+### 💰 **稳定性和可预测性**
 
-### 💰 **Stability and Predictability**
+#### **价格稳定**
+- **锚定美元**：相对于美元保持稳定价值
+- **波动保护**：消除加密货币价格波动风险
+- **可预测价值**：确切知道您的交易价值
+- **简单会计**：易于跟踪利润和损失
+- **熟悉单位**：以美元计价，易于理解
 
-#### **Price Stability**
-- **USD Pegged**: Maintains stable value relative to US Dollar
-- **Volatility Protection**: Eliminates crypto price volatility risk
-- **Predictable Value**: Know exactly what your trades are worth
-- **Easy Accounting**: Simple to track profits and losses
-- **Familiar Unit**: USD-denominated for easy understanding
+#### **流动性和采用**
+- **高流动性**：市值和使用量最大的稳定币
+- **广泛采用**：在整个加密生态系统中被接受
+- **易于转换**：易于与其他资产进行转换
+- **交易所支持**：所有主要交易所均支持
+- **全球标准**：加密货币交易的事实标准
 
-#### **Liquidity and Adoption**
-- **High Liquidity**: Largest stablecoin by market cap and usage
-- **Wide Adoption**: Accepted across entire crypto ecosystem
-- **Easy Conversion**: Simple to convert to/from other assets
-- **Exchange Support**: Supported by all major exchanges
-- **Global Standard**: De facto standard for crypto trading
+### 🔄 **实际利益**
 
-### 🔄 **Practical Benefits**
+#### **用户体验**
+- **熟悉定价**：所有价格均以熟悉的美元计算
+- **简单计算**：易于计算利润和成本
+- **无汇率风险**：无货币转换风险
+- **即时转账**：即时转移价值，无银行延迟
+- **全球访问**：同一货币随处可用
 
-#### **User Experience**
-- **Familiar Pricing**: All prices in familiar USD terms
-- **Simple Calculations**: Easy to calculate profits and costs
-- **No Exchange Risk**: No currency conversion risk
-- **Instant Transfers**: Move value instantly without bank delays
-- **Global Access**: Same currency works everywhere
+#### **平台效率**
+- **简化运营**：单一货币简化平台运营
+- **降低复杂性**：无需处理多种货币
+- **精确不价**：无汇率波动的精确不价
+- **高效结算**：无需转换的直接结算
+- **更低成本**：消除外汇成本
 
-#### **Platform Efficiency**
-- **Simplified Operations**: Single currency simplifies platform operations
-- **Reduced Complexity**: No need to handle multiple currencies
-- **Precise Pricing**: Exact pricing without exchange rate fluctuations
-- **Efficient Settlement**: Direct settlement without conversions
-- **Lower Costs**: Eliminates foreign exchange costs
+## 加密货币与传统博彩/交易
 
-## Crypto vs Traditional Betting/Trading
+### 🎰 **传统博彩平台**
 
-### 🎰 **Traditional Betting Platforms**
+#### **局限性**
+- **中心化控制**：平台控制所有资金和结果
+- **地理限制**：受当地赌博法律限制
+- **高费用**：赔率中通常包含 5-10% 或更高的利润率
+- **支付缓慢**：可能需要几天或几周才能收到奖金
+- **账户风险**：账户可能被任意限制或关闭
+- **不透明**：赔率计算和操作不透明
 
-#### **Limitations**
-- **Centralized Control**: Platform controls all funds and outcomes
-- **Geographic Restrictions**: Limited by local gambling laws
-- **High Fees**: Often 5-10% or higher margins built into odds
-- **Slow Payouts**: Can take days or weeks to receive winnings
-- **Account Risks**: Accounts can be limited or closed arbitrarily
-- **Opacity**: Odds calculation and operations not transparent
+#### **信任要求**
+- **平台偿付能力**：必须信任平台有资金支付
+- **公平运营**：必须信任平台公平运营
+- **数据准确性**：必须信任平台的数据和结果
+- **支付保证**：必须信任平台会支付奖金
+- **监管保护**：必须依靠当地法规进行保护
 
-#### **Trust Requirements**
-- **Platform Solvency**: Must trust platform has funds to pay out
-- **Fair Operations**: Must trust platform operates fairly
-- **Data Accuracy**: Must trust platform's data and results
-- **Payout Guarantee**: Must trust platform will pay winnings
-- **Regulatory Protection**: Must rely on local regulations for protection
+### 🚀 **YC365 加密货币优势**
 
-### 🚀 **YC365 Crypto Advantages**
+#### **增强功能**
+- **去中心化控制**：智能合约控制资金和结果
+- **全球访问**：无论当地法律如何，全球均可访问
+- **低费用**：仅 0.15% 交易费，透明且公平
+- **即时结算**：奖金立即可用
+- **无账户限制**：不能被任意限制或约束
+- **完全透明**：所有操作可见且可验证
 
-#### **Enhanced Features**
-- **Decentralized Control**: Smart contracts control funds and outcomes
-- **Global Access**: Available worldwide regardless of local laws
-- **Low Fees**: Only 0.15% trading fee, transparent and fair
-- **Instant Settlement**: Winnings available immediately
-- **No Account Limits**: Cannot be limited or restricted arbitrarily
-- **Complete Transparency**: All operations visible and verifiable
+#### **无需信任的操作**
+- **智能合约保证**：代码保证平台有资金
+- **自动公平**：智能合约确保公平运营
+- **可验证数据**：预言机数据可独立验证
+- **保证支付**：智能合约自动支付获胜者
+- **自我执行**：系统自动执行其规则
 
-#### **Trustless Operation**
-- **Smart Contract Guarantees**: Code guarantees platform has funds
-- **Automated Fairness**: Smart contracts ensure fair operations
-- **Verifiable Data**: Oracle data independently verifiable
-- **Guaranteed Payouts**: Smart contracts automatically pay winners
-- **Self-Enforcing**: System enforces its own rules automatically
+## 现实世界的好处
 
-## Real-World Benefits
+### 💡 **对于个人用户**
 
-### 💡 **For Individual Users**
+#### **实际优势**
+- **立即开始**：无需等待账户批准
+- **任意金额**：以您觉得舒适的任何金额交易
+- **保持控制**：随时保持对资金的控制
+- **随时退出**：随时即时提取资金
+- **注重隐私**：只需最少的个人信息
 
-#### **Practical Advantages**
-- **Start Immediately**: No waiting for account approval
-- **Any Amount**: Trade with whatever you're comfortable with
-- **Keep Control**: Maintain control of your funds at all times
-- **Exit Anytime**: Withdraw funds instantly whenever you want
-- **Privacy Focused**: Minimal personal information required
+#### **经济利益**
+- **更低成本**：费用显着低于传统平台
+- **更好赔率**：市场价格中没有内置庄家优势
+- **即时流动性**：随时买卖头寸
+- **无交易对手风险**：不依赖平台偿付能力
+- **全球市场**：访问全球预测市场
 
-#### **Financial Benefits**
-- **Lower Costs**: Significantly lower fees than traditional platforms
-- **Better Odds**: No house edge built into market prices
-- **Instant Liquidity**: Buy and sell positions anytime
-- **No Counterparty Risk**: Don't rely on platform solvency
-- **Global Markets**: Access to worldwide prediction markets
+### 🌐 **对于全球访问**
 
-### 🌐 **For Global Access**
+#### **新兴市场**
+- **金融包容性**：无需传统银行即可访问
+- **货币稳定**：USDT 提供稳定的价值存储
+- **资本管制**：绕过限制性资本管制
+- **经济机会**：访问全球金融市场
+- **教育价值**：了解市场和交易
 
-#### **Emerging Markets**
-- **Financial Inclusion**: Access without traditional banking
-- **Currency Stability**: USDT provides stable value store
-- **Capital Controls**: Bypass restrictive capital controls
-- **Economic Opportunity**: Access to global financial markets
-- **Educational Value**: Learn about markets and trading
+#### **发达市场**
+- **创新访问**：体验尖端金融技术
+- **投资组合分散**：用于分散投资的新资产类别
+- **更低成本**：降低交易和事务成本
+- **24/7 市场**：在传统市场时间之外交易
+- **透明度**：完全可见的市场操作
 
-#### **Developed Markets**
-- **Innovation Access**: Experience cutting-edge financial technology
-- **Portfolio Diversification**: New asset class for diversification
-- **Lower Costs**: Reduce trading and transaction costs
-- **24/7 Markets**: Trade outside traditional market hours
-- **Transparency**: Complete visibility into market operations
+## 解决常见担忧
 
-## Addressing Common Concerns
+### ❓ **“加密货币太复杂”**
 
-### ❓ **"Crypto is Too Complicated"**
+#### **现实**
+- **用户友好设计**：YC365 专为大众用户设计
+- **熟悉界面**：类似于传统平台的交易界面
+- **综合指南**：针对所有内容的分步教程
+- **社区支持**：活跃社区帮助新用户
+- **循序渐进**：从简单开始，随着时间推移学习高级功能
 
-#### **Reality**
-- **User-Friendly Design**: YC365 designed for mainstream users
-- **Familiar Interface**: Trading interface similar to traditional platforms
-- **Comprehensive Guides**: Step-by-step tutorials for everything
-- **Community Support**: Active community to help new users
-- **Gradual Learning**: Start simple and learn advanced features over time
+#### **入门很容易**
+1. **安装 MetaMask**：5 分钟设置过程
+2. **获取 BSC**：简单的网络配置
+3. **购买 USDT**：在任何主要交易所购买
+4. **开始交易**：从小额开始学习
 
-#### **Getting Started is Easy**
-1. **Install MetaMask**: 5-minute setup process
-2. **Get BSC**: Simple network configuration
-3. **Buy USDT**: Purchase on any major exchange
-4. **Start Trading**: Begin with small amounts to learn
+### ❓ **“加密货币太波动”**
 
-### ❓ **"Crypto is Too Volatile"**
+#### **USDT 解决方案**
+- **稳定价值**：USDT 保持稳定的美元价值
+- **无加密波动**：免受比特币/以太坊价格波动影响
+- **可预测成本**：所有费用以稳定的美元计算
+- **熟悉定价**：一切以美元计价
+- **风险隔离**：加密货币波动不影响您的交易
 
-#### **USDT Solution**
-- **Stable Value**: USDT maintains stable USD value
-- **No Crypto Volatility**: Protected from Bitcoin/Ethereum price swings
-- **Predictable Costs**: All fees in stable USD terms
-- **Familiar Pricing**: Everything priced in dollars
-- **Risk Isolation**: Crypto volatility doesn't affect your trading
+### ❓ **“加密货币不安全”**
 
-### ❓ **"Crypto is Not Secure"**
+#### **安全现实**
+- **军用级加密**：保护银行的相同加密技术
+- **审计智能合约**：专业安全审计
+- **用户控制**：您控制自己的安全
+- **无托管风险**：资金不由中心化交易所持有
+- **透明操作**：所有安全措施公开可验证
 
-#### **Security Reality**
-- **Military-Grade Cryptography**: Same encryption protecting banks
-- **Audited Smart Contracts**: Professional security audits
-- **User Control**: You control your own security
-- **No Custodial Risk**: Funds not held by centralized exchange
-- **Transparent Operations**: All security measures publicly verifiable
+## 金融的未来
 
-## The Future of Finance
+### 🔮 **技术演进**
 
-### 🔮 **Technological Evolution**
+#### **下一代功能**
+- **AI 集成**：AI 驱动的市场分析和预测
+- **跨链扩展**：访问多个区块链网络
+- **高级订单**：复杂的订单类型和策略
+- **社交交易**：关注并复制成功的交易者
+- **移动优先**：原生移动应用程序
 
-#### **Next Generation Features**
-- **AI Integration**: AI-powered market analysis and predictions
-- **Cross-chain Expansion**: Access to multiple blockchain networks
-- **Advanced Orders**: Complex order types and strategies
-- **Social Trading**: Follow and copy successful traders
-- **Mobile-First**: Native mobile applications
+#### **主流采用**
+- **机构整合**：传统机构采用加密货币
+- **监管清晰**：更清晰的法规促进更广泛的采用
+- **用户体验**：易用性的持续改进
+- **教育资源**：关于加密货币好处的更好教育
+- **基础设施发展**：改进的支持基础设施
 
-#### **Mainstream Adoption**
-- **Institutional Integration**: Traditional institutions adopting crypto
-- **Regulatory Clarity**: Clearer regulations enabling broader adoption
-- **User Experience**: Continuous improvement in ease of use
-- **Educational Resources**: Better education about crypto benefits
-- **Infrastructure Development**: Improved supporting infrastructure
+### 🌟 **YC365 的角色**
 
-### 🌟 **YC365's Role**
+#### **连接传统与加密**
+- **熟悉体验**：具有加密货币优势的传统交易体验
+- **教育平台**：教用户了解加密货币优势
+- **主流门户**：进入加密生态系统的简单入口
+- **最佳实践**：展示适当的加密平台设计
+- **创新领导者**：开创新的预测市场功能
 
-#### **Bridging Traditional and Crypto**
-- **Familiar Experience**: Traditional trading experience with crypto benefits
-- **Educational Platform**: Teaching users about crypto advantages
-- **Mainstream Gateway**: Easy entry point to crypto ecosystem
-- **Best Practices**: Demonstrating proper crypto platform design
-- **Innovation Leader**: Pioneering new prediction market features
-
-#### **Long-term Vision**
-- **Global Standard**: Become the standard for prediction markets
-- **Ecosystem Hub**: Center of prediction market ecosystem
-- **Innovation Driver**: Drive innovation in prediction market technology
-- **Accessibility Champion**: Make prediction markets accessible to everyone
-- **Trust Builder**: Build trust in crypto-based financial systems
+#### **长期愿景**
+- **全球标准**：成为预测市场的标准
+- **生态系统中心**：预测市场生态系统的中心
+- **创新驱动**：推动预测市场技术创新
+- **可访问性倡导者**：让每个人都能访问预测市场
+- **信任建立者**：建立对基于加密货币的金融系统的信任
 
 ---
 
-**Crypto isn't just a technology choice for YC365 - it's the foundation that enables us to create a truly global, fair, and accessible prediction market platform.** The benefits of transparency, decentralization, and user control make crypto the only viable option for building the future of prediction markets.
+**加密货币不仅仅是 YC365 的技术选择——它是使我们能够创建一个真正全球化、公平和可访问的预测市场平台的基础。** 透明度、去中心化和用户控制的好处使加密货币成为构建预测市场未来的唯一可行选择。
 
-*By choosing crypto, we can offer you something traditional finance simply cannot: a platform where you maintain control, operations are transparent, and access is available to everyone, everywhere.* 
+*通过选择加密货币，我们可以为您提供传统金融根本无法提供的东西：一个您保持控制、操作透明且每个人、每个地方都可以访问的平台。*

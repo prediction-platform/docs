@@ -1,367 +1,364 @@
-!!! note "หมายเหตุการแปล"
-    หน้านี้กำลังอยู่ระหว่างการแปลเป็นภาษาไทย เนื้อหาด้านล่างเป็นต้นฉบับภาษาอังกฤษเพื่อให้เข้าถึงข้อมูลได้ทันที
+# การใช้สมุดคำสั่ง (Order Book)
 
-# Using the Order Book
+## ภาพรวม
 
-## Overview
+สมุดคำสั่ง (Order Book) เป็นหัวใจสำคัญของระบบการซื้อขายของ YC365 ซึ่งให้การมองเห็นความลึกของตลาด สภาพคล่อง และกิจกรรมการซื้อขายแบบเรียลไทม์ การทำความเข้าใจวิธีการอ่านและใช้สมุดคำสั่งอย่างมีประสิทธิภาพเป็นสิ่งจำเป็นสำหรับการซื้อขายที่ประสบความสำเร็จบนแพลตฟอร์มตลาดการทำนายผลของเรา
 
-The order book is the heart of YC365's trading system, providing real-time visibility into market depth, liquidity, and trading activity. Understanding how to read and use the order book effectively is essential for successful trading on our prediction market platform.
+## สมุดคำสั่งคืออะไร?
 
-## What is an Order Book?
+### นิยาม
+สมุดคำสั่งคือรายการคำสั่งซื้อและขายทั้งหมดสำหรับเงื่อนไขตลาดการทำนายผลเฉพาะที่อัปเดตอย่างต่อเนื่องแบบเรียลไทม์ โดยจัดระเบียบตามระดับราคา มันแสดงความลึกของตลาดและช่วยให้ผู้ซื้อขายตัดสินใจได้อย่างมีข้อมูลเกี่ยวกับการวางคำสั่งและการดำเนินการ
 
-### Definition
-An order book is a real-time, continuously updated list of all buy and sell orders for a specific prediction market condition, organized by price level. It shows market depth and helps traders make informed decisions about order placement and execution.
+### องค์ประกอบหลัก
+- **ฝั่งเสนอซื้อ (Bid Side)**: คำสั่งซื้อทั้งหมด (ผู้ซื้อที่ยินดีซื้อในราคาที่กำหนด)
+- **ฝั่งเสนอขาย (Ask Side)**: คำสั่งขายทั้งหมด (ผู้ขายที่ยินดีขายในราคาที่กำหนด)
+- **ส่วนต่างราคา (Spread)**: ความแตกต่างระหว่างราคาเสนอซื้อสูงสุดและราคาเสนอขายต่ำสุด
+- **ความลึกของตลาด (Market Depth)**: ปริมาณคำสั่งในแต่ละระดับราคา
 
-### Core Components
-- **Bid Side**: All buy orders (buyers willing to purchase at specified prices)
-- **Ask Side**: All sell orders (sellers willing to sell at specified prices)
-- **Spread**: The difference between the highest bid and lowest ask prices
-- **Market Depth**: The quantity of orders at each price level
+### ข้อมูลที่แสดง
+- **ระดับราคา**: จุดราคาทั้งหมดที่มีคำสั่งอยู่
+- **ปริมาณคำสั่ง**: ปริมาณโทเค็นรวมในแต่ละระดับราคา
+- **จำนวนคำสั่ง**: จำนวนคำสั่งแต่ละรายการในแต่ละระดับราคา
+- **ลำดับความสำคัญของเวลา**: ลำดับคำสั่งภายในแต่ละระดับราคา
 
-### Information Displayed
-- **Price Levels**: All price points where orders exist
-- **Order Quantities**: Total token quantity at each price level
-- **Order Count**: Number of individual orders at each price level
-- **Time Priority**: Order sequence within each price level
+## เค้าโครงสมุดคำสั่ง
 
-## Order Book Layout
+![มุมมองสมุดคำสั่งแสดงระดับราคา ปริมาณหุ้น และความลึกรวม](../img/yc365/order-book.png)
 
-![Order book view displaying price levels, share quantities, and total depth](../img/yc365/order-book.png)
+*ตัวอย่างตลาดจริงของ YC365: แท็บสมุดคำสั่งแสดงราคาเสนอซื้อ/เสนอขายสด ความลึกสะสม และค่าที่ตั้งไว้ล่วงหน้าสำหรับการซื้อขายด่วน*
 
-*Real YC365 market example: the order book tab shows live bids/asks, cumulative depth, and quick trade presets.*
+### โครงสร้างภาพ
 
-### Visual Structure
-
-#### Bid Side (Buy Orders)
+#### ฝั่งเสนอซื้อ (คำสั่งซื้อ)
 ```
-Price (USDT) | Quantity | Total | Progress Bar
-0.68        | 1,250    | 1,250 | ████████░░
-0.67        | 2,100    | 3,350 | ████████████░░
-0.66        | 1,800    | 5,150 | ██████████████░░
-0.65        | 3,200    | 8,350 | ████████████████████░░
-0.64        | 1,500    | 9,850 | ██████████████████████░░
+ราคา (USDT) | ปริมาณ    | รวม     | แถบความคืบหน้า
+0.68        | 1,250    | 1,250   | ████████░░
+0.67        | 2,100    | 3,350   | ████████████░░
+0.66        | 1,800    | 5,150   | ██████████████░░
+0.65        | 3,200    | 8,350   | ████████████████████░░
+0.64        | 1,500    | 9,850   | ██████████████████████░░
 ```
 
-#### Ask Side (Sell Orders)
+#### ฝั่งเสนอขาย (คำสั่งขาย)
 ```
-Price (USDT) | Quantity | Total | Progress Bar
-0.69        | 1,800    | 1,800 | ████████████░░
-0.70        | 2,500    | 4,300 | ████████████████░░
-0.71        | 1,200    | 5,500 | ██████████████████░░
-0.72        | 2,800    | 8,300 | ████████████████████████░░
-0.73        | 1,600    | 9,900 | ██████████████████████████░░
+ราคา (USDT) | ปริมาณ    | รวม     | แถบความคืบหน้า
+0.69        | 1,800    | 1,800   | ████████████░░
+0.70        | 2,500    | 4,300   | ████████████████░░
+0.71        | 1,200    | 5,500   | ██████████████████░░
+0.72        | 2,800    | 8,300   | ████████████████████████░░
+0.73        | 1,600    | 9,900   | ██████████████████████████░░
 ```
 
-### Color Coding
-- **Green/Blue**: Bid side (buy orders)
-- **Red/Orange**: Ask side (sell orders)
-- **Highlighted**: Your own orders
-- **Intensity**: Darker colors indicate larger quantities
+### การใช้รหัสสี
+- **เขียว/น้ำเงิน**: ฝั่งเสนอซื้อ (คำสั่งซื้อ)
+- **แดง/ส้ม**: ฝั่งเสนอขาย (คำสั่งขาย)
+- **เน้นสี**: คำสั่งของคุณเอง
+- **ความเข้ม**: สีที่เข้มกว่าบ่งบอกถึงปริมาณที่มากกว่า
 
-### Data Columns
+### คอลัมน์ข้อมูล
 
-#### Price Column
-- **Bid Prices**: Displayed in descending order (highest to lowest)
-- **Ask Prices**: Displayed in ascending order (lowest to highest)
-- **Price Precision**: Displayed to 2 decimal places
-- **Best Prices**: Highlighted or emphasized
+#### คอลัมน์ราคา
+- **ราคาเสนอซื้อ**: แสดงในลำดับจากมากไปน้อย (สูงสุดไปต่ำสุด)
+- **ราคาเสนอขาย**: แสดงในลำดับจากน้อยไปมาก (ต่ำสุดไปสูงสุด)
+- **ความแม่นยำของราคา**: แสดงทศนิยม 2 ตำแหน่ง
+- **ราคาที่ดีที่สุด**: เน้นสีหรือให้ความสำคัญ
 
-#### Quantity Column
-- **Individual Levels**: Shows total quantity at each specific price
-- **Aggregated Orders**: Combines multiple orders at the same price
-- **Dynamic Updates**: Real-time updates as orders are placed/cancelled
-- **Unit Display**: Shown in token units
+#### คอลัมน์ปริมาณ
+- **ระดับแต่ละรายการ**: แสดงปริมาณรวมในแต่ละราคาเฉพาะ
+- **คำสั่งรวม**: รวมคำสั่งหลายรายการในราคาเดียวกัน
+- **การอัปเดตแบบไดนามิก**: อัปเดตแบบเรียลไทม์เมื่อมีการวาง/ยกเลิกคำสั่ง
+- **การแสดงหน่วย**: แสดงในหน่วยโทเค็น
 
-#### Total Column
-- **Cumulative Quantity**: Running total from best price to current level
-- **Market Depth**: Indicates total liquidity available
-- **Liquidity Assessment**: Helps assess market depth
-- **Order Impact**: Shows potential impact of large orders
+#### คอลัมน์รวม
+- **ปริมาณสะสม**: ผลรวมสะสมจากราคาที่ดีที่สุดถึงระดับปัจจุบัน
+- **ความลึกของตลาด**: บ่งบอกถึงสภาพคล่องทั้งหมดที่มีอยู่
+- **การประเมินสภาพคล่อง**: ช่วยประเมินความลึกของตลาด
+- **ผลกระทบของคำสั่ง**: แสดงผลกระทบที่อาจเกิดขึ้นของคำสั่งขนาดใหญ่
 
-## Reading the Order Book
+## การอ่านสมุดคำสั่ง
 
-### Key Metrics
+### ตัวชี้วัดหลัก
 
-#### Spread Analysis
-- **Bid-Ask Spread**: Difference between best bid and best ask
-- **Tight Spread**: Indicates active, liquid market
-- **Wide Spread**: May indicate low liquidity or high volatility
-- **Percentage Spread**: Spread as percentage of mid-price
+#### การวิเคราะห์ส่วนต่างราคา (Spread)
+- **Bid-Ask Spread**: ความแตกต่างระหว่างราคาเสนอซื้อที่ดีที่สุดและราคาเสนอขายที่ดีที่สุด
+- **Spread แคบ**: บ่งบอกถึงตลาดที่มีการซื้อขายและสภาพคล่องสูง
+- **Spread กว้าง**: อาจบ่งบอกถึงสภาพคล่องต่ำหรือความผันผวนสูง
+- **เปอร์เซ็นต์ Spread**: Spread เป็นเปอร์เซ็นต์ของราคาเฉลี่ย
 
-#### Market Depth
-- **Depth Chart**: Visual representation of cumulative orders
-- **Liquidity Zones**: Price levels with significant order concentration
-- **Support/Resistance**: Price levels with large order quantities
-- **Imbalance**: Difference between bid and ask side depth
+#### ความลึกของตลาด
+- **แผนภูมิความลึก**: การแสดงภาพของคำสั่งสะสม
+- **โซนสภาพคล่อง**: ระดับราคาที่มีความเข้มข้นของคำสั่งอย่างมีนัยสำคัญ
+- **แนวรับ/แนวต้าน**: ระดับราคาที่มีปริมาณคำสั่งขนาดใหญ่
+- **ความไม่สมดุล**: ความแตกต่างระหว่างความลึกของฝั่งเสนอซื้อและเสนอขาย
 
-#### Order Flow
-- **Order Additions**: New orders being added to the book
-- **Order Cancellations**: Orders being removed from the book
-- **Order Modifications**: Changes to existing orders
-- **Fill Activity**: Orders being executed and removed
+#### การไหลของคำสั่ง (Order Flow)
+- **การเพิ่มคำสั่ง**: คำสั่งใหม่ที่ถูกเพิ่มลงในสมุด
+- **การยกเลิกคำสั่ง**: คำสั่งที่ถูกลบออกจากสมุด
+- **การแก้ไขคำสั่ง**: การเปลี่ยนแปลงคำสั่งที่มีอยู่
+- **กิจกรรมการจับคู่**: คำสั่งที่ถูกดำเนินการและลบออก
 
-### Market Sentiment Indicators
+### ตัวชี้วัดความเชื่อมั่นของตลาด
 
-#### Bid-Ask Ratio
-- **Balanced Market**: Similar quantities on both sides
-- **Bullish Sentiment**: More buy orders than sell orders
-- **Bearish Sentiment**: More sell orders than buy orders
-- **Momentum Shifts**: Changes in bid-ask balance over time
+#### อัตราส่วน Bid-Ask
+- **ตลาดสมดุล**: ปริมาณใกล้เคียงกันทั้งสองฝั่ง
+- **ความเชื่อมั่นขาขึ้น (Bullish)**: คำสั่งซื้อมากกว่าคำสั่งขาย
+- **ความเชื่อมั่นขาลง (Bearish)**: คำสั่งขายมากกว่าคำสั่งซื้อ
+- **การเปลี่ยนแปลงโมเมนตัม**: การเปลี่ยนแปลงในสมดุล Bid-Ask เมื่อเวลาผ่านไป
 
-#### Price Level Analysis
-- **Order Concentration**: Where most orders are clustered
-- **Gap Analysis**: Price levels with no orders
-- **Wall Analysis**: Large orders that may act as price barriers
-- **Distribution**: How orders are spread across price levels
+#### การวิเคราะห์ระดับราคา
+- **ความเข้มข้นของคำสั่ง**: ที่ที่คำสั่งส่วนใหญ่กระจุกตัวอยู่
+- **การวิเคราะห์ช่องว่าง**: ระดับราคาที่ไม่มีคำสั่ง
+- **การวิเคราะห์กำแพง (Wall)**: คำสั่งขนาดใหญ่ที่อาจทำหน้าที่เป็นอุปสรรคราคา
+- **การกระจาย**: วิธีที่คำสั่งกระจายไปทั่วระดับราคา
 
-## Order Book Strategies
+## กลยุทธ์สมุดคำสั่ง
 
-### Order Placement Strategies
+### กลยุทธ์การวางคำสั่ง
 
 #### Market Making
-- **Bid-Ask Spread**: Place orders on both sides to capture spread
-- **Tight Spreads**: Place orders close to current market price
-- **Size Management**: Manage order sizes based on risk tolerance
-- **Inventory Control**: Balance inventory to avoid excessive exposure
+- **Bid-Ask Spread**: วางคำสั่งทั้งสองฝั่งเพื่อจับส่วนต่างราคา
+- **Spreads แคบ**: วางคำสั่งใกล้กับราคาตลาดปัจจุบัน
+- **การจัดการขนาด**: จัดการขนาดคำสั่งตามความเสี่ยงที่ยอมรับได้
+- **การควบคุมสินค้าคงคลัง**: สมดุลสินค้าคงคลังเพื่อหลีกเลี่ยงการเปิดรับความเสี่ยงมากเกินไป
 
-#### Taking Liquidity
-- **Market Orders**: Execute immediately against existing orders
-- **Aggressive Limits**: Place limit orders that immediately execute
-- **Price Impact**: Consider impact of large orders on market price
-- **Timing**: Execute during periods of good liquidity
+#### การรับสภาพคล่อง (Taking Liquidity)
+- **Market Orders**: ดำเนินการทันทีกับคำสั่งที่มีอยู่
+- **Aggressive Limits**: วางคำสั่ง Limit ที่ดำเนินการทันที
+- **ผลกระทบต่อราคา**: พิจารณาผลกระทบของคำสั่งขนาดใหญ่ต่อราคาตลาด
+- **เวลา**: ดำเนินการในช่วงที่มีสภาพคล่องดี
 
-#### Passive Trading
-- **Join the Queue**: Place orders at existing price levels
-- **Better Prices**: Offer slightly better prices than existing orders
-- **Patience**: Wait for market to come to your price
-- **Queue Position**: Monitor your position in the order queue
+#### การซื้อขายแบบ Passive
+- **ต่อคิว**: วางคำสั่งที่ระดับราคาที่มีอยู่
+- **ราคาที่ดีกว่า**: เสนอราคาที่ดีกว่าคำสั่งที่มีอยู่เล็กน้อย
+- **ความอดทน**: รอให้ตลาดมาที่ราคาของคุณ
+- **ตำแหน่งคิว**: ตรวจสอบตำแหน่งของคุณในคิวราคา
 
-### Advanced Strategies
+### กลยุทธ์ขั้นสูง
 
 #### Iceberg Orders
-- **Hidden Quantity**: Show only small portion of large order
-- **Market Impact**: Reduce market impact of large orders
-- **Stealth Trading**: Avoid revealing true order size
-- **Implementation**: Break large orders into smaller visible portions
+- **ปริมาณที่ซ่อนอยู่**: แสดงเพียงส่วนเล็กๆ ของคำสั่งขนาดใหญ่
+- **ผลกระทบต่อตลาด**: ลดผลกระทบต่อตลาดของคำสั่งขนาดใหญ่
+- **การซื้อขายแบบล่องหน**: หลีกเลี่ยงการเปิดเผยขนาดคำสั่งที่แท้จริง
+- **การดำเนินการ**: แบ่งคำสั่งขนาดใหญ่ออกเป็นส่วนที่มองเห็นได้ขนาดเล็ก
 
 #### Order Book Scalping
-- **Quick Profits**: Capture small price movements
-- **Spread Trading**: Buy at bid, sell at ask
-- **High Frequency**: Multiple small trades throughout the day
-- **Risk Management**: Tight risk controls and position limits
+- **กำไรด่วน**: จับการเคลื่อนไหวของราคาเล็กน้อย
+- **Spread Trading**: ซื้อที่ราคาเสนอซื้อ ขายที่ราคาเสนอขาย
+- **ความถี่สูง**: การซื้อขายขนาดเล็กหลายครั้งตลอดทั้งวัน
+- **การจัดการความเสี่ยง**: การควบคุมความเสี่ยงที่เข้มงวดและขีดจำกัดตำแหน่ง
 
 #### Momentum Trading
-- **Order Flow**: Follow direction of order flow
-- **Breakthrough**: Trade when price breaks through significant levels
-- **Volume Confirmation**: Confirm moves with order book volume
-- **Trend Following**: Align trades with overall market direction
+- **Order Flow**: ติดตามทิศทางของการไหลของคำสั่ง
+- **การทะลุทะลวง**: ซื้อขายเมื่อราคาทะลุระดับสำคัญ
+- **การยืนยันปริมาณ**: ยืนยันการเคลื่อนไหวด้วยปริมาณสมุดคำสั่ง
+- **การติดตามแนวโน้ม**: จัดแนวการซื้อขายให้สอดคล้องกับทิศทางตลาดโดยรวม
 
-## Real-Time Features
+## คุณสมบัติแบบเรียลไทม์
 
-### Live Updates
+### การอัปเดตสด
 
-#### Dynamic Refresh
-- **Real-time Data**: Order book updates in real-time
-- **Microsecond Updates**: Near-instantaneous order book changes
-- **Conflict Resolution**: Handle simultaneous order updates
-- **Data Integrity**: Ensure accurate and consistent data display
+#### การรีเฟรชแบบไดนามิก
+- **ข้อมูลเรียลไทม์**: สมุดคำสั่งอัปเดตแบบเรียลไทม์
+- **การอัปเดตระดับไมโครวินาที**: การเปลี่ยนแปลงสมุดคำสั่งเกือบจะทันที
+- **การแก้ไขข้อขัดแย้ง**: จัดการการอัปเดตคำสั่งพร้อมกัน
+- **ความสมบูรณ์ของข้อมูล**: รับรองการแสดงข้อมูลที่ถูกต้องและสม่ำเสมอ
 
-#### Order Tracking
-- **Your Orders**: Highlight your own orders in the book
-- **Order Status**: Track status of your orders in real-time
-- **Queue Position**: Monitor your position in price queues
-- **Fill Notifications**: Instant notifications when orders fill
+#### การติดตามคำสั่ง
+- **คำสั่งของคุณ**: เน้นคำสั่งของคุณเองในสมุด
+- **สถานะคำสั่ง**: ติดตามสถานะของคำสั่งของคุณแบบเรียลไทม์
+- **ตำแหน่งคิว**: ตรวจสอบตำแหน่งของคุณในคิวราคา
+- **การแจ้งเตือนการจับคู่**: การแจ้งเตือนทันทีเมื่อคำสั่งถูกจับคู่
 
-### Interactive Features
+### คุณสมบัติเชิงโต้ตอบ
 
 #### Click Trading
-- **One-Click Orders**: Place orders by clicking on price levels
-- **Quick Order Entry**: Rapid order placement interface
-- **Size Presets**: Predefined order sizes for quick trading
-- **Confirmation**: Optional confirmation for click trading
+- **คำสั่งคลิกเดียว**: วางคำสั่งโดยคลิกที่ระดับราคา
+- **การป้อนคำสั่งด่วน**: อินเทอร์เฟซการวางคำสั่งที่รวดเร็ว
+- **ขนาดที่ตั้งไว้ล่วงหน้า**: ขนาดคำสั่งที่กำหนดไว้ล่วงหน้าสำหรับการซื้อขายด่วน
+- **การยืนยัน**: การยืนยันทางเลือกสำหรับการซื้อขายแบบคลิก
 
-#### Order Modification
-- **Drag and Drop**: Move orders to different price levels
-- **Quick Cancel**: Cancel orders with single click
-- **Bulk Operations**: Cancel all orders or orders for specific side
-- **Hotkeys**: Keyboard shortcuts for common operations
+#### การแก้ไขคำสั่ง
+- **ลากและวาง**: ย้ายคำสั่งไปยังระดับราคาที่แตกต่างกัน
+- **ยกเลิกด่วน**: ยกเลิกคำสั่งด้วยคลิกเดียว
+- **การดำเนินการจำนวนมาก**: ยกเลิกคำสั่งทั้งหมดหรือคำสั่งสำหรับฝั่งเฉพาะ
+- **ปุ่มลัด**: ทางลัดแป้นพิมพ์สำหรับการดำเนินการทั่วไป
 
-### Filtering and Customization
+### การกรองและการปรับแต่ง
 
-#### Display Options
-- **Aggregation Levels**: Choose price aggregation granularity
-- **Depth Levels**: Select number of price levels to display
-- **Order Size Filter**: Filter orders below certain size threshold
-- **Color Schemes**: Customize colors for better visibility
+#### ตัวเลือกการแสดงผล
+- **ระดับการรวม**: เลือกความละเอียดของการรวมราคา
+- **ระดับความลึก**: เลือกจำนวนระดับราคาที่จะแสดง
+- **ตัวกรองขนาดคำสั่ง**: กรองคำสั่งที่ต่ำกว่าเกณฑ์ขนาดที่กำหนด
+- **ชุดสี**: ปรับแต่งสีเพื่อการมองเห็นที่ดีขึ้น
 
-#### Advanced Filters
-- **Order Age**: Filter orders by how long they've been in the book
-- **Order Size**: Show only orders above certain size
-- **User Filters**: Hide or highlight specific user orders
-- **Time Filters**: Show orders from specific time periods
+#### ตัวกรองขั้นสูง
+- **อายุคำสั่ง**: กรองคำสั่งตามระยะเวลาที่อยู่ในสมุด
+- **ขนาดคำสั่ง**: แสดงเฉพาะคำสั่งที่สูงกว่าขนาดที่กำหนด
+- **ตัวกรองผู้ใช้**: ซ่อนหรือเน้นคำสั่งของผู้ใช้เฉพาะ
+- **ตัวกรองเวลา**: แสดงคำสั่งจากช่วงเวลาเฉพาะ
 
-## Order Book Analysis Tools
+## เครื่องมือวิเคราะห์สมุดคำสั่ง
 
-### Built-in Analytics
+### การวิเคราะห์ในตัว
 
-#### Depth Chart
-- **Visual Representation**: Graphical view of order book depth
-- **Cumulative View**: Shows cumulative quantity at each price
-- **Bid-Ask Visualization**: Clear visualization of bid-ask spread
-- **Interactive Elements**: Click on chart to place orders
+#### แผนภูมิความลึก (Depth Chart)
+- **การแสดงภาพ**: มุมมองกราฟิกของความลึกของสมุดคำสั่ง
+- **มุมมองสะสม**: แสดงปริมาณสะสมในแต่ละราคา
+- **การแสดงภาพ Bid-Ask**: การแสดงภาพที่ชัดเจนของส่วนต่างราคาเสนอซื้อ-เสนอขาย
+- **องค์ประกอบเชิงโต้ตอบ**: คลิกที่แผนภูมิเพื่อวางคำสั่ง
 
-#### Market Statistics
-- **Spread Statistics**: Current and average spread metrics
-- **Volume Analysis**: Order book volume and turnover
-- **Price Distribution**: Distribution of orders across price levels
-- **Liquidity Metrics**: Various liquidity measurement indicators
+#### สถิติตลาด
+- **สถิติ Spread**: ตัวชี้วัด Spread ปัจจุบันและเฉลี่ย
+- **การวิเคราะห์ปริมาณ**: ปริมาณสมุดคำสั่งและมูลค่าการซื้อขาย
+- **การกระจายราคา**: การกระจายของคำสั่งทั่วระดับราคา
+- **ตัวชี้วัดสภาพคล่อง**: ตัวชี้วัดการวัดสภาพคล่องต่างๆ
 
-#### Historical Analysis
-- **Order Book History**: Historical order book snapshots
-- **Spread History**: Historical bid-ask spread data
-- **Volume Trends**: Order book volume trends over time
-- **Market Evolution**: How order book structure evolves
+#### การวิเคราะห์ย้อนหลัง
+- **ประวัติสมุดคำสั่ง**: ภาพรวมสมุดคำสั่งในอดีต
+- **ประวัติ Spread**: ข้อมูล Spread เสนอซื้อ-เสนอขายในอดีต
+- **แนวโน้มปริมาณ**: แนวโน้มปริมาณสมุดคำสั่งเมื่อเวลาผ่านไป
+- **วิวัฒนาการตลาด**: วิธีที่โครงสร้างสมุดคำสั่งพัฒนา
 
-### Third-Party Integration
+### การรวมบุคคลที่สาม
 
-#### API Access
-- **Real-time Feed**: Real-time order book data via API
-- **Historical Data**: Access to historical order book data
-- **Custom Analytics**: Build custom analysis tools
-- **Algorithmic Trading**: Support for algorithmic trading systems
+#### การเข้าถึง API
+- **ฟีดเรียลไทม์**: ข้อมูลสมุดคำสั่งแบบเรียลไทม์ผ่าน API
+- **ข้อมูลย้อนหลัง**: เข้าถึงข้อมูลสมุดคำสั่งในอดีต
+- **การวิเคราะห์ที่กำหนดเอง**: สร้างเครื่องมือวิเคราะห์ที่กำหนดเอง
+- **การซื้อขายอัลกอริทึม**: รองรับระบบการซื้อขายอัลกอริทึม
 
-#### Data Export
-- **CSV Export**: Export order book data to CSV format
-- **JSON Format**: Structured data in JSON format
-- **Time Series**: Time-series order book data
-- **Snapshot Data**: Point-in-time order book snapshots
+#### การส่งออกข้อมูล
+- **ส่งออก CSV**: ส่งออกข้อมูลสมุดคำสั่งเป็นรูปแบบ CSV
+- **รูปแบบ JSON**: ข้อมูลที่มีโครงสร้างในรูปแบบ JSON
+- **อนุกรมเวลา**: ข้อมูลสมุดคำสั่งแบบอนุกรมเวลา
+- **ข้อมูลภาพรวม**: ภาพรวมสมุดคำสั่ง ณ จุดเวลาหนึ่ง
 
-## Mobile Order Book
+## สมุดคำสั่งบนมือถือ
 
-### Mobile Interface
+### อินเทอร์เฟซมือถือ
 
-#### Responsive Design
-- **Touch Interface**: Optimized for touch interaction
-- **Swipe Navigation**: Swipe between different views
-- **Pinch Zoom**: Zoom in/out for better visibility
-- **Portrait/Landscape**: Support for both orientations
+#### การออกแบบที่ตอบสนอง (Responsive)
+- **อินเทอร์เฟซแบบสัมผัส**: ปรับให้เหมาะสมสำหรับการโต้ตอบแบบสัมผัส
+- **การนำทางแบบปัด**: ปัดระหว่างมุมมองต่างๆ
+- **ซูมด้วยนิ้ว**: ซูมเข้า/ออกเพื่อการมองเห็นที่ดีขึ้น
+- **แนวตั้ง/แนวนอน**: รองรับทั้งสองทิศทาง
 
-#### Simplified View
-- **Essential Information**: Focus on most important data
-- **Condensed Layout**: Efficient use of limited screen space
-- **Quick Actions**: Easy access to common trading actions
-- **Gesture Controls**: Intuitive gesture-based controls
+#### มุมมองแบบง่าย
+- **ข้อมูลที่จำเป็น**: เน้นข้อมูลที่สำคัญที่สุด
+- **เค้าโครงที่กระชับ**: การใช้พื้นที่หน้าจอที่จำกัดอย่างมีประสิทธิภาพ
+- **การดำเนินการด่วน**: เข้าถึงการดำเนินการซื้อขายทั่วไปได้ง่าย
+- **การควบคุมด้วยท่าทาง**: การควบคุมตามท่าทางที่ใช้งานง่าย
 
-### Mobile-Specific Features
+### คุณสมบัติเฉพาะสำหรับมือถือ
 
-#### Quick Trading
-- **Simplified Order Entry**: Streamlined order placement
-- **Preset Sizes**: Common order sizes for quick selection
-- **Market Price**: One-tap market price trading
-- **Voice Commands**: Optional voice command integration
+#### การซื้อขายด่วน
+- **การป้อนคำสั่งที่ง่ายขึ้น**: การวางคำสั่งที่คล่องตัว
+- **ขนาดที่ตั้งไว้ล่วงหน้า**: ขนาดคำสั่งทั่วไปสำหรับการเลือกด่วน
+- **ราคาตลาด**: การซื้อขายราคาตลาดด้วยการแตะครั้งเดียว
+- **คำสั่งเสียง**: การรวมคำสั่งเสียงทางเลือก
 
-#### Alerts and Notifications
-- **Price Alerts**: Notifications when price reaches levels
-- **Order Alerts**: Notifications for order fills and cancellations
-- **Market Alerts**: Notifications for significant market changes
-- **Custom Alerts**: User-defined custom alert conditions
+#### การแจ้งเตือน
+- **การแจ้งเตือนราคา**: การแจ้งเตือนเมื่อราคาถึงระดับ
+- **การแจ้งเตือนคำสั่ง**: การแจ้งเตือนสำหรับการจับคู่คำสั่งและการยกเลิก
+- **การแจ้งเตือนตลาด**: การแจ้งเตือนสำหรับการเปลี่ยนแปลงตลาดที่สำคัญ
+- **การแจ้งเตือนที่กำหนดเอง**: เงื่อนไขการแจ้งเตือนที่ผู้ใช้กำหนด
 
-## Order Book Best Practices
+## แนวทางปฏิบัติที่ดีที่สุดสำหรับสมุดคำสั่ง
 
-### Reading Best Practices
+### แนวทางปฏิบัติในการอ่าน
 
-#### Focus Areas
-- **Best Bid/Ask**: Always monitor the best prices
-- **Spread Analysis**: Regular spread monitoring
-- **Depth Assessment**: Evaluate market depth before trading
-- **Order Flow**: Watch for changes in order flow patterns
+#### พื้นที่ที่ต้องเน้น
+- **Best Bid/Ask**: ตรวจสอบราคาที่ดีที่สุดเสมอ
+- **การวิเคราะห์ Spread**: การตรวจสอบ Spread เป็นประจำ
+- **การประเมินความลึก**: ประเมินความลึกของตลาดก่อนการซื้อขาย
+- **Order Flow**: เฝ้าดูการเปลี่ยนแปลงในรูปแบบการไหลของคำสั่ง
 
-#### Common Mistakes
-- **Ignoring Depth**: Placing large orders without checking depth
-- **Spread Neglect**: Not considering spread when placing orders
-- **Stale Data**: Acting on outdated order book information
-- **Size Mismanagement**: Poor order size relative to market depth
+#### ข้อผิดพลาดทั่วไป
+- **ละเลยความลึก**: วางคำสั่งขนาดใหญ่โดยไม่ตรวจสอบความลึก
+- **ละเลย Spread**: ไม่พิจารณา Spread เมื่อวางคำสั่ง
+- **ข้อมูลเก่า**: ดำเนินการตามข้อมูลสมุดคำสั่งที่ล้าสมัย
+- **การจัดการขนาดที่ไม่ดี**: ขนาดคำสั่งที่ไม่เหมาะสมเมื่อเทียบกับความลึกของตลาด
 
-### Trading Best Practices
+### แนวทางปฏิบัติในการซื้อขาย
 
-#### Order Placement
-- **Market Assessment**: Assess market conditions before placing orders
-- **Size Appropriateness**: Match order size to market liquidity
-- **Price Reasonableness**: Place orders at reasonable price levels
-- **Time Consideration**: Consider optimal timing for order placement
+#### การวางคำสั่ง
+- **การประเมินตลาด**: ประเมินสภาวะตลาดก่อนวางคำสั่ง
+- **ความเหมาะสมของขนาด**: จับคู่ขนาดคำสั่งกับสภาพคล่องของตลาด
+- **ความสมเหตุสมผลของราคา**: วางคำสั่งที่ระดับราคาที่สมเหตุสมผล
+- **การพิจารณาเวลา**: พิจารณาเวลาที่เหมาะสมสำหรับการวางคำสั่ง
 
-#### Risk Management
-- **Position Limits**: Maintain appropriate position limits
-- **Stop-Loss Planning**: Plan exit strategies for adverse moves
-- **Diversification**: Don't concentrate all orders in one market
-- **Liquidity Management**: Ensure adequate liquidity for exits
+#### การจัดการความเสี่ยง
+- **ขีดจำกัดตำแหน่ง**: รักษาขีดจำกัดตำแหน่งที่เหมาะสม
+- **การวางแผน Stop-Loss**: วางแผนกลยุทธ์การออกสำหรับการเคลื่อนไหวที่ไม่พึงประสงค์
+- **การกระจายความเสี่ยง**: อย่ารวมคำสั่งทั้งหมดในตลาดเดียว
+- **การจัดการสภาพคล่อง**: ตรวจสอบให้แน่ใจว่ามีสภาพคล่องเพียงพอสำหรับการออก
 
-## Troubleshooting
+## การแก้ไขปัญหา
 
-### Common Issues
+### ปัญหาทั่วไป
 
-#### Display Problems
-- **Refresh Issues**: Order book not updating properly
-- **Performance**: Slow order book updates
-- **Visual Glitches**: Display artifacts or rendering issues
-- **Browser Compatibility**: Issues with specific browsers
+#### ปัญหาการแสดงผล
+- **ปัญหาการรีเฟรช**: สมุดคำสั่งไม่อัปเดตอย่างถูกต้อง
+- **ประสิทธิภาพ**: การอัปเดตสมุดคำสั่งช้า
+- **ความผิดพลาดทางภาพ**: สิ่งแปลกปลอมในการแสดงผลหรือปัญหาการเรนเดอร์
+- **ความเข้ากันได้ของเบราว์เซอร์**: ปัญหากับเบราว์เซอร์เฉพาะ
 
-#### Data Issues
-- **Missing Orders**: Orders not appearing in book
-- **Incorrect Prices**: Wrong price information displayed
-- **Outdated Data**: Stale or delayed order book data
-- **Synchronization**: Order book out of sync with actual state
+#### ปัญหาข้อมูล
+- **คำสั่งหายไป**: คำสั่งไม่ปรากฏในสมุด
+- **ราคาไม่ถูกต้อง**: ข้อมูลราคาผิดที่แสดง
+- **ข้อมูลล้าสมัย**: ข้อมูลสมุดคำสั่งเก่าหรือล่าช้า
+- **การซิงโครไนซ์**: สมุดคำสั่งไม่ตรงกับสถานะจริง
 
-### Solutions
+### วิธีแก้ไข
 
-#### Technical Solutions
-- **Browser Refresh**: Refresh page to reload order book
-- **Cache Clear**: Clear browser cache and cookies
-- **Connection Check**: Verify internet connection stability
-- **Browser Update**: Ensure browser is up to date
+#### วิธีแก้ไขทางเทคนิค
+- **รีเฟรชเบราว์เซอร์**: รีเฟรชหน้าเพื่อโหลดสมุดคำสั่งใหม่
+- **ล้างแคช**: ล้างแคชและคุกกี้ของเบราว์เซอร์
+- **ตรวจสอบการเชื่อมต่อ**: ตรวจสอบความเสถียรของการเชื่อมต่ออินเทอร์เน็ต
+- **อัปเดตเบราว์เซอร์**: ตรวจสอบให้แน่ใจว่าเบราว์เซอร์เป็นเวอร์ชันล่าสุด
 
-#### Support Resources
-- **Help Documentation**: Comprehensive help documentation
-- **Video Tutorials**: Video guides for order book usage
-- **Community Forum**: Community support and discussions
-- **Customer Support**: Direct support for technical issues
+#### ทรัพยากรสนับสนุน
+- **เอกสารช่วยเหลือ**: เอกสารช่วยเหลือที่ครอบคลุม
+- **วิดีโอสอน**: คู่มือวิดีโอสำหรับการใช้สมุดคำสั่ง
+- **ฟอรัมชุมชน**: การสนับสนุนและการอภิปรายของชุมชน
+- **ฝ่ายสนับสนุนลูกค้า**: การสนับสนุนโดยตรงสำหรับปัญหาทางเทคนิค
 
-## Future Enhancements
+## การปรับปรุงในอนาคต
 
-### Planned Features
+### คุณสมบัติที่วางแผนไว้
 
-#### Advanced Visualization
-- **3D Order Book**: Three-dimensional order book visualization
-- **Heat Maps**: Order book heat map displays
-- **Flow Visualization**: Animated order flow visualization
-- **VR/AR Support**: Virtual and augmented reality support
+#### การแสดงภาพขั้นสูง
+- **สมุดคำสั่ง 3D**: การแสดงภาพสมุดคำสั่งสามมิติ
+- **Heat Maps**: การแสดง Heat map ของสมุดคำสั่ง
+- **การแสดงภาพ Flow**: การแสดงภาพการไหลของคำสั่งแบบเคลื่อนไหว
+- **การรองรับ VR/AR**: รองรับความเป็นจริงเสมือนและความเป็นจริงเสริม
 
-#### AI Integration
-- **Smart Alerts**: AI-powered intelligent alerts
-- **Pattern Recognition**: Automatic pattern recognition
-- **Predictive Analytics**: AI-based market predictions
-- **Personalized Views**: AI-customized order book views
+#### การรวม AI
+- **Smart Alerts**: การแจ้งเตือนอัจฉริยะที่ขับเคลื่อนด้วย AI
+- **การจดจำรูปแบบ**: การจดจำรูปแบบอัตโนมัติ
+- **การวิเคราะห์เชิงพยากรณ์**: การทำนายตลาดตาม AI
+- **มุมมองส่วนบุคคล**: มุมมองสมุดคำสั่งที่ปรับแต่งโดย AI
 
-#### Enhanced Analytics
-- **Machine Learning**: ML-based order book analysis
-- **Sentiment Analysis**: Order book sentiment indicators
-- **Network Analysis**: Order book network effects
-- **Cross-Market Analysis**: Multi-market order book analysis
+#### การวิเคราะห์ที่ได้รับการปรับปรุง
+- **Machine Learning**: การวิเคราะห์สมุดคำสั่งตาม ML
+- **การวิเคราะห์ความเชื่อมั่น**: ตัวชี้วัดความเชื่อมั่นของสมุดคำสั่ง
+- **การวิเคราะห์เครือข่าย**: ผลกระทบเครือข่ายของสมุดคำสั่ง
+- **การวิเคราะห์ข้ามตลาด**: การวิเคราะห์สมุดคำสั่งหลายตลาด
 
-### Technology Improvements
+### การปรับปรุงเทคโนโลยี
 
-#### Performance Optimization
-- **Faster Updates**: Even faster real-time updates
-- **Reduced Latency**: Lower latency order book data
-- **Better Compression**: Improved data compression
-- **Edge Computing**: Edge computing for better performance
+#### การเพิ่มประสิทธิภาพ
+- **การอัปเดตที่เร็วขึ้น**: การอัปเดตแบบเรียลไทม์ที่เร็วยิ่งขึ้น
+- **ความหน่วงลดลง**: ข้อมูลสมุดคำสั่งที่มีความหน่วงต่ำกว่า
+- **การบีบอัดที่ดีขึ้น**: การบีบอัดข้อมูลที่ได้รับการปรับปรุง
+- **Edge Computing**: การประมวลผลที่ขอบเพื่อประสิทธิภาพที่ดีขึ้น
 
-#### Integration Enhancements
-- **DeFi Integration**: Integration with other DeFi protocols
-- **Cross-Platform**: Better cross-platform compatibility
-- **API Improvements**: Enhanced API functionality
-- **Webhook Support**: Real-time webhook notifications
+#### การปรับปรุงการรวม
+- **การรวม DeFi**: การรวมกับโปรโตคอล DeFi อื่นๆ
+- **ข้ามแพลตฟอร์ม**: ความเข้ากันได้ข้ามแพลตฟอร์มที่ดีขึ้น
+- **การปรับปรุง API**: ฟังก์ชัน API ที่ได้รับการปรับปรุง
+- **การรองรับ Webhook**: การแจ้งเตือน Webhook แบบเรียลไทม์
 
 ---
 
-*For the latest information on order book features and updates, please check our official announcements.* 
+*สำหรับข้อมูลล่าสุดเกี่ยวกับคุณสมบัติและการอัปเดตของสมุดคำสั่ง โปรดตรวจสอบประกาศอย่างเป็นทางการของเรา*
