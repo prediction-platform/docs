@@ -70,6 +70,11 @@ The data format is as follows:
 
 YC365 Dapp provides API for merchant platforms to call
 
+DEV environment domain: http://test.dapp.yc365.io
+
+TEST environment domain: https://dapp.yc365.io
+
+
 ### 1. Merchants Obtain Invitation Codes
 
 **GET** `/account/v1/app/invitecode`
@@ -132,6 +137,7 @@ The platform accesses the user's identity and returns the Dapp address, in the f
 {
    "app_id": "string",    // Merchant ID
    "user_id": "string",   // User ID
+   "game_id": "string",   // Game ID
    "user_name": "string", // User name
    "avatar": "string",    // User avatar address
    "lang": "string",      // Language type
@@ -318,7 +324,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 
 **API URL**: `POST /api/yc365/trade/create`
 
-**Description**: YC365 Trade Order
+**Description**: YC365 Trade Order, Deduct payment when buying direction, no need to handle when selling direction
 
 **Request Parameters**:
 ```json
@@ -350,7 +356,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 
 **API URL**: `POST /api/yc365/trade/execute`
 
-**Description**: Transaction Execution Notification
+**Description**: Transaction Execution Notification, Don't deal with buying direction, add money when selling direction
 
 **Request Parameters**:
 ```json
@@ -383,7 +389,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 
 **API URL**: `POST /api/yc365/order/cancel`
 
-**Description**: Cancel Order
+**Description**: Cancel Order, Add money when buying direction, do not handle when selling direction
 
 **Request Parameters**:
 ```json
@@ -416,7 +422,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 
 **API URL**: `POST /api/yc365/settlement/event`
 
-**Description**: Event Settlement and Rewards
+**Description**: Event Settlement and Rewards, Add money to users
 
 **Request Parameters**:
 ```json
