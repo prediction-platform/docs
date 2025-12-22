@@ -142,6 +142,7 @@ The platform accesses the user's identity and returns the Dapp address, in the f
    "avatar": "string",    // User avatar address
    "lang": "string",      // Language type
    "theme": "string",     // Theme style
+   "currency": "string",  // Currency, USDT
    "signature": "string"  // Signature method: Combine the above fields into a JSON string in order, then encrypt with HMAC-SHA256.
 }
 ```
@@ -164,6 +165,7 @@ The platform accesses the user's identity and returns the Dapp address, in the f
 | Parameter Name | Location | Type | Required | Description |
 |------------|--------|--------|-----|------------|
 | app_id | query | string | YES | Merchant ID |
+|currency| query |string | NO       | default: USDT |
 | signature | query | string | YES | Signature |
 
 **Response**
@@ -206,15 +208,16 @@ Event Types:
 
 **Request Parameters**
 
-| Parameter Name | Location | Type | Required | Description |
-|------------|--------|--------|-------|------------|
-|app_id| query| string| YES |Merchant ID|
-|user_id| query| string| YES |User ID|
-|start_time| query| string| NO |Start time, e.g., 2025-08-01 00:00:00.000|
-|end_time| query |string | NO | End time, such as: 2025-08-01 00:00:00.000|
-|index_id| query |integer(int64) | YES | ID of the last entry on the previous page. 0 is passed for homepage visits|
-|page_size| query |integer(int64) | YES | Number of entries per page, maximum 100|
-|signature| query |string | YES | Signature|
+| Parameter Name | Location | Type | Required | Description                                                                |
+|------------|--------|--------|----------|----------------------------------------------------------------------------|
+|app_id| query| string| YES      | Merchant ID                                                                |
+|user_id| query| string| YES      | User ID                                                                    |
+|start_time| query| string| NO       | Start time, e.g., 2025-08-01 00:00:00.000                                  |
+|end_time| query |string | NO       | End time, such as: 2025-08-01 00:00:00.000                                 |
+|index_id| query |integer(int64) | YES      | ID of the last entry on the previous page. 0 is passed for homepage visits |
+|page_size| query |integer(int64) | YES      | Number of entries per page, maximum 100                                    |
+|currency| query |string | NO       | default: USDT                                                              |
+|signature| query |string | YES      | Signature                                                                  |
 
 **Response**
 ```json
