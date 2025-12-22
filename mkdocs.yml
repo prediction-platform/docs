@@ -65,8 +65,13 @@ nav:
       - Trading Fees: trading-fees.md
       - Using the Order Book: using-the-order-book.md
       - How to Earn Profits: how-to-earn-profits.md
+  - Private Market:
+      - User Private Market: user-private-market.md
+      - Merchant Private Market: merchant-private-market.md   
+  - Dispute resolution process: dispute-resolution-process.md      
   - Merchant platform:
       - How to Integrate Dapp?: how-to-integrate-dapp.md
+      - Merchant Center: merchant-center.md
   - Developer Resources:
       - Open API: open-api.md
   - FAQs:
