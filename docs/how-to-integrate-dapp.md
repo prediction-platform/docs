@@ -184,7 +184,6 @@ The platform accesses the user's identity and returns the Dapp address, in the f
    "lang": "string",      // Language type
    "theme": "string",     // Theme style
    "symbol": "string",    // Currency symbol
-   "currency": "string",  // Currency, USDT
    "signature": "string"  // Signature method: Combine the above fields into a JSON string in order, then encrypt with HMAC-SHA256.
 }
 ```
