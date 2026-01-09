@@ -72,8 +72,8 @@ nav:
   - Merchant platform:
       - How to Integrate Dapp?: how-to-integrate-dapp.md
       - Merchant Center: merchant-center.md
-  - Developer Resources:
-      - Open API: open-api.md
+#  - Developer Resources:
+#      - Open API: open-api.md
   - FAQs:
       - Overview: faqs.md
       - Can I Sell Early?: can-i-sell-early.md

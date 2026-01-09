@@ -74,6 +74,47 @@ DEV environment domain: http://test.dapp.yc365.io
 
 TEST environment domain: https://dapp.yc365.io
 
+Signature Example:
+```go
+package main
+
+import (
+	"crypto/hmac"
+	"crypto/sha256"
+	"encoding/hex"
+	"encoding/json"
+	"fmt"
+)
+
+const API_SECRET = "your_api_secret"
+
+type StatisticsReq struct {
+	AppId     string `json:"app_id,omitempty=false"`
+	Period    string `json:"period,omitempty=false"`
+	Date      string `json:"date,omitempty=false"`
+	PageSize  uint64 `json:"page_size,omitempty=false"`
+	IndexId   uint64 `json:"index_id,omitempty=false"`
+}
+
+func main() {
+	req := StatisticsReq{
+		AppId:    "f80d7941-ae9d-47f4-hj6f-a213f39ej2m4",
+		Period:   "weekly",
+		Date:     "2025-08-11",
+		PageSize: 10,
+		IndexId:  0,
+	}
+	by, _ := json.Marshal(req)
+	signMsg, _ := SignMessage(string(by), API_SECRET)
+	fmt.Println(signMsg)
+}
+
+func SignMessage(message string, key string) (string, error) {
+	mac := hmac.New(sha256.New, []byte(key))
+	mac.Write([]byte(message))
+	return hex.EncodeToString(mac.Sum(nil)), nil
+}
+```
 
 ### 1. Merchants Obtain Invitation Codes
 
