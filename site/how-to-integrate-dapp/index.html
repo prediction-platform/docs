@@ -1936,6 +1936,8 @@
 </table>
 <h2 id="api-interface">💡 <strong>API Interface</strong></h2>
 <p>YC365 Dapp provides API for merchant platforms to call</p>
+<p>DEV environment domain: http://test.dapp.yc365.io</p>
+<p>TEST environment domain: https://dapp.yc365.io</p>
 <h3 id="1-merchants-obtain-invitation-codes">1. Merchants Obtain Invitation Codes</h3>
 <p><strong>GET</strong> <code>/account/v1/app/invitecode</code></p>
 <p>Obtain invitation codes offline. One code per account. The request header must contain the Authorization header.</p>
@@ -1982,6 +1984,7 @@
 <pre><code class="language-json">{
    &quot;app_id&quot;: &quot;string&quot;,    // Merchant ID
    &quot;user_id&quot;: &quot;string&quot;,   // User ID
+   &quot;game_id&quot;: &quot;string&quot;,   // Game ID
    &quot;user_name&quot;: &quot;string&quot;, // User name
    &quot;avatar&quot;: &quot;string&quot;,    // User avatar address
    &quot;lang&quot;: &quot;string&quot;,      // Language type
@@ -2266,7 +2269,7 @@
 </code></pre>
 <h3 id="2-create-a-trade-order">2. Create a Trade Order</h3>
 <p><strong>API URL</strong>: <code>POST /api/yc365/trade/create</code></p>
-<p><strong>Description</strong>: YC365 Trade Order</p>
+<p><strong>Description</strong>: YC365 Trade Order, Deduct payment when buying direction, no need to handle when selling direction</p>
 <p><strong>Request Parameters</strong>:</p>
 <pre><code class="language-json">{
     &quot;order_id&quot;: &quot;string&quot;,      // Order ID, required
@@ -2291,7 +2294,7 @@
 </code></pre>
 <h3 id="3-transaction-execution-notification">3. Transaction Execution Notification</h3>
 <p><strong>API URL</strong>: <code>POST /api/yc365/trade/execute</code></p>
-<p><strong>Description</strong>: Transaction Execution Notification</p>
+<p><strong>Description</strong>: Transaction Execution Notification, Don't deal with buying direction, add money when selling direction</p>
 <p><strong>Request Parameters</strong>:</p>
 <pre><code class="language-json">{
     &quot;app_id&quot;: &quot;string&quot;,         // Application ID, required
@@ -2317,7 +2320,7 @@
 </code></pre>
 <h3 id="4-cancel-order">4. Cancel Order</h3>
 <p><strong>API URL</strong>: <code>POST /api/yc365/order/cancel</code></p>
-<p><strong>Description</strong>: Cancel Order</p>
+<p><strong>Description</strong>: Cancel Order, Add money when buying direction, do not handle when selling direction</p>
 <p><strong>Request Parameters</strong>:</p>
 <pre><code class="language-json">{
     &quot;app_id&quot;: &quot;string&quot;,         // Application ID, required
@@ -2343,7 +2346,7 @@
 </code></pre>
 <h3 id="5-event-settlement-and-rewards">5. Event Settlement and Rewards</h3>
 <p><strong>API URL</strong>: <code>POST /api/yc365/settlement/event</code></p>
-<p><strong>Description</strong>: Event Settlement and Rewards</p>
+<p><strong>Description</strong>: Event Settlement and Rewards, Add money to users</p>
 <p><strong>Request Parameters</strong>:</p>
 <pre><code class="language-json">{
     &quot;app_id&quot;: &quot;string&quot;,          // Application ID, required
