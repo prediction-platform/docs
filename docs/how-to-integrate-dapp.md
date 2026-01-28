@@ -305,7 +305,7 @@ Supports viewing daily, weekly, and monthly report data. Data includes each user
 |date |query| string| YES | Date, such as: 2025-08-01|
 |page_size |query| integer(int64)| YES | Number of entries per page, maximum 100|
 |index_id |query| integer(int64)| YES | Maximum ID value of the previous page, 0 for homepage visits|
-|signature |query| string| YES | Signature method: Combine the above fields into a JSON string in order, then encrypt using Curve25519|
+|signature |query| string| YES | Signature method: Combine the above fields into a JSON string in order, then encrypt using hmac-sha256|
 
 **Response**
 ```json
