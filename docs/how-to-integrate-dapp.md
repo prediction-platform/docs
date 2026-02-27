@@ -368,7 +368,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 
 **API URL**: `POST /api/yc365/trade/create`
 
-**Description**: YC365 Trade Order, Deduct payment when buying direction, no need to handle when selling direction
+**Description**: YC365 transaction orders whether the user's balance is sufficient before deducting funds when buying, and no processing is required when selling.
 
 **Request Parameters**:
 ```json
