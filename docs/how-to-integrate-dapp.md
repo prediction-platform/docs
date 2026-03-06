@@ -471,6 +471,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 **Request Parameters**:
 ```json
 {
+    "order_id": "string",       // Order ID, required
     "app_id": "string",          // Application ID, required
     "user_id": "string",         // User ID, required
     "condition_id": "string",    // Condition ID, required
@@ -487,6 +488,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
     "code": 0,        // Service acceptance status code, enumeration value: 0 - Success, 1 - Failure
     "msg": "string",  // Acceptance description
     "data": {
+        "order_id": "string", // Order ID
         "balance": 1000.50,  // Balance
         "currency": "string" // Currency type
     }
