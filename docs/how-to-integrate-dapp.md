@@ -412,6 +412,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
     "currency": "string",       // Currency type, required
     "timestamp": 1759119582148, // Timestamp, required
     "side": 0,                  // Buy/Sell direction, 0 - Sell, 1 - Buy
+    "reverse_order_id": "string",     // Reverse order ID, required when side is sell, the order ID of the corresponding buy order
     "signature": "string"       // SHA256 signature of the above parameters in JSON format
 }
 ```
@@ -471,7 +472,7 @@ APIs that need to be provided when the merchant platform selects V1 mode
 **Request Parameters**:
 ```json
 {
-    "order_id": "string",       // Order ID, required
+    "order_id": "string",        // Order ID, required
     "app_id": "string",          // Application ID, required
     "user_id": "string",         // User ID, required
     "condition_id": "string",    // Condition ID, required
